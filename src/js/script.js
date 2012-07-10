@@ -4,7 +4,7 @@
 var qp = {
 	// общие параметры
 	opts : {
-		apiPath : "/api/v1/"
+		apiPath : "https://api.qstoq.ru/api/v1/"
 	},
 
 	//Выводим цену

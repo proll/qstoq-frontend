@@ -284,10 +284,42 @@
 	"buffers":
 	[
 		{
+			"file": "src/css/gui.css",
+			"settings":
+			{
+				"buffer_size": 4971,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/link.html",
+			"settings":
+			{
+				"buffer_size": 5044,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/auth.html",
+			"settings":
+			{
+				"buffer_size": 3854,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/links.html",
+			"settings":
+			{
+				"buffer_size": 3975,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "src/js/script.js",
 			"settings":
 			{
-				"buffer_size": 3609,
+				"buffer_size": 3629,
 				"line_ending": "Unix"
 			}
 		},
@@ -300,82 +332,10 @@
 			}
 		},
 		{
-			"file": "src/css/primary.styles.css",
-			"settings":
-			{
-				"buffer_size": 6216,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/css/link-edit.css",
-			"settings":
-			{
-				"buffer_size": 1570,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/Users/glebp/.profile",
-			"settings":
-			{
-				"buffer_size": 1424,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/link.html",
-			"settings":
-			{
-				"buffer_size": 5022,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/css/links.css",
-			"settings":
-			{
-				"buffer_size": 2734,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/links.html",
-			"settings":
-			{
-				"buffer_size": 3955,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/index.html",
-			"settings":
-			{
-				"buffer_size": 2897,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/auth.html",
-			"settings":
-			{
-				"buffer_size": 3814,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/css/gui.css",
-			"settings":
-			{
-				"buffer_size": 4971,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/js/link-edit.js",
 			"settings":
 			{
-				"buffer_size": 4743,
+				"buffer_size": 4723,
 				"line_ending": "Unix"
 			}
 		},
@@ -460,6 +420,16 @@
 	},
 	"file_history":
 	[
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/js/auth.js",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/auth.html",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/index.html",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/links.html",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/css/links.css",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/link.html",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/css/link-edit.css",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/css/primary.styles.css",
+		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/js/script.js",
+		"/Users/glebp/.profile",
 		"/Users/glebp/Dropbox/proj/custoq/trunk/site/web/ola/src/404.html",
 		"/Users/glebp/Dropbox/proj/custoq/trunk/site/web/ola/src/css/style.css",
 		"/Users/glebp/Dropbox/proj/custoq/trunk/site/web/ola/src/css/gui.css",
@@ -482,7 +452,6 @@
 		"/Users/glebp/proj/custoq/trunk/site/web/ola/src/css/primary.styles.css",
 		"/Users/glebp/proj/custoq/trunk/site/web/ola/src/css/gui.css",
 		"/Users/glebp/proj/custoq/trunk/site/web/ola/src/css/auth.css",
-		"/Users/glebp/.profile",
 		"/Users/glebp/proj/qp/src/index.html",
 		"/Users/glebp/proj/qp/qpi.sublime-project",
 		"/Users/glebp/proj/bigbuzzy-frontend/.git/TAG_EDITMSG",
@@ -578,16 +547,7 @@
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_signup_place.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_auth.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_signup.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_password_reset.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_search.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/profile_change_password.ftl",
-		"/Users/glebp/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/common.ftl",
-		"/Users/glebp/proj/rss_masonry/index.htm",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/proposal_to_main.ftl",
-		"/Users/glebp/mounts/bxt/edemvkino_ru/t/gate.php",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/js_src/buzzy.js",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/js_src/m/jquery.mobile-1.0.js"
+		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_password_reset.ftl"
 	],
 	"find":
 	{
@@ -595,7 +555,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"*",
@@ -698,6 +658,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"api",
 			"success",
 			"processShow",
 			"link-short",
@@ -824,8 +785,7 @@
 			"Поле",
 			"Полезный",
 			"box-shadow",
-			"7px",
-			"vote-btns"
+			"7px"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -971,280 +931,11 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/js/script.js",
-					"settings":
-					{
-						"buffer_size": 3609,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2705,
-								2705
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 516.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/js/auth.js",
-					"settings":
-					{
-						"buffer_size": 2315,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1689,
-								1699
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 85.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/css/primary.styles.css",
-					"settings":
-					{
-						"buffer_size": 6216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								226,
-								188
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 124.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/css/link-edit.css",
-					"settings":
-					{
-						"buffer_size": 1570,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								620,
-								620
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 97.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/glebp/.profile",
-					"settings":
-					{
-						"buffer_size": 1424,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								272,
-								274
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/link.html",
-					"settings":
-					{
-						"buffer_size": 5022,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4009,
-								4002
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 488.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/css/links.css",
-					"settings":
-					{
-						"buffer_size": 2734,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2281,
-								2281
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/links.html",
-					"settings":
-					{
-						"buffer_size": 3955,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2954,
-								2927
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 202.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/index.html",
-					"settings":
-					{
-						"buffer_size": 2897,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1878,
-								1878
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/auth.html",
-					"settings":
-					{
-						"buffer_size": 3814,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2814,
-								2814
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 72.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
 					"file": "src/css/gui.css",
 					"settings":
 					{
@@ -1269,27 +960,102 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 11,
-					"file": "src/js/link-edit.js",
+					"buffer": 1,
+					"file": "src/link.html",
 					"settings":
 					{
-						"buffer_size": 4743,
+						"buffer_size": 5044,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1386,
-								1386
+								2218,
+								2218
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 809.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/auth.html",
+					"settings":
+					{
+						"buffer_size": 3854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2734,
+								2734
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 924.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/links.html",
+					"settings":
+					{
+						"buffer_size": 3975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2164,
+								2164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/js/script.js",
+					"settings":
+					{
+						"buffer_size": 3629,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
 							]
 						],
 						"settings":
@@ -1304,7 +1070,67 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 5,
+					"file": "src/js/auth.js",
+					"settings":
+					{
+						"buffer_size": 2315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1411,
+								1418
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "src/js/link-edit.js",
+					"settings":
+					{
+						"buffer_size": 4723,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
 					"file": "src/js/links.js",
 					"settings":
 					{
@@ -1331,7 +1157,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 8,
 					"file": "src/js/plugins.js",
 					"settings":
 					{
@@ -1398,10 +1224,6 @@
 		]
 	},
 	"menu_visible": true,
-	"output.exec":
-	{
-		"height": 88.0
-	},
 	"replace":
 	{
 		"height": 64.0
