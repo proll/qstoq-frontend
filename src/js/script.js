@@ -80,7 +80,7 @@ var qp = {
 			.appendTo(".msg-out")
 			.fadeIn(500)
 			.delay(3000)
-			.fadeOut(1000)
+			.slideUp(200)
 			.queue(function() { $(this).remove(); });
 
 		console.log(status + ":");

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
 				"ba",
 				"background-color"
 			],
@@ -22,10 +30,6 @@
 			[
 				"add",
 				"addFormShowned"
-			],
-			[
-				"back",
-				"background	background-color: rgb"
 			],
 			[
 				"le",
@@ -220,10 +224,6 @@
 				"padding	padding: all"
 			],
 			[
-				"ma",
-				"margin	margin: all"
-			],
-			[
 				"ab",
 				"absolute"
 			],
@@ -284,18 +284,18 @@
 	"buffers":
 	[
 		{
-			"file": "src/css/gui.css",
+			"file": "src/items.html",
 			"settings":
 			{
-				"buffer_size": 4971,
-				"line_ending": "Windows"
+				"buffer_size": 3975,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/link.html",
+			"file": "src/item-edit.html",
 			"settings":
 			{
-				"buffer_size": 5044,
+				"buffer_size": 5050,
 				"line_ending": "Unix"
 			}
 		},
@@ -308,10 +308,42 @@
 			}
 		},
 		{
-			"file": "src/links.html",
+			"file": "/Users/glebp/.profile",
 			"settings":
 			{
-				"buffer_size": 3975,
+				"buffer_size": 1689,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/css/item-edit.css",
+			"settings":
+			{
+				"buffer_size": 1465,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/css/items.css",
+			"settings":
+			{
+				"buffer_size": 2734,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/css/gui.css",
+			"settings":
+			{
+				"buffer_size": 4971,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/auth.js",
+			"settings":
+			{
+				"buffer_size": 2268,
 				"line_ending": "Unix"
 			}
 		},
@@ -324,34 +356,26 @@
 			}
 		},
 		{
-			"file": "src/js/auth.js",
+			"file": "src/js/items.js",
 			"settings":
 			{
-				"buffer_size": 2315,
+				"buffer_size": 4424,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/js/link-edit.js",
+			"file": "src/js/item-edit.js",
 			"settings":
 			{
-				"buffer_size": 4723,
+				"buffer_size": 4736,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/js/links.js",
+			"file": "src/css/icons.css",
 			"settings":
 			{
-				"buffer_size": 4426,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/plugins.js",
-			"settings":
-			{
-				"buffer_size": 6613,
+				"buffer_size": 360,
 				"line_ending": "Unix"
 			}
 		}
@@ -420,6 +444,18 @@
 	},
 	"file_history":
 	[
+		"/Users/glebp/Dropbox/proj/stylogram.ru/.git/config",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/item-edit.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/plugins.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/icons.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/items.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/links.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/link-edit.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/style.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/img/soc/social-icons.png",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/img/soc/readme.md",
+		"/Users/glebp/proj/bigbuzzy-frontend/.git/config",
+		"/C/Documents and Settings/proll/Local Settings/Temp/scp39437/etc/apache2/sites-enabled/000-default",
 		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/js/auth.js",
 		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/auth.html",
 		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/index.html",
@@ -535,19 +571,7 @@
 		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_proposal-catalog.css",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_proposal_reviews.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_proposal_map.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_proposal_comments.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/js_src/m/geo/geo_to_proposal.js",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/payment_phone.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_payment.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/j/m/geo/geo_to_catalog.js",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/j/m/bigbuzzy.js",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/anketa/anketa.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/payment_card.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/site.log",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_signup_place.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_auth.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_signup.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_password_reset.ftl"
+		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_proposal_comments.ftl"
 	],
 	"find":
 	{
@@ -555,7 +579,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			"*",
@@ -658,6 +682,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"titleAuth",
+			"userToken",
+			"linkID",
+			"link",
+			"addLinkItem",
+			"renderLinkItems",
+			"link",
+			"short",
+			"link",
+			"link-share-form",
+			"link.html",
+			"urlAuth",
+			"apiPath",
 			"api",
 			"success",
 			"processShow",
@@ -772,20 +809,7 @@
 			"utcDateFormater",
 			"slashSecDateFormater",
 			"isoDateFormater",
-			"slashDateFormater",
-			"printDateMonth",
-			"uniDateFormater",
-			"return",
-			"dateExpiredDescription",
-			"printSlashDateGap",
-			"proposalProcessor",
-			"catalog",
-			"DateFormater",
-			"viewProposalsProcessor",
-			"Поле",
-			"Полезный",
-			"box-shadow",
-			"7px"
+			"slashDateFormater"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -793,6 +817,14 @@
 		"regex": false,
 		"replace_history":
 		[
+			"title_auth",
+			"user_token",
+			"item_id",
+			"item",
+			"addItem",
+			"renderItems",
+			"item",
+			"item-edit.html",
 			"<p class=\"faq-p\">",
 			"<div class=\"faq-list-itm\">",
 			"</span></h3>",
@@ -912,15 +944,7 @@
 			"",
 			"numDeclension",
 			"_",
-			":\"",
-			"\",",
-			"\"",
-			"",
-			"STATIC_HOST",
-			"",
-			"li",
-			"",
-			"squash"
+			":\""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -931,59 +955,87 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/css/gui.css",
+					"file": "src/items.html",
 					"settings":
 					{
-						"buffer_size": 4971,
+						"buffer_size": 3975,
 						"regions":
 						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1902,
+										1912
+									]
+								],
+								"scope": "variable.parameter"
+							}
 						},
 						"selection":
 						[
 							[
-								4467,
-								4467
+								960,
+								964
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1478.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/link.html",
+					"file": "src/item-edit.html",
 					"settings":
 					{
-						"buffer_size": 5044,
+						"buffer_size": 5050,
 						"regions":
 						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1909,
+										1919
+									]
+								],
+								"scope": "variable.parameter"
+							}
 						},
 						"selection":
 						[
 							[
-								2218,
-								2218
+								3870,
+								3870
 							]
 						],
 						"settings":
 						{
+							"is_xml": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 809.0,
+						"translation.y": 85.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1000,50 +1052,164 @@
 						"selection":
 						[
 							[
-								2734,
-								2734
+								2126,
+								2126
 							]
 						],
 						"settings":
 						{
+							"is_xml": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 924.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "src/links.html",
+					"file": "/Users/glebp/.profile",
 					"settings":
 					{
-						"buffer_size": 3975,
+						"buffer_size": 1689,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2164,
-								2164
+								1338,
+								1347
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "src/css/item-edit.css",
+					"settings":
+					{
+						"buffer_size": 1465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								622,
+								622
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
+					"file": "src/css/items.css",
+					"settings":
+					{
+						"buffer_size": 2734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/css/gui.css",
+					"settings":
+					{
+						"buffer_size": 4971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								835,
+								835
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 56.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/js/auth.js",
+					"settings":
+					{
+						"buffer_size": 2268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								291,
+								291
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "src/js/script.js",
 					"settings":
 					{
@@ -1070,19 +1236,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/js/auth.js",
+					"buffer": 9,
+					"file": "src/js/items.js",
 					"settings":
 					{
-						"buffer_size": 2315,
+						"buffer_size": 4424,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1411,
-								1418
+								100,
+								100
 							]
 						],
 						"settings":
@@ -1095,19 +1261,13 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 6,
-					"file": "src/js/link-edit.js",
+					"buffer": 10,
+					"file": "src/js/item-edit.js",
 					"settings":
 					{
-						"buffer_size": 4723,
+						"buffer_size": 4736,
 						"regions":
 						{
 						},
@@ -1130,51 +1290,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "src/js/links.js",
+					"buffer": 11,
+					"file": "src/css/icons.css",
 					"settings":
 					{
-						"buffer_size": 4426,
+						"buffer_size": 360,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1715,
-								1715
+								132,
+								132
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/js/plugins.js",
-					"settings":
-					{
-						"buffer_size": 6613,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6163,
-								6163
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,

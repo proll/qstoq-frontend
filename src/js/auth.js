@@ -9,8 +9,7 @@
 	var $authBtn = $(".auth-do a"),
 		$authForm = $(".auth-form"),
 		loading = false,
-		titleAuth = $authBtn.text();
-		urlAuth = 	$authBtn.attr("href");
+		title_auth = $authBtn.text();
 
 	var describeStatus = function (statusText) {
 		$authBtn
@@ -20,20 +19,13 @@
 	var resetForm = function () {
 		$authBtn
 			.delay(2000)
-			.fadeOut(200, 	function(e){$(this).text(titleAuth)})
+			.fadeOut(200, 	function(e){$(this).text(title_auth)})
 			// показываем кнопочку и активируем ее
 			.fadeIn(200, 	function(e){loading = false});
 	}
 
 	var okReact = function () {
-		// var animDelay = 300,
-		// 	animType = 'swing';
-		// $authBtn
-		// 	.animate({'top': '1000px'}, animDelay, animType);
-		// $authForm
-		// 	.parent()
-		// 	.animate({'top': '-1000px'}, animDelay, animType);
-		location.href="/ola/src/links.html"
+		location.href="/items.html"
 	}
 
 	var errorReact = function () {
@@ -53,12 +45,13 @@
 		if (!loading) {
 			describeStatus("Входим...");
 			loading = true;
-			$.post(urlAuth, $authForm.serialize(), function (data, textStatus, jqXHR) {
+			$.post(qp.opts.apiPath + "auth/", $authForm.serialize(), function (data, textStatus, jqXHR) {
 				if (data.success) {
 					okReact();
-					describeStatus("Уууху " + data.result.message);
+					describeStatus("Уууху");
 					// remember token
-					qp.setLSItem("user_token", data.result.token)
+					qp.setLSItem("user_token", data.result.token);
+					qp.setLSItem("user_name", $("#email",$authForm).val());
 				} else {
 					qp.error("NOOOO");
 					errorReact();
