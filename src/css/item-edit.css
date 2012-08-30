@@ -1,0 +1,111 @@
+.edit-form {
+	overflow: hidden;
+}
+
+.edit-nm,
+.edit-lnk,
+.edit-pc,
+.edit-desc,
+.edit-active {
+	display: inline-block;
+	margin-bottom: 1.6em;
+}
+
+.edit-nm {
+	width: 80%;
+}
+
+.edit-pc {
+	padding-left:1.6em;
+	width: 20%;
+	-moz-box-sizing: border-box;
+   		 box-sizing: border-box; 
+}
+
+.edit-lnk,
+.edit-desc {
+	width: 100%;
+}
+
+
+.edit-active {
+	width: 63%;
+	float:left;
+	text-align: right;
+	font-size: 1.6em;
+	margin: 0.5em 0 0;
+	padding-right: 1em;
+	-moz-box-sizing: border-box;
+   		 box-sizing: border-box; 
+}
+
+/*.edit-form {
+	margin-bottom: 1.6em;
+}*/
+
+
+.edit-bt {
+	width: 37%;
+	float: right;
+}
+
+.item-edit-form {
+	width: 66%;
+	float: left;
+	padding-right: 3%;
+	border-right: 1px solid #dadada; 
+	margin-bottom: 1.6em;
+	-moz-box-sizing: border-box;
+   		 box-sizing: border-box; 
+}
+
+/* блок шаринга ссылки */
+.item-share-form {
+	width: 31%;
+	float:right;
+	margin-left: 3%;
+	text-align: center;
+}
+
+.edit-short {
+	margin-bottom: 1.6em;
+}
+
+.edit-qr{
+	text-align: center;
+	margin-bottom: 1.6em;
+}
+
+.qr-img{
+	border: 1px solid silver; 
+}
+
+.edit-share {
+	overflow: hidden;
+	margin: 0.6em 0 1.6em;
+	display: inline-block;
+}
+
+
+/* отзывчивая верстка для формы */
+@media all and (max-width: 480px){
+	.item-edit-form {
+		width: auto;
+		margin: 0 1.6em;
+		float: none;
+		padding-right: 0;
+		padding-bottom: 1.6em;
+		border-bottom: 1px solid #dadada; 
+		border-right: 0 solid; 
+		margin-bottom: 1.6em;
+	}
+
+	.item-share-form {
+		width: auto;
+		margin: 0 1.6em;
+		float:none;
+	}
+}
+
+
+

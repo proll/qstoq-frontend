@@ -1,0 +1,28 @@
+.i-social {
+	background-image: url(/img/soc/social-icons.png);
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	margin-right: 3px;
+	float:left;
+}
+
+.i-social:last-child {
+	margin-right: 0;
+}
+
+.i-fb {
+	background-position: 0 0;
+}
+
+.i-vk {
+	background-position: -32px 0;
+}
+
+.i-tw {
+	background-position: -64px 0;
+}
+
+.i-odnk {
+	background-position: -96px 0;
+}
