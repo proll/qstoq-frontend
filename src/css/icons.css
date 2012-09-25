@@ -1,10 +1,16 @@
-.i-social {
+.i-social,
+.i-social-s{
 	background-image: url(/img/soc/social-icons.png);
 	width: 32px;
 	height: 32px;
 	display: inline-block;
 	margin-right: 3px;
 	float:left;
+}
+
+.i-social-s {
+	width: 16px;
+	height: 16px;
 }
 
 .i-social:last-child {
@@ -25,4 +31,16 @@
 
 .i-odnk {
 	background-position: -96px 0;
+}
+
+.i-fb-s {
+	background-position: 0 -32px;	
+}
+
+.i-tw-s {
+	background-position: -16px -32px;	
+}
+
+.i-mail-s {
+	background-position: -32px -32px;	
 }

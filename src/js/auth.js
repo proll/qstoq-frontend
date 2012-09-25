@@ -46,6 +46,9 @@
 			describeStatus("Входим...");
 			loading = true;
 			$.post(qp.opts.apiPath + "auth/", $authForm.serialize(), function (data, textStatus, jqXHR) {
+				console.log (data);
+
+				data = $.parseJSON(data);
 				if (data.success) {
 					okReact();
 					describeStatus("Уууху");
@@ -53,6 +56,7 @@
 					qp.setLSItem("user_token", data.result.token);
 					qp.setLSItem("user_name", $("#email",$authForm).val());
 				} else {
+					describeStatus("Не вошли... Еще раз?");
 					qp.error("NOOOO");
 					errorReact();
 					describeStatus(data.result.message);

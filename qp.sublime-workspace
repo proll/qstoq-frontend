@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"padding-",
+				"padding-bottom"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
 				"ma",
 				"margin-right"
 			],
@@ -287,7 +299,15 @@
 			"file": "src/items.html",
 			"settings":
 			{
-				"buffer_size": 3975,
+				"buffer_size": 6165,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/item.html",
+			"settings":
+			{
+				"buffer_size": 7235,
 				"line_ending": "Unix"
 			}
 		},
@@ -295,28 +315,12 @@
 			"file": "src/item-edit.html",
 			"settings":
 			{
-				"buffer_size": 5050,
+				"buffer_size": 7246,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/auth.html",
-			"settings":
-			{
-				"buffer_size": 3854,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/glebp/.profile",
-			"settings":
-			{
-				"buffer_size": 1689,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/css/item-edit.css",
+			"file": "src/css/item.css",
 			"settings":
 			{
 				"buffer_size": 1465,
@@ -324,10 +328,18 @@
 			}
 		},
 		{
+			"file": "src/js/items.js",
+			"settings":
+			{
+				"buffer_size": 4486,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "src/css/items.css",
 			"settings":
 			{
-				"buffer_size": 2734,
+				"buffer_size": 3458,
 				"line_ending": "Windows"
 			}
 		},
@@ -343,31 +355,7 @@
 			"file": "src/js/auth.js",
 			"settings":
 			{
-				"buffer_size": 2268,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/script.js",
-			"settings":
-			{
-				"buffer_size": 3629,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/items.js",
-			"settings":
-			{
-				"buffer_size": 4424,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/js/item-edit.js",
-			"settings":
-			{
-				"buffer_size": 4736,
+				"buffer_size": 2220,
 				"line_ending": "Unix"
 			}
 		},
@@ -375,7 +363,23 @@
 			"file": "src/css/icons.css",
 			"settings":
 			{
-				"buffer_size": 360,
+				"buffer_size": 563,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/css/primary.styles.css",
+			"settings":
+			{
+				"buffer_size": 5471,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/item-edit.js",
+			"settings":
+			{
+				"buffer_size": 4766,
 				"line_ending": "Unix"
 			}
 		}
@@ -444,6 +448,14 @@
 	},
 	"file_history":
 	[
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/style.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/index.html",
+		"/Users/glebp/.profile",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/auth.html",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/item-edit.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/item.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/script.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/.git/config",
 		"/Users/glebp/Dropbox/proj/stylogram.ru/.git/config",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/item-edit.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/plugins.js",
@@ -451,7 +463,6 @@
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/items.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/links.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/link-edit.js",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/style.css",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/img/soc/social-icons.png",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/img/soc/readme.md",
 		"/Users/glebp/proj/bigbuzzy-frontend/.git/config",
@@ -465,7 +476,6 @@
 		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/css/link-edit.css",
 		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/css/primary.styles.css",
 		"/D/dropbox/Dropbox/proj/qstoq-frontend/src/js/script.js",
-		"/Users/glebp/.profile",
 		"/Users/glebp/Dropbox/proj/custoq/trunk/site/web/ola/src/404.html",
 		"/Users/glebp/Dropbox/proj/custoq/trunk/site/web/ola/src/css/style.css",
 		"/Users/glebp/Dropbox/proj/custoq/trunk/site/web/ola/src/css/gui.css",
@@ -565,13 +575,7 @@
 		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/js_src/m/geo/geo_to_catalog.js",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/lib/main_block.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_coupon.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/mbigbuzzy.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_pager.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_proposal.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_proposal-catalog.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_proposal_reviews.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_proposal_map.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_proposal_comments.ftl"
+		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/mbigbuzzy.css"
 	],
 	"find":
 	{
@@ -682,6 +686,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"data",
+			"h-col",
+			"ul",
+			"m-h",
+			"m-shd",
+			"addFormDo",
+			"addBt",
+			"fillLinkEditForm",
 			"titleAuth",
 			"userToken",
 			"linkID",
@@ -801,15 +813,7 @@
 			"mobi",
 			"PAGE_HAS_ADD",
 			"PAGE_HAS_HEADER",
-			"MAIN_MENU",
-			"MISC_JS_LIST",
-			"PAGE_HAS_CATALOG_DIALOG",
-			"CONTEXT_MENU_CONFIG",
-			"PAGE_HAS_CONTEXT_MENU",
-			"utcDateFormater",
-			"slashSecDateFormater",
-			"isoDateFormater",
-			"slashDateFormater"
+			"MAIN_MENU"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -817,6 +821,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"f-col",
 			"title_auth",
 			"user_token",
 			"item_id",
@@ -943,8 +948,7 @@
 			"${STATIC_HOST}/",
 			"",
 			"numDeclension",
-			"_",
-			":\""
+			"_"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -955,7 +959,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -963,7 +967,7 @@
 					"file": "src/items.html",
 					"settings":
 					{
-						"buffer_size": 3975,
+						"buffer_size": 6165,
 						"regions":
 						{
 							"TagLint":
@@ -973,8 +977,8 @@
 								"regions":
 								[
 									[
-										1902,
-										1912
+										1869,
+										1879
 									]
 								],
 								"scope": "variable.parameter"
@@ -983,8 +987,8 @@
 						"selection":
 						[
 							[
-								960,
-								964
+								2345,
+								2345
 							]
 						],
 						"settings":
@@ -994,102 +998,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/item-edit.html",
-					"settings":
-					{
-						"buffer_size": 5050,
-						"regions":
-						{
-							"TagLint":
-							{
-								"flags": 52,
-								"icon": "dot",
-								"regions":
-								[
-									[
-										1909,
-										1919
-									]
-								],
-								"scope": "variable.parameter"
-							}
-						},
-						"selection":
-						[
-							[
-								3870,
-								3870
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 85.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/auth.html",
-					"settings":
-					{
-						"buffer_size": 3854,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2126,
-								2126
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/glebp/.profile",
-					"settings":
-					{
-						"buffer_size": 1689,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1338,
-								1347
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 204.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1097,12 +1006,94 @@
 			]
 		},
 		{
-			"selected": 7,
+			"selected": 5,
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "src/css/item-edit.css",
+					"buffer": 1,
+					"file": "src/item.html",
+					"settings":
+					{
+						"buffer_size": 7235,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1870,
+										1880
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								1877,
+								1877
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/item-edit.html",
+					"settings":
+					{
+						"buffer_size": 7246,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1876,
+										1886
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								6212,
+								6212
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 438.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/css/item.css",
 					"settings":
 					{
 						"buffer_size": 1465,
@@ -1122,7 +1113,34 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 371.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/js/items.js",
+					"settings":
+					{
+						"buffer_size": 4486,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3390,
+								3390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 904.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1132,15 +1150,15 @@
 					"file": "src/css/items.css",
 					"settings":
 					{
-						"buffer_size": 2734,
+						"buffer_size": 3458,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								56,
-								56
+								1160,
+								1160
 							]
 						],
 						"settings":
@@ -1149,7 +1167,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 781.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1166,8 +1184,8 @@
 						"selection":
 						[
 							[
-								835,
-								835
+								1281,
+								1128
 							]
 						],
 						"settings":
@@ -1176,7 +1194,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 56.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1186,15 +1204,15 @@
 					"file": "src/js/auth.js",
 					"settings":
 					{
-						"buffer_size": 2268,
+						"buffer_size": 2220,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								291,
-								291
+								1300,
+								1275
 							]
 						],
 						"settings":
@@ -1210,23 +1228,23 @@
 				},
 				{
 					"buffer": 8,
-					"file": "src/js/script.js",
+					"file": "src/css/icons.css",
 					"settings":
 					{
-						"buffer_size": 3629,
+						"buffer_size": 563,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								22,
+								11
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1237,27 +1255,27 @@
 				},
 				{
 					"buffer": 9,
-					"file": "src/js/items.js",
+					"file": "src/css/primary.styles.css",
 					"settings":
 					{
-						"buffer_size": 4424,
+						"buffer_size": 5471,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								100,
-								100
+								3777,
+								3777
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1175.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1267,47 +1285,20 @@
 					"file": "src/js/item-edit.js",
 					"settings":
 					{
-						"buffer_size": 4736,
+						"buffer_size": 4766,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2953,
+								2953
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/css/icons.css",
-					"settings":
-					{
-						"buffer_size": 360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								132,
-								132
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -1357,6 +1348,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
 	"replace":
 	{
 		"height": 64.0
@@ -1367,6 +1362,18 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"pri",
+				"src/css/primary.styles.css"
+			],
+			[
+				"scri",
+				"src/js/script.js"
+			],
+			[
+				"",
+				"src/js/script.js"
+			],
 			[
 				"gui",
 				"src/css/gui.css"
@@ -1593,7 +1600,7 @@
 		[
 			[
 				"",
-				"/Users/glebp/proj/bigbuzzy-frontend/bigbuzzy-frontend.sublime-project"
+				"/Users/glebp/Dropbox/proj/stylogram.ru/stylogram.sublime-project"
 			]
 		],
 		"width": 380.0

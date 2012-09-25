@@ -98,6 +98,7 @@
 			url: qp.opts.apiPath + "links/"+item_id+"?token=" + user_token,
 			// dataType: "json",
 			success: function(data, textStatus, jqXHR){
+				data = $.parseJSON(data);
 				if (data.success) {
 					qp.processShow("success", /*data.result.message*/"Ух-ты данные загрузились успешно");
 					// собираем по шаблону ссылку

@@ -61,6 +61,7 @@
 			url: qp.opts.apiPath + "links/?token=" + user_token,
 			// dataType: "json",
 			success: function(data, textStatus, jqXHR){
+				data = $.parseJSON(data);
 				if (data.success) {
 					qp.processShow("success", /*data.result.message*/"Ух-ты данные загрузились успешно");
 					// собираем по шаблону ссылки
@@ -119,6 +120,7 @@
 					// dataType: "json",
 					data: $addForm.serialize(),
 					success: function(data, textStatus, jqXHR){
+						data = $.parseJSON(data);
 						if (data.success) {
 							qp.processShow("success", /*data.result.message*/"Вы добавили ссылку");
 							addItem(data.result);

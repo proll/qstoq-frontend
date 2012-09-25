@@ -77,9 +77,14 @@
 	text-align:left;
 	margin-right: 1.2em;
 	display: inline-block;
+	opacity:0;
+	-webkit-transition: opacity 0.5s;
+	   -moz-transition: opacity 0.5s;
+			transition: opacity 0.5s;
 }
 
 .add-form-ani {
+	opacity:1;
 }
 
 .add-nm,
@@ -92,14 +97,47 @@
 
 
 
-/* анимация строки меню - контейнера - прозрачность - перенес в строку внутри*/
-.csstransforms3d .add-form div{
-	-webkit-perspective: 400;
-	-moz-perspective: 400;
+/* Валюта в форме ввода */
+.add-pc {
+	position: relative;
+	width:170px;
 }
 
+
+.add-pc-RUR .brd-rnd {
+	-webkit-border-radius: 8px 0 0 8px;
+	   -moz-border-radius: 8px 0 0 8px;
+			border-radius: 8px 0 0 8px;
+	margin-right: 30px;
+	width:140px;
+}
+
+.add-pc-RUR label {
+	position:absolute;
+	display: block;
+	top:0;
+	right:0;
+	width:30px;
+    padding: 0.5em 0 0.4375em;
+	background-color: #ACEEFF;
+	font-size: 1.6em;
+	text-align: center;
+	line-height: 1.0675;
+	-webkit-border-radius: 0 8px 8px 0;
+	   -moz-border-radius: 0 8px 8px 0;
+			border-radius: 0 8px 8px 0;
+	
+	border: 1px solid #c0c0c0;
+}
+
+/* анимация строки меню - контейнера - прозрачность - перенес в строку внутри*/
+/*.csstransforms3d .add-form div{
+	-webkit-perspective: 400;
+	-moz-perspective: 400;
+}*/
+
 /* анимация строки меню - внутри - 3d искажение + прозрачность */
-.csstransforms3d .add-inp{
+/*.csstransforms3d .add-inp{
 	-webkit-perspective: 0;
 		-moz-perspective: 0;
 	-webkit-transition-property: -webkit-transform, opacity;
@@ -114,8 +152,8 @@
 		-moz-transform: rotate3d(1,0,0,-90deg);
 	opacity: 0;
 }
-
-.csstransforms3d .add-lnk .add-inp{
+*/
+/*.csstransforms3d .add-lnk .add-inp{
 	-webkit-transition-delay: 150ms;
 		-moz-transition-delay: 150ms;
 }
@@ -130,7 +168,7 @@
 		-moz-transform: rotate3d(1,0,0,0deg);
 	opacity: 1;
 }
-
+*/
 
 /* отзывчивая верстка для таблицы линков */
 @media all and (max-width: 480px){
