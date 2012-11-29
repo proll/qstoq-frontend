@@ -1,5 +1,5 @@
 ﻿/* Author: proll
-
+редактирование item медиа
 */
 
 (function($){
@@ -11,6 +11,7 @@
 	// если токена нет пишем ошибку и не продолжаем далее
 	if (!user_token) {
 		qp.error("user_not_found");
+		qp.goAuth();
 		return;
 	}
 
@@ -98,7 +99,8 @@
 			url: qp.opts.apiPath + "links/"+item_id+"?token=" + user_token,
 			// dataType: "json",
 			success: function(data, textStatus, jqXHR){
-				data = $.parseJSON(data);
+				if (typeof(data) == 'string')
+					data = $.parseJSON(data);
 				if (data.success) {
 					qp.processShow("success", /*data.result.message*/"Ух-ты данные загрузились успешно");
 					// собираем по шаблону ссылку
@@ -108,6 +110,8 @@
 				}
 			},
 			error: function(data){
+				if (typeof(data) == 'string')
+					data = $.parseJSON(data);
 				if(data.responseText){
 					qp.processShow("error", data.status + " " + data.statusText);
 				} else {
@@ -144,6 +148,8 @@
 				url: qp.opts.apiPath + "links/"+item_id+"?token=" + user_token,
 				data: $editForm.serialize(),
 				success: function(data, textStatus, jqXHR){
+					if (typeof(data) == 'string')
+						data = $.parseJSON(data);
 					if (data.success) {
 						qp.processShow("success", /*data.result.message*/"Изменения сохранены");
 					} else {
@@ -151,6 +157,8 @@
 					}
 				},
 				error: function(data){
+					if (typeof(data) == 'string')
+						data = $.parseJSON(data);
 					if(data.responseText){
 						qp.processShow("error", data.status + " " + data.statusText);
 					} else {
@@ -165,7 +173,15 @@
 	}
 
 	$editBt.on("click", editFormDo);
-	// @TODO - по ентеру не работает сабмит в хроме под маком
-	$editBt.live("submit", editFormDo);
+	$editForm.on("submit", editFormDo);
+
+	// Ctrl[Cmd]+S реакция
+	$(window).keypress(function(e) {
+	    if (!(e.which == 115 && (e.ctrlKey || e.cmdKey)) && !(e.which == 19)) return true;
+	    console.log("Ctrl-S pressed");
+	    editFormDo();
+	    e.preventDefault();
+	    return false;
+	});
 
 })(jQuery);

@@ -1,111 +1,203 @@
-.edit-form {
+/* страница оплаты */
+.g-n {
+	height: auto;
+	padding: 0 10px;
+}
+
+.g-n footer {
+	margin: 0 auto;
+	height: auto;	
+	max-width: 960px;
+	min-width: 300px;
+}
+
+.g-cont {
+	margin: 0 auto;
+	height: auto;	
+	max-width: 960px;
+	min-width: 320px;
+	background-color: #fff;
 	overflow: hidden;
+	margin: 3.2em auto 0
 }
 
-.edit-nm,
-.edit-lnk,
-.edit-pc,
-.edit-desc,
-.edit-active {
-	display: inline-block;
-	margin-bottom: 1.6em;
+.item-b {
+	margin: 1.6em 1.6em 0;
+	display: none;
+	position: relative;
 }
 
-.edit-nm {
-	width: 80%;
-}
-
-.edit-pc {
-	padding-left:1.6em;
-	width: 20%;
-	-moz-box-sizing: border-box;
-   		 box-sizing: border-box; 
-}
-
-.edit-lnk,
-.edit-desc {
-	width: 100%;
-}
-
-
-.edit-active {
-	width: 63%;
-	float:left;
-	text-align: right;
+.item-b-name {
 	font-size: 1.6em;
-	margin: 0.5em 0 0;
-	padding-right: 1em;
-	-moz-box-sizing: border-box;
-   		 box-sizing: border-box; 
+	font-weight: bold;
 }
 
-/*.edit-form {
-	margin-bottom: 1.6em;
-}*/
+.item-b-desc {
+	font-size: 1.6em;
+	line-height: 1.4;
+}
 
 
-.edit-bt {
-	width: 37%;
+.item-b-price {
+	font-size: 1.6em;
+	position: absolute;
+	right:-1em;
+	top:5px;
+	z-index: 20;
+}
+
+.item-b-price::before{
+	content: '';
+	height: 0;
+	position: absolute;
+	width: 0;
+	border: 14px solid transparent;
+	border-right-color: #ACEEFF;
+	position: absolute;
+	top: 0;
+	right:100%;
+}
+
+
+
+.item-b-get {
+	border-top: 1px dotted #ccc;
+	padding: 1.6em 0;
+}
+
+.get-bt {
+	width: 100px;
+	margin-right: 5em;
 	float: right;
 }
 
-.item-edit-form {
-	width: 66%;
-	float: left;
-	padding-right: 3%;
-	border-right: 1px solid #dadada; 
-	margin-bottom: 1.6em;
-	-moz-box-sizing: border-box;
-   		 box-sizing: border-box; 
+
+.item-b-purchase {
+	font-size: 10px;
+	width: 288px;
+	margin: 1.6em 0;
+	position: relative;
+	left: 50%;
+	margin-left: -144px;
 }
 
-/* блок шаринга ссылки */
-.item-share-form {
-	width: 31%;
-	float:right;
-	margin-left: 3%;
+/* карта - платилка */
+.payment-inp {
+	width:100%;
+	background-clip:padding-box;
+	 -webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		 -ms-box-sizing: border-box;
+		  -o-box-sizing: border-box;
+			 box-sizing: border-box;
+}
+
+
+.payment-systems {
+	overflow: visible;
+	position: relative;
+	display: none;
+	font-size: 1.6em;
 	text-align: center;
+	border-top: 1px dotted #CCC
 }
 
-.edit-short {
-	margin-bottom: 1.6em;
-}
 
-.edit-qr{
-	text-align: center;
-	margin-bottom: 1.6em;
-}
-
-.qr-img{
-	border: 1px solid silver; 
-}
-
-.edit-share {
+.payment-card-form {
+	position: relative;
+	margin: 0 auto;
 	overflow: hidden;
-	margin: 0.6em 0 1.6em;
+	text-align: left;
 	display: inline-block;
 }
 
+.payment-card-form fieldset {
+	width: 288px;
+	height: 160px;
+	display: block;
+	float: left;
 
-/* отзывчивая верстка для формы */
-@media all and (max-width: 480px){
-	.item-edit-form {
-		width: auto;
-		margin: 0 1.6em;
-		float: none;
-		padding-right: 0;
-		padding-bottom: 1.6em;
-		border-bottom: 1px solid #dadada; 
-		border-right: 0 solid; 
-		margin-bottom: 1.6em;
-	}
+	color: #fff !important;
+	position:relative;
+	padding: 0.67em 0;
 
-	.item-share-form {
-		width: auto;
-		margin: 0 1.6em;
-		float:none;
-	}
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		 -ms-box-sizing: border-box;
+		  -o-box-sizing: border-box;
+			 box-sizing: border-box;
+
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
+	border:1px solid rgba(0,0,0, 0.4);
+	-webkit-box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
+			box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.7);
+
+	margin: 1em 0;
+	background-color: #ccc
+}
+
+.payment-card-form label{
+	margin-right: 0.5em;
+}
+
+.payment-card-form fieldset:nth-child(1) .row {
+	margin-top: .5em;
+}
+
+.payment-card-form fieldset:nth-child(1) .payment-card-number-container {
+	margin-top:0;
 }
 
 
+.payment-card-form fieldset:nth-child(1) {
+	padding: 0.67em;
+	margin-right: 1em;
+	background-position: -24px 0;
+}
+
+.payment-card-cvc-row-wrapper {
+	border-top: 2em solid #000;
+	padding: 0.67em;
+}
+
+.payment-card-cvc-row {
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#fld-payment-card-cvc {
+	float:right;
+	width:3em;
+}
+
+
+/* иконки системы карты */
+.payment-card-type-icon {
+	width: 51px;
+	height: 32px;
+	background: url(/img/card-logos.png) -100px 0 no-repeat;
+	display: block;
+	position: absolute;
+	bottom: 0.67em;
+	right: 0.67em;
+}
+
+.cc-visa_electron {
+	background-position: 0 0;
+}
+.cc-visa {
+	background-position: 0 -32px;
+}
+.cc-mastercard {
+	background-position: 0 -64px;
+}
+.cc-maestro {
+	background-position: 0 -96px;
+}
+.cc-discover {
+	background-position: 0 -128px;
+}
+.cc-amex {
+	background-position: 0 -160px;
+}
 

@@ -117,8 +117,9 @@
 	display: block;
 	top:0;
 	right:0;
+	bottom: 0;
 	width:30px;
-    padding: 0.5em 0 0.4375em;
+    padding-top: 0.5em;
 	background-color: #ACEEFF;
 	font-size: 1.6em;
 	text-align: center;

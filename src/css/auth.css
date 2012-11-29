@@ -19,3 +19,50 @@
 .auth-do {
 	margin-top:1em;
 }
+
+
+
+.name-wrapper {
+	-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+	height: 0;
+	overflow: hidden;
+}
+
+
+.toggled .name-wrapper {
+	height: 34px;
+}
+
+.logi-reg-toggle {
+	display:block;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	font-size: 1.6em;
+	text-align: right;
+}
+
+.logi-reg-toggle > div {
+	-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+	display: block;
+	overflow: hidden;
+}
+
+.logi-reg-toggle > div:first-child {
+	height: 0;
+}
+
+.logi-reg-toggle > div:last-child {
+	height: 22px;
+}
+
+
+.toggled .logi-reg-toggle > div:first-child {
+	height: 22px;
+}
+
+.toggled .logi-reg-toggle > div:last-child {
+	height: 0;
+}

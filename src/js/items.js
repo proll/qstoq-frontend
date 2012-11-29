@@ -1,5 +1,5 @@
 /* Author: proll
-
+все item продавца
 */
 
 (function($){
@@ -10,21 +10,17 @@
 	// если токена нет пишем ошибку и не продолжаем далее
 	if (!user_token) {
 		qp.error("user_not_found");
+		qp.goAuth();
 		return;
 	}
 
 
 	var renderItems = function (itemArr) {
-		// @TODO когда сменят сортировку на обратную
-		// var i = 0,
-		// 	arrLength = itemArr.length,
-		// 	out = '<table class="items"><tbody>',
-		// 	item;
-		// for (; i < arrLength; i++) {
-
-		var out = '<table class="items"><tbody>',
+		var i = 0,
+			arrLength = itemArr.length,
+			out = '<table class="items"><tbody>',
 			item;
-		for (var i = itemArr.length - 1; i >= 0; i--) {
+		for (; i < arrLength; i++) {
 			item = itemArr[i];
 			out += '<tr>';
 			out += '<td class="item-name items-td"><a href="item-edit.html?id='+item.id+'&action=edit">'+item.name+'</a><span class="item-desc">'+item.description+'</span></td>';
@@ -61,7 +57,8 @@
 			url: qp.opts.apiPath + "links/?token=" + user_token,
 			// dataType: "json",
 			success: function(data, textStatus, jqXHR){
-				data = $.parseJSON(data);
+				if (typeof(data) == 'string')
+					data = $.parseJSON(data);
 				if (data.success) {
 					qp.processShow("success", /*data.result.message*/"Ух-ты данные загрузились успешно");
 					// собираем по шаблону ссылки
@@ -71,6 +68,8 @@
 				}
 			},
 			error: function(data){
+				if (typeof(data) == 'string')
+					data = $.parseJSON(data);
 				if(data.responseText){
 					qp.processShow("error", data.status + " " + data.statusText);
 				} else {
@@ -120,7 +119,8 @@
 					// dataType: "json",
 					data: $addForm.serialize(),
 					success: function(data, textStatus, jqXHR){
-						data = $.parseJSON(data);
+						if (typeof(data) == 'string')
+							data = $.parseJSON(data);
 						if (data.success) {
 							qp.processShow("success", /*data.result.message*/"Вы добавили ссылку");
 							addItem(data.result);
@@ -131,6 +131,8 @@
 						}
 					},
 					error: function(data){
+						if (typeof(data) == 'string')
+							data = $.parseJSON(data);
 						if(data.responseText){
 							qp.processShow("error", data.status + " " + data.statusText);
 						} else {
@@ -146,7 +148,6 @@
 	}
 
 	$addBt.on("click", addFormDo);
-	// @TODO - по ентеру не работает сабмит в хроме под маком
 	$addForm.live("submit", addFormDo);
 
 })(jQuery);

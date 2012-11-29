@@ -113,7 +113,7 @@
 }
 
 
-.qp-inp{
+.qp-inp {
 	display:block;
 	background-clip:padding-box;
 	 -webkit-box-sizing: border-box;
@@ -121,9 +121,7 @@
 		 -ms-box-sizing: border-box;
 		  -o-box-sizing: border-box;
 			 box-sizing: border-box;
-	font-size:1.6em;
 	font-weight: bold;
-	line-height:1;
 	background:#fff;
 	color:#1F1712;
 	 -webkit-box-shadow: inset -1px 3px 7px rgba(0, 0, 0, 0.17);
@@ -133,9 +131,10 @@
 			 box-shadow: inset -1px 3px 7px rgba(0, 0, 0, 0.17);
 	border:1px solid #c0c0c0;
 	width:100%;
+	line-height:1;
 	padding:0.5em 0.5em 0.4375em;
+	font-size:1.6em;
 }
-
 
 /* группа полей ввода */
 
@@ -168,7 +167,9 @@
 .msg-out {
 	position: fixed;
 	top:0;
-	width: 100%;
+	left:50%;
+	margin-left:-160px;
+	width: 320px;
 	text-align: center;
 }
 
@@ -191,7 +192,6 @@
 	font-size: 1.4rem;
 	text-shadow: 0 -1px 0 rgba(255,255,255,0.7);
 	margin: 0.8rem auto 0;
-	width: 33%
 }
 
 

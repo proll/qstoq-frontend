@@ -1,92 +1,45 @@
-﻿/* Author: proll
-
+/* Author: proll
+item медиа
 */
 
 (function($){
-	if(location.href.indexOf("item-edit")==-1) return;
+	if(!qp.is_offline && location.href.indexOf("item")==-1) return;
 
-	var user_token 	= qp.getLSItem("user_token"),
+
+	var user_token 		= qp.getLSItem("user_token"),
 		item_id 		= qp.getUrlVars("id");
-
-	// если токена нет пишем ошибку и не продолжаем далее
-	if (!user_token) {
-		qp.error("user_not_found");
-		return;
-	}
 
 	if (!item_id) {
 		qp.error("link_not_found");
-		return;
+		if(!qp.is_offline) return;
 	}
 
 	$("textarea").autoGrow();
 
 
-	var $editForm = 			$(".edit-form"),
-		$editBt =				$(".edit-bt", $editForm),
-		$nameField = 			$("#name",  $editForm),
-		$urlField = 			$("#url", 	$editForm),
-		$descriptionField = 	$("#description", 	$editForm),
-		$priceField = 			$("#price", $editForm);
-		$shortUrlField = 		$("#url_short");
+	var $item_container = 			 $(".item-b"),
+		$get_bt =					 $(".get-bt", $item_container),
+		$purchase_bt =				 $(".purchase-bt", $item_container),
+		$info_container =			 $(".item-b-info", 	$item_container),
+		$name_field = 				 $(".item-b-name",  $item_container),
+		$description_field = 		 $(".item-b-desc", 	$item_container),
+		$price_field = 				 $(".item-b-price", $item_container),
+		$payment_systems_container = $(".payment-systems"),
+
+		$item_id_field = 		 $("#fld-payment-item-id"),
+		$amount_field = 		 $("#fld-payment-amount"),
+
+		is_payment_opened = false;
 
 
-	var fillLinkDetails = function (itemObj) {
-		$nameField.val(itemObj.name);
-		$priceField.val(itemObj.price);
-		$descriptionField.val(itemObj.description);
-		$shortUrlField.val(itemObj.url_short);
-		qp.readOnlyInputs();
 
-		$(".edit-qr img").attr("src", "https://chart.googleapis.com/chart?chs=96x96&cht=qr&chl="+itemObj.url_short+"&chld=H");
-
-		$("#to_fb").attr("href", "http://api.addthis.com/oexchange/0.8/forward/facebook/offer?"
-			+"url="+itemObj.url_short
-			+"&title="+encodeURIComponent(itemObj.name)
-			+"&description="+encodeURIComponent(itemObj.description)
-			+"&pubid=prolll"
-			+"&text="+encodeURIComponent(itemObj.description)
-			+"&via=qstoq");
-
-		$("#to_vk").attr("href", "http://api.addthis.com/oexchange/0.8/forward/vk/offer?"
-			+"url="+itemObj.url_short
-			+"&title="+encodeURIComponent(itemObj.name)
-			+"&description="+encodeURIComponent(itemObj.description)
-			+"&pubid=prolll"
-			+"&text="+encodeURIComponent(itemObj.description)
-			+"&via=qstoq");
-
-		$("#to_tw").attr("href", "http://api.addthis.com/oexchange/0.8/forward/twitter/offer?"
-			+"url="+itemObj.url_short
-			+"&title="+encodeURIComponent(itemObj.name)
-			+"&description="+encodeURIComponent(itemObj.description)
-			+"&pubid=prolll"
-			+"&text="+encodeURIComponent(itemObj.description)
-			+"&via=qstoq");
-
-		$("#to_ok").attr("href", "http://api.addthis.com/oexchange/0.8/forward/odnoklassniki_ru/offer?"
-			+"url="+itemObj.url_short
-			+"&title="+encodeURIComponent(itemObj.name)
-			+"&description="+encodeURIComponent(itemObj.description)
-			+"&pubid=prolll"
-			+"&text="+encodeURIComponent(itemObj.description)
-			+"&via=qstoq");
-
-		// @TODO - где получение полного урла
-		$urlField.val(itemObj.url);
-
-		var $activePseudoCheck = $("#active_pseudo", $editForm),
-			$activeCheck = $("#active", $editForm);
-
-		$activeCheck
-			.val(Number(itemObj.active));
-
-		$activePseudoCheck
-			.prop("checked", itemObj.active)
-			.change(function(e){
-				$activeCheck
-					.val(Number($activePseudoCheck.is(":checked")));
-			});
+	var fillItem = function (itemObj) {
+		$name_field.text(itemObj.name);
+		$description_field.text(itemObj.description);
+		$price_field.html(qp.priceDesc(itemObj.price, "rur"));
+		$amount_field.val(itemObj.price);
+		$item_id_field.val(item_id);
+		$item_container.fadeIn();
 	}
 
 
@@ -96,19 +49,23 @@
 	qp.processShow("start", "Загружаемся");
 	$.ajax({
 			type: "GET",
-			url: qp.opts.apiPath + "links/"+item_id+"?token=" + user_token,
+			url: qp.opts.apiPath + "links/"+item_id,
 			// dataType: "json",
 			success: function(data, textStatus, jqXHR){
-				data = $.parseJSON(data);
+				if (typeof(data) == 'string')
+					data = $.parseJSON(data);
+					
 				if (data.success) {
 					qp.processShow("success", /*data.result.message*/"Ух-ты данные загрузились успешно");
-					// собираем по шаблону ссылку
-					fillLinkDetails(data.result);
+					// собираем по шаблону item
+					fillItem(data.result);
 				} else {
 					qp.processShow("error", data.result.message);
 				}
 			},
 			error: function(data){
+				if (typeof(data) == 'string')
+					data = $.parseJSON(data);
 				if(data.responseText){
 					qp.processShow("error", data.status + " " + data.statusText);
 				} else {
@@ -118,55 +75,32 @@
 	});
 
 
-	var editFormDo = function(e) {
-		var isValidForm = true;
+	var itemGetDo = function(e) {
+		if(true || !is_payment_opened) {
+			is_payment_opened = true;
 
-		// валидация введенного в форме
-		$nameField	.removeClass("err-input");
-		$urlField	.removeClass("err-input");
-		$priceField	.removeClass("err-input");
 
-		if ($.trim($nameField.val())=="") {
-			$nameField	.addClass("err-input");
-			isValidForm = false;
-		}
-		if (!qp.isURL($urlField.val()))	{
-			$urlField	.addClass("err-input");
-			isValidForm = false;
-		}
-		if (!qp.isNum($priceField.val())) {
-			$priceField	.addClass("err-input");
-			isValidForm = false;	
-		}
-
-		if(isValidForm) {
-			$.ajax({
-				type: "POST",
-				url: qp.opts.apiPath + "links/"+item_id+"?token=" + user_token,
-				data: $editForm.serialize(),
-				success: function(data, textStatus, jqXHR){
-					if (data.success) {
-						qp.processShow("success", /*data.result.message*/"Изменения сохранены");
-					} else {
-						qp.processShow("error", data.result.message);
-					}
-				},
-				error: function(data){
-					if(data.responseText){
-						qp.processShow("error", data.status + " " + data.statusText);
-					} else {
-						qp.processShow("error", data.status + " " + data.statusText);
-					}
+			$get_bt.fadeOut(200,
+				function (argument) {
+					$price_field.animate({top:"233px"}, 200);
+					$info_container.slideUp(200);
+					$payment_systems_container.slideDown(
+						200, 
+						function(){
+							$("#fld-payment-card-num",$payment_systems_container).focus();
+						}
+					);
 				}
-			});
-		}
+			);
 
-		e.preventDefault(); 
-		e.stopPropagation();
+		} 
+		// else {
+		// 	$(".payment-card-form").submit();
+
+		// }
+		return false;
 	}
 
-	$editBt.on("click", editFormDo);
-	// @TODO - по ентеру не работает сабмит в хроме под маком
-	$editBt.live("submit", editFormDo);
+	$get_bt.on("click", itemGetDo);
 
 })(jQuery);

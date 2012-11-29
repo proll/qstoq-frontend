@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
 				"padding-",
 				"padding-bottom"
 			],
@@ -30,10 +38,6 @@
 			[
 				"in",
 				"inline-block"
-			],
-			[
-				"mar",
-				"margin-top"
 			],
 			[
 				"name",
@@ -296,54 +300,6 @@
 	"buffers":
 	[
 		{
-			"file": "src/items.html",
-			"settings":
-			{
-				"buffer_size": 6165,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/item.html",
-			"settings":
-			{
-				"buffer_size": 7235,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/item-edit.html",
-			"settings":
-			{
-				"buffer_size": 7246,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/css/item.css",
-			"settings":
-			{
-				"buffer_size": 1465,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/js/items.js",
-			"settings":
-			{
-				"buffer_size": 4486,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/css/items.css",
-			"settings":
-			{
-				"buffer_size": 3458,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/css/gui.css",
 			"settings":
 			{
@@ -352,34 +308,50 @@
 			}
 		},
 		{
-			"file": "src/js/auth.js",
+			"file": "src/css/item.css",
 			"settings":
 			{
-				"buffer_size": 2220,
+				"buffer_size": 472,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/item.js",
+			"settings":
+			{
+				"buffer_size": 2799,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/css/icons.css",
+			"file": "src/css/style.css",
 			"settings":
 			{
-				"buffer_size": 563,
-				"line_ending": "Unix"
+				"buffer_size": 314,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/css/primary.styles.css",
 			"settings":
 			{
-				"buffer_size": 5471,
+				"buffer_size": 5624,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/js/item-edit.js",
+			"file": "src/item.html",
 			"settings":
 			{
-				"buffer_size": 4766,
+				"buffer_size": 3161,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/items.html",
+			"settings":
+			{
+				"buffer_size": 6171,
 				"line_ending": "Unix"
 			}
 		}
@@ -448,19 +420,25 @@
 	},
 	"file_history":
 	[
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/style.css",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/index.html",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/items.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/items.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/icons.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/item.html",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/auth.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/primary.styles.css",
 		"/Users/glebp/.profile",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/auth.html",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/items.html",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/item-edit.css",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/item.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/auth.html",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/non-semantic.helper.classes.css",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/script.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/plugins.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/style.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/index.html",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/.git/config",
 		"/Users/glebp/Dropbox/proj/stylogram.ru/.git/config",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/item-edit.js",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/plugins.js",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/icons.css",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/items.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/links.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/link-edit.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/img/soc/social-icons.png",
@@ -569,13 +547,7 @@
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout-static/page_disclaimer_product.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout-static/page_about.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/alert_buy_coupon.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/proposal_catalog_json.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/favorites.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/page_reviews.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/js_src/m/geo/geo_to_catalog.js",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/lib/main_block.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_coupon.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/mbigbuzzy.css"
+		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/proposal_catalog_json.ftl"
 	],
 	"find":
 	{
@@ -686,6 +658,21 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"urlField",
+			"editForm",
+			"fillItem",
+			"fillLinkEditForm",
+			"item-edit-form",
+			"data = window['eval'](data);",
+			"237px",
+			"23",
+			"parseJSON",
+			"success",
+			"renderItems",
+			"parseJSON",
+			"post",
+			"m-h",
+			"post",
 			"data",
 			"h-col",
 			"ul",
@@ -798,22 +785,7 @@
 			"map",
 			"\n#	",
 			"\n#	deleted:    ",
-			"searchProcessor",
-			"search",
-			"AUTH_PATH",
-			"MISC_PATH",
-			"auth",
-			"a-cont",
-			"loggedMessage",
-			"Page",
-			"dialog_",
-			"defaultMainLoginPageTemplate",
-			"mobi",
-			"proposalCatalogPageTemplate",
-			"mobi",
-			"PAGE_HAS_ADD",
-			"PAGE_HAS_HEADER",
-			"MAIN_MENU"
+			"searchProcessor"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -821,6 +793,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"itemForm",
+			"fillItem",
+			"data = $.parseJSON(data);",
 			"f-col",
 			"title_auth",
 			"user_token",
@@ -945,10 +920,7 @@
 			"${MOBILE_PATH}",
 			"${STATIC_HOST}/",
 			"${STATIC_HOST}",
-			"${STATIC_HOST}/",
-			"",
-			"numDeclension",
-			"_"
+			"${STATIC_HOST}/"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -959,15 +931,183 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "src/css/gui.css",
+					"settings":
+					{
+						"buffer_size": 4971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1637,
+								1629
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/css/item.css",
+					"settings":
+					{
+						"buffer_size": 472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								192,
+								192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/js/item.js",
+					"settings":
+					{
+						"buffer_size": 2799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/css/style.css",
+					"settings":
+					{
+						"buffer_size": 314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/css/primary.styles.css",
+					"settings":
+					{
+						"buffer_size": 5624,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3757,
+								3757
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 279.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 5,
+					"file": "src/item.html",
+					"settings":
+					{
+						"buffer_size": 3161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2132,
+								2132
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 617.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "src/items.html",
 					"settings":
 					{
-						"buffer_size": 6165,
+						"buffer_size": 6171,
 						"regions":
 						{
 							"TagLint":
@@ -987,8 +1127,8 @@
 						"selection":
 						[
 							[
-								2345,
-								2345
+								2020,
+								2020
 							]
 						],
 						"settings":
@@ -998,311 +1138,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 204.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 5,
-			"sheets":
-			[
-				{
-					"buffer": 1,
-					"file": "src/item.html",
-					"settings":
-					{
-						"buffer_size": 7235,
-						"regions":
-						{
-							"TagLint":
-							{
-								"flags": 52,
-								"icon": "dot",
-								"regions":
-								[
-									[
-										1870,
-										1880
-									]
-								],
-								"scope": "variable.parameter"
-							}
-						},
-						"selection":
-						[
-							[
-								1877,
-								1877
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/item-edit.html",
-					"settings":
-					{
-						"buffer_size": 7246,
-						"regions":
-						{
-							"TagLint":
-							{
-								"flags": 52,
-								"icon": "dot",
-								"regions":
-								[
-									[
-										1876,
-										1886
-									]
-								],
-								"scope": "variable.parameter"
-							}
-						},
-						"selection":
-						[
-							[
-								6212,
-								6212
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 438.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/css/item.css",
-					"settings":
-					{
-						"buffer_size": 1465,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								622,
-								622
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 371.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/js/items.js",
-					"settings":
-					{
-						"buffer_size": 4486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3390,
-								3390
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 904.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/css/items.css",
-					"settings":
-					{
-						"buffer_size": 3458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1160,
-								1160
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 781.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/css/gui.css",
-					"settings":
-					{
-						"buffer_size": 4971,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1281,
-								1128
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "src/js/auth.js",
-					"settings":
-					{
-						"buffer_size": 2220,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1300,
-								1275
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/css/icons.css",
-					"settings":
-					{
-						"buffer_size": 563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								22,
-								11
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/css/primary.styles.css",
-					"settings":
-					{
-						"buffer_size": 5471,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3777,
-								3777
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1175.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/js/item-edit.js",
-					"settings":
-					{
-						"buffer_size": 4766,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2953,
-								2953
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 250.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1362,6 +1198,38 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"items.",
+				"src/items.html"
+			],
+			[
+				"item-",
+				"src/js/item-edit.js"
+			],
+			[
+				"item",
+				"src/js/item.js"
+			],
+			[
+				"items.js",
+				"src/js/items.js"
+			],
+			[
+				"pr",
+				"src/css/primary.styles.css"
+			],
+			[
+				"auth",
+				"src/auth.html"
+			],
+			[
+				"items.css",
+				"src/css/items.css"
+			],
+			[
+				"items",
+				"src/js/items.js"
+			],
 			[
 				"pri",
 				"src/css/primary.styles.css"
@@ -1600,7 +1468,7 @@
 		[
 			[
 				"",
-				"/Users/glebp/Dropbox/proj/stylogram.ru/stylogram.sublime-project"
+				"/Users/glebp/proj/bigbuzzy-frontend/bigbuzzy-frontend.sublime-project"
 			]
 		],
 		"width": 380.0

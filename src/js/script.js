@@ -1,10 +1,22 @@
 /* Author: proll
-
+библиотека для работы
 */
 var qp = {
 	// общие параметры
 	opts : {
-		apiPath : "https://api.qstoq.ru/api/v1/"
+		apiPath : "http://api.qstoq.ru/api/v1/"
+	},
+	
+	is_offline: true,
+
+	// выводим авторизацию
+	goAuth: function () {
+		location.href = "/";
+	},
+
+	// стартовая страница пользователя
+	goInside: function () {
+		location.href = "/items.html";
 	},
 
 	//Выводим цену
@@ -35,35 +47,39 @@ var qp = {
 
 	// параметры get из урл
 	getUrlVars: function (param_name){
-	    var vars = [], hash;
-	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-	    for(var i = 0; i < hashes.length; i++)
-	    {
-	        hash = hashes[i].split('=');
-	        vars.push(hash[0]);
-	        vars[hash[0]] = hash[1];
-	    }
+		var vars = [], hash;
+		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for(var i = 0; i < hashes.length; i++)
+		{
+			hash = hashes[i].split('=');
+			vars.push(hash[0]);
+			vars[hash[0]] = hash[1];
+		}
 
-	    if (typeof param_name != "undefined") {
-	    	return vars[param_name];
-	    } else {
-	    	return vars;
-	    }
+		if (typeof param_name != "undefined") {
+			return vars[param_name];
+		} else {
+			return vars;
+		}
 	},
 
 	// http://stackoverflow.com/questions/1303872/trying-to-validate-url-using-javascript
 	isURL: function(textval) {
-      var urlregex = new RegExp(
-            "^(http|https|ftp)\://([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&amp;%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(\:[0-9]+)*(/($|[a-zA-Z0-9\.\,\?\'\\\+&amp;%\$#\=~_\-]+))*$");
-      return urlregex.test(textval);
-    },
+	  var urlregex = new RegExp(
+			"^(http|https|ftp)\://([a-zA-Z0-9\.\-]+(\:[a-zA-Z0-9\.&amp;%\$\-]+)*@)*((25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])|([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(\:[0-9]+)*(/($|[a-zA-Z0-9\.\,\?\'\\\+&amp;%\$#\=~_\-]+))*$");
+	  return urlregex.test(textval);
+	},
 
-    // http://stackoverflow.com/questions/18082/validate-numbers-in-javascript-isnumeric
-    isNum: function (n) {
+	// http://stackoverflow.com/questions/18082/validate-numbers-in-javascript-isnumeric
+	isNum: function (n) {
 		return !isNaN(parseFloat(n)) && isFinite(n);
 	},
 
-	// визуализация процессов в приложинии
+	stringCleanNum: function (str) {
+		return str.replace(/[^0-9]/g, '');
+	},
+
+	// сообщения в приложинии
 	processShow : function (status, message) {
 		var el = ""
 		if (status == "start") {
@@ -122,5 +138,22 @@ var qp = {
 		$(".qp-inp-ro").click(function() {
 		   $(this).select();
 		});
+	}
+}
+
+// объект юзера с кешированием
+qp.user = {
+	val: null,
+	set: function (userObj) {
+		if(!!userObj.email) {
+			qp.setLSItem("user", JSON.stringify(userObj));
+			this.val = userObj;
+		}
+	},
+	get: function  () {
+		if(!this.val) 	{
+			this.val = JSON.parse(qp.getLSItem("user"));
+		}
+		return this.val;	
 	}
 }
