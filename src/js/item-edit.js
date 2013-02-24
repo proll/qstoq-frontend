@@ -4,6 +4,7 @@
 
 (function($){
 	if(location.href.indexOf("item-edit")==-1) return;
+	qp.setLocation("item-edit");
 
 	var user_token 	= qp.getLSItem("user_token"),
 		item_id 		= qp.getUrlVars("id");

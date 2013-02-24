@@ -4,6 +4,7 @@
 
 (function($){
 	if(location.href.indexOf("items")==-1) return;
+	qp.setLocation("items");
 
 	var user_token = qp.getLSItem("user_token");
 
@@ -68,10 +69,9 @@
 				}
 			},
 			error: function(data){
-				if (typeof(data) == 'string')
-					data = $.parseJSON(data);
 				if(data.responseText){
-					qp.processShow("error", data.status + " " + data.statusText);
+					var response = $.parseJSON(data.responseText);
+					qp.processShow("error", response.error.message);
 				} else {
 					qp.processShow("error", data.status + " " + data.statusText);
 				}

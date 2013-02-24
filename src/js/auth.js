@@ -4,6 +4,7 @@
 
 (function($){
 	// if(location.href.indexOf("auth")==-1) return;
+	qp.setLocation("auth");
 	var user_token 		= qp.getLSItem("user_token");
 	if(!!user_token) qp.goInside();
 

@@ -201,3 +201,19 @@
 	background-position: 0 -160px;
 }
 
+
+
+
+.item-b-mail {
+	overflow: visible;
+	position: relative;
+	display: none;
+	text-align: center;
+	border-top: 1px dotted #CCC;
+	padding: 2em;
+}
+
+.item-b-mail-inner {
+	margin: 0 auto;
+	width: 290px;
+}

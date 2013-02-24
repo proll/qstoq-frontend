@@ -34,9 +34,17 @@
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
 			 chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-	<header class="n-bg h-shd">
+	<header class="h-shd">
 		<div class="h-cont">
-			<div class="m-in"><h1 class="h-h">qstoq</h2></div>
+			<div class="m-in">
+				<h1 class="h-h">qstoq</h2>
+				<ul class="h-nav">
+					<li><a class="h-logout" href="/logout">Выйти</a></li>
+					<li><a href="/profile.html" class="bt brd-rnd-right">Профиль</a></li>
+					<li><a href="/items.html" class="bt brd-rnd-no">Продукты</a></li>
+					<li><span class="h-money bt bt-gray brd-rnd-left">0 р.</span></li>
+				</ul>
+			</div>
 		</div>
 	</header>
 	<div role="main" class="wrapper">
@@ -172,7 +180,7 @@
 	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
 			 mathiasbynens.be/notes/async-analytics-snippet -->
 	<script>
-		var _gaq=[['_setAccount','UA-31757010-1'],['_trackPageview']];
+		var _gaq=[['_setAccount','UA-31757010-2'],['_trackPageview']];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));

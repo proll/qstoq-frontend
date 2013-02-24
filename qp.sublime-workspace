@@ -4,6 +4,82 @@
 		"selected_items":
 		[
 			[
+				"lo",
+				"location"
+			],
+			[
+				"remo",
+				"removeLSItem"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"set",
+				"setLSItem"
+			],
+			[
+				"auth",
+				"authToggle"
+			],
+			[
+				"slide",
+				"slideDown"
+			],
+			[
+				"get",
+				"get_bt"
+			],
+			[
+				"card_v",
+				"card_validation_object"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"ca",
+				"card_num"
+			],
+			[
+				"heog",
+				"height	zen:css_properties"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"n",
+				":nth-child(|)"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
 				"mar",
 				"margin"
 			],
@@ -24,18 +100,6 @@
 				"clear"
 			],
 			[
-				"ma",
-				"margin-right"
-			],
-			[
-				"back",
-				"background-position"
-			],
-			[
-				"ba",
-				"background-color"
-			],
-			[
 				"in",
 				"inline-block"
 			],
@@ -52,10 +116,6 @@
 				"length"
 			],
 			[
-				"re",
-				"responseText"
-			],
-			[
 				"bac",
 				"background"
 			],
@@ -70,10 +130,6 @@
 			[
 				"inli",
 				"inline-block"
-			],
-			[
-				"lo",
-				"log"
 			],
 			[
 				"update",
@@ -118,10 +174,6 @@
 			[
 				"bacg",
 				"background-position"
-			],
-			[
-				"pa",
-				"padding	padding: all"
 			],
 			[
 				"has",
@@ -224,10 +276,6 @@
 				"line-height"
 			],
 			[
-				"fun",
-				"function"
-			],
-			[
 				"da",
 				"dashed"
 			],
@@ -284,14 +332,6 @@
 				"labels"
 			],
 			[
-				"get",
-				"getPosition"
-			],
-			[
-				"set",
-				"setContent"
-			],
-			[
 				"r",
 				"useReturnWorld"
 			]
@@ -300,18 +340,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/css/gui.css",
-			"settings":
-			{
-				"buffer_size": 4971,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "src/css/item.css",
 			"settings":
 			{
-				"buffer_size": 472,
+				"buffer_size": 3139,
 				"line_ending": "Windows"
 			}
 		},
@@ -319,31 +351,15 @@
 			"file": "src/js/item.js",
 			"settings":
 			{
-				"buffer_size": 2799,
+				"buffer_size": 2565,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/css/style.css",
+			"file": "src/js/script.js",
 			"settings":
 			{
-				"buffer_size": 314,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/css/primary.styles.css",
-			"settings":
-			{
-				"buffer_size": 5624,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/item.html",
-			"settings":
-			{
-				"buffer_size": 3161,
+				"buffer_size": 5882,
 				"line_ending": "Unix"
 			}
 		},
@@ -351,7 +367,87 @@
 			"file": "src/items.html",
 			"settings":
 			{
-				"buffer_size": 6171,
+				"buffer_size": 6485,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/index.html",
+			"settings":
+			{
+				"buffer_size": 4070,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/item-edit.html",
+			"settings":
+			{
+				"buffer_size": 7567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/css/gui.css",
+			"settings":
+			{
+				"buffer_size": 5615,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/css/items.css",
+			"settings":
+			{
+				"buffer_size": 3463,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/m/credit-card-form.js",
+			"settings":
+			{
+				"buffer_size": 8995,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/item.html",
+			"settings":
+			{
+				"buffer_size": 6417,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/auth.js",
+			"settings":
+			{
+				"buffer_size": 4678,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/css/auth.css",
+			"settings":
+			{
+				"buffer_size": 880,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/js/item-edit.js",
+			"settings":
+			{
+				"buffer_size": 5349,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/items.js",
+			"settings":
+			{
+				"buffer_size": 4473,
 				"line_ending": "Unix"
 			}
 		}
@@ -420,22 +516,29 @@
 	},
 	"file_history":
 	[
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/style.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/main.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/normalize.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/index.html",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/primary.styles.css",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/auth.html",
+		"/Users/glebp/Desktop/background.txt",
+		"/Users/glebp/mounts/bxt/etc/apache2/apache2.conf",
+		"/Users/glebp/.profile",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/apple-touch-icon.png",
+		"/Users/glebp/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/glebp/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/script.js",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/item.html",
+		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/items.html",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/items.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/items.css",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/icons.css",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/item.html",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/auth.js",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/primary.styles.css",
-		"/Users/glebp/.profile",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/items.html",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/item-edit.css",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/item.js",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/auth.html",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/non-semantic.helper.classes.css",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/script.js",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/plugins.js",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/css/style.css",
-		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/index.html",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/.git/config",
 		"/Users/glebp/Dropbox/proj/stylogram.ru/.git/config",
 		"/Users/glebp/Dropbox/proj/qstoq-frontend/src/js/item-edit.js",
@@ -540,14 +643,7 @@
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/dialog/dialog_main_menu.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/lib/main_lib.ftl",
 		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/lib/entities.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_icons.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_proposal-review.css",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout-static/page_disclaimer_services.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout/page_profile_view_deal.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout-static/page_disclaimer_product.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/layout-static/page_about.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/alert_buy_coupon.ftl",
-		"/Users/glebp/proj/bigbuzzy-frontend/data/templates/m/templates/block/proposal_catalog_json.ftl"
+		"/Users/glebp/proj/bigbuzzy-frontend/www/f/1/global/css/m/assets/_icons.css"
 	],
 	"find":
 	{
@@ -555,9 +651,14 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"*.css",
+			"*.js",
+			"*.css",
+			"*",
+			"*.js",
 			"*",
 			"*.css",
 			"*",
@@ -658,6 +759,85 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"prevent",
+			"d-inp",
+			"propagation",
+			"cookie",
+			"getLocation",
+			"setLocation",
+			"AdFox",
+			"обрат",
+			"AdFox",
+			"<script type=\"text/javascript\">",
+			"RUB",
+			"getLocation",
+			"setLocation",
+			"user_token",
+			"prevent",
+			"LS",
+			"getLSItem",
+			"user_token",
+			"h-money",
+			"77px",
+			"115px",
+			"	<header class=\"n-bg h-shd\">\n		<div class=\"h-cont\">\n			<div class=\"m-in\"><h1 class=\"h-h\">qstoq</h2></div>\n		</div>\n	</header>",
+			"				if (typeof(data) == 'string')\n					data = $.parseJSON(data);\n				if(data.responseText){\n					qp.processShow(\"error\", data.status + \" \" + data.statusText);\n				} else {\n					qp.processShow(\"error\", data.status + \" \" + data.statusText);\n				}",
+			"UA-31757010-1",
+			"	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.\n			 mathiasbynens.be/notes/async-analytics-snippet -->\n	<script>\n		var _gaq=[['_setAccount','UA-31757010-1'],['_trackPageview']];\n		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];\n		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';\n		s.parentNode.insertBefore(g,s)}(document,'script'));\n	</script>",
+			"href",
+			"src",
+			"isEmail",
+			"setLSItem",
+			"loading",
+			"errorReact",
+			"user_name",
+			"okReact",
+			"fieldset",
+			"dt",
+			"8080",
+			"font",
+			"payment-systems",
+			"item_id",
+			"amount",
+			"section",
+			"payment-card",
+			"payment-card-form",
+			"console",
+			"validateForm",
+			"error:",
+			"submit",
+			"message_block",
+			"payment-cards-pay",
+			"submit",
+			"bb.utils.showInlineMessage(",
+			"message_block, ",
+			"__indexOf",
+			"change",
+			"iframe",
+			"card_firstname",
+			"pay_system_icon",
+			" class=\"required-fld\"",
+			"карты",
+			"payment_systems_container",
+			"required-fld",
+			"card-num-wrap",
+			"priceField",
+			"descriptionField",
+			"nameField",
+			"getBt",
+			"itemForm",
+			"getBt",
+			"-system",
+			"messages",
+			"ErrorManager",
+			"getMessage",
+			"cleanupNumber",
+			"isEmpty",
+			"hasClass",
+			"getByClass",
+			"hasClass",
+			"getByClassSingle",
+			"hasClass",
 			"urlField",
 			"editForm",
 			"fillItem",
@@ -706,86 +886,7 @@
 			"add-inp",
 			"add-in",
 			"loading",
-			"token",
-			"addFormShowned",
-			"add-line",
-			".add-form-ani",
-			"><",
-			"consol",
-			"/api/v",
-			"qp-",
-			"js",
-			"html",
-			"out",
-			"html",
-			",\n",
-			".srch-input",
-			"srch-c-in-input",
-			".srch-c-in-input",
-			"log",
-			"сумма 5 рублей",
-			"getFileByAbbr",
-			"?json=",
-			"===",
-			"ui-icon",
-			"ui-mobile ",
-			"ui-btn-text",
-			"ui-dialog",
-			"ui-dialog-page",
-			"placeListProcessor",
-			"signupProcessor",
-			"inputsToHide",
-			"dropDown",
-			"dropDownEx",
-			"dropDown",
-			"dropDownEx",
-			"inputs",
-			"headerBtns",
-			"Я получил код",
-			"bac",
-			"<p>",
-			"<div>",
-			"</h3>",
-			"</a>",
-			"</h3>",
-			"</a>",
-			"<h3>",
-			" data-role=\"collapsible\"",
-			" data-role=\"collapsible\" ",
-			"static-content",
-			"contentDialogWrapper",
-			"pageDialogWrapper",
-			"bb-hdr-btn",
-			"headerBtns",
-			"text-shadow",
-			"srch-c",
-			"printPhone",
-			"authProcessor",
-			"loggedDialog",
-			"deal",
-			"proposalRef",
-			"getProposalDealProcessor",
-			"satisfaction",
-			"setHTTPS",
-			"reviewAddProcessor",
-			"238,236,234",
-			"gray",
-			"vote-1",
-			"m-chb-inp",
-			".",
-			"reviewAddProcessor",
-			"commentsAddBlock",
-			"com",
-			"dateExpiredDescription",
-			"GOOGLEMAPS_API_KEY",
-			"console",
-			"consol",
-			"map",
-			"PAGE_JS_LIST",
-			"map",
-			"\n#	",
-			"\n#	deleted:    ",
-			"searchProcessor"
+			"token"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -793,6 +894,16 @@
 		"regex": false,
 		"replace_history":
 		[
+			"UA-31757010-2",
+			"section_form",
+			"qp.processShow(\"error\", ",
+			"",
+			"price_field",
+			"description_field",
+			"name_field",
+			"get_bt",
+			"item_container",
+			"",
 			"itemForm",
 			"fillItem",
 			"data = $.parseJSON(data);",
@@ -910,17 +1021,7 @@
 			"setMyMapPoints",
 			"\":",
 			".globals.labels",
-			"\":",
-			"=",
-			"",
-			"global",
-			"",
-			"labels",
-			"m/assets/",
-			"${MOBILE_PATH}",
-			"${STATIC_HOST}/",
-			"${STATIC_HOST}",
-			"${STATIC_HOST}/"
+			"\":"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -931,23 +1032,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/css/gui.css",
+					"file": "src/css/item.css",
 					"settings":
 					{
-						"buffer_size": 4971,
+						"buffer_size": 3139,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1637,
-								1629
+								583,
+								583
 							]
 						],
 						"settings":
@@ -963,26 +1064,26 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/css/item.css",
+					"file": "src/js/item.js",
 					"settings":
 					{
-						"buffer_size": 472,
+						"buffer_size": 2565,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								192,
-								192
+								207,
+								207
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 2.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -990,18 +1091,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/js/item.js",
+					"file": "src/js/script.js",
 					"settings":
 					{
-						"buffer_size": 2799,
+						"buffer_size": 5882,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								175,
-								175
+								4896,
+								4853
 							]
 						],
 						"settings":
@@ -1010,104 +1111,17 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2573.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "src/css/style.css",
-					"settings":
-					{
-						"buffer_size": 314,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								276,
-								276
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/css/primary.styles.css",
-					"settings":
-					{
-						"buffer_size": 5624,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3757,
-								3757
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 279.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 5,
-					"file": "src/item.html",
-					"settings":
-					{
-						"buffer_size": 3161,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2132,
-								2132
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 617.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "src/items.html",
 					"settings":
 					{
-						"buffer_size": 6171,
+						"buffer_size": 6485,
 						"regions":
 						{
 							"TagLint":
@@ -1127,8 +1141,8 @@
 						"selection":
 						[
 							[
-								2020,
-								2020
+								2229,
+								1790
 							]
 						],
 						"settings":
@@ -1138,7 +1152,299 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 250.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/index.html",
+					"settings":
+					{
+						"buffer_size": 4070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3806,
+								3806
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/item-edit.html",
+					"settings":
+					{
+						"buffer_size": 7567,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 52,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										1876,
+										1886
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								1010,
+								1010
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 261.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "src/css/gui.css",
+					"settings":
+					{
+						"buffer_size": 5615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4140,
+								3473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1861.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/css/items.css",
+					"settings":
+					{
+						"buffer_size": 3463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/js/m/credit-card-form.js",
+					"settings":
+					{
+						"buffer_size": 8995,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								588,
+								588
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 3.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/item.html",
+					"settings":
+					{
+						"buffer_size": 6417,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								6417
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3079.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/js/auth.js",
+					"settings":
+					{
+						"buffer_size": 4678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3410,
+								3410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1546.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "src/css/auth.css",
+					"settings":
+					{
+						"buffer_size": 880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								877,
+								877
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/js/item-edit.js",
+					"settings":
+					{
+						"buffer_size": 5349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5009,
+								4964
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2231.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/js/items.js",
+					"settings":
+					{
+						"buffer_size": 4473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2859,
+								2859
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1182.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1199,6 +1505,46 @@
 		"selected_items":
 		[
 			[
+				"gui",
+				"css/gui.css"
+			],
+			[
+				"scr",
+				"js/script.js"
+			],
+			[
+				"item.htm",
+				"item.html"
+			],
+			[
+				"index.html",
+				"index.html"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"auth",
+				"auth.html"
+			],
+			[
+				"sty",
+				"css/style.css"
+			],
+			[
+				"items.ht",
+				"items.html"
+			],
+			[
+				"scri",
+				"js/script.js"
+			],
+			[
+				"prima",
+				"css/primary.styles.css"
+			],
+			[
 				"items.",
 				"src/items.html"
 			],
@@ -1219,10 +1565,6 @@
 				"src/css/primary.styles.css"
 			],
 			[
-				"auth",
-				"src/auth.html"
-			],
-			[
 				"items.css",
 				"src/css/items.css"
 			],
@@ -1235,16 +1577,8 @@
 				"src/css/primary.styles.css"
 			],
 			[
-				"scri",
-				"src/js/script.js"
-			],
-			[
 				"",
 				"src/js/script.js"
-			],
-			[
-				"gui",
-				"src/css/gui.css"
 			],
 			[
 				"er",
@@ -1477,6 +1811,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 290.0,
+	"side_bar_width": 216.0,
 	"status_bar_visible": true
 }
