@@ -1,0 +1,3 @@
+{{#each stories.list}}
+	<li class="story-menu__item-{{id}} story-menu__item{{#ifEq ../story id}} active{{/ifEq}}"><a data-id="{{id}}" href="{{../root_path}}/daily/{{id}}/{{../sort}}/{{../filter}}/"><span class="story-menu__item-title">{{name}}</span></a></li>
+{{/each}}

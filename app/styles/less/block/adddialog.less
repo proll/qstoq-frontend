@@ -1,0 +1,46 @@
+.adddialog-cont {
+	position: relative;
+}
+
+	.adddialog__add {
+		font-size: 14px;
+		color: @grayDarker;
+		font-weight: 600;
+
+		.qi-add {
+			margin-right: 8px;
+			margin-bottom: 2px;
+			vertical-align: bottom;
+		}
+	}
+
+	.adddialog__dialog {
+		position: absolute;
+		z-index: @zindexModal;
+		top: -6px;
+		left: -20px;
+		width: 660px;
+		overflow: hidden;
+		.border-radius(2px);
+		.box-shadow(0 5px 10px rgba(0,0,0,.35));
+	}
+
+		.adddialog__header {
+			background-color: @headerColor;
+			font-size: 13px;
+			font-weight: 600;
+			color:@white;
+
+			padding: 6px 30px 8px 16px;
+
+			.qi-add_open {
+				margin-right: 8px;
+				margin-bottom: 2px;
+				vertical-align: bottom;
+			}
+
+			.qi-dclose {
+				float: right;
+				margin-top: 3px;
+			}
+		}

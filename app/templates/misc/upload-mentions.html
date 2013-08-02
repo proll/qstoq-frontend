@@ -1,0 +1,11 @@
+{{#if users.list}}
+<ul class="upload__mention-list">
+	{{#each users.list}}
+	<li class="upload__mention-item">
+		<a href="." class="upload__mention-item-a" data-index="{{@index}}" data-uid="{{id}}" data-name="{{name}}">
+			<img class="upload__mention-img" src="{{_uphoto photo.url '160x160'}}" width="60" height="60">
+			<span class="upload__mention-name">{{_tagWrap name ../../current_mention 'strong'}}</span>
+		</a></li>
+	{{/each}}
+</ul>
+{{/if}}

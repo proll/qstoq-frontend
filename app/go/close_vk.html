@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>WeHeartPics - VK auth processing...</title>
+	<script>
+		function onload(){
+			var opener = window.opener;
+			if (!!opener){
+				// hash get
+				var options = decodeURIComponent(window.location.hash.slice(1))
+						.split('&')
+						.reduce(function _reduce (a,b) {
+							b = b.split('=');
+							a[b[0]] = b[1];
+							return a;
+						}, {});
+				if(!!opener.qst && !!opener.qst.app){
+					opener.qst.app.trigger("vkontakte:hi", {token:options.access_token, uid: options.user_id});
+				}
+				// window.opener.WHP.auth.VK.auth(options.access_token, options.user_id);
+			}
+			window.close();
+		}
+	</script>
+</head>
+<body onLoad="onload();">
+</body>
+</html>

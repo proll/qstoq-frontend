@@ -1,3 +1,8 @@
-publish
-intermediate
-_gsdata_
+.DS_Store
+#app/images/sprites/*.png
+app/images/sprites/*.json
+node_modules
+#dist/*
+.dropbox
+Icon?
+/node_modules

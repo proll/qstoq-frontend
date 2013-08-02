@@ -1,0 +1,281 @@
+//
+// Responsive: Navbar
+// --------------------------------------------------
+
+
+// TABLETS AND BELOW
+// -----------------
+@media (max-width: @navbarCollapseWidth) {
+
+	// UNFIX THE TOPBAR
+	// ----------------
+	// Remove any padding from the body
+	body {
+		padding-top: 43px;
+	}
+	// Unfix the navbars
+	.navbar-fixed-top {
+		position: absolute;
+		margin-bottom: 0;
+		.box-shadow(none);
+	}
+
+
+	.navbar {
+		font-size: 18px;
+		border-bottom: 1px solid @grayLighter3;
+	}
+
+	.navbar-fixed-top .navbar-inner {
+		position: relative;
+		margin: 0 10px;
+		min-height: 43px;
+		border: 0 none;
+	}
+	.navbar .container {
+		width: auto;
+		padding: 0;
+	}
+	// Account for brand name
+	.navbar .brand {
+		padding: 11px 10px 11px 0;
+		margin: 0;
+
+		.navbar__logo {
+			width: 23px;
+			height: 20px;
+			background: url(/images/ico/logo-2x.png) 0 0 no-repeat;
+			.background-size(23px 20px);
+		}
+
+		img {
+			opacity: 0.01;
+			width: 23px;
+			height: 20px;
+		}
+	}
+
+	// COLLAPSIBLE NAVBAR
+	// ------------------
+	// Nav collapse clears brand
+	.nav-collapse {
+		clear: both;
+	}
+	// Block-level the nav
+	.nav-collapse .nav {
+		float: none;
+		margin: 0;
+		position: static;
+	}
+	.nav-collapse .nav li {
+		float: none;
+		display: none;
+
+		&.nav__profile-drop {
+			display: block;
+		}
+	}
+
+
+	.open .nav-collapse .nav li {
+		display: block;
+	}
+
+	.nav-collapse .nav > li > a {
+		margin: 0 30px;
+		padding: 13px 6px 12px;
+		border-bottom: 1px solid @grayLighter3;
+		line-height: 1;
+	}
+
+	.nav-collapse .nav > li:last-child > a {
+		border-bottom: 1px solid @white;
+	}
+
+
+
+
+
+	.nav-collapse .nav > li.nav__add-photo {
+		position: absolute;
+		top: 9px;
+		right: 0;
+		display: none;
+
+		a {
+			margin: 0;
+			padding: 0;
+			border: 0 none;
+			display: inline-block;
+
+			.i-add {
+				margin: 0;
+			}
+		}
+
+	}
+	.nav-collapse .nav > li.nav__login {
+		position: absolute;
+		top: 5px;
+		right: 0;
+		display: block;
+
+		a {
+			margin: 0;
+			padding: 8px 6px 0 5px!important;
+			border: 0 none;
+			display: inline-block;
+		}
+
+	}
+
+	.nav-collapse .nav li.active {
+		position: absolute;
+		top: 3px;
+		left: 0;
+		display: block;
+
+		a {
+			padding: 8px 6px 0 5px!important;
+			margin: 0 0 0 30px;
+			border: 0 none;
+			color: @grayDarker !important;
+			&:after {
+				content: '';
+				margin: 3px 0 0 14px;
+				.i;
+				.i-nav-drop-arrow;
+			}
+		}
+
+	}
+
+	.open {
+		.navbar-fixed-top {
+			.box-shadow(0 0 18px rgba(0,0,0, 0.4));
+		}
+
+		.nav-collapse {
+			border-top: 1px solid @navbarBorder;
+			padding-top: 1px;
+
+			.nav li.active {
+				a {
+					&:after {
+						.i-nav-drop-arrow_open;
+					}
+				}
+			}
+
+			.nav > li.nav__add-photo {
+				display: none;
+			}
+		}
+	}
+
+	.nav-collapse .nav__profile-drop > a {
+		display: none;
+	}
+
+	.nav-collapse .nav__profile-drop {
+		display: block;
+
+		.nav__drop-menu {
+			position: static;
+			display: block;
+			text-align: left;
+
+			&:before {
+				display: none;
+			}
+
+			li {
+				a {
+					display: block;
+					margin: 0 30px;
+					padding: 13px 6px 12px;
+					line-height: 1;
+					border: 0 none;
+					border-bottom: 1px solid @grayLighter3;
+
+				}
+			}
+
+			li:last-child {
+				a {
+					border-bottom: 1px solid @white;
+
+				}
+			}
+		}
+	}
+
+	.nav-collapse .nav__profile-drop .nav__drop-menu li {	
+		&.nav__notifications a,
+		&.nav__dialogs a,
+		&.nav__settings a,
+		&.nav__logout a {
+			color: @gray;
+			padding: 12px 6px 12px 25px;
+
+		}
+
+		&.active a {
+			color: @gray;
+			padding-left: 6px;
+			border: 0 none;
+		}
+	}
+
+
+
+	// Nav links in navbar
+	.nav-collapse .nav > li > a {
+		color: @navbarLinkColor;
+	}
+	.nav-collapse .nav > li > a:hover,
+	.nav-collapse .nav > li > a:focus{
+		background-color: @navbarBackground;
+	}
+	// Pull right (secondary) nav content
+	.navbar .nav-collapse .nav.pull-right {
+		float: none;
+		margin-left: 0;
+	}
+	// Hide everything in the navbar save .brand and toggle button */
+	.nav-collapse,
+	.nav-collapse.collapse {
+		overflow: hidden;
+	}
+
+
+	.with-top-banner {
+		body {
+			padding-top: 43px+100px;	
+		}
+	}
+
+}
+
+@media (max-width: @navbarPreCollapseWidth) {
+	.nav__add-photo {
+		display: none;
+	}
+	.nav__add-photo-title {
+		display: none;
+	}
+}
+
+
+// DEFAULT DESKTOP
+// ---------------
+
+@media (min-width: @navbarCollapseDesktopWidth) {
+
+	// Required to make the collapsing navbar work on regular desktops
+	.nav-collapse.collapse {
+		height: auto !important;
+		overflow: visible !important;
+	}
+
+}

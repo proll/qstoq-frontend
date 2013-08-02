@@ -1,0 +1,16 @@
+<div class="photo-likers__total-cont">
+	<h3 class="photo-likers__total" data-total="{{ likers.total }}" data-decl="like">{{ likers.total }}<span class="photo-likers__total-decl"> {{_plural likers.total 'like'}}</span></h3>
+</div>
+{{#if likers.total}}
+	<div class="photo-likers__user-cont">
+	{{#each likers.list}}
+		<div class="photo-likers__user">
+			{{#if photo }}
+			<a href="/user/{{id}}/"><img src="{{photo.i106x106}}" width="50" height="50"></a>
+			{{else}}
+			<a href="/user/{{id}}/"><i class="i i-no-avatar_50"></i></a>
+			{{/if}}
+		</div>
+	{{/each}}
+	</div>
+{{/if}}

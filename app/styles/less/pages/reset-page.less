@@ -1,0 +1,68 @@
+.page-reset {
+	font-size: 22px;
+	line-height: 32px;
+	padding-top: 40px;
+}
+
+.reset-form {
+	width: 410px;
+}
+
+	.reset-login {
+		border-bottom: 1px solid @grayLight2;
+		margin-bottom: 4px;
+	}
+
+	.reset-btn {
+		color: @grayLight;
+		cursor: pointer;
+		margin-top: 20px;
+
+		&:hover {
+			color: @grayDarker;
+		}
+
+		.icn {
+			margin-left: 10px;
+			vertical-align: middle;
+		}
+	}
+
+	.reset-error {
+		display: block;
+		overflow: hidden;
+		height: 0;
+		color: @red;
+		font-size: 22px;
+		line-height: 26px;
+		.transition(height .3s);
+	}
+
+.invalid {
+	.reset-error_invalid {
+		height: 26px;
+	}
+}
+
+.nouser {
+	.reset-error_nouser {
+		height: 26px;
+	}
+}
+
+	.reset-success {
+		display: none;
+	}
+
+.success {
+	.reset-success {
+		display: inline;
+	}
+
+	.reset-form {
+		display: none;
+	}
+}
+
+
+

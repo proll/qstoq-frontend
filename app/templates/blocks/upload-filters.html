@@ -1,0 +1,8 @@
+<canvas class="upload__image_filtered" width="510" height="510"></canvas>
+<ul class="upload__filter-list">
+	<li class="upload__filter-item upload__normalize-item active" data-filter="normalize"><a href="." class="iu iu-normalize"><span class="upload__filter-item-title">{{_ 'Original' 'upload_filters'}}</span></a></li>
+{{#each filters}}
+	<li class="upload__filter-item" data-filter="{{name}}"><a href="." class="iu iu-{{name}}"><span class="upload__filter-item-title">{{title}}</span></a></li>
+{{/each}}
+</ul>
+<div class="filter-loader"></div>

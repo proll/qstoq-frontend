@@ -1,0 +1,103 @@
+// Photo share
+.photo-share {
+	margin-bottom: 40px;
+	font-size: 16px;
+}
+
+	.photo-share__title {
+		margin: 0;
+		padding: 0;
+		color: @grayDarker;
+		font-size: 16px;
+		font-weight: normal;
+	}
+
+	.photo-share__menu {
+		margin: 0;
+		padding: 0;
+	}
+
+		.photo-share__item {
+			margin-top: 16px;
+		}
+
+			.photo-share__link {
+				color: @blue;
+				text-decoration: none;
+				&:hover {
+					color: @blue;
+					text-decoration: underline;
+				}
+			}
+
+		.photo-share__download {
+			*zoom: 1;
+			clear: left;
+		}
+
+		.photo-share__download,
+		.photo-share__report {
+			margin-top: 32px;
+		}
+
+		.photo-share__item {
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 0;
+				height: 18px;
+				background: url(/images/ani/spinner.gif)  left center no-repeat;
+
+				float:left;
+				.transition(all .2s);
+				opacity: 0;
+			}
+		}
+		
+		.photo-share__report,
+		.photo-share__delete {
+			.photo-share__link {
+				color: @red;
+				&:hover {
+					color: @red;
+					text-decoration: underline;
+				}
+			}
+		}
+
+
+	.photo-share_fb-sharing {
+		.photo-share__fb {
+			&:before {
+				width: 20px;
+				opacity: 1;
+			}
+		}
+	}
+
+	.photo-share_tw-sharing {
+		.photo-share__tw {
+			&:before {
+				width: 20px;
+				opacity: 1;
+			}
+		}
+	}
+
+	.photo-share_vk-sharing {
+		.photo-share__vk {
+			&:before {
+				width: 20px;
+				opacity: 1;
+			}
+		}
+	}
+
+	.photo-share_pt-sharing {
+		.photo-share__pt {
+			&:before {
+				width: 20px;
+				opacity: 1;
+			}
+		}
+	}

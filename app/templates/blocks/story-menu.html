@@ -1,0 +1,20 @@
+<span class="story-menu__opener{{#if is_default}} default{{/if}}">
+	<i class="iexp iexp-cat-icn iexp-{{current_id}}"></i><span class="story-menu__opener-title"></span><i class="iexp iexp-droparrow"></i><a href="{{root_path}}"><i class="iexp iexp-clear"></i></a>
+</span>
+<ul class="story-menu__category-items">
+		<li class="story-menu__category-item-daily story-menu__category-item{{#ifEq category 'daily'}} active{{/ifEq}}"><span href="{{root_path}}/daily/whole/{{sort}}/{{filter}}/" class="story-menu__category-link"><i class="iexp iexp-category-daily"></i><span class="story-menu__category-item-title">{{_ 'Daily Stories' 'story_menu'}}</span><i class="iexp iexp-sub"></i></span>
+			<ul class="story-menu__items"></ul>
+		</li>
+	{{#each storycats}}
+		<li class="story-menu__category-item-{{id}} story-menu__category-item{{#ifEq ../category id}} active{{/ifEq}}"><span href="{{../root_path}}/{{id}}/whole/{{../sort}}/{{../filter}}/" class="story-menu__category-link"><i class="iexp iexp-category-{{id}}"></i><span class="story-menu__category-item-title">{{name}}</span><i class="iexp iexp-sub"></i></span>
+			<ul class="story-menu__items">
+			{{#if ../with_whole}}
+				<li class="story-menu__item-whole story-menu__item{{#ifEq ../category id}}{{#ifEq ../../story 'whole'}} active{{/ifEq}}{{/ifEq}}"><a href="{{../../root_path}}/{{../id}}/whole/{{../../sort}}/{{../../filter}}/"><span class="story-menu__item-title">{{_ 'Show all photos' 'story_menu'}}</span></a></li>
+			{{/if}}
+			{{#each stories}}
+				<li class="story-menu__item-{{id}} story-menu__item{{#ifEq ../../story id}} active{{/ifEq}}"><a href="{{../../root_path}}/{{../id}}/{{id}}/{{../../sort}}/{{../../filter}}/"><span class="story-menu__item-title">{{name}}</span></a></li>
+			{{/each}}
+			</ul>
+		</li>
+	{{/each}}
+</ul>

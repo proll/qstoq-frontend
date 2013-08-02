@@ -1,0 +1,266 @@
+//
+// Responsive: phone ,tablet
+// --------------------------------------------------
+@media (max-width: @gridRowMaxWidthPhone)  {
+	.explore-menu-row {
+		padding: 0 10px;
+
+		.row {
+			margin-left: 0;
+			text-align: center;
+		}
+
+		[class*="span"]{
+			margin-left: 0;
+		}
+
+		.sort-menu-row {
+			// position: relative;
+			// left: 50%;
+			// margin-left:-150px;
+			// width: auto;
+			padding: 8px 0;
+			display: inline-block;
+			width: 100%;
+		}
+
+		.explore-menu {
+			overflow: hidden;
+			text-align: center;
+		}
+	}
+
+	.explore-menu__items {
+		padding-left: 10px;
+		padding-right: 0;
+		float: none;
+		display: inline-block;
+
+		&:first-child {
+			padding-left: 0;
+			border-left: 0 none;
+		}
+	}
+
+	.explore-menu__item {
+		margin-right: 9px;
+
+		.explore-menu__item-title {
+			display: none;
+		}
+	}
+
+	.story-menu-row.span3 {
+		display: block;
+		width: auto;
+		text-align: left;
+		float:none;
+		padding: 8px 0;
+		// height: 39px;
+		border-bottom: 1px solid @grayLighter;
+	}
+
+	.story-menu {
+		min-height: 39px;
+	}
+
+
+
+	.story-menu__opener {
+		margin: 0 18px 0 2px;
+		.story-menu__opener-title {
+			font-size: 13px;
+		}
+	}
+
+	.story-menu__category-items {
+		top: 48px;
+		background: @white;
+		left: -10px;
+		right: -10px;
+		padding: 0 10px;
+		// .box-shadow(0 10px 18px rgba(0,0,0, 0.4));
+	}
+
+	.story-menu__category-items
+		 .story-menu__category-item {
+			width: auto;
+			height: auto;
+			min-height: 62px;
+
+			border: 0 none;
+			border-bottom: 1px solid @grayLighter;
+
+			// arrow head
+			&:first-child {
+				&:before, &:after {
+					display: none;
+				}
+			}
+
+			&:last-child {
+				border-bottom: 0 none;
+			}
+
+			.story-menu__category-link {
+				width: 100%;
+				height: auto;
+				min-height: 62px;
+			}
+
+			.iexp {
+				margin:16px 21px 0 2px;
+			}
+
+			.iexp-sub {
+				.iexp-sub-m;
+				margin:16px 8px 0;
+				position: relative;	
+			}
+
+			.story-menu__category-item-title {
+				font-size: 18px;
+				margin-top: 16px;
+			}
+
+			&:hover,
+			&.active {
+				background-color: @white;
+
+				.story-menu__category-item-title {
+					color: @grayDarker !important;
+				}
+
+				.iexp-category-daily {
+					.iexp-day;
+				}
+				.iexp-category-1 {
+					.iexp-aboutme;
+				}
+
+				.iexp-category-2 {
+					.iexp-family;
+				}
+
+				.iexp-category-3 {
+					.iexp-home;
+				}
+
+				.iexp-category-4 {
+					.iexp-work;
+				}
+
+				.iexp-category-5 {
+					.iexp-places;
+				}
+
+				.iexp-category-6 {
+					.iexp-city;
+				}
+				.iexp-sub {
+					.iexp-sub-m-open;
+				}
+			}
+
+			&:hover {
+				.iexp-sub {
+					.iexp-sub-m;
+				}
+			}
+
+			&.active:hover {
+				.iexp-sub {
+					.iexp-sub-m-open;
+				}
+			}
+		}
+
+	.story-menu__items {
+		display: none;
+		position: relative;
+		height: auto;
+		left: auto;
+		top: auto;
+		border-top: 0 none;
+		border-bottom: 0 none;
+		overflow: visible;
+	}
+
+
+	.story-menu__category-item.active {
+		.story-menu__items {
+			border-top: 1px solid @grayLighter;
+			display: block;
+		}
+	}
+
+	.story-menu__item {
+		width: auto;
+		height: auto;
+		border: 0 none;
+		overflow: hidden;
+		margin: 0 -10px;
+		.transition(none);
+
+		a {
+			width: auto;
+			height: auto;
+			min-height: 42px;
+			border-top: 1px solid @grayLighter3;
+			margin: 0 10px 0 54px
+		}
+
+		&:first-child {
+			a {
+				border-top: 1px solid @white;
+			}
+			.story-menu__item-title {
+				margin-left: 10px;
+			}
+		}
+
+		&.active {
+			a {
+				border-top: 1px solid @blue;
+			}
+		}
+
+		.story-menu__item-title {
+			font-size: 18px;
+			line-height: 24px;
+			height: auto;
+			margin: 11px 10px 11px 35px;
+			.transition(none);
+		}
+
+	}
+
+.dailylist-menu {
+	.story-menu__item:nth-child(n+14) {
+		display: none;
+	}
+
+}
+
+
+	.no-touch {
+		.story-menu__item {
+			&:hover {
+				a {
+					border-top: 1px solid @blue;
+				}
+			}
+		}
+	}
+
+	// case for Daily - no Show All photos
+	.story-menu__category-item-daily{
+		.story-menu__item:first-child {
+				.story-menu__item-title {
+					margin-left: 35px;
+				}
+		}
+	}
+
+
+}

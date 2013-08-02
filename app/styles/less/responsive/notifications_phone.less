@@ -1,0 +1,81 @@
+.notifications-popup {
+	.popup__content {
+		margin: 0 10px;
+	}
+
+	.notifications-header {
+		h1 {
+			font-size: 25px;
+			margin: 17px 0 1px 0;
+		}
+
+		p {
+			margin: 0 0 10px 0;
+			font-size: 12px;
+		}
+	}
+}
+
+
+.body__page-notifications {
+	.page-header {
+		display: block;
+		padding: 0 10px;
+
+
+		h1 {
+			font-size: 25px;
+			height: 25px;
+			letter-spacing: -1px;
+			margin: 16px 0 0;
+		}
+		p {
+			display: block;
+			margin: 0 0 10px 0;
+			font-size: 12px;
+		}
+	}
+}
+
+
+.notification-feed__spinner {
+	width: 100%;
+	height: 54px;
+	background: url(/images/ani/spinner.gif)  center center no-repeat;
+}
+
+	.notification {
+		padding: 15px 0 15px 15px;
+	}
+
+		.notification__item {
+			min-height: 35px;
+
+			&.new {
+				&:before {
+					width: 5px;
+					height: 5px;
+					.border-radius(6px);
+					top: 15px;
+					left: -15px;
+				}
+			}
+		}
+
+
+			.notification__img {
+				width: 35px;
+
+				.i-notif-hi {
+					.i-notif-hi_sm;
+				}
+			}
+
+			.notification__txt {
+				font-size: 12px;
+				padding-left: 10px;
+			}
+
+			.notification__time {
+				font-size: 12px;
+			}

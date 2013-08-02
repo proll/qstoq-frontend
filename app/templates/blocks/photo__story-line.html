@@ -1,0 +1,10 @@
+<div class="i photo__vote i-vote{{#if photo.wasvote}} active{{/if}}">
+	<span class="photo__vote-title">{{photo.like}}</span>
+</div>
+<div class="photo__story">
+	{{#ifEq photo.story.type 'TIMELINE'}}
+	<span class="photo__story-name">{{ photo.story.name }}</span>
+	{{else}}
+	<a href="{{_storyhref photo.story}}" class="photo__story-name">{{ photo.story.name }}</a>
+	{{/ifEq}} <span class="photo__story-by">{{_ 'by' 'photo'}}</span> <a href="/user/{{ photo.user.id }}/" class="photo__user-name unm">{{ photo.user.name }}</a> <span class="photo__ts" data-ts="{{ photo.timestamp }}">{{_timegap photo.timestamp}}</span>
+</div>

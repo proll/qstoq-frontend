@@ -1,0 +1,168 @@
+// Photo page + popup
+.photo-row {
+	max-width: 730px;
+	margin: 0 auto;
+}
+
+
+	.photo__pic-col1 {
+		float: left;
+		width: 55%;
+	}
+
+	.photo__pic-col2 {
+		float: left;
+		margin-left: 5%;
+		width: 40%;
+	}
+
+
+.photo__pic-tile {
+	width: 100%;
+}
+
+
+.photo__text-row {
+	margin-top: 16px;
+	overflow: hidden;
+}
+
+
+.photo__pic {
+	position: relative;
+}
+
+.photo__vote {
+	position: relative;
+	margin: -15px 15px 0 20px;
+	float: right;
+	
+	cursor: pointer;
+	text-align: center;
+	.user-select(none);
+}
+
+.active {
+	.photo__vote-title {
+		color: @white;
+	}	
+}
+	.photo__vote-title {
+		display: inline-block;
+		margin-top: 17px;
+		
+		font-size: 11px;
+		font-weight: bold;
+		line-height: 1;
+		color: @red;
+	}
+
+	.i-vote.active {
+		.i-vote_active;
+	}
+
+
+
+
+
+.photo__story {
+	color: @black;
+	font-size: 14px;
+	padding: 15px 0;
+}
+
+	.photo__story-name {
+		font-weight: bold;
+		color: @grayDarker;
+
+		&:hover {
+			color: @grayDarker;
+		}
+	}
+
+	.photo__story-by {
+		color: @grayDarker;
+	}
+
+	.photo__ts {
+		color: #b7b7b7;
+	}
+
+
+.photo__caption {
+	margin: 0 0 36px 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 1.6;
+	font-weight: normal;
+	color: @grayDarker;
+}
+
+
+.photo-comment-pane__cont {
+	margin-bottom: 40px;
+}
+
+
+.photo__location {
+	margin-bottom: 40px;
+
+	.i-streetview {
+		float: right;
+		display: none;
+	}
+}
+
+.photo-streetview-available {
+	.i-streetview {
+		display: inline-block;
+	}
+}
+
+	.photo__location-link {
+		display: inline-block;
+	}
+
+		.photo__location-map {
+			width: 100%;
+			background-color: @grayLighter2;
+			margin-bottom: 10px
+		}
+
+	.photo__location-name {
+		color: @red;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.2;
+		padding: 0;
+		margin: 0 0 10px 0;
+	}
+	.photo__location-addr {
+		color: @gray;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 1.2;
+		padding: 0;
+		margin: 0;
+	}
+
+
+.photo-popup {
+	&.popup__table TD {
+		vertical-align: top;
+	}
+
+	.popup__inner {
+		width: 730px + 2*85px;
+		min-height: 730px + 2*35px;
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+
+	.popup__close {
+		.close {
+			top: 35px;
+			right: 35px;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+<ul class="explore-menu__items explore-menu__items-sorts">
+{{#each sorts}}
+	<li class="explore-menu__item-{{name}} explore-menu__item{{#ifEq name 'location'}} hidden{{/ifEq}}{{#ifEq ../sort name}} active{{/ifEq}}"><a href="/explore/{{../category}}/{{../story}}/{{name}}/{{../filter}}/"><i class="iexp iexp-{{name}}"></i><span class="explore-menu__item-title">{{_ title 'explore_menu'}}</span></a></li>
+{{/each}}
+</ul>
+<ul class="explore-menu__items explore-menu__items-filters">
+{{#each filters}}
+	<li class="explore-menu__item-{{name}} explore-menu__item{{#ifEq ../filter name}} active{{/ifEq}}"><a href="/explore/{{../category}}/{{../story}}/{{../sort}}/{{name}}/"><i class="iexp iexp-{{name}}"></i><span class="explore-menu__item-title">{{_ title 'explore_menu'}}</span></a></li>
+{{/each}}
+</ul>

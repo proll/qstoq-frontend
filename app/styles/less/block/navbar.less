@@ -1,0 +1,146 @@
+//
+// Navbars (Redux)
+// --------------------------------------------------
+
+
+// COMMON STYLES
+// -------------
+
+// Base class and wrapper
+.navbar {
+	overflow: visible;
+	margin-bottom: @navbarLineHeight;
+
+	// Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
+	*position: relative;
+	*z-index: 2;
+	font-size: @navbarFontSize;	
+	line-height: @navbarLineHeight;	
+	background-color: @navbarBackground;
+}
+
+.navbar-inner {
+	min-height: @navbarHeight;
+	padding-left:  20px;
+	padding-right: 20px;
+	border-bottom: 0 none;
+
+
+	// Prevent floats from breaking the navbar
+	.clearfix();
+}
+
+// Set width to auto for default container
+// We then reset it for fixed navbars in the #gridSystem mixin
+.navbar .container {
+	width: auto;
+}
+
+// Override the default collapsed state
+.nav-collapse.collapse {
+	height: auto;
+	overflow: visible;
+}
+
+
+// Brand: website or project name
+// -------------------------
+.navbar .brand {
+	float: left;
+	display: block;
+	// Vertically center the text given @navbarHeight
+	padding: 26px 22px 24px;
+	margin-left: -26px; // negative indent to left-align the text down the page
+
+	&:hover,
+	&:focus {
+	text-decoration: none;
+	}
+}
+
+
+// Fixed navbar
+// -------------------------
+
+// Shared (top/bottom) styles
+.navbar-fixed-top {
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: @zindexFixedNavbar;
+	margin-bottom: 0; // remove 18px margin for default navbar
+	.transition(top 0.3s);
+}
+.navbar-fixed-top .navbar-inner {
+	border: 0 none;
+	.box-shadow(0 1px 7px rgba(0,0,0,.07));
+}
+
+.navbar-fixed-top .navbar-inner {
+	padding-left:  0;
+	padding-right: 0;
+	.border-radius(0);
+}
+
+// Reset container width
+// Required here as we reset the width earlier on and the grid mixins don't override early enough
+.navbar-fixed-top .container {
+	#grid > .core > .span(@gridColumns);
+}
+
+// Fixed to top
+.navbar-fixed-top {
+	top: 0;
+}
+
+// NAVIGATION
+// ----------
+
+.navbar .nav {
+	position: relative;
+	left: 0;
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+.navbar .nav.pull-right {
+	float: right; // redeclare due to specificity
+	margin-right: 0; // remove margin on float right nav
+}
+.navbar .nav > li {
+	float: left;
+}
+
+// Links
+.navbar .nav > li > a {
+	float: none;
+	// Vertically center the text given @navbarHeight
+	padding: ((@navbarHeight - @navbarLineHeight) / 2)+4 22px ((@navbarHeight - @navbarLineHeight) / 2)-4;
+	color: @navbarLinkColor;
+	text-decoration: none;
+
+	span {
+		margin-left: 4px;
+	}
+}
+.navbar .nav .dropdown-toggle .caret {
+	margin-top: 8px;
+}
+
+// Hover/focus
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+	background-color: transparent; // "transparent" is default to differentiate :hover/:focus from .active
+	color: @navbarLinkColorHover;
+	text-decoration: none;
+}
+
+// Active nav items
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+	color: @navbarLinkColorActive;
+	text-decoration: none;
+	background-color: @navbarLinkBackgroundActive;
+}
+

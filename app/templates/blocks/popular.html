@@ -1,0 +1,17 @@
+<div class="popular__item">
+	<h2 class="popular__block-h popular__block-h_first">{{_ '1st place' 'popular'}}</h2>
+	<div class="popular__item_first"></div>
+</div>
+<div class="popular__item">
+	<h2 class="popular__block-h">{{_ '2nd–7th place' 'popular'}}</h2>
+	<div class="popular__item_other">
+	{{#each photos.list}}
+		<div class="popular__tile load-bg">
+			<div class="popular__delta">+{{delta}} <i class="i i-hrt_pop"></i></div>
+			<a href="/photo/{{id}}/" data-type="{{../source.type}}" data-keeper="{{../source.keeper}}"><img data-orig="{{_uphoto url '320x320'}}" src="/images_static/empty.png " width="300" height="300" class="lazy">
+			<span class="popular__author">{{#if second}}<i class="i i-bge-2"></i>{{/if}}{{#if third}}<i class="i i-bge-3"></i>{{/if}}{{_ 'by' 'popular'}} {{user.name}}</span>
+			</a>
+		</div>
+	{{/each}}
+	</div>
+</div>

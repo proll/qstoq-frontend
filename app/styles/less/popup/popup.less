@@ -1,0 +1,143 @@
+.popup{
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: @popupIndex;
+	overflow: auto;
+
+	-webkit-transition: opacity .3s, -webkit-transform .3s;
+	   -moz-transition: opacity .3s, -moz-transform .3s;
+	     -o-transition: opacity .3s, -o-transform .3s;
+	        transition: opacity .3s, transform .3s;
+
+	.opacity(100);
+}
+.popup.shake{
+	.animation(shake, 0.2s);
+}
+.popup.in{
+	.opacity(0);
+}
+.popup__inner{
+	position: relative;
+	float: none;
+	margin: 0 auto;
+	.box-shadow(0 1px 8px rgba(0,0,0,.25));
+	background-color: @white;
+}
+.popup__content{
+	padding: 0;
+	margin: 0 auto;
+}
+
+.popup__table{
+	height: 100%;
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+	background-color: rgba(255,255,255,0.95);
+}
+.popup__table TD{
+	vertical-align: middle;
+	padding: 0;
+}
+
+.popup__close{
+	position: absolute;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	.popup__close-col {
+		position: fixed;
+		width: 100px;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		.transition(background-color .3s);
+		background-color: rgba(204,204,204,0);
+	}
+		.close{
+			cursor: pointer;
+			.i;
+			.i-popup-x;
+			vertical-align: top;
+
+			position: fixed;
+			top:0;
+			right: 0;
+			line-height: 0;
+			font-size: 0;
+		}
+
+	&:hover {
+			.close {
+				.i-popup-x_active;
+			}
+	}
+}
+
+
+.popup__previous {
+	display:none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 50%;
+	cursor: pointer;
+
+	.popup__previous-col{
+		position: fixed;
+		width: 90px;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		.transition(background-color .3s);
+		background-color: rgba(204,204,204,0);
+	}
+		.prev {
+			position: fixed;
+			top: 50px - 16px;
+			left: 35px;
+			display: none;
+
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 16px 16px 16px 0;
+			border-color: transparent @grayLighter transparent transparent;
+		}
+
+
+	&:hover {
+			.prev {
+				border-color: transparent @gray transparent transparent;
+			}
+	}
+}
+
+.has-context {
+	.popup__close {
+		&:hover {
+			.popup__close-col {
+				background-color: rgba(204,204,204,.3);
+			}
+		}
+	}
+
+	.popup__previous {
+		display: block;
+			.prev {
+				display: block;
+			}
+		&:hover {
+			.popup__previous-col{
+				background-color: rgba(204,204,204,.3);
+			}
+		}
+	}
+}

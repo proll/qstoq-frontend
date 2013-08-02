@@ -1,0 +1,79 @@
+.pic-tile-grid {
+	overflow: hidden;
+	margin-left: -20px;
+	margin-top: 30px;
+}
+
+
+.pic-tile-grid__container {
+	overflow: hidden;
+}
+
+
+.pic-tile-grid__spinner {
+	width: 100%;
+	height: 54px;
+	background: url(/images/ani/spinner.gif)  center 0px no-repeat;
+}
+
+.pic-tile {
+	float:left;
+	display: inline-block;
+	font-size: 0;
+	width:  174px;
+	height: 174px;
+	margin: 0 0 20px 20px;
+}
+
+
+// add photo pictile
+.pic-add {
+	text-align: center;
+	background: none;
+	position: relative;
+	border: 1px solid @grayLighter;
+	width: 172px;
+	height: 172px;
+
+	a {
+		text-decoration: none;
+		display: block;
+	}
+	img {
+		width: 172px;
+		height: 172px;
+	}
+}
+
+.pic-tile-grid_empty {
+	.pic-add {
+		width: 100%;
+		height: auto;
+		border: 0 none;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.pic-tile-grid_new-load {
+	.pic-add {
+		display: none;
+	}
+}
+
+.pic-add__cont {
+	position: absolute;
+	top: 50%;
+	margin-top: -40px;
+	left: 0;
+	right: 0;
+}
+
+.pic-add__title {
+	font-size: 12px;
+	color:@grayLighter;
+	display: block;
+	text-decoration: none
+}

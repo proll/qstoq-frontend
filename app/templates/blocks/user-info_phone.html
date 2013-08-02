@@ -1,0 +1,95 @@
+{{#if mine}}
+{{else}}
+<div class="profile__follow">
+	<div class="profile__follow-head {{#if user_obj.follow}}followed{{/if}}">
+		<div class="profile__follow-unfollow">
+			<span class="profile__follow-title">{{_ 'Remove' 'user_info'}}</span>
+			<i class="ip ip-unfollow"></i>
+		</div>
+		<div class="profile__follow-follow">
+			<span class="profile__follow-title">{{_ 'Follow' 'user_info'}}</span>
+			<i class="ip ip-follow"></i>
+		</div>
+	</div>
+</div>
+{{/if}}
+<div class="profile__bg{{#if mine}} profile__bg-mine{{/if}}">
+	{{#if user_obj.background}}
+		<div class="load-bg">
+			<img src="/images_static/empty.png " data-orig="{{user_obj.background.i640x640}}" width="100%" class="lazy profile__bg-img">
+		</div>
+	{{else}}
+		<img src="/images_static/empty.png " width="100%" class="profile__bg-img">
+	{{/if}}
+	<div class="profile__follow-cont">
+		<div class="profile__followers" data-decl="follower"><strong class="follow_count">{{ user_obj.followers_count }}</strong><span class="follow_decl">{{_plural user_obj.followers_count 'follower'}}</span></div>
+		<div class="profile__following" data-decl="following"><strong class="follow_count">{{ user_obj.followings_count }}</strong><span class="follow_decl">{{_plural user_obj.followings_count 'following'}}</span></div>
+	</div>
+</div>
+<div class="profile__avatar">
+	<img src="{{_uphoto user_obj.photo.url '212x212'}}" width="110" height="110" class="profile__avatar-img">
+	{{#if mine}}
+	<div class="profile__interact profile__interact-bio">
+		{{#if user_obj.bio}}
+			<i class="ip ip-bio"></i><span class="profile__interact-title">{{_ 'Edit bio' 'user_info'}}</span>
+		{{else}}
+			<i class="ip ip-bio"></i><span class="profile__interact-title">{{_ 'Add bio' 'user_info'}}</span>
+		{{/if}}
+	</div>
+	{{else}}
+	<div class="profile__interact profile__interact-message">
+		<i class="ip ip-message"></i><span class="profile__interact-title">{{_ 'Message' 'user_info'}}</span>
+	</div>
+	{{/if}}
+</div>
+{{#if mine}}
+	<div class="profile__invite"><i class="ip ip-invite"></i><a class="profile__invite-title" href="/invite">{{_ 'Invite friends' 'user_info'}}</a></div>
+{{/if}}
+{{#if user_obj.bio}}
+<div class="profile__bio">
+	{{#if mine}}
+		<textarea placeholder="" class="profile__bio-input input_clear" maxlength="249">{{ user_obj.bio }}</textarea>
+	{{else}}
+		<p class="profile__bio-text">{{_uinput user_obj.bio }}</p>
+	{{/if}}
+</div>
+{{else}}
+	{{#if mine}}
+	<div class="profile__bio profile__bio-hidden">
+		<textarea placeholder="" class="profile__bio-input input_clear" maxlength="249">{{ user_obj.bio }}</textarea>
+	</div>
+	{{/if}}
+{{/if}}
+{{#ifEq user_obj.id 6176}}
+<ul class="profile__social">
+	<li class="profile__social-item"><a href="https://www.facebook.com/weheartpics" target="_blank"><i class="isc isc-fb_prfl"></i></a></li>
+	<li class="profile__social-item"><a href="https://twitter.com/WeHeartPicsCom" target="_blank"><i class="isc isc-tw_prfl"></i></a></li>
+	<li class="profile__social-item"><a href="http://vk.com/weheartpics" target="_blank"><i class="isc isc-vk_prfl"></i></a></li>
+</ul>
+{{else}}
+{{#ifOR user_obj.fb_id user_obj.tw_id user_obj.vk_id}}
+	<ul class="profile__social">
+		{{#if user_obj.fb_id}}<li class="profile__social-item"><a href="https://facebook.com/{{ user_obj.fb_id }}" target="_blank"><i class="isc isc-fb_prfl"></i></a></li>{{/if}}
+		{{#if user_obj.tw_id}}<li class="profile__social-item"><a href="https://twitter.com/account/redirect_by_id?id={{ user_obj.tw_id }}" target="_blank"><i class="isc isc-tw_prfl"></i></a></li>{{/if}}
+		{{#if user_obj.vk_id}}<li class="profile__social-item"><a href="http://vk.com/profile.php?id={{ user_obj.vk_id }}" target="_blank"><i class="isc isc-vk_prfl"></i></a></li>{{/if}}
+	</ul>
+{{/ifOR}}
+{{/ifEq}}
+{{#if user_obj.photos_count}}
+	<div class="profile-menu_phone__title"><h3 class="profile-menu_phone__title-text">{{_ 'Show photos' 'user_info'}}</h3></div>
+	<ul class="profile-menu_phone">
+		<li class="profile-menu_phone__item">
+			<a href="/user/{{user_obj.id}}/explore">{{_ 'All' 'user_info'}} {{user_obj.photos_count}} {{_plural user_obj.photos_count 'photo'}}</a>
+		</li>
+		<li class="profile-menu_phone__item profile-menu_phone__item-activity">
+			<a href="/user/{{user_obj.id}}/feed">{{_ 'Activity feed' 'user_info'}}</a>
+		</li>
+	</ul>
+{{/if}}
+{{#if mine}}
+{{else}}
+	{{#ifEq user_obj.id 6176}}
+	{{else}}
+		<div class="profile__report"><i class="ip ip-report"></i><span class="profile__report-title" data-url="/api/complaint/user/" data-content="{{_ 'Do you want to report this user?' 'user_info'}}" data-ok="{{_ 'Report' 'user_info'}}" data-close="{{_ 'Cancel' 'user_info'}}" data-success="{{_ 'User reported.' 'user_info'}}" data-error="{{_ 'Something went wrong...' 'user_info'}}">{{_ 'Report user' 'user_info'}}</span></div>
+	{{/ifEq}}
+{{/if}}

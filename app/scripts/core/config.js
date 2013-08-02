@@ -1,0 +1,5 @@
+qst.Config = function() {
+
+	return {
+	}
+};

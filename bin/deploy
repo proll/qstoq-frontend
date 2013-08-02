@@ -1,0 +1,114 @@
+#!/usr/bin/env node
+var fs = require('fs'),
+	grunt = require('../node_modules/grunt'),
+	gruntCli =  require('../node_modules/grunt/lib/grunt/cli'),
+	nopt = require('nopt'),
+	_ = require('underscore'),
+	join = require('path').join,
+	rootPath = (join(__dirname, "../"))
+	
+
+var red   = '\033[31m',
+	blue  = '\033[34m',
+	green  = '\033[32m',
+	unGreen  = '\033[4;32m',
+	reset = '\033[0m';
+
+function init(){
+	var cmds = process.argv.splice(2);
+	var keys = [];
+
+	Object.defineProperty(grunt, 'utils', {
+		get: function() {
+			return grunt.util;
+		}
+	});
+
+	if(cmds.length){ //If arrguments passed
+		runCommand(cmds[0], cmds.splice(1));
+	}else{ //If no arguments passed
+		//Default Command is 'help'
+		runCommand("help");
+	}
+
+}
+
+function runCommand(cmd, params){
+	if(commands[cmd]){
+		commands[cmd].command.apply(commands, params);
+		return true;
+	}else{
+		echo(red + "Command '" + cmd + "' not found" + reset);
+		return false;
+	}
+}
+
+function echo(str){
+	console.log(green + unGreen + "WHP" + reset + ": " + str);
+}
+
+var commands = {
+	"handlebars": {
+		"description": "Build handlebars files",
+		"command": function(){
+			gruntCli.tasks = "handlebars";
+			gruntCli();
+		}
+	},
+	"help": {
+		"description": "Help - u see me - i ♥  u",
+		"command": function(){
+			echo("Availible commnands are: ");
+			for(i in commands){
+				echo(green + i + reset + "\t" + commands[i].description);
+			}
+		}
+	},
+	"sprite": {
+		"description": "Generates sprite image",
+		"command": function(){
+			gruntCli.tasks = "sprite";
+			gruntCli();
+		}
+	},
+	"less": {
+		"description": "Build LESS files",
+		"command": function(){
+			gruntCli.tasks = "less";
+			gruntCli();	
+		}
+	},
+	"squeeze": {
+		"description": "Replaces and concatenates js/css in special HTML comment blocks and compress js/css/html",
+		"command": function(options){
+			gruntCli.tasks = ["squeeze"];
+			gruntCli();
+		}
+	},
+	"server": {
+		"description": "Starts local server",
+		"command": function(){
+			gruntCli.tasks = ["less", "server", "watch"];
+			gruntCli();
+		}
+	},
+	"server0": {
+		"description": "Starts local server alone",
+		"command": function(){
+			gruntCli.tasks = ["server", "watch"];
+			gruntCli();
+		}
+	},
+	"build": {
+		"description": "Build project",
+		"command": function(options){
+			gruntCli.tasks = ["sprite", "handlebars", "less", "squeeze"];
+			gruntCli();
+		},
+		"options": {
+			"less": Boolean
+		}
+	},
+}
+
+init();

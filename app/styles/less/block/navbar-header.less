@@ -1,0 +1,120 @@
+@navbarHeaderGap: 25px;
+@navbarHeaderDropGap: 16px;
+
+.navbar__logo {
+	background: url(/images/qb/logo.png) no-repeat;
+	height: 30px;
+
+	img {
+		height: 30px;
+	}
+}
+
+.navbar_hidden {
+	top: -100px;
+}
+
+.navbar .nav > li.nav__add-photo > a {
+	color: @blue;
+	&:hover,
+	&:focus {
+		color: @blue;
+	}
+	.i-add {
+		float:left;
+		margin-right: 8px;
+		margin-top: -4px;
+	}
+}
+
+.navbar .nav > li.nav__profile-drop > a {
+	border-left: 1px solid @white;
+	border-right: 1px solid @white;
+
+	.i-no-avatar {
+		float: left;
+		margin-right: 10px;
+		margin-top: -7px;
+	}
+
+	.i-nav-drop-arrow {
+		margin-left: 10px;
+	}
+}
+
+.navbar_unauthed {
+	display: block;
+}
+
+.navbar_authed {
+	display: none;
+}
+
+.logged {
+	.navbar_unauthed {
+		display: none;
+	}
+
+	.navbar_authed {
+		display: block;
+	}
+}
+
+.nav__drop-menu {
+	display: none;
+	text-align: right;
+	position: absolute;
+	background: @white;
+	width: 100%;
+	z-index: @zindexFixedNavbar;
+
+	&:before {
+		content: '';
+		display: block;
+		border-top: 1px solid @grayLighter;
+		position: absolute;
+		left:@navbarHeaderGap;
+		right:@navbarHeaderGap;
+	}
+
+	li {
+		a {
+			border-left: 1px solid @grayLighter;
+			border-right: 1px solid @grayLighter;
+			display: block;
+			// cjpute as gap from right side of .nav__profile-drop 
+			padding: @navbarHeaderDropGap/2 @navbarHeaderGap+14px+10px @navbarHeaderDropGap/2 @navbarHeaderGap;
+			color: @navbarLinkColor;
+			text-decoration: none;
+			text-shadow: 0 1px 0 @navbarBackgroundHighlight;
+
+		}
+		&:first-child {
+			a {
+				padding-top: @navbarHeaderDropGap;
+			}
+		}
+		&:last-child {
+			a {
+				padding-bottom: @navbarHeaderDropGap;
+				border-bottom: 1px solid @grayLighter;
+			}
+		}
+	}
+
+}
+
+.open {
+	.i-nav-drop-arrow {
+		.i-nav-drop-arrow_open;
+	}
+
+	.nav > li.nav__profile-drop > a {
+		border-left: 1px solid @grayLighter;
+		border-right: 1px solid @grayLighter;
+	}
+
+	.nav__drop-menu {
+		display: block;
+	}
+}

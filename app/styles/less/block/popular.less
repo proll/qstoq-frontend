@@ -1,0 +1,108 @@
+// Popular page
+// .page-popular {
+	
+// }
+.popular__item {
+	position: relative;
+}
+
+	.popular__block-h {
+		color: #c81414;
+		font-weight: normal;
+		font-size: 36px;
+		line-height: 1.1;
+		text-align: right;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		left: -211px;
+		width: 170px;
+		margin-top: 7px;
+	}
+
+.popular__item_first {
+	.photofeed__post {
+		padding-top: 30px;
+	}
+
+	.i-bge-1 {
+		position: relative;
+		float: left;
+		z-index: 2;
+		margin: -30px -2px 0 1px;
+	}
+
+	.popular__delta {
+		width: auto;
+		background-image: url(/images/pop/grad_md.png);
+		font-size: 22px;
+		padding-right: 18px;
+		padding-bottom: 6px;
+		left: 0;
+	}
+}
+	.popular__block-h_first {
+		margin-top: 37px;
+	}
+
+.popular__item_other {
+	overflow: hidden;
+	margin-left: -20px;
+	margin-top: 30px;
+	font-size: 0;
+}
+
+	.popular-prize {
+		padding-bottom: 10px;
+		border-bottom: 1px solid @grayLighter;
+	}
+		.popular__tile {
+			position: relative;
+			display: inline-block;
+			width:  300px;
+			height: 300px;
+			margin: 0 0 20px 20px;
+		}
+
+			.popular__delta {
+				position: absolute;
+				width: 100px - 12px;
+				top: 0;
+				right: 0;
+				z-index: 2;
+
+				padding: 4px 12px 4px 0;
+
+				text-align: right;
+				color:@grayLighter2;
+				font-size: 20px;
+				line-height: 1;
+
+				background: url(/images/pop/grad_sm.png) top right repeat-y;
+			}
+
+			.popular__author {
+				position: absolute;
+				left: 8px;
+				bottom: 7px;
+
+				color:@grayLighter2;
+				font-size: 14px;
+				line-height: 1;
+
+				white-space: nowrap;
+
+				.i {
+					margin: -7px 0 -17px -7px;
+				}
+			}
+
+
+.popular-grid {
+	.pic-tile {
+		display: none;
+		&:nth-child(n+8) {
+			display: inline-block;
+		}
+	}
+}

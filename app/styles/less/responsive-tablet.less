@@ -1,0 +1,141 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (min-width: @gridRowWidthTablet) and (max-width: @gridRowMaxWidthTablet)  {
+	.container {
+		width: @gridRowWidthTablet;
+	}
+	.container,
+	.navbar-static-top .container,
+	.navbar-fixed-top .container,
+	.navbar-fixed-bottom .container { 
+		width: @gridRowWidthTablet;
+	}
+
+	.navbar .nav > li > a {
+		padding-left:  20px;
+		padding-right: 20px;
+	}
+
+	.body__page-photofeed {
+		#qst-container {
+			width: 100%;
+			overflow: hidden;
+		}
+	}
+
+	.span10 {
+		#grid > .core > .span(6);
+	}
+
+	// Pictile-grid
+	.pic-tile-grid {
+		margin-left: -16px;
+	}
+
+	.pic-tile {
+		width:  196px;
+		height: 196px;
+		margin: 0 0 16px 16px;
+	}
+
+	.pic-add {
+		width:  194px;
+		height: 194px;
+
+		img {
+			width:  194px;
+			height: 194px;			
+		}
+	}
+
+
+	// Photofeed
+	.photofeed__misc {
+		position: static;
+		display: block;
+		
+		margin: 0;
+		width: 1px;
+		height: auto;
+		float: none;
+		overflow: visible;
+
+		z-index: 2;
+	}
+		.photofeed__caption {
+			color: @white;
+			font-weight: normal;
+			position: absolute;
+			top: 40px + 30px;
+			left: 30px;
+			right: 30px;
+			text-shadow:0 0 5px @black;
+
+			.unm {
+				color: @redLight;
+				&:hover {
+					color: @redLight;
+				}
+			}
+
+			.hsh {
+				color: @grayLighter;
+				&:hover {
+					color: @grayLighter;
+				}	
+			}
+		}
+
+		.photofeed__location-name {
+			color: @white;
+			position: absolute;
+			bottom: 50px + 30px + 75px;
+			left: 30px;
+			right: 30px;
+			text-shadow:0 0 5px @black;
+		}
+
+
+		.photofeed__location-addr {
+			color: @grayLighter3;
+			position: absolute;
+			bottom: 50px + 30px + 55px;
+			left: 30px;
+			right: 30px;
+			text-shadow:0 0 5px @black;
+			margin: 0;
+		}
+
+		.photofeed__comments-total {
+			display: block;
+			font-size: 16px;
+			color: @white;
+			position: absolute;
+			bottom: 50px + 30px;
+			left: 30px;
+			right: 30px;
+			text-shadow:0 0 5px @black;
+		}
+
+		.photofeed__post-inter {
+			display: none;
+		}
+
+	.photofeed__block-row5 {
+		.photofeed__block-item {
+			&:nth-child(n+4) {
+				display: none;
+			}
+		}
+	}
+
+	.percent-carousel();
+
+
+	.daily-advert__your {
+		display: none;
+	}
+}

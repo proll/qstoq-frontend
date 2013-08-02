@@ -1,0 +1,243 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// =======================
+// qst palette
+// =======================
+@black:                 #000;
+@blue:                  #005abe;
+@blue2:                  #61C7F2;
+@green:                 #193a23;
+@redLight:              #ff6666;
+@red_hover:             #d21f00;
+@grayDarker:            #333;
+@grayLighter:           #ccc;
+@grayLighter3:          #e6e6e6;
+@grayLighter4:          #eee;
+
+
+@red:                   #db4a37;
+
+@grayDarker:            #282828;
+@gray:                  #8c8c8c;
+@grayLight:             #969696;
+@grayLight2:            #dfdedd;
+@grayLighter1:          #ebeae9;
+@grayLighter2:          #f8f8fa;
+
+
+
+@fbColor:               #3B5998;
+@vkColor:               #5175A5;
+@twColor:               #5CB0D7;
+
+@sandColor: 			#ffe0a3;
+@purple: 				#a97a8a;
+@headerColor: 			@purple;
+
+
+// GRID
+// --------------------------------------------------
+@gridColumns:             12;
+
+// Default 960px grid
+// -------------------------
+@gridColumnWidth:         40px;
+@gridGutterWidth:         40px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * @gridColumns);
+
+// tablet
+@gridColumnsTablet: 9;
+@gridRowWidthTablet: (@gridColumnsTablet * @gridColumnWidth) + (@gridGutterWidth * (@gridColumnsTablet - 1));
+@gridRowMaxWidthPhone: @gridRowWidthTablet - 1;
+@gridRowMinWidthPhone: @gridRowWidthPhone - 1;
+
+
+// tablet + phone
+@gridColumnsPhone: 8;
+@gridRowWidthPhone: (@gridColumnsPhone * @gridColumnWidth) + (@gridGutterWidth * (@gridColumnsPhone - 1)) + @gridGutterWidth/2;
+
+
+@gridColumnsDesktop: @gridColumns;
+@gridRowWidthDesktop: @gridRowWidth;
+@gridRowMaxWidthTablet: @gridRowWidthDesktop - 1;
+
+
+// Fluid grid
+// -------------------------
+// @fluidGridColumnWidth:         percentage(@gridColumnWidth/@gridRowWidth);
+// @fluidGridGutterWidth:         percentage(@gridGutterWidth/@gridRowWidth);
+
+
+
+
+
+
+
+// Grays
+// -------------------------
+@grayDark:              #282828;
+@white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @grayLighter2;
+@textColor:             @grayDark;
+
+
+// Links
+// -------------------------
+@linkColor:			 	@blue;
+@linkColorHover:		darken(@linkColor, 15%);
+
+@sansFontFamily:		'Open Sans', sans-serif;
+
+@baseFontSize:		  	14px;
+@baseFontFamily:		@sansFontFamily;
+@baseLineHeight:		20px;
+
+@smallFontSize: 		@baseFontSize - 2px;
+@smallLineHeight: 		@baseLineHeight - 2px;
+
+@bigFontSize: 			@baseFontSize + 2px;
+@bigLineHeight: 		@baseLineHeight + 2px;
+
+
+
+// Forms
+// -------------------------
+@inputBackground:				@white;
+@inputBorder:					#eeeeee;
+@inputBorderRadius:				3px;
+@inputDisabledBackground:		@grayLight;
+@formActionsBackground:			#f5f5f5;
+
+// Input placeholder text color
+// -------------------------
+@placeholderText:         @grayLight;
+
+// Buttons
+// -------------------------
+@btnBackground:                     @white;
+@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBorder:                         darken(@grayLight, 10%);
+
+@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
+
+@btnInverseBackground:              #444;
+@btnInverseBackgroundHighlight:     @gray;
+
+
+
+@baseBorderRadius : 2px;
+
+
+
+
+// Dropdowns
+// -------------------------
+@dropdownBackground:            @white;
+@dropdownBorder:                rgba(0,0,0,.2);
+@dropdownDividerTop:            #e5e5e5;
+@dropdownDividerBottom:         @white;
+
+@dropdownLinkColor:             @grayDark;
+@dropdownLinkColorHover:        @white;
+@dropdownLinkColorActive:       @white;
+
+@dropdownLinkBackgroundActive:  @linkColor;
+@dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
+
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+
+// Z-indexes
+// --------------------------------------------------
+
+@zindexDropdown:          1000;
+@zindexPopover:           1010;
+@zindexTooltip:           1030;
+@zindexFixedNavbar:       1030;
+@zindexModalBackdrop:     1040;
+@zindexModal:             1050;
+
+@faderIndex:			1060;
+@popupIndex:			1070;
+
+@zindexAuthIndex:		1080;
+
+// Navbar
+// -------------------------
+@navbarFontSize:                  13px;
+@navbarLineHeight:                20px;
+@navbarCollapseWidth:             @gridRowMinWidthPhone;
+@navbarPreCollapseWidth:      	  @gridRowWidthTablet;
+@navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
+
+@navbarHeight:                    80px;
+@navbarBackgroundHighlight:       #ffffff;
+// @navbarBackground:                rgba(255,255,255,.83);
+@navbarBackground:                @white;
+@navbarBorder:                    darken(@navbarBackground, 12%);
+
+@navbarText:                      #333333;
+@navbarLinkColor:                 #333333;
+@navbarLinkColorHover:            #333333;
+@navbarLinkColorActive:           #111111;
+@navbarLinkBackgroundHover:       #ffffff;
+@navbarLinkBackgroundActive:      #ffffff;
+
+@navbarBrandColor:                @navbarLinkColor;
+
+// Inverted navbar
+@navbarInverseBackground:                #111111;
+@navbarInverseBackgroundHighlight:       #222222;
+@navbarInverseBorder:                    #252525;
+
+@navbarInverseText:                      @grayLight;
+@navbarInverseLinkColor:                 @grayLight;
+@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
+@navbarInverseLinkBackgroundHover:       transparent;
+@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor:    #ccc;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;

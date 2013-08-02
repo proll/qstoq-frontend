@@ -1,0 +1,8 @@
+{{#if can_share}}
+	<h2 class="upload__share-h">{{_ 'Share this photo:' 'upload_share'}}</h2>
+	<ul class="upload__share-list">
+	{{#if can_facebook}}<li class="upload__share-item"><a href="facebook"{{#if ../facebook}} class="active"{{/if}}>{{_ 'Facebook' 'upload_share'}}</a></li>{{/if}}
+	{{#if can_twitter}}<li class="upload__share-item"><a href="twitter"{{#if ../twitter}} class="active"{{/if}}>{{_ 'Twitter' 'upload_share'}}</a></li>{{/if}}
+	{{#if can_vkontakte}}<li class="upload__share-item"><a href="vkontakte"{{#if ../vkontakte}} class="active"{{/if}}>{{_ 'Vkontakte' 'upload_share'}}</a></li>{{/if}}
+	</ul>
+{{/if}}
