@@ -39,9 +39,9 @@ qst.ItemListPage = qst.Page.extend({
 			this.itemlist.activate();
 			this.itemlist.on('load:success', this.loadList, this);
 			this.view.addItemList(this.itemlist);
-			
-			this.adddialog.activate();
+
 			this.view.addAddDialog(this.adddialog);
+			this.adddialog.activate();
 
 			this.set('sleeped', false);
 		} else {
@@ -52,11 +52,10 @@ qst.ItemListPage = qst.Page.extend({
 			this.itemlist.activate();
 			this.view.addItemList(this.itemlist);
 
-			this.adddialog.activate();
 			this.view.addAddDialog(this.adddialog);
+			this.adddialog.activate();
 
 			this.itemlist.reset();
-			this.adddialog.reset();
 
 			this.set('sleeped', false);
 		}
@@ -83,7 +82,6 @@ qst.ItemListPage = qst.Page.extend({
 		if(this.itemlist) {
 			this.itemlist.sleep();
 		}
-
 
 		if(this.adddialog) {
 			this.adddialog.sleep();

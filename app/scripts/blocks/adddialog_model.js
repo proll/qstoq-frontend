@@ -7,12 +7,16 @@ qst.AddDialog = Backbone.Model.extend({
 		description: '',
 		active: 1,
 		price_pwyw: 0,
+		state: '',// link / nothing / file
+		sleeped: false,
 	},
 
 	initialize: function (options) {
 		this.view = new qst.AddDialogView({
 			model: this
 		});
+
+		this.set('state', 'link');
 	},
 
 	fetch: function (options) {

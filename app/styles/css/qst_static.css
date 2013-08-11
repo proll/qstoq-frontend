@@ -383,12 +383,12 @@ h1 {
 }
 .lnk,
 .unm {
-  color: #db4a37;
+  color: #dd6756;
   text-decoration: none;
 }
 .lnk:hover,
 .unm:hover {
-  color: #db4a37;
+  color: #dd6756;
   text-decoration: underline;
 }
 .lazy {

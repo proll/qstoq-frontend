@@ -27,6 +27,7 @@ qst.LinkView = Backbone.View.extend({
 	},
 
 	toggle: function(e) {
+		// e.preventDefault();
 		if(this.model.get('active')) {
 			this.model.set('active', false);
 			$(e.currentTarget).parents('.link__toggle')

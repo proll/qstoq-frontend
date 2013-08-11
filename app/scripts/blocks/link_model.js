@@ -22,7 +22,6 @@ qst.Link = Backbone.Model.extend({
 	},
 	initialize: function (options) {
 		this.view = new qst.LinkView({model:this});
-		this.view.on("link:loaderror", this.remove, this);
 	},
 	fetch: function () {
 		if (parseInt(this.get('counter_ship'))) {
@@ -36,9 +35,9 @@ qst.Link = Backbone.Model.extend({
 		this.on('change:active', this.toggleActive, this);
 	},
 
-	toggleActive: function (options) {
-		options = options || {};
-		options.url = this.url+this.get('id');
+	toggleActive: function (model, value) {
+		options = {};
+		options.url = this.url + this.get('id');
 		options.type = 'post';
 		options.data = options.data || {
 			active: !!(this.get('active'))?1:0
@@ -50,6 +49,7 @@ qst.Link = Backbone.Model.extend({
 
 	deleteItem: function (options) {
 		var opts = {};
+		console.lo
 		opts.data = {
 		}
 		if(!!options) {

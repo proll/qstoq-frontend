@@ -1,9 +1,25 @@
 qst = qst || {};
 qst.l10n = qst.l10n || {};
 qst.l10n.itemlist = {
+	'Link': {
+		en: 'Link',
+		ru: 'Ссылка'
+	},
+	'Title': {
+		en: 'Title',
+		ru: 'Название'
+	},
+	'Price, RUB': {
+		en: 'Price, RUB',
+		en: 'Цена, руб.',
+	},
+	'Add': {
+		en: 'Add',
+		ru: 'Добавить'
+	},
 	'Add item': {
 		en: 'Add item',
-		ru: 'Добавить'
+		ru: 'Добавить продукт'
 	},
 	'On': {
 		en: 'On',
@@ -61,4 +77,40 @@ qst.l10n.itemlist = {
 		en: 'Ok',
 		ru: 'Ок'
 	},
+	'After payment': {
+		en: 'After payment',
+		ru: 'После оплаты'
+	},
+	'give link': {
+		en: 'give link',
+		ru: 'отдавать ссылку'
+	},
+	'give file': {
+		en: 'give file',
+		ru: 'отдавать файл'
+	},
+	'give nothing': {
+		en: 'give nothing',
+		ru: 'ничего не отдавать'
+	},
+	'write some name of the item': {
+		en: 'write some name of the item',
+		ru: 'назовите ваш товар',
+	},
+	'set price, please': {
+		en: 'set price, please',
+		ru: 'задайти цену, пожалуйста',
+	},
+	'set a link, please': {
+		en: 'set a link, please',
+		ru: 'задайти ссылку, пожалуйста',
+	},
+	'set a valid link, please': {
+		en: 'set a valid link, please',
+		ru: 'задайти существующую ссылку, пожалуйста',
+	},
+	'Drop or choose a file': {
+		en: 'Drop or choose a file',
+		ru: 'Перетащите сюда файл или вы можете его выбрать'
+	}
 }

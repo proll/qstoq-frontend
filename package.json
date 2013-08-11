@@ -1,0 +1,50 @@
+{
+  "author": "Gleb Polushkin",
+  "name": "whp-frontend",
+  "version": "0.0.0-53",
+  "dependencies": {
+    "connect": "2.5.x",
+    "http-proxy": "0.8.x"
+  },
+  "devDependencies": {
+    "underscore": "x",
+
+    "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-connect": "~0.2.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-htmlmin": "~0.1.3",
+    "grunt-contrib-imagemin": "~0.1.3",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt-rev": "~0.1.0",
+    "grunt-usemin": "~0.1.10",
+    "grunt-mocha": "~0.3.0",
+    "grunt-open": "~0.2.0",
+    "grunt-svgmin": "~0.1.0",
+    "grunt-concurrent": "~0.1.0",
+    "matchdep": "~0.1.1",
+    "connect-livereload": "~0.1.1",
+
+    "http-proxy": "0.8.x",
+    "grunt-contrib-less": "~0.5.0",
+
+    "grunt-contrib-handlebars": "~0.5.x",
+    
+    "nopt": "~2.0.0",
+
+    "node-sprite": "~0.1.x",
+
+    "imagemagick": "http://github.com/naltatis/node-imagemagick/tarball/master"
+  },
+  "scripts": {
+    "start": "node tasks/task-server.js"
+  },
+  "subdomain": "proll.whp",
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
