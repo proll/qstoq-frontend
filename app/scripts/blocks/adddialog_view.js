@@ -8,6 +8,7 @@ qst.AddDialogView = Backbone.View.extend({
 		'click a.adddialog__types-item': 'clickState',
 		'click .adddialog__header': 'hideDialog',
 		'click .adddialog__submit-a': 'submitForm',
+		'change #file_uploader': 'upload',
 		'keyoress': 'hideErrors',
 		'click': 'hideErrors',
 		'submit form': 'submit'
@@ -33,6 +34,8 @@ qst.AddDialogView = Backbone.View.extend({
 		this.$input_price = this.$form.find('input[name=price]');
 		this.$input_link = this.$form.find('input[name=link]');
 		this.$input_file = this.$form.find('input[name=file]');
+		this.$input_file_title = this.$form.find('.adddialog__inp-file-title');
+		this.$input_file_process = this.$form.find('.adddialog__inp-file-process');
 		this.$error = this.$el.find('.adddialog__error');
 
 		this.delegateEvents();
@@ -56,6 +59,12 @@ qst.AddDialogView = Backbone.View.extend({
 			.toggleClass('state-file', 		false)
 			.toggleClass('state-nothing', 	false)
 			.toggleClass('state-' + value, true)
+
+		if(value === 'file') {
+			this.$input_link.attr('disabled', 'disabled');
+		} else {
+			this.$input_link.removeAttr('disabled');
+		}
 	},
 
 	showDialog: function(e) {
@@ -69,6 +78,7 @@ qst.AddDialogView = Backbone.View.extend({
 		this.$input_name.val('');
 		this.$input_price.val('');
 		this.$input_link.val('');
+		this.$input_file.val('');
 	},
 
 	hideDialog: function() {
@@ -87,6 +97,7 @@ qst.AddDialogView = Backbone.View.extend({
 		var name = this.$input_name.val(),
 			price = this.$input_price.val(),
 			link = this.$input_link.val(),
+			file = this.$input_file.val(),
 			state = this.model.get('state');
 
 		if(_.isEmpty(name)) {
@@ -101,6 +112,11 @@ qst.AddDialogView = Backbone.View.extend({
 				return false;
 			} else if(!_.isUrl(link)) {
 				this.showError(qst.localize('set a valid link, please', 'itemlist'), 'link')
+				return false;
+			}
+		} else if (state === 'file') {
+			if(_.isEmpty(file)) {
+				this.showError(qst.localize('load some file, please', 'itemlist'), 'file')
 				return false;
 			}
 		}
@@ -122,7 +138,7 @@ qst.AddDialogView = Backbone.View.extend({
 				break;
 			case 'link': 
 				this.$input_link.parent().toggleClass('error-inp', true);
-				this.$input_link.focus();
+				console.log(this.$input_link.focus());
 				break;
 			case 'file': 
 				this.$input_file.parent().toggleClass('error-inp', true);
@@ -160,5 +176,90 @@ qst.AddDialogView = Backbone.View.extend({
 		this.undelegateEvents();
 		$('html').off('click.adddialog');
 	},
+
+	
+	upload: function(e) {
+		var that = this;
+		$.each(e.target.files, function(i, file){
+			that.model.upload(file);
+		});
+	},
+
+	updateFileName: function(txt) {
+		this.$input_file_title.text(txt);
+	},
+
+	updateFileProcess: function(part) {
+		this.$input_file_process.width(Math.round(part*100) + '%');
+	}
+
+
+	// $upload_attach_ctrl.change(function (e) {
+	// 		// îòñûëàåì ôàéëû ïî îäíîìó è âû÷èòûâàåì èç input[type=file] ñ multiple
+	// 		$.each(this.files, function(i, file){
+	// 			var $new_item = $('<div class="sg-upload-item"><img src=""/><div class="sg-progress"></div><i class="icon i-uclose"></i></div>'),
+	// 				$new_item_progress = $new_item.find(".sg-progress");
+
+	// 			$new_item.find(".i-uclose").on("click", function (e) {
+	// 				$new_item.fadeOut();
+	// 			});
+
+	// 			if(!!window.FileReader) {
+	// 				var reader = new FileReader();
+	// 					reader.onload = function (e) {
+	// 						$new_item.find("img").attr('src', e.target.result);
+	// 					}
+	// 				reader.readAsDataURL(file);
+	// 			} else {
+	// 				$new_item.toggleClass("no-img", true);
+	// 			}
+
+	// 			var data = new FormData();
+	// 				data.append('file-upload', file);
+
+
+	// 			// the $.ajax() method and the like doesn’t allow for it and 
+	// 			// I really want to display an upload progress bar, dammit!
+	// 			// course of this we have to use XHR
+	// 			var xhr = new XMLHttpRequest();
+
+	// 			xhr.upload.addEventListener('progress',function(ev){
+	// 				$new_item_progress.width(parseInt(100 * ev.loaded/ev.total)+"%");
+	// 			}, false);
+
+	// 			xhr.onreadystatechange = function(ev){
+	// 				if (xhr.readyState == 4) {
+	// 					if(xhr.status == 200) {
+	// 						var data = this.response;
+	// 						console.log(data);
+	// 						if (typeof(data) == 'string') {
+	// 						  	data = $.parseJSON(data);
+	// 						}
+	// 						// äîïîëíåíèå äàííûìè äëÿ ôîðìèðîâàíèÿ attach_file
+	// 						if(!!data.success && !!data.image) {
+	// 							$new_item.data("image", data.image);
+	// 						} else if (!!data.error && !!data.error_desc) {
+	// 							console.log(data.error_desc);
+	// 							$new_item.fadeOut();
+	// 						} else {
+	// 							$new_item.fadeOut();
+	// 						}
+	// 					} else {
+	// 						// TODO îáðàáîòêà îøèáîê çàãðóçêè
+	// 						console.log(file.name + ":" + "ERROR: " + xhr.readyState + ":" + xhr.status);
+	// 						$new_item.fadeOut();
+	// 					}
+	// 					$new_item_progress.slideUp(400);
+	// 				}
+	// 			};
+
+	// 			xhr.open('POST', '/uploads.html', true);
+	// 			xhr.send(data);
+
+	// 			$upload_container.after($new_item);
+	// 			upload_count++;
+	// 		});
+	// 	});
+
 });
 

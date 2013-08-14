@@ -11,7 +11,7 @@ qst.l10n.itemlist = {
 	},
 	'Price, RUB': {
 		en: 'Price, RUB',
-		en: 'Цена, руб.',
+		ru: 'Цена, руб.',
 	},
 	'Add': {
 		en: 'Add',
