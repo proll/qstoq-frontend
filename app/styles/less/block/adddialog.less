@@ -124,6 +124,9 @@
 				&:focus {
 					color: @textColor;
 				}
+				&:disabled {
+					color: @grayLight;
+				}
 				.placeholder(@grayLight);
 			}
 	
@@ -215,11 +218,11 @@
 
 		.adddialog__inp-cont {
 			height: auto;
+			overflow: hidden;
 		}
 	}
 		.adddialog__inp-file-process {
 			cursor: pointer;
-			opacity: .001;
 			position: absolute;
 			width: 0;
 			height: 100px;
@@ -227,6 +230,7 @@
 			left: 0;
 			z-index: 1;	
 			background-color: @purple;
+			.transition(width 0.2s);
 		}
 
 		.adddialog__inp-file-title {
@@ -235,6 +239,9 @@
 			display: inline-block;
 			height: 100px - 2*14px;
 			margin-top: (100px - 2*14px)/2 - 14px/2;
+			position: relative;
+			z-index: 2;	
+			text-shadow: 0 0 2px @white;
 		}
 
 		.adddialog__inp-file {
@@ -245,7 +252,7 @@
 			height: 100px;
 			top: 0;
 			left: 0;
-			z-index: 1;
+			z-index: 3;
 		}
 
 

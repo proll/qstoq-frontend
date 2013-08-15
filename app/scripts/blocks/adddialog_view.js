@@ -19,6 +19,7 @@ qst.AddDialogView = Backbone.View.extend({
 		this.model.on('add:success', this.hideDialog, this);
 		this.model.on('change:sleeped', this.sleep, this);
 		this.model.on('change:state', this.changeState, this);
+		this.model.on('change:url', this.changeLink, this);
 	},
 
 
@@ -79,6 +80,9 @@ qst.AddDialogView = Backbone.View.extend({
 		this.$input_price.val('');
 		this.$input_link.val('');
 		this.$input_file.val('');
+		this.updateFileName(qst.localize('Drop or choose a file', 'itemlist'));
+		this.updateFileProcess(0);
+		// this.changeState(null'link')
 	},
 
 	hideDialog: function() {
@@ -191,6 +195,10 @@ qst.AddDialogView = Backbone.View.extend({
 
 	updateFileProcess: function(part) {
 		this.$input_file_process.width(Math.round(part*100) + '%');
+	},
+
+	changeLink: function(model, value) {
+		this.$input_link.val(value);
 	}
 
 

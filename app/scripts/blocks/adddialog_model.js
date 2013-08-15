@@ -76,20 +76,18 @@ qst.AddDialog = Backbone.Model.extend({
 						  	data = $.parseJSON(data);
 						}
 						if(!!data.success) {
-							// $new_item.data("image", data.image);
-							console.log('data.success');
+							that.view.updateFileProcess(1);
+							that.set('url', data.result.uri)
 						} else if (!!data.error) {
 							console.log(data.error);
 						} else {
-							$new_item.fadeOut();
+							qst.warning('Something went wrong...', 'misc')
 						}
 					} else {
 						console.log(file.name + ":" + "ERROR: " + xhr.readyState + ":" + xhr.status);
-						// $new_item.fadeOut();
 					}
 				}
 			};
-
 			xhr.open('POST', '/v1/medias/?token='+qst.user.get("token"), true);
 			xhr.send(data);
 		}

@@ -3119,6 +3119,9 @@ body {
 .adddialog__inp:focus {
   color: #282828;
 }
+.adddialog__inp:disabled {
+  color: #969696;
+}
 .adddialog__inp:-moz-placeholder {
   color: #969696;
 }
@@ -3226,10 +3229,10 @@ body {
 }
 .adddialog__file .adddialog__inp-cont {
   height: auto;
+  overflow: hidden;
 }
 .adddialog__inp-file-process {
   cursor: pointer;
-  opacity: .001;
   position: absolute;
   width: 0;
   height: 100px;
@@ -3237,6 +3240,10 @@ body {
   left: 0;
   z-index: 1;
   background-color: #a97a8a;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
 }
 .adddialog__inp-file-title {
   font-size: 13px;
@@ -3244,6 +3251,9 @@ body {
   display: inline-block;
   height: 72px;
   margin-top: 29px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 2px #ffffff;
 }
 .adddialog__inp-file {
   cursor: pointer;
@@ -3253,7 +3263,7 @@ body {
   height: 100px;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
 }
 .state-link .adddialog__link,
 .state-file .adddialog__link {
