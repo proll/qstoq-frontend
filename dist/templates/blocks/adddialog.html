@@ -1,0 +1,42 @@
+<div class="adddialog-cont">
+	<a href="add" class="adddialog__add"><i class="qi qi-add"></i>{{_ 'Add' 'itemlist'}}</a>
+	<div class="adddialog__dialog">
+		<div class="adddialog__header"><i class="qi qi-add_open"></i>{{_ 'Add' 'itemlist'}}<i class="qi qi-dclose"></i></div>
+		<div class="adddialog__form">
+			<form action="add" class="adddialog__form-el">
+				<div class="adddialog__creds">
+					<div class="adddialog__inp-cont">
+						<input type="text" class="adddialog__inp" name="name" placeholder="{{_ 'Title' 'itemlist'}}">
+					</div>
+					<div class="adddialog__inp-cont">
+						<input type="text" class="adddialog__inp" name="price" placeholder="{{_ 'Price, RUB' 'itemlist'}}">
+					</div>
+				</div>
+				<div class="adddialog__types-cont">
+					<span class="adddialog__types-title">{{_ 'After payment' 'itemlist'}}</span>
+					<ul class="adddialog__types">
+						<li{{#ifEq state 'link'}} class="active"{{/ifEq}}><a href="link" class="item-link adddialog__types-item">{{_ 'give a link' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'file'}} class="active"{{/ifEq}}><a href="file" class="item-file adddialog__types-item">{{_ 'give a file' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'nothing'}} class="active"{{/ifEq}}><a href="nothing" class="item-nothing adddialog__types-item">{{_ 'give nothing' 'itemlist'}}</a></li>
+					</ul>
+				</div>
+				<div class="adddialog__link adddialog__creds">
+					<div class="adddialog__inp-cont">
+						<input type="text" class="adddialog__inp" name="link" placeholder="{{_ 'Link' 'itemlist'}}">
+					</div>
+				</div>
+				<div class="adddialog__file adddialog__creds">
+					<div class="adddialog__inp-cont">
+						<div class="adddialog__inp-file-process"></div>
+						<span class="adddialog__inp-file-title">{{_ 'Drop or choose a file' 'itemlist'}}</span>
+						<input type="file" class="adddialog__inp adddialog__inp-file" name="file" id="file_uploader" placeholder="{{_ 'Link' 'itemlist'}}">
+					</div>
+				</div>
+				<input type="submit" class="inv">
+			</form>
+		</div>
+		<div class="adddialog__submit">
+			<span class="adddialog__error"></span><a href="add" class="adddialog__submit-a">{{_ 'Add item' 'itemlist'}}</a>
+		</div>
+	</div>
+</div>

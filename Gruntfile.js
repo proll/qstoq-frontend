@@ -197,21 +197,6 @@ module.exports = function(grunt) {
 		},
 
 
-
-
-
-
-
-		squeeze: {
-			app: {
-				src:['app/*.html'],
-				base: "app",
-				images: "images",
-				dest: "deploy"
-			}
-		},
-
-
 		handlebars:{
 			compile:{
 				options:{
@@ -277,7 +262,5 @@ module.exports = function(grunt) {
 		'rev',
 		'usemin',
 		'htmlmin:deploy',
-
-		// 'squeeze'
 	]);
 };

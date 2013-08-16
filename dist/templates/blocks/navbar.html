@@ -1,0 +1,25 @@
+<div class="navbar-inner  navbar_unauthed">
+	<div class="container">
+		<a class="brand" href="/"><div class="navbar__logo"><img src="/images_static/empty.png" width="82" height="30"></div></a>
+		<div class="nav-collapse collapse">
+			<ul class="nav pull-right">
+				<li class="navbar__item-landing"><a href="/">{{_ 'About' 'navbar'}}</a></li>
+				<li class="navbar__item-explore"><a href="/explore">{{_ 'Explore' 'navbar'}}</a></li>
+				<li class="navbar__item-popular"><a href="/popular">{{_ 'Popular' 'navbar'}}</a></li>
+				<li class="nav__login"><a href="/login">{{_ 'Log In' 'navbar'}}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="navbar-inner navbar_authed">
+	<div class="container">
+		<a class="brand" href="/"><div class="navbar__logo"><img src="/images_static/empty.png" width="82" height="30" alt="We heart"></div></a>
+		<div class="nav-collapse collapse">
+			<ul class="nav pull-right">
+				<li class="nav__my-items"><a href="/items"><i class="qi qi-my-items"></i><span class="nav__my-items-title">{{_ 'My items' 'navbar'}}</span></a></li>
+				<li class="nav__profile"><a href="/profile"><i class="qi qi-profile"></i><span class="nav__profile-title">{{_ 'Profile' 'navbar'}}</span></a></li>
+				<li class="nav__logout"><a href="/logout"><i class="qi qi-logout"></i><span class="nav__logout-title">{{_ 'Log out' 'navbar'}}</span></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
