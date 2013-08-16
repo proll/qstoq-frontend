@@ -1,6 +1,6 @@
 {
   "author": "Gleb Polushkin",
-  "name": "whp-frontend",
+  "name": "qst-frontend",
   "version": "0.0.0-53",
   "dependencies": {
     "connect": "2.5.x",
