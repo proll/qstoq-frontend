@@ -124,6 +124,16 @@ qst.AddDialogView = Backbone.View.extend({
 				return false;
 			}
 		}
+
+			var price_plus = (price.indexOf('+')!==-1);
+			this.model.set({
+				name: name,
+				url: link,
+				price: parseInt(price),
+				price_pwyw: price_plus + 0
+			});
+
+			this.model.fetch();
 		return false;
 	},
 
@@ -142,7 +152,7 @@ qst.AddDialogView = Backbone.View.extend({
 				break;
 			case 'link': 
 				this.$input_link.parent().toggleClass('error-inp', true);
-				console.log(this.$input_link.focus());
+				this.$input_link.focus();
 				break;
 			case 'file': 
 				this.$input_file.parent().toggleClass('error-inp', true);

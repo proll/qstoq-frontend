@@ -1,12 +1,14 @@
 qst.AddDialog = Backbone.Model.extend({
-	url: '/api/v1/links/',
+	url: '/v1/links/',
 	defaults: {
 		name: 	'название ссылки',
 		url: 	'медиа для продажи',
 		price: 	1000,
 		description: '',
-		active: 1,
 		price_pwyw: 0,
+		active: 1,
+
+		user: '',
 		state: '',// link / nothing / file
 		sleeped: false,
 	},
@@ -25,7 +27,15 @@ qst.AddDialog = Backbone.Model.extend({
 		if(data.price_pwyw) {
 			data.price+= '+';
 		}
+		if($.trim(data.description) === '') {
+			delete data.description;
+		}
+
+		delete data.active;
 		delete data.price_pwyw;
+		delete data.sleeped;
+		delete data.state;
+		delete data.user;
 
 		options = options || {};
 		options.type = 'post';
@@ -40,7 +50,7 @@ qst.AddDialog = Backbone.Model.extend({
 	success: function (model, response, options) {
 		response = _.toJSON(response);
 		if(response.success) {
-			this.trigger('add:success');
+			this.trigger('add:success', response.result);
 		} else {
 			this.trigger('add:error');
 		}
@@ -71,17 +81,14 @@ qst.AddDialog = Backbone.Model.extend({
 				if (xhr.readyState == 4) {
 					if(xhr.status == 200) {
 						var data = this.response;
-						console.log(data);
 						if (typeof(data) == 'string') {
 						  	data = $.parseJSON(data);
 						}
 						if(!!data.success) {
 							that.view.updateFileProcess(1);
 							that.set('url', data.result.uri)
-						} else if (!!data.error) {
-							console.log(data.error);
 						} else {
-							qst.warning('Something went wrong...', 'misc')
+							that.trigger('add:error');
 						}
 					} else {
 						console.log(file.name + ":" + "ERROR: " + xhr.readyState + ":" + xhr.status);

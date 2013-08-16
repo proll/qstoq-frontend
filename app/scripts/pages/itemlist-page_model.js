@@ -36,6 +36,9 @@ qst.ItemListPage = qst.Page.extend({
 			this.itemlist = new qst.ItemList(options);
 			this.adddialog = new qst.AddDialog(options);
 
+			this.adddialog.on('add:success', this.linkAdded, this);
+			this.adddialog.on('add:error', this.error, this);
+
 			this.itemlist.activate();
 			this.itemlist.on('load:success', this.loadList, this);
 			this.view.addItemList(this.itemlist);
@@ -73,6 +76,16 @@ qst.ItemListPage = qst.Page.extend({
 			this.set('total', total);
 			this.view.updateTotal(total);
 		}
+	},
+
+	linkAdded: function(link_obj) {
+		if(!_.isEmpty(link_obj)) {
+			this.itemlist.addMyBlock(link_obj)
+		}
+	},
+
+	error: function() {
+		qst.warning(qst.localize('Something went wrong...', 'misc'));
 	},
 
 	sleep: function () {

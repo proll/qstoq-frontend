@@ -27,7 +27,11 @@ qst.ItemListView = Backbone.View.extend({
 	},
 
 	addBlock: function (model, collection, options) {
-		this.$cont.append(model.view.$el);
+		if(!!options && options.at === -1) {
+			this.$cont.prepend(model.view.$el);
+		} else {
+			this.$cont.append(model.view.$el);
+		}
 	},
 
 	showSpinner: function () {

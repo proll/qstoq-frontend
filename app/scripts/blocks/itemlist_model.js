@@ -46,6 +46,12 @@ qst.ItemList = Backbone.Model.extend({
 		}
 	},
 
+	addMyBlock: function(link_obj) {
+		var link = new qst.Link(link_obj);
+		this.addBlock(link);
+		this.collection.add(link, {at: -1});
+	},
+
 	addBlock: function (model, collection, options) {
 		var block = model.toJSON();
 		model.fetch();

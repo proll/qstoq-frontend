@@ -81,12 +81,12 @@ qst.l10n.itemlist = {
 		en: 'After payment',
 		ru: 'После оплаты'
 	},
-	'give link': {
-		en: 'give link',
+	'give a link': {
+		en: 'give a link',
 		ru: 'отдавать ссылку'
 	},
-	'give file': {
-		en: 'give file',
+	'give a file': {
+		en: 'give a file',
 		ru: 'отдавать файл'
 	},
 	'give nothing': {

@@ -1,6 +1,6 @@
 <tr>
 	<td class="link__caption"><a href="/item/{{ id }}" class="link__caption-a">{{ name }}</a></td>
-	<td class="link__price"><span class="link__price-sp">{{ price }}</span></td>
+	<td class="link__price"><span class="link__price-sp">{{#ifEq price_pwyw '1'}}+{{/ifEq}}{{ price }}</span></td>
 	<td class="link__view-count"><span class="link__view-count-sp">{{ counter_view }}</span></td>
 	<td class="link__sold-count"><span class="link__sold-count-sp">{{ counter_ship }}</span></td>
 	<td class="link__ctr"><span>{{ ctr }}</span></td>
