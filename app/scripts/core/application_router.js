@@ -21,6 +21,9 @@ qst.Router = Backbone.Router.extend({
 		"items": "itemlist",
 		"profile": "profile",
 
+		"item/:id": 		"itemedit",
+		"item/:id/:slide": 	"itemedit",
+
 		"404": "er404",
 		"403": "er403",
 
@@ -35,6 +38,10 @@ qst.Router = Backbone.Router.extend({
 
 	itemlist: function () {
 		// console.log("hello itemlist");
+	},
+
+	itemedit: function() {
+		// console.log("hello itemedit");
 	},
 
 	profile: function () {

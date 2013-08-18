@@ -65,6 +65,12 @@ qst.App = Backbone.Model.extend({
 		});
 		this.pages.add(this.profile);
 
+		this.itemedit = new qst.ItemEditPage({
+			name: 'itemedit',
+			template: 'pages/itemedit-page'
+		});
+		this.pages.add(this.itemedit);
+
 		// Pages render on route
 		this.router.on('404', function () {
 			that.pages.getPage('404').render();
@@ -116,6 +122,17 @@ qst.App = Backbone.Model.extend({
 					}
 					break;
 
+				case 'itemedit': 
+					if(!qst.is_authed()) {
+						qst.navigate('/', {trigger: true});
+					} else {
+						this.itemedit.render({
+							id: route[0],
+							section: !!route[1] ? route[1] : 'main'
+						});
+					}
+					break;
+
 				default:
 					if(!!route[0] && !this.router.previousWasPopup()) {
 					}
@@ -153,6 +170,11 @@ qst.App = Backbone.Model.extend({
 					case 'profile':
 						console.log('reset:profile');
 						this.profile.sleep();
+						break;
+
+					case 'itemedit':
+						console.log('reset:itemedit');
+						this.itemedit.sleep();
 						break;
 
 					default:
