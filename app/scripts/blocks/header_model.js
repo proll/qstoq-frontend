@@ -1,7 +1,7 @@
 qst.Header = Backbone.Model.extend({
 	defaults:{
 		items:{},
-		currentItem: "photofeed"
+		currentItem: "defaults"
 	},
 	
 	// TODO: доделать currentItem должен корелировать с items..active

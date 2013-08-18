@@ -23,7 +23,7 @@ qst.ItemEditPageView = qst.PageView.extend({
 		}
 
 
-		this.$cont = this.$el.find('>div');
+		this.$cont = this.$el.find('>div>div');
 
 		$('body').attr('class', 'body__page-' + this.model.get('name'));
 

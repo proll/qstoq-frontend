@@ -24,13 +24,13 @@ qst.ItemEditPage = qst.Page.extend({
 		if(!options.section) {
 			options.section = this.defaults.section;
 		}
-
-		// if(!this.needRerender(options)) {
-		// 	return false;
-		// }
-
-
 		this.set(options);
+
+		if(!this.needRerender(options)) {
+			return false;
+		}
+
+
 
 		var grid_options = _.extend(options, {
 			keeper_path: 'qst.app.profile.grid.collection',
