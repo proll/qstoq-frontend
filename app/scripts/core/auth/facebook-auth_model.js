@@ -3,6 +3,7 @@ qst.FB = Backbone.Model.extend({
 	app_id: "137692866413480",
 	inited : false,
 	access_token : null,
+	access_uid : null,
 
 	initialize: function (){
 		window.fbAsyncInit = _.bind(function () {
@@ -47,8 +48,9 @@ qst.FB = Backbone.Model.extend({
 			$.ajax({
 				type: 'post',
 				url: this.url,
-				data: { 
-					token : this.access_token 
+				data: {
+					fbUserId:this.access_uid,
+					fbAccessToken : this.access_token 
 				},
 				dataType: 'json'
 			})
@@ -123,10 +125,12 @@ qst.FB = Backbone.Model.extend({
 	onFBData: function(response){
 		// WHP.pages.getstarted.hidePopup();
 		if (response.status == "connected"){
-			qst.log("Facebook : user was succesfully connected! :)");
-			var token = response.authResponse.accessToken;
+			qst.log("Facebook : user was succesfully connected! :)", response.authResponse );
+			var uid = response.authResponse.userID,
+				token = response.authResponse.accessToken;
 			if (this.access_token!=token){
 				qst.log("Facebook : token = ["+token+"]");
+				this.access_uid = uid;
 				this.access_token = token;
 				this.fetch();
 			}else{
