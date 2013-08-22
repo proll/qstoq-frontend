@@ -45,8 +45,8 @@ qst.FB = Backbone.Model.extend({
 		if (this.access_token!=null) {
 			var that = this;
 			$.ajax({
-				type: 'GET',
-				url: _.toSafeUrl(this.url),
+				type: 'post',
+				url: this.url,
 				data: { 
 					token : this.access_token 
 				},
