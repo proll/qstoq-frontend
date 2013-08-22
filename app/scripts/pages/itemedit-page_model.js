@@ -39,23 +39,23 @@ qst.ItemEditPage = qst.Page.extend({
 			this.view.render();
 
 			this.menu = new qst.ItemEditMenu(options);
-			this.menu.fetch();
 
-			// this.itemedit = new qst.ItemEdit(options);
-			// this.itemedit.activate();
+			this.itemedit = new qst.ItemEdit(options);
+			this.itemedit.fetch();
+			this.itemedit.activate();
 
 			this.view.addMenu(this.menu);
-			// this.view.addItemEdit(this.itemedit);
+			this.view.addItemEdit(this.itemedit);
 
 			this.set('sleeped', false);
 		} else {
 			this.view.render();
 			this.menu.set(options);
-			// this.itemedit.set(options);
-
-			// this.itemedit.activate();
+			this.itemedit.set(options);
+			this.itemedit.fetch();
+			this.itemedit.activate();
 			this.view.addMenu(this.menu);
-			// this.view.addItemEdit(this.itemedit);
+			this.view.addItemEdit(this.itemedit);
 
 			this.set('sleeped', false);
 		}
