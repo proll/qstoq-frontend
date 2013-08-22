@@ -1,5 +1,5 @@
 qst.FB = Backbone.Model.extend({
-	url : "/api/auth/",
+	url : "/v1/auth/fb",
 	app_id: "137692866413480",
 	inited : false,
 	access_token : null,
@@ -48,8 +48,7 @@ qst.FB = Backbone.Model.extend({
 				type: 'GET',
 				url: _.toSafeUrl(this.url),
 				data: { 
-					social : 'fb',  
-					access_token : this.access_token 
+					token : this.access_token 
 				},
 				dataType: 'json'
 			})

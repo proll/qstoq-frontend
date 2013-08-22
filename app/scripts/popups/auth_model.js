@@ -3,7 +3,7 @@ qst.Auth = Backbone.Model.extend({
 
 	initialize: function (){
 
-		this.FB  = new qst.FB({url:"/v1/auth/fb", app_id: "137692866413480"});
+		this.FB  = new qst.FB();
 		// this.TW  = new qst.TW({url:"/api/auth/", url_token:"/api/auth/twitter/request_token/"});
 		// this.VK  = new qst.VK({url:"/api/auth/", app_id:3154513, redirect_url: "http://weheartpics.com/go/close_vk.html"});
 		this.signin 		= new qst.Signin({url:"/api/auth/signin/"});
