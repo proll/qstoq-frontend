@@ -40,6 +40,7 @@ qst.Signin = Backbone.Model.extend({
 				// } else {
 				// 	this.trigger("error", {description:"Something went wrong"});
 				// }
+				this.error();
 			} else {
 				this.trigger("auth:success", 
 					{

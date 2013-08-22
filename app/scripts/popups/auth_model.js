@@ -3,7 +3,7 @@ qst.Auth = Backbone.Model.extend({
 
 	initialize: function (){
 
-		// this.FB  = new qst.FB({url:"/api/auth/", app_id: "205868409437437"});
+		this.FB  = new qst.FB({url:"/v1/auth/fb", app_id: "137692866413480"});
 		// this.TW  = new qst.TW({url:"/api/auth/", url_token:"/api/auth/twitter/request_token/"});
 		// this.VK  = new qst.VK({url:"/api/auth/", app_id:3154513, redirect_url: "http://weheartpics.com/go/close_vk.html"});
 		this.signin 		= new qst.Signin({url:"/api/auth/signin/"});
@@ -17,14 +17,14 @@ qst.Auth = Backbone.Model.extend({
 		// 	this.VK.fetch(user_obj);
 		// }, this);
 
-		// this.FB.on 			("auth:success", this.authSuccess, this);
+		this.FB.on 			("auth:success", this.authSuccess, this);
 		// this.TW.on 			("auth:success", this.authSuccess, this);
 		// this.VK.on 			("auth:success", this.authSuccess, this);
 		this.signin.on		("auth:success", this.authSuccess, this);
 		this.registration.on("auth:success", this.authSuccess, this);
 
 
-		// this.FB.on 			("error", this.error, this);
+		this.FB.on 			("error", this.error, this);
 		// this.TW.on 			("error", this.error, this);
 		// this.VK.on 			("error", this.error, this);
 		this.signin.on		("error", this.error, this);
@@ -36,7 +36,7 @@ qst.Auth = Backbone.Model.extend({
 		}, this);
 		this.registration.on("registration:success", function () {
 			// qst.navigate("/findfriends");
-			qst.navigate("/photofeed", {trigger: true});
+			qst.navigate("/", {trigger: true});
 		}, this);
 
 		qst.on("auth:show", function (options) {

@@ -103,46 +103,7 @@
 		margin-bottom: 29px;
 	}
 
-			.adddialog__inp {
-				& {
-					border: none;
-					font-size: 13px;
-					line-height: 14px;
-					-webkit-font-smoothing: antialiased;
 
-					color: @textColor;
-					display: inline-block;
-					width: 100%;
-					vertical-align: top;
-					outline: none;
-					padding: 0;
-					.transition(color 0.3s);
-
-					text-align: left;
-					background-color: transparent;
-				}
-				&:focus {
-					color: @textColor;
-				}
-				&:disabled {
-					color: @grayLight;
-				}
-				.placeholder(@grayLight);
-			}
-	
-		.adddialog__inp-cont {
-			font-size: 0;
-			padding: 14px;
-			height: 14px;
-
-			&:first-child {
-				border-bottom: 1px solid @grayLighter02;
-			}
-
-			&:last-child {
-				margin-bottom: -1px;
-			}
-		}
 
 		.adddialog__types-title {
 			display: inline-block;
@@ -197,7 +158,7 @@
 		height: 0;
 		opacity: 0;
 
-			.adddialog__inp-cont {
+			.qst__inp-cont {
 				padding: 10px 14px;
 			}
 	}
@@ -216,7 +177,7 @@
 		
 		text-align: center;
 
-		.adddialog__inp-cont {
+		.qst__inp-cont {
 			height: auto;
 			overflow: hidden;
 		}

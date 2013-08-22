@@ -428,6 +428,53 @@ h1 {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.qst__inp {
+  border: none;
+  font-size: 13px;
+  line-height: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: #282828;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  outline: none;
+  padding: 0;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  text-align: left;
+  background-color: transparent;
+}
+.qst__inp:focus {
+  color: #282828;
+}
+.qst__inp:disabled {
+  color: #969696;
+}
+.qst__inp:-moz-placeholder {
+  color: #969696;
+}
+.qst__inp::-moz-placeholder {
+  color: #969696;
+}
+.qst__inp:-ms-input-placeholder {
+  color: #969696;
+}
+.qst__inp::-webkit-input-placeholder {
+  color: #969696;
+}
+.qst__inp-cont {
+  font-size: 0;
+  padding: 14px;
+  height: 14px;
+}
+.qst__inp-cont:first-child {
+  border-bottom: 1px solid #cecdcc;
+}
+.qst__inp-cont:last-child {
+  margin-bottom: -1px;
+}
 html,
 body {
   height: 100%;

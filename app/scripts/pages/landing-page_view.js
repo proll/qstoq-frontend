@@ -2,11 +2,11 @@ qst.LandingPageView = qst.PageView.extend({
 	indent: 66,
 	$window: $(window),
 	events: {
-		'click .landing-inter__item-signup>a': 'showAuth',
-		'click .signup_fb': 'signupFB',
-		'click .signup_tw': 'signupTW',
-		'click .signup_vk': 'signupVK',
-		'submit .landing-signup__form': 'signupEmail',
+		// 'click .landing-inter__item-signup>a': 'showAuth',
+		// 'click .signup_fb': 'signupFB',
+		// 'click .signup_tw': 'signupTW',
+		// 'click .signup_vk': 'signupVK',
+		// 'submit .landing-signup__form': 'signupEmail',
 
 	},
 
@@ -160,35 +160,35 @@ qst.LandingPageView = qst.PageView.extend({
 		this.$real_input.width(this.$fake_input.width());
 	},
 
-	showAuth: function() {
-		this.model.showAuth();
-		return false;
-	},
+	// showAuth: function() {
+	// 	this.model.showAuth();
+	// 	return false;
+	// },
 
-	signupFB: function() {
-		this.model.signupFB();
-		return false;
-	},
+	// signupFB: function() {
+	// 	this.model.signupFB();
+	// 	return false;
+	// },
 
-	signupTW: function() {
-		this.model.signupTW();
-		return false;
-	},
+	// signupTW: function() {
+	// 	this.model.signupTW();
+	// 	return false;
+	// },
 
-	signupVK: function() {
-		this.model.signupVK();
-		return false;
-	},
+	// signupVK: function() {
+	// 	this.model.signupVK();
+	// 	return false;
+	// },
 
-	signupEmail: function() {
-		var $email = this.$el.find('.landing-signup__inp'),
-			email = $email.val();
-		if(!_.isEmpty(email)) {
-			$email.val('');
-			this.model.signupEmail(email);
-		}
-		return false;
-	},
+	// signupEmail: function() {
+	// 	var $email = this.$el.find('.landing-signup__inp'),
+	// 		email = $email.val();
+	// 	if(!_.isEmpty(email)) {
+	// 		$email.val('');
+	// 		this.model.signupEmail(email);
+	// 	}
+	// 	return false;
+	// },
 
 	sleep: function() {
 		this.$window.off('resize.landing.page');

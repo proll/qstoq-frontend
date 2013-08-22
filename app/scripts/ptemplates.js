@@ -19,10 +19,10 @@ function program1(depth0,data) {
     + "</a>\n	<div class=\"adddialog__dialog\">\n		<div class=\"adddialog__header\"><i class=\"qi qi-add_open\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add", "itemlist", options) : helperMissing.call(depth0, "_", "Add", "itemlist", options)))
-    + "<i class=\"qi qi-dclose\"></i></div>\n		<div class=\"adddialog__form\">\n			<form action=\"add\" class=\"adddialog__form-el\">\n				<div class=\"adddialog__creds\">\n					<div class=\"adddialog__inp-cont\">\n						<input type=\"text\" class=\"adddialog__inp\" name=\"name\" placeholder=\"";
+    + "<i class=\"qi qi-dclose\"></i></div>\n		<div class=\"adddialog__form\">\n			<form action=\"add\" class=\"adddialog__form-el\">\n				<div class=\"adddialog__creds\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"name\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Title", "itemlist", options) : helperMissing.call(depth0, "_", "Title", "itemlist", options)))
-    + "\">\n					</div>\n					<div class=\"adddialog__inp-cont\">\n						<input type=\"text\" class=\"adddialog__inp\" name=\"price\" placeholder=\"";
+    + "\">\n					</div>\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"price\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Price, RUB", "itemlist", options) : helperMissing.call(depth0, "_", "Price, RUB", "itemlist", options)))
     + "\">\n					</div>\n				</div>\n				<div class=\"adddialog__types-cont\">\n					<span class=\"adddialog__types-title\">";
@@ -49,13 +49,13 @@ function program1(depth0,data) {
   buffer += "><a href=\"nothing\" class=\"item-nothing adddialog__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give nothing", "itemlist", options) : helperMissing.call(depth0, "_", "give nothing", "itemlist", options)))
-    + "</a></li>\n					</ul>\n				</div>\n				<div class=\"adddialog__link adddialog__creds\">\n					<div class=\"adddialog__inp-cont\">\n						<input type=\"text\" class=\"adddialog__inp\" name=\"link\" placeholder=\"";
+    + "</a></li>\n					</ul>\n				</div>\n				<div class=\"adddialog__link adddialog__creds\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"link\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
-    + "\">\n					</div>\n				</div>\n				<div class=\"adddialog__file adddialog__creds\">\n					<div class=\"adddialog__inp-cont\">\n						<div class=\"adddialog__inp-file-process\"></div>\n						<span class=\"adddialog__inp-file-title\">";
+    + "\">\n					</div>\n				</div>\n				<div class=\"adddialog__file adddialog__creds\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"adddialog__inp-file-process\"></div>\n						<span class=\"adddialog__inp-file-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Drop or choose a file", "itemlist", options) : helperMissing.call(depth0, "_", "Drop or choose a file", "itemlist", options)))
-    + "</span>\n						<input type=\"file\" class=\"adddialog__inp adddialog__inp-file\" name=\"file\" id=\"file_uploader\" placeholder=\"";
+    + "</span>\n						<input type=\"file\" class=\"qst__inp adddialog__inp-file\" name=\"file\" id=\"file_uploader\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
     + "\">\n					</div>\n				</div>\n				<input type=\"submit\" class=\"inv\">\n			</form>\n		</div>\n		<div class=\"adddialog__submit\">\n			<span class=\"adddialog__error\"></span><a href=\"add\" class=\"adddialog__submit-a\">";

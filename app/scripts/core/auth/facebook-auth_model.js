@@ -1,6 +1,6 @@
 qst.FB = Backbone.Model.extend({
 	url : "/api/auth/",
-	app_id: "205868409437437",
+	app_id: "137692866413480",
 	inited : false,
 	access_token : null,
 
@@ -65,28 +65,17 @@ qst.FB = Backbone.Model.extend({
 	success: function(response, status, xhr){
 		var resp = _.toJSON(response);
 		if (resp!=null)
-		if (resp.error)
+		if (!resp.success)
 		{
-			if (resp.error.code == "API_AuthFailed") {
-				this.trigger("error", {description:"This account isn't linked with WeHeartPics"})
-				// WHP.auth.showRegStep1Error("This account isn't linked with WeHeartPics");
-			} else {
-				this.trigger("error", {description:"Something went wrong"});
-				// WHP.auth.showRegStep1Error("Something went wrong");
-
-			}
+			this.error();
 		}else{
 			this.trigger("auth:success", 
 				{
-					response: resp, 
-					user: resp.user, 
-					session:{ token: resp.user.token, uid: resp.user.id }
-				});
-			// WHP.pages.settings.onData(resp);
-			// WHP.auth.setUser(resp.user);
-			// WHP.auth.setSession({ token: resp.user.token, id: resp.user.id , uid: resp.user.id });
-			// WHP.controller.onChangeAuthState(true);
-			// WHP.auth.onStartWork(resp);
+					response: resp.result, 
+					user: resp.result.user, 
+					session:{ token: resp.result.token, uid: resp.result.user.id }
+				}
+			);
 		}
 
 		// WHP.controller.setTitle();

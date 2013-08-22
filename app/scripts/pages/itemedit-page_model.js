@@ -30,14 +30,6 @@ qst.ItemEditPage = qst.Page.extend({
 			return false;
 		}
 
-
-
-		var grid_options = _.extend(options, {
-			keeper_path: 'qst.app.profile.grid.collection',
-			addphoto: true,
-			filter: 'user'
-		});
-
 		if(!this.visited) {
 			this.visited = true;
 			this.view = new qst.ItemEditPageView({
