@@ -1,4 +1,30 @@
-<div class="itemedit__slide1"></div>
+<div class="itemedit__slide1">
+	<form action="edit">
+		<div class="itemedit__activate-cont">
+			<label>
+				<span class="itemedit__active-label">{{_ 'Available or purchase' 'itemedit'}}</span>
+				<input type="checkbox" value="1"{{#if active}} checked="checked"{{/if}} name="active"/>
+			</label>
+		</div>
+		<div class="qst__inp-group">
+			<div class="qst__inp-cont">
+				<label>
+					<span class="qst__lbl">{{_ 'Title' 'itemlist'}}</span>
+					<input type="text" class="qst__inp" name="name" value="{{ name }}">
+				</label>
+			</div>
+			<div class="qst__inp-cont">
+				<label>
+					<span class="qst__lbl">{{_ 'Price, RUB' 'itemlist'}}</span>
+					<input type="text" class="qst__inp" name="price" value="{{#if price_pwyw}}+{{/if}}{{ price }}">
+				</label>
+			</div>
+			<div class="qst__inp-cont">
+				<textarea name="description" class="itemedit__description qst__inp" placeholder="{{_ 'Descrition' 'itemedit'}}">{{ description }}</textarea>
+			</div>
+		</div>
+	</form>
+</div>
 <div class="itemedit__slide2"></div>
 <div class="itemedit__slide3"></div>
 <div class="itemedit__slide4"></div>

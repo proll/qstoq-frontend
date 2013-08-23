@@ -65,11 +65,9 @@ qst.FB = Backbone.Model.extend({
 
 	success: function(response, status, xhr){
 		var resp = _.toJSON(response);
-		if (resp!=null)
-		if (!resp.success)
-		{
+		if (!resp || !resp.success) {
 			this.error();
-		}else{
+		} else {
 			this.trigger("auth:success", 
 				{
 					response: resp.result, 
@@ -78,8 +76,6 @@ qst.FB = Backbone.Model.extend({
 				}
 			);
 		}
-
-		// WHP.controller.setTitle();
 	},
 
 	error: function(e) {

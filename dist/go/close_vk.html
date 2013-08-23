@@ -10,7 +10,10 @@
 							return a;
 						}, {});
 				if(!!opener.qst && !!opener.qst.app){
-					opener.qst.app.trigger("vkontakte:hi", {token:options.access_token, uid: options.user_id});
+					opener.qst.app.trigger("vkontakte:hi", {
+						token:options.access_token, 
+						uid: options.user_id
+					});
 				}
 				// window.opener.WHP.auth.VK.auth(options.access_token, options.user_id);
 			}

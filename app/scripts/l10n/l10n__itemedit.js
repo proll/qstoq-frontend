@@ -17,4 +17,12 @@ qst.l10n.itemedit = {
 		en: 'Buyers',
 		ru: 'Покупатели'
 	},
+	'Available or purchase': {
+		en: 'Available or purchase',
+		ru: 'Доступно к покупке'
+	},
+	'Descrition': {
+		en: 'Descrition',
+		ru: 'Описание'
+	}
 }

@@ -19,7 +19,7 @@ function program1(depth0,data) {
     + "</a>\n	<div class=\"adddialog__dialog\">\n		<div class=\"adddialog__header\"><i class=\"qi qi-add_open\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add", "itemlist", options) : helperMissing.call(depth0, "_", "Add", "itemlist", options)))
-    + "<i class=\"qi qi-dclose\"></i></div>\n		<div class=\"adddialog__form\">\n			<form action=\"add\" class=\"adddialog__form-el\">\n				<div class=\"adddialog__creds\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"name\" placeholder=\"";
+    + "<i class=\"qi qi-dclose\"></i></div>\n		<div class=\"adddialog__form\">\n			<form action=\"add\" class=\"adddialog__form-el\">\n				<div class=\"qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"name\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Title", "itemlist", options) : helperMissing.call(depth0, "_", "Title", "itemlist", options)))
     + "\">\n					</div>\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"price\" placeholder=\"";
@@ -49,10 +49,10 @@ function program1(depth0,data) {
   buffer += "><a href=\"nothing\" class=\"item-nothing adddialog__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give nothing", "itemlist", options) : helperMissing.call(depth0, "_", "give nothing", "itemlist", options)))
-    + "</a></li>\n					</ul>\n				</div>\n				<div class=\"adddialog__link adddialog__creds\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"link\" placeholder=\"";
+    + "</a></li>\n					</ul>\n				</div>\n				<div class=\"adddialog__link qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"link\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
-    + "\">\n					</div>\n				</div>\n				<div class=\"adddialog__file adddialog__creds\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"adddialog__inp-file-process\"></div>\n						<span class=\"adddialog__inp-file-title\">";
+    + "\">\n					</div>\n				</div>\n				<div class=\"adddialog__file qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"adddialog__inp-file-process\"></div>\n						<span class=\"adddialog__inp-file-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Drop or choose a file", "itemlist", options) : helperMissing.call(depth0, "_", "Drop or choose a file", "itemlist", options)))
     + "</span>\n						<input type=\"file\" class=\"qst__inp adddialog__inp-file\" name=\"file\" id=\"file_uploader\" placeholder=\"";
@@ -124,10 +124,51 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["qst"]["Templates"]["ptemplates"]["blocks/itemedit"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function";
+
+function program1(depth0,data) {
   
+  
+  return " checked=\"checked\"";
+  }
 
+function program3(depth0,data) {
+  
+  
+  return "+";
+  }
 
-  return "<div class=\"itemedit__slide1\"></div>\n<div class=\"itemedit__slide2\"></div>\n<div class=\"itemedit__slide3\"></div>\n<div class=\"itemedit__slide4\"></div>";
+  buffer += "<div class=\"itemedit__slide1\">\n	<form action=\"edit\">\n		<div class=\"itemedit__activate-cont\">\n			<label>\n				<span class=\"itemedit__active-label\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Available or purchase", "itemedit", options) : helperMissing.call(depth0, "_", "Available or purchase", "itemedit", options)))
+    + "</span>\n				<input type=\"checkbox\" value=\"1\"";
+  stack2 = helpers['if'].call(depth0, depth0.active, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += " name=\"active\"/>\n			</label>\n		</div>\n		<div class=\"qst__inp-group\">\n			<div class=\"qst__inp-cont\">\n				<label>\n					<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Title", "itemlist", options) : helperMissing.call(depth0, "_", "Title", "itemlist", options)))
+    + "</span>\n					<input type=\"text\" class=\"qst__inp\" name=\"name\" value=\"";
+  if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "\">\n				</label>\n			</div>\n			<div class=\"qst__inp-cont\">\n				<label>\n					<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Price, RUB", "itemlist", options) : helperMissing.call(depth0, "_", "Price, RUB", "itemlist", options)))
+    + "</span>\n					<input type=\"text\" class=\"qst__inp\" name=\"price\" value=\"";
+  stack2 = helpers['if'].call(depth0, depth0.price_pwyw, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  if (stack2 = helpers.price) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.price; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "\">\n				</label>\n			</div>\n			<div class=\"qst__inp-cont\">\n				<textarea name=\"description\" class=\"itemedit__description qst__inp\" placeholder=\"";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Descrition", "itemedit", options) : helperMissing.call(depth0, "_", "Descrition", "itemedit", options)))
+    + "\">";
+  if (stack2 = helpers.description) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.description; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</textarea>\n			</div>\n		</div>\n	</form>\n</div>\n<div class=\"itemedit__slide2\"></div>\n<div class=\"itemedit__slide3\"></div>\n<div class=\"itemedit__slide4\"></div>";
+  return buffer;
   });
 
 this["qst"]["Templates"]["ptemplates"]["blocks/itemlist"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

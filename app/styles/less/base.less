@@ -122,6 +122,30 @@ h1{
 }
 
 
+
+
+.qst__inp-group {
+	overflow: hidden;
+	border: 1px solid @grayLighter02;
+	.border-radius(4px);
+	.box-shadow(inset 0 1px 3px rgba(0,0,0,.1));
+	margin-bottom: 29px;
+}
+
+	.qst__inp-cont {
+		font-size: 0;
+		padding: 14px;
+		height: 14px;
+
+		&:first-child {
+			border-bottom: 1px solid @grayLighter02;
+		}
+
+		&:last-child {
+			margin-bottom: -1px;
+		}
+	}
+
 		.qst__inp {
 			& {
 				border: none;
@@ -148,20 +172,6 @@ h1{
 			}
 			.placeholder(@grayLight);
 		}
-	
-	.qst__inp-cont {
-		font-size: 0;
-		padding: 14px;
-		height: 14px;
-
-		&:first-child {
-			border-bottom: 1px solid @grayLighter02;
-		}
-
-		&:last-child {
-			margin-bottom: -1px;
-		}
-	}
 
 
 // input:-webkit-autofill {

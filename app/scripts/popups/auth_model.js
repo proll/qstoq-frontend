@@ -5,7 +5,7 @@ qst.Auth = Backbone.Model.extend({
 
 		this.FB  = new qst.FB();
 		// this.TW  = new qst.TW({url:"/api/auth/", url_token:"/api/auth/twitter/request_token/"});
-		// this.VK  = new qst.VK({url:"/api/auth/", app_id:3154513, redirect_url: "http://weheartpics.com/go/close_vk.html"});
+		this.VK  = new qst.VK({url:"/api/auth/", app_id:3154513, redirect_url: "http://weheartpics.com/go/close_vk.html"});
 		this.signin 		= new qst.Signin({url:"/api/auth/signin/"});
 		this.registration 	= new qst.Registration({url:"/api/auth/signup/"});
 
@@ -13,13 +13,13 @@ qst.Auth = Backbone.Model.extend({
 		// 	this.TW.fetch(user_obj);
 		// }, this);
 
-		// this.on("vkontakte:hi", function (user_obj) {
-		// 	this.VK.fetch(user_obj);
-		// }, this);
+		this.on("vkontakte:hi", function (user_obj) {
+			this.VK.fetch(user_obj);
+		}, this);
 
 		this.FB.on 			("auth:success", this.authSuccess, this);
 		// this.TW.on 			("auth:success", this.authSuccess, this);
-		// this.VK.on 			("auth:success", this.authSuccess, this);
+		this.VK.on 			("auth:success", this.authSuccess, this);
 		this.signin.on		("auth:success", this.authSuccess, this);
 		this.registration.on("auth:success", this.authSuccess, this);
 
