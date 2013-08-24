@@ -1,0 +1,64 @@
+<div class="itemedit__slide1">
+	<div class="row">
+		<div class="span8 itemedit__slide1__col1">
+			<form action="edit">
+				<div class="itemedit__activate-cont">
+					<label>
+						<input type="checkbox" value="1"{{#if active}} checked="checked"{{/if}} name="active"/>
+						<span class="itemedit__active-label">{{_ 'Available or purchase' 'itemedit'}}</span>
+					</label>
+				</div>
+				<div class="qst__inp-group">
+					<div class="qst__inp-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'Title' 'itemlist'}}</span>
+							<div class="qst__inp-cont-in">
+								<input type="text" class="qst__inp" name="name" value="{{ name }}">
+							</div>
+						</label>
+					</div>
+					<div class="qst__inp-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'Price, RUB' 'itemlist'}}</span>
+							<div class="qst__inp-cont-in">
+								<input type="text" class="qst__inp" name="price" value="{{#if price_pwyw}}+{{/if}}{{ price }}">
+							</div>
+						</label>
+					</div>
+					<div class="qst__inp-cont qst__inp-cont-ta">
+						<textarea name="description" class="itemedit__description qst__inp" placeholder="{{_ 'Descrition' 'itemedit'}}">{{ description }}</textarea>
+					</div>
+				</div>
+				<div class="item__types-cont">
+					<span class="item__types-title">{{_ 'After payment' 'itemlist'}}</span>
+					<ul class="item__types">
+						<li{{#ifEq state 'link'}} class="active"{{/ifEq}}><a href="link" class="item-link item__types-item">{{_ 'give a link' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'file'}} class="active"{{/ifEq}}><a href="file" class="item-file item__types-item">{{_ 'give a file' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'nothing'}} class="active"{{/ifEq}}><a href="nothing" class="item-nothing item__types-item">{{_ 'give nothing' 'itemlist'}}</a></li>
+					</ul>
+				</div>
+				<div class="itemedit__link qst__inp-group">
+					<div class="qst__inp-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'Link' 'itemlist'}}</span>
+							<div class="qst__inp-cont-in">
+								<input type="text" class="qst__inp" name="link" value="{{ url }}">
+							</div>
+						</label>
+					</div>
+				</div>
+				<div class="itemedit__file qst__inp-group">
+					<div class="qst__inp-cont">
+						<div class="itemedit__inp-file-process"></div>
+						<span class="itemedit__inp-file-title">{{_ 'Drop or choose a file' 'itemlist'}}</span>
+						<input type="file" class="qst__inp itemedit__inp-file" name="file" id="file_uploader" placeholder="{{_ 'Link' 'itemlist'}}">
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="span4"><p class="itemedit__share-p">{{_ 'When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money' 'itemedit'}}</p></div>
+	</div>
+</div>
+<div class="itemedit__slide2"></div>
+<div class="itemedit__slide3"></div>
+<div class="itemedit__slide4"></div>

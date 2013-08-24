@@ -14,7 +14,7 @@ qst.l10n.navbar = {
 	},
 	'Nothing yet': {
 		en: 'Nothing yet',
-		ru 'Пока ничего'
+		ru :'Пока ничего'
 	},
 	'Log out': {
 		en: 'Log out',
