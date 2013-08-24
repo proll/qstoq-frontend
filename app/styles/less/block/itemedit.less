@@ -15,10 +15,6 @@
 	.qst__inp-cont-ta {
 		height: auto;
 	}
-
-	.item__types-cont {
-		margin-bottom: 17px;
-	}
 }
 
 
@@ -56,6 +52,11 @@ textarea.qst__inp {
 }
 
 
+
+
+	.item__types-cont {
+		margin-bottom: 17px;
+	}
 
 		.item__types-title {
 			display: inline-block;
@@ -97,6 +98,7 @@ textarea.qst__inp {
 				color: @textColor;
 				text-decoration: none;
 
+				&:focus,
 				&:hover,
 				&:active {
 					color: @textColor;
@@ -157,6 +159,33 @@ textarea.qst__inp {
 					left: 0;
 					z-index: 3;
 				}
+
+	.itemedit__link {
+		margin: 0;
+		.transition(all .2s);
+		overflow: hidden;
+		height: 0;
+		opacity: 0;
+
+			.qst__inp-cont {
+				padding: 10px 14px;
+			}
+	}
+
+	.state-link {
+		.itemedit__link {
+			height: 34px;
+			opacity: 1;
+		}
+	}
+
+
+	.state-file {
+		.itemedit__file {
+			height: 100px;
+			opacity: 1;
+		}
+	}
 
 
 .itemedit__share-p {
