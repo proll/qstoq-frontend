@@ -322,7 +322,7 @@ BODY {
 }
 #wrapper {
   margin: 0 auto;
-  width: 1040px;
+  width: 1000px;
   background: #8c8c8c;
   padding: 0;
   min-height: 100%;
@@ -444,7 +444,7 @@ h1 {
   padding: 14px;
   height: 14px;
 }
-.qst__inp-cont:first-child {
+.qst__inp-cont {
   border-bottom: 1px solid #cecdcc;
 }
 .qst__inp-cont:last-child {

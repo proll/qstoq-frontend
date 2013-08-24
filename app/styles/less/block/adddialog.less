@@ -96,53 +96,7 @@
 			}
 
 
-		.adddialog__types-title {
-			display: inline-block;
-			margin-right: 11px;
-		}
-
-		.adddialog__types {
-			.user-select(none);
-			display: inline-block;
-			font-size: 0;
-			li {
-				display: inline-block;
-				border: 1px solid @grayLighter;
-				font-size: 13px;
-				line-height: 1;
-				margin-left: -1px;
-				
-				&.active {
-					.box-shadow(inset 0 1px 3px rgba(0,0,0,.26));
-					#gradient .vertical(rgba(0,0,0,.1), rgba(255,255,255,.1));
-				}
-
-				&:first-child {
-					.border-radius(20px 0 0 20px);
-				}
-
-				&:last-child {
-					.border-radius(0 20px 20px 0);
-				}
-			}
-		}
-
-			.adddialog__types-item {
-				display: inline-block;
-				font-size: 13px;
-				line-height: 1;
-				padding: 7px 13px 8px;
-				color: @textColor;
-				text-decoration: none;
-
-				&:hover,
-				&:active {
-					color: @textColor;
-					text-decoration: none;
-				}
-			}
-
-	.adddialog__link {
+	.itemedit__link {
 		margin: 0;
 		.transition(all .2s);
 		overflow: hidden;
@@ -154,63 +108,9 @@
 			}
 	}
 
-	.adddialog__file {
-		height: 0;
-		opacity: 0;
-
-
-		.transition(all .2s);
-		overflow: hidden;
-		margin: 0;
-		border-style: dashed;
-		position: relative;
-		cursor: pointer;
-		
-		text-align: center;
-
-		.qst__inp-cont {
-			height: auto;
-			overflow: hidden;
-		}
-	}
-		.adddialog__inp-file-process {
-			cursor: pointer;
-			position: absolute;
-			width: 0;
-			height: 100px;
-			top: 0;
-			left: 0;
-			z-index: 1;	
-			background-color: @purple;
-			.transition(width 0.2s);
-		}
-
-		.adddialog__inp-file-title {
-			font-size: 13px;
-			color: @grayLight;
-			display: inline-block;
-			height: 100px - 2*14px;
-			margin-top: (100px - 2*14px)/2 - 14px/2;
-			position: relative;
-			z-index: 2;	
-			text-shadow: 0 0 2px @white;
-		}
-
-		.adddialog__inp-file {
-			cursor: pointer;
-			opacity: .001;
-			position: absolute;
-			width: 100%;
-			height: 100px;
-			top: 0;
-			left: 0;
-			z-index: 3;
-		}
-
-
 	.state-link,
 	.state-file {
-		.adddialog__link {
+		.itemedit__link {
 			margin-top: 17px;
 			height: 34px;
 			opacity: 1;
@@ -219,7 +119,7 @@
 
 
 	.state-file {
-		.adddialog__file {
+		.itemedit__file {
 			margin-top: 17px;
 			height: 100px;
 			opacity: 1;

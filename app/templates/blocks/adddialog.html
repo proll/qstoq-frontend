@@ -12,24 +12,24 @@
 						<input type="text" class="qst__inp" name="price" placeholder="{{_ 'Price, RUB' 'itemlist'}}">
 					</div>
 				</div>
-				<div class="adddialog__types-cont">
-					<span class="adddialog__types-title">{{_ 'After payment' 'itemlist'}}</span>
-					<ul class="adddialog__types">
-						<li{{#ifEq state 'link'}} class="active"{{/ifEq}}><a href="link" class="item-link adddialog__types-item">{{_ 'give a link' 'itemlist'}}</a></li>
-						<li{{#ifEq state 'file'}} class="active"{{/ifEq}}><a href="file" class="item-file adddialog__types-item">{{_ 'give a file' 'itemlist'}}</a></li>
-						<li{{#ifEq state 'nothing'}} class="active"{{/ifEq}}><a href="nothing" class="item-nothing adddialog__types-item">{{_ 'give nothing' 'itemlist'}}</a></li>
+				<div class="item__types-cont">
+					<span class="item__types-title">{{_ 'After payment' 'itemlist'}}</span>
+					<ul class="item__types">
+						<li{{#ifEq state 'link'}} class="active"{{/ifEq}}><a href="link" class="item-link item__types-item">{{_ 'give a link' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'file'}} class="active"{{/ifEq}}><a href="file" class="item-file item__types-item">{{_ 'give a file' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'nothing'}} class="active"{{/ifEq}}><a href="nothing" class="item-nothing item__types-item">{{_ 'give nothing' 'itemlist'}}</a></li>
 					</ul>
 				</div>
-				<div class="adddialog__link qst__inp-group">
+				<div class="itemedit__link qst__inp-group">
 					<div class="qst__inp-cont">
 						<input type="text" class="qst__inp" name="link" placeholder="{{_ 'Link' 'itemlist'}}">
 					</div>
 				</div>
-				<div class="adddialog__file qst__inp-group">
+				<div class="itemedit__file qst__inp-group">
 					<div class="qst__inp-cont">
-						<div class="adddialog__inp-file-process"></div>
-						<span class="adddialog__inp-file-title">{{_ 'Drop or choose a file' 'itemlist'}}</span>
-						<input type="file" class="qst__inp adddialog__inp-file" name="file" id="file_uploader" placeholder="{{_ 'Link' 'itemlist'}}">
+						<div class="itemedit__inp-file-process"></div>
+						<span class="itemedit__inp-file-title">{{_ 'Drop or choose a file' 'itemlist'}}</span>
+						<input type="file" class="qst__inp itemedit__inp-file" name="file" id="file_uploader" placeholder="{{_ 'Link' 'itemlist'}}">
 					</div>
 				</div>
 				<input type="submit" class="inv">

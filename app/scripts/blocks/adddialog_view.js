@@ -5,7 +5,7 @@ qst.AddDialogView = Backbone.View.extend({
 
 	events: {
 		"click a.adddialog__add": "showDialog",
-		'click a.adddialog__types-item': 'clickState',
+		'click a.item__types-item': 'clickState',
 		'click .adddialog__header': 'hideDialog',
 		'click .adddialog__submit-a': 'submitForm',
 		'change #file_uploader': 'upload',
@@ -28,15 +28,15 @@ qst.AddDialogView = Backbone.View.extend({
 		var template = this.template(this.model.toJSON());
 
 		this.$el.append(template);
-		this.$state_items = this.$el.find('.adddialog__types-item');
+		this.$state_items = this.$el.find('.item__types-item');
 		this.$form = this.$el.find('form');
 
 		this.$input_name = this.$form.find('input[name=name]');
 		this.$input_price = this.$form.find('input[name=price]');
 		this.$input_link = this.$form.find('input[name=link]');
 		this.$input_file = this.$form.find('input[name=file]');
-		this.$input_file_title = this.$form.find('.adddialog__inp-file-title');
-		this.$input_file_process = this.$form.find('.adddialog__inp-file-process');
+		this.$input_file_title = this.$form.find('.itemedit__inp-file-title');
+		this.$input_file_process = this.$form.find('.itemedit__inp-file-process');
 		this.$error = this.$el.find('.adddialog__error');
 
 		this.delegateEvents();

@@ -3,6 +3,7 @@ qst.ItemEdit = Backbone.Model.extend({
 	url: '/v1/links/',
 	
 	defaults: {
+		state: '',// link / nothing / file
 		// "id": XXX,
 		// "name": "Pencil Icon PSD",
 		// "description": "I made this for fun."
@@ -45,6 +46,16 @@ qst.ItemEdit = Backbone.Model.extend({
 	success: function (model, response, options) {
 		response = _.toJSON(response);
 		this.set(response.result);
+
+		var link = this.get('url');
+		if(_.isEmpty(link)) {
+			this.set('state', 'nothing');
+		} else if (qst.isFile(link)) {
+			this.set('state', 'file');
+		} else {
+			this.set('state', 'link');
+		}
+
 		if(response.success) {
 			this.trigger('load:success');
 		} else {

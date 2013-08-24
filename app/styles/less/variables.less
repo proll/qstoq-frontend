@@ -55,7 +55,7 @@
 // -------------------------
 @gridColumnWidth:         40px;
 @gridGutterWidth:         40px;
-@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * @gridColumns);
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // tablet
 @gridColumnsTablet: 9;

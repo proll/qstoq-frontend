@@ -112,5 +112,5 @@ qst.l10n.itemlist = {
 	'Drop or choose a file': {
 		en: 'Drop or choose a file',
 		ru: 'Перетащите сюда файл или вы можете его выбрать'
-	}
+	},
 }

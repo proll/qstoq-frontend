@@ -111,6 +111,16 @@ window.qst = _.extend(window.qst, {
 		$("html, body").animate({ 
 			scrollTop: s_t || 0 
 		}, time || 300);
+	},
+
+	// TODO state detection has to be more clear
+	isLink: function(txt) {
+		return !qst.isFile(txt);
+	},
+
+	isFile: function(txt) {
+		txt = txt || '';
+		return txt.indexOf('qstoq.ru')!==-1;
 	}
 });
 
