@@ -441,6 +441,7 @@ h1 {
 }
 .qst__inp-cont {
   font-size: 0;
+  line-height: 0;
   padding: 14px;
   height: 14px;
 }
@@ -449,6 +450,11 @@ h1 {
 }
 .qst__inp-cont:last-child {
   margin-bottom: -1px;
+}
+.qst__inp-cont-in {
+  font-size: 0;
+  line-height: 0;
+  margin-left: 146px;
 }
 .qst__inp {
   border: none;
@@ -485,6 +491,9 @@ h1 {
 }
 .qst__inp::-webkit-input-placeholder {
   color: #969696;
+}
+.error-inp {
+  background-color: #e4d5d3;
 }
 html,
 body {

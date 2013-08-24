@@ -22,8 +22,9 @@ qst.NavbarView = Backbone.View.extend({
 	render: function(){
 		var template = this.template( this.model.toJSON() );
 		this.$el.html(template);
-		this.$user_name = 	this.$el.find(".nav__profile-name");
-		this.$user_avatar = this.$el.find(".i-no-avatar");
+		// this.$user_name = 	this.$el.find(".nav__profile-name");
+		// this.$user_avatar = this.$el.find(".i-no-avatar");
+		this.$balance = this.$el.find(".nav__balance-title");
 	},
 
 	show: function () {
@@ -32,13 +33,18 @@ qst.NavbarView = Backbone.View.extend({
 
 	toggleAuth: function(user_obj) {
 		this.show();
-		if(this.$user_name && this.$user_avatar) {
-			this.$user_name.text(user_obj.name);
-			if(!!user_obj.photo) {
-				this.$user_avatar.html('<img src="'+user_obj.user.photo.i106x106+'" width="30" height="30"/>')
-				
+		if(this.$balance) {
+			if(user_obj.balance != 0) {
+				this.$balance.html(user_obj.balance + '&nbsp;'+ qst.localize(user_obj.currency, 'currency'));
 			}
 		}
+		// if(this.$user_name && this.$user_avatar) {
+		// 	this.$user_name.text(user_obj.name);
+		// 	if(!!user_obj.photo) {
+		// 		this.$user_avatar.html('<img src="'+user_obj.user.photo.i106x106+'" width="30" height="30"/>')
+				
+		// 	}
+		// }
 		this.$el.toggleClass("logged", true);
 	},
 

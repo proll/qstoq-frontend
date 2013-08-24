@@ -341,7 +341,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"navbar-inner  navbar_unauthed\">\n	<div class=\"container\">\n		<a class=\"brand\" href=\"/\"><div class=\"navbar__logo\"><img src=\"/images_static/empty.png\" width=\"82\" height=\"30\"></div></a>\n		<div class=\"nav-collapse collapse\">\n			<ul class=\"nav pull-right\">\n				<li class=\"navbar__item-landing\"><a href=\"/\">";
+  buffer += "<div class=\"navbar-inner  navbar_unauthed\">\n	<div class=\"container\">\n		<a class=\"brand\" href=\"/\"><div class=\"navbar__logo\"><img src=\"/images_static/empty.png\" alt=\"QSTOQ\"></div></a>\n		<div class=\"nav-collapse collapse\">\n			<ul class=\"nav pull-right\">\n				<li class=\"navbar__item-landing\"><a href=\"/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "About", "navbar", options) : helperMissing.call(depth0, "_", "About", "navbar", options)))
     + "</a></li>\n				<li class=\"navbar__item-explore\"><a href=\"/explore\">";
@@ -353,12 +353,15 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li>\n				<li class=\"nav__login\"><a href=\"/login\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log In", "navbar", options) : helperMissing.call(depth0, "_", "Log In", "navbar", options)))
-    + "</a></li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"navbar-inner navbar_authed\">\n	<div class=\"container\">\n		<a class=\"brand\" href=\"/\"><div class=\"navbar__logo\"><img src=\"/images_static/empty.png\" width=\"82\" height=\"30\" alt=\"We heart\"></div></a>\n		<div class=\"nav-collapse collapse\">\n			<ul class=\"nav pull-right\">\n				<li class=\"nav__my-items\"><a href=\"/items\"><i class=\"qi qi-my-items\"></i><span class=\"nav__my-items-title\">";
+    + "</a></li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"navbar-inner navbar_authed\">\n	<div class=\"container\">\n		<a class=\"brand\" href=\"/\"><div class=\"navbar__logo\"><img src=\"/images_static/empty.png\" alt=\"QSTOQ\"></div></a>\n		<div class=\"nav-collapse collapse\">\n			<ul class=\"nav pull-right\">\n				<li class=\"nav__my-items\"><a href=\"/items\"><i class=\"qi qi-my-items\"></i><span class=\"nav__my-items-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "My items", "navbar", options) : helperMissing.call(depth0, "_", "My items", "navbar", options)))
     + "</span></a></li>\n				<li class=\"nav__profile\"><a href=\"/profile\"><i class=\"qi qi-profile\"></i><span class=\"nav__profile-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Profile", "navbar", options) : helperMissing.call(depth0, "_", "Profile", "navbar", options)))
+    + "</span></a></li>\n				<li class=\"nav__balance\"><a href=\"/profile\"><i class=\"qi qi-balance\"></i><span class=\"nav__balance-title\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Nothing yet", "navbar", options) : helperMissing.call(depth0, "_", "Nothing yet", "navbar", options)))
     + "</span></a></li>\n				<li class=\"nav__logout\"><a href=\"/logout\"><i class=\"qi qi-logout\"></i><span class=\"nav__logout-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log out", "navbar", options) : helperMissing.call(depth0, "_", "Log out", "navbar", options)))

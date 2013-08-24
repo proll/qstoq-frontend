@@ -9,9 +9,9 @@ qst.AddDialogView = Backbone.View.extend({
 		'click .adddialog__header': 'hideDialog',
 		'click .adddialog__submit-a': 'submitForm',
 		'change #file_uploader': 'upload',
-		'keyoress': 'hideErrors',
-		'click': 'hideErrors',
-		'submit form': 'submit'
+		'keyoress': 	'hideErrors',
+		'click': 		'hideErrors',
+		'submit form': 	'submit'
 	},
 
 	initialize: function(options){
@@ -30,7 +30,6 @@ qst.AddDialogView = Backbone.View.extend({
 		this.$el.append(template);
 		this.$state_items = this.$el.find('.item__types-item');
 		this.$form = this.$el.find('form');
-
 		this.$input_name = this.$form.find('input[name=name]');
 		this.$input_price = this.$form.find('input[name=price]');
 		this.$input_link = this.$form.find('input[name=link]');
