@@ -28,5 +28,30 @@ qst.l10n.itemedit = {
 	'When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money': {
 		en: 'When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money',
 		ru: 'Когда все будет готово расскажите о своем продукте на сайте, в блоге или социальных сетях, запостите ссылку, перейдя по которой ваши покупатели смогут отправить вам денег:'
-	}
+	},
+	'Save': {
+		en: 'Save',
+		ru: 'Сохранить изменения',
+	},
+
+	'Remove link': {
+		en: 'Remove link',
+		ru: 'Удалить',
+	},
+	'Link for purchasing:': {
+		en: 'Link for purchasing:',
+		ru: 'Ссылка для оплаты:'
+	},
+	'Share on Vkontakte': {
+		en: 'Share on Vkontakte',
+		ru: 'Рассказать Вконтакте',
+	},
+	'Share on Facebook': {
+		en: 'Share on Facebook',
+		ru: 'Рассказать на Фейсбук',
+	},
+	'Share on Twitter': {
+		en: 'Share on Twitter',
+		ru: 'Рассказать в Твиттер',
+	},
 }

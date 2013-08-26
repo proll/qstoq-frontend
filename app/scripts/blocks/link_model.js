@@ -48,78 +48,19 @@ qst.Link = Backbone.Model.extend({
 
 
 	deleteItem: function (options) {
-		var opts = {};
-		console.lo
-		opts.data = {
-		}
-		if(!!options) {
-			if(!!options.url) {
-				opts.url = options.url;
-			}
-			if(!!options.method) {
-				opts.method = options.method;
-			}
-			if(!!options.content) {
-				opts.content = options.content;
-			}
-			if(!!options.ok) {
-				opts.ok_title = options.ok;
-			}
-			if(!!options.close) {
-				opts.close_title = options.close;
-			}
-			if(!!options.success) {
-				opts.success_title = options.success;
-			}
-			if(!!options.error) {
-				opts.error_title = options.error;
-			}
-			if(!!options.event) {
-				opts.event = options.event;
-			}
-			if(!!options.eventdata) {
-				opts.eventdata = options.eventdata;
-			}
+		var opts = {
+			url: 			'/v1/links/' + this.get('id'),
+			method: 		'delete',
+			content: 		qst.localize('Do you want to delete this item?','itemlist'),
+			ok_title: 		qst.localize('Ok','itemlist'),
+			close_title: 	qst.localize('Cancel','itemlist'),
+			success_title: 	qst.localize('Item deleted.','itemlist'),
+			error_title: 	qst.localize('Something went wrong...','itemlist'),
+			event: 			'link:delete',
+			eventdata: 		{id: this.get('id')},
 		}
 		var confirm = new qst.Confirm(opts);
 	},
-
-
-
-	// addVote: function() {
-	// 	if(qst.is_needauth()) {
-	// 		return false;
-	// 	} else {
-	// 		this.get("photo").like++;
-	// 		this.get("photo").wasvote = 1;
-	// 		this.vote(1);
-	// 		return this;
-	// 	}
-
-	// },
-
-	// removeVote: function() {
-	// 	this.get("photo").like--;
-	// 	this.get("photo").wasvote = 0;
-	// 	this.vote(0);
-	// },
-
-
-	// // TODO: Have to do secure call of ajax
-	// // without repeat requests
-	// vote: function(is_like) {
-	// 	$.ajax({
-	// 		url: 	qst.authUrl('/api/photo/vote/'),
-	// 		type: 	'POST',
-	// 		data : {  
-	// 			photo: 	this.get("photo").id,
-	// 			like: 	is_like
-	// 		},
-	// 		timeout: 30000
-	// 	});
-
-	// 	this.trigger("update:vote", {vote_count: this.get("photo").like, my: is_like});
-	// },
 
 	remove: function () {
 		this.stopListening();

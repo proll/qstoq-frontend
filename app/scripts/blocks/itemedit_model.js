@@ -4,6 +4,7 @@ qst.ItemEdit = Backbone.Model.extend({
 	
 	defaults: {
 		state: '',// link / nothing / file
+		filename: '',
 		// "id": XXX,
 		// "name": "Pencil Icon PSD",
 		// "description": "I made this for fun."
@@ -34,14 +35,28 @@ qst.ItemEdit = Backbone.Model.extend({
 		options.url = this.url + this.get('id');
 		options.type = 'get';
 		options.data = options.data || {};
-
 		options.success  	= _.bind(this.success, this);
 		options.error  		= _.bind(this.error, this);
 
 		this.trigger('load:start');
 
 		return Backbone.Model.prototype.fetch.call(this, options);
-	},	
+	},
+
+	deleteItem: function() {
+		var opts = {
+			url: 			'/v1/links/' + this.get('id'),
+			method: 		'delete',
+			content: 		qst.localize('Do you want to delete this item?','itemlist'),
+			ok_title: 		qst.localize('Ok','itemlist'),
+			close_title: 	qst.localize('Cancel','itemlist'),
+			success_title: 	qst.localize('Item deleted.','itemlist'),
+			error_title: 	qst.localize('Something went wrong...','itemlist'),
+			event: 			'link:delete',
+			eventdata: 		{id: this.get('id')},
+		}
+		var confirm = new qst.Confirm(opts);
+	},
 
 	success: function (model, response, options) {
 		response = _.toJSON(response);
@@ -52,9 +67,17 @@ qst.ItemEdit = Backbone.Model.extend({
 			this.set('state', 'nothing');
 		} else if (qst.isFile(link)) {
 			this.set('state', 'file');
+
+			// TODO надо переделать на хранимое имя файла
+			var file = this.get('url'),
+				file_parts = file.split('/');
+			file = file_parts[file_parts.length - 1];
+			this.set('filename', file);
+
 		} else {
 			this.set('state', 'link');
 		}
+		this.set('url_short_path', this.get('url_short').split('http://')[1]);
 
 		if(response.success) {
 			this.trigger('load:success');
@@ -65,6 +88,46 @@ qst.ItemEdit = Backbone.Model.extend({
 
 	error: function (model, xhr, options) {
 		this.trigger('load:error');
+	},
+
+	upload: function(file) {
+		if(file) {
+			this.view.updateFileName(file.name);
+
+			var that = this,
+				data = new FormData();
+				data.append('input_file', file);
+
+			// the $.ajax() method and the like doesn’t allow for it and 
+			// I really want to display an upload progress bar, dammit!
+			// course of this we have to use XHR
+			var xhr = new XMLHttpRequest();
+
+			xhr.upload.addEventListener('progress',function(ev){
+				that.view.updateFileProcess(ev.loaded/ev.total);
+			}, false);
+
+			xhr.onreadystatechange = function(ev){
+				if (xhr.readyState == 4) {
+					if(xhr.status == 200) {
+						var data = this.response;
+						if (typeof(data) == 'string') {
+						  	data = $.parseJSON(data);
+						}
+						if(!!data.success) {
+							that.view.updateFileProcess(1);
+							that.set('url', data.result.uri)
+						} else {
+							that.trigger('add:error');
+						}
+					} else {
+						console.log(file.name + ":" + "ERROR: " + xhr.readyState + ":" + xhr.status);
+					}
+				}
+			};
+			xhr.open('POST', '/v1/medias/?token='+qst.user.get("token"), true);
+			xhr.send(data);
+		}
 	},
 
 

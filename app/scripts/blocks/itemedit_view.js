@@ -4,9 +4,15 @@ qst.ItemEditView = Backbone.View.extend({
 
 	events: {
 		'click a.item__types-item': 'clickState',
+		'click .itemedit__submit-a': 'submitForm',
 		'change #file_uploader': 'upload',
+		'keypress': 'hideErrors',
 		'click': 'hideErrors',
-		'submit form': 'submit'
+		'click .itemedit__delete-a': 'deleteItem',
+		'submit form': 'submit',
+
+		'click .itemedit__share-inp-cont': 'clickShortLink',
+		'click .itemedit__share-btn': 'clickShare'
 	},
 
 
@@ -15,6 +21,7 @@ qst.ItemEditView = Backbone.View.extend({
 		this.model.on("load:success", this.render, this);
 		this.model.on('change:sleeped', this.sleep, this);
 		this.model.on('change:state', this.changeState, this);
+		this.model.on('change:url', this.changeLink, this);
 	},
 	render: function(){
 		var template = this.template( this.model.toJSON() );
@@ -22,10 +29,10 @@ qst.ItemEditView = Backbone.View.extend({
 
 		this.$state_items = this.$el.find('.item__types-item');
 		this.$form = this.$el.find('form');
-		this.$input_name = this.$form.find('input[name=name]');
+		this.$input_name =  this.$form.find('input[name=name]');
 		this.$input_price = this.$form.find('input[name=price]');
-		this.$input_link = this.$form.find('input[name=link]');
-		this.$input_file = this.$form.find('input[name=file]');
+		this.$input_link =  this.$form.find('input[name=link]');
+		this.$input_file =  this.$form.find('input[name=file]');
 		this.$input_file_title = this.$form.find('.itemedit__inp-file-title');
 		this.$input_file_process = this.$form.find('.itemedit__inp-file-process');
 		this.$error = this.$el.find('.itemedit__error');
@@ -64,7 +71,6 @@ qst.ItemEditView = Backbone.View.extend({
 
 
 	submit: function(e) {
-		// this.hideDialog();
 		var name = this.$input_name.val(),
 			price = this.$input_price.val(),
 			link = this.$input_link.val(),
@@ -83,11 +89,6 @@ qst.ItemEditView = Backbone.View.extend({
 				return false;
 			} else if(!_.isUrl(link)) {
 				this.showError(qst.localize('set a valid link, please', 'itemlist'), 'link')
-				return false;
-			}
-		} else if (state === 'file') {
-			if(_.isEmpty(file)) {
-				this.showError(qst.localize('load some file, please', 'itemlist'), 'file')
 				return false;
 			}
 		}
@@ -110,19 +111,19 @@ qst.ItemEditView = Backbone.View.extend({
 		this.$el.toggleClass('error', true);
 		switch(input_name) {
 			case 'name': 
-				this.$input_name.parent().toggleClass('error-inp', true);
+				this.$input_name.parents('.qst__inp-cont').toggleClass('error-inp', true);
 				this.$input_name.focus();
 				break;
 			case 'price': 
-				this.$input_price.parent().toggleClass('error-inp', true);
+				this.$input_price.parents('.qst__inp-cont').toggleClass('error-inp', true);
 				this.$input_price.focus();
 				break;
 			case 'link': 
-				this.$input_link.parent().toggleClass('error-inp', true);
+				this.$input_link.parents('.qst__inp-cont').toggleClass('error-inp', true);
 				this.$input_link.focus();
 				break;
 			case 'file': 
-				this.$input_file.parent().toggleClass('error-inp', true);
+				this.$input_file.parents('.qst__inp-cont').toggleClass('error-inp', true);
 				break;
 		}
 	},
@@ -137,12 +138,25 @@ qst.ItemEditView = Backbone.View.extend({
 		return false;
 	},
 
-	sleep: function(model, value, options) {
-		if(value) {
-			this.undelegateEvents();
-		} else {
-			this.delegateEvents();
-		}
+
+	clickShare: function(e) {
+		var social = $(e.target).attr('href'),
+			url = "http://api.addthis.com/oexchange/0.8/forward/" + social + "/offer?"
+			+"url=" + this.model.get('url_short')
+			+"&title=" + encodeURIComponent(this.model.get('name'))
+			+"&description=" + encodeURIComponent(this.model.get('description'))
+			+"&pubid=prolll"
+			+"&text=" + encodeURIComponent(this.model.get('description'))
+			+"&via=qstoq";
+		
+		_.openWindow3(url, social, 480, 360);
+
+		return false;
+	},
+
+
+	clickShortLink: function(e) {
+		$(e.currentTarget).find('input').select();
 	},
 
 	upload: function(e) {
@@ -150,6 +164,11 @@ qst.ItemEditView = Backbone.View.extend({
 		$.each(e.target.files, function(i, file){
 			that.model.upload(file);
 		});
+	},
+
+	deleteItem: function(e) {
+		this.model.deleteItem();
+		return false;
 	},
 
 	updateFileName: function(txt) {
@@ -161,7 +180,25 @@ qst.ItemEditView = Backbone.View.extend({
 	},
 
 	changeLink: function(model, value) {
-		this.$input_link.val(value);
-	}
+		if(this.$input_link) {
+			this.$input_link.val(value);
+		}
+	},
+
+	clear: function() {
+		this.hideErrors();
+		this.$input_name.val('');
+		this.$input_link.val('');
+		this.$input_file_process.width(0);
+	},
+
+	sleep: function(model, value, options) {
+		if(value) {
+			this.undelegateEvents();
+			this.clear();
+		} else {
+			this.delegateEvents();
+		}
+	},
 });
 

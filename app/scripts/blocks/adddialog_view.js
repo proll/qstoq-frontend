@@ -9,7 +9,7 @@ qst.AddDialogView = Backbone.View.extend({
 		'click .adddialog__header': 'hideDialog',
 		'click .adddialog__submit-a': 'submitForm',
 		'change #file_uploader': 'upload',
-		'keyoress': 	'hideErrors',
+		'keypress': 	'hideErrors',
 		'click': 		'hideErrors',
 		'submit form': 	'submit'
 	},
@@ -30,10 +30,10 @@ qst.AddDialogView = Backbone.View.extend({
 		this.$el.append(template);
 		this.$state_items = this.$el.find('.item__types-item');
 		this.$form = this.$el.find('form');
-		this.$input_name = this.$form.find('input[name=name]');
+		this.$input_name =  this.$form.find('input[name=name]');
 		this.$input_price = this.$form.find('input[name=price]');
-		this.$input_link = this.$form.find('input[name=link]');
-		this.$input_file = this.$form.find('input[name=file]');
+		this.$input_link =  this.$form.find('input[name=link]');
+		this.$input_file =  this.$form.find('input[name=file]');
 		this.$input_file_title = this.$form.find('.itemedit__inp-file-title');
 		this.$input_file_process = this.$form.find('.itemedit__inp-file-process');
 		this.$error = this.$el.find('.adddialog__error');
@@ -171,7 +171,7 @@ qst.AddDialogView = Backbone.View.extend({
 
 	sleep: function(model, value, options) {
 		this.hideDialog();
-		console.log(model, value, options)
+		// console.log(model, value, options)
 		if(value) {
 			this.undelegateEvents();
 			$('html').off('click.adddialog');

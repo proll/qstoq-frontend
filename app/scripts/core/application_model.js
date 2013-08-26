@@ -214,6 +214,10 @@ qst.App = Backbone.Model.extend({
 			qst.navigate('/logout', {trigger: true});
 		});
 
+		qst.on('link:delete', function(){
+			qst.navigate('/items', {trigger: true});
+		});
+
 
 
 		// this.router.on('reset', function(prev, destination){
