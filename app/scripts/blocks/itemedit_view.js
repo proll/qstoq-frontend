@@ -22,6 +22,8 @@ qst.ItemEditView = Backbone.View.extend({
 		this.model.on('change:sleeped', this.sleep, this);
 		this.model.on('change:state', this.changeState, this);
 		this.model.on('change:url', this.changeLink, this);
+
+		this.model.on('save:success', this.saveSuccess, this);
 	},
 	render: function(){
 		var template = this.template( this.model.toJSON() );
@@ -29,8 +31,10 @@ qst.ItemEditView = Backbone.View.extend({
 
 		this.$state_items = this.$el.find('.item__types-item');
 		this.$form = this.$el.find('form');
+		this.$input_active =  this.$form.find('input[name=active]');
 		this.$input_name =  this.$form.find('input[name=name]');
 		this.$input_price = this.$form.find('input[name=price]');
+		this.$input_description =  this.$form.find('textarea[name=description]');
 		this.$input_link =  this.$form.find('input[name=link]');
 		this.$input_file =  this.$form.find('input[name=file]');
 		this.$input_file_title = this.$form.find('.itemedit__inp-file-title');
@@ -71,10 +75,12 @@ qst.ItemEditView = Backbone.View.extend({
 
 
 	submit: function(e) {
-		var name = this.$input_name.val(),
+		var active = this.$input_active.is(':checked'),
+			name = $.trim(this.$input_name.val()),
 			price = this.$input_price.val(),
 			link = this.$input_link.val(),
 			file = this.$input_file.val(),
+			description = $.trim(this.$input_description.val()),
 			state = this.model.get('state');
 
 		if(_.isEmpty(name)) {
@@ -95,13 +101,15 @@ qst.ItemEditView = Backbone.View.extend({
 
 			var price_plus = (price.indexOf('+')!==-1);
 			this.model.set({
-				name: name,
-				url: link,
-				price: parseInt(price),
-				price_pwyw: price_plus + 0
+				active: 		active + 0,
+				name: 			name,
+				url: 			link,
+				description: 	description,
+				price: 			parseInt(price),
+				price_pwyw: 	price_plus + 0
 			});
 
-			this.model.fetch();
+			this.model.save();
 		return false;
 	},
 
@@ -183,6 +191,10 @@ qst.ItemEditView = Backbone.View.extend({
 		if(this.$input_link) {
 			this.$input_link.val(value);
 		}
+	},
+
+	saveSuccess: function() {
+		console.log('save:success')
 	},
 
 	clear: function() {

@@ -194,12 +194,12 @@ function program9(depth0,data) {
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Price, RUB", "itemlist", options) : helperMissing.call(depth0, "_", "Price, RUB", "itemlist", options)))
     + "</span>\n							<div class=\"qst__inp-cont-in\">\n								<input type=\"text\" class=\"qst__inp\" name=\"price\" value=\"";
-  stack2 = helpers['if'].call(depth0, depth0.price_pwyw, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
   if (stack2 = helpers.price) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.price; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "\">\n							</div>\n						</label>\n					</div>\n					<div class=\"qst__inp-cont qst__inp-cont-ta\">\n						<textarea name=\"description\" class=\"itemedit__description qst__inp\" placeholder=\"";
+  buffer += escapeExpression(stack2);
+  stack2 = helpers['if'].call(depth0, depth0.price_pwyw, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\">\n							</div>\n						</label>\n					</div>\n					<div class=\"qst__inp-cont qst__inp-cont-ta\">\n						<textarea name=\"description\" class=\"itemedit__description qst__inp\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Descrition", "itemedit", options) : helperMissing.call(depth0, "_", "Descrition", "itemedit", options)))
     + "\">";
@@ -330,13 +330,13 @@ function program5(depth0,data) {
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
     + "</a></td>\n	<td class=\"link__price\"><span class=\"link__price-sp\">";
+  if (stack1 = helpers.price) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.price; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1);
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.price_pwyw, "1", options) : helperMissing.call(depth0, "ifEq", depth0.price_pwyw, "1", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  if (stack2 = helpers.price) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.price; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "</span></td>\n	<td class=\"link__view-count\"><span class=\"link__view-count-sp\">";
+  buffer += "</span></td>\n	<td class=\"link__view-count\"><span class=\"link__view-count-sp\">";
   if (stack2 = helpers.counter_view) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.counter_view; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)

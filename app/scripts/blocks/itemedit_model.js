@@ -30,19 +30,6 @@ qst.ItemEdit = Backbone.Model.extend({
 
 	},
 
-	fetch: function (options) {
-		options = options || {};
-		options.url = this.url + this.get('id');
-		options.type = 'get';
-		options.data = options.data || {};
-		options.success  	= _.bind(this.success, this);
-		options.error  		= _.bind(this.error, this);
-
-		this.trigger('load:start');
-
-		return Backbone.Model.prototype.fetch.call(this, options);
-	},
-
 	deleteItem: function() {
 		var opts = {
 			url: 			'/v1/links/' + this.get('id'),
@@ -56,6 +43,19 @@ qst.ItemEdit = Backbone.Model.extend({
 			eventdata: 		{id: this.get('id')},
 		}
 		var confirm = new qst.Confirm(opts);
+	},
+
+	fetch: function (options) {
+		options = options || {};
+		options.url = this.url + this.get('id');
+		options.type = 'get';
+		options.data = options.data || {};
+		options.success  	= _.bind(this.success, this);
+		options.error  		= _.bind(this.error, this);
+
+		this.trigger('load:start');
+
+		return Backbone.Model.prototype.fetch.call(this, options);
 	},
 
 	success: function (model, response, options) {
@@ -128,6 +128,45 @@ qst.ItemEdit = Backbone.Model.extend({
 			xhr.open('POST', '/v1/medias/?token='+qst.user.get("token"), true);
 			xhr.send(data);
 		}
+	},
+
+	save: function (options) {
+		// поддержка формата цен на серверной стороне
+		var data = this.toJSON();
+		if(data.price_pwyw) {
+			data.price+= '+';
+		}
+
+		options = options || {};
+		options.url = this.url + this.get('id');
+		options.type = 'post';
+		options.data = options.data || {
+			active: 		data.active,
+			name: 			data.name,
+			description: 	data.description,
+			url: 			data.url,
+			price: 			data.price,
+		};
+		options.success  	= _.bind(this.saveSuccess, this);
+		options.error  		= _.bind(this.saveError, this);
+
+		this.trigger('save:start');
+
+		return Backbone.Model.prototype.fetch.call(this, options);
+	},
+
+	saveSuccess: function (model, response, options) {
+		response = _.toJSON(response);
+		
+		if(response.success) {
+			this.trigger('save:success');
+		} else {
+			this.trigger('save:error');
+		}
+	},
+
+	saveError: function (model, xhr, options) {
+		this.trigger('save:error');
 	},
 
 

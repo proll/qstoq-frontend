@@ -22,7 +22,7 @@
 						<label>
 							<span class="qst__lbl">{{_ 'Price, RUB' 'itemlist'}}</span>
 							<div class="qst__inp-cont-in">
-								<input type="text" class="qst__inp" name="price" value="{{#if price_pwyw}}+{{/if}}{{ price }}">
+								<input type="text" class="qst__inp" name="price" value="{{ price }}{{#if price_pwyw}}+{{/if}}">
 							</div>
 						</label>
 					</div>
