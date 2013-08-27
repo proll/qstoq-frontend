@@ -27,7 +27,6 @@ qst.ItemEdit = Backbone.Model.extend({
 		this.view = new qst.ItemEditView({
 			model:this
 		});
-
 	},
 
 	deleteItem: function() {
@@ -43,6 +42,34 @@ qst.ItemEdit = Backbone.Model.extend({
 			eventdata: 		{id: this.get('id')},
 		}
 		var confirm = new qst.Confirm(opts);
+	},
+
+	init: function() {
+		var link = this.get('url');
+		if(_.isEmpty(link)) {
+			this.set('state', 'nothing');
+		} else if (qst.isFile(link)) {
+			this.set('state', 'file');
+
+			// TODO надо переделать на хранимое имя файла
+			var file = this.get('url'),
+				file_parts = file.split('/');
+			file = file_parts[file_parts.length - 1];
+			this.set('filename', file);
+
+		} else {
+			this.set('state', 'link');
+		}
+		this.set('url_short_path', this.get('url_short').split('http://')[1]);
+
+	},
+
+	initMisc: function() {
+		this.preview = new qst.PreviewUpload({
+			link_id: this.get('id')
+		})
+
+		this.view.addPreviewUpload(this.preview);
 	},
 
 	fetch: function (options) {
@@ -62,25 +89,10 @@ qst.ItemEdit = Backbone.Model.extend({
 		response = _.toJSON(response);
 		this.set(response.result);
 
-		var link = this.get('url');
-		if(_.isEmpty(link)) {
-			this.set('state', 'nothing');
-		} else if (qst.isFile(link)) {
-			this.set('state', 'file');
-
-			// TODO надо переделать на хранимое имя файла
-			var file = this.get('url'),
-				file_parts = file.split('/');
-			file = file_parts[file_parts.length - 1];
-			this.set('filename', file);
-
-		} else {
-			this.set('state', 'link');
-		}
-		this.set('url_short_path', this.get('url_short').split('http://')[1]);
-
 		if(response.success) {
+			this.init();
 			this.trigger('load:success');
+			this.initMisc();
 		} else {
 			this.trigger('load:error');
 		}

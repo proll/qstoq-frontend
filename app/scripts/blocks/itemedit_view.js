@@ -197,6 +197,11 @@ qst.ItemEditView = Backbone.View.extend({
 		console.log('save:success')
 	},
 
+
+	addPreviewUpload: function(preview_model) {
+		this.$el.find('.item__preview-upload-cont').html(preview_model.view.$el);
+	},
+
 	clear: function() {
 		this.hideErrors();
 		this.$input_name.val('');

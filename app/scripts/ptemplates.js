@@ -206,7 +206,7 @@ function program9(depth0,data) {
   if (stack2 = helpers.description) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.description; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</textarea>\n					</div>\n				</div>\n				<div class=\"item__types-cont\">\n					<span class=\"item__types-title\">";
+    + "</textarea>\n					</div>\n				</div>\n				<div class=\"item__preview-upload-cont\">\n				</div>\n				<div class=\"item__types-cont\">\n					<span class=\"item__types-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "After payment", "itemlist", options) : helperMissing.call(depth0, "_", "After payment", "itemlist", options)))
     + "</span>\n					<ul class=\"item__types\">\n						<li";
@@ -396,6 +396,25 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log out", "navbar", options) : helperMissing.call(depth0, "_", "Log out", "navbar", options)))
     + "</span></a></li>\n			</ul>\n		</div>\n	</div>\n</div>";
+  return buffer;
+  });
+
+this["qst"]["Templates"]["ptemplates"]["blocks/preview-upload"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  buffer += "<div class=\"preview-upload__group qst__inp-group\">\n	<div class=\"qst__inp-cont\">\n		<div class=\"itemedit__inp-file-process\"></div>\n		<h2 class=\"preview-upload__add-h\" >";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add preview", "preview_upload", options) : helperMissing.call(depth0, "_", "Add preview", "preview_upload", options)))
+    + "</h2>\n		<span class=\"preview-upload__add-desc\" >";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "jpg, png or gif. The image will be resized to 310px x 180px", "preview_upload", options) : helperMissing.call(depth0, "_", "jpg, png or gif. The image will be resized to 310px x 180px", "preview_upload", options)))
+    + "</span>\n		<input type=\"file\" class=\"qst__inp itemedit__inp-file\" name=\"file_preview\" id=\"file_uploader_preview\" placeholder=\"";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
+    + "\">\n	</div>\n</div>";
   return buffer;
   });
 
