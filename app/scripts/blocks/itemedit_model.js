@@ -1,6 +1,7 @@
 qst.ItemEdit = Backbone.Model.extend({
 	
 	url: '/v1/links/',
+	preview: null,
 	
 	defaults: {
 		state: '',// link / nothing / file
@@ -188,6 +189,9 @@ qst.ItemEdit = Backbone.Model.extend({
 
 	sleep: function() {
 		this.set("sleeped", true);
+		if(this.preview) {
+			this.preview.sleep();
+		}
 	},
 
 });

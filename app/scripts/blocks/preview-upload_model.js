@@ -57,6 +57,7 @@ qst.PreviewUpload = Backbone.Model.extend({
 			var that = this,
 				data = new FormData();
 				data.append('input_file', file);
+				data.append('link_id', this.get('link_id'));
 
 			// the $.ajax() method and the like doesn’t allow for it and 
 			// I really want to display an upload progress bar, dammit!
