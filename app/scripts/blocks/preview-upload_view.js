@@ -4,7 +4,7 @@ qst.PreviewUploadView = Backbone.View.extend({
 
 	events: {
 		'change #file_uploader_preview': 'upload',
-		'click .preview-uload__delete-a': 'delete',
+		'click .preview-upload__delete': 'delete',
 	},
 
 
@@ -38,8 +38,6 @@ qst.PreviewUploadView = Backbone.View.extend({
 		if(!!uri) {
 			this.$img.data('orig', uri);
 			this.lazy_loader.load(this.$el);
-
-			this.updateFileProcess(0);
 			this.togglePreviewOn();
 		} else {
 			this.togglePreviewOff();
@@ -47,6 +45,9 @@ qst.PreviewUploadView = Backbone.View.extend({
 	},
 
 	togglePreviewOff: function() {
+		if(this.$img) {
+			this.$img.attr('src', '/images_static/empty.png');
+		}
 		this.$el.toggleClass('empty', true);
 	},
 
@@ -62,7 +63,8 @@ qst.PreviewUploadView = Backbone.View.extend({
 	},
 
 	delete: function(e) {
-		this.model.deleteItem();
+		this.togglePreviewOff();
+		this.model.delete();
 		return false;
 	},
 

@@ -1,8 +1,15 @@
 <div class="preview-upload__group qst__inp-group">
 	<div class="qst__inp-cont">
 		<div class="itemedit__inp-file-process"></div>
+		<div class="preview-upload__img-cont load-bg">
+			<img src="/images_static/empty.png" alt="" class="preview-upload__img lazy" data-width="310" data-height="180" data-bg="1"data-crop="1">
+		</div>
 		<h2 class="preview-upload__add-h" >{{_ 'Add preview' 'preview_upload'}}</h2>
+		<span class="preview-upload__add-another" >{{_ 'Add another' 'preview_upload'}}</span>
+		<a class="preview-upload__delete" href="delete">{{_ 'Remove preview' 'preview_upload'}}</a>
 		<span class="preview-upload__add-desc" >{{_ 'jpg, png or gif. The image will be resized to 310px x 180px' 'preview_upload'}}</span>
-		<input type="file" class="qst__inp itemedit__inp-file" name="file_preview" id="file_uploader_preview" placeholder="{{_ 'Link' 'itemlist'}}">
+		<input type="file" class="qst__inp preview-upload__inp-file itemedit__inp-file" name="file_preview" id="file_uploader_preview" placeholder="{{_ 'Link' 'itemlist'}}" accept="image/jpeg,image/png,image/gif">
+
+
 	</div>
 </div>

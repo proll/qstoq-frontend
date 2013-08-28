@@ -8,7 +8,7 @@
 		position: relative;
 		cursor: pointer;
 		
-		text-align: center;
+		text-align: left;
 
 		.qst__inp-cont {
 			height: auto;
@@ -16,11 +16,12 @@
 		}
 	}
 		&__add-h {
+			display: none;
+
 			font-size: 16px;
 			line-height: 2;
 			color: @textColor;
 			text-decoration: underline;
-			display: inline-block;
 			margin: 3px 0 7px;
 			padding: 0;
 			position: relative;
@@ -30,13 +31,89 @@
 
 		&__add-desc {
 			font-size: 12px;
-			line-height: 1;
+			line-height: 18px;
 			color: @gray;
-			display: inline-block;
-			margin: 0;
+			display: block;
 			padding: 0;
 			position: relative;
 			z-index: 2;
-			margin: 0 0 10px;
+			margin: 0 0 10px 425px;
 		}
+		
+		&__img-cont {
+			display: inline-block;
+			float: left;
+			width: 310px;
+			height: 180px;
+			vertical-align: top;
+			margin: 5px;
+		}
+
+			&__img {
+				.background-size(cover);
+				width: 310px;
+				height: 180px;
+			}
+
+		&__add-another {
+			display: block;
+			margin: 22px 0 11px 425px;
+			color: @textColor;
+			font-size: 13px;
+			line-height: 20px;
+			text-decoration: underline;
+			position: relative;
+		}
+
+		&__delete {
+			display: block;
+			margin: 0 0 22px 425px;
+			color: @textColor;
+			font-size: 13px;
+			line-height: 20px;
+			text-decoration: underline;
+			position: relative;
+			z-index: 5;
+
+			&:hover,
+			&:active,
+			&:focus { 
+				color: @textColor;
+				text-decoration: underline;
+			}
+		}
+
+		&__inp-file {
+			height: auto;
+			bottom: 0;
+		}
+}
+
+.empty {
+	.preview-upload {
+		&__group {
+			text-align: center;
+		}
+
+		&__add-h {
+			display: inline-block;
+		}
+
+		&__add-desc {
+			display: inline-block;
+			margin-left: 0;
+		}
+
+		&__img-cont {
+			display: none;
+		}
+
+		&__add-another {
+			display: none;
+		}
+
+		&__delete {
+			display: none;
+		}
+	}	
 }

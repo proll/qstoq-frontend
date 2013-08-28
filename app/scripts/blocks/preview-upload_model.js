@@ -23,7 +23,7 @@ qst.PreviewUpload = Backbone.Model.extend({
 	},
 
 	delete: function() {
-		options = options || {};
+		var options = {};
 		options.url = this.url + this.get('id');
 		options.type = 'delete';
 		options.data = options.data || {
