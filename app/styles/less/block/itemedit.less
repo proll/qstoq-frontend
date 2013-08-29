@@ -359,7 +359,61 @@ textarea.qst__inp {
 
 
 
+.showcase {
+	&__window {
+		width: 760px - 2px;
+		border: 1px solid @grayLight1;
+		background: @grayLighter11;
+		.box-shadow(0 4px 8px rgba(0,0,0,.1));
+		.border-radius(6px);
+		margin: 0 auto;
+	}
 
+		&__head {
+			&_lt {
+				width: 84px;
+				height: 41px;
+				background: url(/images/qb/wind-lt.png) no-repeat;
+				float: left;
+			}
+			&_ct {
+				height: 41px;
+				background: url(/images/qb/wind-ct.png) repeat-x;
+				margin: 0 29px 0 84px;
+			}
+			&_rt {
+				width: 29px;
+				height: 41px;
+				background: url(/images/qb/wind-rt.png) no-repeat;
+				float: right;
+			}
+
+			&-title {
+				color: @grayLighter;
+				font-size: 10px;
+				line-height: 11px;
+				display: inline-block;
+				margin: (41px - 11px)/2 0;
+			}
+		}
+
+		&__cont {
+			margin: 38px;
+			overflow: hidden;
+		}
+			&__share {
+				float: right;
+				list-style: none;
+
+				&-itm {
+					display: inline-block;
+					margin-left: 9px;
+					font-size: 11px;
+					line-height: 26px;
+					color: @grayDarker2;
+				}
+			}
+}	
 
 
 

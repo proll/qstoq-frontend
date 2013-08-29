@@ -12,7 +12,9 @@ qst.ItemEditView = Backbone.View.extend({
 		'submit form': 'submit',
 
 		'click .itemedit__share-inp-cont': 'clickShortLink',
-		'click .itemedit__share-btn': 'clickShare'
+		'click .itemedit__share-btn': 'clickShare',
+
+		'change input[name=name]': 'updateName',
 	},
 
 
@@ -200,6 +202,11 @@ qst.ItemEditView = Backbone.View.extend({
 
 	addPreviewUpload: function(preview_model) {
 		this.$el.find('.item__preview-upload-cont').html(preview_model.view.$el);
+	},
+
+	updateName: function(e) {
+		var txt = $(e.target).val();
+		this.$el.find('.showcase__head-title').html('Qstoq &ndash; ' + txt);
 	},
 
 	clear: function() {

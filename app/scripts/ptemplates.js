@@ -266,7 +266,14 @@ function program9(depth0,data) {
     + "</a>\n				</li>\n				<li>\n					<a href=\"twitter\" class=\"itemedit__share-btn\"><i class=\"qi qi-share-tw\"></i>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Twitter", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Twitter", "itemedit", options)))
-    + "</a>\n				</li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_showcase\"></div>\n<div class=\"itemedit__slide itemedit__slide_finish\"></div>\n<div class=\"itemedit__slide itemedit__slide_buyers\"></div>";
+    + "</a>\n				</li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_showcase\">\n	<div class=\"showcase__window\">\n		<div class=\"showcase__head\">\n			<div class=\"showcase__head_lt\"></div>\n			<div class=\"showcase__head_rt\"></div>\n			<div class=\"showcase__head_ct\">\n				<span class=\"showcase__head-title\">Qstoq &ndash; ";
+  if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</span>\n			</div>\n		</div>\n		<div class=\"showcase__cont\">\n			<ul class=\"showcase__share\">\n				<li class=\"showcase__share-itm\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
+    + "</li>\n				<li class=\"showcase__share-itm\"><i class=\"is is-shc-vk\"></i></li>\n				<li class=\"showcase__share-itm\"><i class=\"is is-shc-fb\"></i></li>\n				<li class=\"showcase__share-itm\"><i class=\"is is-shc-tw\"></i></li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_finish\"></div>\n<div class=\"itemedit__slide itemedit__slide_buyers\"></div>";
   return buffer;
   });
 
