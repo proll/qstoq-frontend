@@ -5,8 +5,8 @@ qst.l10n.preview_upload = {
 		en: 'Add preview',
 		ru: 'Добавить картинку'
 	},
-	'jpg, png or gif. The image will be resized to 310px x 180px': {
-		en: 'jpg, png or gif. The image will be resized to 310px x 180px',
+	'jpg, png or gif. The image will be resized to 320px x 180px': {
+		en: 'jpg, png or gif. The image will be resized to 320px x 180px',
 		ru: 'Формат jpg, png, gif. Изображение будет уменьшено до размера 310 x 180 пикселей'
 	},
 	'Add another': {

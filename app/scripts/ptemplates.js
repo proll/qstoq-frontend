@@ -270,10 +270,22 @@ function program9(depth0,data) {
   if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</span>\n			</div>\n		</div>\n		<div class=\"showcase__cont\">\n			<ul class=\"showcase__share\">\n				<li class=\"showcase__share-itm\">";
+    + "</span>\n			</div>\n		</div>\n		<div class=\"showcase__cont\">\n			<div class=\"showcase__cont-in\">\n				<ul class=\"showcase__share\">\n					<li class=\"showcase__share-itm\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
-    + "</li>\n				<li class=\"showcase__share-itm\"><i class=\"is is-shc-vk\"></i></li>\n				<li class=\"showcase__share-itm\"><i class=\"is is-shc-fb\"></i></li>\n				<li class=\"showcase__share-itm\"><i class=\"is is-shc-tw\"></i></li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_finish\"></div>\n<div class=\"itemedit__slide itemedit__slide_buyers\"></div>";
+    + "</li>\n					<li class=\"showcase__share-itm\"><i class=\"is is-shc-vk\"></i></li>\n					<li class=\"showcase__share-itm\"><i class=\"is is-shc-fb\"></i></li>\n					<li class=\"showcase__share-itm\"><i class=\"is is-shc-tw\"></i></li>\n				</ul>\n			</div>\n			<div class=\"showcase__form\">\n				<div class=\"showcase__form__col1\">\n					<h1 class=\"showcase__form-h\">";
+  if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</h1>\n					<p class=\"showcase__form-desc\">";
+  if (stack2 = helpers.description) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.description; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</p>\n				</div>\n				<div class=\"showcase__form__col2\">\n					<span class=\"showcase__form-price\">";
+  if (stack2 = helpers.price) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.price; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</span>\n				</div>\n			</div>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_finish\"></div>\n<div class=\"itemedit__slide itemedit__slide_buyers\"></div>";
   return buffer;
   });
 
@@ -412,7 +424,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"preview-upload__group qst__inp-group\">\n	<div class=\"qst__inp-cont\">\n		<div class=\"itemedit__inp-file-process\"></div>\n		<div class=\"preview-upload__img-cont load-bg\">\n			<img src=\"/images_static/empty.png\" alt=\"\" class=\"preview-upload__img lazy\" data-width=\"310\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n		</div>\n		<h2 class=\"preview-upload__add-h\" >";
+  buffer += "<div class=\"preview-upload__group qst__inp-group\">\n	<div class=\"qst__inp-cont\">\n		<div class=\"itemedit__inp-file-process\"></div>\n		<div class=\"preview-upload__img-cont load-bg\">\n			<img src=\"/images_static/empty.png\" alt=\"\" class=\"preview-upload__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n		</div>\n		<h2 class=\"preview-upload__add-h\" >";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add preview", "preview_upload", options) : helperMissing.call(depth0, "_", "Add preview", "preview_upload", options)))
     + "</h2>\n		<span class=\"preview-upload__add-another\" >";
@@ -423,11 +435,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Remove preview", "preview_upload", options) : helperMissing.call(depth0, "_", "Remove preview", "preview_upload", options)))
     + "</a>\n		<span class=\"preview-upload__add-desc\" >";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "jpg, png or gif. The image will be resized to 310px x 180px", "preview_upload", options) : helperMissing.call(depth0, "_", "jpg, png or gif. The image will be resized to 310px x 180px", "preview_upload", options)))
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "jpg, png or gif. The image will be resized to 320px x 180px", "preview_upload", options) : helperMissing.call(depth0, "_", "jpg, png or gif. The image will be resized to 320px x 180px", "preview_upload", options)))
     + "</span>\n		<input type=\"file\" class=\"qst__inp preview-upload__inp-file itemedit__inp-file\" name=\"file_preview\" id=\"file_uploader_preview\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
-    + "\" accept=\"image/jpeg,image/png,image/gif\">\n\n\n	</div>\n</div>";
+    + "\" accept=\"image/jpeg,image/png,image/gif\">\n	</div>\n</div>";
   return buffer;
   });
 

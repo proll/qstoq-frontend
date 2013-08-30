@@ -361,12 +361,13 @@ textarea.qst__inp {
 
 .showcase {
 	&__window {
-		width: 760px - 2px;
+		font-family: @sans0FontFamily;
+		width: 960px - 2px;
 		border: 1px solid @grayLight1;
 		background: @grayLighter11;
 		.box-shadow(0 4px 8px rgba(0,0,0,.1));
 		.border-radius(6px);
-		margin: 0 auto;
+		margin: 0 auto 30px;
 	}
 
 		&__head {
@@ -398,12 +399,18 @@ textarea.qst__inp {
 		}
 
 		&__cont {
-			margin: 38px;
+			margin: 28px 38px 38px;
 			overflow: hidden;
+
+			&-in {
+				overflow: hidden;
+				margin-bottom: 42px;
+			}
 		}
 			&__share {
 				float: right;
 				list-style: none;
+
 
 				&-itm {
 					display: inline-block;
@@ -411,6 +418,44 @@ textarea.qst__inp {
 					font-size: 11px;
 					line-height: 26px;
 					color: @grayDarker2;
+				}
+			}
+
+			&__form {
+				width: (@gridGutterWidth + @gridColumnWidth)*9;
+				background: @white;
+				margin: 0 auto;
+				border: 1px solid @grayLighter1;
+				.border-radius(3px);
+				overflow: hidden;
+
+				&__col1 {
+					padding: 32px @gridGutterWidth @gridGutterWidth;
+					.box-sizing(border-box);
+					float: left;
+					width: (@gridGutterWidth + @gridColumnWidth)*5;
+					vertical-align: top;
+					background: url(/images/qb/dashed-border.png) right top repeat-y;
+				}
+					&-h {
+						font-weight: bold;
+						font-size: 18px;
+						line-height: 24px;
+						margin: 0 0 14px 0;
+						padding: 0;
+					}
+
+					&-desc {
+						font-size: 14px;
+						line-height: 20px;
+						margin: 0;
+						padding: 0;
+					}
+
+				&__col2 {
+					margin-left: (@gridGutterWidth + @gridColumnWidth)*5;
+					.box-sizing(border-box);
+					background: url(/images/qb/dashed-border.png) right top repeat-y;
 				}
 			}
 }	
