@@ -54,4 +54,26 @@ qst.l10n.itemedit = {
 		en: 'Share on Twitter',
 		ru: 'Рассказать в Твиттер',
 	},
+	'email': {
+		en: 'email',
+		ru: 'электронная почта'
+	},
+	'for notifications about your purchases<br/>and feedback':{
+		en:'for notifications about your purchases<br/>and feedback',
+		ru:'для уведомлений о ваших покупках<br/>и обратной связи'
+	},
+
+	'Buy': {
+		en: 'Buy',
+		ru: 'Купить'
+	},
+	'selling in lightning speed' : {
+		en: 'selling in lightning speed',
+		ru: 'молниеносные продажи'
+	},
+
+	'It is a preview of the purchase page your customers will see': {
+		en:'It is a preview of the purchase page your customers will see',
+		ru:'Таким будет экран покупки для ваших покупателей'
+	}
 }

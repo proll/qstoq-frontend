@@ -63,7 +63,7 @@ qst.PreviewUploadView = Backbone.View.extend({
 	},
 
 	delete: function(e) {
-		this.togglePreviewOff();
+		this.model.set('uri', '');
 		this.model.delete();
 		return false;
 	},

@@ -15,6 +15,8 @@ qst.ItemEditView = Backbone.View.extend({
 		'click .itemedit__share-btn': 'clickShare',
 
 		'change input[name=name]': 'updateName',
+		'change input[name=price]': 'updatePrice',
+		'change textarea[name=description]': 'updateDescription',
 	},
 
 
@@ -24,6 +26,8 @@ qst.ItemEditView = Backbone.View.extend({
 		this.model.on('change:sleeped', this.sleep, this);
 		this.model.on('change:state', this.changeState, this);
 		this.model.on('change:url', this.changeLink, this);
+
+		this.lazy_loader = new qst.LazyLoader();
 
 		this.model.on('save:success', this.saveSuccess, this);
 	},
@@ -42,6 +46,10 @@ qst.ItemEditView = Backbone.View.extend({
 		this.$input_file_title = this.$form.find('.itemedit__inp-file-title');
 		this.$input_file_process = this.$form.find('.itemedit__inp-file-process');
 		this.$error = this.$el.find('.itemedit__error');
+
+
+		this.$showcase = this.$el.find('.showcase__form');
+		this.$showcase_img = this.$showcase.find('.showcase__form__img')
 
 		this.changeState(this.model, this.model.get('state'));
 
@@ -199,14 +207,53 @@ qst.ItemEditView = Backbone.View.extend({
 		console.log('save:success')
 	},
 
-
 	addPreviewUpload: function(preview_model) {
+		preview_model.on('change:uri', this.updateShowcasePreview, this);
+		this.updateShowcasePreview(preview_model, preview_model.get('uri'));
 		this.$el.find('.item__preview-upload-cont').html(preview_model.view.$el);
 	},
 
 	updateName: function(e) {
 		var txt = $(e.target).val();
 		this.$el.find('.showcase__head-title').html('Qstoq &ndash; ' + txt);
+		this.$el.find('.showcase__form-h').html(txt);
+	},
+
+	updatePrice: function(e) {
+		var num = parseInt($(e.target).val());
+		if(!!num) {
+			num = Handlebars.helpers._number_format(num).toString();
+		}  else {
+			num = 0;
+		}
+		this.$el.find('.showcase__form-price-val').html(num);
+	},
+
+	updateDescription: function(e) {
+		var txt = $(e.target).val();
+		this.$el.find('.showcase__form-desc').html(txt);
+	},
+
+	updateShowcasePreview: function(model, uri) {
+		console.log(model, uri);
+		if(!!uri) {
+			this.$showcase_img.data('orig', uri);
+			this.lazy_loader.load(this.$showcase);
+			this.togglePreviewOn();
+		} else {
+			this.togglePreviewOff();
+		}
+	},
+
+	togglePreviewOff: function() {
+		if(this.$showcase_img) {
+			this.$showcase_img.attr('src', '/images_static/empty.png');
+		}
+		this.$showcase.toggleClass('empty', true);
+	},
+
+	togglePreviewOn: function() {
+		this.$showcase.toggleClass('empty', false);
 	},
 
 	clear: function() {

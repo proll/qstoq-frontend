@@ -362,11 +362,12 @@ textarea.qst__inp {
 .showcase {
 	&__window {
 		font-family: @sans0FontFamily;
-		width: 960px - 2px;
+		width: 100%;
 		border: 1px solid @grayLight1;
 		background: @grayLighter11;
 		.box-shadow(0 4px 8px rgba(0,0,0,.1));
 		.border-radius(6px);
+		.box-sizing(border-box);
 		margin: 0 auto 30px;
 	}
 
@@ -399,7 +400,7 @@ textarea.qst__inp {
 		}
 
 		&__cont {
-			margin: 28px 38px 38px;
+			margin: 28px 38px 20px;
 			overflow: hidden;
 
 			&-in {
@@ -423,11 +424,11 @@ textarea.qst__inp {
 
 			&__form {
 				width: (@gridGutterWidth + @gridColumnWidth)*9;
-				background: @white;
 				margin: 0 auto;
 				border: 1px solid @grayLighter1;
 				.border-radius(3px);
 				overflow: hidden;
+				background: @white url(/images/qb/dashed-border.png) (@gridGutterWidth + @gridColumnWidth)*5 top repeat-y;
 
 				&__col1 {
 					padding: 32px @gridGutterWidth @gridGutterWidth;
@@ -435,8 +436,21 @@ textarea.qst__inp {
 					float: left;
 					width: (@gridGutterWidth + @gridColumnWidth)*5;
 					vertical-align: top;
-					background: url(/images/qb/dashed-border.png) right top repeat-y;
 				}
+
+					&__img-cont {
+						width: 320px;
+						height: 180px;
+						vertical-align: top;
+						margin-bottom: 18px;
+					}
+
+						&__img {
+							.background-size(cover);
+							width: 320px;
+							height: 180px;
+						}
+
 					&-h {
 						font-weight: bold;
 						font-size: 18px;
@@ -453,13 +467,105 @@ textarea.qst__inp {
 					}
 
 				&__col2 {
+					padding: 32px @gridGutterWidth @gridGutterWidth;
 					margin-left: (@gridGutterWidth + @gridColumnWidth)*5;
 					.box-sizing(border-box);
-					background: url(/images/qb/dashed-border.png) right top repeat-y;
 				}
+					&-price {
+						display: inline-block;
+						font-size: 18px;
+						line-height: 30px;
+						font-style: italic;
+						margin-bottom: 20px;
+					}
+
+					&-email-group {
+						margin-bottom: 6px;
+					}
+
+				.itemedit &-email-cont {
+						padding: 7px 8px;
+					}
+
+					&-price-desc {
+						font-size: 11px;
+						line-height: 1.4;
+						padding: 0;
+						margin: 0 0 32px;
+					}
+
+
+					&__buy-btn {
+						display: inline-block;
+						font-size: 16px;
+						line-height: 18px;
+						text-decoration: none;
+						color: @white;
+						.box-shadow(0 1px 2px rgba(0,0,0,.35));
+						overflow: hidden;
+						.border-radius(2px);
+						#gradient .vertical(#ff7e6d, #cf4b3a);
+						cursor: pointer;
+						padding: 1px;
+
+						&:hover {
+							text-decoration: none;
+						}
+
+						&-in {
+							display: inline-block;
+							padding: 8px 32px;
+							#gradient .vertical-three-colors(#ff8171, #c3362e, 50%, #f06d5c);
+						}
+					}
+
+				&_shadow {
+					display: block;
+					content: '';
+					height: 16px;
+					background: url(/images/qb/showcase-shadow.png) center top no-repeat;
+				}
+			}
+
+			&__service-desc {
+				font-size: 11px;
+				line-height: 13px;
+				color: @grayDarker2;
+				text-align: center;
+				margin-top: 50px;
+
+				a {
+					color: @grayDarker2;
+					text-decoration: underline;
+
+					&:hover,
+					&:focus,
+					&:active {
+						color: @grayDarker2;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			&__desc {
+				font-size: 11px;
+				line-height: 13px;
+				padding: 0;
+				margin: 10px 0 50px;
+				color: @grayLight;
 			}
 }	
 
+
+.empty {
+	.showcase {
+		&__form {
+			&__img-cont {
+				display: none;
+			}
+		}
+	}
+}
 
 
 

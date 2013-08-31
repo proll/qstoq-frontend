@@ -104,15 +104,29 @@
 			</div>
 			<div class="showcase__form">
 				<div class="showcase__form__col1">
+					<div class="showcase__form__img-cont load-bg">
+						<img src="/images_static/empty.png" alt="" class="showcase__form__img lazy" data-width="320" data-height="180" data-bg="1"data-crop="1">
+					</div>
 					<h1 class="showcase__form-h">{{ name }}</h1>
 					<p class="showcase__form-desc">{{ description }}</p>
 				</div>
 				<div class="showcase__form__col2">
-					<span class="showcase__form-price">{{ price }}</span>
+					<span class="showcase__form-price"><span class="showcase__form-price-val">{{_number_format price }}</span>&nbsp;{{_ currency 'currency'}}</span>
+					<div class="showcase__form-email-group qst__inp-group">
+						<div class="showcase__form-email-cont qst__inp-cont">
+							<input type="text" value="" placeholder="{{_ 'email' 'itemedit'}}" class="showcase__form-email qst__inp" disabled="disabled" name="customer_email">
+						</div>
+					</div>
+					<p class="showcase__form-price-desc">{{_ 'for notifications about your purchases<br/>and feedback' 'itemedit'}}</p>
+
+					<span class="showcase__form__buy-btn"><span class="showcase__form__buy-btn-in">{{_ 'Buy' 'itemedit'}}</span></span>
 				</div>
 			</div>
+			<div class="showcase__form_shadow"></div>
+			<div class="showcase__service-desc"><a href="http://qstoq.ru" target="_blank">Qstoq</a> &mdash; {{_ 'selling in lightning speed' 'itemedit'}}</div>
 		</div>
 	</div>
+	<p class="showcase__desc">{{_ 'It is a preview of the purchase page your customers will see' 'itemedit'}}</p>
 </div>
 <div class="itemedit__slide itemedit__slide_finish"></div>
 <div class="itemedit__slide itemedit__slide_buyers"></div>

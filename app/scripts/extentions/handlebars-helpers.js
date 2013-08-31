@@ -177,15 +177,23 @@ Handlebars.registerHelper('_prephoto', function(size, id) {
 	return new Handlebars.SafeString('http://img.weheartpics.com/photo/'+size+'/'+id+'.jpg');
 });
 
+
 /**
- * Helper for form url of photo photo 
- */
-Handlebars.registerHelper('_storyhref', function(story) {
-	var href = ''
-	if(story.type === 'DAILY') {
-		href = '/explore/daily/'+story.id+'/date/all/';
-	} else if(story.type === 'STORY') {
-		href = '/explore/'+story.storycat.id+'/'+story.id+'/date/all/';
+* 10 000 000
+**/
+Handlebars.registerHelper('_number_format', function(num) {
+	if(!num) {
+		num = 0;
 	}
-	return new Handlebars.SafeString(href);
+	num+='';
+	var formated_num = '',
+		l = num.length;
+	for (var i = l - 1; i >= 0; i--) {
+		if((l - 1 - i)%3 === 0) {
+			formated_num = num.charAt(i) + '&nbsp;' + formated_num;
+		} else {
+			formated_num = num.charAt(i) + formated_num;
+		}
+	};
+	return new Handlebars.SafeString(formated_num);
 });
