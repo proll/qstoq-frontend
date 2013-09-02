@@ -241,7 +241,7 @@ textarea.qst__inp {
 				background-color: @red;
 				font-size: 13px;
 				line-height: 14px;
-				font-weight: 600;
+				font-weight: 500;
 				padding:13px 18px 12px;
 				display: inline-block;
 				.border-radius(2px);
@@ -260,7 +260,7 @@ textarea.qst__inp {
 				background-color: @gray;
 				font-size: 13px;
 				line-height: 14px;
-				font-weight: 600;
+				font-weight: 500;
 
 				padding:13px 18px 12px;
 				display: inline-block;
@@ -564,6 +564,27 @@ textarea.qst__inp {
 				display: none;
 			}
 		}
+	}
+}
+
+
+.finish {
+	&__inp {
+		.itemedit &-cont {
+			padding: 10px;
+			height: auto;
+			border-bottom: 0 none;
+		}
+			&-lbl {
+				font-size: 13px;
+				line-height: 1;
+				color: @gray;
+			}
+
+			.itemedit &-inp {
+				height: 112px;
+				margin-top: -10px;
+			}
 	}
 }
 

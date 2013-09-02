@@ -75,5 +75,16 @@ qst.l10n.itemedit = {
 	'It is a preview of the purchase page your customers will see': {
 		en:'It is a preview of the purchase page your customers will see',
 		ru:'Таким будет экран покупки для ваших покупателей'
-	}
+	},
+
+	'Your message on the receipt': {
+		en: 'Your message on the receipt',
+		ru: 'Ваше сообщение на чеке'
+	},
+
+
+	'It is a receipt your customers will see': {
+		en:'It is a receipt your customers will see',
+		ru:'Таким будет финальный экран для ваших покупателей'
+	},
 }

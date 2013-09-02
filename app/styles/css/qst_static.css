@@ -245,7 +245,7 @@ dd {
 }
 body {
   margin: 0;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #282828;
@@ -312,7 +312,7 @@ a:focus {
   left: -99997px;
 }
 BODY {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #282828;
@@ -455,6 +455,9 @@ h1 {
   font-size: 0;
   line-height: 0;
   margin-left: 146px;
+}
+.qst__inp {
+  resize: none;
 }
 .qst__inp {
   border: none;

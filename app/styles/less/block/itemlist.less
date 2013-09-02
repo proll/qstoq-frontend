@@ -23,22 +23,28 @@
 
 
 
-.link__caption {
-	width: (@gridColumnWidth + @gridGutterWidth)*5;
-}
+// .link__caption {
+// 	width: (@gridColumnWidth + @gridGutterWidth)*5;
+// }
 
 .link__price,
 .link__view-count,
 .link__sold-count,
 .link__ctr,
-.link__overall,
-.link__toggle,
-.link__delete {
+.link__overall {
 	width: (@gridColumnWidth + @gridGutterWidth)*1;
 }
 
+.link__toggle {
+	width: 130px;
+}
+
+.link__delete {
+	width: 60px;
+}
+
 .itemlist__table-head {
-	margin-top: 20px;
+	margin-top: 7px;
 	border-spacing: 0;
 	border-collapse:collapse;
 	width: 100%;
@@ -48,25 +54,28 @@
 		font-weight: 400;
 		text-align: center;
 		line-height: 1;
-		padding: 20px 0;
+		padding: 18px 0;
 		color: @gray;
 
 		&.link__caption {
 			text-align: left;
+			// width: (@gridColumnWidth + @gridGutterWidth)*5 - 20px;
+			padding-left: 20px;
 		}
 	}
 }
 
 
 .itemlist__table-cont1 {
-	background: @white url(/images/qb/bgl.png) top left repeat-y;
-	border: 2px solid @sandColor;
-	.border-radius(4px);
+	// background: @white url(/images/qb/bgl.png) top left repeat-y;
+	background: @white;
+	border: 2px solid @grayLighter;
+	.border-radius(2px);
 	overflow: hidden;
 }
 
 .itemlist__table-cont2 {
-	background: url(/images/qb/bgr.png) top right repeat-y;
+	// background: url(/images/qb/bgr.png) top right repeat-y;
 }
 
 		.link__toggle-sp {
@@ -90,7 +99,6 @@
 		width: 100%;
 		border-spacing: 0;
 		border-collapse:collapse;
-		display: block;
 
 		// &.removing {
 		// 	.transition(all .3s);
@@ -127,13 +135,13 @@
 
 			&.link__ctr,
 			&.link__overall,
-			&.link__toggle,
 			&.link__delete {
-				text-align: center;
+				text-align: right;
 			}
 
 			&.link__toggle {
 				font-size: 11px;
+				text-align: right;
 			}
 
 			&.link__view-count {

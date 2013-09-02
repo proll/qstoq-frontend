@@ -4,21 +4,25 @@
 }
 
 	.adddialog__add {
-		font-size: 14px;
+		font-size: 13px;
+		line-height: 20px;
 		color: @textColor;
 		text-decoration: none;
-		font-weight: 600;
 		z-index: 2;
+
 
 		&:hover {
 			color: @textColor;
 			text-decoration: none;
 		}
 
+		&-title {
+			text-decoration: underline;
+		}
+
 		.qi-add {
-			margin-right: 8px;
-			margin-bottom: 2px;
-			vertical-align: bottom;
+			margin-right: 4px;
+			vertical-align: middle;
 		}
 	}
 
@@ -44,7 +48,7 @@
 		.adddialog__header {
 			font-size: 14px;
 			background-color: @headerColor;
-			font-weight: 600;
+			font-weight: 500;
 			color:@white;
 			cursor: default;
 
@@ -84,7 +88,7 @@
 				background-color: @red;
 				font-size: 13px;
 				line-height: 14px;
-				font-weight: 600;
+				font-weight: 500;
 				padding:13px 18px 12px;
 				display: inline-block;
 				.border-radius(2px);
