@@ -25,9 +25,13 @@ qst.l10n.itemedit = {
 		en: 'Descrition',
 		ru: 'Описание'
 	},
-	'When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money': {
-		en: 'When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money',
-		ru: 'Когда все будет готово расскажите о своем продукте на сайте, в блоге или социальных сетях, запостите ссылку, перейдя по которой ваши покупатели смогут отправить вам денег:'
+	'Clicking on that link your customers will get a purchase screen': {
+		en: 'Clicking on that link your customers will get a purchase screen',
+		ru: 'Перейдя по этой ссылке ваши пользователи откроют окно оплаты.'
+	},
+	'Spread the word on your site, on blog or social networks': {
+		en:'Spread the word on your site, on blog or social networks',
+		ru:'Размещайте ссылку на вашем сайте, в блоге, в личных сообщениях или социальных сетях:'
 	},
 	'Save': {
 		en: 'Save',
@@ -44,15 +48,15 @@ qst.l10n.itemedit = {
 	},
 	'Share on Vkontakte': {
 		en: 'Share on Vkontakte',
-		ru: 'Рассказать Вконтакте',
+		ru: 'Опубликовать Вконтакте',
 	},
 	'Share on Facebook': {
 		en: 'Share on Facebook',
-		ru: 'Рассказать на Фейсбук',
+		ru: 'Опубликовать на Фейсбук',
 	},
 	'Share on Twitter': {
 		en: 'Share on Twitter',
-		ru: 'Рассказать в Твиттер',
+		ru: 'Опубликовать в Твиттер',
 	},
 	'email': {
 		en: 'email',
@@ -87,4 +91,9 @@ qst.l10n.itemedit = {
 		en:'It is a receipt your customers will see',
 		ru:'Таким будет финальный экран для ваших покупателей'
 	},
+
+	'Link for purchase': {
+		en: 'Link for purchase',
+		ru: 'Ссылка для оплаты'
+	}
 }

@@ -52,7 +52,7 @@ function program1(depth0,data) {
     + "</a></li>\n					</ul>\n				</div>\n				<div class=\"itemedit__link qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"link\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
-    + "\">\n					</div>\n				</div>\n				<div class=\"itemedit__file qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"itemedit__inp-file-process\"></div>\n						<span class=\"itemedit__inp-file-title\">";
+    + "\">\n					</div>\n				</div>\n				<div class=\"itemedit__file\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"itemedit__inp-file-process\"></div>\n						<span class=\"itemedit__inp-file-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Drop or choose a file", "itemlist", options) : helperMissing.call(depth0, "_", "Drop or choose a file", "itemlist", options)))
     + "</span>\n						<input type=\"file\" class=\"qst__inp itemedit__inp-file\" name=\"file\" id=\"file_uploader\" placeholder=\"";
@@ -237,7 +237,7 @@ function program9(depth0,data) {
   if (stack2 = helpers.url) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.url; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "\">\n							</div>\n						</label>\n					</div>\n				</div>\n				<div class=\"itemedit__file qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"itemedit__inp-file-process\"></div>\n						<span class=\"itemedit__inp-file-title\">";
+    + "\">\n							</div>\n						</label>\n					</div>\n				</div>\n				<div class=\"itemedit__file\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"itemedit__inp-file-process\"></div>\n						<span class=\"itemedit__inp-file-title\">";
   options = {hash:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "file", options) : helperMissing.call(depth0, "ifEq", depth0.state, "file", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
@@ -250,23 +250,29 @@ function program9(depth0,data) {
     + "</a><span class=\"itemedit__error\"></span><a href=\"save\" class=\"itemedit__submit-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Save", "itemedit", options) : helperMissing.call(depth0, "_", "Save", "itemedit", options)))
-    + "</a>\n			</div>\n		</div>\n		<div class=\"span4\">\n			<p class=\"itemedit__share-p\">";
+    + "</a>\n			</div>\n		</div>\n		<div class=\"span4\">\n			<h3 class=\"itemedit__share-h\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money", "itemedit", options) : helperMissing.call(depth0, "_", "When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money", "itemedit", options)))
-    + "</p>\n			<ul class=\"itemedit__share-ul\">\n				<li>\n					<span class=\"itemedit__share-inp-cont\">\n						<i class=\"qi qi-share-link\"></i><input type=\"text\" value=\"";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link for purchase", "itemedit", options) : helperMissing.call(depth0, "_", "Link for purchase", "itemedit", options)))
+    + "</h3>\n			<div class=\"itemedit__share-inp-cont\">\n				<i class=\"qi qi-share-link\"></i><input type=\"text\" value=\"";
   if (stack2 = helpers.url_short_path) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.url_short_path; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "\" class=\"qst__inp\" readonly=\"readonly\">	\n					</span>\n				</li>\n				<li>\n					<a href=\"vk\" class=\"itemedit__share-btn\"><i class=\"qi qi-share-vk\"></i>";
+    + "\" class=\"qst__inp\" readonly=\"readonly\">	\n			</div>\n			<p class=\"itemedit__share-p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Clicking on that link your customers will get a purchase screen", "itemedit", options) : helperMissing.call(depth0, "_", "Clicking on that link your customers will get a purchase screen", "itemedit", options)))
+    + "</p>\n			<p class=\"itemedit__share-p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Spread the word on your site, on blog or social networks", "itemedit", options) : helperMissing.call(depth0, "_", "Spread the word on your site, on blog or social networks", "itemedit", options)))
+    + "</p>\n			<ul class=\"itemedit__share-ul\">\n				<li>\n					<a href=\"vk\" class=\"itemedit__share-btn itemedit__share-vk-btn\"><i class=\"qi qi-share-vk\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Vkontakte", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Vkontakte", "itemedit", options)))
-    + "</a>\n				</li>\n				<li>\n					<a href=\"facebook\" class=\"itemedit__share-btn\"><i class=\"qi qi-share-fb\"></i>";
+    + "</span></a>\n				</li>\n				<li>\n					<a href=\"facebook\" class=\"itemedit__share-btn itemedit__share-fb-btn\"><i class=\"qi qi-share-fb\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Facebook", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Facebook", "itemedit", options)))
-    + "</a>\n				</li>\n				<li>\n					<a href=\"twitter\" class=\"itemedit__share-btn\"><i class=\"qi qi-share-tw\"></i>";
+    + "</span></a>\n				</li>\n				<li>\n					<a href=\"twitter\" class=\"itemedit__share-btn itemedit__share-tw-btn\"><i class=\"qi qi-share-tw\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Twitter", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Twitter", "itemedit", options)))
-    + "</a>\n				</li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_showcase\">\n	<div class=\"showcase__window\">\n		<div class=\"showcase__head\">\n			<div class=\"showcase__head_lt\"></div>\n			<div class=\"showcase__head_rt\"></div>\n			<div class=\"showcase__head_ct\">\n				<span class=\"showcase__head-title\">Qstoq &ndash; ";
+    + "</span></a>\n				</li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_showcase\">\n	<div class=\"showcase__window\">\n		<div class=\"showcase__head\">\n			<div class=\"showcase__head_lt\"></div>\n			<div class=\"showcase__head_rt\"></div>\n			<div class=\"showcase__head_ct\">\n				<span class=\"showcase__head-title\">Qstoq &ndash; ";
   if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
@@ -480,7 +486,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"preview-upload__group qst__inp-group\">\n	<div class=\"qst__inp-cont\">\n		<div class=\"itemedit__inp-file-process\"></div>\n		<div class=\"preview-upload__img-cont load-bg\">\n			<img src=\"/images_static/empty.png\" alt=\"\" class=\"preview-upload__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n		</div>\n		<h2 class=\"preview-upload__add-h\" >";
+  buffer += "<div class=\"preview-upload__group\">\n	<div class=\"qst__inp-cont\">\n		<div class=\"itemedit__inp-file-process\"></div>\n		<div class=\"preview-upload__img-cont load-bg\">\n			<img src=\"/images_static/empty.png\" alt=\"\" class=\"preview-upload__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n		</div>\n		<h2 class=\"preview-upload__add-h\" >";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add preview", "preview_upload", options) : helperMissing.call(depth0, "_", "Add preview", "preview_upload", options)))
     + "</h2>\n		<span class=\"preview-upload__add-another\" >";

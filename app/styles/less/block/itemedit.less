@@ -107,18 +107,20 @@ textarea.qst__inp {
 				font-size: 13px;
 				line-height: 1;
 				margin-left: -1px;
+				// .box-shadow(inset 0 1px 4px rgba(0,0,0,.16));
+				#gradient .vertical(#fdfdfe, #f0f0f2);
 				
 				&.active {
-					.box-shadow(inset 0 1px 3px rgba(0,0,0,.26));
-					#gradient .vertical(rgba(0,0,0,.1), rgba(255,255,255,.1));
+					.box-shadow(inset 0 1px 4px rgba(0,0,0,.16));
+					#gradient .vertical(#e8e9ec, @grayLighter2);
 				}
 
 				&:first-child {
-					.border-radius(20px 0 0 20px);
+					.border-radius(3px 0 0 3px);
 				}
 
 				&:last-child {
-					.border-radius(0 20px 20px 0);
+					.border-radius(0 3px 3px 0);
 				}
 			}
 		}
@@ -146,13 +148,11 @@ textarea.qst__inp {
 				opacity: 0;
 				overflow: hidden;
 				margin: 0;
-				border-style: dashed;
 				position: relative;
 				cursor: pointer;
 				
 				text-align: center;
-				background: url(/images/qb/file-bg.png) no-repeat;
-				.background-size(100% 100%);
+				background: @grayLighter12;
 
 				.qst__inp-cont {
 					height: auto;
@@ -167,7 +167,7 @@ textarea.qst__inp {
 					top: 0;
 					left: 0;
 					z-index: 1;	
-					background-color: @purple;
+					background-color: @greenHead;
 					.transition(width 0.2s);
 				}
 
@@ -238,13 +238,13 @@ textarea.qst__inp {
 			.itemedit__submit-a {
 				color: @white;
 				text-decoration: none;
-				background-color: @red;
+				background-color: #46b486;
 				font-size: 13px;
 				line-height: 14px;
 				font-weight: 500;
-				padding:13px 18px 12px;
+				padding:13px 21px 12px;
 				display: inline-block;
-				.border-radius(2px);
+				#gradient .vertical(#46b486, #279763);
 
 				&:focus,
 				&:active,
@@ -293,6 +293,13 @@ textarea.qst__inp {
 }
 
 .itemedit__share {
+	&-h {
+		font-size: 13px;
+		line-height: 14px;
+		font-weight: 700;
+		padding: 0;
+		margin: 0 0 10px;
+	}
 
 	&-p {
 		margin:5px 0 16px;
@@ -313,7 +320,7 @@ textarea.qst__inp {
 		font-size: 13px;
 		line-height: 14px;
 		
-		width: 189px;
+		width: 206px;
 		
 		.qst__inp {
 			width: 120px;
@@ -327,22 +334,17 @@ textarea.qst__inp {
 
 	&-btn {
 		background: @grayDarker2;
-		color: @white;
 		text-decoration: none;
-		padding: 6px 3px;
+		padding: 6px 5px;
 		.box-sizing(border-box);
 		display: block;
 		overflow: hidden;
-		.border-radius(2px);
 		margin-bottom: 10px;
 
-		font-size: 13px;
-		line-height: 14px;
-
-		width: 189px;
+		width: 206px;
 
 		.qi {
-			margin: -5px 0;
+			margin: -6px 0;
 		}
 
 
@@ -350,6 +352,25 @@ textarea.qst__inp {
 			color: @white;
 			text-decoration: none;
 		}
+
+		&-title {
+			font-size: 13px;
+			line-height: 14px;
+			color: @white;
+			margin-left: -2px;
+		}
+	}
+
+	&-vk-btn {
+		#gradient .vertical(#5b89b6, #39659b);
+	}
+
+	&-fb-btn {
+		#gradient .vertical(#4e6ca6, #2e4886);
+	}
+
+	&-tw-btn {
+		#gradient .vertical(#00b3d8, #0097c7);
 	}
 }
 

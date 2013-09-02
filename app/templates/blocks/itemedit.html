@@ -50,7 +50,7 @@
 						</label>
 					</div>
 				</div>
-				<div class="itemedit__file qst__inp-group">
+				<div class="itemedit__file">
 					<div class="qst__inp-cont">
 						<div class="itemedit__inp-file-process"></div>
 						<span class="itemedit__inp-file-title">{{#ifEq state 'file'}}<a href="{{ url }}" class="itemedit__inp-file-title-a" target="_blank">{{ filename }}</a>{{else}}{{_ 'Drop or choose a file' 'itemlist'}}{{/ifEq}}</span>
@@ -64,21 +64,21 @@
 			</div>
 		</div>
 		<div class="span4">
-			<p class="itemedit__share-p">{{_ 'When all will be done you can spread the word on your site, on blog or social networks. Post the link, so your clients can send you money' 'itemedit'}}</p>
+			<h3 class="itemedit__share-h">{{_ 'Link for purchase' 'itemedit'}}</h3>
+			<div class="itemedit__share-inp-cont">
+				<i class="qi qi-share-link"></i><input type="text" value="{{ url_short_path }}" class="qst__inp" readonly="readonly">	
+			</div>
+			<p class="itemedit__share-p">{{_ 'Clicking on that link your customers will get a purchase screen' 'itemedit'}}</p>
+			<p class="itemedit__share-p">{{_ 'Spread the word on your site, on blog or social networks' 'itemedit'}}</p>
 			<ul class="itemedit__share-ul">
 				<li>
-					<span class="itemedit__share-inp-cont">
-						<i class="qi qi-share-link"></i><input type="text" value="{{ url_short_path }}" class="qst__inp" readonly="readonly">	
-					</span>
+					<a href="vk" class="itemedit__share-btn itemedit__share-vk-btn"><i class="qi qi-share-vk"></i><span class="itemedit__share-btn-title">{{_ 'Share on Vkontakte' 'itemedit'}}</span></a>
 				</li>
 				<li>
-					<a href="vk" class="itemedit__share-btn"><i class="qi qi-share-vk"></i>{{_ 'Share on Vkontakte' 'itemedit'}}</a>
+					<a href="facebook" class="itemedit__share-btn itemedit__share-fb-btn"><i class="qi qi-share-fb"></i><span class="itemedit__share-btn-title">{{_ 'Share on Facebook' 'itemedit'}}</span></a>
 				</li>
 				<li>
-					<a href="facebook" class="itemedit__share-btn"><i class="qi qi-share-fb"></i>{{_ 'Share on Facebook' 'itemedit'}}</a>
-				</li>
-				<li>
-					<a href="twitter" class="itemedit__share-btn"><i class="qi qi-share-tw"></i>{{_ 'Share on Twitter' 'itemedit'}}</a>
+					<a href="twitter" class="itemedit__share-btn itemedit__share-tw-btn"><i class="qi qi-share-tw"></i><span class="itemedit__share-btn-title">{{_ 'Share on Twitter' 'itemedit'}}</span></a>
 				</li>
 			</ul>
 		</div>
