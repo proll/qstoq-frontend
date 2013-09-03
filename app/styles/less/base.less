@@ -63,6 +63,8 @@ h1{
 
 .input_error {
     color: #C81414 !important;
+
+    .placeholder(#C81414);
 }
 
 
@@ -183,7 +185,16 @@ h1{
 		}
 
 .error-inp {
-	background-color: @red_light;
+	background-color: @errorBg;
+	.qst__lbl {
+		color: @errorText;
+	}
+
+	input,
+	textarea {
+		color: @errorText !important;
+		.placeholder(@errorText);
+	}
 }
 
 

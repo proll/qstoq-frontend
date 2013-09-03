@@ -233,6 +233,7 @@ textarea.qst__inp {
 			padding: 27px 20px 29px;
 			text-align: right;
 			background-color: @grayLighter2;
+			.transition(background-color .2s);
 		}
 
 			.itemedit__submit-a {
@@ -280,12 +281,15 @@ textarea.qst__inp {
 .itemedit__error {
 	font-size: 13px;
 	line-height: 14px;
-	color: @red;
+	color: @white;
 	.transition(all .3s);
 	opacity: 0;
 }
 
 .error {
+	.itemedit__submit {
+		background-color: @red;
+	}
 	.itemedit__error {
 		opacity: 1;
 		padding-right: 20px;

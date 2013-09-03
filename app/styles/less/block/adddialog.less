@@ -80,6 +80,7 @@
 			padding: 27px 40px 29px;
 			text-align: right;
 			background-color: @grayLighter2;
+			.transition(background-color .2s);
 		}
 
 			.adddialog__submit-a {
@@ -102,12 +103,15 @@
 
 // Errors
 .adddialog__error {
-	color: @red;
+	color: @white;
 	.transition(all .3s);
 	opacity: 0;
 }
 
 .error {
+	.adddialog__submit {
+		background-color: @red;
+	}
 	.adddialog__error {
 		opacity: 1;
 		padding-right: 20px;

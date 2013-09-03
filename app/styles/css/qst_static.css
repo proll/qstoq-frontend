@@ -373,6 +373,18 @@ h1 {
 .input_error {
   color: #C81414 !important;
 }
+.input_error:-moz-placeholder {
+  color: #c81414;
+}
+.input_error::-moz-placeholder {
+  color: #c81414;
+}
+.input_error:-ms-input-placeholder {
+  color: #c81414;
+}
+.input_error::-webkit-input-placeholder {
+  color: #c81414;
+}
 .hsh {
   color: #005abe;
   text-decoration: none;
@@ -383,12 +395,12 @@ h1 {
 }
 .lnk,
 .unm {
-  color: #dd6756;
+  color: #d34141;
   text-decoration: none;
 }
 .lnk:hover,
 .unm:hover {
-  color: #dd6756;
+  color: #d34141;
   text-decoration: underline;
 }
 .lazy {
@@ -496,7 +508,30 @@ h1 {
   color: #969696;
 }
 .error-inp {
-  background-color: #e4d5d3;
+  background-color: #fff0f0;
+}
+.error-inp .qst__lbl {
+  color: #c81414;
+}
+.error-inp input,
+.error-inp textarea {
+  color: #c81414 !important;
+}
+.error-inp input:-moz-placeholder,
+.error-inp textarea:-moz-placeholder {
+  color: #c81414;
+}
+.error-inp input::-moz-placeholder,
+.error-inp textarea::-moz-placeholder {
+  color: #c81414;
+}
+.error-inp input:-ms-input-placeholder,
+.error-inp textarea:-ms-input-placeholder {
+  color: #c81414;
+}
+.error-inp input::-webkit-input-placeholder,
+.error-inp textarea::-webkit-input-placeholder {
+  color: #c81414;
 }
 html,
 body {

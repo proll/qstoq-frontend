@@ -475,6 +475,18 @@ h1 {
 .input_error {
   color: #C81414 !important;
 }
+.input_error:-moz-placeholder {
+  color: #c81414;
+}
+.input_error::-moz-placeholder {
+  color: #c81414;
+}
+.input_error:-ms-input-placeholder {
+  color: #c81414;
+}
+.input_error::-webkit-input-placeholder {
+  color: #c81414;
+}
 .hsh {
   color: #005abe;
   text-decoration: none;
@@ -485,12 +497,12 @@ h1 {
 }
 .lnk,
 .unm {
-  color: #dd6756;
+  color: #d34141;
   text-decoration: none;
 }
 .lnk:hover,
 .unm:hover {
-  color: #dd6756;
+  color: #d34141;
   text-decoration: underline;
 }
 .lazy {
@@ -598,7 +610,30 @@ h1 {
   color: #969696;
 }
 .error-inp {
-  background-color: #e4d5d3;
+  background-color: #fff0f0;
+}
+.error-inp .qst__lbl {
+  color: #c81414;
+}
+.error-inp input,
+.error-inp textarea {
+  color: #c81414 !important;
+}
+.error-inp input:-moz-placeholder,
+.error-inp textarea:-moz-placeholder {
+  color: #c81414;
+}
+.error-inp input::-moz-placeholder,
+.error-inp textarea::-moz-placeholder {
+  color: #c81414;
+}
+.error-inp input:-ms-input-placeholder,
+.error-inp textarea:-ms-input-placeholder {
+  color: #c81414;
+}
+.error-inp input::-webkit-input-placeholder,
+.error-inp textarea::-webkit-input-placeholder {
+  color: #c81414;
 }
 label {
   display: block;
@@ -2347,7 +2382,7 @@ textarea::-webkit-input-placeholder {
   font-size: 40px;
   line-height: 1;
   font-weight: 200;
-  color: #dd6756;
+  color: #d34141;
   padding: 0;
   margin: 0 0 22px 0;
 }
@@ -2411,7 +2446,7 @@ textarea::-webkit-input-placeholder {
   text-align: center;
   font-size: 20px;
   line-height: 1;
-  color: #dd6756;
+  color: #d34141;
   padding: 10px 0 9px;
   margin: 0;
   cursor: pointer;
@@ -2433,7 +2468,7 @@ textarea::-webkit-input-placeholder {
   word-wrap: break-word;
 }
 .confirm__p_error {
-  color: #dd6756;
+  color: #d34141;
 }
 .confirm__p_success,
 .confirm__p_error {
@@ -2687,8 +2722,7 @@ body {
   text-align: left;
 }
 .itemlist__link td.link__ctr,
-.itemlist__link td.link__overall,
-.itemlist__link td.link__delete {
+.itemlist__link td.link__overall {
   text-align: right;
 }
 .itemlist__link td.link__toggle {
@@ -2698,6 +2732,9 @@ body {
 .itemlist__link td.link__view-count {
   color: #8c8c8c;
   font-size: 11px;
+}
+.itemlist__link td.link__delete {
+  text-align: center;
 }
 .link__caption-a {
   margin-left: 20px;
@@ -2746,11 +2783,11 @@ body {
   text-decoration: underline;
 }
 .off .link__toggle_off {
-  color: #dd6756;
+  color: #d34141;
   text-decoration: none;
 }
 .off .link__toggle_off:hover {
-  color: #dd6756;
+  color: #d34141;
   text-decoration: none;
 }
 .adddialog-cont {
@@ -2826,6 +2863,10 @@ body {
   padding: 27px 40px 29px;
   text-align: right;
   background-color: #f8f8fa;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .adddialog__submit-a {
   color: #ffffff;
@@ -2848,12 +2889,15 @@ body {
   text-decoration: none;
 }
 .adddialog__error {
-  color: #dd6756;
+  color: #ffffff;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
+}
+.error .adddialog__submit {
+  background-color: #d34141;
 }
 .error .adddialog__error {
   opacity: 1;
@@ -3133,6 +3177,10 @@ textarea.qst__inp {
   padding: 27px 20px 29px;
   text-align: right;
   background-color: #f8f8fa;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .itemedit__submit-a {
   color: #ffffff;
@@ -3180,12 +3228,15 @@ textarea.qst__inp {
 .itemedit__error {
   font-size: 13px;
   line-height: 14px;
-  color: #dd6756;
+  color: #ffffff;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 0;
+}
+.error .itemedit__submit {
+  background-color: #d34141;
 }
 .error .itemedit__error {
   opacity: 1;
@@ -3714,7 +3765,7 @@ textarea.qst__inp {
 .landing-s-h {
   margin: 0 0 25px 0;
   padding: 0;
-  color: #dd6756;
+  color: #d34141;
   font-size: 46px;
   font-weight: 100;
   line-height: 1;
@@ -4497,7 +4548,7 @@ textarea.qst__inp {
   font-size: 16px;
   line-height: 1;
   letter-spacing: -1px;
-  color: #dd6756;
+  color: #d34141;
   margin-left: 8px;
   margin-top: 23px;
   display: inline-block;
@@ -4543,7 +4594,7 @@ textarea.qst__inp {
 .profile__report-title {
   cursor: pointer;
   letter-spacing: -1px;
-  color: #dd6756;
+  color: #d34141;
   font-size: 18px;
   line-height: 1;
   display: inline-block;
