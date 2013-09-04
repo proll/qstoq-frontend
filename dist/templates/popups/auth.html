@@ -8,107 +8,43 @@
 			</ul>
 		</div>
 		<div class="auth__sign">
-			<span class="auth__toggler">{{_ 'or ' 'auth'}} <a href="signup" class="auth__toggler-signup">{{_ 'signup' 'auth'}}</a></span>
-			<h2 class="auth__login-h">{{_ 'Log in by e-mail' 'auth'}}</h2>
-			<div class="qst__inp-group">
-				<div class="qst__inp-cont">
-					<label>
-						<span class="qst__lbl">{{_ 'E-mail' 'auth'}}</span>
-						<div class="qst__inp-cont-in">
-							<input type="text" class="qst__inp" name="email" value="">
-						</div>
-					</label>
+			<span class="auth__toggler">{{_ 'or ' 'auth'}} <a href="signup" class="auth__toggler-lnk auth__toggler-signup">{{_ 'sign up' 'auth'}}</a>
+			<a href="signin" class="auth__toggler-lnk auth__toggler-signin">{{_ 'log in by e-mail' 'auth'}}</a>
+			</span>
+			<h2 class="auth__signin-h">{{_ 'Log in by e-mail' 'auth'}}</h2>
+			<h2 class="auth__signup-h">{{_ 'Sign up' 'auth'}}</h2>
+			<form action="/auth" >
+				<div class="qst__inp-group">
+					<div class="qst__inp-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'E-mail' 'auth'}}</span>
+							<div class="qst__inp-cont-in">
+								<input type="text" class="qst__inp" name="email" value="">
+							</div>
+						</label>
+					</div>
+					<div class="qst__inp-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'Name' 'auth'}}</span>
+							<div class="qst__inp-cont-in">
+								<input type="text" class="qst__inp" name="name" value="">
+							</div>
+						</label>
+					</div>
+					<div class="qst__inp-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'Password' 'auth'}}</span>
+							<div class="qst__inp-cont-in">
+								<input type="password" class="qst__inp" name="password" value="">
+							</div>
+						</label>
+					</div>
 				</div>
-				<div class="qst__inp-cont">
-					<label>
-						<span class="qst__lbl">{{_ 'Name' 'auth'}}</span>
-						<div class="qst__inp-cont-in">
-							<input type="text" class="qst__inp" name="name" value="">
-						</div>
-					</label>
+				<div class="auth__user-agreement">
+					{{_ 'I admit <a href="/docs/user_agreement.html" target="_blank">user agreement</a>' 'auth'}}
 				</div>
-				<div class="qst__inp-cont">
-					<label>
-						<span class="qst__lbl">{{_ 'Password' 'auth'}}</span>
-						<div class="qst__inp-cont-in">
-							<input type="password" class="qst__inp" name="password" value="">
-						</div>
-					</label>
-				</div>
-			</div>
-			<div class="auth__user-agreement">
-				{{_ 'I admit <a href="/docs/user_agreement.html" target="_blank">user agreement</a>' 'auth'}}
-			</div>
+				<input type="submit" class="hidden">
+			</form>
 		</div>
 	</div>
-</div>
-
-
-
-
-<div class="auth-popup_close"></div>
-<div id="auth-popup_container">
-	<div id="auth-popup_login">
-		<div class="header">{{_ 'Log in' 'auth'}}</div>
-		<div id="auth-popup_services">
-			<div class="login-via-fb">{{_ 'Facebook' 'auth'}}</div>
-			<div class="login-via-tw">{{_ 'Twitter' 'auth'}}</div>
-			<div class="login-via-vk">{{_ 'VKontakte' 'auth'}}</div>
-			<div class="login-via-email">{{_ 'E-mail' 'auth'}}</div>
-		</div>
-	</div>
-
-	<div class="auth-popup__registration">
-		<h2 class="header">{{_ 'Register by e-mail' 'auth'}}</h2>
-		<form class="auth-popup__form">
-			<input type="email" name="email0" id="registration-email0" placeholder="{{_ 'E-mail' 'auth'}}">
-			<input type="password" name="password0" id="registration-password0" placeholder="{{_ 'Password' 'auth'}}">
-			<div class="clearfix"></div>
-		<div class="auth-popup__registration_next">{{_ 'Sign up' 'auth'}}<i class="icn icn-arrow-medium_right"></i></div>
-			<input type="submit" class="inv">
-		</form>
-		<div class="auth-error auth-popup__registration-error"></div>
-	</div>
-
-	<div class="auth-popup__registration-names">
-		<div class="auth-popup__registration-names_dummy">
-			<div class="dummy">{{_ 'Log in'}}</div>
-			<div class="clearfix"></div>
-			<div class="dummy">{{_ 'Facebook' 'auth'}}</div>
-			<div class="dummy">{{_ 'Twitter' 'auth'}}</div>
-			<div class="dummy">{{_ 'VKontakte' 'auth'}}</div>
-			<div class="dummy">{{_ 'E-mail' 'auth'}}</div>
-		</div>
-
-		<div class="back-header auth-popup__registration_back"><i class="icn icn-arrow-medium_left"></i>{{_ 'E-mail &amp; password' 'auth'}}</div>
-
-		<div class="header">{{_ 'Account information' 'auth'}}</div>
-		<form  class="auth-popup__form">
-			<input type="text" name="first_name0" id="registration-first_name0" placeholder="{{_ 'First name' 'auth'}}" maxlength="32">
-			<input type="text" name="last_name0" id="registration-last_name0" placeholder="{{_ 'Last name' 'auth'}}" maxlength="32">
-			<div class="clearfix"></div>
-			<div class="auth-popup__registration_ok">{{_ 'Sign up' 'auth'}}<i class="icn icn-arrow-medium_right"></i></div>
-			<input type="submit" class="inv">
-		</form>
-		<div class="auth-error auth-popup__registration-names-error"></div>
-	</div>
-
-
-	<div class="auth-popup__login-email">
-		<div class="back-header auth-popup__login-email_back"><i class="icn icn-arrow-medium_left"></i>{{_ 'Log in / sign up' 'auth'}}</div>
-		<h2 class="header">{{_ 'Log in by e-mail' 'auth'}}</h2>
-		<form action="/api/auth/" class="auth-popup__form">
-			<input type="email" name="email" id="login-email" placeholder="{{_ 'E-mail' 'auth'}}">
-			<div class="clearfix"></div>
-			<input type="password" name="password" id="login-password" placeholder="{{_ 'Password' 'auth'}}">
-			<a class="auth-popup__login-email_forgot">{{_ 'Forgot?' 'auth'}}</a>
-			<div class="clearfix"></div>
-			<div type="submit" class="auth-popup__login-email_ok">{{_ 'Log in' 'auth'}}<i class="icn icn-arrow-medium_right"></i></div>
-			<input type="submit" class="inv">
-		</form>
-		<div class="auth-error auth-popup__login-error"></div>
-	</div>
-
-
-
 </div>

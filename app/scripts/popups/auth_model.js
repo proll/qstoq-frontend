@@ -1,13 +1,11 @@
 qst.Auth = Backbone.Model.extend({
-	url_logout: "/api/auth/logout/",
-
 	initialize: function (){
 
 		this.FB  = new qst.FB();
 		// this.TW  = new qst.TW({url:"/api/auth/", url_token:"/api/auth/twitter/request_token/"});
-		this.VK  = new qst.VK({url:"/api/auth/", app_id:3154513, redirect_url: "http://weheartpics.com/go/close_vk.html"});
-		this.signin 		= new qst.Signin({url:"/api/auth/signin/"});
-		this.registration 	= new qst.Registration({url:"/api/auth/signup/"});
+		this.VK  = new qst.VK();
+		this.signin 		= new qst.Signin();
+		this.registration 	= new qst.Registration();
 
 		// this.on("twitter:hi", function (user_obj) {
 		// 	this.TW.fetch(user_obj);
@@ -26,20 +24,22 @@ qst.Auth = Backbone.Model.extend({
 
 		this.FB.on 			("error", this.error, this);
 		// this.TW.on 			("error", this.error, this);
-		// this.VK.on 			("error", this.error, this);
+		this.VK.on 			("error", this.error, this);
 		this.signin.on		("error", this.error, this);
 		this.registration.on("error", this.error, this);
 
 		// TODO: вынести отсюда qst.navigate
-		this.registration.on("registration:pending", function (user_obj) {
-			qst.navigate("/confirmation/"+user_obj.login, {trigger: true});
-		}, this);
+		// this.registration.on("registration:pending", function (user_obj) {
+		// 	qst.navigate("/confirmation/"+user_obj.login, {trigger: true});
+		// }, this);
 		this.registration.on("registration:success", function () {
 			// qst.navigate("/findfriends");
 			qst.navigate("/", {trigger: true});
 		}, this);
 
 		qst.on("auth:show", function (options) {
+			console.log("auth:show");
+			this.view = new qst.AuthView({model: this});
 			this.trigger("auth:show", options)
 		}, this)
 
@@ -47,8 +47,6 @@ qst.Auth = Backbone.Model.extend({
 			this.logout();
 		}, this)
 
-		this.view = new qst.AuthView({model: this});
-		this.view.render();
 	},
 
 	authSuccess: function(user_obj) {
@@ -58,11 +56,6 @@ qst.Auth = Backbone.Model.extend({
 	},
 
 	logout: function(){
-		// $.ajax({
-		// 	type: 'GET',
-		// 	url: _.toSafeUrl(this.url_logout),
-		// 	dataType: 'json'
-		// });
 		this.trigger("auth:clear");
 	},
 

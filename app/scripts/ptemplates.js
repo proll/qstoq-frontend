@@ -1008,100 +1008,31 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</span></a></li>\n			</ul>\n		</div>\n		<div class=\"auth__sign\">\n			<span class=\"auth__toggler\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "or ", "auth", options) : helperMissing.call(depth0, "_", "or ", "auth", options)))
-    + " <a href=\"signup\" class=\"auth__toggler-signup\">";
+    + " <a href=\"signup\" class=\"auth__toggler-lnk auth__toggler-signup\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "signup", "auth", options) : helperMissing.call(depth0, "_", "signup", "auth", options)))
-    + "</a></span>\n			<h2 class=\"auth__login-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sign up", "auth", options) : helperMissing.call(depth0, "_", "sign up", "auth", options)))
+    + "</a>\n			<a href=\"signin\" class=\"auth__toggler-lnk auth__toggler-signin\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "log in by e-mail", "auth", options) : helperMissing.call(depth0, "_", "log in by e-mail", "auth", options)))
+    + "</a>\n			</span>\n			<h2 class=\"auth__signin-h\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in by e-mail", "auth", options) : helperMissing.call(depth0, "_", "Log in by e-mail", "auth", options)))
-    + "</h2>\n			<div class=\"qst__inp-group\">\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+    + "</h2>\n			<h2 class=\"auth__signup-h\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Sign up", "auth", options) : helperMissing.call(depth0, "_", "Sign up", "auth", options)))
+    + "</h2>\n			<form action=\"/auth\" >\n				<div class=\"qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<label>\n							<span class=\"qst__lbl\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-mail", "auth", options) : helperMissing.call(depth0, "_", "E-mail", "auth", options)))
-    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input type=\"text\" class=\"qst__inp\" name=\"email\" value=\"\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+    + "</span>\n							<div class=\"qst__inp-cont-in\">\n								<input type=\"text\" class=\"qst__inp\" name=\"email\" value=\"\">\n							</div>\n						</label>\n					</div>\n					<div class=\"qst__inp-cont\">\n						<label>\n							<span class=\"qst__lbl\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Name", "auth", options) : helperMissing.call(depth0, "_", "Name", "auth", options)))
-    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input type=\"text\" class=\"qst__inp\" name=\"name\" value=\"\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+    + "</span>\n							<div class=\"qst__inp-cont-in\">\n								<input type=\"text\" class=\"qst__inp\" name=\"name\" value=\"\">\n							</div>\n						</label>\n					</div>\n					<div class=\"qst__inp-cont\">\n						<label>\n							<span class=\"qst__lbl\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Password", "auth", options) : helperMissing.call(depth0, "_", "Password", "auth", options)))
-    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input type=\"password\" class=\"qst__inp\" name=\"password\" value=\"\">\n						</div>\n					</label>\n				</div>\n			</div>\n			<div class=\"auth__user-agreement\">\n				";
+    + "</span>\n							<div class=\"qst__inp-cont-in\">\n								<input type=\"password\" class=\"qst__inp\" name=\"password\" value=\"\">\n							</div>\n						</label>\n					</div>\n				</div>\n				<div class=\"auth__user-agreement\">\n					";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "I admit <a href=\"/docs/user_agreement.html\" target=\"_blank\">user agreement</a>", "auth", options) : helperMissing.call(depth0, "_", "I admit <a href=\"/docs/user_agreement.html\" target=\"_blank\">user agreement</a>", "auth", options)))
-    + "\n			</div>\n		</div>\n	</div>\n</div>\n\n\n\n\n<div class=\"auth-popup_close\"></div>\n<div id=\"auth-popup_container\">\n	<div id=\"auth-popup_login\">\n		<div class=\"header\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in", "auth", options) : helperMissing.call(depth0, "_", "Log in", "auth", options)))
-    + "</div>\n		<div id=\"auth-popup_services\">\n			<div class=\"login-via-fb\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Facebook", "auth", options) : helperMissing.call(depth0, "_", "Facebook", "auth", options)))
-    + "</div>\n			<div class=\"login-via-tw\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Twitter", "auth", options) : helperMissing.call(depth0, "_", "Twitter", "auth", options)))
-    + "</div>\n			<div class=\"login-via-vk\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "VKontakte", "auth", options) : helperMissing.call(depth0, "_", "VKontakte", "auth", options)))
-    + "</div>\n			<div class=\"login-via-email\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-mail", "auth", options) : helperMissing.call(depth0, "_", "E-mail", "auth", options)))
-    + "</div>\n		</div>\n	</div>\n\n	<div class=\"auth-popup__registration\">\n		<h2 class=\"header\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Register by e-mail", "auth", options) : helperMissing.call(depth0, "_", "Register by e-mail", "auth", options)))
-    + "</h2>\n		<form class=\"auth-popup__form\">\n			<input type=\"email\" name=\"email0\" id=\"registration-email0\" placeholder=\"";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-mail", "auth", options) : helperMissing.call(depth0, "_", "E-mail", "auth", options)))
-    + "\">\n			<input type=\"password\" name=\"password0\" id=\"registration-password0\" placeholder=\"";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Password", "auth", options) : helperMissing.call(depth0, "_", "Password", "auth", options)))
-    + "\">\n			<div class=\"clearfix\"></div>\n		<div class=\"auth-popup__registration_next\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Sign up", "auth", options) : helperMissing.call(depth0, "_", "Sign up", "auth", options)))
-    + "<i class=\"icn icn-arrow-medium_right\"></i></div>\n			<input type=\"submit\" class=\"inv\">\n		</form>\n		<div class=\"auth-error auth-popup__registration-error\"></div>\n	</div>\n\n	<div class=\"auth-popup__registration-names\">\n		<div class=\"auth-popup__registration-names_dummy\">\n			<div class=\"dummy\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in", options) : helperMissing.call(depth0, "_", "Log in", options)))
-    + "</div>\n			<div class=\"clearfix\"></div>\n			<div class=\"dummy\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Facebook", "auth", options) : helperMissing.call(depth0, "_", "Facebook", "auth", options)))
-    + "</div>\n			<div class=\"dummy\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Twitter", "auth", options) : helperMissing.call(depth0, "_", "Twitter", "auth", options)))
-    + "</div>\n			<div class=\"dummy\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "VKontakte", "auth", options) : helperMissing.call(depth0, "_", "VKontakte", "auth", options)))
-    + "</div>\n			<div class=\"dummy\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-mail", "auth", options) : helperMissing.call(depth0, "_", "E-mail", "auth", options)))
-    + "</div>\n		</div>\n\n		<div class=\"back-header auth-popup__registration_back\"><i class=\"icn icn-arrow-medium_left\"></i>";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-mail &amp; password", "auth", options) : helperMissing.call(depth0, "_", "E-mail &amp; password", "auth", options)))
-    + "</div>\n\n		<div class=\"header\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Account information", "auth", options) : helperMissing.call(depth0, "_", "Account information", "auth", options)))
-    + "</div>\n		<form  class=\"auth-popup__form\">\n			<input type=\"text\" name=\"first_name0\" id=\"registration-first_name0\" placeholder=\"";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "First name", "auth", options) : helperMissing.call(depth0, "_", "First name", "auth", options)))
-    + "\" maxlength=\"32\">\n			<input type=\"text\" name=\"last_name0\" id=\"registration-last_name0\" placeholder=\"";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Last name", "auth", options) : helperMissing.call(depth0, "_", "Last name", "auth", options)))
-    + "\" maxlength=\"32\">\n			<div class=\"clearfix\"></div>\n			<div class=\"auth-popup__registration_ok\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Sign up", "auth", options) : helperMissing.call(depth0, "_", "Sign up", "auth", options)))
-    + "<i class=\"icn icn-arrow-medium_right\"></i></div>\n			<input type=\"submit\" class=\"inv\">\n		</form>\n		<div class=\"auth-error auth-popup__registration-names-error\"></div>\n	</div>\n\n\n	<div class=\"auth-popup__login-email\">\n		<div class=\"back-header auth-popup__login-email_back\"><i class=\"icn icn-arrow-medium_left\"></i>";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in / sign up", "auth", options) : helperMissing.call(depth0, "_", "Log in / sign up", "auth", options)))
-    + "</div>\n		<h2 class=\"header\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in by e-mail", "auth", options) : helperMissing.call(depth0, "_", "Log in by e-mail", "auth", options)))
-    + "</h2>\n		<form action=\"/api/auth/\" class=\"auth-popup__form\">\n			<input type=\"email\" name=\"email\" id=\"login-email\" placeholder=\"";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-mail", "auth", options) : helperMissing.call(depth0, "_", "E-mail", "auth", options)))
-    + "\">\n			<div class=\"clearfix\"></div>\n			<input type=\"password\" name=\"password\" id=\"login-password\" placeholder=\"";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Password", "auth", options) : helperMissing.call(depth0, "_", "Password", "auth", options)))
-    + "\">\n			<a class=\"auth-popup__login-email_forgot\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Forgot?", "auth", options) : helperMissing.call(depth0, "_", "Forgot?", "auth", options)))
-    + "</a>\n			<div class=\"clearfix\"></div>\n			<div type=\"submit\" class=\"auth-popup__login-email_ok\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in", "auth", options) : helperMissing.call(depth0, "_", "Log in", "auth", options)))
-    + "<i class=\"icn icn-arrow-medium_right\"></i></div>\n			<input type=\"submit\" class=\"inv\">\n		</form>\n		<div class=\"auth-error auth-popup__login-error\"></div>\n	</div>\n\n\n\n</div>";
+    + "\n				</div>\n				<input type=\"submit\" class=\"hidden\">\n			</form>\n		</div>\n	</div>\n</div>";
   return buffer;
   });
 

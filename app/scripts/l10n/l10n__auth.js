@@ -43,9 +43,14 @@ qst.l10n.auth = {
 		ru: 'или',
 	},
 
-	'signup': {
-		en: 'signup',
+	'sign up': {
+		en: 'sign up',
 		ru: 'зарегистрироваться',
+	},
+
+	'log in by e-mail': {
+		en: 'log in by e-mail',
+		ru: 'войти по e-mail',
 	},
 
 	'Log in by e-mail': {
@@ -56,6 +61,11 @@ qst.l10n.auth = {
 	'I admit <a href="/docs/user_agreement.html" target="_blank">user agreement</a>': {
 		en: 'I admit <a href="/docs/user_agreement.html" target="_blank">user agreement</a>',
 		ru: 'Регистрируясь, вы принимаете условия  <a href="/docs/user_agreement.html" target="_blank">пользовательского соглашения</a>'
+	},
+
+	'Sign up': {
+		en: 'Sign up',
+		ru: 'Зарегистрироваться',
 	},
 
 	// 'Register by e-mail': {

@@ -1,7 +1,7 @@
 qst.AuthView = Backbone.View.extend({
-	el: ".auth-popup",
 	template: "popups/auth",
 	rendered: false,
+	className: 'auth',
 
 	events: {
 		"click .auth-popup_close": "hide",
@@ -12,9 +12,9 @@ qst.AuthView = Backbone.View.extend({
 		"click :input": 	"errorInputUnmark",
 
 		// clicks to social
-		"click .login-via-fb"	: "loginFB",
-		"click .login-via-tw"	: "loginTW",
-		"click .login-via-vk"	: "loginVK",
+		"click .auth__social-item-vk"	: "loginVK",
+		"click .auth__social-item-fb"	: "loginFB",
+		// "click .auth__social-item-tw"	: "loginTW",
 
 		// login form
 		"click .login-via-email": 				"showLoginByEmailForm",
@@ -41,46 +41,54 @@ qst.AuthView = Backbone.View.extend({
 
 	initialize: function(options){
 		this.template = qst.Templates.get(this.template);
+
+		this.model.on("auth:show", this.render, this);
+		this.model.on("auth:success", this.remove, this);
 	},
 
 	render: function(){
-		if (!this.rendered) {
-			this.rendered = true;
-			this.$el.append( this.template(this.model.toJSON()));
-			this.$login_email_container = 	this.$el.find(".auth-popup__login-email");
-			this.$login_email_form = 	this.$el.find(".auth-popup__login-email form");
-			this.$login_email_forget = 	this.$el.find(".auth-popup__login-email_forgot");
-			this.$login_email_ok = 		this.$el.find(".auth-popup__login-email_ok");
-			this.$login_email = 	this.$login_email_form.find("#login-email");
-			this.$login_password = 	this.$login_email_form.find("#login-password");
-			this.$login_error = 	this.$el.find(".auth-popup__login-error");
+		this.rendered = true;
+		this.$el.append( this.template(this.model.toJSON()));
 
-			this.on("error:signin", this.errorSignin, this);
-			this.model.signin.on("error", this.errorSignin, this);
-
-			this.$registration_form = 	this.$el.find(".auth-popup__registration form");
-			this.$registration_email = 	this.$registration_form.find("#registration-email0");
-			this.$registration_password = 	this.$registration_form.find("#registration-password0");
-			this.$registration_error = 	this.$el.find(".auth-popup__registration-error");
-
-			this.$registration_step2_container  = 	this.$el.find(".auth-popup__registration-names");
-			this.$registration_step2_form  = 		this.$el.find(".auth-popup__registration-names form");
-			this.$registration_first_name = 		this.$registration_step2_form.find("#registration-first_name0");
-			this.$registration_last_name = 			this.$registration_step2_form.find("#registration-last_name0");
-			this.$registration_step2_error = 		this.$el.find(".auth-popup__registration-names-error");
-
-			this.on("error:registration", 		this.errorRegistration, this);
-			this.on("error:registration:step2", this.errorRegistrationStep2, this);
-			this.model.registration.on("error", this.errorRegistrationStep2, this);
+		this.popup_view = new qst.PopupView({class: "auth-popup"});
+		this.popup_view.on('hide', this.remove, this);
+		this.popup_view.setContent(this.$el);
+		this.popup_view.show();
 
 
-			this.model.on("auth:success",						this.hide, this);
-			this.model.registration.on("registration:pending", 	this.hide, this);
-
-			this.model.on("auth:show", this.show, this);
-		}
+		this.$cont 			= this.$el.find('.auth__cont');
+		this.$sign_toggler 	= this.$el.find('.auth__toggler');
 
 
+
+		this.$login_email_container = 	this.$el.find(".auth-popup__login-email");
+		this.$login_email_form = 	this.$el.find(".auth-popup__login-email form");
+		this.$login_email_forget = 	this.$el.find(".auth-popup__login-email_forgot");
+		this.$login_email_ok = 		this.$el.find(".auth-popup__login-email_ok");
+		this.$login_email = 	this.$login_email_form.find("#login-email");
+		this.$login_password = 	this.$login_email_form.find("#login-password");
+		this.$login_error = 	this.$el.find(".auth-popup__login-error");
+
+		this.on("error:signin", this.errorSignin, this);
+		this.model.signin.on("error", this.errorSignin, this);
+
+		this.$registration_form = 	this.$el.find(".auth-popup__registration form");
+		this.$registration_email = 	this.$registration_form.find("#registration-email0");
+		this.$registration_password = 	this.$registration_form.find("#registration-password0");
+		this.$registration_error = 	this.$el.find(".auth-popup__registration-error");
+
+		this.$registration_step2_container  = 	this.$el.find(".auth-popup__registration-names");
+		this.$registration_step2_form  = 		this.$el.find(".auth-popup__registration-names form");
+		this.$registration_first_name = 		this.$registration_step2_form.find("#registration-first_name0");
+		this.$registration_last_name = 			this.$registration_step2_form.find("#registration-last_name0");
+		this.$registration_step2_error = 		this.$el.find(".auth-popup__registration-names-error");
+
+		this.on("error:registration", 		this.errorRegistration, this);
+		this.on("error:registration:step2", this.errorRegistrationStep2, this);
+		this.model.registration.on("error", this.errorRegistrationStep2, this);
+
+
+		this.model.registration.on("registration:pending", 	this.hide, this);
 	},
 
 	show: function (options) {
@@ -324,5 +332,14 @@ qst.AuthView = Backbone.View.extend({
 	},
 	errorInputUnmark: function (e) {
 		this.$el.find(":input").toggleClass("input_error", false)
+	},
+
+	remove: function(options) {
+		this.model.off(null, null, this);
+		this.popup_view.remove();
+		delete this.popup_view;
+		// this.model.clear({silent: true});
+		return Backbone.View.prototype.remove.call(this, options);
+		return false;
 	}
 });

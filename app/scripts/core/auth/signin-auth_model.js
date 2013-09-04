@@ -55,6 +55,6 @@ qst.Signin = Backbone.Model.extend({
 	},
 
 	error : function(e) {
-		this.trigger("error", {description:"Something went wrong"});
+		this.trigger("error", {description:qst.localize('Something went wrong','misc')});
 	}
 });
