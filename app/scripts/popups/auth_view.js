@@ -7,41 +7,22 @@ qst.AuthView = Backbone.View.extend({
 
 		'click .auth__sign-toggler-lnk': 'toggleSign',
 		
+		// clicks to social
+		"click .auth__social-item-lnk_vk"	: "loginVK",
+		"click .auth__social-item-lnk_fb"	: "loginFB",
+		// "click .auth__social-item-lnk_tw"	: "loginTW",
 
 		
-		"click .auth-popup_close": "hide",
-		"click .auth-popup__login-email_forgot": 'toReset',
+		'click .auth__close': 'remove',
+		// "click .auth-popup__login-email_forgot": 'toReset',
 
 		// unmark all error inputs 
-		"keypress :input": 	"errorInputUnmark",
-		"click :input": 	"errorInputUnmark",
+		'keypress': 'hideErrors',
+		'click': 	'hideErrors',
 
-		// clicks to social
-		"click .auth__social-item-vk"	: "loginVK",
-		"click .auth__social-item-fb"	: "loginFB",
-		// "click .auth__social-item-tw"	: "loginTW",
 
-		// login form
-		"click .login-via-email": 				"showLoginByEmailForm",
-		"click .auth-popup__login-email_back": 	"hideLoginByEmailForm",
-		"click .auth-popup__login-email_ok": 	"postSigninForm",
-		"submit .auth-popup__login-email>form": "postSigninForm",
-
-		"keyup #login-email": 	"switchPostButton",
-		"keyup #login-password": "switchForgotPassword",
-
-		// registration form
-		"keyup #registration-email0": 				"errorRegistrationHide",
-		"keyup #registration-password0": 			"errorRegistrationHide",
-		"click 	.auth-popup__registration_next": 	"registrationNext",
-		"submit .auth-popup__registration>form": 	"registrationNext",
-
-		"click 	.auth-popup__registration_back": 		"hideRegistrationStep2Form",
-
-		"keyup #registration-first_name0": 				"errorRegistrationStep2Hide",
-		"keyup #registration-last_name0": 				"errorRegistrationStep2Hide",
-		"click 	.auth-popup__registration_ok": 			"postRegistrationForm",
-		"submit .auth-popup__registration-names>form": 	"postRegistrationForm",
+		"submit .auth__sign-form": "submit",
+		'click .auth__sign-submit-a': 'submitForm',
 	},
 
 	initialize: function(options){
@@ -66,35 +47,22 @@ qst.AuthView = Backbone.View.extend({
 
 
 
-		this.$login_email_container = 	this.$el.find(".auth-popup__login-email");
-		this.$login_email_form = 	this.$el.find(".auth-popup__login-email form");
-		this.$login_email_forget = 	this.$el.find(".auth-popup__login-email_forgot");
-		this.$login_email_ok = 		this.$el.find(".auth-popup__login-email_ok");
-		this.$login_email = 	this.$login_email_form.find("#login-email");
-		this.$login_password = 	this.$login_email_form.find("#login-password");
-		this.$login_error = 	this.$el.find(".auth-popup__login-error");
+		this.$form = 			this.$el.find(".auth__sign-form");
+		this.$input_email = 	this.$form.find('input[name=email]');
+		this.$input_name = 		this.$form.find('input[name=name]');
+		this.$input_password = 	this.$form.find('input[name=password]');
+		this.$error = 			this.$form.find('.auth__sign-submit-error');
 
-		this.on("error:signin", this.errorSignin, this);
+
+
 		this.model.signin.on("error", this.errorSignin, this);
-
-		this.$registration_form = 	this.$el.find(".auth-popup__registration form");
-		this.$registration_email = 	this.$registration_form.find("#registration-email0");
-		this.$registration_password = 	this.$registration_form.find("#registration-password0");
-		this.$registration_error = 	this.$el.find(".auth-popup__registration-error");
-
-		this.$registration_step2_container  = 	this.$el.find(".auth-popup__registration-names");
-		this.$registration_step2_form  = 		this.$el.find(".auth-popup__registration-names form");
-		this.$registration_first_name = 		this.$registration_step2_form.find("#registration-first_name0");
-		this.$registration_last_name = 			this.$registration_step2_form.find("#registration-last_name0");
-		this.$registration_step2_error = 		this.$el.find(".auth-popup__registration-names-error");
-
-		this.on("error:registration", 		this.errorRegistration, this);
-		this.on("error:registration:step2", this.errorRegistrationStep2, this);
-		this.model.registration.on("error", this.errorRegistrationStep2, this);
+		this.model.registration.on("error", this.errorSignup, this);
 		// this.model.registration.on("registration:pending", 	this.hide, this);
 
 
 		this.toggleSign();
+
+		this.$input_email.focus();
 	},
 
 
@@ -117,48 +85,100 @@ qst.AuthView = Backbone.View.extend({
 	},
 
 
+	submitForm: function(e) {
+		this.$form.submit();
+		return false;
+	},
 
+	submit: function (e) {
+		e.preventDefault();
+		e.stopPropagation();
 
-
-
-
-
-	show: function (options) {
-		this.$el.toggleClass("hide", false);
-		if(!!options && options.email) {
-			this.$registration_email.val(options.email);
-			this.$registration_email.focus()
+		var email = 	$.trim(this.$input_email.val()),
+			name = 		$.trim(this.$input_name.val()),
+			password = 	$.trim(this.$input_password.val());
+		// validation
+		if(this.model.get('state') === 'signin') {
+			if(!_.isEmail(email)) {
+				this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
+			} else if (_.isEmpty(password)){
+				this.showError(qst.localize('Do you have an empty password?', 'auth'), 'password')
+			} else {
+				this.model.signin.login({
+					login: 		email, 
+					password: 	password
+				});
+			}
+		} else {
+			if(!_.isEmail(email)) {
+				this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
+			} else if (_.isEmpty(name)){
+				this.showError(qst.localize('Please enter your name', 'auth'), 'name')
+			} else if (_.isEmpty(password)){
+				this.showError(qst.localize('Please use not an empty password', 'auth'), 'password')
+			} else {
+				this.model.registration.fetch({
+					login: 		email, 
+					password: 	password,
+					name: name,
+				});
+			}
 		}
 		return false;
 	},
 
-	toReset: function() {
-		this.hide();
-		qst.navigate('/reset',{trigger: true});
-		return false;	
+	errorSignin: function(error) {
+		if(error.description === 'Unauthorized') {
+			this.showError(qst.localize('Wrong e-mail and password combination :(', 'auth'), 'email')
+		} else {
+			this.showError(qst.localize('Something went wrong...', 'misc'), 'email')
+		}
 	},
 
-	hide: function () {
-		this.$el.toggleClass("hide", true);
-		this.clear();
-		return false;
+	errorSignup: function(error) {
+		if(error.description === 'Unauthorized') {
+			this.showError(qst.localize('Wrong e-mail and password combination :(', 'auth'), 'email')
+		} else {
+			this.showError(qst.localize('Something went wrong...', 'misc'), 'email')
+		}
 	},
+
+
+
+	showError: function(txt, input_name) {
+		this.$error.html(txt);
+		this.$el.toggleClass('error', true);
+		switch(input_name) {
+			case 'email': 
+				this.$input_email.parents('.qst__inp-cont').toggleClass('error-inp', true);
+				this.$input_email.focus();
+				break;
+			case 'name': 
+				this.$input_name.parents('.qst__inp-cont').toggleClass('error-inp', true);
+				this.$input_name.focus();
+				break;
+			case 'password': 
+				this.$input_password.parents('.qst__inp-cont').toggleClass('error-inp', true);
+				this.$input_password.focus();
+				break;
+		}
+	},
+	
+	hideErrors: function() {
+		this.$el.toggleClass('error', false);
+		this.$el.find('.error-inp').toggleClass('error-inp', false);
+	},
+
+
+
+
+
 
 	clear: function() {
-		this.$login_email.val('');
-		this.$login_password.val('');
-		this.$registration_email.val('');
-		this.$registration_password.val('');
-		this.$registration_first_name.val('');
-		this.$registration_last_name.val('');
-
-		this.switchForgotPassword();
-		this.hideLoginByEmailForm();
-		this.switchPostButton();
-		this.hideRegistrationStep2Form();
-
-		this.errorSigninHide();
-		this.errorRegistrationHide();
+		this.hideErrors();
+		this.$input_email.val('');
+		this.$input_name.val('');
+		this.$input_password.val('');
 	},
 
 
@@ -178,196 +198,10 @@ qst.AuthView = Backbone.View.extend({
 		return false;
 	},
 
-
-	// Login by email
-	showLoginByEmailForm: function (e) {
-		this.$login_email_container.fadeIn();
-		this.$login_email.focus();
-		if(!_.isEmpty(this.$login_email.val())) {
-			this.switchPostButton(
-				{
-					target:{
-						value: 'hack'
-					}
-				}
-			);
-		}
-		return false;
-	},
-
-	hideLoginByEmailForm: function (e) {
-		this.$login_email_container.fadeOut();
-		return false;
-	},
-
-	switchForgotPassword: function (e) {
-		this.errorSigninHide(e);
-		if (!!e && e.target.value) {
-			this.$login_email_forget.fadeIn();
-		} else {
-			this.$login_email_forget.fadeOut();
-		}
-	},
-
-	switchPostButton: function (e) {
-		this.errorSigninHide(e);
-		if (!!e && e.target.value) {
-			this.$login_email_ok.fadeIn();
-		} else {
-			this.$login_email_ok.fadeOut();
-		}
-	},
-
-	postSigninForm: function (e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		var login = 	this.$login_email.val(),
-			password = 	this.$login_password.val();
-		// validation
-		if(!_.isEmail(login)) {
-			this.trigger("error:signin", {type: "login", description:qst.localize("Doesn#39;t look like a valid email!", 'auth')})
-		} else if (!password){
-			this.trigger("error:signin", {type: "password", description:qst.localize("Do you have an empty password?", 'auth')})
-		} else {
-			this.model.signin.login(
-				{
-					login: 		login, 
-					password: 	password
-				});
-		}
-		return false;
-	},
-
-	errorSignin: function(err) {
-		if(err.type == "password") {
-			this.$login_password.focus();
-		} else  {
-			this.$login_email.focus();
-		}
-		this.$login_error.html(err.description);
-		this.$login_error.fadeIn();
-	},
-
-	errorSigninHide: function (e) {
-		if(!!e && !!e.keyCode && e.keyCode == 13) return false;
-		this.$login_error.hide();
-		return false;
-	},
-
-
-	// Registration
-	registrationNext: function (e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		var login = 	this.$registration_email.val(),
-			password = 	this.$registration_password.val();
-		// validation
-		if(!_.isEmail(login)) {
-			this.trigger("error:registration", {type: "login", description:qst.localize("Doesn&#39;t look like a valid email!", 'auth')})
-		} else if (password.length < 6){
-			this.trigger("error:registration", {type: "password", description:qst.localize("Please use at least 6 characters", 'auth')})
-		} else if (password.length > 16){
-			this.trigger("error:registration", {type: "password", description:qst.localize("You can&#39;t use more than 16 characters", 'auth')})
-		} else {
-			this.showRegistrationStep2Form();
-		}
-		return false;
-	},
-
-	showRegistrationStep2Form: function (e) {
-		this.$registration_step2_container.fadeIn();
-		this.$registration_first_name.focus();
-		return false;
-	},
-
-	hideRegistrationStep2Form: function (e) {
-		this.errorRegistrationStep2Hide(e)
-		this.$registration_step2_container.fadeOut();
-		return false;
-	},
-
-	errorRegistration: function(err) {
-		if(err.type == "password") {
-			this.errorInputMark(this.$registration_password);
-			this.$registration_password.focus();
-		} else  {
-			this.errorInputMark(this.$registration_email);
-			this.$registration_email.focus();
-		}
-		console.log(err.description)
-		this.$registration_error.html(err.description);
-		this.$registration_error.fadeIn();
-	},
-
-	errorRegistrationHide: function (e) {
-		if(!!e && !!e.keyCode && e.keyCode == 13) return false;
-		this.$registration_error.hide();
-		return false;
-	},
-
-
-
-	postRegistrationForm: function (e) {
-		e.preventDefault();
-		e.stopPropagation();
-
-		var login = 	this.$registration_email.val(),
-			password = 	this.$registration_password.val(),
-			first_name = 	this.$registration_first_name.val(),
-			last_name = 	this.$registration_last_name.val();
-		// validation
-		// with validating email and password justfor sure
-		if(!_.isEmail(login)) {
-			this.trigger("error:registration:step2", {type: "login", description:qst.localize("Doesn&#39;t look like a valid email!", 'auth')});
-		} else if (password.length < 6){
-			this.trigger("error:registration:step2", {type: "password", description:qst.localize("Please use at least 6 characters", 'auth')});
-		} else if (password.length > 16){
-			this.trigger("error:registration:step2", {type: "password", description:qst.localize("You can&#39;t use more than 16 characters", 'auth')});
-		} else if (!first_name) {
-			this.trigger("error:registration:step2", {type: "first_name", description:qst.localize("Enter your first name", 'auth')});
-		} else if (!last_name) {
-			this.trigger("error:registration:step2", {type: "last_name", description:qst.localize("Enter your last name", 'auth')});
-		} else {
-			this.model.registration.fetch(
-				{
-					login: 		login, 
-					password: 	password,
-					first_name: first_name,
-					last_name: 	last_name
-				});
-		}
-		return false;
-	},
-
-	errorRegistrationStep2: function(err) {
-		if(err.type == "first_name") {
-			this.errorInputMark(this.$registration_first_name);
-			this.$registration_first_name.focus();
-		} else if(err.type == "last_name") {
-			this.errorInputMark(this.$registration_last_name);
-			this.$registration_last_name.focus();
-		}
-		this.$registration_step2_error.html(err.description);
-		this.$registration_step2_error.fadeIn();
-	},
-
-	errorRegistrationStep2Hide: function (e) {
-		if(!!e && !!e.keyCode && e.keyCode == 13) return false;
-		this.$registration_step2_error.hide();
-		return false;
-	},
-
-	errorInputMark: function ($el) {
-		$el.toggleClass("input_error", true)
-	},
-	errorInputUnmark: function (e) {
-		this.$el.find(":input").toggleClass("input_error", false)
-	},
-
 	remove: function(options) {
 		this.model.off(null, null, this);
+		this.model.signin.off(null, null, this);
+		this.model.registration.off(null, null, this);
 		this.popup_view.remove();
 		delete this.popup_view;
 		// this.model.clear({silent: true});

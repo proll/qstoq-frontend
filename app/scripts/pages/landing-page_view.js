@@ -12,71 +12,71 @@ qst.LandingPageView = qst.PageView.extend({
 
 
 	render: function(){
-		// if (this.renderedHtml) {
-		// 	this.$el.append(this.renderedHtml);
-		// } else {
-		// 	var tmpDiv = $('<div></div>')
-		// 		.addClass('page-' + this.model.get('name'))
-		// 		.html(this.template(this.model.toJSON()));
-		// 	this.trigger("page:preRender", tmpDiv);
-		// 	this.$el.html(tmpDiv);
-		// }
+		if (this.renderedHtml) {
+			this.$el.append(this.renderedHtml);
+		} else {
+			var tmpDiv = $('<div></div>')
+				.addClass('page-' + this.model.get('name'))
+				.html(this.template(this.model.toJSON()));
+			this.trigger("page:preRender", tmpDiv);
+			this.$el.html(tmpDiv);
+		}
 
 
-		// $('body').attr('class', 'body__page-' + this.model.get('name'));
+		$('body').attr('class', 'body__page-' + this.model.get('name'));
 
-		// /**
-		//  * описываем в модели метод enterDocument
-		//  * выполнится после того как page отрисован
-		//  */
-		// this.model.enterDocument();
-		// this.trigger("page:render", this.model);
-		// this.trigger("enterDocument", this.model);
-
-
-		// this.$window.on('resize.landing.page', _.bind(this.repositionPage, this));
-		// this.$sec1 = this.$el.find('.landing-section1');
-		// this.$secs = this.$el.find('.landing-section');
-		// this.$sec5 = this.$el.find('.landing-section5');
-		// this.$fake_input = this.$el.find('.fake-input');
-		// this.$real_input = this.$el.find('.landing-signup__inp');
+		/**
+		 * описываем в модели метод enterDocument
+		 * выполнится после того как page отрисован
+		 */
+		this.model.enterDocument();
+		this.trigger("page:render", this.model);
+		this.trigger("enterDocument", this.model);
 
 
-		// this.repositionPage();
-		// if(_.isPhone()) {
-		// 	$('html, body').animate({
-		// 		 scrollTop: 0
-		// 	 }, 100);
-		// }
+		this.$window.on('resize.landing.page', _.bind(this.repositionPage, this));
+		this.$sec1 = this.$el.find('.landing-section1');
+		this.$secs = this.$el.find('.landing-section');
+		this.$sec5 = this.$el.find('.landing-section5');
+		this.$fake_input = this.$el.find('.fake-input');
+		this.$real_input = this.$el.find('.landing-signup__inp');
 
 
-		// // var that = this;
-		// // setTimeout(function(){
-		// 	// var image = new Image();
-		// 	// image.onload = _.bind(that.onSection1ImgLoad, that);
-		// 	// $(image).toggleClass('silent-image')
-		// 	// 		.appendTo('body')
-		// 	// image.src = '/images/st/land-bg0_md.jpg';
+		this.repositionPage();
+		if(_.isPhone()) {
+			$('html, body').animate({
+				 scrollTop: 0
+			 }, 100);
+		}
 
-		// // }, 3000)
-		// if(!_.isPhone()) {
-		// 	var that = this;
-		// 	// setTimeout(function(){
-		// 		that.section1ImgLoadFinish();
-		// 	// }, 2000)
-		// } else {
-		// 	// PRELOAD HACK From 500px.com
-		// 	// this.$imgs1 = $('body').find('.silent-image');
-		// 	// if(this.$imgs1.length) {
-		// 	// 	this.section1ImgLoadFinish();
-		// 	// } else {
-		// 	// 	this.$imgs1 = $('<img src="/images/st/land-bg0_md.jpg" class="silent-image">').appendTo('body');
-		// 	// 	this.img_interval = setInterval(_.bind(this.section1ImgLoadCheck, this), 1000);
-		// 	// }
-		// 	var image = new Image();
-		// 	image.onload = _.bind(this.section1ImgLoadFinish, this);
-		// 	image.src = '/images/st/land-bg0_md.jpg';
-		// }
+
+		// var that = this;
+		// setTimeout(function(){
+			// var image = new Image();
+			// image.onload = _.bind(that.onSection1ImgLoad, that);
+			// $(image).toggleClass('silent-image')
+			// 		.appendTo('body')
+			// image.src = '/images/st/land-bg0_md.jpg';
+
+		// }, 3000)
+		if(!_.isPhone()) {
+			var that = this;
+			// setTimeout(function(){
+				that.section1ImgLoadFinish();
+			// }, 2000)
+		} else {
+			// PRELOAD HACK From 500px.com
+			// this.$imgs1 = $('body').find('.silent-image');
+			// if(this.$imgs1.length) {
+			// 	this.section1ImgLoadFinish();
+			// } else {
+			// 	this.$imgs1 = $('<img src="/images/st/land-bg0_md.jpg" class="silent-image">').appendTo('body');
+			// 	this.img_interval = setInterval(_.bind(this.section1ImgLoadCheck, this), 1000);
+			// }
+			var image = new Image();
+			image.onload = _.bind(this.section1ImgLoadFinish, this);
+			image.src = '/images/st/land-bg0_md.jpg';
+		}
 
 		this.delegateEvents();
 	},

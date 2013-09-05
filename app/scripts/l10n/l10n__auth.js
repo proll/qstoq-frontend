@@ -171,51 +171,67 @@ qst.l10n.auth = {
 	// 	zh: '登陆'
 	// },
 
-	'Doesn&#39;t look like a valid email!': {
+	'Doesn&#39;t look like a valid email': {
 		en: 'Doesn&#39;t look like a valid e-mail',
 		ru: 'Неправильный формат e-mail',
-		ko: '유효한 이메일이 아닙니다',
-		ja: '有効でないメールアドレスです',
-		zh: '不可用的电子邮件'
+		// ko: '유효한 이메일이 아닙니다',
+		// ja: '有効でないメールアドレスです',
+		// zh: '不可用的电子邮件'
+	},
+
+	'Please use not an empty password': {
+		en: 'Please use not an empty password',
+		ru: 'Пожалуйста введите пароль',
+		// ko: 'Do you have an empty password?',
+		// ja: 'Do you have an empty password?',
+		// zh: 'Do you have an empty password?'
 	},
 
 	'Do you have an empty password?': {
 		en: 'Do you have an empty password?',
-		ru: 'Do you have an empty password?',
-		ko: 'Do you have an empty password?',
-		ja: 'Do you have an empty password?',
-		zh: 'Do you have an empty password?'
+		ru: 'У Вас что пустой пароль?',
+		// ko: 'Do you have an empty password?',
+		// ja: 'Do you have an empty password?',
+		// zh: 'Do you have an empty password?'
 	},
 
-	'Please use at least 6 characters': {
-		en: 'Please use at least 6 characters',
-		ru: 'Используйте не менее 6 символов',
-		ko: '적어도 6자를 사용하십시오',
-		ja: '最低6文字使用して下さい',
-		zh: '请至少输入6个字符'
-	},
+	// 'Please use at least 6 characters': {
+	// 	en: 'Please use at least 6 characters',
+	// 	ru: 'Используйте не менее 6 символов',
+	// 	ko: '적어도 6자를 사용하십시오',
+	// 	ja: '最低6文字使用して下さい',
+	// 	zh: '请至少输入6个字符'
+	// },
 
-	'You can&#39;t use more than 16 characters': {
-		en: 'You can&#39;t use more than 16 characters',
-		ru: 'Вы можете использовать не более 16 символов',
-		ko: '16자 이상을 사용할 수 없습니다',
-		ja: '16文字以上の使用はできません',
-		zh: '不能超过16个字符'
-	},
+	// 'You can&#39;t use more than 16 characters': {
+	// 	en: 'You can&#39;t use more than 16 characters',
+	// 	ru: 'Вы можете использовать не более 16 символов',
+	// 	ko: '16자 이상을 사용할 수 없습니다',
+	// 	ja: '16文字以上の使用はできません',
+	// 	zh: '不能超过16个字符'
+	// },
 
-	'Enter your first name': {
-		en: 'Enter your first name',
+	'Please enter your name': {
+		en: 'Please enter your name',
 		ru: 'Введите имя',
-		ko: '이름 입력',
-		ja: '名を入力',
-		zh: '输入你的名字'
 	},
 
-	'Enter your last name': {
-		en: 'Enter your last name',
-		ru: 'Введите фамилию',
-		ko: '성 입력',
-		ja: '姓を入力',
-		zh: '输入你的姓氏'
-	}
+	// 'Enter your last name': {
+	// 	en: 'Enter your last name',
+	// 	ru: 'Введите фамилию',
+	// 	ko: '성 입력',
+	// 	ja: '姓を入力',
+	// 	zh: '输入你的姓氏'
+	// }
+
+
+	'Wrong e-mail and password combination :(': {
+		en: 'Wrong e-mail and password combination :(',
+		ru: 'Неверный e-mail или пароль',
+		// ko: '이메일과 비밀번호가 일치하지 않습니다',
+		// ja: 'メールアドレスとパスワードの組み合わせが間違っています。',
+		// zh: '电子邮件地址和密码错误',
+		// es: 'Combinación de e-mail y contraseña incorrecta',
+		// pt: 'Combinação incorreta de e-mail e senha'
+	},
 }

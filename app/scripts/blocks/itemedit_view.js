@@ -235,7 +235,7 @@ qst.ItemEditView = Backbone.View.extend({
 	},
 
 	updateShowcasePreview: function(model, uri) {
-		console.log(model, uri);
+		// console.log(model, uri);
 		if(!!uri) {
 			this.$showcase_img.data('orig', uri);
 			this.lazy_loader.load(this.$showcase);

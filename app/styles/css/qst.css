@@ -1237,17 +1237,17 @@ textarea::-webkit-input-placeholder {
   background-position: 0px -544px;
 }
 .qi {
-  background: url("/images/sprites/qi-53483.png") no-repeat 0 0;
+  background: url("/images/sprites/qi-6a8a2.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .qi {
-    background: url("/images/sprites/qi-2x-53483.png") no-repeat 0 0;
-    -webkit-background-size: 28px 259px;
-    -moz-background-size: 28px 259px;
-    -o-background-size: 28px 259px;
-    background-size: 28px 259px;
+    background: url("/images/sprites/qi-2x-6a8a2.png") no-repeat 0 0;
+    -webkit-background-size: 38px 298px;
+    -moz-background-size: 38px 298px;
+    -o-background-size: 38px 298px;
+    background-size: 38px 298px;
     vertical-align: text-top;
     display: inline-block;
   }
@@ -1262,55 +1262,60 @@ textarea::-webkit-input-placeholder {
   height: 14px;
   background-position: 0px -15px;
 }
+.qi-auth-close {
+  width: 38px;
+  height: 38px;
+  background-position: 0px -30px;
+}
 .qi-balance {
   width: 20px;
   height: 20px;
-  background-position: 0px -30px;
+  background-position: 0px -69px;
 }
 .qi-dclose {
   width: 14px;
   height: 14px;
-  background-position: 0px -51px;
+  background-position: 0px -90px;
 }
 .qi-del {
   width: 14px;
   height: 14px;
-  background-position: 0px -66px;
+  background-position: 0px -105px;
 }
 .qi-logout {
   width: 20px;
   height: 20px;
-  background-position: 0px -81px;
+  background-position: 0px -120px;
 }
 .qi-my-items {
   width: 20px;
   height: 20px;
-  background-position: 0px -102px;
+  background-position: 0px -141px;
 }
 .qi-profile {
   width: 20px;
   height: 20px;
-  background-position: 0px -123px;
+  background-position: 0px -162px;
 }
 .qi-share-fb {
   width: 28px;
   height: 28px;
-  background-position: 0px -144px;
+  background-position: 0px -183px;
 }
 .qi-share-link {
   width: 28px;
   height: 28px;
-  background-position: 0px -173px;
+  background-position: 0px -212px;
 }
 .qi-share-tw {
   width: 28px;
   height: 28px;
-  background-position: 0px -202px;
+  background-position: 0px -241px;
 }
 .qi-share-vk {
   width: 28px;
   height: 28px;
-  background-position: 0px -231px;
+  background-position: 0px -270px;
 }
 .ib {
   background: url("/images/sprites/ib-c5523.png") no-repeat 0 0;
@@ -2178,6 +2183,13 @@ textarea::-webkit-input-placeholder {
 .auth-popup .popup__close {
   display: none;
 }
+.auth__cont {
+  overflow: hidden;
+}
+.auth__close {
+  float: right;
+  cursor: pointer;
+}
 .auth__social {
   margin: 34px 40px 26px;
   padding-bottom: 30px;
@@ -2253,6 +2265,24 @@ textarea::-webkit-input-placeholder {
 .auth__sign .qst__inp-cont {
   padding: 12px 10px 13px;
 }
+.auth__sign .auth__sign-inp-name-cont {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 0;
+  padding: 0 10px 0;
+  border-width: 0;
+  overflow: hidden;
+}
+.auth__sign-submit-hidden {
+  font-size: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  line-height: 0;
+  visibility: hidden;
+}
 .auth__sign-submit {
   margin: 8px -40px 0;
   padding: 27px 40px 29px;
@@ -2319,9 +2349,6 @@ textarea::-webkit-input-placeholder {
 .signin .auth__sign-toggler_signup {
   display: static;
 }
-.signin .auth__sign-inp-name-cont {
-  display: none;
-}
 .signin .auth__sign-user-agreement {
   display: none;
 }
@@ -2344,7 +2371,9 @@ textarea::-webkit-input-placeholder {
   display: none;
 }
 .signup .auth__sign-inp-name-cont {
-  display: block;
+  height: 14px;
+  padding: 12px 10px 13px;
+  border-bottom: 1px solid #cecdcc;
 }
 .signup .auth__sign-user-agreement {
   display: block;

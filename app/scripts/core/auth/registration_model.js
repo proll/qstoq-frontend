@@ -15,40 +15,34 @@ qst.Registration = Backbone.Model.extend({
 			data: {
 				email : user_obj.login, 
 				password : user_obj.password,
-				name: user_obj.first_name + ' ' + user_obj.last_name,
+				name: user_obj.name,
 			}
 		})
 		.success(function(response, status, xhr){
 			that.success(response, status, xhr);
 		})
-		.error(function(response, status, xhr){
-			that.error(response, status, xhr);
+		.error(function(xhr, status, desc){
+			that.error(xhr, status, desc);
 		})
 	},
 
 	success: function(response, status, xhr){
 		var resp = _.toJSON(response);
 		if (!!resp) {
-			if (!resp.success) {
-				this.error();
-			// } else if(!!resp.state && resp.state == "PENDING_CONFIRMATION"){
-			// 	this.trigger("registration:pending", {login: this.get('login')});
-			} else {
-				this.trigger("auth:success", 
-					{
-						response: resp.result,
-						user: resp.result.user,
-						session:{ token: resp.result.token, uid: resp.result.user.id }
-					}
-				);
-				this.trigger("registration:success");
-			}
+			this.trigger("auth:success", 
+				{
+					response: resp.result,
+					user: resp.result.user,
+					session:{ token: resp.result.token, uid: resp.result.user.id }
+				}
+			);
+			this.trigger("registration:success");
 		} else {
-			this.error();
+			this.error(null, null, 'unknown');
 		}
 	},
 
-	error : function(e) {
-		this.trigger("error", {description:qst.localize('Something went wrong','misc')});
+	error : function(xhr, status, desc) {
+		this.trigger("error", {description: desc});
 	}
 });

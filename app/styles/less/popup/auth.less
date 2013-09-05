@@ -23,6 +23,14 @@
 	}
 }
 
+.auth__cont {
+	overflow: hidden;
+}
+
+.auth__close {
+	float: right;
+	cursor: pointer;
+}
 
 .auth__social {
 	margin: 34px 40px 26px;
@@ -104,6 +112,18 @@
 		.qst__inp-cont {
 			padding: 12px 10px 13px;
 		}
+
+		& &-inp-name-cont {
+			.transition(all .2s);
+			height: 0;
+			padding: 0 10px 0;
+			border-width: 0;
+			overflow: hidden;
+		}
+
+	&-submit-hidden {
+		.hidden-submit;
+	}
 
 	&-submit {
 		margin: 8px -40px 0;
@@ -187,9 +207,9 @@
 			}
 		}
 
-		&-inp-name-cont {
-			display: none;
-		}
+		// &-inp-name-cont {
+		// 	display: none;
+		// }
 
 		&-user-agreement {
 			display: none;
@@ -229,7 +249,9 @@
 		}
 
 		&-inp-name-cont {
-			display: block;
+			height: 14px;
+			padding: 12px 10px 13px;
+			border-bottom: 1px solid @grayLighter02;
 		}
 
 		&-user-agreement {
@@ -246,213 +268,3 @@
 		}
 	}
 }
-
-// 	.auth-arrow-right {
-// 		display: inline-block;
-// 		position: relative;
-// 		top: 3px;
-// 		.icn;
-// 		.icn-auth__arrow-right;
-// 	}
-// 	.auth-arrow-left {
-// 		display: inline-block;
-// 		position: relative;
-// 		top: 3px;
-// 		.icn;
-// 		.icn-auth__arrow-left;
-// 	}
-// 	.back-header {
-// 		display: block;
-// 		position: relative;
-// 		left: -25px;
-// 		color: #B3B3B3;
-// 		cursor: pointer;
-
-// 		.icn-arrow-medium_left {
-// 			margin-right: 14px;
-// 			vertical-align: middle;
-// 		}
-// 		&:hover {
-// 		color: #4D4D4D;
-// 		}
-// 	}
-// 	.auth-error {
-// 		color: #C81414;
-// 		width: 100%;
-// 		margin-top: 20px;
-// 		display: none;
-// 	}
-// 	input:focus {
-// 		color: #4D4D4D;
-// 	}
-// 	input::-webkit-input-placeholder,
-// 	input:-moz-placeholder {
-// 		color: #4D4D4D;
-// 		-webkit-font-smoothing: antialiased;
-// 		opacity: 1;
-// 	}
-
-// .auth-popup_close {
-// 	position: absolute;
-// 	top: 38px;
-// 	right: 38px;
-// 	cursor: pointer;
-// 	.icn;
-// 	.icn-popup__close;
-
-// 	&:hover {
-// 		.icn-popup__close_hover;
-// 	}
-// }
-
-
-// #auth-popup_container {
-// 	position: absolute;
-// 	top: 50%;
-// 	left: 50%;
-// 	width: 440px;
-// 	height: 400px;
-// 	margin-left: -150px;
-// 	margin-top: -200px;
-// }
-// #auth-popup_login {
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	overflow: hidden;
-// }
-// #auth-popup_login .header {
-// 	color: #4D4D4D;
-// 	margin-bottom: 20px;
-// }
-// #auth-popup_services {
-// 	overflow: hidden;
-// }
-// #auth-popup_services div {
-// 	float: left;
-// 	margin-right: 15px;
-// 	cursor: pointer;
-// }
-// #auth-popup_services div:hover {
-// 	color: #4D4D4D;
-// }
-
-
-
-// .auth-popup__form {
-// 	width: 100%;
-// 	clear: both;
-// 	overflow: hidden;
-// 	input {
-// 		float: left;
-// 	}
-// }
-
-// // Login by Email
-// .auth-popup__login-email {
-// 	display: none;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	background-color: #FFF;
-// 	height: 400px;
-	
-// 	.header {
-// 		color: #4D4D4D;
-// 		margin-top: 55px;
-// 		margin-bottom: 20px;
-// 		font-weight: normal;
-// 		font-size: 22px;
-// 	}
-// }
-
-
-// .auth-popup__login-email_forgot {
-// 	display: none;
-// 	float: left;
-// 	cursor: pointer;
-// 	line-height: 26px;	
-// 	color: #B3B3B3 !important;
-// 	&:hover {
-// 		color: #4D4D4D !important;
-// 		text-decoration: none;
-// 	}
-// }
-
-// .auth-popup__login-email_ok {
-// 	display: none;
-// 	cursor: pointer;
-// 	padding-right: 27px;
-// 	line-height: 25px;
-// 	&:hover {
-// 		color: #4D4D4D;
-// 	}
-// 	.icn-arrow-medium_right {
-// 		vertical-align: middle;
-// 		margin-left: 10px;
-// 	}
-// }
-
-// // registration
-// .auth-popup__registration {
-// 	position: absolute;
-// 	top: 140px;
-// 	left: 0;
-// 	width: 100%;
-
-// 	.header {
-// 		color: #4D4D4D;
-// 		margin-top: 0;
-// 		margin-bottom: 20px;
-// 		font-weight: normal;
-// 		font-size: 22px;
-// 	}
-// }
-
-// .auth-popup__registration_ok,
-// .auth-popup__registration_next {
-// 	cursor: pointer;
-// 	line-height: 25px;
-// 	padding-right: 27px;
-// 	display: inline-block;
-
-// 	&:hover {		
-// 		color: #4D4D4D;
-// 	}
-// 	.icn-arrow-medium_right {
-// 		margin-left: 10px;
-// 		vertical-align: middle;
-// 	}
-// }
-
-// .auth-popup__registration-names {
-// 	display:none;
-// 	position: absolute;
-// 	top: 0;
-// 	left: 0;
-// 	width: 100%;
-// 	background-color: #FFF;
-// 	height: 400px;
-
-// 	.header {
-// 		color: #4D4D4D;
-// 		margin-top: 55px;
-// 		margin-bottom: 20px;
-// 		font-weight: normal;
-// 		font-size: 22px;
-// 	}
-// }
-// .auth-popup__registration-names_dummy {
-// 	width: 100%;
-// 	clear: both;
-// 	margin-bottom: 60px;
-// 	overflow: hidden;
-// 	.dummy {
-// 		color: #E6E6E6;
-// 		margin-bottom: 20px;
-// 		margin-right: 15px;
-// 		float: left;
-// 	}
-// }

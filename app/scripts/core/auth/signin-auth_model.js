@@ -22,39 +22,29 @@ qst.Signin = Backbone.Model.extend({
 		.success(function(response, status, xhr){
 			that.success(response, status, xhr);
 		})
-		.error(function(response, status, xhr){
-			that.error(response, status, xhr);
+		.error(function(xhr, status, desc){
+			that.error(xhr, status, desc);
 		})
 	},
 
 	success: function(response, status, xhr){
 		var resp = _.toJSON(response);
 		if (!!resp) {
-			if (!resp.success) {
-				// if (resp.error.code == "API_BadParams") {
-				// 	this.trigger("error", {description:"Wrong e-mail and password combination :("});
-				// } else if (resp.error.code == "API_AuthFailed") {
-				// 	this.trigger("error", {description:"Wrong e-mail and password combination"});
-				// } else if (resp.error.code == "API_PendingConfirmation") {
-				// 	this.trigger("error", {description:"We have sent you an e-mail to confirm"});
-				// } else {
-				// 	this.trigger("error", {description:"Something went wrong"});
-				// }
-				this.error();
-			} else {
-				this.trigger("auth:success", 
-					{
-						response: resp.result, 
-						user: resp.result.user, 
-						session:{ token: resp.result.token, uid: resp.result.user.id }
-					}
-				);
-			}
+			this.trigger("auth:success", 
+				{
+					response: resp.result, 
+					user: resp.result.user, 
+					session:{ token: resp.result.token, uid: resp.result.user.id }
+				}
+			);
+		} else {
+			this.error(null, null, 'unknown');
 		}
 		// WHP.controller.setTitle();
 	},
 
-	error : function(e) {
-		this.trigger("error", {description:qst.localize('Something went wrong','misc')});
+	error : function(xhr, status, desc) {
+		// console.log(response, status, xhr);
+		this.trigger("error", {description: desc});
 	}
 });
