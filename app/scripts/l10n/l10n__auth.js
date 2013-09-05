@@ -15,7 +15,7 @@ qst.l10n.auth = {
 
 	'Facebook': {
 		en: 'Facebook',
-		ru: 'Facebook',
+		ru: 'Фейсбук',
 		// ko: 'Facebook',
 		// ja: 'Facebook',
 		// zh: 'Facebook'
@@ -66,6 +66,11 @@ qst.l10n.auth = {
 	'Sign up': {
 		en: 'Sign up',
 		ru: 'Зарегистрироваться',
+	},
+
+	'Log in': {
+		en: 'Log in',
+		ru: 'Войти',
 	},
 
 	// 'Register by e-mail': {
@@ -134,37 +139,37 @@ qst.l10n.auth = {
 	// },
 
 
-	'Log in by e-mail': {
-		en: 'Log in by e-mail',
-		ru: 'Войти с помощью e-mail',
-		ko: '이메일로 로그인',
-		ja: 'メールでログイン',
-		zh: '用电邮登陆'
-	},
+	// 'Log in by e-mail': {
+	// 	en: 'Log in by e-mail',
+	// 	ru: 'Войти с помощью e-mail',
+	// 	ko: '이메일로 로그인',
+	// 	ja: 'メールでログイン',
+	// 	zh: '用电邮登陆'
+	// },
 
-	'Log in / sign up':{
-		en: 'Log in / sign up',
-		ru: 'Вход / Регистрация',
-		ko: '로그인 / 가입하기',
-		ja: 'ログイン / サインアップ',
-		zh: '登陆 / 注册'
-	},
+	// 'Log in / sign up':{
+	// 	en: 'Log in / sign up',
+	// 	ru: 'Вход / Регистрация',
+	// 	ko: '로그인 / 가입하기',
+	// 	ja: 'ログイン / サインアップ',
+	// 	zh: '登陆 / 注册'
+	// },
 
-	'Forgot?': {
-		en: 'Forgot?',
-		ru: 'Забыли?',
-		ko: '잊으셨나요?',
-		ja: 'お忘れですか？',
-		zh: '忘记密码？'
-	},
+	// 'Forgot?': {
+	// 	en: 'Forgot?',
+	// 	ru: 'Забыли?',
+	// 	ko: '잊으셨나요?',
+	// 	ja: 'お忘れですか？',
+	// 	zh: '忘记密码？'
+	// },
 
-	'Log in': {
-		en: 'Log in',
-		ru: 'Вход',
-		ko: '로그인',
-		ja: 'ログイン',
-		zh: '登陆'
-	},
+	// 'Log in': {
+	// 	en: 'Log in',
+	// 	ru: 'Вход',
+	// 	ko: '로그인',
+	// 	ja: 'ログイン',
+	// 	zh: '登陆'
+	// },
 
 	'Doesn&#39;t look like a valid email!': {
 		en: 'Doesn&#39;t look like a valid e-mail',

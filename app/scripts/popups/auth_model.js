@@ -1,4 +1,8 @@
 qst.Auth = Backbone.Model.extend({
+	defaults: {
+		state: 'signup'
+	},
+
 	initialize: function (){
 
 		this.FB  = new qst.FB();

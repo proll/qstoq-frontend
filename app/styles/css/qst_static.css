@@ -1,3 +1,30 @@
+.vkGradient {
+  background-image: -moz-linear-gradient(top, #5b89b6, #39659b);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5b89b6), to(#39659b));
+  background-image: -webkit-linear-gradient(top, #5b89b6, #39659b);
+  background-image: -o-linear-gradient(top, #5b89b6, #39659b);
+  background-image: linear-gradient(to bottom, #5b89b6, #39659b);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5b89b6', endColorstr='#ff39659b', GradientType=0);
+}
+.fbGradient {
+  background-image: -moz-linear-gradient(top, #4e6ca6, #2e4886);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#4e6ca6), to(#2e4886));
+  background-image: -webkit-linear-gradient(top, #4e6ca6, #2e4886);
+  background-image: -o-linear-gradient(top, #4e6ca6, #2e4886);
+  background-image: linear-gradient(to bottom, #4e6ca6, #2e4886);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4e6ca6', endColorstr='#ff2e4886', GradientType=0);
+}
+.twGradient {
+  background-image: -moz-linear-gradient(top, #00b3d8, #0097c7);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#00b3d8), to(#0097c7));
+  background-image: -webkit-linear-gradient(top, #00b3d8, #0097c7);
+  background-image: -o-linear-gradient(top, #00b3d8, #0097c7);
+  background-image: linear-gradient(to bottom, #00b3d8, #0097c7);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00b3d8', endColorstr='#ff0097c7', GradientType=0);
+}
 .clearfix {
   *zoom: 1;
 }
@@ -22,14 +49,14 @@
   clear: both;
 }
 .pseudo {
-  color: #005abe;
-  border-bottom: 1px dotted #005abe;
+  color: #0096ff;
+  border-bottom: 1px dotted #0096ff;
   cursor: pointer;
 }
 .pseudo .hover,
 .pseudo:hover {
-  color: #003672;
-  border-color: #003672;
+  color: #0096ff;
+  border-color: #0096ff;
 }
 .hide-text {
   font: 0/0 a;
@@ -252,12 +279,12 @@ body {
   background-color: #f8f8fa;
 }
 a {
-  color: #005abe;
+  color: #0096ff;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #003672;
+  color: #0096ff;
   text-decoration: underline;
 }
 .container {
@@ -334,10 +361,10 @@ BODY {
   height: 100%;
 }
 a {
-  color: #005abe;
+  color: #0096ff;
 }
 a:hover {
-  color: #003672;
+  color: #0096ff;
 }
 .icon {
   position: relative;
@@ -386,11 +413,11 @@ h1 {
   color: #c81414;
 }
 .hsh {
-  color: #005abe;
+  color: #0096ff;
   text-decoration: none;
 }
 .hsh:hover {
-  color: #005abe;
+  color: #0096ff;
   text-decoration: underline;
 }
 .lnk,

@@ -11,7 +11,7 @@
 // qst palette
 // =======================
 @black:                 #000;
-@blue:                  #005abe;
+@blue:                  #0096ff;
 @blue2:                  #61C7F2;
 @green:                 #193a23;
 @greenHead:             #38a27b;
@@ -50,6 +50,18 @@
 
 @errorBg: 				@red_light;
 @errorText: 			#C81414;
+
+.vkGradient {
+	#gradient .vertical(#5b89b6, #39659b);
+}
+
+.fbGradient {
+	#gradient .vertical(#4e6ca6, #2e4886);
+}
+
+.twGradient {
+	#gradient .vertical(#00b3d8, #0097c7);
+}
 
 
 
@@ -119,7 +131,7 @@
 // Links
 // -------------------------
 @linkColor:			 	@blue;
-@linkColorHover:		darken(@linkColor, 15%);
+@linkColorHover:		@blue;
 
 // @sansFontFamily:		'Open Sans', Arial, sans-serif;
 @sansFontFamily:		'Ubuntu', Arial, sans-serif;

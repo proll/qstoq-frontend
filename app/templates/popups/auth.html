@@ -3,16 +3,15 @@
 		<div class="auth__social">
 			<h2 class="auth__social-h">{{_ 'Social log in' 'auth'}}</h2>
 			<ul class="auth__social-list">
-				<li class="auth__social-item"><a href="vk" class="auth__social-item-vk"><i class="qi qi-share-vk auth__social-item-icn"></i><span class="auth__social-item-title">{{_ 'Vkontakte' 'auth'}}</span></a></li>
-				<li class="auth__social-item"><a href="fb" class="auth__social-item-vk"><i class="qi qi-share-fb auth__social-item-icn"></i><span class="auth__social-item-title">{{_ 'Facebook' 'auth'}}</span></a></li>
+				<li class="auth__social-item"><a href="vk" class="auth__social-item-lnk auth__social-item-lnk_vk"><i class="qi qi-share-vk auth__social-item-icn"></i><span class="auth__social-item-title">{{_ 'VKontakte' 'auth'}}</span></a></li><li class="auth__social-item"><a href="fb" class="auth__social-item-lnk auth__social-item-lnk_fb"><i class="qi qi-share-fb auth__social-item-icn"></i><span class="auth__social-item-title">{{_ 'Facebook' 'auth'}}</span></a></li>
 			</ul>
 		</div>
 		<div class="auth__sign">
-			<span class="auth__toggler">{{_ 'or ' 'auth'}} <a href="signup" class="auth__toggler-lnk auth__toggler-signup">{{_ 'sign up' 'auth'}}</a>
-			<a href="signin" class="auth__toggler-lnk auth__toggler-signin">{{_ 'log in by e-mail' 'auth'}}</a>
+			<span class="auth__sign-toggler">{{_ 'or' 'auth'}} <a href="signup" class="auth__sign-toggler-lnk auth__sign-toggler_signup">{{_ 'sign up' 'auth'}}</a>
+			<a href="signin" class="auth__sign-toggler-lnk auth__sign-toggler_signin">{{_ 'log in by e-mail' 'auth'}}</a>
 			</span>
-			<h2 class="auth__signin-h">{{_ 'Log in by e-mail' 'auth'}}</h2>
-			<h2 class="auth__signup-h">{{_ 'Sign up' 'auth'}}</h2>
+			<h2 class="auth__sign-h auth__sign-h_signin">{{_ 'Log in by e-mail' 'auth'}}</h2>
+			<h2 class="auth__sign-h auth__sign-h_signup">{{_ 'Sign up' 'auth'}}</h2>
 			<form action="/auth" >
 				<div class="qst__inp-group">
 					<div class="qst__inp-cont">
@@ -23,7 +22,7 @@
 							</div>
 						</label>
 					</div>
-					<div class="qst__inp-cont">
+					<div class="qst__inp-cont auth__sign-inp-name-cont">
 						<label>
 							<span class="qst__lbl">{{_ 'Name' 'auth'}}</span>
 							<div class="qst__inp-cont-in">
@@ -40,10 +39,14 @@
 						</label>
 					</div>
 				</div>
-				<div class="auth__user-agreement">
+				<div class="auth__sign-user-agreement">
 					{{_ 'I admit <a href="/docs/user_agreement.html" target="_blank">user agreement</a>' 'auth'}}
 				</div>
 				<input type="submit" class="hidden">
+				<div class="auth__sign-submit">
+					<span class="auth__sign-submit-error"></span>
+					<a href="signin" class="auth__sign-submit-a auth__sign-submit_signin">{{_ 'Log in' 'auth'}}</a><a href="signup" class="auth__sign-submit-a auth__sign-submit_signup">{{_ 'Sign up' 'auth'}}</a>
+				</div>
 			</form>
 		</div>
 	</div>

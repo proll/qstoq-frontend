@@ -4,6 +4,11 @@ qst.AuthView = Backbone.View.extend({
 	className: 'auth',
 
 	events: {
+
+		'click .auth__sign-toggler-lnk': 'toggleSign',
+		
+
+		
 		"click .auth-popup_close": "hide",
 		"click .auth-popup__login-email_forgot": 'toReset',
 
@@ -86,10 +91,37 @@ qst.AuthView = Backbone.View.extend({
 		this.on("error:registration", 		this.errorRegistration, this);
 		this.on("error:registration:step2", this.errorRegistrationStep2, this);
 		this.model.registration.on("error", this.errorRegistrationStep2, this);
+		// this.model.registration.on("registration:pending", 	this.hide, this);
 
 
-		this.model.registration.on("registration:pending", 	this.hide, this);
+		this.toggleSign();
 	},
+
+
+
+	toggleSign: function(e) {
+		if(this.model.get('state') === 'signin') {
+			this.$el
+				.toggleClass('signin', false)
+				.toggleClass('signup', true)
+
+			this.model.set('state', 'signup');
+		} else {
+			this.$el
+				.toggleClass('signin', true)
+				.toggleClass('signup', false)
+
+			this.model.set('state', 'signin');
+		}
+		return false;
+	},
+
+
+
+
+
+
+
 
 	show: function (options) {
 		this.$el.toggleClass("hide", false);
