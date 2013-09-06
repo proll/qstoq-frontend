@@ -195,6 +195,14 @@ qst.l10n.auth = {
 		// zh: 'Do you have an empty password?'
 	},
 
+	'Too much': {
+		en: 'Too much',
+		ru: 'Что-то недопустимо большое',
+		// ko: 'Do you have an empty password?',
+		// ja: 'Do you have an empty password?',
+		// zh: 'Do you have an empty password?'
+	},
+
 	// 'Please use at least 6 characters': {
 	// 	en: 'Please use at least 6 characters',
 	// 	ru: 'Используйте не менее 6 символов',

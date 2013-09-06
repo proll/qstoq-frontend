@@ -51,6 +51,8 @@ qst.AuthView = Backbone.View.extend({
 		this.$input_email = 	this.$form.find('input[name=email]');
 		this.$input_name = 		this.$form.find('input[name=name]');
 		this.$input_password = 	this.$form.find('input[name=password]');
+
+		this.$submit_btn = 		this.$form.find('.auth__sign-submit-a');
 		this.$error = 			this.$form.find('.auth__sign-submit-error');
 
 
@@ -73,11 +75,23 @@ qst.AuthView = Backbone.View.extend({
 				.toggleClass('signin', false)
 				.toggleClass('signup', true)
 
+			// tabIndexFix
+			this.$input_email.attr('tabindex', 1);
+			this.$input_name.attr('tabindex', 2);
+			this.$input_password.attr('tabindex', 3);
+			this.$submit_btn.attr('tabindex', 4);
+
 			this.model.set('state', 'signup');
 		} else {
 			this.$el
 				.toggleClass('signin', true)
 				.toggleClass('signup', false)
+
+			// tabIndexFix
+			this.$input_email.attr('tabindex', 1);
+			this.$input_name.removeAttr('tabindex');
+			this.$input_password.attr('tabindex', 2);
+			this.$submit_btn.attr('tabindex', 3);
 
 			this.model.set('state', 'signin');
 		}
@@ -101,8 +115,12 @@ qst.AuthView = Backbone.View.extend({
 		if(this.model.get('state') === 'signin') {
 			if(!_.isEmail(email)) {
 				this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
+			} else if (email.length > 50){
+				this.showError(qst.localize('Too much', 'auth'), 'email')
 			} else if (_.isEmpty(password)){
 				this.showError(qst.localize('Do you have an empty password?', 'auth'), 'password')
+			} else if (password.length > 45){
+				this.showError(qst.localize('Too much', 'auth'), 'password')
 			} else {
 				this.model.signin.login({
 					login: 		email, 
@@ -112,10 +130,16 @@ qst.AuthView = Backbone.View.extend({
 		} else {
 			if(!_.isEmail(email)) {
 				this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
+			} else if (email.length > 50){
+				this.showError(qst.localize('Too much', 'auth'), 'email')
 			} else if (_.isEmpty(name)){
 				this.showError(qst.localize('Please enter your name', 'auth'), 'name')
+			} else if (name.length > 55){
+				this.showError(qst.localize('Too much', 'auth'), 'name')
 			} else if (_.isEmpty(password)){
 				this.showError(qst.localize('Please use not an empty password', 'auth'), 'password')
+			} else if (password.length > 45){
+				this.showError(qst.localize('Too much', 'auth'), 'password')
 			} else {
 				this.model.registration.fetch({
 					login: 		email, 
@@ -128,7 +152,7 @@ qst.AuthView = Backbone.View.extend({
 	},
 
 	errorSignin: function(error) {
-		if(error.description === 'Unauthorized') {
+		if(error.status === 401) {
 			this.showError(qst.localize('Wrong e-mail and password combination :(', 'auth'), 'email')
 		} else {
 			this.showError(qst.localize('Something went wrong...', 'misc'), 'email')
@@ -136,7 +160,7 @@ qst.AuthView = Backbone.View.extend({
 	},
 
 	errorSignup: function(error) {
-		if(error.description === 'Unauthorized') {
+		if(error.status === 401) {
 			this.showError(qst.localize('Wrong e-mail and password combination :(', 'auth'), 'email')
 		} else {
 			this.showError(qst.localize('Something went wrong...', 'misc'), 'email')
@@ -202,7 +226,9 @@ qst.AuthView = Backbone.View.extend({
 		this.model.off(null, null, this);
 		this.model.signin.off(null, null, this);
 		this.model.registration.off(null, null, this);
+		this.popup_view.unlockPage();
 		this.popup_view.remove();
+
 		delete this.popup_view;
 		// this.model.clear({silent: true});
 		return Backbone.View.prototype.remove.call(this, options);

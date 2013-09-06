@@ -44,7 +44,15 @@ qst.Signin = Backbone.Model.extend({
 	},
 
 	error : function(xhr, status, desc) {
-		// console.log(response, status, xhr);
-		this.trigger("error", {description: desc});
+		console.log(xhr, status, desc);
+		if(!!xhr.responseText) {
+			var resp = _.toJSON(xhr.responseText);
+			if(!!resp && !!resp.error) {
+				this.trigger("error", resp.error);
+				return true;
+			}
+		}
+		this.trigger("error", {});
+		return true;
 	}
 });

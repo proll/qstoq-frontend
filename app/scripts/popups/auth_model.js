@@ -43,6 +43,7 @@ qst.Auth = Backbone.Model.extend({
 
 		qst.on("auth:show", function (options) {
 			console.log("auth:show");
+			this.set('state', 'signup');
 			this.view = new qst.AuthView({model: this});
 			this.trigger("auth:show", options)
 		}, this)
