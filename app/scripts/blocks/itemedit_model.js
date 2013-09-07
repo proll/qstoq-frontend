@@ -21,7 +21,8 @@ qst.ItemEdit = Backbone.Model.extend({
 		// "user": {
 		// 		"name": "some",
 		// 		"id": <user_id>,
-		// }
+		// },
+		receipt_comment: 'j sdkj s;kdf;ksajdf lksлы лыр дылрплыврп лдвыапрдло впрдлвыапр д лваыпрдвлырплвырплвырп лвырп лыврп влырпыдвл р лврп вдлр лыврп валдыпр длвыап вдылпр лывпрывлра'
 	},
 
 	initialize: function (options) {

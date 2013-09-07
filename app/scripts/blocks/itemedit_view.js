@@ -12,11 +12,15 @@ qst.ItemEditView = Backbone.View.extend({
 		'submit form': 'submit',
 
 		'click .itemedit__share-inp-cont': 'clickShortLink',
-		'click .itemedit__share-btn': 'clickShare',
+		'click .itemedit__share-btn, .showcase__share-itm-a, .finish__share-itm-a': 'clickShare',
 
 		'change input[name=name]': 'updateName',
 		'change input[name=price]': 'updatePrice',
 		'change textarea[name=description]': 'updateDescription',
+
+		'click .finish__form-add-comment-a': 'toggleOnReceiptComment',
+		'click .finish__form-receipt_desc-action_cancel>a': 'cancelReceiptComment',
+		'click .finish__form-receipt_desc-action_save>a': 'saveReceiptComment',
 	},
 
 
@@ -47,11 +51,27 @@ qst.ItemEditView = Backbone.View.extend({
 		this.$input_file_process = this.$form.find('.itemedit__inp-file-process');
 		this.$error = this.$el.find('.itemedit__error');
 
-
+		
 		this.$showcase = this.$el.find('.showcase__form');
 		this.$showcase_img = this.$showcase.find('.showcase__form__img')
 
+		this.$receipt_comment = this.$el.find('.finish__form-desc');
+		this.$input_receipt_comment = this.$el.find('.finish__form-receipt_desc');
+
 		this.changeState(this.model, this.model.get('state'));
+
+		var comment = $.trim(this.model.get('receipt_comment'));
+		if(!!comment) {
+			this.$el
+				.toggleClass('comment-editing', false)
+				.toggleClass('comment-can-edit', true)
+				.toggleClass('comment-can-add', false)
+		} else {
+			this.$el
+				.toggleClass('comment-editing', false)
+				.toggleClass('comment-can-edit', false)
+				.toggleClass('comment-can-add', true)
+		}
 
 		this.delegateEvents();
 	},
@@ -158,7 +178,7 @@ qst.ItemEditView = Backbone.View.extend({
 
 
 	clickShare: function(e) {
-		var social = $(e.target).attr('href'),
+		var social = $(e.currentTarget).attr('href'),
 			url = "http://api.addthis.com/oexchange/0.8/forward/" + social + "/offer?"
 			+"url=" + this.model.get('url_short')
 			+"&title=" + encodeURIComponent(this.model.get('name'))
@@ -166,7 +186,7 @@ qst.ItemEditView = Backbone.View.extend({
 			+"&pubid=prolll"
 			+"&text=" + encodeURIComponent(this.model.get('description'))
 			+"&via=qstoq";
-		
+		console.log(e, url);
 		_.openWindow3(url, social, 480, 360);
 
 		return false;
@@ -217,6 +237,7 @@ qst.ItemEditView = Backbone.View.extend({
 		var txt = $(e.target).val();
 		this.$el.find('.showcase__head-title').html('Qstoq &ndash; ' + txt);
 		this.$el.find('.showcase__form-h').html(txt);
+		this.$el.find('.finish__form-h').html(txt);
 	},
 
 	updatePrice: function(e) {
@@ -227,6 +248,7 @@ qst.ItemEditView = Backbone.View.extend({
 			num = 0;
 		}
 		this.$el.find('.showcase__form-price-val').html(num);
+		this.$el.find('.finish__form-price-val').html(num);
 	},
 
 	updateDescription: function(e) {
@@ -254,6 +276,49 @@ qst.ItemEditView = Backbone.View.extend({
 
 	togglePreviewOn: function() {
 		this.$showcase.toggleClass('empty', false);
+	},
+
+	toggleOnReceiptComment: function(e) {
+		this.$el
+			.toggleClass('comment-editing',  true)
+			.toggleClass('comment-can-edit', false)
+			.toggleClass('comment-can-add',  false)
+
+		this.$input_receipt_comment.focus();
+		return false;
+	},
+
+	toggleOffReceiptComment: function(e) {
+		var comment = $.trim(this.model.get('receipt_comment'));
+		if(!!comment) {
+			this.$el
+				.toggleClass('comment-editing',  false)
+				.toggleClass('comment-can-edit', true)
+				.toggleClass('comment-can-add',  false)
+		} else {
+			this.$el
+				.toggleClass('comment-editing',  false)
+				.toggleClass('comment-can-edit', false)
+				.toggleClass('comment-can-add',  true)
+		}
+
+		return false;
+	},
+
+
+	cancelReceiptComment: function(e) {
+		this.$input_receipt_comment.val(this.model.get('receipt_comment'));
+		this.toggleOffReceiptComment();
+		return false;
+	},
+
+	saveReceiptComment: function(e) {
+		var receipt_comment = $.trim(this.$input_receipt_comment.val());
+		this.model.set('receipt_comment', receipt_comment);
+		this.$receipt_comment.text(receipt_comment);
+
+		this.toggleOffReceiptComment();
+		return false;
 	},
 
 	clear: function() {

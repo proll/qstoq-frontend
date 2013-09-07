@@ -70,6 +70,7 @@ qst.AuthView = Backbone.View.extend({
 
 
 	toggleSign: function(e) {
+		this.$input_email.focus();
 		if(this.model.get('state') === 'signin') {
 			this.$el
 				.toggleClass('signin', false)

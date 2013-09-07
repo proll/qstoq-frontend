@@ -13,8 +13,8 @@ qst.l10n.itemedit = {
 		en: 'Purchase finish',
 		ru: 'Завершение покупки'
 	},
-	'Buyers': {
-		en: 'Buyers',
+	'Customers': {
+		en: 'Customers',
 		ru: 'Покупатели'
 	},
 	'Available or purchase': {
@@ -92,8 +92,34 @@ qst.l10n.itemedit = {
 		ru:'Таким будет финальный экран для ваших покупателей'
 	},
 
+	'Coming soon. The list of your buyer will help you to stay close to your customers': {
+		en: 'Coming soon. The list of your buyer will help you to stay close to your customers',
+		ru: 'Скоро. Здесь будет список ваших покупателей'
+	},
+
 	'Link for purchase': {
 		en: 'Link for purchase',
 		ru: 'Ссылка для оплаты'
+	},
+
+	'Add your<br/>message on the receipt': {
+		en: 'Add your<br/>message on the receipt',
+		ru: 'Добавить ваше<br/>сообщение на чеке'
+	},
+
+	'Edit your message on the receipt': {
+		en: 'Edit your message on the receipt',
+		ru: 'Редактировать ваше сообщение на чеке'
+	},
+
+	'Cancel': {
+		en: 'Cancel',
+		ru: 'Отменить'
+	},
+
+	'Save': {
+		en: 'Save',
+		ru: 'Сохранить'
 	}
+
 }
