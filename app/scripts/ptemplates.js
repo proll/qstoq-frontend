@@ -116,7 +116,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(stack2)
     + "/buyers\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Buyers", "itemedit", options) : helperMissing.call(depth0, "_", "Buyers", "itemedit", options)))
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Customers", "itemedit", options) : helperMissing.call(depth0, "_", "Customers", "itemedit", options)))
     + "</a></li>\n</ul>";
   return buffer;
   });
@@ -266,20 +266,17 @@ function program9(depth0,data) {
     + "</p>\n			<ul class=\"itemedit__share-ul\">\n				<li>\n					<a href=\"vk\" class=\"itemedit__share-btn itemedit__share-vk-btn\"><i class=\"qi qi-share-vk\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Vkontakte", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Vkontakte", "itemedit", options)))
-    + "</span></a>\n				</li>\n				<li>\n					<a href=\"facebook\" class=\"itemedit__share-btn itemedit__share-fb-btn\"><i class=\"qi qi-share-fb\"></i><span class=\"itemedit__share-btn-title\">";
+    + "</span></a>\n				</li><li>\n					<a href=\"facebook\" class=\"itemedit__share-btn itemedit__share-fb-btn\"><i class=\"qi qi-share-fb\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Facebook", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Facebook", "itemedit", options)))
-    + "</span></a>\n				</li>\n				<li>\n					<a href=\"twitter\" class=\"itemedit__share-btn itemedit__share-tw-btn\"><i class=\"qi qi-share-tw\"></i><span class=\"itemedit__share-btn-title\">";
+    + "</span></a>\n				</li><li>\n					<a href=\"twitter\" class=\"itemedit__share-btn itemedit__share-tw-btn\"><i class=\"qi qi-share-tw\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Twitter", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Twitter", "itemedit", options)))
     + "</span></a>\n				</li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_showcase\">\n	<div class=\"showcase__window\">\n		<div class=\"showcase__head\">\n			<div class=\"showcase__head_lt\"></div>\n			<div class=\"showcase__head_rt\"></div>\n			<div class=\"showcase__head_ct\">\n				<span class=\"showcase__head-title\">Qstoq &ndash; ";
   if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</span>\n			</div>\n		</div>\n		<div class=\"showcase__cont\">\n			<div class=\"showcase__cont-in\">\n				<ul class=\"showcase__share\">\n					<li class=\"showcase__share-itm\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
-    + "</li>\n					<li class=\"showcase__share-itm\"><i class=\"is is-shc-vk\"></i></li>\n					<li class=\"showcase__share-itm\"><i class=\"is is-shc-fb\"></i></li>\n					<li class=\"showcase__share-itm\"><i class=\"is is-shc-tw\"></i></li>\n				</ul>\n			</div>\n			<div class=\"showcase__form\">\n				<div class=\"showcase__form__col1\">\n					<div class=\"showcase__form__img-cont load-bg\">\n						<img src=\"/images_static/empty.png\" alt=\"\" class=\"showcase__form__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n					</div>\n					<h1 class=\"showcase__form-h\">";
+    + "</span>\n			</div>\n		</div>\n		<div class=\"showcase__cont\">\n			<div class=\"showcase__form\">\n				<div class=\"showcase__form__col1\">\n					<div class=\"showcase__form__img-cont load-bg\">\n						<img src=\"/images_static/empty.png\" alt=\"\" class=\"showcase__form__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n					</div>\n					<h1 class=\"showcase__form-h\">";
   if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
@@ -287,7 +284,10 @@ function program9(depth0,data) {
   if (stack2 = helpers.description) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.description; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</p>\n				</div>\n				<div class=\"showcase__form__col2\">\n					<span class=\"showcase__form-price\"><span class=\"showcase__form-price-val\">";
+    + "</p>\n					<ul class=\"showcase__share\">\n						<li class=\"showcase__share-itm\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
+    + "</li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n					</ul>\n				</div>\n				<div class=\"showcase__form__col2\">\n					<span class=\"showcase__form-price\"><span class=\"showcase__form-price-val\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers._number_format || depth0._number_format),stack1 ? stack1.call(depth0, depth0.price, options) : helperMissing.call(depth0, "_number_format", depth0.price, options)))
     + "</span>&nbsp;";
@@ -302,52 +302,78 @@ function program9(depth0,data) {
     + "</p>\n\n					<span class=\"showcase__form__buy-btn\"><span class=\"showcase__form__buy-btn-in\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Buy", "itemedit", options) : helperMissing.call(depth0, "_", "Buy", "itemedit", options)))
-    + "</span></span>\n				</div>\n			</div>\n			<div class=\"showcase__form_shadow\"></div>\n			<div class=\"showcase__service-desc\"><a href=\"http://qstoq.ru\" target=\"_blank\">Qstoq</a> &mdash; ";
+    + "</span></span>\n				</div>\n				<div class=\"showcase__form__bottom-row\">\n					<div class=\"showcase__form__bottom-row__col1\"><a href=\"http://qstoq.ru\" target=\"_blank\">Qstoq</a> &mdash; ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "selling in lightning speed", "itemedit", options) : helperMissing.call(depth0, "_", "selling in lightning speed", "itemedit", options)))
-    + "</div>\n		</div>\n	</div>\n	<p class=\"showcase__desc\">";
+    + "</div>\n					<div class=\"showcase__form__bottom-row__col2\"><i class=\"is is-lock showcase__form__safe-icn\"></i><span class=\"showcase__form__safe-desc\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Safe payment", "item", options) : helperMissing.call(depth0, "_", "Safe payment", "item", options)))
+    + "</span></div>\n				</div>\n			</div>\n		</div>\n	</div>\n	<p class=\"showcase__desc\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "It is a preview of the purchase page your customers will see", "itemedit", options) : helperMissing.call(depth0, "_", "It is a preview of the purchase page your customers will see", "itemedit", options)))
-    + "</p>\n</div>\n<div class=\"itemedit__slide itemedit__slide_finish\">\n	<div class=\"row\">\n		<div class=\"span4\">\n			<div class=\"finish__inp-group qst__inp-group\">\n				<label>\n					<div class=\"finish__inp-cont qst__inp-cont\">\n						<span class=\"finish__inp-lbl\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Your message on the receipt", "itemedit", options) : helperMissing.call(depth0, "_", "Your message on the receipt", "itemedit", options)))
-    + "</span>\n					</div>\n					<div class=\"finish__inp-cont qst__inp-cont\">\n						<textarea value=\"\" class=\"finish__inp-inp qst__inp\" name=\"customer_text\"></textarea>\n					</div>\n				</label>\n			</div>\n		</div>\n		<div class=\"span8\">\n			<div class=\"showcase__window\">\n				<div class=\"showcase__head\">\n					<div class=\"showcase__head_lt\"></div>\n					<div class=\"showcase__head_rt\"></div>\n					<div class=\"showcase__head_ct\">\n						<span class=\"showcase__head-title\">Qstoq &ndash; ";
+    + "</p>\n</div>\n<div class=\"itemedit__slide itemedit__slide_finish\">\n	<div class=\"showcase__window\">\n		<div class=\"showcase__head\">\n			<div class=\"showcase__head_lt\"></div>\n			<div class=\"showcase__head_rt\"></div>\n			<div class=\"showcase__head_ct\">\n				<span class=\"showcase__head-title\">Qstoq &ndash; ";
   if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</span>\n					</div>\n				</div>\n				<div class=\"showcase__cont\">\n					<div class=\"showcase__cont-in\">\n						<ul class=\"showcase__share\">\n							<li class=\"showcase__share-itm\">";
+    + "</span>\n			</div>\n		</div>\n		<div class=\"finish__form-add-comment\">\n			<i class=\"is is-com finish__form-add-comment__icn\"></i>\n			<ul class=\"finish__form-add-comment__list\">\n				<li class=\"finish__form-add-comment__add\"><a href=\"add\" class=\"finish__form-add-comment-a\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
-    + "</li>\n							<li class=\"showcase__share-itm\"><i class=\"is is-shc-vk\"></i></li>\n							<li class=\"showcase__share-itm\"><i class=\"is is-shc-fb\"></i></li>\n							<li class=\"showcase__share-itm\"><i class=\"is is-shc-tw\"></i></li>\n						</ul>\n					</div>\n					<div class=\"showcase__form\">\n						<div class=\"showcase__form__col1\">\n							<div class=\"showcase__form__img-cont load-bg\">\n								<img src=\"/images_static/empty.png\" alt=\"\" class=\"showcase__form__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n							</div>\n							<h1 class=\"showcase__form-h\">";
-  if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "</h1>\n							<p class=\"showcase__form-desc\">";
-  if (stack2 = helpers.description) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.description; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "</p>\n						</div>\n						<div class=\"showcase__form__col2\">\n							<span class=\"showcase__form-price\"><span class=\"showcase__form-price-val\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add your<br/>message on the receipt", "itemedit", options) : helperMissing.call(depth0, "_", "Add your<br/>message on the receipt", "itemedit", options)))
+    + "</a></li>\n				<li class=\"finish__form-add-comment__edit\"><a href=\"edit\" class=\"finish__form-add-comment-a\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Edit your message on the receipt", "itemedit", options) : helperMissing.call(depth0, "_", "Edit your message on the receipt", "itemedit", options)))
+    + "</a></li>\n			</ul>\n		</div>\n		<div class=\"finish__cont\">\n			<div class=\"finish__form-t\"></div>\n			<div class=\"finish__form\">\n				<div class=\"finish__form-col\">\n					<span class=\"finish__form-line\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Purchased", "item", options) : helperMissing.call(depth0, "_", "Purchased", "item", options)))
+    + "</span>\n					<span class=\"finish__form-price\"><span class=\"finish__form-price-val\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers._number_format || depth0._number_format),stack1 ? stack1.call(depth0, depth0.price, options) : helperMissing.call(depth0, "_number_format", depth0.price, options)))
     + "</span>&nbsp;";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, depth0.currency, "currency", options) : helperMissing.call(depth0, "_", depth0.currency, "currency", options)))
-    + "</span>\n							<div class=\"showcase__form-email-group qst__inp-group\">\n								<div class=\"showcase__form-email-cont qst__inp-cont\">\n									<input type=\"text\" value=\"\" placeholder=\"";
+    + "</span>\n					<h1 class=\"finish__form-h\">";
+  if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</h1>\n					<span class=\"finish__form__buy-btn\"><span class=\"finish__form__buy-btn-in\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "email", "itemedit", options) : helperMissing.call(depth0, "_", "email", "itemedit", options)))
-    + "\" class=\"showcase__form-email qst__inp\" disabled=\"disabled\" name=\"customer_email\">\n								</div>\n							</div>\n							<p class=\"showcase__form-price-desc\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Get link", "item", options) : helperMissing.call(depth0, "_", "Get link", "item", options)))
+    + "</span></span>\n					<div class=\"finish__form-receipt_desc-group qst__inp-group\">\n						<div class=\"finish__form-receipt_desc-cont qst__inp-cont\">\n							<textarea value=\"\" class=\"finish__form-receipt_desc qst__inp\" name=\"receipt_comment\">";
+  if (stack2 = helpers.receipt_comment) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.receipt_comment; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</textarea>\n						</div>\n						<ul class=\"finish__form-receipt_desc-action-list\"><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_cancel\"><a href=\"receipt-cancel\" class=\"finish__form-receipt_desc-action-a\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "for notifications about your purchases<br/>and feedback", "itemedit", options) : helperMissing.call(depth0, "_", "for notifications about your purchases<br/>and feedback", "itemedit", options)))
-    + "</p>\n\n							<span class=\"showcase__form__buy-btn\"><span class=\"showcase__form__buy-btn-in\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Cancel", "itemedit", options) : helperMissing.call(depth0, "_", "Cancel", "itemedit", options)))
+    + "</a></li><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_save\"><a href=\"receipt-cancel\" class=\"finish__form-receipt_desc-action-a\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Buy", "itemedit", options) : helperMissing.call(depth0, "_", "Buy", "itemedit", options)))
-    + "</span></span>\n						</div>\n					</div>\n					<div class=\"showcase__form_shadow\"></div>\n					<div class=\"showcase__service-desc\"><a href=\"http://qstoq.ru\" target=\"_blank\">Qstoq</a> &mdash; ";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Save", "itemedit", options) : helperMissing.call(depth0, "_", "Save", "itemedit", options)))
+    + "</a></li>\n						</ul>\n					</div>\n					<p class=\"finish__form-desc\">";
+  if (stack2 = helpers.receipt_comment) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.receipt_comment; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "</p>\n					<p class=\"finish__form-desc-static\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "All purchasement info we&#39;ve sent to your email", "item", options) : helperMissing.call(depth0, "_", "All purchasement info we&#39;ve sent to your email", "item", options)))
+    + "</p>\n					<a href=\"";
+  if (stack2 = helpers.url_short) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.url_short; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "\" target=\"_blank\" class=\"finish__form-buy-another\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Purchase more", "item", options) : helperMissing.call(depth0, "_", "Purchase more", "item", options)))
+    + "</a>\n					<ul class=\"finish__share\">\n						<li class=\"finish__share-itm\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
+    + "</li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n					</ul>\n					<div class=\"finish__form-service-desc\"><a href=\"http://qstoq.ru\" target=\"_blank\">Qstoq</a> &mdash; ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "selling in lightning speed", "itemedit", options) : helperMissing.call(depth0, "_", "selling in lightning speed", "itemedit", options)))
-    + "</div>\n				</div>\n			</div>\n			<p class=\"showcase__desc\">";
+    + "</div>\n\n				</div>\n			</div>\n			<div class=\"finish__form-b\"></div>\n		</div>\n	</div>\n	<p class=\"showcase__desc\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "It is a receipt your customers will see", "itemedit", options) : helperMissing.call(depth0, "_", "It is a receipt your customers will see", "itemedit", options)))
-    + "</p>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_buyers\"></div>";
+    + "</p>\n</div>\n<div class=\"itemedit__slide itemedit__slide_buyers\"><h2 class=\"buyers__head\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Coming soon. The list of your buyer will help you to stay close to your customers", "itemedit", options) : helperMissing.call(depth0, "_", "Coming soon. The list of your buyer will help you to stay close to your customers", "itemedit", options)))
+    + "</h2></div>";
   return buffer;
   });
 
