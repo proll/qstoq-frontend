@@ -26,36 +26,10 @@ qst.LandingPage = qst.Page.extend({
 	},
 
 
-	// showAuth: function() {
-	// 	qst.trigger("auth:show");
-	// },
+	showAuth: function() {
+		qst.trigger("auth:show");
+	},
 
-
-	// signupFB: function() {
-	// 	if(qst.app.auth) {
-	// 		qst.app.auth.FB.login();
-	// 	}
-	// 	return this;
-	// },
-
-	// signupTW: function() {
-	// 	if(qst.app.auth) {
-	// 		qst.app.auth.TW.login();
-	// 	}
-	// 	return this;
-	// },
-
-	// signupVK: function() {
-	// 	if(qst.app.auth) {
-	// 		qst.app.auth.VK.login();
-	// 	}
-	// 	return this;
-	// },
-
-	// signupEmail: function(email) {
-	// 	qst.trigger("auth:show", {email: email});
-	// 	return false;
-	// },
 
 	sleep: function () {
 		if(this.view) this.view.sleep();

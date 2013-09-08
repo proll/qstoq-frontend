@@ -13,7 +13,7 @@ qst.User = Backbone.Model.extend({
 	initialize: function(){
 
 		this.settings = new qst.UserSettings;
-		this.settings.getGeoPosition();
+		// this.settings.getGeoPosition();
 		
 		this.settings.on("error", function(err) {
 			this.trigger("user:error", err);
