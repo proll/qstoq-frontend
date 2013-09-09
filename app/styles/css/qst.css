@@ -2420,9 +2420,6 @@ textarea::-webkit-input-placeholder {
 body {
   padding-top: 80px;
 }
-.page-header {
-  border-bottom: 1px solid #dfdedd;
-}
 .page-header h1 {
   font-size: 18px;
   line-height: 1;
