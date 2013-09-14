@@ -16,6 +16,7 @@ qst.ItemEditView = Backbone.View.extend({
 
 		'change input[name=name]': 'updateName',
 		'change input[name=price]': 'updatePrice',
+		'change input[name=ship_limit]': 'updateShipLimit',
 		'change textarea[name=description]': 'updateDescription',
 
 		'click .finish__form-add-comment-a': 'toggleOnReceiptComment',
@@ -44,6 +45,7 @@ qst.ItemEditView = Backbone.View.extend({
 		this.$input_active =  this.$form.find('input[name=active]');
 		this.$input_name =  this.$form.find('input[name=name]');
 		this.$input_price = this.$form.find('input[name=price]');
+		this.$input_ship_limit = this.$form.find('input[name=ship_limit]');
 		this.$input_description =  this.$form.find('textarea[name=description]');
 		this.$input_link =  this.$form.find('input[name=link]');
 		this.$input_file =  this.$form.find('input[name=file]');
@@ -108,6 +110,7 @@ qst.ItemEditView = Backbone.View.extend({
 		var active = this.$input_active.is(':checked'),
 			name = $.trim(this.$input_name.val()),
 			price = this.$input_price.val(),
+			ship_limit = this.$input_ship_limit.val(),
 			link = this.$input_link.val(),
 			file = this.$input_file.val(),
 			description = $.trim(this.$input_description.val()),
@@ -118,6 +121,9 @@ qst.ItemEditView = Backbone.View.extend({
 			return false;
 		} else if(_.isEmpty(price) || _.isNaN(parseInt(price))){
 			this.showError(qst.localize('set price, please', 'itemlist'), 'price')
+			return false;
+		} else if(_.isEmpty(ship_limit) || _.isNaN(parseInt(ship_limit))){
+			this.showError(qst.localize('set ship limit, please', 'itemlist'), 'ship_limit')
 			return false;
 		} else if (state === 'link') {
 			if(_.isEmpty(link)) {
@@ -136,7 +142,8 @@ qst.ItemEditView = Backbone.View.extend({
 				url: 			link,
 				description: 	description,
 				price: 			parseInt(price),
-				price_pwyw: 	price_plus + 0
+				price_pwyw: 	price_plus + 0,
+				ship_limit: 	parseInt(ship_limit),
 			});
 
 			this.model.save();
@@ -214,6 +221,9 @@ qst.ItemEditView = Backbone.View.extend({
 	},
 
 	updateFileProcess: function(part) {
+		if(part == 1) {
+			part = 0;
+		}
 		this.$input_file_process.width(Math.round(part*100) + '%');
 	},
 
@@ -249,6 +259,17 @@ qst.ItemEditView = Backbone.View.extend({
 		}
 		this.$el.find('.showcase__form-price-val').html(num);
 		this.$el.find('.finish__form-price-val').html(num);
+	},
+
+	updateShipLimit: function(e) {
+		// var num = parseInt($(e.target).val());
+		// if(!!num) {
+		// 	num = Handlebars.helpers._number_format(num).toString();
+		// }  else {
+		// 	num = 0;
+		// }
+		// this.$el.find('.showcase__form-price-val').html(num);
+		// this.$el.find('.finish__form-price-val').html(num);
 	},
 
 	updateDescription: function(e) {

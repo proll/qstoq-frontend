@@ -140,11 +140,25 @@ function program3(depth0,data) {
 
 function program5(depth0,data) {
   
+  var stack1;
+  if (stack1 = helpers.ship_limit) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.ship_limit; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  return escapeExpression(stack1);
+  }
+
+function program7(depth0,data) {
+  
+  
+  return "0";
+  }
+
+function program9(depth0,data) {
+  
   
   return " class=\"active\"";
   }
 
-function program7(depth0,data) {
+function program11(depth0,data) {
   
   var buffer = "", stack1;
   buffer += "<a href=\"";
@@ -159,7 +173,7 @@ function program7(depth0,data) {
   return buffer;
   }
 
-function program9(depth0,data) {
+function program13(depth0,data) {
   
   var stack1, options;
   options = {hash:{},data:data};
@@ -199,6 +213,12 @@ function program9(depth0,data) {
   buffer += escapeExpression(stack2);
   stack2 = helpers['if'].call(depth0, depth0.price_pwyw, {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\">\n							</div>\n						</label>\n					</div>\n					<div class=\"qst__inp-cont\">\n						<label>\n							<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Limit", "itemlist", options) : helperMissing.call(depth0, "_", "Limit", "itemlist", options)))
+    + "</span>\n							<div class=\"qst__inp-cont-in\">\n								<input type=\"text\" class=\"qst__inp\" name=\"ship_limit\" value=\"";
+  stack2 = helpers['if'].call(depth0, depth0.ship_limit, {hash:{},inverse:self.program(7, program7, data),fn:self.program(5, program5, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "\">\n							</div>\n						</label>\n					</div>\n					<div class=\"qst__inp-cont qst__inp-cont-ta\">\n						<textarea name=\"description\" class=\"itemedit__description qst__inp\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Descrition", "itemedit", options) : helperMissing.call(depth0, "_", "Descrition", "itemedit", options)))
@@ -210,21 +230,21 @@ function program9(depth0,data) {
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "After payment", "itemlist", options) : helperMissing.call(depth0, "_", "After payment", "itemlist", options)))
     + "</span>\n					<ul class=\"item__types\">\n						<li";
-  options = {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data};
+  options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "link", options) : helperMissing.call(depth0, "ifEq", depth0.state, "link", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "><a href=\"link\" class=\"item-link item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give a link", "itemlist", options) : helperMissing.call(depth0, "_", "give a link", "itemlist", options)))
     + "</a></li>\n						<li";
-  options = {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data};
+  options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "file", options) : helperMissing.call(depth0, "ifEq", depth0.state, "file", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "><a href=\"file\" class=\"item-file item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give a file", "itemlist", options) : helperMissing.call(depth0, "_", "give a file", "itemlist", options)))
     + "</a></li>\n						<li";
-  options = {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data};
+  options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "nothing", options) : helperMissing.call(depth0, "ifEq", depth0.state, "nothing", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "><a href=\"nothing\" class=\"item-nothing item__types-item\">";
@@ -238,7 +258,7 @@ function program9(depth0,data) {
   else { stack2 = depth0.url; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
     + "\">\n							</div>\n						</label>\n					</div>\n				</div>\n				<div class=\"itemedit__file\">\n					<div class=\"qst__inp-cont\">\n						<div class=\"itemedit__inp-file-process\"></div>\n						<span class=\"itemedit__inp-file-title\">";
-  options = {hash:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data),data:data};
+  options = {hash:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "file", options) : helperMissing.call(depth0, "ifEq", depth0.state, "file", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "</span>\n						<input type=\"file\" class=\"qst__inp itemedit__inp-file\" name=\"file\" id=\"file_uploader\" placeholder=\"";
@@ -509,7 +529,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"preview-upload__group\">\n	<div class=\"qst__inp-cont\">\n		<div class=\"itemedit__inp-file-process\"></div>\n		<div class=\"preview-upload__img-cont load-bg\">\n			<img src=\"/images_static/empty.png\" alt=\"\" class=\"preview-upload__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n		</div>\n		<h2 class=\"preview-upload__add-h\" >";
+  buffer += "<div class=\"preview-upload__group\">\n	<div class=\"qst__inp-cont\">\n		<div class=\"preview-upload__inp-file-process\"></div>\n		<div class=\"preview-upload__img-cont load-bg\">\n			<img src=\"/images_static/empty.png\" alt=\"\" class=\"preview-upload__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n		</div>\n		<h2 class=\"preview-upload__add-h\" >";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add preview", "preview_upload", options) : helperMissing.call(depth0, "_", "Add preview", "preview_upload", options)))
     + "</h2>\n		<span class=\"preview-upload__add-another\" >";

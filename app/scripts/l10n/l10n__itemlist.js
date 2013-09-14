@@ -13,6 +13,10 @@ qst.l10n.itemlist = {
 		en: 'Price, RUB',
 		ru: 'Цена, руб.',
 	},
+	'Limit': {
+		en: 'Limit',
+		ru: 'Лимит продаж',
+	},
 	'Add': {
 		en: 'Add',
 		ru: 'Добавить'
@@ -100,6 +104,10 @@ qst.l10n.itemlist = {
 	'set price, please': {
 		en: 'set price, please',
 		ru: 'задайти цену, пожалуйста',
+	},
+	'set ship limit, please': {
+		en: 'set ship limit, please',
+		ru: 'задайти лимит продаж, пожалуйста',
 	},
 	'set a link, please': {
 		en: 'set a link, please',

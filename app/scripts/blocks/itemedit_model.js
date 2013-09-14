@@ -67,9 +67,23 @@ qst.ItemEdit = Backbone.Model.extend({
 	},
 
 	initMisc: function() {
-		this.preview = new qst.PreviewUpload({
-			link_id: this.get('id')
-		})
+		var opts = {},
+			preview = this.get('preview');
+		if(!!preview 
+			&& preview.length 
+			&& !!preview[preview.length-1] 
+			&& !!preview[preview.length-1].data) {
+			opts = {
+				link_id: this.get('id'),
+				data: preview[preview.length-1].data,
+				id: preview[preview.length-1].id,
+			}
+		} else {
+			opts = {
+				link_id: this.get('id')
+			}
+		}
+		this.preview = new qst.PreviewUpload(opts)
 
 		this.view.addPreviewUpload(this.preview);
 	},
@@ -130,7 +144,7 @@ qst.ItemEdit = Backbone.Model.extend({
 						}
 						if(!!data.success) {
 							that.view.updateFileProcess(1);
-							that.set('url', data.result.uri)
+							that.set('url', data.result.data)
 						} else {
 							that.trigger('add:error');
 						}
@@ -160,6 +174,7 @@ qst.ItemEdit = Backbone.Model.extend({
 			description: 	data.description,
 			url: 			data.url,
 			price: 			data.price,
+			ship_limit: 	data.ship_limit,
 		};
 		options.success  	= _.bind(this.saveSuccess, this);
 		options.error  		= _.bind(this.saveError, this);

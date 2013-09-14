@@ -26,6 +26,14 @@
 							</div>
 						</label>
 					</div>
+					<div class="qst__inp-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'Limit' 'itemlist'}}</span>
+							<div class="qst__inp-cont-in">
+								<input type="text" class="qst__inp" name="ship_limit" value="{{#if ship_limit}}{{ ship_limit }}{{else}}0{{/if}}">
+							</div>
+						</label>
+					</div>
 					<div class="qst__inp-cont qst__inp-cont-ta">
 						<textarea name="description" class="itemedit__description qst__inp" placeholder="{{_ 'Descrition' 'itemedit'}}">{{ description }}</textarea>
 					</div>

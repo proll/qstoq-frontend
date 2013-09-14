@@ -4,13 +4,15 @@ qst.PreviewUpload = Backbone.Model.extend({
 	
 	defaults: {
 		link_id: 0,
-		uri: '',
+		data: '',
 		// "id": XXX,
-		// "engine": "local", // хранилище, пока только локальное
-		// "uri": "http://site.com/files/<user_id>/kdhkjhwe876dsa6fjhahg43.ext", // WEB-линк до файла
+		// "data_type": "file", // тип данных
+		// "data": "http://site.com/files/<user_id>/kdhkjhwe876dsa6fjhahg43.ext", // WEB-линк до файла
 		// "size": SSSSSS, // размер файла в байтах
+		// "link_id": 0,
+		// "identifier": 'some_var_name',
 		// "user": {
-		// "id": <user_id>,
+		// 	"id": <user_id>,
 		// 	"currency": "XXX"
 		// }
 	},
@@ -57,7 +59,7 @@ qst.PreviewUpload = Backbone.Model.extend({
 			var that = this,
 				data = new FormData();
 				data.append('input_file', file);
-				data.append('link_id', this.get('link_id'));
+				
 
 			// the $.ajax() method and the like doesn’t allow for it and 
 			// I really want to display an upload progress bar, dammit!
@@ -86,7 +88,14 @@ qst.PreviewUpload = Backbone.Model.extend({
 					}
 				}
 			};
-			xhr.open('POST', this.url + '?token='+qst.user.get("token"), true);
+
+			var credentials = {
+				token: 		qst.user.get("token"),
+				link_id: 	this.get('link_id'),
+				identifier: 'preview_image'
+			};
+
+			xhr.open('POST', this.url + '?' + _.map(credentials, function(value, key){ return key+"="+value}).join("&"), true);
 			xhr.send(data);
 		}
 	},

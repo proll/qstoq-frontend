@@ -11,7 +11,7 @@ qst.PreviewUploadView = Backbone.View.extend({
 	initialize: function(){
 		this.template = qst.Templates.get(this.template);
 		this.model.on('change:sleeped', this.sleep, this);
-		this.model.on('change:uri', this.changeURL, this);
+		this.model.on('change:data', this.changeURL, this);
 
 		this.model.on("delete:success", this.togglePreviewOff, this);
 		this.render();
@@ -28,7 +28,7 @@ qst.PreviewUploadView = Backbone.View.extend({
 		this.$input_file =  		this.$el.find('input[name=file_preview]');
 		this.$input_file_process = 	this.$el.find('.preview-upload__inp-file-process');
 
-		this.changeURL(this.model, this.model.get('uri'));
+		this.changeURL(this.model, this.model.get('data'));
 
 		this.delegateEvents();
 	},
@@ -36,6 +36,7 @@ qst.PreviewUploadView = Backbone.View.extend({
 
 	changeURL: function(model, uri) {
 		if(!!uri) {
+			this.$img.attr('src', '/images_static/empty.png');
 			this.$img.data('orig', uri);
 			this.lazy_loader.load(this.$el);
 			this.togglePreviewOn();
@@ -63,12 +64,16 @@ qst.PreviewUploadView = Backbone.View.extend({
 	},
 
 	delete: function(e) {
-		this.model.set('uri', '');
+		this.model.set('data', '');
 		this.model.delete();
 		return false;
 	},
 
 	updateFileProcess: function(part) {
+		console.log(part);
+		if(part === 1) {
+			part = 0;
+		}
 		this.$input_file_process.width(Math.round(part*100) + '%');
 	},
 
