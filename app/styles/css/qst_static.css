@@ -483,6 +483,11 @@ h1 {
   line-height: 0;
   padding: 14px;
   height: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .qst__inp-cont {
   border-bottom: 1px solid #cecdcc;
