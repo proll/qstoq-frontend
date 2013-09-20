@@ -84,7 +84,6 @@ qst.ItemEdit = Backbone.Model.extend({
 			}
 		}
 		this.preview = new qst.PreviewUpload(opts)
-
 		this.view.addPreviewUpload(this.preview);
 	},
 

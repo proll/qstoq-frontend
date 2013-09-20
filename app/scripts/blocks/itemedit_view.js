@@ -237,9 +237,12 @@ qst.ItemEditView = Backbone.View.extend({
 		console.log('save:success')
 	},
 
+
+	// перенести логику на события this.model
+	// эта вьюха не должна знать о модели превью
 	addPreviewUpload: function(preview_model) {
-		preview_model.on('change:uri', this.updateShowcasePreview, this);
-		this.updateShowcasePreview(preview_model, preview_model.get('uri'));
+		preview_model.on('change:data', this.updateShowcasePreview, this);
+		this.updateShowcasePreview(preview_model, preview_model.get('data'));
 		this.$el.find('.item__preview-upload-cont').html(preview_model.view.$el);
 	},
 
