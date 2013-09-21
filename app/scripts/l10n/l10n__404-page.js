@@ -17,11 +17,11 @@ qst.l10n.p404 = {
         zh: '你也可以搜索这个用户、照片或者故事。'
 	},
 
-	'or drop us a line to <a href="mailto:hi@weheartpics.com" class="lnk">hi@weheartpics.com.</a>': {
-		en: 'or drop us a line to <a href="mailto:hi@weheartpics.com" class="lnk">hi@weheartpics.com.</a>',
-		ru: 'Или напишите нам — <a href="mailto:hi@weheartpics.com" class="lnk">hi@weheartpics.com</a>',
-		ko: '또는 여기로 메시지를 보내주세요 <a href="mailto:hi@weheartpics.com" class="lnk">hi@weheartpics.com</a>',
-        ja: 'もしくは<a href="mailto:hi@weheartpics.com" class="lnk">hi@weheartpics.com.</a>にメッセージを送信して下さい。',
-        zh: '或者给我们写信 <a href="mailto:hi@weheartpics.com" class="lnk">hi@weheartpics.com.</a>'
+	'or drop us a line to <a href="mailto:support@qstoq.io" class="lnk">support@qstoq.io.</a>': {
+		en: 'or drop us a line to <a href="mailto:support@qstoq.io" class="lnk">support@qstoq.io.</a>',
+		ru: 'Или напишите нам — <a href="mailto:support@qstoq.io" class="lnk">support@qstoq.io</a>',
+		ko: '또는 여기로 메시지를 보내주세요 <a href="mailto:support@qstoq.io" class="lnk">support@qstoq.io</a>',
+        ja: 'もしくは<a href="mailto:support@qstoq.io" class="lnk">support@qstoq.io.</a>にメッセージを送信して下さい。',
+        zh: '或者给我们写信 <a href="mailto:support@qstoq.io" class="lnk">support@qstoq.io.</a>'
 	}
 }

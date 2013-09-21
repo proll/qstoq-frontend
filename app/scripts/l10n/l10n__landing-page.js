@@ -243,12 +243,12 @@ qst.l10n.landing_page = {
 	// },
 
 
-	// 'A one-of-a-kind, photo-powered, full&#8209;featured social network available&nbsp;at <a href="{{_itunes_link}}" target="_blank">App&nbsp;Store</a> and&nbsp;<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank">Google&nbsp;Play</a>.': {
-	// 	en: 'A one-of-a-kind, photo-powered, full&#8209;featured social network available&nbsp;at <a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App&nbsp;Store</a> and&nbsp;<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank">Google&nbsp;Play</a>.',
-	// 	ru: 'Единственная полноценная социальная сеть, основанная на фотографиях, доступна&nbsp;в <a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App&nbsp;Store</a> и&nbsp;<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank">Google&nbsp;Play</a>.',
-	// 	ko: '독특한, 사진 중심의 모든 기능을 갖춘 소셜 네트워크를 <a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App Store와</a> <a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank">Google Play서</a> 찾을 수 있습니다.',
-	// 	ja: '他にない、フォトパワーのある、フル機能のソーシャルネットワークが<a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App Store</a>でと<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank">Google Play</a>で可能です。',
-	// 	zh: '一个独一无二、以照片为载体、全功能的社交网络，可在<a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">苹果软件商店</a>和<a href="https://play.google.com/store/apps/details?id=com.weheartpics" target="_blank">谷歌应用商店</a>上轻松获取。'
+	// 'A one-of-a-kind, photo-powered, full&#8209;featured social network available&nbsp;at <a href="{{_itunes_link}}" target="_blank">App&nbsp;Store</a> and&nbsp;<a href="https://play.google.com/store/apps/details?id=com.qstoq" target="_blank">Google&nbsp;Play</a>.': {
+	// 	en: 'A one-of-a-kind, photo-powered, full&#8209;featured social network available&nbsp;at <a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App&nbsp;Store</a> and&nbsp;<a href="https://play.google.com/store/apps/details?id=com.qstoq" target="_blank">Google&nbsp;Play</a>.',
+	// 	ru: 'Единственная полноценная социальная сеть, основанная на фотографиях, доступна&nbsp;в <a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App&nbsp;Store</a> и&nbsp;<a href="https://play.google.com/store/apps/details?id=com.qstoq" target="_blank">Google&nbsp;Play</a>.',
+	// 	ko: '독특한, 사진 중심의 모든 기능을 갖춘 소셜 네트워크를 <a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App Store와</a> <a href="https://play.google.com/store/apps/details?id=com.qstoq" target="_blank">Google Play서</a> 찾을 수 있습니다.',
+	// 	ja: '他にない、フォトパワーのある、フル機能のソーシャルネットワークが<a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">App Store</a>でと<a href="https://play.google.com/store/apps/details?id=com.qstoq" target="_blank">Google Play</a>で可能です。',
+	// 	zh: '一个独一无二、以照片为载体、全功能的社交网络，可在<a href="' + Handlebars.helpers._itunes_link() + '" target="_blank">苹果软件商店</a>和<a href="https://play.google.com/store/apps/details?id=com.qstoq" target="_blank">谷歌应用商店</a>上轻松获取。'
 	// },
 
 
