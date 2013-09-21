@@ -234,7 +234,26 @@ textarea.qst__inp {
 			text-align: right;
 			background-color: @grayLighter2;
 			.transition(background-color .2s);
+
+			&:after {
+				content: '';
+				display: inline-block;
+				background: @grayLighter2 url(/images/ani/spinner.gif) center center no-repeat;
+				width: 0;
+				height: 14px;
+				margin-left: 0;
+				.transition(all .2s);
+			}
 		}
+
+	.saving {
+		.itemedit__submit {
+			&:after {
+				width: 14px;
+				margin-left: 10px;
+			}
+		}
+	}
 
 			.itemedit__submit-a {
 				color: @white;

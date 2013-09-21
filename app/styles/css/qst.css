@@ -440,6 +440,9 @@ a:focus {
   top: -99997px;
   left: -99997px;
 }
+HTML {
+  height: 100%;
+}
 BODY {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 14px;
@@ -544,7 +547,7 @@ h1 {
   opacity: 1;
 }
 .load-bg {
-  background: #f8f8fa url(/images/ani/loading_ani_s.gif) center center no-repeat;
+  background: #f8f8fa url(/images/ani/spinner.gif) center center no-repeat;
 }
 .img-loaded.load-bg {
   background-image: none;
@@ -1032,17 +1035,17 @@ textarea::-webkit-input-placeholder {
   background-position: 0px -544px;
 }
 .qi {
-  background: url("/images/sprites/qi-6a8a2.png") no-repeat 0 0;
+  background: url("/images/sprites/qi-d7717.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .qi {
-    background: url("/images/sprites/qi-2x-6a8a2.png") no-repeat 0 0;
-    -webkit-background-size: 38px 298px;
-    -moz-background-size: 38px 298px;
-    -o-background-size: 38px 298px;
-    background-size: 38px 298px;
+    background: url("/images/sprites/qi-2x-d7717.png") no-repeat 0 0;
+    -webkit-background-size: 40px 316px;
+    -moz-background-size: 40px 316px;
+    -o-background-size: 40px 316px;
+    background-size: 40px 316px;
     vertical-align: text-top;
     display: inline-block;
   }
@@ -1111,6 +1114,11 @@ textarea::-webkit-input-placeholder {
   width: 28px;
   height: 28px;
   background-position: 0px -270px;
+}
+.qi-smlogo {
+  width: 40px;
+  height: 17px;
+  background-position: 0px -299px;
 }
 .ib {
   background: url("/images/sprites/ib-7601c.png") no-repeat 0 0;
@@ -1778,7 +1786,7 @@ textarea::-webkit-input-placeholder {
   text-decoration: none;
 }
 .navbar-fixed-top {
-  position: fixed;
+  position: absolute;
   right: 0;
   left: 0;
   z-index: 1030;
@@ -2446,6 +2454,22 @@ body {
 .page-header .helper {
   display: inline-block;
 }
+footer {
+  background-color: #737678;
+  padding: 30px 0 90px;
+}
+footer .qi {
+  margin: 0 0 10px;
+}
+footer p {
+  width: 290px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 11px;
+  line-height: 16px;
+  color: #ffffff;
+}
 .itemlist {
   margin-bottom: 40px;
 }
@@ -3004,6 +3028,22 @@ textarea.qst__inp {
   -moz-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
+}
+.itemedit__submit:after {
+  content: '';
+  display: inline-block;
+  background: #f8f8fa url(/images/ani/spinner.gif) center center no-repeat;
+  width: 0;
+  height: 14px;
+  margin-left: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.saving .itemedit__submit:after {
+  width: 14px;
+  margin-left: 10px;
 }
 .itemedit__submit-a {
   color: #ffffff;

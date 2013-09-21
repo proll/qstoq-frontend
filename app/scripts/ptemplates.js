@@ -65,6 +65,23 @@ function program1(depth0,data) {
   return buffer;
   });
 
+this["qst"]["Templates"]["ptemplates"]["blocks/footer"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
+
+
+  buffer += "<div class=\"container\">\n	<a href=\"/\"><i class=\"qi qi-smlogo\"></i></a>\n	<p>&copy; ";
+  if (stack1 = helpers.year) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.year; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + " Qstoq</p>\n	<p>";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "The easy payment system of purchase and delivery of digital content", "footer", options) : helperMissing.call(depth0, "_", "The easy payment system of purchase and delivery of digital content", "footer", options)))
+    + "</p>\n</div>";
+  return buffer;
+  });
+
 this["qst"]["Templates"]["ptemplates"]["blocks/header"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};

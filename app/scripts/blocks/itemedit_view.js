@@ -34,6 +34,7 @@ qst.ItemEditView = Backbone.View.extend({
 
 		this.lazy_loader = new qst.LazyLoader();
 
+		this.model.on('save:start', this.saveStart, this);
 		this.model.on('save:success', this.saveSuccess, this);
 	},
 	render: function(){
@@ -233,8 +234,12 @@ qst.ItemEditView = Backbone.View.extend({
 		}
 	},
 
+	saveStart: function() {
+		this.$el.toggleClass('saving', true);
+	},
+
 	saveSuccess: function() {
-		console.log('save:success')
+		this.$el.toggleClass('saving', false);
 	},
 
 

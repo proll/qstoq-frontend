@@ -338,6 +338,9 @@ a:focus {
   top: -99997px;
   left: -99997px;
 }
+HTML {
+  height: 100%;
+}
 BODY {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 14px;
@@ -442,7 +445,7 @@ h1 {
   opacity: 1;
 }
 .load-bg {
-  background: #f8f8fa url(/images/ani/loading_ani_s.gif) center center no-repeat;
+  background: #f8f8fa url(/images/ani/spinner.gif) center center no-repeat;
 }
 .img-loaded.load-bg {
   background-image: none;
