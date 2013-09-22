@@ -100,6 +100,14 @@ qst.App = Backbone.Model.extend({
 					}
 					break;
 
+				case 'how':
+					this.landing.render();
+					break;
+
+				case 'where':
+					this.landing.render();
+					break;
+
 				case 'profile':
 					if(!route[0] && !qst.is_authed()) {
 						qst.navigate('/', {trigger: true});
@@ -159,9 +167,12 @@ qst.App = Backbone.Model.extend({
 
 				switch (prev_route) {
 					case 'landing':
+					case 'how':
+					case 'where':
 						console.log('reset:landing');
 						this.landing.sleep();
 						break;
+
 
 					case 'itemlist':
 						console.log('reset:itemlist');

@@ -1,20 +1,52 @@
 footer {
 	background-color: @grayDarker3;
-	padding: 30px 0 90px;
 	position: relative;
 	z-index: 2;
+}
 
-	.qi {
-		margin: 0 0 10px;
+.footer {
+	&__menu-cont {
+		border-bottom: 1px solid #818486;
+		padding: 50px 0;
 	}
 
-	p {
-		width: 290px;
-		margin: 0;
-		padding: 0;
-		display: block;
-		font-size: 11px;
-		line-height: 16px;
-		color: @white;
+		&__menu {
+			display: inline-block;
+			vertical-align: top;
+			width: 200px;
+
+			&-a {
+				font-size: 11px;
+				line-height: 24px;
+				color: @white;
+				text-decoration: none;
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: @white;
+					text-decoration: none;
+				}
+			}
+		}
+
+
+	&__misc {
+		&-cont {
+			padding: 26px 0 90px;
+		}
+			&-logo {
+				margin: 0 0 10px;
+			}
+
+			&-p {
+				width: 290px;
+				margin: 0;
+				padding: 0;
+				display: block;
+				font-size: 11px;
+				line-height: 16px;
+				color: @white;
+			}
 	}
 }

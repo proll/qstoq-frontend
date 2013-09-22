@@ -16,6 +16,10 @@ qst.Router = Backbone.Router.extend({
 		"": "landing",
 		"/": "landing",
 		".": "landing",
+
+		"how": "how",
+		"where": "where",
+		
 		"logout": "logout",
 
 		"items": "itemlist",
@@ -34,19 +38,6 @@ qst.Router = Backbone.Router.extend({
 	popoup_routes: [
 		'auth',
 	],
-
-
-	itemlist: function () {
-		// console.log("hello itemlist");
-	},
-
-	itemedit: function() {
-		// console.log("hello itemedit");
-	},
-
-	profile: function () {
-		// console.log("hello profile");
-	},
 
 	logout:function(){
 		localStorage.clear();
