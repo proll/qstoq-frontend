@@ -1,3 +1,5 @@
+@pColor: #7c848c;
+
 .body__page-landing {
 	background-color: @greenHead;
 
@@ -17,30 +19,28 @@
 	display: none;
 }
 
-.landing__container {
-	display: table;
-	width: 100%;
-	height: 100%;
-	border-spacing: 0;
-	border-collapse: collapse;
-}
-
-	.landing__container-in {
-		display: table-cell;
-		vertical-align: middle;
-	}
-
-
 	.landing-section {
 		display: block;
 		position: relative;
-		min-height: 600px;
+		min-height: 520px;
 		max-height: 1600px;
 		overflow: hidden;
 		text-align: center;
 		color: @white;
 		z-index: 2;
 	}
+		.landing__container {
+			display: table;
+			height: 100%;
+			border-spacing: 0;
+			border-collapse: collapse;
+			.container;
+		}
+
+			.landing__container-in {
+				display: table-cell;
+				vertical-align: middle;
+			}
 
 	.landing-section1 {
 		position: fixed;
@@ -49,12 +49,6 @@
 		top: @navbarHeight;
 		background: @greenHead;
 	}
-
-
-	.landing-section3 {
-		background: #814f5e;
-	}
-
 
 		.landing__h1 {
 			font-size: 40px;
@@ -65,22 +59,22 @@
 		}
 
 		.landing-section1-p {
-			font-size: 17px;
-			line-height: 24px;
-			margin: 0 0 43px;
+			font-size: 19px;
+			line-height: 27px;
+			margin: 0 0 62px;
 			padding: 0;
 		}
 
 		.landing__start-a {
 			display: inline-block;
-			.border-radius(3px);
+			.border-radius(4px);
 			color: @white;
 			text-decoration: none;
 			font-size: 16px;
 			line-height: 1;
 			font-weight: 700;
 			border: 3px solid @white;
-			padding: 10px 29px;
+			padding: 10px 40px;
 
 			&:hover {
 				color: @white;
@@ -114,9 +108,13 @@
 	.landing-section2 {
 		background: @white;
 
-		.landing__container-in {
-			padding: 94px 0;
+		.landing__container {
+			border-bottom: 1px solid @grayLighter10;
 		}
+
+			.landing__container-in {
+				padding: 94px 0 88px;
+			}
 	}
 		
 		.landing-s-h {
@@ -138,6 +136,13 @@
 				margin-left: 78px;
 				vertical-align: top;
 				text-align: left;
+				counter-increment: howcount;
+
+				&:first-child {
+					.ib {
+						margin-left: -8px;
+					}
+				}
 			}
 
 				.landing__list-itm-h {
@@ -147,6 +152,15 @@
 					padding: 0;
 					margin: 8px 0 -6px;
 					color: @black;
+					position: relative;
+
+					&:before {
+						content: counter(howcount);
+						position: absolute;
+						color: @red_sexy;
+						font-size: 14px;
+						left: -20px;
+					}
 				}
 
 				.landing__list-itm-p {
@@ -155,7 +169,7 @@
 					font-weight: 400;
 					padding: 0;
 					margin: 0 0 1px;
-					color: #7c848c;
+					color: @pColor;
 				}
 
 				.landing__list-itm-h2 {
@@ -165,31 +179,60 @@
 					margin: 0 0 -7px;
 				}
 
+	.landing-section3-p {
+		color: @pColor;
+		font-size: 15px;
+		line-height: 22px;
+		margin-top: 0;
+		margin-bottom: 62px;
+	}
+
 	.landing-section3 {
+		background: @white;
+
+		.landing__container {
+			border-bottom: 1px solid @grayLighter10;
+		}
+
+			.landing__container-in {
+				padding: 77px 0 57px;
+			}
+
 		.landing-s-h {
-			margin: 0 0 47px 0;
-			font-size: 32px;
+			margin: 0 0 20px 0;
+			font-size: 34px;
 			line-height: 42px;
 		}
 
 		.landing__list {
-			margin-bottom: 71px;
+			margin: 0 -@gridGutterWidth 0 -(2*@gridGutterWidth - 5px);
 		}
 
 			.landing__list-itm {
 				display: inline-block;
 				width: (@gridGutterWidth + @gridColumnWidth)*2;
-				margin-left: @gridGutterWidth;
+				margin-left: @gridGutterWidth - 5px;
 				vertical-align: bottom;
 				text-align: left;
+
+				&:first-child {
+					.ib {
+						margin-left: 0;
+					}
+				}
 			}
 
 				.landing__list-itm-h {
-					font-size: 18px;
+					font-size: 16px;
 					line-height: 23px;
 					font-weight: 500;
 					padding: 0;
-					margin: 13px 0 10px;
+					margin: 12px 0 6px;
+
+					&:before {
+						content: '';
+						display: none;
+					}
 				}
 
 				.landing__list-itm-p {
@@ -198,5 +241,84 @@
 					font-weight: 400;
 					padding: 0;
 					margin: 0 0 1px;
+					color: @pColor;
 				}
 	}
+
+
+	.landing-section4 {
+		background: @white;
+
+			.landing__container-in {
+				padding: 69px 0 54px;
+			}
+
+		.landing__list {
+			margin: 0 0 0 -(2*@gridGutterWidth);
+			border-bottom: 1px solid @grayLighter10;
+			padding-bottom: 66px;
+		}
+
+			.landing__list-itm {
+				display: inline-block;
+				width: (@gridGutterWidth + @gridColumnWidth)*4 + @gridGutterWidth;
+				margin-left: @gridGutterWidth*2;
+				vertical-align: top;
+				text-align: center;
+
+				&:first-child {
+					.ib {
+						margin-left: 0;
+					}
+				}
+			}
+
+				.landing__list-itm-p {
+					font-size: 15px;
+					line-height: 22px;
+					font-weight: 400;
+					padding: 0;
+					margin: 0 0 28px;
+					color: @pColor;
+				}
+
+					.landing__pay-systems {
+						margin: 0 0 0 -6px;
+						font-size: 0;
+						line-height: 0;
+					}
+
+						.landing__pay-systems-itm {
+							display: inline-block;
+							margin: 0 0 10px 10px;
+						}
+
+			.landing__start-cont {
+				padding: 57px 0;
+			}
+
+				.landing__start-a {
+					background: @red_sexy;
+					border-color: @red_sexy;
+					padding-left:  20px; 
+					padding-right: 20px; 
+				}
+	}
+
+	.landing__pay-charge {
+		display: inline-block;
+		border: 1px solid rgba(193,193,193,.4);
+		.border-radius(2px);
+		font-size: 55px;
+		line-height: 56px;
+		color: @pColor;
+
+		width: 150px;
+		height: 70px;
+		.box-sizing(border-box);
+		padding: (70px - 56px)/2 0;
+	}
+
+
+
+

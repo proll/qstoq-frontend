@@ -32,7 +32,7 @@ qst.LandingPageView = qst.PageView.extend({
 		this.$window.on('resize.landing.page', _.bind(this.repositionPage, this));
 		this.$sec1 = this.$el.find('.landing-section1');
 		this.$sec2 = this.$el.find('.landing-section2');
-		// this.$sec3 = this.$el.find('.landing-section3');
+		this.$sec3 = this.$el.find('.landing-section3');
 		// this.$secs = this.$el.find('.landing-section');
 
 		this.repositionPage();
