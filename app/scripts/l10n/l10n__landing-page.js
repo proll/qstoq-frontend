@@ -26,9 +26,9 @@ qst.l10n.landing_page = {
 		ru: 'Как работает Qstoq'
 	},
 
-	'1. Add your product': {
-		en: '1. Add your product',
-		ru: '1. Добавьте ваш продукт'
+	'Add your product': {
+		en: 'Add your product',
+		ru: 'Добавьте ваш продукт'
 	},
 
 	'section2-1-1-p': {
@@ -46,9 +46,9 @@ qst.l10n.landing_page = {
 		ru: 'Добавьте объект, который получат ваши покупатели после оплаты. Это может быть любой файл, ссылка, текст или даже ничего, если вы хотите принимать деньги за реальные товары, услуги или просто получать переводы. Добавьте описание и обложку (это может быть картинка или ролик с Youtube).<br/>И вот у вас уже собственный интернет магазин для вашей аудитории. Проще не бывает!'
 	},
 
-	'2. Publish the link': {
-		en: '2. Publish the link',
-		ru: '2. Опубликуйте ссылку'
+	'Publish the link': {
+		en: 'Publish the link',
+		ru: 'Опубликуйте ссылку'
 	},
 
 	'section2-2-1-p': {
@@ -72,9 +72,9 @@ qst.l10n.landing_page = {
 
 	},
 
-	'3. Receive money': {
-		en: '3. Receive money',
-		ru: '3. Получайте деньги'
+	'Receive money': {
+		en: 'Receive money',
+		ru: 'Получайте деньги'
 	},
 
 	'Clear terms of cooperation': {

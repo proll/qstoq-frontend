@@ -30,10 +30,10 @@ qst.LandingPageView = qst.PageView.extend({
 		this.trigger("enterDocument", this.model);
 
 		this.$window.on('resize.landing.page', _.bind(this.repositionPage, this));
-		// this.$sec1 = this.$el.find('.landing-section1');
+		this.$sec1 = this.$el.find('.landing-section1');
 		this.$sec2 = this.$el.find('.landing-section2');
-		this.$sec3 = this.$el.find('.landing-section3');
-		this.$secs = this.$el.find('.landing-section');
+		// this.$sec3 = this.$el.find('.landing-section3');
+		// this.$secs = this.$el.find('.landing-section');
 
 		this.repositionPage();
 
@@ -52,7 +52,7 @@ qst.LandingPageView = qst.PageView.extend({
 
 		h = this.$window.innerHeight() - this.indent;
 		var section_h = Math.max(h, 600);
-		this.$secs.height(section_h);
+		this.$sec1.height(section_h);
 		this.$sec2.css({'margin-top': section_h});
 	},
 

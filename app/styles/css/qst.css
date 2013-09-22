@@ -3953,9 +3953,6 @@ textarea.qst__inp {
   top: 80px;
   background: #38a27b;
 }
-.landing-section2 {
-  background: #814f5e;
-}
 .landing-section3 {
   background: #814f5e;
 }
@@ -4009,11 +4006,17 @@ textarea.qst__inp {
   margin-bottom: 8px;
   display: block;
 }
+.landing-section2 {
+  background: #ffffff;
+}
+.landing-section2 .landing__container-in {
+  padding: 94px 0;
+}
 .landing-s-h {
-  margin: 0 0 47px 0;
+  margin: 0 0 68px 0;
   padding: 0;
-  color: #ffffff;
-  font-size: 32px;
+  color: #19a676;
+  font-size: 34px;
   line-height: 40px;
   font-weight: 400;
 }
@@ -4022,24 +4025,26 @@ textarea.qst__inp {
 }
 .landing__list-itm {
   display: inline-block;
-  width: 280px;
-  margin-left: 40px;
+  width: 200px;
+  margin-left: 78px;
   vertical-align: top;
   text-align: left;
 }
 .landing__list-itm-h {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 46px;
-  font-weight: 500;
+  font-weight: 400;
   padding: 0;
-  margin: 0 0 -3px;
+  margin: 8px 0 -6px;
+  color: #000000;
 }
 .landing__list-itm-p {
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 15px;
+  line-height: 21px;
   font-weight: 400;
   padding: 0;
   margin: 0 0 1px;
+  color: #7c848c;
 }
 .landing__list-itm-h2 {
   font-size: 14px;
