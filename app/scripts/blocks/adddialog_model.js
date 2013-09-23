@@ -23,16 +23,16 @@ qst.AddDialog = Backbone.Model.extend({
 
 	fetch: function (options) {
 		var data = this.toJSON();
-		// поддержка формата цен на серверной стороне
-		if(data.price_pwyw) {
-			data.price+= '+';
-		}
+
 		if($.trim(data.description) === '') {
 			delete data.description;
 		}
 
+		if($.trim(data.url) === '') {
+			delete data.url;
+		}
+
 		delete data.active;
-		delete data.price_pwyw;
 		delete data.sleeped;
 		delete data.state;
 		delete data.user;
@@ -86,7 +86,7 @@ qst.AddDialog = Backbone.Model.extend({
 						}
 						if(!!data.success) {
 							that.view.updateFileProcess(1);
-							that.set('url', data.result.uri)
+							that.set('url', data.result.data)
 						} else {
 							that.trigger('add:error');
 						}

@@ -43,6 +43,7 @@ qst.ItemEditPage = qst.Page.extend({
 			this.itemedit = new qst.ItemEdit(options);
 			this.itemedit.fetch();
 			this.itemedit.activate();
+			this.itemedit.on('save:error savereceipt:error', this.error, this);
 
 			this.view.addMenu(this.menu);
 			this.view.addItemEdit(this.itemedit);
@@ -73,5 +74,10 @@ qst.ItemEditPage = qst.Page.extend({
 			this.itemedit.sleep();
 		}
 
-	}
+	},
+
+
+	error: function() {
+		qst.warning(qst.localize('Something went wrong...', 'misc'));
+	},
 });

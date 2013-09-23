@@ -70,7 +70,7 @@ qst.PreviewUploadView = Backbone.View.extend({
 	},
 
 	updateFileProcess: function(part) {
-		console.log(part);
+		// console.log(part);
 		if(part === 1) {
 			part = 0;
 		}

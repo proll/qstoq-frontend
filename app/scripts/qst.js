@@ -2,7 +2,7 @@ if (typeof console == "undefined") {this.console = {log: function() {}, error: f
 window.qst = window.qst || {};
 window.qst = _.extend(window.qst, {
 	language: _.getCookie('lang') || (navigator.language || navigator.systemLanguage || navigator.browserLanguage || navigator.userLanguage || 'en').substr(0, 2).toLowerCase(),
-	root: "http://localhost:3007",
+	root: "http://qstoq.io",
 	l10n: {},
 
 	preloadTemplates: function(){
@@ -190,7 +190,13 @@ Backbone.sync = function(method, model, options){
 			}
 		}
 	}
-	options.url = (options.url || (model.url && _.result(model, 'url'))) + "?" + _.map(credentials, function(value, key){ return key+"="+value}).join("&");
+	options.url = (options.url || (model.url && _.result(model, 'url')));
+	if(options.url.indexOf('?')===-1) {
+		options.url += '?';
+	} else {
+		options.url += '&';
+	}
+	options.url += _.map(credentials, function(value, key){ return key+"="+value}).join("&");
     return Backbone._sync(method, model, options);
 }
 

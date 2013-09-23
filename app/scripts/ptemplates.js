@@ -414,7 +414,7 @@ function program13(depth0,data) {
     + "</textarea>\n						</div>\n						<ul class=\"finish__form-receipt_desc-action-list\"><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_cancel\"><a href=\"receipt-cancel\" class=\"finish__form-receipt_desc-action-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Cancel", "itemedit", options) : helperMissing.call(depth0, "_", "Cancel", "itemedit", options)))
-    + "</a></li><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_save\"><a href=\"receipt-cancel\" class=\"finish__form-receipt_desc-action-a\">";
+    + "</a></li><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_save\"><a href=\"receipt-save\" class=\"finish__form-receipt_desc-action-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Save", "itemedit", options) : helperMissing.call(depth0, "_", "Save", "itemedit", options)))
     + "</a></li>\n						</ul>\n					</div>\n					<p class=\"finish__form-desc\">";

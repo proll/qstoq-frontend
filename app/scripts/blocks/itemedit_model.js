@@ -1,6 +1,7 @@
 qst.ItemEdit = Backbone.Model.extend({
 	
 	url: '/v1/links/',
+	url_media: '/v1/medias/',
 	preview: null,
 	
 	defaults: {
@@ -22,13 +23,15 @@ qst.ItemEdit = Backbone.Model.extend({
 		// 		"name": "some",
 		// 		"id": <user_id>,
 		// },
-		receipt_comment: 'j sdkj s;kdf;ksajdf lksлы лыр дылрплыврп лдвыапрдло впрдлвыапр д лваыпрдвлырплвырплвырп лвырп лыврп влырпыдвл р лврп вдлр лыврп валдыпр длвыап вдылпр лывпрывлра'
+		receipt_comment: ''
 	},
 
 	initialize: function (options) {
 		this.view = new qst.ItemEditView({
 			model:this
 		});
+
+		this.on('change:receipt_comment', this.saveReceipt, this);
 	},
 
 	deleteItem: function() {
@@ -50,7 +53,7 @@ qst.ItemEdit = Backbone.Model.extend({
 		var link = this.get('url');
 		if(_.isEmpty(link)) {
 			this.set('state', 'nothing');
-		} else if (qst.isFile(link)) {
+		} else if (!parseInt(this.get('external'))) {
 			this.set('state', 'file');
 
 			// TODO надо переделать на хранимое имя файла
@@ -62,27 +65,52 @@ qst.ItemEdit = Backbone.Model.extend({
 		} else {
 			this.set('state', 'link');
 		}
+
+		var opts = {},
+			preview = this.get('preview'),
+			receipt_obj = false,
+			that = this;
+
+		_.forEach(preview, function(el, index) {
+			if(el.identifier === 'receipt_comment') {
+				receipt_obj = el;
+			}
+		})
+		if(!!receipt_obj
+			&& !!receipt_obj.data) {
+			this.set('receipt_comment_id', receipt_obj.id);
+			this.set('receipt_comment', receipt_obj.data, {silent: true});
+		} 
+
+		this.set('price_pwyw', parseInt(this.get('price_pwyw')));
 		this.set('url_short_path', this.get('url_short').split('http://')[1]);
 
 	},
 
-	initMisc: function() {
+	initAfterRender: function() {
 		var opts = {},
-			preview = this.get('preview');
-		if(!!preview 
-			&& preview.length 
-			&& !!preview[preview.length-1] 
-			&& !!preview[preview.length-1].data) {
+			preview = this.get('preview'),
+			preview_obj = false,
+			that = this;
+		_.forEach(preview, function(el, index) {
+			if(el.identifier === 'preview_image') {
+				preview_obj = el;
+			}
+		})
+		if(!!preview_obj
+			&& !!preview_obj.data) {
 			opts = {
 				link_id: this.get('id'),
-				data: preview[preview.length-1].data,
-				id: preview[preview.length-1].id,
+				data: preview_obj.data,
+				id: preview_obj.id,
 			}
 		} else {
 			opts = {
 				link_id: this.get('id')
 			}
 		}
+
+		// console.log(opts)
 		this.preview = new qst.PreviewUpload(opts)
 		this.view.addPreviewUpload(this.preview);
 	},
@@ -107,7 +135,7 @@ qst.ItemEdit = Backbone.Model.extend({
 		if(response.success) {
 			this.init();
 			this.trigger('load:success');
-			this.initMisc();
+			this.initAfterRender();
 		} else {
 			this.trigger('load:error');
 		}
@@ -152,17 +180,56 @@ qst.ItemEdit = Backbone.Model.extend({
 					}
 				}
 			};
-			xhr.open('POST', '/v1/medias/?token='+qst.user.get("token"), true);
+			xhr.open('POST', this.url_media + '?token='+qst.user.get("token"), true);
 			xhr.send(data);
 		}
+	},
+
+	saveReceipt: function(model, value) {
+		// поддержка формата цен на серверной стороне
+		var data = this.toJSON();
+
+		options = {};
+		if(!!$.trim(value)) {
+			options.url = this.url_media + '?identifier=receipt_comment&link_id=' + this.get('id');
+			options.type = 'post';
+			options.data = options.data || {
+				data: 		value,
+			};
+		} else {
+			options.url = this.url_media + this.get('receipt_comment_id');
+			options.type = 'delete';
+			options.data = {}
+		}
+		options.success  	= _.bind(this.saveReceiptSuccess, this);
+		options.error  		= _.bind(this.saveReceiptError, this);
+
+		this.trigger('savereceipt:start');
+
+		return Backbone.Model.prototype.fetch.call(this, options);
+	},
+
+
+	saveReceiptSuccess: function (model, response, options) {
+		response = _.toJSON(response);
+		
+		if(response.success) {
+			if(!!response.result && !!response.result.id) {
+				this.set('receipt_comment_id', response.result.id);
+			}
+			this.trigger('savereceipt:success');
+		} else {
+			this.trigger('savereceipt:error');
+		}
+	},
+
+	saveReceiptError: function (model, xhr, options) {
+		this.trigger('savereceipt:error');
 	},
 
 	save: function (options) {
 		// поддержка формата цен на серверной стороне
 		var data = this.toJSON();
-		if(data.price_pwyw) {
-			data.price+= '+';
-		}
 
 		options = options || {};
 		options.url = this.url + this.get('id');
@@ -173,6 +240,7 @@ qst.ItemEdit = Backbone.Model.extend({
 			description: 	data.description,
 			url: 			data.url,
 			price: 			data.price,
+			price_pwyw: 	data.price_pwyw,
 			ship_limit: 	data.ship_limit,
 		};
 		options.success  	= _.bind(this.saveSuccess, this);
