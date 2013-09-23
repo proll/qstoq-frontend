@@ -3970,7 +3970,7 @@ textarea.qst__inp {
   text-align: center;
 }
 .empty .preview-upload__add-h {
-  display: inline-block;
+  display: block;
 }
 .empty .preview-upload__add-desc {
   display: inline-block;
