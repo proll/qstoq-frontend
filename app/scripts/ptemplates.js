@@ -2,6 +2,119 @@ this["qst"] = this["qst"] || {};
 this["qst"]["Templates"] = this["qst"]["Templates"] || {};
 this["qst"]["Templates"]["ptemplates"] = this["qst"]["Templates"]["ptemplates"] || {};
 
+this["qst"]["Templates"]["ptemplates"]["blocks/account"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function", self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += "\n<div class=\"account__email account-row\">\n	<div class=\"account-col-label\">\n		<h2 class=\"account-col-label-h\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Login with e-mail", "profile", options) : helperMissing.call(depth0, "_", "Login with e-mail", "profile", options)))
+    + "</h2>\n	</div>\n	<div class=\"account-col\">\n		<form action=\"/auth\" class=\"account__email-form\">\n			<div class=\"qst__inp-group\">\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-mail", "auth", options) : helperMissing.call(depth0, "_", "E-mail", "auth", options)))
+    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input maxlength=\"50\" type=\"text\" disabled=\"disabled\" class=\"qst__inp\" name=\"email\" value=\""
+    + escapeExpression(((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.email)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Password", "auth", options) : helperMissing.call(depth0, "_", "Password", "auth", options)))
+    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input maxlength=\"45\" type=\"password\" disabled=\"disabled\" class=\"qst__inp\" name=\"password\" value=\"*******\">\n						</div>\n					</label>\n				</div>\n			</div>\n			<input type=\"submit\" class=\"hidden-submit\">\n		</form>\n	</div>\n</div>\n";
+  return buffer;
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1, stack2;
+  buffer += "\n			<li class=\"account__social-item account__social-item-vk\">\n				<div class=\"social_icn\"><i class=\"qi qi-share-vk\"></i></div>\n				<a class=\"account__social-item__title\" href=\"http://vk.com/profile.php?id="
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.vkontakte)),stack1 == null || stack1 === false ? stack1 : stack1.uid)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" target=\"_blank\">";
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.vkontakte)),stack1 == null || stack1 === false ? stack1 : stack1.first_name), {hash:{},inverse:self.program(6, program6, data),fn:self.program(4, program4, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "</a>\n			</li>\n			";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.vkontakte)),stack1 == null || stack1 === false ? stack1 : stack1.first_name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + " "
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.vkontakte)),stack1 == null || stack1 === false ? stack1 : stack1.last_name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  return buffer;
+  }
+
+function program6(depth0,data) {
+  
+  var stack1;
+  return escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.vkontakte)),stack1 == null || stack1 === false ? stack1 : stack1.uid)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  }
+
+function program8(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += "\n			<li class=\"account__social-item account__social-item-vk\">\n				<a href=\".\" class=\"account__social-item__connect-btn\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect", "profile", options) : helperMissing.call(depth0, "_", "Connect", "profile", options)))
+    + "</a>\n				<div class=\"social_icn\"><i class=\"qi qi-share-vk\"></i></div>\n				<span class=\"account__social-item__title\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "not connected", "profile", options) : helperMissing.call(depth0, "_", "not connected", "profile", options)))
+    + "</span>\n			</li>\n			";
+  return buffer;
+  }
+
+function program10(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n			<li class=\"account__social-item account__social-item-fb\">\n				<div class=\"social_icn\"><i class=\"qi qi-share-fb\"></i></div>\n				<a class=\"account__social-item__title\" href=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.facebook)),stack1 == null || stack1 === false ? stack1 : stack1.link)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" target=\"_blank\">"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.facebook)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</a>\n			</li>\n			";
+  return buffer;
+  }
+
+function program12(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += "\n			<li class=\"account__social-item account__social-item-fb\">\n				<a href=\".\" class=\"account__social-item__connect-btn\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect", "profile", options) : helperMissing.call(depth0, "_", "Connect", "profile", options)))
+    + "</a>\n				<div class=\"social_icn\"><i class=\"qi qi-share-fb\"></i></div>\n				<span class=\"account__social-item__title\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "not connected", "profile", options) : helperMissing.call(depth0, "_", "not connected", "profile", options)))
+    + "</span>\n			</li>\n			";
+  return buffer;
+  }
+
+function program14(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "<li class=\"profile__social-item\"><a href=\"https://twitter.com/account/redirect_by_id?id="
+    + escapeExpression(((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.tw_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" target=\"_blank\"><i class=\"isc isc-tw_prfl\"></i></a></li>";
+  return buffer;
+  }
+
+  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.email), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n\n<div class=\"account-row\">\n	<div class=\"account-col-label\">\n		<h2 class=\"account-col-label-h\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Social networks", "profile", options) : helperMissing.call(depth0, "_", "Social networks", "profile", options)))
+    + "</h2>\n	</div>\n	<div class=\"account-col\">\n		<ul class=\"account__social\">\n			";
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.vkontakte), {hash:{},inverse:self.program(8, program8, data),fn:self.program(3, program3, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n			";
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.external)),stack1 == null || stack1 === false ? stack1 : stack1.facebook), {hash:{},inverse:self.program(12, program12, data),fn:self.program(10, program10, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n			<!-- stuff about twitter -->\n			";
+  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.tw_id), {hash:{},inverse:self.noop,fn:self.program(14, program14, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n		</ul>\n	</div>\n</div>";
+  return buffer;
+  });
+
 this["qst"]["Templates"]["ptemplates"]["blocks/adddialog"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -563,7 +676,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</span></a></li>\n				<li class=\"nav__profile\"><a href=\"/profile\"><i class=\"qi nav__icn qi-profile\"></i><span class=\"nav__profile-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Profile", "navbar", options) : helperMissing.call(depth0, "_", "Profile", "navbar", options)))
-    + "</span></a></li>\n				<li class=\"nav__balance\"><a href=\"/profile\"><i class=\"qi nav__icn qi-balance\"></i><span class=\"nav__balance-title\">";
+    + "</span></a></li>\n				<li class=\"nav__balance\"><a href=\"/profile/withdrawal\"><i class=\"qi nav__icn qi-balance\"></i><span class=\"nav__balance-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Nothing yet", "navbar", options) : helperMissing.call(depth0, "_", "Nothing yet", "navbar", options)))
     + "</span></a></li>\n				<li class=\"nav__logout\"><a href=\"/logout\"><i class=\"qi nav__icn qi-logout\"></i><span class=\"nav__logout-title\">";
@@ -595,6 +708,22 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
     + "\" accept=\"image/jpeg,image/png,image/gif\">\n	</div>\n</div>";
+  return buffer;
+  });
+
+this["qst"]["Templates"]["ptemplates"]["blocks/profile-menu"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  buffer += "<ul class=\"nav\">\n	<li class=\"item_account\"><a href=\"/profile\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Account", "profile", options) : helperMissing.call(depth0, "_", "Account", "profile", options)))
+    + "</a></li>\n	<li class=\"item_withdrawal\"><a href=\"/profile/withdrawal\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Withdrawal", "profile", options) : helperMissing.call(depth0, "_", "Withdrawal", "profile", options)))
+    + "</a></li>\n</ul>";
   return buffer;
   });
 
@@ -1043,40 +1172,17 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["qst"]["Templates"]["ptemplates"]["pages/profile-page"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, stack2, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
-function program1(depth0,data) {
-  
-  
-  return "profile-menu_explore";
-  }
 
-  buffer += "<div class=\"row page-profile_";
+  buffer += "<div class=\"page-profile_";
   if (stack1 = helpers.section) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.section; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\">\n	<div class=\"user-info-col span3\"></div>\n	<div class=\"span10\">\n		<div class=\"profile-menu-row ";
-  options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
-  stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.section, "explore", options) : helperMissing.call(depth0, "ifEq", depth0.section, "explore", options));
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\">\n			<div class=\"profile-feed-lnk\">\n				<a href=\"/user/";
-  if (stack2 = helpers.user) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.user; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "/feed\">";
+    + "\">\n	<div class=\"profile__menu-row\"></div>\n	<div class=\"profile__section-account-row\"></div>\n	<div class=\"profile__section-withdrawal-row\">\n		<h1 class=\"withdrawal-h\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Activity feed", "profile_page", options) : helperMissing.call(depth0, "_", "Activity feed", "profile_page", options)))
-    + "</a>\n			</div>\n			<div class=\"story-menu-row\"></div>\n			<div class=\"profile-explore-lnk\">\n				<a href=\"/user/";
-  if (stack2 = helpers.user) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.user; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "/explore\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "All", "profile_page", options) : helperMissing.call(depth0, "_", "All", "profile_page", options)))
-    + " <span class=\"profile-explore__count\"></span> ";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "photos", "profile_page", options) : helperMissing.call(depth0, "_", "photos", "profile_page", options)))
-    + "</a>\n			</div>\n		</div>\n		<div class=\"profile-feed-col\"><h1></h1></div>\n	</div>\n</div>";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase-s2", "profile", options) : helperMissing.call(depth0, "_", "phrase-s2", "profile", options)))
+    + "</h1>\n	</div>\n</div>";
   return buffer;
   });
 

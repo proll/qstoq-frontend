@@ -7,6 +7,8 @@ qst.ProfilePageView = qst.PageView.extend({
 		}
 		this.template = qst.Templates.get(options.template);
 		this.createDom();
+
+		this.model.on('change:section', this.changeSection, this);
 	},
 
 	render: function(){
@@ -21,11 +23,9 @@ qst.ProfilePageView = qst.PageView.extend({
 		}
 
 
-		if(this.model.get('mine')) {
-			$('body').attr('class', 'body__page-my-' + this.model.get('name') + ' body__page-' + this.model.get('name'));
-		} else {
-			$('body').attr('class', 'body__page-' + this.model.get('name'));
-		}
+		this.$cont = this.$el.find('>div>div');
+
+		$('body').attr('class', 'body__page-' + this.model.get('name'));
 
 
 		/**
@@ -37,16 +37,20 @@ qst.ProfilePageView = qst.PageView.extend({
 		this.trigger("enterDocument", this.model);
 	},
 
-	addPhotofeed: function (photofeed_model) {
-		this.$el.find('.profile-feed-col').html(photofeed_model.view.$el);
+
+	changeSection: function(model, value) {
+		if(this.$cont) {
+			this.$cont
+				.removeAttr('class')
+				.addClass('page-profile_'+value)
+		}
 	},
-	addGrid: function (grid_model) {
-		this.$el.find('.profile-feed-col').html(grid_model.view.$el);
+
+	addMenu: function (menu_model) {
+		this.$el.find('.profile__menu-row').html(menu_model.view.$el);
 	},
-	addUserInfo: function (user_info_model) {
-		this.$el.find('.user-info-col').html(user_info_model.view.$el);
-	},
-	addStoryMenu: function (story_menu_model) {
-		this.$el.find('.story-menu-row').html(story_menu_model.view.$el);
+
+	addAccount: function (account_model) {
+		this.$el.find('.profile__section-account-row').html(account_model.view.$el);
 	},
 });

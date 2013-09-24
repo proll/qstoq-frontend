@@ -1,0 +1,105 @@
+.account {
+	margin: 50px auto 100px;
+
+	&-row {
+		overflow: hidden;
+		margin-left: (@gridColumnWidth + @gridGutterWidth);
+	}
+
+	&-col-label {
+		float: left;
+		width: (@gridColumnWidth + @gridGutterWidth)*2;
+		vertical-align: top;
+
+		&-h {
+			color: @textColor;
+			font-size: 13px;
+			line-height: 20px;
+			font-weight: 400;
+			padding: 0;
+			margin: 10px 0 0 0;
+		}
+	}
+
+	&-col {
+		margin-left: (@gridColumnWidth + @gridGutterWidth)*2 + @gridGutterWidth;
+		width: (@gridColumnWidth + @gridGutterWidth)*6 + @gridGutterWidth;
+	}
+}
+
+.account__email {
+	margin-bottom: 50px;
+
+	.qst__inp-group	{
+		margin-bottom: 0;
+	}
+}
+
+.account__social {
+	&-item {
+		background: @grayLighter4;
+		margin-bottom: 10px;
+
+		.social_icn {
+			float: left;
+			padding: (46px - 28px)/2;
+		}
+
+		&-fb {
+			.social_icn {
+				background: @fbColor;
+			}
+		}
+
+		&-vk {
+			.social_icn {
+				background: @vkColor;
+			}
+		}
+
+		&__title {
+			color: @grayDarker3;
+			display: block;
+			margin-left: 44px;
+			padding: 0 15px;
+			font-size: 13px;
+			line-height: 46px;
+		}
+
+		a&__title {
+			color: @textColor;
+			text-decoration: underline;
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: @textColor;
+				text-decoration: underline;
+			}
+		}
+
+		&__connect-btn {
+			float: right;
+			margin: 8px 10px;
+			padding: 8px 12px 7px;
+
+			display: inline-block;
+			font-size: 13px;
+			line-height: 1;
+			color: @textColor;
+			text-decoration: none;
+
+			.border-radius(4px);
+			border: 1px solid @grayLight1;
+			#gradient .vertical-three-colors(#fdfdfe, #fdfdfe, 60%, #f0f0f2);
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: @textColor;
+				text-decoration: none;
+			}
+		}
+	}
+
+}

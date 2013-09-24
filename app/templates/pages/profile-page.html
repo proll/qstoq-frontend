@@ -1,15 +1,7 @@
-<div class="row page-profile_{{section}}">
-	<div class="user-info-col span3"></div>
-	<div class="span10">
-		<div class="profile-menu-row {{#ifEq section 'explore'}}profile-menu_explore{{/ifEq}}">
-			<div class="profile-feed-lnk">
-				<a href="/user/{{user}}/feed">{{_ 'Activity feed' 'profile_page'}}</a>
-			</div>
-			<div class="story-menu-row"></div>
-			<div class="profile-explore-lnk">
-				<a href="/user/{{user}}/explore">{{_ 'All' 'profile_page'}} <span class="profile-explore__count"></span> {{_ 'photos' 'profile_page'}}</a>
-			</div>
-		</div>
-		<div class="profile-feed-col"><h1></h1></div>
+<div class="page-profile_{{section}}">
+	<div class="profile__menu-row"></div>
+	<div class="profile__section-account-row"></div>
+	<div class="profile__section-withdrawal-row">
+		<h1 class="withdrawal-h">{{_ 'phrase-s2' 'profile'}}</h1>
 	</div>
 </div>

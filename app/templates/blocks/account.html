@@ -1,0 +1,66 @@
+{{#if user_obj.email}}
+<div class="account__email account-row">
+	<div class="account-col-label">
+		<h2 class="account-col-label-h">{{_ 'Login with e-mail' 'profile'}}</h2>
+	</div>
+	<div class="account-col">
+		<form action="/auth" class="account__email-form">
+			<div class="qst__inp-group">
+				<div class="qst__inp-cont">
+					<label>
+						<span class="qst__lbl">{{_ 'E-mail' 'auth'}}</span>
+						<div class="qst__inp-cont-in">
+							<input maxlength="50" type="text" disabled="disabled" class="qst__inp" name="email" value="{{ user_obj.email }}">
+						</div>
+					</label>
+				</div>
+				<div class="qst__inp-cont">
+					<label>
+						<span class="qst__lbl">{{_ 'Password' 'auth'}}</span>
+						<div class="qst__inp-cont-in">
+							<input maxlength="45" type="password" disabled="disabled" class="qst__inp" name="password" value="*******">
+						</div>
+					</label>
+				</div>
+			</div>
+			<input type="submit" class="hidden-submit">
+		</form>
+	</div>
+</div>
+{{/if}}
+
+<div class="account-row">
+	<div class="account-col-label">
+		<h2 class="account-col-label-h">{{_ 'Social networks' 'profile'}}</h2>
+	</div>
+	<div class="account-col">
+		<ul class="account__social">
+			{{#if user_obj.external.vkontakte}}
+			<li class="account__social-item account__social-item-vk">
+				<div class="social_icn"><i class="qi qi-share-vk"></i></div>
+				<a class="account__social-item__title" href="http://vk.com/profile.php?id={{ user_obj.external.vkontakte.uid }}" target="_blank">{{#if user_obj.external.vkontakte.first_name}}{{ user_obj.external.vkontakte.first_name }} {{ user_obj.external.vkontakte.last_name }}{{else}}{{user_obj.external.vkontakte.uid}}{{/if}}</a>
+			</li>
+			{{else}}
+			<li class="account__social-item account__social-item-vk">
+				<a href="." class="account__social-item__connect-btn">{{_ 'Connect' 'profile'}}</a>
+				<div class="social_icn"><i class="qi qi-share-vk"></i></div>
+				<span class="account__social-item__title">{{_ 'not connected'  'profile'}}</span>
+			</li>
+			{{/if}}
+			{{#if user_obj.external.facebook}}
+			<li class="account__social-item account__social-item-fb">
+				<div class="social_icn"><i class="qi qi-share-fb"></i></div>
+				<a class="account__social-item__title" href="{{ user_obj.external.facebook.link }}" target="_blank">{{ user_obj.external.facebook.name }}</a>
+			</li>
+			{{else}}
+			<li class="account__social-item account__social-item-fb">
+				<a href="." class="account__social-item__connect-btn">{{_ 'Connect' 'profile'}}</a>
+				<div class="social_icn"><i class="qi qi-share-fb"></i></div>
+				<span class="account__social-item__title">{{_ 'not connected'  'profile'}}</span>
+			</li>
+			{{/if}}
+			<!-- stuff about twitter -->
+			{{#if user_obj.tw_id}}<li class="profile__social-item"><a href="https://twitter.com/account/redirect_by_id?id={{ user_obj.tw_id }}" target="_blank"><i class="isc isc-tw_prfl"></i></a></li>{{/if}}
+		</ul>
+	</div>
+</div>

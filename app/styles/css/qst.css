@@ -4667,249 +4667,155 @@ textarea.qst__inp {
     display: none;
   }
 }
-.user-info-col {
-  position: relative;
-  z-index: 2;
-  background-color: #ffffff;
-}
-.profile__follow {
-  height: 60px;
-  margin-bottom: -25px;
-  z-index: 2;
-  position: relative;
-  text-align: center;
-  overflow: visible;
+.profile-menu {
+  overflow: hidden;
+  margin-top: -41px;
   font-size: 0;
   line-height: 0;
 }
-.profile__invite {
-  background: #ffffff;
-  position: relative;
-  display: inline-block;
-  z-index: 2;
-  margin-top: -10px;
-  margin-left: -20px;
-  padding: 0 13px;
-}
-.profile__invite .ip {
-  vertical-align: top;
-  margin-right: 8px;
-}
-.profile__invite-title {
-  color: #0096ff;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: -1px;
-}
-.profile__follow-head {
-  background: url("/images/sprites/ip-6cd9a.png") no-repeat 0 0;
-  vertical-align: text-top;
-  display: inline-block;
-  width: 102px;
-  height: 60px;
-  background-position: 0px -128px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-.profile__follow-unfollow {
-  display: none;
-  cursor: pointer;
-}
-.profile__follow-follow {
-  display: inline-block;
-  cursor: pointer;
-}
-.followed .profile__follow-unfollow {
-  display: inline-block;
-}
-.followed .profile__follow-follow {
-  display: none;
-}
-.profile__follow-title {
-  font-size: 18px;
-  line-height: 1;
-  color: #282828;
-  display: block;
-  margin: 11px 0 2px;
-}
-.profile__bg {
-  position: relative;
-  background: #282828 url(/images/u/cover_bg.png);
-  min-height: 290px;
-}
-.profile__follow-cont {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 72px;
-  font-size: 0;
-}
-.profile__followers,
-.profile__following {
-  padding: 8px 0 5px;
-  margin-bottom: 10px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.67);
-  color: #ffffff;
-}
-.follow_count {
-  font-size: 18px;
-  line-height: 1;
-  display: block;
-}
-.follow_decl {
-  font-size: 11px;
-  line-height: 1.8;
-  display: block;
-}
-.profile__avatar {
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  margin-top: -59px;
-  margin-bottom: 24px;
-}
-.profile__avatar-img {
-  border: 4px solid #ffffff;
+.profile-menu li {
   float: left;
-  margin-left: 9px;
+  margin-right: 40px;
 }
-.profile__interact {
-  border-bottom: 1px solid #cccccc;
-  margin-top: 59px;
-  margin-left: 134px;
-  text-align: center;
-  height: 54px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  cursor: pointer;
+.profile-menu li a {
+  float: none;
+  padding: 13px 1px 11px;
+  color: #282828;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
 }
-.profile__interact .ip {
-  vertical-align: middle;
+.profile-menu li a:hover {
+  color: #282828;
+  text-decoration: none;
+  background-color: transparent;
 }
-.profile__interact:hover .profile__interact-title {
-  text-decoration: underline;
-}
-.profile__interact-title {
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: -1px;
-  color: #d34141;
-  margin-left: 8px;
-  margin-top: 23px;
-  display: inline-block;
-}
-.profile__interact-bio .profile__interact-title {
-  color: #969696;
-  margin-left: 5px;
-}
-.profile__bio {
-  margin-bottom: 16px;
-}
-.profile__bio-hidden {
-  display: none;
-}
-.profile__bio-text {
-  padding: 0;
+.profile-menu .nav {
   margin: 0;
-}
-.profile__bio-text,
-.profile__bio-input {
-  color: #282828;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -1px;
-}
-.profile__social {
-  padding: 0;
-  margin: 0 0 30px -20px;
-  text-align: center;
-}
-.profile__social-item {
   display: inline-block;
-  margin: 0 11px;
 }
-.profile__report {
-  border-top: 1px solid #cccccc;
-  padding: 26px 0;
+.page-profile_account .item_account > a {
+  border-bottom: 3px solid #ffd042;
 }
-.profile__report .ip {
+.page-profile_withdrawal .item_withdrawal > a {
+  border-bottom: 3px solid #ffd042;
+}
+.body__page-profile .page-header h1 {
+  margin-bottom: 58px;
+}
+.account {
+  margin: 50px auto 100px;
+}
+.account-row {
+  overflow: hidden;
+  margin-left: 80px;
+}
+.account-col-label {
+  float: left;
+  width: 160px;
   vertical-align: top;
-  margin-left: -1px;
 }
-.profile__report-title {
-  cursor: pointer;
-  letter-spacing: -1px;
-  color: #d34141;
-  font-size: 18px;
-  line-height: 1;
-  display: inline-block;
-  margin: 4px 0 0 5px;
+.account-col-label-h {
+  color: #282828;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 0;
+  margin: 10px 0 0 0;
 }
-.profile__report-title:hover {
+.account-col {
+  margin-left: 200px;
+  width: 520px;
+}
+.account__email {
+  margin-bottom: 50px;
+}
+.account__email .qst__inp-group {
+  margin-bottom: 0;
+}
+.account__social-item {
+  background: #eeeeee;
+  margin-bottom: 10px;
+}
+.account__social-item .social_icn {
+  float: left;
+  padding: 9px;
+}
+.account__social-item-fb .social_icn {
+  background: #3b5998;
+}
+.account__social-item-vk .social_icn {
+  background: #5175a5;
+}
+.account__social-item__title {
+  color: #737678;
+  display: block;
+  margin-left: 44px;
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 46px;
+}
+a.account__social-item__title {
+  color: #282828;
   text-decoration: underline;
 }
-.profile-menu-row {
-  height: 38px;
-  padding: 5px 0 6px;
-  border-bottom: 1px solid #cccccc;
-  font-size: 0;
-}
-.profile-menu-row .profile-explore-lnk,
-.profile-menu-row .story-menu-row {
-  border-left: 1px solid #cccccc;
-  display: inline-block;
-  padding-left: 5px;
-}
-.profile-menu-row .profile-explore-lnk {
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
-  padding: 3px 16px 3px 19px;
-  vertical-align: top;
-}
-.profile-menu-row .story-menu__category-items {
-  top: 43px;
-}
-.profile-menu-row .profile-feed-lnk {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 32px;
-  height: 32px;
-  margin: 3px 16px 3px 14px;
-  vertical-align: top;
-}
-.profile-menu_explore .profile-feed-lnk a {
-  color: #8c8c8c;
-}
-.profile-menu_explore .profile-feed-lnk a:hover {
+a.account__social-item__title:hover,
+a.account__social-item__title:active,
+a.account__social-item__title:focus {
   color: #282828;
+  text-decoration: underline;
 }
-.page-profile_feed .story-menu-row {
+.account__social-item__connect-btn {
+  float: right;
+  margin: 8px 10px;
+  padding: 8px 12px 7px;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1;
+  color: #282828;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #dcdcdc;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fdfdfe), color-stop(60%, #fdfdfe), to(#f0f0f2));
+  background-image: -webkit-linear-gradient(#fdfdfe, #fdfdfe 60%, #f0f0f2);
+  background-image: -moz-linear-gradient(top, #fdfdfe, #fdfdfe 60%, #f0f0f2);
+  background-image: -o-linear-gradient(#fdfdfe, #fdfdfe 60%, #f0f0f2);
+  background-image: linear-gradient(#fdfdfe, #fdfdfe 60%, #f0f0f2);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffdfdfe', endColorstr='#fff0f0f2', GradientType=0);
+}
+.account__social-item__connect-btn:hover,
+.account__social-item__connect-btn:active,
+.account__social-item__connect-btn:focus {
+  color: #282828;
+  text-decoration: none;
+}
+.withdrawal-h {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 60px 200px;
+  padding: 0;
+}
+.page-profile_account .profile__section-account-row {
+  display: block;
+}
+.page-profile_account .profile__section-withdrawal-row {
   display: none;
 }
-.page-profile_feed .profile-explore-lnk {
-  display: inline-block;
-}
-.page-profile_explore .story-menu-row,
-.page-profile_info .story-menu-row {
-  display: inline-block;
-}
-.page-profile_explore .profile-explore-lnk,
-.page-profile_info .profile-explore-lnk {
+.page-profile_withdrawal .profile__section-account-row {
   display: none;
 }
-.profile-feed-col .pic-tile-grid {
-  margin-top: 20px;
-}
-.profile-feed-col .photofeed {
-  border-top: 0 none;
+.page-profile_withdrawal .profile__section-withdrawal-row {
+  display: block;
 }
 .error-page__list,
 .error-page__description {

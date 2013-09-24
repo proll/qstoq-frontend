@@ -11,6 +11,11 @@ qst.l10n.header = {
 				title: 	"Product edit",
 				description: ""
 			},
+
+			profile:{
+				title: 	" ",
+				description: ""
+			},
 		
 			er404:{
 				title: 	"404",
@@ -36,8 +41,14 @@ qst.l10n.header = {
 			},		
 			er404:{
 				title: 	"404",
-            description: 	"Страницы, которую вы пытаетесь открыть, здесь нет."
+            	description: 	"Страницы, которую вы пытаетесь открыть, здесь нет."
 			},
+
+			profile:{
+				title: 	" ",
+				description: ""
+			},
+
 			er403:{
 				title: 	"403",
             	description: 	"Ошибка доступа"

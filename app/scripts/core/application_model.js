@@ -113,12 +113,7 @@ qst.App = Backbone.Model.extend({
 						qst.navigate('/', {trigger: true});
 					} else {
 						this.profile.render({
-							mine:    	!route[0] || route[0] === qst.user.get('uid'),
-							user:    	!!route[0] ? route[0] : qst.user.get('uid'),
-							section:    route[1],
-							category:   route[2],
-							story:  	route[3],
-							sort: 		route[4]
+							section: !!route[0] ? route[0] : 'account'
 						});
 					}
 					break;

@@ -23,10 +23,14 @@ qst.Router = Backbone.Router.extend({
 		"logout": "logout",
 
 		"items": "itemlist",
-		"profile": "profile",
+
+		"profile": 			"profile",
+		"profile/:slide": 	"profile",
+		"profile/:slide/": 	"profile",
 
 		"item/:id": 		"itemedit",
 		"item/:id/:slide": 	"itemedit",
+		"item/:id/:slide/": "itemedit",
 
 		"404": "er404",
 		"403": "er403",
