@@ -273,7 +273,13 @@ qst.App = Backbone.Model.extend({
 
 		this.auth.on('auth:success', function (user_obj) {
 			qst.trigger('auth:success', user_obj);
-			if(this.router.current_route  === 'landing' || this.router.current_route  === '') {
+			console.log(this.router.current_route)
+			if(this.router.current_route  !== 'profile' 
+				&& (
+					this.router.current_route  === 'landing' 
+				 || this.router.current_route  === ''
+				 )
+			) {
 				qst.navigate('/items', {trigger: true});
 			}
 		}, this);

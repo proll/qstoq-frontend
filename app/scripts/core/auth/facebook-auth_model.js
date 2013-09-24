@@ -44,10 +44,17 @@ qst.FB = Backbone.Model.extend({
 
 	fetch: function(){
 		if (this.access_token!=null) {
-			var that = this;
+			var that = this,
+				signin_url = this.url;
+
+			// connect account if u are authed
+			if(qst.is_authed()) {
+				signin_url = qst.authUrl(this.url);
+			}
+
 			$.ajax({
 				type: 'post',
-				url: this.url,
+				url: signin_url,
 				data: {
 					fbUserId:this.access_uid,
 					fbAccessToken : this.access_token 
@@ -79,9 +86,9 @@ qst.FB = Backbone.Model.extend({
 	},
 
 	error: function(e) {
-		qst.log("WHP/auth/FB : error while logging in!");
+		qst.log("QST/auth/FB : error while logging in!");
 		// TODO слушать ошибку выше
-		this.trigger("error", {description:"WHP/auth/FB : error while logging in!"})
+		this.trigger("error", {description:"QST/auth/FB : error while logging in!"})
 	},
 
 	
@@ -90,8 +97,9 @@ qst.FB = Backbone.Model.extend({
 		this.access_token = "";
 		FB.login(
 			_.bind(this.onFBData, this), 
-			{ scope: 'publish_actions,publish_stream,user_photos,offline_access,email,user_birthday'}
+			{ scope: 'publish_actions,publish_stream,user_photos,offline_access,email'}
 		);
+			// { scope: 'publish_actions,publish_stream,user_photos,offline_access,email,user_birthday'}
 		return false;
 	},
 
@@ -109,17 +117,17 @@ qst.FB = Backbone.Model.extend({
 		this.trigger("fb:like", e);
 
 		// OLD
-		// if (WHP.shares.onFbLike(e))
+		// if (QST.shares.onFbLike(e))
 		// 	return false;
 
-		// if (WHP.controller.curPage.onFBlike)
+		// if (QST.controller.curPage.onFBlike)
 		// {
-		// 	WHP.controller.curPage.onFBlike(e);
+		// 	QST.controller.curPage.onFBlike(e);
 		// }
 	},
 
 	onFBData: function(response){
-		// WHP.pages.getstarted.hidePopup();
+		// QST.pages.getstarted.hidePopup();
 		if (response.status == "connected"){
 			qst.log("Facebook : user was succesfully connected! :)", response.authResponse );
 			var uid = response.authResponse.userID,
@@ -133,6 +141,6 @@ qst.FB = Backbone.Model.extend({
 				qst.log("Facebook : user was not connected! :(");
 			}
 		}
-		// WHP.controller.setTitle();
+		// QST.controller.setTitle();
 	},
 })

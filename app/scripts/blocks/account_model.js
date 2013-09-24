@@ -38,6 +38,7 @@ qst.Account = Backbone.Model.extend({
 
 	initialize: function (options) {
 		this.view = new qst.AccountView({model:this});
+		qst.on('auth:success', this.authUpdate, this);
 	},
 
 	fetch: function (options) {
@@ -77,6 +78,19 @@ qst.Account = Backbone.Model.extend({
 
 	reset: function () {
 		return false;
+	},
+
+	vkConnect: function(){
+		qst.app.auth.VK.login();
+	},
+
+	fbConnect: function(){
+		qst.app.auth.FB.login();
+	},
+
+	authUpdate: function(user_obj) {
+		console.log(user_obj);
+		this.activate();
 	},
 
 	remove: function () {

@@ -2,7 +2,7 @@ if (typeof console == "undefined") {this.console = {log: function() {}, error: f
 window.qst = window.qst || {};
 window.qst = _.extend(window.qst, {
 	language: _.getCookie('lang') || (navigator.language || navigator.systemLanguage || navigator.browserLanguage || navigator.userLanguage || 'en').substr(0, 2).toLowerCase(),
-	root: "http://qstoq.io",
+	root: "http://qstoq-dev.herokuapp.com",
 	l10n: {},
 
 	preloadTemplates: function(){
@@ -88,9 +88,8 @@ window.qst = _.extend(window.qst, {
 
 	authUrl: function(url) {
 		var credentials = {};
-		if(!!qst.app && !!qst.app.user.get("uid")) {
+		if(!!qst.app && !!qst.app.user.get("token")) {
 			credentials = {
-				uid: qst.app.user.get("uid"),
 				token: qst.app.user.get("token")
 			}
 		} else {

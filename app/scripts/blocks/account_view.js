@@ -29,17 +29,19 @@ qst.AccountView = Backbone.View.extend({
 
 	vkConnect: function(e){
 		e.preventDefault();
+		this.model.vkConnect()
 		return false;
 	},
 
 	fbConnect: function(e){
 		e.preventDefault();
+		this.model.fbConnect()
 		return false;
 	},
 
 	reset: function() {s;
 		this.undelegateEvents();
-		this.$el.html('');
+		this.$el.html('');	
 	}
 });
 

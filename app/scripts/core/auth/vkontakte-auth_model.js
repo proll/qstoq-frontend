@@ -27,10 +27,17 @@ qst.VK = Backbone.Model.extend({
 	},
 
 	fetch: function(user_obj){
-		var that = this;
+		var that = this,
+			signin_url = this.url;
+
+		// connect account if u are authed
+		if(qst.is_authed()) {
+			signin_url = qst.authUrl(this.url);
+		}
+
 		$.ajax({
 			type: 'post',
-			url:  this.url,
+			url: signin_url,
 			dataType: 'json',
 			data: {
 				vkAccessToken : user_obj.token, 
