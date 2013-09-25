@@ -123,7 +123,7 @@ window.qst = _.extend(window.qst, {
 
 	isFile: function(txt) {
 		txt = txt || '';
-		return txt.indexOf('qstoq.ru')!==-1;
+		return txt.indexOf('qstoq.io')!==-1;
 	}
 });
 

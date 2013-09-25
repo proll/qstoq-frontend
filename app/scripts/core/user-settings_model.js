@@ -8,7 +8,7 @@ qst.UserSettings = Backbone.Model.extend({
 		// balance: "0",
 		// created: "2013-07-03 10:22:37",
 		// currency: "RUB",
-		// email: "info@qstoq.ru",
+		// email: "info@qstoq.io",
 		// id: "36",
 		// name: "Qstoq Admin",
 	},
