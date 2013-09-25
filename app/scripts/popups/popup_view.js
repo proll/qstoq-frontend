@@ -50,11 +50,11 @@ qst.PopupView = Backbone.View.extend({
 	},
 
 	lockPage: function() {
-		$("body").css("overflow", "hidden");
+		// $("body").css("overflow", "hidden");
 	},
 
 	unlockPage: function() {
-		$("body").css("overflow", "auto");
+		// $("body").css("overflow", "auto");
 	},
 
 	bgClick: function(e) {

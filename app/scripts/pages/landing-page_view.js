@@ -64,14 +64,14 @@ qst.LandingPageView = qst.PageView.extend({
 	goSection2: function(e) {
 		$('html, body').animate({
 			 scrollTop: this.$sec2.offset().top - this.indent
-		}, 100);
+		}, 780);
 		return false;
 	},
 
 	goSection3: function(e) {
 		$('html, body').animate({
 			 scrollTop: this.$sec3.offset().top - this.indent
-		}, 100);
+		}, 780);
 		return false;
 	},
 
