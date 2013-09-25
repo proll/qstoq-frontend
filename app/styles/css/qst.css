@@ -1035,17 +1035,17 @@ textarea::-webkit-input-placeholder {
   background-position: 0px -544px;
 }
 .qi {
-  background: url("/images/sprites/qi-d7717.png") no-repeat 0 0;
+  background: url("/images/sprites/qi-1cf58.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .qi {
-    background: url("/images/sprites/qi-2x-d7717.png") no-repeat 0 0;
-    -webkit-background-size: 40px 316px;
-    -moz-background-size: 40px 316px;
-    -o-background-size: 40px 316px;
-    background-size: 40px 316px;
+    background: url("/images/sprites/qi-2x-1cf58.png") no-repeat 0 0;
+    -webkit-background-size: 40px 340px;
+    -moz-background-size: 40px 340px;
+    -o-background-size: 40px 340px;
+    background-size: 40px 340px;
     vertical-align: text-top;
     display: inline-block;
   }
@@ -1095,30 +1095,40 @@ textarea::-webkit-input-placeholder {
   height: 20px;
   background-position: 0px -162px;
 }
+.qi-ru {
+  width: 16px;
+  height: 11px;
+  background-position: 0px -183px;
+}
 .qi-share-fb {
   width: 28px;
   height: 28px;
-  background-position: 0px -183px;
+  background-position: 0px -195px;
 }
 .qi-share-link {
   width: 28px;
   height: 28px;
-  background-position: 0px -212px;
+  background-position: 0px -224px;
 }
 .qi-share-tw {
   width: 28px;
   height: 28px;
-  background-position: 0px -241px;
+  background-position: 0px -253px;
 }
 .qi-share-vk {
   width: 28px;
   height: 28px;
-  background-position: 0px -270px;
+  background-position: 0px -282px;
 }
 .qi-smlogo {
   width: 40px;
   height: 17px;
-  background-position: 0px -299px;
+  background-position: 0px -311px;
+}
+.qi-us {
+  width: 16px;
+  height: 11px;
+  background-position: 0px -329px;
 }
 .ib {
   background: url("/images/sprites/ib-f3983.png") no-repeat 0 0;
@@ -2569,6 +2579,14 @@ footer {
 .footer__menu-a:focus {
   color: #ffffff;
   text-decoration: none;
+}
+.footer__lang {
+  float: right;
+}
+.footer__lang-item {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
 }
 .footer__misc-cont {
   padding: 26px 0 90px;

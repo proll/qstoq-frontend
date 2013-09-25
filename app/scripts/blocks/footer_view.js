@@ -2,6 +2,11 @@ qst.FooterView = Backbone.View.extend({
 	template: "blocks/footer",
 	el: "footer",
 
+	events: {
+		'click .footer__lang-item_ru': 'toggleRULang',
+		'click .footer__lang-item_en': 'toggleENLang',
+	},
+
 	initialize: function(){
 		this.template = qst.Templates.get(this.template);
 		this.render();
@@ -15,6 +20,16 @@ qst.FooterView = Backbone.View.extend({
 		// 	this.$el.toggleClass("hidden", false);
 		// }
 		this.$el.html(template);
+	},
+
+	toggleRULang: function(e) {
+		this.model.toggleLang('ru');
+		return false;
+	},
+
+	toggleENLang: function(e) {
+		this.model.toggleLang('en');
+		return false;
 	}
 });
 

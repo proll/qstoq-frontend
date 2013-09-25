@@ -11,6 +11,15 @@ qst.Footer = Backbone.Model.extend({
 		// qst.on("route", this.changeItem, this);
 	},
 
+	toggleLang: function(lang) {
+		if(lang!='ru' && lang!='en') {
+			return false;
+		}
+
+		_.setCookie('lang', lang);
+		window.location.reload()
+	}
+
 	// changeItem: function (itemName) {
 	// 	if(qst.app.router.currentIsPopup()) {
 	// 		return false;

@@ -217,7 +217,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"https://twitter.com/qstoq\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Twitter", "footer", options) : helperMissing.call(depth0, "_", "Twitter", "footer", options)))
-    + "</a></li>\n	</ul>\n</div>\n<div class=\"container footer__misc-cont\">\n	<a href=\"/\"><i class=\"qi qi-smlogo footer__misc-logo\"></i></a>\n	<p class=\"footer__misc-p\">&copy; ";
+    + "</a></li>\n	</ul>\n	<ul class=\"footer__lang\">\n		<li class=\"footer__lang-item footer__lang-item_ru\">\n			<i class=\"qi qi-ru\"></i>\n		</li><li class=\"footer__lang-item footer__lang-item_en\">\n			<i class=\"qi qi-us\"></i>\n		</li>\n	</ul>\n</div>\n<div class=\"container footer__misc-cont\">\n	<a href=\"/\"><i class=\"qi qi-smlogo footer__misc-logo\"></i></a>\n	<p class=\"footer__misc-p\">&copy; ";
   if (stack2 = helpers.year) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.year; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
