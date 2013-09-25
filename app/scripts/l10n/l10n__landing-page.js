@@ -12,7 +12,7 @@ qst.l10n.landing_page = {
 	},
 
 	'section3-p': {
-		en: 'Sale of access to a file, a link, a text, a webinar, every digital content or get payment<br/>for goods and services by a huge amount of ecurrencies and by all types pf plastic cards',
+		en: 'Sale of an access to a file, a link, a text, a webinar, every digital content or get payment<br/>for goods and services by a huge amount of ecurrencies and by all types of plastic cards',
 		ru: 'Продать доступ к файлу, ссылке, тексту, вебинару, любому цифровому контенту или принять оплату<br/>за товары и услуги большинством видов электронных валют и всеми видами пластиковых карт'
 	},
 
@@ -155,7 +155,7 @@ qst.l10n.landing_page = {
 	},
 
 	'section4-1-1-p': {
-		en: 'With Qstoq your customers can pay by a huge amount of ecurrencies and all types pf plastic cards',
+		en: 'With Qstoq your customers can pay by a huge amount of ecurrencies and all types of plastic cards',
 		ru: 'С Qstoq ваши покупатели смогут оплачивать большинством видов электронных валют и всеми видами пластиковых карт'
 	},
 

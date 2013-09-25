@@ -2081,14 +2081,14 @@ textarea::-webkit-input-placeholder {
 }
 /* Authorization */
 .auth-popup.popup__table {
-  background-color: transparent;
+  background-color: rgba(0, 0, 10, 0.34);
 }
 .auth-popup .popup__inner {
   width: 660px;
   border: 0 none;
-  -webkit-box-shadow: 0 5px 20px rgba(0, 10, 33, 0.6);
-  -moz-box-shadow: 0 5px 20px rgba(0, 10, 33, 0.6);
-  box-shadow: 0 5px 20px rgba(0, 10, 33, 0.6);
+  -webkit-box-shadow: 0 5px 20px rgba(0, 10, 33, 0.12);
+  -moz-box-shadow: 0 5px 20px rgba(0, 10, 33, 0.12);
+  box-shadow: 0 5px 20px rgba(0, 10, 33, 0.12);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
