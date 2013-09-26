@@ -7,7 +7,7 @@ qst.l10n.landing_page = {
 	},
 
 	'section1-p': {
-		en: 'Qstoq — it is a platform for selling your digital content and offline goods<br/>and services. You just create a page of ypur product and you can get paymants than',
+		en: 'Qstoq — it is a platform for selling your digital content and offline goods<br/>and services. You just create a page of your product and you can get paymants than',
 		ru: 'Qstoq — это витрина для продажи вашего цифрового контента или реальных товаров<br/>и услуг. Вы просто создаете страницу продукта и уже можете принимать оплату'
 	},
 
