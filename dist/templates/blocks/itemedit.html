@@ -43,9 +43,9 @@
 				<div class="item__types-cont">
 					<span class="item__types-title">{{_ 'After payment' 'itemlist'}}</span>
 					<ul class="item__types">
-						<li{{#ifEq state 'link'}} class="active"{{/ifEq}}><a href="link" class="item-link item__types-item">{{_ 'give a link' 'itemlist'}}</a></li>
-						<li{{#ifEq state 'file'}} class="active"{{/ifEq}}><a href="file" class="item-file item__types-item">{{_ 'give a file' 'itemlist'}}</a></li>
-						<li{{#ifEq state 'nothing'}} class="active"{{/ifEq}}><a href="nothing" class="item-nothing item__types-item">{{_ 'give nothing' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'link'}} class="active"{{/ifEq}}><a href="link" rel="nofollow" class="item-link item__types-item">{{_ 'give a link' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'file'}} class="active"{{/ifEq}}><a href="file" rel="nofollow" class="item-file item__types-item">{{_ 'give a file' 'itemlist'}}</a></li>
+						<li{{#ifEq state 'nothing'}} class="active"{{/ifEq}}><a href="nothing" rel="nofollow" class="item-nothing item__types-item">{{_ 'give nothing' 'itemlist'}}</a></li>
 					</ul>
 				</div>
 				<div class="itemedit__link qst__inp-group">
@@ -68,7 +68,7 @@
 				<input type="submit" class="inv">
 			</form>
 			<div class="itemedit__submit">
-				<a href="" class="itemedit__delete-a">{{_ 'Remove link' 'itemedit'}}</a><span class="itemedit__error"></span><a href="save" class="itemedit__submit-a">{{_ 'Save' 'itemedit'}}</a>
+				<a href="" rel="nofollow" class="itemedit__delete-a">{{_ 'Remove link' 'itemedit'}}</a><span class="itemedit__error"></span><a href="save" rel="nofollow" class="itemedit__submit-a">{{_ 'Save' 'itemedit'}}</a>
 			</div>
 		</div>
 		<div class="span4">
@@ -80,11 +80,11 @@
 			<p class="itemedit__share-p">{{_ 'Spread the word on your site, on blog or social networks' 'itemedit'}}</p>
 			<ul class="itemedit__share-ul">
 				<li>
-					<a href="vk" class="itemedit__share-btn itemedit__share-vk-btn"><i class="qi qi-share-vk"></i><span class="itemedit__share-btn-title">{{_ 'Share on Vkontakte' 'itemedit'}}</span></a>
+					<a href="vk" rel="nofollow" class="itemedit__share-btn itemedit__share-vk-btn"><i class="qi qi-share-vk"></i><span class="itemedit__share-btn-title">{{_ 'Share on Vkontakte' 'itemedit'}}</span></a>
 				</li><li>
-					<a href="facebook" class="itemedit__share-btn itemedit__share-fb-btn"><i class="qi qi-share-fb"></i><span class="itemedit__share-btn-title">{{_ 'Share on Facebook' 'itemedit'}}</span></a>
+					<a href="facebook" rel="nofollow" class="itemedit__share-btn itemedit__share-fb-btn"><i class="qi qi-share-fb"></i><span class="itemedit__share-btn-title">{{_ 'Share on Facebook' 'itemedit'}}</span></a>
 				</li><li>
-					<a href="twitter" class="itemedit__share-btn itemedit__share-tw-btn"><i class="qi qi-share-tw"></i><span class="itemedit__share-btn-title">{{_ 'Share on Twitter' 'itemedit'}}</span></a>
+					<a href="twitter" rel="nofollow" class="itemedit__share-btn itemedit__share-tw-btn"><i class="qi qi-share-tw"></i><span class="itemedit__share-btn-title">{{_ 'Share on Twitter' 'itemedit'}}</span></a>
 				</li>
 			</ul>
 		</div>
@@ -109,9 +109,9 @@
 					<p class="showcase__form-desc">{{ description }}</p>
 					<ul class="showcase__share">
 						<li class="showcase__share-itm">{{_ 'Share' 'item'}}</li>
-						<li class="showcase__share-itm"><a class="showcase__share-itm-a" href="vk"><i class="is is-shc-vk"></i></a></li>
-						<li class="showcase__share-itm"><a class="showcase__share-itm-a" href="facebook"><i class="is is-shc-fb"></i></a></li>
-						<li class="showcase__share-itm"><a class="showcase__share-itm-a" href="twitter"><i class="is is-shc-tw"></i></a></li>
+						<li class="showcase__share-itm"><a class="showcase__share-itm-a" rel="nofollow" href="vk"><i class="is is-shc-vk"></i></a></li>
+						<li class="showcase__share-itm"><a class="showcase__share-itm-a" rel="nofollow" href="facebook"><i class="is is-shc-fb"></i></a></li>
+						<li class="showcase__share-itm"><a class="showcase__share-itm-a" rel="nofollow" href="twitter"><i class="is is-shc-tw"></i></a></li>
 					</ul>
 				</div>
 				<div class="showcase__form__col2">
@@ -146,8 +146,8 @@
 		<div class="finish__form-add-comment">
 			<i class="is is-com finish__form-add-comment__icn"></i>
 			<ul class="finish__form-add-comment__list">
-				<li class="finish__form-add-comment__add"><a href="add" class="finish__form-add-comment-a">{{_ 'Add your<br/>message on the receipt' 'itemedit'}}</a></li>
-				<li class="finish__form-add-comment__edit"><a href="edit" class="finish__form-add-comment-a">{{_ 'Edit your message on the receipt' 'itemedit'}}</a></li>
+				<li class="finish__form-add-comment__add"><a href="add" rel="nofollow" class="finish__form-add-comment-a">{{_ 'Add your<br/>message on the receipt' 'itemedit'}}</a></li>
+				<li class="finish__form-add-comment__edit"><a href="edit" rel="nofollow" class="finish__form-add-comment-a">{{_ 'Edit your message on the receipt' 'itemedit'}}</a></li>
 			</ul>
 		</div>
 		<div class="finish__cont">
@@ -162,7 +162,7 @@
 						<div class="finish__form-receipt_desc-cont qst__inp-cont">
 							<textarea value="" class="finish__form-receipt_desc qst__inp" name="receipt_comment">{{ receipt_comment }}</textarea>
 						</div>
-						<ul class="finish__form-receipt_desc-action-list"><li class="finish__form-receipt_desc-action finish__form-receipt_desc-action_cancel"><a href="receipt-cancel" class="finish__form-receipt_desc-action-a">{{_ 'Cancel' 'itemedit'}}</a></li><li class="finish__form-receipt_desc-action finish__form-receipt_desc-action_save"><a href="receipt-save" class="finish__form-receipt_desc-action-a">{{_ 'Save' 'itemedit'}}</a></li>
+						<ul class="finish__form-receipt_desc-action-list"><li class="finish__form-receipt_desc-action finish__form-receipt_desc-action_cancel"><a href="receipt-cancel" rel="nofollow" class="finish__form-receipt_desc-action-a">{{_ 'Cancel' 'itemedit'}}</a></li><li class="finish__form-receipt_desc-action finish__form-receipt_desc-action_save"><a href="receipt-save" rel="nofollow" class="finish__form-receipt_desc-action-a">{{_ 'Save' 'itemedit'}}</a></li>
 						</ul>
 					</div>
 					<p class="finish__form-desc">{{ receipt_comment }}</p>
@@ -170,9 +170,9 @@
 					<a href="{{ url_short }}" target="_blank" class="finish__form-buy-another">{{_ 'Purchase more' 'item'}}</a>
 					<ul class="finish__share">
 						<li class="finish__share-itm">{{_ 'Share' 'item'}}</li>
-						<li class="finish__share-itm"><a class="showcase__share-itm-a" href="vk"><i class="is is-shc-vk"></i></a></li>
-						<li class="finish__share-itm"><a class="showcase__share-itm-a" href="facebook"><i class="is is-shc-fb"></i></a></li>
-						<li class="finish__share-itm"><a class="showcase__share-itm-a" href="twitter"><i class="is is-shc-tw"></i></a></li>
+						<li class="finish__share-itm"><a class="showcase__share-itm-a" rel="nofollow" href="vk"><i class="is is-shc-vk"></i></a></li>
+						<li class="finish__share-itm"><a class="showcase__share-itm-a" rel="nofollow" href="facebook"><i class="is is-shc-fb"></i></a></li>
+						<li class="finish__share-itm"><a class="showcase__share-itm-a" rel="nofollow" href="twitter"><i class="is is-shc-tw"></i></a></li>
 					</ul>
 					<div class="finish__form-service-desc"><a href="http://qstoq.io" target="_blank">Qstoq</a> &mdash; {{_ 'selling in lightning speed' 'itemedit'}}</div>
 

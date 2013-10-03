@@ -54,7 +54,7 @@ function program6(depth0,data) {
 function program8(depth0,data) {
   
   var buffer = "", stack1, options;
-  buffer += "\n			<li class=\"account__social-item account__social-item-vk\">\n				<a href=\".\" class=\"account__social-item__connect-btn\">";
+  buffer += "\n			<li class=\"account__social-item account__social-item-vk\">\n				<a href=\".\" rel=\"nofollow\" class=\"account__social-item__connect-btn\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect", "profile", options) : helperMissing.call(depth0, "_", "Connect", "profile", options)))
     + "</a>\n				<div class=\"social_icn\"><i class=\"qi qi-share-vk\"></i></div>\n				<span class=\"account__social-item__title\">";
@@ -78,7 +78,7 @@ function program10(depth0,data) {
 function program12(depth0,data) {
   
   var buffer = "", stack1, options;
-  buffer += "\n			<li class=\"account__social-item account__social-item-fb\">\n				<a href=\".\" class=\"account__social-item__connect-btn\">";
+  buffer += "\n			<li class=\"account__social-item account__social-item-fb\">\n				<a href=\".\" rel=\"nofollow\" class=\"account__social-item__connect-btn\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect", "profile", options) : helperMissing.call(depth0, "_", "Connect", "profile", options)))
     + "</a>\n				<div class=\"social_icn\"><i class=\"qi qi-share-fb\"></i></div>\n				<span class=\"account__social-item__title\">";
@@ -126,7 +126,7 @@ function program1(depth0,data) {
   return " class=\"active\"";
   }
 
-  buffer += "<div class=\"adddialog-cont\">\n	<a href=\"add\" class=\"adddialog__add\"><i class=\"qi qi-add\"></i><span class=\"adddialog__add-title\">";
+  buffer += "<div class=\"adddialog-cont\">\n	<a href=\"add\" rel=\"nofollow\" class=\"adddialog__add\"><i class=\"qi qi-add\"></i><span class=\"adddialog__add-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add", "itemlist", options) : helperMissing.call(depth0, "_", "Add", "itemlist", options)))
     + "</span></a>\n	<div class=\"adddialog__dialog\">\n		<div class=\"adddialog__header\"><i class=\"qi qi-add_open\"></i>";
@@ -145,21 +145,21 @@ function program1(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "link", options) : helperMissing.call(depth0, "ifEq", depth0.state, "link", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "><a href=\"link\" class=\"item-link item__types-item\">";
+  buffer += "><a href=\"link\" rel=\"nofollow\" class=\"item-link item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give a link", "itemlist", options) : helperMissing.call(depth0, "_", "give a link", "itemlist", options)))
     + "</a></li>\n						<li";
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "file", options) : helperMissing.call(depth0, "ifEq", depth0.state, "file", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "><a href=\"file\" class=\"item-file item__types-item\">";
+  buffer += "><a href=\"file\" rel=\"nofollow\" class=\"item-file item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give a file", "itemlist", options) : helperMissing.call(depth0, "_", "give a file", "itemlist", options)))
     + "</a></li>\n						<li";
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "nothing", options) : helperMissing.call(depth0, "ifEq", depth0.state, "nothing", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "><a href=\"nothing\" class=\"item-nothing item__types-item\">";
+  buffer += "><a href=\"nothing\" rel=\"nofollow\" class=\"item-nothing item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give nothing", "itemlist", options) : helperMissing.call(depth0, "_", "give nothing", "itemlist", options)))
     + "</a></li>\n					</ul>\n				</div>\n				<div class=\"itemedit__link qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<input type=\"text\" class=\"qst__inp\" name=\"link\" placeholder=\"";
@@ -171,7 +171,7 @@ function program1(depth0,data) {
     + "</span>\n						<input type=\"file\" class=\"qst__inp itemedit__inp-file\" name=\"file\" id=\"file_uploader\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
-    + "\">\n					</div>\n				</div>\n				<input type=\"submit\" class=\"inv\">\n			</form>\n		</div>\n		<div class=\"adddialog__submit\">\n			<span class=\"adddialog__error\"></span><a href=\"add\" class=\"adddialog__submit-a\">";
+    + "\">\n					</div>\n				</div>\n				<input type=\"submit\" class=\"inv\">\n			</form>\n		</div>\n		<div class=\"adddialog__submit\">\n			<span class=\"adddialog__error\"></span><a href=\"add\" rel=\"nofollow\" class=\"adddialog__submit-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add item", "itemlist", options) : helperMissing.call(depth0, "_", "Add item", "itemlist", options)))
     + "</a>\n		</div>\n	</div>\n</div>";
@@ -396,21 +396,21 @@ function program13(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "link", options) : helperMissing.call(depth0, "ifEq", depth0.state, "link", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "><a href=\"link\" class=\"item-link item__types-item\">";
+  buffer += "><a href=\"link\" rel=\"nofollow\" class=\"item-link item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give a link", "itemlist", options) : helperMissing.call(depth0, "_", "give a link", "itemlist", options)))
     + "</a></li>\n						<li";
   options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "file", options) : helperMissing.call(depth0, "ifEq", depth0.state, "file", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "><a href=\"file\" class=\"item-file item__types-item\">";
+  buffer += "><a href=\"file\" rel=\"nofollow\" class=\"item-file item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give a file", "itemlist", options) : helperMissing.call(depth0, "_", "give a file", "itemlist", options)))
     + "</a></li>\n						<li";
   options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.state, "nothing", options) : helperMissing.call(depth0, "ifEq", depth0.state, "nothing", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "><a href=\"nothing\" class=\"item-nothing item__types-item\">";
+  buffer += "><a href=\"nothing\" rel=\"nofollow\" class=\"item-nothing item__types-item\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "give nothing", "itemlist", options) : helperMissing.call(depth0, "_", "give nothing", "itemlist", options)))
     + "</a></li>\n					</ul>\n				</div>\n				<div class=\"itemedit__link qst__inp-group\">\n					<div class=\"qst__inp-cont\">\n						<label>\n							<span class=\"qst__lbl\">";
@@ -427,10 +427,10 @@ function program13(depth0,data) {
   buffer += "</span>\n						<input type=\"file\" class=\"qst__inp itemedit__inp-file\" name=\"file\" id=\"file_uploader\" placeholder=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Link", "itemlist", options) : helperMissing.call(depth0, "_", "Link", "itemlist", options)))
-    + "\">\n					</div>\n				</div>\n				<input type=\"submit\" class=\"inv\">\n			</form>\n			<div class=\"itemedit__submit\">\n				<a href=\"\" class=\"itemedit__delete-a\">";
+    + "\">\n					</div>\n				</div>\n				<input type=\"submit\" class=\"inv\">\n			</form>\n			<div class=\"itemedit__submit\">\n				<a href=\"\" rel=\"nofollow\" class=\"itemedit__delete-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Remove link", "itemedit", options) : helperMissing.call(depth0, "_", "Remove link", "itemedit", options)))
-    + "</a><span class=\"itemedit__error\"></span><a href=\"save\" class=\"itemedit__submit-a\">";
+    + "</a><span class=\"itemedit__error\"></span><a href=\"save\" rel=\"nofollow\" class=\"itemedit__submit-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Save", "itemedit", options) : helperMissing.call(depth0, "_", "Save", "itemedit", options)))
     + "</a>\n			</div>\n		</div>\n		<div class=\"span4\">\n			<h3 class=\"itemedit__share-h\">";
@@ -446,13 +446,13 @@ function program13(depth0,data) {
     + "</p>\n			<p class=\"itemedit__share-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Spread the word on your site, on blog or social networks", "itemedit", options) : helperMissing.call(depth0, "_", "Spread the word on your site, on blog or social networks", "itemedit", options)))
-    + "</p>\n			<ul class=\"itemedit__share-ul\">\n				<li>\n					<a href=\"vk\" class=\"itemedit__share-btn itemedit__share-vk-btn\"><i class=\"qi qi-share-vk\"></i><span class=\"itemedit__share-btn-title\">";
+    + "</p>\n			<ul class=\"itemedit__share-ul\">\n				<li>\n					<a href=\"vk\" rel=\"nofollow\" class=\"itemedit__share-btn itemedit__share-vk-btn\"><i class=\"qi qi-share-vk\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Vkontakte", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Vkontakte", "itemedit", options)))
-    + "</span></a>\n				</li><li>\n					<a href=\"facebook\" class=\"itemedit__share-btn itemedit__share-fb-btn\"><i class=\"qi qi-share-fb\"></i><span class=\"itemedit__share-btn-title\">";
+    + "</span></a>\n				</li><li>\n					<a href=\"facebook\" rel=\"nofollow\" class=\"itemedit__share-btn itemedit__share-fb-btn\"><i class=\"qi qi-share-fb\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Facebook", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Facebook", "itemedit", options)))
-    + "</span></a>\n				</li><li>\n					<a href=\"twitter\" class=\"itemedit__share-btn itemedit__share-tw-btn\"><i class=\"qi qi-share-tw\"></i><span class=\"itemedit__share-btn-title\">";
+    + "</span></a>\n				</li><li>\n					<a href=\"twitter\" rel=\"nofollow\" class=\"itemedit__share-btn itemedit__share-tw-btn\"><i class=\"qi qi-share-tw\"></i><span class=\"itemedit__share-btn-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share on Twitter", "itemedit", options) : helperMissing.call(depth0, "_", "Share on Twitter", "itemedit", options)))
     + "</span></a>\n				</li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"itemedit__slide itemedit__slide_showcase\">\n	<div class=\"showcase__window\">\n		<div class=\"showcase__head\">\n			<div class=\"showcase__head_lt\"></div>\n			<div class=\"showcase__head_rt\"></div>\n			<div class=\"showcase__head_ct\">\n				<span class=\"showcase__head-title\">Qstoq &ndash; ";
@@ -470,7 +470,7 @@ function program13(depth0,data) {
     + "</p>\n					<ul class=\"showcase__share\">\n						<li class=\"showcase__share-itm\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
-    + "</li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n					</ul>\n				</div>\n				<div class=\"showcase__form__col2\">\n					<span class=\"showcase__form-price\"><span class=\"showcase__form-price-val\">";
+    + "</li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n						<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n					</ul>\n				</div>\n				<div class=\"showcase__form__col2\">\n					<span class=\"showcase__form-price\"><span class=\"showcase__form-price-val\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers._number_format || depth0._number_format),stack1 ? stack1.call(depth0, depth0.price, options) : helperMissing.call(depth0, "_number_format", depth0.price, options)))
     + "</span>&nbsp;";
@@ -498,10 +498,10 @@ function program13(depth0,data) {
   if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</span>\n			</div>\n		</div>\n		<div class=\"finish__form-add-comment\">\n			<i class=\"is is-com finish__form-add-comment__icn\"></i>\n			<ul class=\"finish__form-add-comment__list\">\n				<li class=\"finish__form-add-comment__add\"><a href=\"add\" class=\"finish__form-add-comment-a\">";
+    + "</span>\n			</div>\n		</div>\n		<div class=\"finish__form-add-comment\">\n			<i class=\"is is-com finish__form-add-comment__icn\"></i>\n			<ul class=\"finish__form-add-comment__list\">\n				<li class=\"finish__form-add-comment__add\"><a href=\"add\" rel=\"nofollow\" class=\"finish__form-add-comment-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add your<br/>message on the receipt", "itemedit", options) : helperMissing.call(depth0, "_", "Add your<br/>message on the receipt", "itemedit", options)))
-    + "</a></li>\n				<li class=\"finish__form-add-comment__edit\"><a href=\"edit\" class=\"finish__form-add-comment-a\">";
+    + "</a></li>\n				<li class=\"finish__form-add-comment__edit\"><a href=\"edit\" rel=\"nofollow\" class=\"finish__form-add-comment-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Edit your message on the receipt", "itemedit", options) : helperMissing.call(depth0, "_", "Edit your message on the receipt", "itemedit", options)))
     + "</a></li>\n			</ul>\n		</div>\n		<div class=\"finish__cont\">\n			<div class=\"finish__form-t\"></div>\n			<div class=\"finish__form\">\n				<div class=\"finish__form-col\">\n					<span class=\"finish__form-line\">";
@@ -524,10 +524,10 @@ function program13(depth0,data) {
   if (stack2 = helpers.receipt_comment) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.receipt_comment; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</textarea>\n						</div>\n						<ul class=\"finish__form-receipt_desc-action-list\"><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_cancel\"><a href=\"receipt-cancel\" class=\"finish__form-receipt_desc-action-a\">";
+    + "</textarea>\n						</div>\n						<ul class=\"finish__form-receipt_desc-action-list\"><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_cancel\"><a href=\"receipt-cancel\" rel=\"nofollow\" class=\"finish__form-receipt_desc-action-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Cancel", "itemedit", options) : helperMissing.call(depth0, "_", "Cancel", "itemedit", options)))
-    + "</a></li><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_save\"><a href=\"receipt-save\" class=\"finish__form-receipt_desc-action-a\">";
+    + "</a></li><li class=\"finish__form-receipt_desc-action finish__form-receipt_desc-action_save\"><a href=\"receipt-save\" rel=\"nofollow\" class=\"finish__form-receipt_desc-action-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Save", "itemedit", options) : helperMissing.call(depth0, "_", "Save", "itemedit", options)))
     + "</a></li>\n						</ul>\n					</div>\n					<p class=\"finish__form-desc\">";
@@ -547,7 +547,7 @@ function program13(depth0,data) {
     + "</a>\n					<ul class=\"finish__share\">\n						<li class=\"finish__share-itm\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "item", options) : helperMissing.call(depth0, "_", "Share", "item", options)))
-    + "</li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n					</ul>\n					<div class=\"finish__form-service-desc\"><a href=\"http://qstoq.io\" target=\"_blank\">Qstoq</a> &mdash; ";
+    + "</li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n						<li class=\"finish__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n					</ul>\n					<div class=\"finish__form-service-desc\"><a href=\"http://qstoq.io\" target=\"_blank\">Qstoq</a> &mdash; ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "selling in lightning speed", "itemedit", options) : helperMissing.call(depth0, "_", "selling in lightning speed", "itemedit", options)))
     + "</div>\n\n				</div>\n			</div>\n			<div class=\"finish__form-b\"></div>\n		</div>\n	</div>\n	<p class=\"showcase__desc\">";
@@ -1031,7 +1031,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
   buffer += "<p class=\"error-page__description\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Sorry, can’t let you get any further than this.<br/>Please <a href=\"auth:show\" type=\"event\" class=\"lnk\">log in</a> or <a  href=\"auth:show\" type=\"event\" class=\"lnk\">sign up</a> to see this page.", "p403", options) : helperMissing.call(depth0, "_", "Sorry, can’t let you get any further than this.<br/>Please <a href=\"auth:show\" type=\"event\" class=\"lnk\">log in</a> or <a  href=\"auth:show\" type=\"event\" class=\"lnk\">sign up</a> to see this page.", "p403", options)))
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phr001", "p403", options) : helperMissing.call(depth0, "_", "phr001", "p403", options)))
     + "</p>";
   return buffer;
   });
@@ -1090,10 +1090,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</h1>\n			<p class=\"landing-section1-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section1-p", "landing_page", options)))
-    + "</p>\n			<a href=\"/auth\" class=\"landing__start-a\">";
+    + "</p>\n			<a href=\"/auth\" class=\"landing__start-a\" rel=\"nofollow\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Start", "landing_page", options) : helperMissing.call(depth0, "_", "Start", "landing_page", options)))
-    + "</a>\n		</div>\n	</div>\n	<a href=\"/next\" class=\"landing__next-a\">\n		<span class=\"landing__next-title\">";
+    + "</a>\n		</div>\n	</div>\n	<a href=\"/next\" class=\"landing__next-a\" rel=\"nofollow\">\n		<span class=\"landing__next-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "How does it work", "landing_page", options) : helperMissing.call(depth0, "_", "How does it work", "landing_page", options)))
     + "</span>\n		<i class=\"ib ib-arr\"></i>\n	</a>\n</section>\n<section class=\"landing-section landing-section2\">\n	<div class=\"landing__container\">\n		<div class=\"landing__container-in\">\n			<h2 class=\"landing-s-h\">";
@@ -1153,7 +1153,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</h3>\n					<p class=\"landing__list-itm-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-5-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-5-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n			</ul>\n			<a href=\"/auth\" class=\"landing__start-a\">";
+    + "</p>\n				</li>\n			</ul>\n			<a href=\"/auth\" rel=\"nofollow\" class=\"landing__start-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Start", "landing_page", options) : helperMissing.call(depth0, "_", "Start", "landing_page", options)))
     + "</a>\n		</div>\n	</div>\n</section>\n<section class=\"landing-section landing-section4\">\n	<div class=\"landing__container\">\n		<div class=\"landing__container-in\">\n			<ul class=\"landing__list\">\n				<li class=\"landing__list-itm\">\n					<p class=\"landing__list-itm-p\">";
@@ -1162,7 +1162,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</p>\n					<ul class=\"landing__pay-systems\">\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-visa\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-mastercard\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-webmoney\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-yad\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-mailru\"></i></li>\n						<div></div>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-alfa\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-rbk\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-easy\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-liqpay\"></i></li>\n						<li class=\"landing__pay-systems-itm\"><i class=\"ib ib-webcreds\"></i></li>\n					</ul>\n				</li>\n				<li class=\"landing__list-itm\">\n					<p class=\"landing__list-itm-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section4-2-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section4-2-1-p", "landing_page", options)))
-    + "</p>\n					<span class=\"landing__pay-charge\">5%</span>\n				</li>\n			</ul>\n			<div class=\"landing__start-cont\"><a href=\"/auth\" class=\"landing__start-a\">";
+    + "</p>\n					<span class=\"landing__pay-charge\">5%</span>\n				</li>\n			</ul>\n			<div class=\"landing__start-cont\"><a href=\"/auth\" rel=\"nofollow\" class=\"landing__start-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Start Qstoq", "landing_page", options) : helperMissing.call(depth0, "_", "Start Qstoq", "landing_page", options)))
     + "</a></div>\n		</div>\n	</div>\n</section>";
@@ -1195,19 +1195,19 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += "<div class=\"auth__cont\">\n	<i class=\"qi qi-auth-close auth__close\"></i>\n	<div class=\"auth__social\">\n		<h2 class=\"auth__social-h\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Social log in", "auth", options) : helperMissing.call(depth0, "_", "Social log in", "auth", options)))
-    + "</h2>\n		<ul class=\"auth__social-list\">\n			<li class=\"auth__social-item\"><a href=\"vk\" class=\"auth__social-item-lnk auth__social-item-lnk_vk\"><i class=\"qi qi-share-vk auth__social-item-icn\"></i><span class=\"auth__social-item-title\">";
+    + "</h2>\n		<ul class=\"auth__social-list\">\n			<li class=\"auth__social-item\"><a href=\"vk\" rel=\"nofollow\" class=\"auth__social-item-lnk auth__social-item-lnk_vk\"><i class=\"qi qi-share-vk auth__social-item-icn\"></i><span class=\"auth__social-item-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "VKontakte", "auth", options) : helperMissing.call(depth0, "_", "VKontakte", "auth", options)))
-    + "</span></a></li><li class=\"auth__social-item\"><a href=\"fb\" class=\"auth__social-item-lnk auth__social-item-lnk_fb\"><i class=\"qi qi-share-fb auth__social-item-icn\"></i><span class=\"auth__social-item-title\">";
+    + "</span></a></li><li class=\"auth__social-item\"><a href=\"fb\" rel=\"nofollow\" class=\"auth__social-item-lnk auth__social-item-lnk_fb\"><i class=\"qi qi-share-fb auth__social-item-icn\"></i><span class=\"auth__social-item-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Facebook", "auth", options) : helperMissing.call(depth0, "_", "Facebook", "auth", options)))
     + "</span></a></li>\n		</ul>\n	</div>\n	<div class=\"auth__sign\">\n		<span class=\"auth__sign-toggler\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "or", "auth", options) : helperMissing.call(depth0, "_", "or", "auth", options)))
-    + " <a href=\"signup\" class=\"auth__sign-toggler-lnk auth__sign-toggler_signup\">";
+    + " <a href=\"signup\" rel=\"nofollow\" class=\"auth__sign-toggler-lnk auth__sign-toggler_signup\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sign up", "auth", options) : helperMissing.call(depth0, "_", "sign up", "auth", options)))
-    + "</a>\n		<a href=\"signin\" class=\"auth__sign-toggler-lnk auth__sign-toggler_signin\">";
+    + "</a>\n		<a href=\"signin\" rel=\"nofollow\" class=\"auth__sign-toggler-lnk auth__sign-toggler_signin\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "log in by e-mail", "auth", options) : helperMissing.call(depth0, "_", "log in by e-mail", "auth", options)))
     + "</a>\n		</span>\n		<h2 class=\"auth__sign-h auth__sign-h_signin\">";
@@ -1228,10 +1228,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input maxlength=\"45\" type=\"password\" class=\"qst__inp\" name=\"password\" value=\"\">\n						</div>\n					</label>\n				</div>\n			</div>\n			<div class=\"auth__sign-user-agreement\">\n				";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "I admit <a href=\"/docs/user-agreement.html\" target=\"_blank\">user agreement</a>", "auth", options) : helperMissing.call(depth0, "_", "I admit <a href=\"/docs/user-agreement.html\" target=\"_blank\">user agreement</a>", "auth", options)))
-    + "\n			</div>\n			<input type=\"submit\" class=\"auth__sign-submit-hidden\">\n			<div class=\"auth__sign-submit\">\n				<span class=\"auth__sign-submit-error\"></span>\n				<a href=\"signin\" class=\"auth__sign-submit-a auth__sign-submit_signin\">";
+    + "\n			</div>\n			<input type=\"submit\" class=\"auth__sign-submit-hidden\">\n			<div class=\"auth__sign-submit\">\n				<span class=\"auth__sign-submit-error\"></span>\n				<a href=\"signin\" rel=\"nofollow\" class=\"auth__sign-submit-a auth__sign-submit_signin\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in", "auth", options) : helperMissing.call(depth0, "_", "Log in", "auth", options)))
-    + "</a><a href=\"signup\" class=\"auth__sign-submit-a auth__sign-submit_signup\">";
+    + "</a><a href=\"signup\" rel=\"nofollow\" class=\"auth__sign-submit-a auth__sign-submit_signup\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Sign up", "auth", options) : helperMissing.call(depth0, "_", "Sign up", "auth", options)))
     + "</a>\n			</div>\n		</form>\n	</div>\n</div>";
