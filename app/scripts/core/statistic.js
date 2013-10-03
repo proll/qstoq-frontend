@@ -1,4 +1,4 @@
-fave.Statistic = Backbone.Model.extend({
+qst.Statistic = Backbone.Model.extend({
 	url: '/api/photo/share/',
 	yaCounter: null,
 	gaCounter: null,
@@ -30,7 +30,7 @@ fave.Statistic = Backbone.Model.extend({
 	// },
 
 	// getCommentsCount : function() {
-	// 	var counter = parseInt(_.getLS("fave_comc"));
+	// 	var counter = parseInt(_.getLS("qst_comc"));
 	// 	if (_.isNaN(counter)){
 	// 		counter = 0;
 	// 	}
@@ -38,7 +38,7 @@ fave.Statistic = Backbone.Model.extend({
 	// },
 
 	// getLikesCount : function() {
-	// 	var counter = parseInt(_.getLS("fave_likec"));
+	// 	var counter = parseInt(_.getLS("qst_likec"));
 	// 	if (_.isNaN(counter)) {
 	// 		counter = 0;
 	// 	}
@@ -46,7 +46,7 @@ fave.Statistic = Backbone.Model.extend({
 	// },
 
 	// getSharesCount : function() {
-	// 	var counter = parseInt(_.getLS("fave_shrc"));
+	// 	var counter = parseInt(_.getLS("qst_shrc"));
 	// 	if (_.isNaN(counter)) {
 	// 		counter = 0;
 	// 	}
@@ -54,22 +54,22 @@ fave.Statistic = Backbone.Model.extend({
 	// },
 
 	trackLike: function(){
-		var counter = _.getLS("fave_likec");
+		var counter = _.getLS("qst_likec");
 		if (_.isNaN(counter)) {
 			counter = 0;
 		}
 		counter++;
-		_.setLS("fave_likec", counter, 60*1000);
+		_.setLS("qst_likec", counter, 60*1000);
 	},
 
 
 	trackComment: function(_reply) {
-		var counter = _.getLS("fave_comc");
+		var counter = _.getLS("qst_comc");
 		if (_.isNaN(counter)) {
 			counter = 0;
 		}
 		counter++;
-		_.setLS("fave_comc", counter, 60*1000);
+		_.setLS("qst_comc", counter, 60*1000);
 
 		var reply = _reply == true;
 		if (reply) {
@@ -81,12 +81,12 @@ fave.Statistic = Backbone.Model.extend({
 
 	trackShare : function(_param, _id) {
 		if (_param == "SHARE_FACEBOOK") {
-			var counter = _.getLS("fave_shrc");
+			var counter = _.getLS("qst_shrc");
 			if (_.isNaN(counter)) {
 				counter = 0;
 			}
 			counter++;
-			_.setLS("fave_shrc", counter, 60*1000);
+			_.setLS("qst_shrc", counter, 60*1000);
 		}
 
 		window._gaq.push(['_trackEvent', 'Photo', 'share', _param]);
@@ -143,12 +143,12 @@ fave.Statistic = Backbone.Model.extend({
 	},
 
 	trackShuffle : function() {
-		var N = parseInt(_.getLS("favesc"));
+		var N = parseInt(_.getLS("qstsc"));
 		if (_.isNaN(N)) {
 			N = 0;
 		}
 		N++;
-		_.setLS("favesc", N, 1000);
+		_.setLS("qstsc", N, 1000);
 		window._gaq.push(['_trackEvent', 'Other', 'Shuffle', "click", N]);
 	}
 
