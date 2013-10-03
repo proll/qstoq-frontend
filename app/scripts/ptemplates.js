@@ -645,13 +645,13 @@ function program5(depth0,data) {
     + "</span></td>\n	<td class=\"link__toggle";
   stack2 = helpers['if'].call(depth0, depth0.active, {hash:{},inverse:self.program(5, program5, data),fn:self.program(3, program3, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\"><span class=\"link__toggle-sp\"><a href=\"on\" class=\"link__toggle-a link__toggle_on\">";
+  buffer += "\"><span class=\"link__toggle-sp\"><a href=\"on\" rel=\"nofollow\" class=\"link__toggle-a link__toggle_on\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "On", "itemlist", options) : helperMissing.call(depth0, "_", "On", "itemlist", options)))
-    + "</a> / <a href=\"off\" class=\"link__toggle-a link__toggle_off\">";
+    + "</a> / <a href=\"off\" rel=\"nofollow\" class=\"link__toggle-a link__toggle_off\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Off", "itemlist", options) : helperMissing.call(depth0, "_", "Off", "itemlist", options)))
-    + "</a></span></td>\n	<td class=\"link__delete\"><span><a href=\"del\" class=\"link__delete-a\"><i class=\"qi qi-del\"></i></a></span></td>\n</tr>";
+    + "</a></span></td>\n	<td class=\"link__delete\"><span><a href=\"del\" rel=\"nofollow\" class=\"link__delete-a\"><i class=\"qi qi-del\"></i></a></span></td>\n</tr>";
   return buffer;
   });
 
@@ -667,7 +667,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li>\n				<li class=\"navbar__item-where\"><a href=\"/where\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Where can I use it", "navbar", options) : helperMissing.call(depth0, "_", "Where can I use it", "navbar", options)))
-    + "</a></li>\n				<li class=\"nav__login\"><a href=\"/auth\">";
+    + "</a></li>\n				<li class=\"nav__login\"><a href=\"/auth\" rel=\"nofollow\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in / Sign up", "navbar", options) : helperMissing.call(depth0, "_", "Log in / Sign up", "navbar", options)))
     + "</a></li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"navbar-inner navbar_authed\">\n	<div class=\"container\">\n		<a class=\"brand\" href=\"/\"><div class=\"navbar__logo\"><img src=\"/images_static/empty.png\" alt=\"QSTOQ\"></div></a>\n		<div class=\"nav-collapse collapse\">\n			<ul class=\"nav pull-right\">\n				<li class=\"nav__my-items\"><a href=\"/items\"><i class=\"qi nav__icn qi-my-items\"></i><span class=\"nav__my-items-title\">";
@@ -679,7 +679,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</span></a></li>\n				<li class=\"nav__balance\"><a href=\"/profile/withdrawal\"><i class=\"qi nav__icn qi-balance\"></i><span class=\"nav__balance-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Nothing yet", "navbar", options) : helperMissing.call(depth0, "_", "Nothing yet", "navbar", options)))
-    + "</span></a></li>\n				<li class=\"nav__logout\"><a href=\"/logout\"><i class=\"qi nav__icn qi-logout\"></i><span class=\"nav__logout-title\">";
+    + "</span></a></li>\n				<li class=\"nav__logout\"><a href=\"/logout\" rel=\"nofollow\"><i class=\"qi nav__icn qi-logout\"></i><span class=\"nav__logout-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log out", "navbar", options) : helperMissing.call(depth0, "_", "Log out", "navbar", options)))
     + "</span></a></li>\n			</ul>\n		</div>\n	</div>\n</div>";
@@ -698,7 +698,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</h2>\n		<span class=\"preview-upload__add-another\" >";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Add another", "preview_upload", options) : helperMissing.call(depth0, "_", "Add another", "preview_upload", options)))
-    + "</span>\n		<a class=\"preview-upload__delete\" href=\"delete\">";
+    + "</span>\n		<a class=\"preview-upload__delete\" href=\"delete\" rel=\"nofollow\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Remove preview", "preview_upload", options) : helperMissing.call(depth0, "_", "Remove preview", "preview_upload", options)))
     + "</a>\n		<span class=\"preview-upload__add-desc\" >";
@@ -735,7 +735,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, options;
-  buffer += "\n	<div class=\"profile__invite\"><i class=\"ip ip-invite\"></i><a class=\"profile__invite-title\" href=\"/invite\">";
+  buffer += "\n	<div class=\"profile__invite\"><i class=\"ip ip-invite\"></i><a class=\"profile__invite-title\" href=\"/invite\" rel=\"nofollow\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Invite friends", "user_info", options) : helperMissing.call(depth0, "_", "Invite friends", "user_info", options)))
     + "</a></div>\n";
@@ -781,7 +781,7 @@ function program8(depth0,data) {
 function program10(depth0,data) {
   
   var buffer = "", stack1, options;
-  buffer += "\n	<a href=\"/add/avatar/nice-to-meet-u/\"><img src=\"";
+  buffer += "\n	<a href=\"/add/avatar/nice-to-meet-u/\" rel=\"nofollow\"><img src=\"";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers._uphoto || depth0._uphoto),stack1 ? stack1.call(depth0, ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.photo)),stack1 == null || stack1 === false ? stack1 : stack1.url), "212x212", options) : helperMissing.call(depth0, "_uphoto", ((stack1 = ((stack1 = depth0.user_obj),stack1 == null || stack1 === false ? stack1 : stack1.photo)),stack1 == null || stack1 === false ? stack1 : stack1.url), "212x212", options)))
     + "\" width=\"110\" height=\"110\" class=\"profile__avatar-img\"></a>\n	";
@@ -886,7 +886,7 @@ function program27(depth0,data) {
 function program29(depth0,data) {
   
   
-  return "\n<ul class=\"profile__social\">\n	<li class=\"profile__social-item\"><a href=\"https://www.facebook.com/qstoq\" target=\"_blank\"><i class=\"isc isc-fb_prfl\"></i></a></li>\n	<li class=\"profile__social-item\"><a href=\"https://twitter.com/WeHeartPicsCom\" target=\"_blank\"><i class=\"isc isc-tw_prfl\"></i></a></li>\n	<li class=\"profile__social-item\"><a href=\"http://vk.com/qstoq\" target=\"_blank\"><i class=\"isc isc-vk_prfl\"></i></a></li>\n</ul>\n";
+  return "\n<ul class=\"profile__social\">\n	<li class=\"profile__social-item\"><a href=\"https://www.facebook.com/qstoq\" target=\"_blank\"><i class=\"isc isc-fb_prfl\"></i></a></li>\n	<li class=\"profile__social-item\"><a href=\"https://twitter.com/qstoq\" target=\"_blank\"><i class=\"isc isc-tw_prfl\"></i></a></li>\n	<li class=\"profile__social-item\"><a href=\"http://vk.com/qstoq\" target=\"_blank\"><i class=\"isc isc-vk_prfl\"></i></a></li>\n</ul>\n";
   }
 
 function program31(depth0,data) {

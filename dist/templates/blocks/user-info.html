@@ -1,6 +1,6 @@
 <div class="profile__follow">
 {{#if mine}}
-	<div class="profile__invite"><i class="ip ip-invite"></i><a class="profile__invite-title" href="/invite">{{_ 'Invite friends' 'user_info'}}</a></div>
+	<div class="profile__invite"><i class="ip ip-invite"></i><a class="profile__invite-title" href="/invite" rel="nofollow">{{_ 'Invite friends' 'user_info'}}</a></div>
 {{else}}
 	<div class="profile__follow-head {{#if user_obj.follow}}followed{{/if}}">
 		<div class="profile__follow-unfollow">
@@ -29,7 +29,7 @@
 </div>
 <div class="profile__avatar">
 	{{#if mine}}
-	<a href="/add/avatar/nice-to-meet-u/"><img src="{{_uphoto user_obj.photo.url '212x212'}}" width="110" height="110" class="profile__avatar-img"></a>
+	<a href="/add/avatar/nice-to-meet-u/" rel="nofollow"><img src="{{_uphoto user_obj.photo.url '212x212'}}" width="110" height="110" class="profile__avatar-img"></a>
 	{{else}}
 	<img src="{{_uphoto user_obj.photo.url '212x212'}}" width="110" height="110" class="profile__avatar-img">
 	{{/if}}
@@ -65,7 +65,7 @@
 {{#ifEq user_obj.id 6176}}
 <ul class="profile__social">
 	<li class="profile__social-item"><a href="https://www.facebook.com/qstoq" target="_blank"><i class="isc isc-fb_prfl"></i></a></li>
-	<li class="profile__social-item"><a href="https://twitter.com/WeHeartPicsCom" target="_blank"><i class="isc isc-tw_prfl"></i></a></li>
+	<li class="profile__social-item"><a href="https://twitter.com/qstoq" target="_blank"><i class="isc isc-tw_prfl"></i></a></li>
 	<li class="profile__social-item"><a href="http://vk.com/qstoq" target="_blank"><i class="isc isc-vk_prfl"></i></a></li>
 </ul>
 {{else}}
