@@ -2,7 +2,7 @@ if (typeof console == "undefined") {this.console = {log: function() {}, error: f
 window.qst = window.qst || {};
 window.qst = _.extend(window.qst, {
 	language: _.getCookie('lang') || (navigator.language || navigator.systemLanguage || navigator.browserLanguage || navigator.userLanguage || 'en').substr(0, 2).toLowerCase(),
-	root: "http://qstoq.io",
+	root: "http://qstoq.me",
 	l10n: {},
 
 	preloadTemplates: function(){
@@ -123,7 +123,7 @@ window.qst = _.extend(window.qst, {
 
 	isFile: function(txt) {
 		txt = txt || '';
-		return txt.indexOf('qstoq.io')!==-1;
+		return txt.indexOf('qstoq.me')!==-1;
 	}
 });
 
