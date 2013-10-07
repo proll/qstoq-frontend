@@ -190,28 +190,28 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/how\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "How does it work?", "footer", options) : helperMissing.call(depth0, "_", "How does it work?", "footer", options)))
-    + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/questions-n-answers.html\">";
+    + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/questions-n-answers.html\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Questions & answers", "footer", options) : helperMissing.call(depth0, "_", "Questions & answers", "footer", options)))
-    + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/api.html\">";
+    + "</a></li> -->\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/api.html\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Qstoq API", "footer", options) : helperMissing.call(depth0, "_", "Qstoq API", "footer", options)))
-    + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/feedback/\">";
+    + "</a></li> -->\n		<li><a class=\"footer__menu-a\" href=\"/feedback/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Feedback", "footer", options) : helperMissing.call(depth0, "_", "Feedback", "footer", options)))
     + "</a></li>\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/user-agreement.html\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "User agreement", "footer", options) : helperMissing.call(depth0, "_", "User agreement", "footer", options)))
-    + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/privacy.html\">";
+    + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/privacy.html\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Privacy", "footer", options) : helperMissing.call(depth0, "_", "Privacy", "footer", options)))
-    + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/team.html\">";
+    + "</a></li> -->\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/team.html\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Team", "footer", options) : helperMissing.call(depth0, "_", "Team", "footer", options)))
-    + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/partners.html\">";
+    + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/partners.html\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Partners", "footer", options) : helperMissing.call(depth0, "_", "Partners", "footer", options)))
-    + "</a></li>\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"mailto:ola@qstoq.me\">ola@qstoq.me</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"http://vk.com/qstoq\">";
+    + "</a></li> -->\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"mailto:ola@qstoq.me\">ola@qstoq.me</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"http://vk.com/qstoq\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Vkontakte", "footer", options) : helperMissing.call(depth0, "_", "Vkontakte", "footer", options)))
     + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"http://www.facebook.com/qstoq\">";
