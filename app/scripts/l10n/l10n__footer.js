@@ -62,4 +62,9 @@ qst.l10n.footer = {
 		en: 'Twitter',
 		ru: 'Твиттер'
 	},
+
+	'Feedback': {
+		en: 'Feedback',
+		ru: 'Обратная связь'
+	},
 }

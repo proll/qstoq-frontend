@@ -4835,6 +4835,9 @@ a.account__social-item__title:focus {
 .page-profile_withdrawal .profile__section-withdrawal-row {
   display: block;
 }
+.page-feedback {
+  padding-top: 40px;
+}
 .error-page__list,
 .error-page__description {
   margin-top: 40px;

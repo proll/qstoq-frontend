@@ -37,6 +37,7 @@ module.exports = function(grunt) {
 			function(req, res, next){
 				var requestedPath = url.parse(req.url).pathname;
 				if(requestedPath.indexOf("/v1/") == 0){
+				console.log(requestedPath);	
 					proxy.proxyRequest(req, res, {
 						host: "qstoq.me",
 						port: 80

@@ -32,6 +32,10 @@ qst.Router = Backbone.Router.extend({
 		"item/:id/:slide": 	"itemedit",
 		"item/:id/:slide/": "itemedit",
 
+		"feedback": "feedback",
+		"feedback/": "feedback",
+		"feedback/*": "feedback",
+
 		"404": "er404",
 		"403": "er403",
 

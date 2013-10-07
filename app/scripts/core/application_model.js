@@ -37,6 +37,11 @@ qst.App = Backbone.Model.extend({
 
 
 		// Pages create
+		this.feedback = new qst.Page({
+			name:'feedback',
+			template:'pages/feedback-page'
+		});
+
 		// 404 page
 		this.pages.add(new qst.Page({
 			name:'404',
@@ -103,9 +108,12 @@ qst.App = Backbone.Model.extend({
 				case 'how':
 					this.landing.render();
 					break;
-
 				case 'where':
 					this.landing.render();
+					break;
+
+				case 'feedback': 
+					this.feedback.render();
 					break;
 
 				case 'profile':
