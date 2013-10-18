@@ -1,0 +1,18 @@
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^qstoq.me[:80]*
+RewriteRule v1/(.*)$ http://api.qstoq.me/v1/$1 [P,L]
+
+RewriteCond %{HTTP_HOST} ^[w\.]*qstoq.io[:80]* [OR]
+RewriteCond %{HTTP_HOST} ^[w\.]*qstoq.ru[:80]*
+RewriteRule ^(.*)$ http://qstoq.me/$1 [R=301,L]
+
+RewriteBase /
+RewriteRule ^(scripts|styles|images|images_static|go|docs|templates|.*\.txt|.*\.xml)($|/) - [L]
+
+RewriteCond %{HTTP_USER_AGENT} (yandex\w+|googlebot|adsbot-google|bingbot|msnbot|psbot|gigabot|twitterbot|linkedinbot|yahoo-mmcrawler|pingdom\.com_bot) [NC]
+RewriteRule (.*) http://162.243.45.86:3333/%1? [P]
+
+RewriteRule ^(.*)$ index.html [L]
