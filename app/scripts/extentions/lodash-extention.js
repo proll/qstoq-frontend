@@ -21,6 +21,9 @@ _.browser = {
 	android: navigator.userAgent.indexOf('Android') > -1,
 	wmobile : ((navigator.userAgent.indexOf('Windows CE')>-1) || (navigator.userAgent.indexOf('Windows Mobile')>-1) || (navigator.userAgent.indexOf('Windows Phone')>-1)),
 	symbian : navigator.userAgent.indexOf('Symbian') > -1,
+
+	bot: navigator.userAgent.toLowerCase().indexOf('bot') > -1,
+	phantom: navigator.userAgent.toLowerCase().indexOf('phantomjs') > -1,
 };
 
 
