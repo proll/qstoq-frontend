@@ -7,8 +7,8 @@ qst.l10n.landing_page = {
 	},
 
 	'section1-p': {
-		en: 'Qstoq — it is a platform for selling your digital content and offline goods<br/>and services. You just create a page of your product and you can get payments than',
-		ru: 'Qstoq — это витрина для продажи вашего цифрового контента или реальных товаров<br/>и услуг. Вы просто создаете страницу продукта и уже можете принимать оплату'
+		en: 'Qstoq — it is a platform for creating price tags<br/>and getting payments for your digital content or real<br/>goods and servicies',
+		ru: 'Qstoq — это сервис для создания виртуальных ценников<br/>и приема платежей за ваш контент или реальные<br/>товары и услуги'
 	},
 
 	'section3-p': {
@@ -36,14 +36,14 @@ qst.l10n.landing_page = {
 		ru: 'Как работает Qstoq'
 	},
 
-	'Add your product': {
-		en: 'Add your product',
-		ru: 'Добавьте ваш продукт'
+	'Create a price tag': {
+		en: 'Create a price tag',
+		ru: 'Создайте ценник товара или услуги'
 	},
 
 	'section2-1-1-p': {
-		en: 'Upload a file or add a link, set price, add a description and a preview. Piece of cake!',
-		ru: 'Загрузите файл для продажи или добавьте ссылку, назначьте стоимость, добавьте описание и обложку — проще не бывает!'
+		en: 'Add a title, a description, a photo and a preview, set a price&nbsp;-&nbsp;as easy as pie!',
+		ru: 'Добавьте название, описание, фотографию или обложку, установите цену&nbsp;-&nbsp;проще некуда!'
 	},
 
 	// 'Prepaire for sale': {

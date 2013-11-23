@@ -3,7 +3,7 @@ qst.l10n = qst.l10n || {};
 qst.l10n.navbar = {
 	'My items': {
 		en: 'My items',
-		ru: 'Мои товары',
+		ru: 'Мои предложения',
 	},
 	'Profile': {
 		en: 'Profile',
@@ -12,9 +12,9 @@ qst.l10n.navbar = {
 		// ja: 'プロフィール',
 		// zh: '资料'
 	},
-	'Nothing yet': {
-		en: 'Nothing yet',
-		ru :'Пока ничего'
+	'Payments': {
+		en: 'Payments',
+		ru :'Прием платежей'
 	},
 	'Log out': {
 		en: 'Log out',

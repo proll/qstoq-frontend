@@ -47,7 +47,8 @@
 		width: 100%;
 		z-index: 1;
 		top: @navbarHeight;
-		background: @greenHead;
+		background: @greenHead url(/images/qb/landbg.jpg) 0 0 no-repeat;
+		.background-size(100% 100%;)
 	}
 
 		.landing__h1 {
@@ -55,13 +56,13 @@
 			line-height: 46px;
 			font-weight: 700;
 			padding: 0;
-			margin: -80px 0 23px;
+			margin: -80px 0 20px;
 		}
 
 		.landing-section1-p {
 			font-size: 19px;
-			line-height: 27px;
-			margin: 0 0 62px;
+			line-height: 30px;
+			margin: 0 0 58px;
 			padding: 0;
 		}
 
@@ -92,7 +93,7 @@
 			line-height: 1;
 			color: @white;
 			text-decoration: none;
-			padding: 20px 0 46px;
+			padding: 20px 0 57px;
 
 			&:hover {
 				color: @white;
@@ -137,20 +138,14 @@
 				vertical-align: top;
 				text-align: left;
 				counter-increment: howcount;
-
-				&:first-child {
-					.ib {
-						margin-left: -8px;
-					}
-				}
 			}
 
 				.landing__list-itm-h {
 					font-size: 18px;
-					line-height: 46px;
+					line-height: 22px;
 					font-weight: 400;
 					padding: 0;
-					margin: 8px 0 -6px;
+					margin: 20px 0 10px;
 					color: @black;
 					position: relative;
 
@@ -299,9 +294,14 @@
 
 				.landing__start-a {
 					background: @red_sexy;
-					border-color: @red_sexy;
-					padding-left:  20px; 
-					padding-right: 20px; 
+					border-color: @red_sexy_border;
+					padding: 14px 22px-2px 14px-2px 22px; 
+					border-width: 0 2px 2px 0;
+					&:active {
+						padding: 14px-2px 22px 14px 22px-2px; 
+						border-width: 2px 0 0 2px;
+						// border-color: @red_sexy;
+					}
 				}
 	}
 

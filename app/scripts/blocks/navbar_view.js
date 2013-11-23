@@ -1,15 +1,11 @@
 qst.NavbarView = Backbone.View.extend({
 	template: "blocks/navbar",
 	el: ".navbar-header",
-	_navItemPrefix:"navbar__item-",
-	_navMiscPrefix:"nav__",
+	_navItemPrefix:"nav__",
 
 	events: {
 		"click .nav__login>a": 			"login",
 		"click .nav__logout>a": 		"logout",
-		"click .nav__profile-drop>a": 	"toggleDrop",
-
-		"click li>a": 					"mobileToggleDrop"
 	},
 
 	initialize: function(){
@@ -17,7 +13,6 @@ qst.NavbarView = Backbone.View.extend({
 		this.render();
 		this.model.on("change:currentItem", this.changeItem, this);
 		qst.on("usersettings:ready", this.toggleAuth, this);
-		$("html").on("click.navbar", _.bind(this.hideDrop, this));
 	},
 	render: function(){
 		var template = this.template( this.model.toJSON() );
@@ -48,31 +43,12 @@ qst.NavbarView = Backbone.View.extend({
 		this.$el.toggleClass("logged", true);
 	},
 
-	toggleDrop: function() {
-		this.$el.toggleClass("open");
-		return false;
-	},
-
-	mobileToggleDrop: function() {
-		var is_mobile = $(window).width() < 650;
-		if(is_mobile) {
-			this.toggleDrop();
-		}
-	},
-
-	hideDrop: function() {
-		var is_mobile = $(window).width() < 650;
-		if(!is_mobile) {
-			this.$el.toggleClass("open", false);
-		}
-	},
 
 	changeItem: function(model, opts) {
 		var itemname = model.get("currentItem");
 
 		this.$el.find(".nav li").toggleClass("active", false);
 		this.$el.find(".nav li."+this._navItemPrefix+itemname).toggleClass("active", true);
-		this.$el.find(".nav li."+this._navMiscPrefix+itemname).toggleClass("active", true);
 	},
 
 	login: function () {

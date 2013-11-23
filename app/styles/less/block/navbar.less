@@ -17,6 +17,7 @@
 	font-size: @navbarFontSize;	
 	line-height: @navbarLineHeight;	
 	background-color: @navbarBackground;
+	text-transform: uppercase;
 }
 
 .navbar-inner {
@@ -49,8 +50,10 @@
 	float: left;
 	display: block;
 	// Vertically center the text given @navbarHeight
-	padding: 30px 26px 0;
-	margin-left: -26px; // negative indent to left-align the text down the page
+	padding: 14px 40px 15px;
+	margin-left: 0; // negative indent to left-align the text down the page
+	margin-bottom: -1px;
+	background: @green2;
 
 	&:hover,
 	&:focus {
@@ -73,6 +76,7 @@
 }
 .navbar-fixed-top .navbar-inner {
 	border: 0 none;
+	background: url(data:image/gif;base64,R0lGODdhEAABAPAAAM7NzAAAACH/C1hNUCBEYXRhWE1QAz94cAAsAAAAABAAAQAAAgSEjwkFADs=) bottom left repeat-x;
 	// .box-shadow(0 1px 7px rgba(0,0,0,.07));
 }
 
@@ -84,9 +88,9 @@
 
 // Reset container width
 // Required here as we reset the width earlier on and the grid mixins don't override early enough
-.navbar-fixed-top .container {
-	#grid > .core > .span(@gridColumns);
-}
+// .navbar-fixed-top .container {
+// 	#grid > .core > .span(@gridColumns);
+// }
 
 // Fixed to top
 .navbar-fixed-top {
@@ -115,7 +119,7 @@
 .navbar .nav > li > a {
 	float: none;
 	// Vertically center the text given @navbarHeight
-	padding: ((@navbarHeight - @navbarLineHeight) / 2) 22px ((@navbarHeight - @navbarLineHeight) / 2);
+	padding: ((@navbarHeight - @navbarLineHeight) / 2) 30px ((@navbarHeight - @navbarLineHeight) / 2);
 	color: @navbarLinkColor;
 	text-decoration: none;
 

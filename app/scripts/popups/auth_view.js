@@ -48,8 +48,8 @@ qst.AuthView = Backbone.View.extend({
 
 
 		this.$form = 			this.$el.find(".auth__sign-form");
-		this.$input_email = 	this.$form.find('input[name=email]');
-		this.$input_name = 		this.$form.find('input[name=name]');
+		this.$input_email = 	this.$form.find('input[name=login]');
+		this.$input_name = 		this.$form.find('input[name=fio]');
 		this.$input_password = 	this.$form.find('input[name=password]');
 
 		this.$submit_btn = 		this.$form.find('.auth__sign-submit-a');
@@ -77,10 +77,18 @@ qst.AuthView = Backbone.View.extend({
 				.toggleClass('signup', true)
 
 			// tabIndexFix
-			this.$input_email.attr('tabindex', 1);
-			this.$input_name.attr('tabindex', 2);
-			this.$input_password.attr('tabindex', 3);
-			this.$submit_btn.attr('tabindex', 4);
+			this.$input_email
+				.attr('tabindex', 1)
+				.attr('autocomplete', 'off');
+			this.$input_name
+				.attr('tabindex', 2)
+				.attr('autocomplete', 'off');
+			this.$input_password
+				.attr('tabindex', 3)
+				.attr('autocomplete', 'off');
+			this.$submit_btn
+				.attr('tabindex', 4)
+				.attr('autocomplete', 'off');
 
 			this.model.set('state', 'signup');
 		} else {
@@ -89,10 +97,18 @@ qst.AuthView = Backbone.View.extend({
 				.toggleClass('signup', false)
 
 			// tabIndexFix
-			this.$input_email.attr('tabindex', 1);
-			this.$input_name.removeAttr('tabindex');
-			this.$input_password.attr('tabindex', 2);
-			this.$submit_btn.attr('tabindex', 3);
+			this.$input_email
+				.attr('tabindex', 1)
+				.attr('autocomplete', 'on');
+			this.$input_name
+				.removeAttr('tabindex')
+				.attr('autocomplete', 'on');
+			this.$input_password
+				.attr('tabindex', 2)
+				.attr('autocomplete', 'on');
+			this.$submit_btn
+				.attr('tabindex', 3)
+				.attr('autocomplete', 'on');
 
 			this.model.set('state', 'signin');
 		}

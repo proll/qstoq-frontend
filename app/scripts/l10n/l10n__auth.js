@@ -105,25 +105,25 @@ qst.l10n.auth = {
 	// 	zh: '账户信息'
 	// },
 	
-	'E-mail': {
-		en: 'E-mail',
-		ru: 'E-mail',
+	'e-mail': {
+		en: 'e-mail',
+		ru: 'e-mail',
 		ko: '이메일',
 		ja: 'メールアドレス',
 		zh: '电子邮箱'
 	},
 
-	'Password': {
-		en: 'Password',
-		ru: 'Пароль',
+	'password': {
+		en: 'password',
+		ru: 'пароль',
 		ko: '비밀번호',
 		ja: 'パスワード',
 		zh: '密码'
 	},
 
-	'Name': {
-		en: 'Name',
-		ru: 'Имя',
+	'name': {
+		en: 'name',
+		ru: 'имя',
 		// ko: '이름',
 		// ja: '名',
 		// zh: '名字'

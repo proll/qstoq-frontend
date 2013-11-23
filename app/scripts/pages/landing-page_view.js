@@ -1,5 +1,5 @@
 qst.LandingPageView = qst.PageView.extend({
-	indent: 80,
+	indent: 60,
 	$window: $(window),
 	events: {
 		'click .landing__start-a': 'showAuth',
