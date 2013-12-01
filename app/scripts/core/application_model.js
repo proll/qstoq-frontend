@@ -27,7 +27,7 @@ qst.App = Backbone.Model.extend({
 
 
 		this.navbar = new qst.Navbar;
-		this.header = new qst.Header;
+		// this.header = new qst.Header;
 		this.footer = new qst.Footer;
 
 		this.upscroller = new qst.UpScrollerView;

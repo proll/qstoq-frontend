@@ -29,5 +29,10 @@ qst.l10n.item = {
 	'Purchase more': {
 		en: 'Purchase more',
 		ru: 'Купить ещё раз'
+	},
+
+	'No': {
+		en: 'No',
+		ru: 'Нет'
 	}
 }

@@ -4,24 +4,36 @@
 }
 
 	.adddialog__add {
-		font-size: 13px;
+		font-size: 15px;
 		line-height: 20px;
-		color: @textColor;
 		text-decoration: none;
+		color: @textColor;
 		z-index: 2;
+		display: inline-block;
+		.border-radius(4px);
+		overflow: hidden;
+		border: 1px solid @grayLight11;
+		border-bottom-width: 2px;
+		padding: 4px 14px 3px;
 
 
+		&:active,	
 		&:hover {
 			color: @textColor;
 			text-decoration: none;
 		}
+		&:active {
+			border-bottom-width: 1px;
+			border-top-width: 2px;
+			padding: 3px 14px 4px;
+		}
 
 		&-title {
-			text-decoration: underline;
+			color: @textColor;
 		}
 
 		.qi-add {
-			margin-right: 4px;
+			margin-right: 5px;
 			vertical-align: middle;
 		}
 	}

@@ -2,19 +2,28 @@ qst.ItemListPageView = qst.PageView.extend({
 	$header: null,
 
 	addAddDialog: function (add_model) {
-		if(!this.$header) {
-			this.$header = $('.page-header');
-		}
-		this.$header.find('.helper').html(add_model.view.$el);
+		this.$header_btn = this.$el.find('.itemlist-head__btn');
+		this.$header_btn.html(add_model.view.$el);
 	},
 	addItemList: function (itemlist_model) {
 		this.$el.find('.itemlist-row').html(itemlist_model.view.$el);
 	},
 
 	updateTotal: function(total) {
-		if(!this.$header) {
-			this.$header = $('.page-header');
+		if(total > 0) {
+			this.$el
+				.toggleClass('empty', false)
+				.toggleClass('not-empty', true)
+		} else {
+			this.$el
+				.toggleClass('empty', true)
+				.toggleClass('not-empty', false)
 		}
-		this.$header.find('h1').html(total+' '+Handlebars.helpers._plural(total, 'item'))
+		this.$header_cnt = this.$el.find('.itemlist-head__cnt');
+		if(!total) {
+			total = Handlebars.helpers._('No', 'item');
+		}
+		this.$header_cnt.html(total+' '+Handlebars.helpers._plural(total, 'item'))
+
 	}
 });

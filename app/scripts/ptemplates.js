@@ -569,25 +569,25 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<div class=\"itemlist__cont\">\n	<table class=\"itemlist__table-head\">\n		<tr>\n			<th class=\"link__caption\">";
+  buffer += "<div class=\"itemlist__cont\">\n	<div class=\"itemlist__table-cont\">\n		<table class=\"itemlist__table\">\n			<thead>\n				<tr class=\"itemlist__table-head\">\n					<th class=\"link__caption\"><span class=\"link__sp\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "title", "itemlist", options) : helperMissing.call(depth0, "_", "title", "itemlist", options)))
-    + "</th>\n			<th class=\"link__price\">";
+    + "</span></th>\n					<th class=\"link__price\"><span class=\"link__sp\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "price", "itemlist", options) : helperMissing.call(depth0, "_", "price", "itemlist", options)))
-    + "</th>\n			<th class=\"link__view-count\">";
+    + "</span></th>\n					<th class=\"link__view-count\"><span class=\"link__sp\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "visits", "itemlist", options) : helperMissing.call(depth0, "_", "visits", "itemlist", options)))
-    + "</th>\n			<th class=\"link__sold-count\">";
+    + "</span></th>\n					<th class=\"link__sold-count\"><span class=\"link__sp\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sold", "itemlist", options) : helperMissing.call(depth0, "_", "sold", "itemlist", options)))
-    + "</th>\n			<th class=\"link__ctr\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "CTR", "itemlist", options) : helperMissing.call(depth0, "_", "CTR", "itemlist", options)))
-    + "</th>\n			<th class=\"link__overall\">";
+    + "</span></th>\n					<th class=\"link__overall\"><span class=\"link__sp\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "overall", "itemlist", options) : helperMissing.call(depth0, "_", "overall", "itemlist", options)))
-    + "</th>\n			<th class=\"link__toggle\">&nbsp;</th>\n			<th class=\"link__delete\">&nbsp;</th>\n		</tr>\n	</table>\n	<div class=\"itemlist__table-cont1\">\n		<div class=\"itemlist__table-cont2\">\n			<div class=\"itemlist__table\"></div>\n		</div>\n	</div>\n	<div class=\"itemlist__spinner\"></div>\n</div>";
+    + "</span></th>\n					<th class=\"link__link\"><span class=\"link__sp\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "link", "itemlist", options) : helperMissing.call(depth0, "_", "link", "itemlist", options)))
+    + "</span></th>\n					<th class=\"link__toggle\">&nbsp;</th>\n				</tr>\n			</thead>\n			<tbody></tbody>\n		</table>\n	</div>\n	<div class=\"itemlist__spinner\"></div>\n</div>";
   return buffer;
   });
 
@@ -614,7 +614,7 @@ function program5(depth0,data) {
   return " off";
   }
 
-  buffer += "<tr>\n	<td class=\"link__caption\"><a href=\"/item/";
+  buffer += "<td class=\"link__caption\"><a href=\"/item/";
   if (stack1 = helpers.id) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.id; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
@@ -622,39 +622,39 @@ function program5(depth0,data) {
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</a></td>\n	<td class=\"link__price\"><span class=\"link__price-sp\">";
+    + "</a></td>\n<td class=\"link__price\"><span class=\"link__sp\">";
   if (stack1 = helpers.price) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.price; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1);
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data};
   stack2 = ((stack1 = helpers.ifEq || depth0.ifEq),stack1 ? stack1.call(depth0, depth0.price_pwyw, "1", options) : helperMissing.call(depth0, "ifEq", depth0.price_pwyw, "1", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "</span></td>\n	<td class=\"link__view-count\"><span class=\"link__view-count-sp\">";
+  buffer += "</span></td>\n<td class=\"link__view-count\"><span class=\"link__sp\">";
   if (stack2 = helpers.counter_view) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.counter_view; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</span></td>\n	<td class=\"link__sold-count\"><span class=\"link__sold-count-sp\">";
+    + "</span></td>\n<td class=\"link__sold-count\"><span class=\"link__sp\">";
   if (stack2 = helpers.counter_ship) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.counter_ship; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</span></td>\n	<td class=\"link__ctr\"><span>";
-  if (stack2 = helpers.ctr) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
-  else { stack2 = depth0.ctr; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "</span></td>\n	<td class=\"link__overall\"><span>";
+    + "</span></td>\n<td class=\"link__overall\"><span class=\"link__sp\">";
   if (stack2 = helpers.overall) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.overall; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "</span></td>\n	<td class=\"link__toggle";
+    + "</span></td>\n<td class=\"link__link\"><span class=\"link__link-sp link__sp\"><input type=\"text\" value=\"";
+  if (stack2 = helpers.url_short_path) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.url_short_path; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "\" class=\"qst__inp\" readonly=\"readonly\"></span></td>\n<td class=\"link__toggle";
   stack2 = helpers['if'].call(depth0, depth0.active, {hash:{},inverse:self.program(5, program5, data),fn:self.program(3, program3, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\"><span class=\"link__toggle-sp\"><a href=\"on\" rel=\"nofollow\" class=\"link__toggle-a link__toggle_on\">";
+  buffer += "\"><span class=\"link__toggle-sp link__sp\"><a href=\"on\" rel=\"nofollow\" class=\"link__toggle-a link__toggle_on\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "On", "itemlist", options) : helperMissing.call(depth0, "_", "On", "itemlist", options)))
-    + "</a> / <a href=\"off\" rel=\"nofollow\" class=\"link__toggle-a link__toggle_off\">";
+    + "</a><a href=\"off\" rel=\"nofollow\" class=\"link__toggle-a link__toggle_off\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Off", "itemlist", options) : helperMissing.call(depth0, "_", "Off", "itemlist", options)))
-    + "</a></span></td>\n	<td class=\"link__delete\"><span><a href=\"del\" rel=\"nofollow\" class=\"link__delete-a\"><i class=\"qi qi-del\"></i></a></span></td>\n</tr>";
+    + "</a></span></td>";
   return buffer;
   });
 
@@ -1081,10 +1081,53 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["qst"]["Templates"]["ptemplates"]["pages/itemlist-page"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  return "<div class=\"itemlist-row\"><h1>Hello i'm lil itemlist</h1></div>";
+  buffer += "<div class=\"itemlist-head\">\n	<div class=\"itemlist-head__cnt\"></div>\n	<div class=\"itemlist-head__btn\"></div>\n</div>\n<div class=\"itemlist-row\"></div>\n<div class=\"itemlist-row_empty\">\n	<div class=\"row\">\n		<div class=\"span6\">\n			<h2 class=\"itemlist__h2 itemlist__col1__h2-1\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_h1_1", "itemlist", options) : helperMissing.call(depth0, "_", "empty_h1_1", "itemlist", options)))
+    + "</h2>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p1_1", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p1_1", "itemlist", options)))
+    + "</p>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p1_2", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p1_2", "itemlist", options)))
+    + "</p>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p1_3", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p1_3", "itemlist", options)))
+    + "</p>\n			<h2 class=\"itemlist__h2 itemlist__col1__h2-2\">\n				<i class=\"qi qi-view\"></i><a href=\"http://s.qstoq.me/b842\" target=\"_blank\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Qstoq price tag example", "itemlist", options) : helperMissing.call(depth0, "_", "Qstoq price tag example", "itemlist", options)))
+    + "</a>\n			</h2>\n			<h2 class=\"itemlist__h2 itemlist__col1__h2-3\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Any questions?", "itemlist", options) : helperMissing.call(depth0, "_", "Any questions?", "itemlist", options)))
+    + "</h2>\n			<h2 class=\"itemlist__h2 itemlist__col1__h2-4\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Please, open the page of answers", "itemlist", options) : helperMissing.call(depth0, "_", "Please, open the page of answers", "itemlist", options)))
+    + "</h2>\n\n		</div>\n		<div class=\"span1\"></div>\n		<div class=\"span5\">\n			<h2 class=\"itemlist__h2 itemlist__col2__h2-1\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_h2_1", "itemlist", options) : helperMissing.call(depth0, "_", "empty_h2_1", "itemlist", options)))
+    + "</h2>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p2_1", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p2_1", "itemlist", options)))
+    + "</p>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p2_2", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p2_2", "itemlist", options)))
+    + "</p>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p2_3", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p2_3", "itemlist", options)))
+    + "</p>\n			<h2 class=\"itemlist__h2 itemlist__col2__h2-2\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_h2_2", "itemlist", options) : helperMissing.call(depth0, "_", "empty_h2_2", "itemlist", options)))
+    + "</h2>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p2_4", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p2_4", "itemlist", options)))
+    + "</p>\n			<p class=\"itemlist__p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p2_5", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p2_5", "itemlist", options)))
+    + "</p>\n		</div>\n	</div>\n</div>";
+  return buffer;
   });
 
 this["qst"]["Templates"]["ptemplates"]["pages/landing-page"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

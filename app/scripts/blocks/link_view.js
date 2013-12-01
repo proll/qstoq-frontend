@@ -1,11 +1,12 @@
 qst.LinkView = Backbone.View.extend({
 	template: 'blocks/link',
-	tagName: 'table',
+	tagName: 'tr',
 	className: 'itemlist__link',
 
 	events: {
 		'click .link__toggle-a': 'toggle',
-		'click .link__delete-a': 'delete',
+		// 'click .link__delete-a': 'delete',
+		'click .link__link': 'clickShortLink',
 	},
 
 	$vote: null,
@@ -41,11 +42,15 @@ qst.LinkView = Backbone.View.extend({
 		}
 		return false;
 	},
-	
-	delete: function(e) {
-		this.model.deleteItem($(e.currentTarget).data());
-		return false;
+
+	clickShortLink: function(e) {
+		$(e.currentTarget).find('input').select();
 	},
+	
+	// delete: function(e) {
+	// 	this.model.deleteItem($(e.currentTarget).data());
+	// 	return false;
+	// },
 
 	delayedRemove: function() {
 		var that = this;
@@ -60,29 +65,4 @@ qst.LinkView = Backbone.View.extend({
 			})
 		},50);
 	}
-
-	// vote: function() {
-	// 	if(this.model.get('type')!= 'photo') {
-	// 		return;
-	// 	}
-
-	// 	var wasvote = parseInt(this.model.get('photo').wasvote) || 0;
-	// 	if(!wasvote) {
-	// 		if(!this.model.addVote()) {
-	// 			return false;
-	// 		}
-	// 		this.$vote.toggleClass('active', true);
-	// 	} else {
-	// 		this.$vote.toggleClass('active', false);
-	// 		this.model.removeVote();
-	// 	}
-	// },
-
-	// updateVote: function(options) {
-	// 	if(!!options) {
-	// 		this.$vote
-	// 			.find('.photo__vote-title')
-	// 				.text(options.vote_count);
-	// 	}
-	// },
 });

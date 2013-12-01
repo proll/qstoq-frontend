@@ -10,7 +10,7 @@ RewriteCond %{HTTP_HOST} ^[w\.]*qstoq.ru[:80]*
 RewriteRule ^(.*)$ http://qstoq.me/$1 [R=301,L]
 
 RewriteBase /
-RewriteRule ^(scripts|styles|images|images_static|go|docs|templates|.*\.txt|.*\.xml)($|/) - [L]
+RewriteRule ^(scripts|styles|images|images_static|go|docs|templates|.*\.ico|.*\.txt|.*\.xml)($|/) - [L]
 
 RewriteCond %{HTTP_USER_AGENT} (yandex\w+|googlebot|adsbot-google|bingbot|msnbot|psbot|gigabot|twitterbot|linkedinbot|yahoo-mmcrawler|pingdom\.com_bot) [NC]
 RewriteRule (.*) http://162.243.45.86:3333/%1? [P]

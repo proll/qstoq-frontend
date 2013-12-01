@@ -22,7 +22,7 @@ qst.ItemListView = Backbone.View.extend({
 		var template = this.template(this.model.toJSON());
 		this.$el.html(template);
 
-		this.$cont = this.$el.find('.itemlist__table');
+		this.$cont = this.$el.find('.itemlist__table>tbody');
 		this.showSpinner();
 	},
 

@@ -122,9 +122,10 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					collapseBooleanAttributes: true,
-					removeAttributeQuotes: true,
+					// removeAttributeQuotes: true,
 					removeRedundantAttributes: true,
 					removeEmptyAttributes: true,
+					collapseWhitespace: true
 				},
 				files: [{
 					expand: true,
@@ -137,7 +138,6 @@ module.exports = function(grunt) {
 			deploy: {
 				options: {
 					removeComments: true,
-					collapseWhitespace: true
 					// removeCommentsFromCDATA: true,
 					// https://github.com/yeoman/grunt-usemin/issues/44
 					// collapseWhitespace: true,

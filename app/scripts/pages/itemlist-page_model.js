@@ -78,9 +78,16 @@ qst.ItemListPage = qst.Page.extend({
 		}
 	},
 
+	incTotal: function() {
+		var total = this.get('total') + 1;
+		this.set('total', total);
+		this.view.updateTotal(total);
+	},
+
 	linkAdded: function(link_obj) {
 		if(!_.isEmpty(link_obj)) {
 			this.itemlist.addMyBlock(link_obj)
+			this.incTotal();
 		}
 	},
 

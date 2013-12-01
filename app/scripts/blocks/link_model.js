@@ -7,7 +7,7 @@ qst.Link = Backbone.Model.extend({
 		// counter_view:0,
 		// counter_ship:0,
 
-		// "price": 100,
+		// "price": 100,url_short
 		// "currency": "rur",
 		// "url_short": "https://host.ru/l/XXX",
 		// "url": [исходная ссылка],
@@ -24,11 +24,7 @@ qst.Link = Backbone.Model.extend({
 		this.view = new qst.LinkView({model:this});
 	},
 	fetch: function () {
-		if (parseInt(this.get('counter_ship'))) {
-			this.set('ctr', this.get('counter_view')/ this.get('counter_ship'));
-		} else{
-			this.set('ctr', 0);
-		}
+		this.set('url_short_path', this.get('url_short').split('http://')[1]);
 		this.set('overall', this.get('price') * this.get('counter_ship'));
 		this.view.render();
 
@@ -47,20 +43,20 @@ qst.Link = Backbone.Model.extend({
 	},
 
 
-	deleteItem: function (options) {
-		var opts = {
-			url: 			'/v1/links/' + this.get('id'),
-			method: 		'delete',
-			content: 		qst.localize('Do you want to delete this item?','itemlist'),
-			ok_title: 		qst.localize('Ok','itemlist'),
-			close_title: 	qst.localize('Cancel','itemlist'),
-			success_title: 	qst.localize('Item deleted.','itemlist'),
-			error_title: 	qst.localize('Something went wrong...','itemlist'),
-			event: 			'link:delete',
-			eventdata: 		{id: this.get('id')},
-		}
-		var confirm = new qst.Confirm(opts);
-	},
+	// deleteItem: function (options) {
+	// 	var opts = {
+	// 		url: 			'/v1/links/' + this.get('id'),
+	// 		method: 		'delete',
+	// 		content: 		qst.localize('Do you want to delete this item?','itemlist'),
+	// 		ok_title: 		qst.localize('Ok','itemlist'),
+	// 		close_title: 	qst.localize('Cancel','itemlist'),
+	// 		success_title: 	qst.localize('Item deleted.','itemlist'),
+	// 		error_title: 	qst.localize('Something went wrong...','itemlist'),
+	// 		event: 			'link:delete',
+	// 		eventdata: 		{id: this.get('id')},
+	// 	}
+	// 	var confirm = new qst.Confirm(opts);
+	// },
 
 	remove: function () {
 		this.stopListening();
