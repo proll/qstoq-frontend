@@ -1,76 +1,108 @@
+// .btn {
+// 	display: inline-block;
+// 	.ie7-inline-block();
+// 	padding: 4px 14px;
+// 	margin-bottom: 0; // For input.btn
+// 	font-size: @baseFontSize;
+// 	line-height: @baseLineHeight;
+// 	*line-height: @baseLineHeight;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	vertical-align: middle;
+// 	cursor: pointer;
+// 	.buttonBackground(@btnBackground, @btnBackgroundHighlight, @gray, 0 1px 1px rgba(255,255,255,.75));
+// 	border: 1px solid @btnBorder;
+// 	*border: 0; // Remove the border to prevent IE7's black border on input:focus
+// 	border-bottom-color: darken(@btnBorder, 10%);
+// 	.border-radius(4px);
+// 	.ie7-restore-left-whitespace(); // Give IE7 some love
+// 	.box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
+
+// 	// Hover state
+// 	&:hover {
+// 		color: @gray;
+// 		text-decoration: none;
+// 		background-color: darken(@white, 10%);
+// 		*background-color: darken(@white, 15%);  Buttons in IE7 don't get borders, so darken on hover 
+// 		background-position: 0 -15px;
+
+// 		// transition is only when going to hover, otherwise the background
+// 		// behind the gradient (there for IE<=9 fallback) gets mismatched
+// 		.transition(background-position .1s linear);
+// 		// .transition(background-color 0.2s);
+// 	}
+
+// 	// Focus state for keyboard and accessibility
+// 	&:focus {
+// 		.tab-focus();
+// 	}
+
+// 	// Active state
+// 	&.active,
+// 	&:active {
+// 		background-color: darken(@white, 10%);
+// 		background-color: darken(@white, 15%) e("\9");
+// 		background-image: none;
+// 		outline: 0;
+// 		.box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
+// 		.icon{
+// 			position: relative;
+// 			top: 1px;
+// 		}
+// 	}
+
+// 	// Disabled state
+// 	&.disabled,
+// 	&[disabled] {
+// 		cursor: default;
+// 		background-color: darken(@white, 10%);
+// 		background-image: none;
+// 		.opacity(65);
+// 		.box-shadow(none);
+// 	}
+
+// }
+
+
 .btn {
-	display: inline-block;
-	.ie7-inline-block();
-	padding: 4px 14px;
-	margin-bottom: 0; // For input.btn
-	font-size: @baseFontSize;
-	line-height: @baseLineHeight;
-	*line-height: @baseLineHeight;
-	text-align: center;
+	color: @white;
 	text-decoration: none;
-	vertical-align: middle;
-	cursor: pointer;
-	.buttonBackground(@btnBackground, @btnBackgroundHighlight, @gray, 0 1px 1px rgba(255,255,255,.75));
-	border: 1px solid @btnBorder;
-	*border: 0; // Remove the border to prevent IE7's black border on input:focus
-	border-bottom-color: darken(@btnBorder, 10%);
-	.border-radius(4px);
-	.ie7-restore-left-whitespace(); // Give IE7 some love
-	.box-shadow(inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05));
+	font-size: 13px;
+	line-height: 18px;
+	font-size: normal;
+	display: inline-block;
 
-	// Hover state
+	background-color: @blue_sexy;
+	border-color: @blue_sexy_dark;
+	border-style: solid;
+	border-width: 0 1px 2px 0;
+	padding: 10px 41px-1px 12px-2px 41px;
+	.border-radius(2px);
+
+	&:focus,
+	&:active,
 	&:hover {
-		color: @gray;
+		color: @white;
 		text-decoration: none;
-		background-color: darken(@white, 10%);
-		*background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
-		background-position: 0 -15px;
-
-		// transition is only when going to hover, otherwise the background
-		// behind the gradient (there for IE<=9 fallback) gets mismatched
-		.transition(background-position .1s linear);
-		// .transition(background-color 0.2s);
 	}
 
-	// Focus state for keyboard and accessibility
-	&:focus {
-		.tab-focus();
-	}
-
-	// Active state
-	&.active,
 	&:active {
-		background-color: darken(@white, 10%);
-		background-color: darken(@white, 15%) e("\9");
-		background-image: none;
-		outline: 0;
-		.box-shadow(inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05));
-		.icon{
-			position: relative;
-			top: 1px;
-		}
-	}
-
-	// Disabled state
-	&.disabled,
-	&[disabled] {
-		cursor: default;
-		background-color: darken(@white, 10%);
-		background-image: none;
-		.opacity(65);
-		.box-shadow(none);
-	}
-
+		border-width: 2px 0 0 1px;
+		padding: 10px-2px 41px 12px 41px-1px;
+	}	
 }
 
-.btn-action {
-	.buttonBackground(#3dce92, #1fc580, @white, 0 -1px 1px rgba(0,0,0,.25));
+.btn-blue {
+	background-color: @blue_sexy;
+	border-color: @blue_sexy_dark;
 }
 
-.btn-action-success {
-	.buttonBackground(#85e8b3, #85e8b3, @white, none);
+.btn-green {
+	background-color: @green_sexy2;
+	border-color: @green_sexy_dark;
 }
 
-.btn-action-pause {
-	.buttonBackground(#e18b80, #e18b80, @white, none);
+.btn-gray {
+	background-color: @gray;
+	border-color: @grayDarker2;
 }

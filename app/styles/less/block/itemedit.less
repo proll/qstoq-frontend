@@ -256,43 +256,14 @@ textarea.qst__inp {
 	}
 
 			.itemedit__submit-a {
-				color: @white;
-				text-decoration: none;
-				background-color: #46b486;
-				font-size: 13px;
-				line-height: 14px;
-				font-weight: 500;
-				padding:13px 21px 12px;
-				display: inline-block;
-				#gradient .vertical(#46b486, #279763);
-
-				&:focus,
-				&:active,
-				&:hover {
-					color: @white;
-					text-decoration: none;
-				}
+				.btn;
+				.btn-green;
 			}
 
 			.itemedit__delete-a {
-				color: @white;
-				text-decoration: none;
-				background-color: @gray;
-				font-size: 13px;
-				line-height: 14px;
-				font-weight: 500;
-
-				padding:13px 18px 12px;
-				display: inline-block;
+				.btn;
+				.btn-gray;
 				float: left;
-				.border-radius(2px);
-
-				&:focus,
-				&:active,
-				&:hover {
-					color: @white;
-					text-decoration: none;
-				}
 			}
 
 
@@ -359,12 +330,17 @@ textarea.qst__inp {
 		background: @grayDarker2;
 		text-decoration: none;
 		padding: 6px 5px;
+		.border-radius(2px);
 		.box-sizing(border-box);
 		display: block;
 		overflow: hidden;
 		margin-bottom: 10px;
 
 		width: 206px;
+		
+		border-style: solid;
+		border-width: 0 1px 2px 0;
+		padding: 6px 5px-1px 6px-2px 5px;
 
 		.qi {
 			margin: -6px 0;
@@ -376,6 +352,11 @@ textarea.qst__inp {
 			text-decoration: none;
 		}
 
+		&:active {
+			border-width: 2px 0 0 1px;
+			padding: 6px-2px 5px 6px 5px-1px;
+		}
+
 		&-title {
 			font-size: 13px;
 			line-height: 14px;
@@ -385,15 +366,18 @@ textarea.qst__inp {
 	}
 
 	&-vk-btn {
-		.vkGradient;
+		background-color: @vkColorLight;
+		border-color: @vkColorDark;
 	}
 
 	&-fb-btn {
-		.fbGradient;
+		background-color: @fbColorLight;
+		border-color: @fbColorDark;
 	}
 
 	&-tw-btn {
-		.twGradient;
+		background-color: @twColorLight;
+		border-color: @twColorDark;
 	}
 }
 
