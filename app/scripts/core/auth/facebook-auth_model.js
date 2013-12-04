@@ -6,13 +6,46 @@ qst.FB = Backbone.Model.extend({
 	access_uid : null,
 
 	initialize: function (){
-		window.fbAsyncInit = _.bind(function () {
+		// window.fbAsyncInit = _.bind(function () {
+		// 	//facebook functions
+		// 	FB.init({
+		// 		appId: this.app_id,
+		// 		cookie: true,
+		// 		status: true,
+		// 		xfbml: true,
+		// 		oauth : false });
+		// 	FB.Event.subscribe('edge.create', this.fbShareEvents);
+		// 	if (_.browser.opera){
+		// 		FB.XD._transport="postmessage";
+		// 		FB.XD.PostMessage.init();
+		// 	}
+		// 	FB.getLoginStatus(_.bind(function (response) {
+		// 		if (response.status == "connected"){
+		// 			qst.log("Facebook : user was succesfully connected! :)");
+		// 		}else{
+		// 			qst.log("Facebook : user was not connected! :(");
+		// 		}
+		// 	}, this));
+
+		// }, this);
+
+		// //load facebook module
+		// (function(d, s, id) {
+		// 	var js, fjs = d.getElementsByTagName(s)[0];
+		// 	if (d.getElementById(id)) {return;}
+		// 	js = d.createElement(s); js.id = id;
+		// 	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		// 	fjs.parentNode.insertBefore(js, fjs);
+		// }(document, 'script', 'facebook-jssdk'));
+
+		// this.inited = true;
+		$.getScript('//connect.facebook.net/en_US/all.js#xfbml=1', _.bind(function () {
 			//facebook functions
 			FB.init({
 				appId: this.app_id,
 				cookie: true,
 				status: true,
-				xfbml: true,
+				xfbml:  true,
 				oauth : false });
 			FB.Event.subscribe('edge.create', this.fbShareEvents);
 			if (_.browser.opera){
@@ -20,25 +53,18 @@ qst.FB = Backbone.Model.extend({
 				FB.XD.PostMessage.init();
 			}
 			FB.getLoginStatus(_.bind(function (response) {
-				if (response.status == "connected"){
+				if (response && response.status == "connected"){
 					qst.log("Facebook : user was succesfully connected! :)");
 				}else{
 					qst.log("Facebook : user was not connected! :(");
 				}
+				if(qst.fbapp && !qst.is_authed()) {
+					this.onFBData(response);
+				}
 			}, this));
 
-		}, this);
-
-		//load facebook module
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-
-		this.inited = true;
+			this.inited = true;
+		}, this));
 	},
 
 
