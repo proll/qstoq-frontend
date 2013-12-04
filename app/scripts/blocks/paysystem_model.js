@@ -7,6 +7,102 @@ qst.PaySystem = Backbone.Model.extend({
 
 		loading: 	false,
 		sleeped: 	false,
+
+		conf: [
+			{
+				key: 'cards',
+				icons: [
+					'mastercard',
+					'visa'
+				],
+
+				systems: [
+					'robokassa',
+					'assist',
+					'paymaster',
+					'paypal',
+					'webmoney',
+					'qiwi',
+				]
+			},
+			{
+				key: 'phone',
+				icons: [
+					'beeline',
+					'megafon',
+					'mts'
+				],
+
+				systems: [
+					'robokassa',
+					'assist',
+					'paymaster',
+					'paypal',
+					'webmoney',
+					'qiwi',
+				]
+			},
+			{
+				key: 'qiwiw',
+				icons: [
+					'qiwi',
+				],
+
+				systems: [
+					'robokassa',
+					'assist',
+					'paymaster',
+					'paypal',
+					'webmoney',
+					'qiwi',
+				]
+			},
+			{
+				key: 'yd',
+				icons: [
+					'yd',
+				],
+
+				systems: [
+					'robokassa',
+					'assist',
+					'paymaster',
+					'paypal',
+					'webmoney',
+					'qiwi',
+				]
+			},
+			{
+				key: 'webmoney',
+				icons: [
+					'webmoney',
+				],
+
+				systems: [
+					'robokassa',
+					'assist',
+					'paymaster',
+					'paypal',
+					'webmoney',
+					'qiwi',
+				]
+			},
+			{
+				key: 'paypal',
+				icons: [
+					'paypal',
+				],
+
+				systems: [
+					'robokassa',
+					'assist',
+					'paymaster',
+					'paypal',
+					'webmoney',
+					'qiwi',
+				]
+			},
+		]
 	},
 
 	initialize: function (options) {

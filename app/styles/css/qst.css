@@ -920,7 +920,7 @@ textarea::-webkit-input-placeholder {
   height: 20px;
   background-position: 0px -151px;
 }
-.qi-ps-asist {
+.qi-ps-assist {
   width: 16px;
   height: 16px;
   background-position: 0px -172px;
@@ -970,7 +970,7 @@ textarea::-webkit-input-placeholder {
   height: 13px;
   background-position: 0px -323px;
 }
-.qi-ps-wm {
+.qi-ps-webmoney {
   width: 16px;
   height: 16px;
   background-position: 0px -337px;
@@ -4807,6 +4807,14 @@ a.account__social-item__title:focus {
 }
 .page-profile_withdrawal .profile__section-withdrawal-row {
   display: block;
+}
+.paysystem {
+  margin-bottom: 40px;
+}
+.paysystem__spinner {
+  width: 100%;
+  height: 66px;
+  background: url(/images/ani/spinner.gif) center center no-repeat;
 }
 .page-feedback {
   padding-top: 40px;
