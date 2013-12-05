@@ -1,36 +1,37 @@
 <div class="paysystem__cont">
+	<p class="paysystem__info-compare">
+		{{_ 'phrase1_1' 'paysystem'}}<br/>
+		{{_ 'phrase1_2' 'paysystem'}}
+	</p>
 	<div class="row">
 		<div class="span8">
-			<p class="paysystem__info-compare">
-				{{_ 'phrase1_1' 'paysystem'}}<br/>
-				{{_ 'phrase1_2' 'paysystem'}}
-			</p>
 			{{#each conf}}
 			<div class="paysystem__payment-way">
-				<div class="paysystem__payment-way__label">
+				<div class="paysystem__payment-way__icons">
 					{{#each icons}}
 					<i class="qi qi-ps-{{ this }}"></i>
 					{{/each}}
+				</div>
+				<div class="paysystem__payment-way__label">
 					<span class="paysystem__payment-way__label-title">{{_ key 'paysystem'}}</span>
 				</div>
 				<div class="paysystem__payment-way__select">
 					<span class="paysystem__payment-way__select-val">{{_ 'Reject' 'paysystem'}}</span>
 					<ul class="paysystem__payment-way__select-ul">
-						<li class="paysystem__payment-way__select-li">
-							<label>
+						<li class="paysystem__payment-way__select-li-first">
+							<label class="paysystem__payment-way__select-li-first-val">
 								<input type="radio" name="ps_cards" value="reject">
-								<span class="paysystem__payment-way__select-li-val">{{_ 'Reject' 'paysystem'}}</span>
+								<span>{{_ 'Reject' 'paysystem'}}</span>
 							</label>
 						</li>
 						<li class="paysystem__payment-way__select-li">
-							<span class="paysystem__payment-way__select-li-val">{{_ 'Through' 'paysystem'}}</span>
+							<span class="paysystem__payment-way__select-li-second-val">{{_ 'Through' 'paysystem'}}</span>
 						</li>
 						{{#each systems}}
 						<li class="paysystem__payment-way__select-li">
-							<label>
+							<label class="paysystem__payment-way__select-li-val">
 								<input type="radio" name="ps_{{../key}}" value="robokassa">
-								<i class="qi qi-ps-{{this}}"></i>
-								<span class="paysystem__payment-way__select-li-val">{{_ this 'paysystem'}}</span>
+								<i class="qi qi-ps-{{this}}"></i><span class="paysystem__payment-way__select-li-val">{{_ this 'paysystem'}}</span>
 							</label>
 						</li>
 						{{/each}}
@@ -40,7 +41,22 @@
 			{{/each}}
 		</div>
 		<div class="span1"></div>
-		<div class="span3"></div>
+		<div class="span3">
+			<h3 class="paysystem__misc-head">{{_ 'phrase2_1' 'paysystem'}}</h3>
+			<ul class="paysystem__misc">
+				{{#each paysys}}
+				<li class="paysystem__misc-li">
+					<a href="{{ this }}" class="paysystem__misc-a">{{_ this 'paysystem'}}</a>
+				</li>
+				{{/each}}
+			</ul>
+			<h3 class="paysystem__misc-head2">{{_ 'phrase2_2' 'paysystem'}}</h3>
+			<ul class="paysystem__misc">
+				<li class="paysystem__misc-li">
+					<a href="request" class="paysystem__misc-a">{{_ 'Ask us' 'paysystem'}}</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="paysystem__spinner"></div>
 </div>

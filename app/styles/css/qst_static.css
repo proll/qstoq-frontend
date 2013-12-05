@@ -68,6 +68,11 @@
 .hidden {
   display: none;
 }
+.hidden-input {
+  position: absolute;
+  top: -99999px;
+  left: 0;
+}
 .hidden-submit {
   font-size: 0;
   width: 0;

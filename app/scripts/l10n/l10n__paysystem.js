@@ -6,8 +6,8 @@ qst.l10n.paysystem = {
 		ru: 'Выберите какой из систем приема платежей принимать те или иные средства оплаты.'
 	},
 	'phrase1_2': {
-		en: '<span class="paysystem__compare">Take a look on the table</span> of payment systems.',
-		ru: '<span class="paysystem__compare">Ознакомьтесть с таблицей</span> способов оплат и систем приема платежей.'
+		en: '<a href="compare" class="paysystem__compare">Take a look on the table</a> of payment systems.',
+		ru: '<a href="compare" class="paysystem__compare">Ознакомьтесть с таблицей</a> способов оплат и систем приема платежей.'
 	},
 
 	'cards': {
@@ -69,5 +69,23 @@ qst.l10n.paysystem = {
 	'yd': {
 		en: 'Yandex.Money',
 		ru: 'Яндекс деньги'
+	},
+
+
+	'phrase2_1': {
+		en: 'Set up connected systems',
+		ru: 'Настроить подключенные системы'
+	},
+
+	'phrase2_2': {
+		en: 'Is there no necessary payment system?',
+		ru: 'Нет платежных систем с которыми вы хотите работать?'
+	},
+
+	'Ask us': {
+		en: 'Ask us',
+		ru: 'Напишите нам'
 	}
+
+
 }

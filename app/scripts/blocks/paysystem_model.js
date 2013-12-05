@@ -8,6 +8,12 @@ qst.PaySystem = Backbone.Model.extend({
 		loading: 	false,
 		sleeped: 	false,
 
+		paysys: [
+			'assist',
+			'yd',
+			'webmoney'
+		],
+
 		conf: [
 			{
 				key: 'cards',

@@ -676,7 +676,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li>\n			</ul>\n		</div>\n	</div>\n</div>\n<div class=\"navbar-inner navbar_authed\">\n	<div class=\"container\">\n		<a class=\"brand\" href=\"/\"><div class=\"navbar__logo\"><img src=\"/images_static/empty.png\" alt=\"QSTOQ\"></div></a>\n		<div class=\"nav-collapse collapse\">\n			<ul class=\"nav pull-right\">\n				<li class=\"nav__itemlist\"><a href=\"/items\"><span class=\"nav__my-items-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "My items", "navbar", options) : helperMissing.call(depth0, "_", "My items", "navbar", options)))
-    + "</span></a></li>\n				<li class=\"nav__balance\"><a href=\"/payments\"><span class=\"nav__payments-title\">";
+    + "</span></a></li>\n				<li class=\"nav__paysystem\"><a href=\"/payments\"><span class=\"nav__payments-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Payments", "navbar", options) : helperMissing.call(depth0, "_", "Payments", "navbar", options)))
     + "</span></a></li>\n				<li class=\"nav__profile\"><a href=\"/profile\"><span class=\"nav__profile-title\">";
@@ -694,19 +694,19 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
-  buffer += "\n			<div class=\"paysystem__payment-way\">\n				<div class=\"paysystem__payment-way__label\">\n					";
+  buffer += "\n			<div class=\"paysystem__payment-way\">\n				<div class=\"paysystem__payment-way__icons\">\n					";
   stack1 = helpers.each.call(depth0, depth0.icons, {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n					<span class=\"paysystem__payment-way__label-title\">";
+  buffer += "\n				</div>\n				<div class=\"paysystem__payment-way__label\">\n					<span class=\"paysystem__payment-way__label-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, depth0.key, "paysystem", options) : helperMissing.call(depth0, "_", depth0.key, "paysystem", options)))
     + "</span>\n				</div>\n				<div class=\"paysystem__payment-way__select\">\n					<span class=\"paysystem__payment-way__select-val\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Reject", "paysystem", options) : helperMissing.call(depth0, "_", "Reject", "paysystem", options)))
-    + "</span>\n					<ul class=\"paysystem__payment-way__select-ul\">\n						<li class=\"paysystem__payment-way__select-li\">\n							<label>\n								<input type=\"radio\" name=\"ps_cards\" value=\"reject\">\n								<span class=\"paysystem__payment-way__select-li-val\">";
+    + "</span>\n					<ul class=\"paysystem__payment-way__select-ul\">\n						<li class=\"paysystem__payment-way__select-li-first\">\n							<label class=\"paysystem__payment-way__select-li-first-val\">\n								<input type=\"radio\" name=\"ps_cards\" value=\"reject\">\n								<span>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Reject", "paysystem", options) : helperMissing.call(depth0, "_", "Reject", "paysystem", options)))
-    + "</span>\n							</label>\n						</li>\n						<li class=\"paysystem__payment-way__select-li\">\n							<span class=\"paysystem__payment-way__select-li-val\">";
+    + "</span>\n							</label>\n						</li>\n						<li class=\"paysystem__payment-way__select-li\">\n							<span class=\"paysystem__payment-way__select-li-second-val\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Through", "paysystem", options) : helperMissing.call(depth0, "_", "Through", "paysystem", options)))
     + "</span>\n						</li>\n						";
@@ -727,27 +727,51 @@ function program2(depth0,data) {
 function program4(depth0,data,depth1) {
   
   var buffer = "", stack1, options;
-  buffer += "\n						<li class=\"paysystem__payment-way__select-li\">\n							<label>\n								<input type=\"radio\" name=\"ps_"
+  buffer += "\n						<li class=\"paysystem__payment-way__select-li\">\n							<label class=\"paysystem__payment-way__select-li-val\">\n								<input type=\"radio\" name=\"ps_"
     + escapeExpression(((stack1 = depth1.key),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" value=\"robokassa\">\n								<i class=\"qi qi-ps-"
     + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
-    + "\"></i>\n								<span class=\"paysystem__payment-way__select-li-val\">";
+    + "\"></i><span class=\"paysystem__payment-way__select-li-val\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, depth0, "paysystem", options) : helperMissing.call(depth0, "_", depth0, "paysystem", options)))
     + "</span>\n							</label>\n						</li>\n						";
   return buffer;
   }
 
-  buffer += "<div class=\"paysystem__cont\">\n	<div class=\"row\">\n		<div class=\"span8\">\n			<p class=\"paysystem__info-compare\">\n				";
+function program6(depth0,data) {
+  
+  var buffer = "", stack1, options;
+  buffer += "\n				<li class=\"paysystem__misc-li\">\n					<a href=\""
+    + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
+    + "\" class=\"paysystem__misc-a\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, depth0, "paysystem", options) : helperMissing.call(depth0, "_", depth0, "paysystem", options)))
+    + "</a>\n				</li>\n				";
+  return buffer;
+  }
+
+  buffer += "<div class=\"paysystem__cont\">\n	<p class=\"paysystem__info-compare\">\n		";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase1_1", "paysystem", options) : helperMissing.call(depth0, "_", "phrase1_1", "paysystem", options)))
-    + "<br/>\n				";
+    + "<br/>\n		";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase1_2", "paysystem", options) : helperMissing.call(depth0, "_", "phrase1_2", "paysystem", options)))
-    + "\n			</p>\n			";
+    + "\n	</p>\n	<div class=\"row\">\n		<div class=\"span8\">\n			";
   stack2 = helpers.each.call(depth0, depth0.conf, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\n		</div>\n		<div class=\"span1\"></div>\n		<div class=\"span3\"></div>\n	</div>\n	<div class=\"paysystem__spinner\"></div>\n</div>";
+  buffer += "\n		</div>\n		<div class=\"span1\"></div>\n		<div class=\"span3\">\n			<h3 class=\"paysystem__misc-head\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase2_1", "paysystem", options) : helperMissing.call(depth0, "_", "phrase2_1", "paysystem", options)))
+    + "</h3>\n			<ul class=\"paysystem__misc\">\n				";
+  stack2 = helpers.each.call(depth0, depth0.paysys, {hash:{},inverse:self.noop,fn:self.program(6, program6, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\n			</ul>\n			<h3 class=\"paysystem__misc-head2\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase2_2", "paysystem", options) : helperMissing.call(depth0, "_", "phrase2_2", "paysystem", options)))
+    + "</h3>\n			<ul class=\"paysystem__misc\">\n				<li class=\"paysystem__misc-li\">\n					<a href=\"request\" class=\"paysystem__misc-a\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Ask us", "paysystem", options) : helperMissing.call(depth0, "_", "Ask us", "paysystem", options)))
+    + "</a>\n				</li>\n			</ul>\n		</div>\n	</div>\n	<div class=\"paysystem__spinner\"></div>\n</div>";
   return buffer;
   });
 

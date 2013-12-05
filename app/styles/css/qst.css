@@ -68,6 +68,11 @@
 .hidden {
   display: none;
 }
+.hidden-input {
+  position: absolute;
+  top: -99999px;
+  left: 0;
+}
 .hidden-submit {
   font-size: 0;
   width: 0;
@@ -860,17 +865,17 @@ textarea::-webkit-input-placeholder {
   background-position: 0px -544px;
 }
 .qi {
-  background: url("/images/sprites/qi-6db2e.png") no-repeat 0 0;
+  background: url("/images/sprites/qi-3124e.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .qi {
-    background: url("/images/sprites/qi-2x-6db2e.png") no-repeat 0 0;
-    -webkit-background-size: 28px 531px;
-    -moz-background-size: 28px 531px;
-    -o-background-size: 28px 531px;
-    background-size: 28px 531px;
+    background: url("/images/sprites/qi-2x-3124e.png") no-repeat 0 0;
+    -webkit-background-size: 28px 548px;
+    -moz-background-size: 28px 548px;
+    -o-background-size: 28px 548px;
+    background-size: 28px 548px;
     vertical-align: text-top;
     display: inline-block;
   }
@@ -930,90 +935,95 @@ textarea::-webkit-input-placeholder {
   height: 16px;
   background-position: 0px -189px;
 }
+.qi-ps-drop {
+  width: 15px;
+  height: 16px;
+  background-position: 0px -206px;
+}
 .qi-ps-mastercard {
   width: 22px;
   height: 14px;
-  background-position: 0px -206px;
+  background-position: 0px -223px;
 }
 .qi-ps-megafon {
   width: 17px;
   height: 16px;
-  background-position: 0px -221px;
+  background-position: 0px -238px;
 }
 .qi-ps-mts {
   width: 16px;
   height: 16px;
-  background-position: 0px -238px;
+  background-position: 0px -255px;
 }
 .qi-ps-paymaster {
   width: 16px;
   height: 16px;
-  background-position: 0px -255px;
+  background-position: 0px -272px;
 }
 .qi-ps-paypal {
   width: 16px;
   height: 16px;
-  background-position: 0px -272px;
+  background-position: 0px -289px;
 }
 .qi-ps-qiwi {
   width: 16px;
   height: 16px;
-  background-position: 0px -289px;
+  background-position: 0px -306px;
 }
 .qi-ps-robokassa {
   width: 16px;
   height: 16px;
-  background-position: 0px -306px;
+  background-position: 0px -323px;
 }
 .qi-ps-visa {
   width: 15px;
   height: 13px;
-  background-position: 0px -323px;
+  background-position: 0px -340px;
 }
 .qi-ps-webmoney {
   width: 16px;
   height: 16px;
-  background-position: 0px -337px;
+  background-position: 0px -354px;
 }
 .qi-ps-yd {
   width: 16px;
   height: 16px;
-  background-position: 0px -354px;
+  background-position: 0px -371px;
 }
 .qi-ru {
   width: 16px;
   height: 11px;
-  background-position: 0px -371px;
+  background-position: 0px -388px;
 }
 .qi-share-fb {
   width: 28px;
   height: 28px;
-  background-position: 0px -383px;
+  background-position: 0px -400px;
 }
 .qi-share-link {
   width: 28px;
   height: 28px;
-  background-position: 0px -412px;
+  background-position: 0px -429px;
 }
 .qi-share-tw {
   width: 28px;
   height: 28px;
-  background-position: 0px -441px;
+  background-position: 0px -458px;
 }
 .qi-share-vk {
   width: 28px;
   height: 28px;
-  background-position: 0px -470px;
+  background-position: 0px -487px;
 }
 .qi-us {
   width: 16px;
   height: 11px;
-  background-position: 0px -499px;
+  background-position: 0px -516px;
 }
 .qi-view {
   width: 24px;
   height: 20px;
-  background-position: 0px -511px;
+  background-position: 0px -528px;
 }
 .ib {
   background: url("/images/sprites/ib-d58b6.png") no-repeat 0 0;
@@ -4810,11 +4820,133 @@ a.account__social-item__title:focus {
 }
 .paysystem {
   margin-bottom: 40px;
+  font-size: 14px;
 }
 .paysystem__spinner {
   width: 100%;
   height: 66px;
   background: url(/images/ani/spinner.gif) center center no-repeat;
+}
+.paysystem__info-compare {
+  line-height: 22px;
+  margin: 48px 0;
+  display: block;
+}
+.paysystem__payment-way {
+  padding: 16px 40px 15px;
+}
+.paysystem__payment-way:hover {
+  background-color: #f8f8fa;
+}
+.paysystem__payment-way__icons {
+  width: 64px;
+  text-align: right;
+  margin-right: 16px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.paysystem__payment-way__icons .qi {
+  vertical-align: middle;
+}
+.paysystem__payment-way__label {
+  font-size: 18px;
+  line-height: 20px;
+  padding: 10px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.paysystem__payment-way__select {
+  float: right;
+  position: relative;
+  width: 200px;
+}
+.paysystem__payment-way__select-val {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  display: block;
+  padding: 10px 11px;
+  background-color: #ffffff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  border-top-color: #bebebe;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+}
+.paysystem__payment-way__select-val:after {
+  content: '';
+  background: url("/images/sprites/qi-3124e.png") no-repeat 0 0;
+  vertical-align: text-top;
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  background-position: 0px -206px;
+  float: right;
+}
+.paysystem__payment-way__select-ul {
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  border: 1px solid #dcdcdc;
+  border-top: 0 none;
+  margin-top: -2px;
+  background-color: #f6f6f8;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  padding-bottom: 10px;
+}
+.paysystem__payment-way__select-li {
+  font-size: 0;
+  line-height: 0;
+  padding: 10px 20px;
+}
+.paysystem__payment-way__select-li:hover {
+  background-color: #dcdcdc;
+}
+.paysystem__payment-way__select-li-first {
+  padding: 19px 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.paysystem__payment-way__select-li-first-val {
+  display: inline-block;
+  overflow: hidden;
+  padding: 7px 14px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #dcdcdc;
+  border-bottom: 2px solid #bebebe;
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+}
+.paysystem__payment-way__select-li-second-val {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.paysystem__payment-way__select-li-val {
+  font-size: 14px;
+  line-height: 16px;
+}
+.paysystem__payment-way__select-li-val .qi {
+  margin-right: 12px;
+}
+.paysystem__payment-way__select input {
+  position: absolute;
+  top: -99999px;
+  left: 0;
 }
 .page-feedback {
   padding-top: 40px;
