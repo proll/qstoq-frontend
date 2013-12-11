@@ -70,8 +70,8 @@
 }
 .hidden-input {
   position: absolute;
-  top: -99999px;
-  left: 0;
+  top: 0;
+  left: -99999px;
 }
 .hidden-submit {
   font-size: 0;
@@ -1862,13 +1862,6 @@ textarea::-webkit-input-placeholder {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-.popup.shake {
-  -webkit-animation: shake 0.2s 0 ease;
-  -moz-animation: shake 0.2s 0 ease;
-  -ms-animation: shake 0.2s 0 ease;
-  -o-animation: shake 0.2s 0 ease;
-  animation: shake 0.2s 0 ease;
-}
 .popup.in {
   opacity: 0;
   filter: alpha(opacity=0);
@@ -1891,7 +1884,7 @@ textarea::-webkit-input-placeholder {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 0, 10, 0.44);
 }
 .popup__table TD {
   vertical-align: middle;
@@ -4879,15 +4872,15 @@ a.account__social-item__title:focus {
   line-height: 16px;
   position: relative;
 }
-.paysystem__payment-way__select-val:after {
-  content: '';
-  background: url("/images/sprites/qi-3124e.png") no-repeat 0 0;
-  vertical-align: text-top;
-  display: inline-block;
-  width: 15px;
-  height: 16px;
-  background-position: 0px -206px;
+.paysystem__payment-way__select-val .qi {
+  margin-right: 12px;
+}
+.paysystem__payment-way__select-val .qi-ps-drop {
   float: right;
+  margin-right: 0;
+}
+.paysystem__payment-way__select.open .paysystem__payment-way__select-ul {
+  display: block;
 }
 .paysystem__payment-way__select-ul {
   position: absolute;
@@ -4897,6 +4890,7 @@ a.account__social-item__title:focus {
   border: 1px solid #dcdcdc;
   border-top: 0 none;
   margin-top: -2px;
+  display: none;
   background-color: #f6f6f8;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -4908,12 +4902,13 @@ a.account__social-item__title:focus {
 .paysystem__payment-way__select-li {
   font-size: 0;
   line-height: 0;
-  padding: 10px 20px;
 }
 .paysystem__payment-way__select-li:hover {
   background-color: #dcdcdc;
 }
 .paysystem__payment-way__select-li-first {
+  font-size: 0;
+  line-height: 0;
   padding: 19px 20px;
   margin-bottom: 10px;
   border-bottom: 1px solid #dcdcdc;
@@ -4931,22 +4926,51 @@ a.account__social-item__title:focus {
   font-size: 14px;
   line-height: 16px;
 }
+.paysystem__payment-way__select-li-second:hover {
+  background-color: transparent;
+}
 .paysystem__payment-way__select-li-second-val {
+  cursor: default;
+  padding: 7px 20px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
+  display: block;
 }
 .paysystem__payment-way__select-li-val {
   font-size: 14px;
   line-height: 16px;
+  padding: 7px 20px;
 }
 .paysystem__payment-way__select-li-val .qi {
   margin-right: 12px;
 }
 .paysystem__payment-way__select input {
   position: absolute;
-  top: -99999px;
-  left: 0;
+  top: 0;
+  left: -99999px;
+}
+.paysystem__misc-head {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 26px 0 8px;
+  padding: 0;
+}
+.paysystem__misc {
+  margin-bottom: 36px;
+}
+.paysystem__misc-li {
+  font-size: 14px;
+  line-height: 26px;
+}
+.paysystemadd__row {
+  display: none;
+}
+.qiwi .qiwi-row {
+  display: block;
+}
+.paypal .paypal-row {
+  display: block;
 }
 .page-feedback {
   padding-top: 40px;

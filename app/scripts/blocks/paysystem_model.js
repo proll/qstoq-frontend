@@ -9,9 +9,12 @@ qst.PaySystem = Backbone.Model.extend({
 		sleeped: 	false,
 
 		paysys: [
+			'robokassa',
 			'assist',
-			'yd',
-			'webmoney'
+			'paymaster',
+			'paypal',
+			'webmoney',
+			'qiwi',
 		],
 
 		conf: [

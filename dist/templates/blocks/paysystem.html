@@ -16,22 +16,24 @@
 					<span class="paysystem__payment-way__label-title">{{_ key 'paysystem'}}</span>
 				</div>
 				<div class="paysystem__payment-way__select">
-					<span class="paysystem__payment-way__select-val">{{_ 'Reject' 'paysystem'}}</span>
+					<span class="paysystem__payment-way__select-val"><span class="option">{{_ 'Reject' 'paysystem'}}</span><i class="qi qi-ps-drop"></i></span>
 					<ul class="paysystem__payment-way__select-ul">
 						<li class="paysystem__payment-way__select-li-first">
 							<label class="paysystem__payment-way__select-li-first-val">
 								<input type="radio" name="ps_cards" value="reject">
-								<span>{{_ 'Reject' 'paysystem'}}</span>
+								<span class="option">{{_ 'Reject' 'paysystem'}}</span>
 							</label>
 						</li>
-						<li class="paysystem__payment-way__select-li">
+						<li class="paysystem__payment-way__select-li paysystem__payment-way__select-li-second">
 							<span class="paysystem__payment-way__select-li-second-val">{{_ 'Through' 'paysystem'}}</span>
 						</li>
 						{{#each systems}}
 						<li class="paysystem__payment-way__select-li">
 							<label class="paysystem__payment-way__select-li-val">
 								<input type="radio" name="ps_{{../key}}" value="robokassa">
-								<i class="qi qi-ps-{{this}}"></i><span class="paysystem__payment-way__select-li-val">{{_ this 'paysystem'}}</span>
+								<span class="option">
+									<i class="qi qi-ps-{{this}}"></i><span>{{_ this 'paysystem'}}</span>
+								</span>
 							</label>
 						</li>
 						{{/each}}
@@ -46,11 +48,11 @@
 			<ul class="paysystem__misc">
 				{{#each paysys}}
 				<li class="paysystem__misc-li">
-					<a href="{{ this }}" class="paysystem__misc-a">{{_ this 'paysystem'}}</a>
+					<a href="/payments/add/{{ this }}/" class="paysystem__misc-a">{{_ this 'paysystem'}}</a>
 				</li>
 				{{/each}}
 			</ul>
-			<h3 class="paysystem__misc-head2">{{_ 'phrase2_2' 'paysystem'}}</h3>
+			<h3 class="paysystem__misc-head">{{_ 'phrase2_2' 'paysystem'}}</h3>
 			<ul class="paysystem__misc">
 				<li class="paysystem__misc-li">
 					<a href="request" class="paysystem__misc-a">{{_ 'Ask us' 'paysystem'}}</a>

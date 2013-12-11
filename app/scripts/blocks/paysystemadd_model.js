@@ -1,0 +1,47 @@
+qst.PaySystemAdd = Backbone.Model.extend({
+	url: '/api/v1/users/link/',
+	defaults: {
+		system: 'qiwi'
+	},
+
+	initialize: function (options) {
+		this.view = new qst.PaySystemAddView({model:this});
+	},
+
+	activate: function () {
+		this.view.render();
+	},
+
+	save: function (options) {
+		options = options || {};
+		options.url = this.url + this.get('system');
+		options.type = 'post';
+		options.data = options.data || {};
+		options.success  	= _.bind(this.success, this);
+		options.error  		= _.bind(this.error, this);
+
+		this.trigger('save:start');
+
+		return Backbone.Model.prototype.fetch.call(this, options);
+	},
+
+	success: function (model, response, options) {
+		response = _.toJSON(response);
+		this.set(response.result);
+		if(response.success) {
+			this.trigger('save:success');
+		} else {
+			this.trigger('save:error');
+		}
+	},
+
+	error: function (model, xhr, options) {
+		this.trigger('save:error');
+	},	
+
+	remove: function () {
+		this.stopListening();
+		this.clear({silent: true});
+		this.view.remove();
+	},
+});

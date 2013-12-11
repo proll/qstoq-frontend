@@ -13,60 +13,62 @@ qst.Router = Backbone.Router.extend({
 	context: {},
 
 	routes: {
-		"": "landing",
-		"/": "landing",
-		".": "landing",
+		'': 'landing',
+		'/': 'landing',
+		'.': 'landing',
 
-		"how": "how",
-		"where": "where",
+		'how': 'how',
+		'where': 'where',
 		
-		"logout": "logout",
+		'logout': 'logout',
 
-		"items": "itemlist",
+		'items': 'itemlist',
 
-		"profile": 			"profile",
-		"profile/:slide": 	"profile",
-		"profile/:slide/": 	"profile",
+		'profile': 			'profile',
+		'profile/:slide': 	'profile',
+		'profile/:slide/': 	'profile',
 
-		"item/:id": 		"itemedit",
-		"item/:id/:slide": 	"itemedit",
-		"item/:id/:slide/": "itemedit",
+		'item/:id': 		'itemedit',
+		'item/:id/:slide': 	'itemedit',
+		'item/:id/:slide/': 'itemedit',
 
-		"feedback": 	"feedback",
-		"feedback/": 	"feedback",
-		"feedback/*": 	"feedback",
+		'feedback': 	'feedback',
+		'feedback/': 	'feedback',
+		'feedback/*': 	'feedback',
 
 
-		"payments": 	"paysystem",
-		"payments/": 	"paysystem",
-		"payments/*": 	"paysystem",
+		'payments': 	'paysystem',
+		'payments/': 	'paysystem',
+		'payments/add/:system':  'paysystemadd',
+		'payments/add/:system/': 'paysystemadd',
 
-		"404": "er404",
-		"403": "er403",
+		'404': 'er404',
+		'403': 'er403',
 
-		"*default": "er404",
+		'*default': 'er404',
 
 	},
 
 	popoup_routes: [
 		'auth',
+		'paysystemadd'
 	],
 
 	logout:function(){
 		localStorage.clear();
-		this.navigate("/");
+		this.navigate('/');
 		window.location.reload();
 	},
 
 	er404: function(){
 		console.log('no such route ', arguments);
-		this.trigger("404", arguments);
+		this.trigger('404', arguments);
 		return false;
 	},
 
 	er403: function(){
 		console.log('access dinied route ', arguments);
-		this.trigger("403", arguments);
+		this.trigger('403', arguments);
 		return false;
 	},
 
@@ -74,12 +76,12 @@ qst.Router = Backbone.Router.extend({
 	initialize: function(){
 		var rts = _.uniq(_.values(this.routes));
 		_(rts).each(function(destination) {
-			this.on("route:" + destination, function(){
+			this.on('route:' + destination, function(){
 				this.route_passed++;
 
 				if(this._previous_route && this._previous_route != destination){
-					this.trigger("reset", this._previous_route, destination, this._back_path);
-					this.trigger("reset:" + this._previous_route);
+					this.trigger('reset', this._previous_route, destination, this._back_path);
+					this.trigger('reset:' + this._previous_route);
 				}
 				this._previous_route = destination;
 				this._back_path = Backbone.history.fragment;

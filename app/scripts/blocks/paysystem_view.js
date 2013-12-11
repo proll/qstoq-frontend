@@ -3,25 +3,8 @@ qst.PaySystemView = Backbone.View.extend({
 	className: "paysystem",
 
 	events: {
-		'click a.item__types-item': 'clickState',
-		'click .itemedit__submit-a': 'submitForm',
-		'change #file_uploader': 'upload',
-		'keypress': 'hideErrors',
-		'click': 'hideErrors',
-		'click .itemedit__delete-a': 'deleteItem',
-		'submit form': 'submit',
-
-		'click .itemedit__share-inp-cont': 'clickShortLink',
-		'click .itemedit__share-btn, .showcase__share-itm-a, .finish__share-itm-a': 'clickShare',
-
-		'change input[name=name]': 'updateName',
-		'change input[name=price]': 'updatePrice',
-		'change input[name=ship_limit]': 'updateShipLimit',
-		'change textarea[name=description]': 'updateDescription',
-
-		'click .finish__form-add-comment-a': 'toggleOnReceiptComment',
-		'click .finish__form-receipt_desc-action_cancel>a': 'cancelReceiptComment',
-		'click .finish__form-receipt_desc-action_save>a': 'saveReceiptComment',
+		'click .paysystem__payment-way__select-val': 'toggleDrop',
+		'change input': 'changeDrop',
 	},
 
 
@@ -34,18 +17,9 @@ qst.PaySystemView = Backbone.View.extend({
 		var template = this.template( this.model.toJSON() );
 		this.$el.html(template);
 
-		this.$state_items = this.$el.find('.item__types-item');
-		this.$form = this.$el.find('form');
-		this.$input_active =  this.$form.find('input[name=active]');
-		this.$input_name =  this.$form.find('input[name=name]');
-		this.$input_price = this.$form.find('input[name=price]');
-		this.$input_ship_limit = this.$form.find('input[name=ship_limit]');
-		this.$input_description =  this.$form.find('textarea[name=description]');
-		this.$input_link =  this.$form.find('input[name=link]');
-		this.$input_file =  this.$form.find('input[name=file]');
-		this.$input_file_title = this.$form.find('.itemedit__inp-file-title');
-		this.$input_file_process = this.$form.find('.itemedit__inp-file-process');
-		this.$error = this.$el.find('.itemedit__error');
+
+		$('html').on('click.paysystem', _.bind(this.hideDrop, this));
+		this.$dropdowns = this.$el.find('.paysystem__payment-way__select');
 
 		
 		this.$showcase = this.$el.find('.showcase__form');
@@ -71,6 +45,46 @@ qst.PaySystemView = Backbone.View.extend({
 
 		this.delegateEvents();
 	},
+
+	toggleDrop: function(e) {
+		var $current_drop = $(e.target).parents('.paysystem__payment-way__select'),
+			opened_current = $current_drop.hasClass('open');
+
+		this.hideDrop();
+		$current_drop
+				.toggleClass('open', !opened_current);
+		e.stopPropagation();
+	},
+
+	hideDrop: function(e) {
+		this.$dropdowns.toggleClass('open', false);
+	},
+
+	changeDrop: function(e) {
+		var $this = $(e.target),
+			$current_drop = $this.parents('.paysystem__payment-way__select'),
+			option_html = $this.siblings().filter('.option').html(),
+			$val = $current_drop.find('.paysystem__payment-way__select-val>.option');
+
+		$val.html(option_html);
+	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	clickState: function(e) {
 		var $this = $(e.target);
@@ -351,6 +365,7 @@ qst.PaySystemView = Backbone.View.extend({
 	},
 
 	sleep: function(model, value, options) {
+		$('html').off('click.paysystem');
 		if(value) {
 			this.undelegateEvents();
 			this.clear();

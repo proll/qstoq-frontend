@@ -1,0 +1,85 @@
+<div class="paysystemadd__cont">
+	<div class="paysystemadd__row qiwi-row">
+		<h1 clss="paysystemadd__h">{{_ 'qiwi_h' 'paysystemadd'}}</h1>
+		<div class="row">
+			<div class="span6">
+				<ul class="paysystemadd__info-list">
+					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_1' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_2' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_3' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_4' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_5' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_6' 'paysystemadd'}}</li>
+				</ul>
+			</div>
+			<div class="span5">
+				<form action="" class="paysystemadd__form">
+					<div class="qst__inp-group">
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'qiwi_merch_id' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="qiwi_merchant_id" value="">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'qiwi_pass' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="qiwi_password" data-name="password" value="">
+								</div>
+							</label>
+						</div>
+					</div>
+					<input type="submit" class="hidden-input">
+					<div class="paysystemadd__form-submit">
+						<span class="paysystemadd__form-submit-error"></span>
+						<a href="submit" rel="nofollow" class="paysystemadd__form-submit-a">{{_ 'Save' 'paysystemadd'}}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="paysystemadd__row paypal-row">
+		<h1 clss="paysystemadd__h">{{_ 'paypal_h' 'paysystemadd'}}</h1>
+		<div class="row">
+			<div class="span6">
+				<ul class="paysystemadd__info-list">
+					<li class="paysystemadd__info-item">{{_ 'paypal_itm_1' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'paypal_itm_2' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'paypal_itm_3' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'paypal_itm_4' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'paypal_itm_5' 'paysystemadd'}}</li>
+				</ul>
+			</div>
+			<div class="span5">
+				<form action="" class="paysystemadd__form">
+					<div class="qst__inp-group">
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'paypal_merch_id' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="paypal_merch_id" value="">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'paypal_secret' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="paypal_secret" data-name="secret" value="">
+								</div>
+							</label>
+						</div>
+					</div>
+					<input type="submit" class="hidden-input">
+					<div class="paysystemadd__form-submit">
+						<span class="paysystemadd__form-submit-error"></span>
+						<a href="submit" rel="nofollow" class="paysystemadd__form-submit-a">{{_ 'Save' 'paysystemadd'}}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

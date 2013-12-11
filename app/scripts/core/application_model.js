@@ -83,6 +83,12 @@ qst.App = Backbone.Model.extend({
 		});
 		this.pages.add(this.paysystem);
 
+		this.paysystemadd = new qst.PaySystemAddPage({
+			name: 'paysystemadd',
+			template: 'pages/paysystemadd-page'
+		});
+		this.pages.add(this.paysystemadd);
+
 		// Pages render on route
 		this.router.on('404', function () {
 			that.pages.getPage('404').render();
@@ -158,10 +164,21 @@ qst.App = Backbone.Model.extend({
 					if(!qst.is_authed()) {
 						qst.navigate('/', {trigger: true});
 					} else {
-						this.paysystem.render({
-							// id: route[0],
-							// section: !!route[1] ? route[1] : 'main'
-						});
+						this.paysystem.render({});
+					}
+					break;
+				case 'paysystemadd': 
+					if(!qst.is_authed()) {
+						qst.navigate('/', {trigger: true});
+					} else {
+						if(this.router.route_passed <= 1) {
+							qst.navigate('/payments/', {trigger: true});
+						} else {
+							this.paysystemadd.render({
+								system: route[0],
+								in_popup: true
+							});
+						}
 					}
 					break;
 
@@ -215,6 +232,11 @@ qst.App = Backbone.Model.extend({
 					case 'paysystem':
 						console.log('reset:paysystem');
 						this.paysystem.sleep();
+						break;
+
+					case 'paysystemadd':
+						console.log('reset:paysystemadd');
+						this.paysystemadd.sleep();
 						break;
 
 					default:
