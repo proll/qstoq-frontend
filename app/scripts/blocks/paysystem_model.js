@@ -130,7 +130,6 @@ qst.PaySystem = Backbone.Model.extend({
 
 	reset: function () {
 		this.set("offset", this.defaults.offset);
-		this.collection.reset();
 		this.trigger("needmore");
 		return false;
 	},

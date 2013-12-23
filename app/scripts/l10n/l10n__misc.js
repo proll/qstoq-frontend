@@ -10,7 +10,6 @@ qst.l10n.misc = {
 		// zh: " "
 	},
 
-
 	'Something went wrong...': {
 		en: 'Something went wrong...',
 		ru: 'Что-то пошло не так…',
@@ -19,5 +18,13 @@ qst.l10n.misc = {
 		// zh: '出错了…'
 	},
 
+	'On': {
+		en: 'On',
+		ru: 'Вкл'
+	},
+	'Off': {
+		en: 'Off',
+		ru: 'Откл'
+	},
 	
 }

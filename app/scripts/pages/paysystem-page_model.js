@@ -34,7 +34,7 @@ qst.PaySystemPage = qst.Page.extend({
 			this.paysystem = new qst.PaySystem(options);
 
 			this.paysystem.activate();
-			this.paysystem.on('load:success', this.loadList, this);
+			// this.paysystem.on('load:success', this.loadList, this);
 			this.view.addPaySystem(this.paysystem);
 
 			this.set('sleeped', false);
@@ -52,11 +52,6 @@ qst.PaySystemPage = qst.Page.extend({
 		}
 
 	},
-
-	loadList: function(obj) {
-		this.set('total', obj.total)
-	},
-
 
 	sleep: function () {
 		if(this.get('sleeped')) return false;

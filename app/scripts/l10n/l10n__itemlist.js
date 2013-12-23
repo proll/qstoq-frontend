@@ -25,14 +25,6 @@ qst.l10n.itemlist = {
 		en: 'Add item',
 		ru: 'Добавить продукт'
 	},
-	'On': {
-		en: 'On',
-		ru: 'Вкл'
-	},
-	'Off': {
-		en: 'Off',
-		ru: 'Откл'
-	},
 	'title': {
 		en: 'title',
 		ru: 'название'

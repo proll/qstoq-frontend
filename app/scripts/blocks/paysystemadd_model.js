@@ -1,5 +1,5 @@
 qst.PaySystemAdd = Backbone.Model.extend({
-	url: '/api/v1/users/link/',
+	url: '/v1/users/link/',
 	defaults: {
 		system: 'qiwi'
 	},
@@ -8,7 +8,8 @@ qst.PaySystemAdd = Backbone.Model.extend({
 		this.view = new qst.PaySystemAddView({model:this});
 	},
 
-	activate: function () {
+	activate: function (options) {
+		if(options) this.set(options);
 		this.view.render();
 	},
 

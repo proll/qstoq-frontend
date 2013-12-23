@@ -4,7 +4,7 @@ qst.LinkView = Backbone.View.extend({
 	className: 'itemlist__link',
 
 	events: {
-		'click .link__toggle-a': 'toggle',
+		'click .qst__toggle-a': 'toggle',
 		// 'click .link__delete-a': 'delete',
 		'click .link__link': 'clickShortLink',
 	},

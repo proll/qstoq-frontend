@@ -14,105 +14,104 @@
 	}
 }
 
+.robokassa {
+	.robokassa-row {
+		display: block;
+	}
+}
 
-// /* Authorization */
-// .auth-popup {
-// 	&.popup__table {
-// 		background-color: rgba(0,0,10,.44);
-// 	}
-// 	.popup__inner {
-// 		width: 480px;
-// 		border: 0 none;
-// 		// .box-shadow (0 5px 20px rgba(0,10,33,.12));
-// 		// background-color: rgba(255,255,255,.2);
-// 	}
+.assist {
+	.assist-row {
+		display: block;
+	}
+}
 
-// 	.popup__content {
-// 		margin: 0;
-// 		background-color: @white;
-// 	}
+.paymaster {
+	.paymaster-row {
+		display: block;
+	}
+}
 
-// 	.popup__close {
-// 		display: none;
-// 	}
-// }
-
-// .auth__cont {
-// 	background-color: @grayLighter2;
-// 	overflow: hidden;
-// }
-
-// .auth__close {
-// 	float: right;
-// 	cursor: pointer;
-// 	background-color: @grayDarker10;
-// 	margin-top: -27px;
-// }
-
-// .auth__social {
-// 	margin: 34px 40px 40px;
-
-// 	&-h {
-// 		padding: 0;
-// 		margin: 0 0 25px -1px;
-// 		font-weight: 700;
-// 		font-size: 18px;
-// 		line-height: 20px;
-// 	}
-
-// 	// &-list {
-
-// 	// }
-
-// 		&-item {
-// 			display: inline-block;
-// 			margin-right: 10px;
-
-// 			&-lnk {
-// 				display: inline-block;
-// 				vertical-align: top;
-// 				.border-radius(2px);
-// 				color: @white;
-// 				text-decoration: none;
-// 				font-size: 0;
-// 				line-height: 0;
-// 				border-style: solid;
-// 				border-width: 	0 1px 2px 0;
-// 				padding: 		16px 16px-1px 16px-2px 16px;
+.webmoney {
+	.webmoney-row {
+		display: block;
+	}
+}
 
 
-// 				&:hover,
-// 				&:active,
-// 				&:focus {
-// 					text-decoration: none;
-// 				}
+.paysystemadd-popup {
+	.popup__inner {
+		width: 920px;
+		border: 0 none;
+		background-color: @grayLighter12;
+	}
 
-// 				&:active {
-// 					border-width:  		2px 0 0 1px;
-// 					padding: 			16px-2px 16px 16px 16px-1px;
-// 				}
+	// .popup__content {
+	// 	// margin: 40px;
+	// }
 
-// 				&_vk {
-// 					background-color: 	@vkColorLight;
-// 					border-color: 		@vkColorDark;
-// 				}
+	.popup__close {
+		display: none;
+	}
+}
 
-// 				&_fb {
-// 					background-color: 	@fbColorLight;
-// 					border-color: 		@fbColorDark;
-// 				}
-// 			}
-// 				&-icn {
-// 					vertical-align: top;
-// 				}
-// 		}
-// }
-
+.paysystemadd__cont {
+	padding: 34px 40px 30px;
+}
+	.paysystemadd__h {
+		font-size: 18px;
+		line-height: 20px;
+		font-weight: bold;
+		color: @grayDark;
+		margin-bottom: 30px;
+	}
 
 
-// .auth__sign {
-// 	margin: 40px 40px 0;
-// 	padding-top: 3px;
+	.paysystemadd__info-list {
+		margin: 0;
+		padding: 0;
+	}
+
+		.paysystemadd__info-item {
+			color: #222a32;
+			font-size: 14px;
+			line-height: 20px;
+			margin: 0 0 20px 20px;
+			counter-increment: list_counter;
+			position: relative;
+
+			&:before {
+				content: counter(list_counter);
+				position: absolute;
+				color: #868e96;
+				font-size: 12px;
+				left: -20px;
+				top: 1px;
+			}
+
+			mark {
+				background-color: transparent;
+				color: @green3;
+			}
+		}
+
+	.paysystemadd__form {
+		margin: 0;
+		padding: 0;
+
+		.qst__inp-group {
+			margin-bottom: 29px;
+		}
+
+			.qst__inp-cont {
+				background-color: @white;
+			}
+	}
+
+
+.paysystemadd__form {
+	// margin: 40px 40px 0;
+	// padding-top: 3px;
 
 // 	&-h {
 // 		padding: 0;
@@ -144,29 +143,29 @@
 // 			overflow: hidden;
 // 		}
 
-// 	&-submit-hidden {
-// 		.hidden-submit;
-// 	}
+	&-submit-hidden {
+		.hidden-submit;
+	}
 
-// 	&-submit {
-// 		margin: 8px -40px 0;
-// 		padding: 26px 40px 26px;
-// 		text-align: right;
-// 		background-color: @white;
-// 		.transition(background-color .2s);
+	&-submit {
+		margin: 0;
+		padding: 26px 20px 26px 0;
+		text-align: right;
+		background-color: @white;
+		.transition(background-color .2s);
 
-// 		&-a {
-// 			.btn;
-// 			.btn-blue;
-// 		}
-// 		&-error {
-// 			font-size: 13px;
-// 			line-height: 14px;
-// 			color: @white;
-// 			.transition(all .3s);
-// 			opacity: 0;
-// 		}
-// 	}
+		&-a {
+			.btn_short;
+			.btn-blue;
+		}
+		&-error {
+			font-size: 13px;
+			line-height: 14px;
+			color: @white;
+			.transition(all .3s);
+			opacity: 0;
+		}
+	}
 
 
 // 	&-user-agreement {
@@ -176,24 +175,28 @@
 // 		margin-bottom: 27px;
 // 	}
 
-// }
+}
 
+
+	// .paysystemadd__toggle {
+	// 	font-size: 13px;
+	// }
 
 // // Errors
 
-// .error {
-// 	.auth__sign {
-// 		&-submit {
-// 			background-color: @red;
+.error {
+	.paysystemadd__form {
+		&-submit {
+			background-color: @red;
 
-// 			&-error {
-// 				opacity: 1;
-// 				padding-right: 20px;
-// 			}
-// 		}
+			&-error {
+				opacity: 1;
+				padding-right: 2px;
+			}
+		}
 
-// 	}
-// }
+	}
+}
 
 
 // // States 
@@ -238,48 +241,5 @@
 
 // 	.qst__inp-group {
 // 		margin-bottom: 50px;
-// 	}
-// }
-
-
-// .signup {
-// 	.auth__sign {
-// 		&-h {
-// 			&_signin {
-// 				display: none;
-// 			}
-// 			&_signup {
-// 				display: block;
-// 			}
-// 		}
-
-// 		&-toggler {
-// 			&_signin {
-// 				display: static;
-// 			}
-
-// 			&_signup {
-// 				display: none;
-// 			}
-// 		}
-
-// 		&-inp-name-cont {
-// 			height: 14px;
-// 			padding: 12px 10px 13px;
-// 			border-bottom: 1px solid @grayLighter02;
-// 		}
-
-// 		&-user-agreement {
-// 			display: block;
-// 		}
-
-// 		&-submit {
-// 			&_signin {
-// 				display: none;
-// 			}
-// 			&_signup {
-// 				display: inline-block;
-// 			}
-// 		}
 // 	}
 // }

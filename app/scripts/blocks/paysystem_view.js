@@ -359,9 +359,9 @@ qst.PaySystemView = Backbone.View.extend({
 
 	clear: function() {
 		this.hideErrors();
-		this.$input_name.val('');
-		this.$input_link.val('');
-		this.$input_file_process.width(0);
+		// this.$input_name.val('');
+		// this.$input_link.val('');
+		// this.$input_file_process.width(0);
 	},
 
 	sleep: function(model, value, options) {

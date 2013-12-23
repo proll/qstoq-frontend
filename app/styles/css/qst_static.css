@@ -484,6 +484,16 @@ h1 {
   border-radius: 2px;
   margin-bottom: 29px;
 }
+.qst__inp-cont_empty {
+  font-size: 0;
+  line-height: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  margin-bottom: 26px;
+}
 .qst__inp-cont {
   font-size: 0;
   line-height: 0;
@@ -570,6 +580,87 @@ h1 {
 .error-inp input::-webkit-input-placeholder,
 .error-inp textarea::-webkit-input-placeholder {
   color: #c81414;
+}
+.qst__toggle {
+  font-size: 11px;
+  line-height: 1;
+}
+.qst__toggle_on,
+.qst__toggle_off {
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  background: #ffffff;
+  background-color: #2cb482;
+  padding: 6px 10px;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 0;
+}
+.qst__toggle_on:hover,
+.qst__toggle_off:hover,
+.qst__toggle_on:active,
+.qst__toggle_off:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+.qst__toggle_on {
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  -webkit-box-shadow: inset 1px 2px 4px #00634b;
+  -moz-box-shadow: inset 1px 2px 4px #00634b;
+  box-shadow: inset 1px 2px 4px #00634b;
+}
+.qst__toggle_off {
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  -webkit-box-shadow: inset -1px 2px 4px #00634b;
+  -moz-box-shadow: inset -1px 2px 4px #00634b;
+  box-shadow: inset -1px 2px 4px #00634b;
+}
+.on .qst__toggle_on {
+  color: #7c848c;
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #cfcfd2;
+  border-width: 1px 0 2px 1px;
+  padding: 5px 10px 4px 9px;
+}
+.on .qst__toggle_on:hover {
+  color: #7c848c;
+}
+.on .qst__toggle_off {
+  color: #ffffff;
+  background-color: #2cb482;
+}
+.on .qst__toggle_off:hover {
+  color: #ffffff;
+}
+.off .qst__toggle_on {
+  color: #ffffff;
+  background-color: #2cb482;
+}
+.off .qst__toggle_on:hover {
+  color: #ffffff;
+}
+.off .qst__toggle_off {
+  color: #7c848c;
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #cfcfd2;
+  border-width: 1px 1px 2px 0;
+  padding: 5px 9px 4px 10px;
+}
+.off .qst__toggle_off:hover {
+  color: #7c848c;
+  text-decoration: none;
 }
 html,
 body {

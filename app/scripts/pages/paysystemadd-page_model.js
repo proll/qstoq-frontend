@@ -23,7 +23,7 @@ qst.PaySystemAddPage = Backbone.Model.extend({
 
 		this.paysystemadd = new qst.PaySystemAdd(options);
 		this.view.addPaySystemAdd(this.paysystemadd);
-		this.paysystemadd.activate();
+		this.paysystemadd.activate({settings: qst.user.settings.toJSON()});
 	},
 
 	sleep: function () {

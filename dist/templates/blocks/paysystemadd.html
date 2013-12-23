@@ -1,6 +1,6 @@
 <div class="paysystemadd__cont">
 	<div class="paysystemadd__row qiwi-row">
-		<h1 clss="paysystemadd__h">{{_ 'qiwi_h' 'paysystemadd'}}</h1>
+		<h1 class="paysystemadd__h">{{_ 'qiwi_h' 'paysystemadd'}}</h1>
 		<div class="row">
 			<div class="span6">
 				<ul class="paysystemadd__info-list">
@@ -8,18 +8,21 @@
 					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_2' 'paysystemadd'}}</li>
 					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_3' 'paysystemadd'}}</li>
 					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_4' 'paysystemadd'}}</li>
-					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_5' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_5' 'paysystemadd' settings.id}}</li>
 					<li class="paysystemadd__info-item">{{_ 'qiwi_itm_6' 'paysystemadd'}}</li>
 				</ul>
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
+					<div class="qst__inp-cont_empty">
+						<label class="paysystemadd__toggle qst__toggle{{#if settings.paysys.qiwi.active}} on{{else}} off{{/if}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="qiwi_active" data-name="active" value="1"{{#if settings.paysys.qiwi.active}} checked="checked"{{/if}}></label>
+					</div>
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
 								<span class="qst__lbl">{{_ 'qiwi_merch_id' 'paysystemadd'}}</span>
 								<div class="qst__inp-cont-in">
-									<input type="text" class="qst__inp" data-name="merchant_id" name="qiwi_merchant_id" value="">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="qiwi_merchant_id" value="{{#if settings.paysys.qiwi}}{{settings.paysys.qiwi.merchant_id}}{{/if}}">
 								</div>
 							</label>
 						</div>
@@ -27,7 +30,7 @@
 							<label>
 								<span class="qst__lbl">{{_ 'qiwi_pass' 'paysystemadd'}}</span>
 								<div class="qst__inp-cont-in">
-									<input type="text" class="qst__inp" name="qiwi_password" data-name="password" value="">
+									<input type="text" class="qst__inp" name="qiwi_password" data-name="password" value="{{#if settings.paysys.qiwi}}{{settings.paysys.qiwi.password}}{{/if}}">
 								</div>
 							</label>
 						</div>
@@ -42,12 +45,12 @@
 		</div>
 	</div>
 	<div class="paysystemadd__row paypal-row">
-		<h1 clss="paysystemadd__h">{{_ 'paypal_h' 'paysystemadd'}}</h1>
+		<h1 class="paysystemadd__h">{{_ 'paypal_h' 'paysystemadd'}}</h1>
 		<div class="row">
 			<div class="span6">
 				<ul class="paysystemadd__info-list">
 					<li class="paysystemadd__info-item">{{_ 'paypal_itm_1' 'paysystemadd'}}</li>
-					<li class="paysystemadd__info-item">{{_ 'paypal_itm_2' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'paypal_itm_2' 'paysystemadd' settings.id}}</li>
 					<li class="paysystemadd__info-item">{{_ 'paypal_itm_3' 'paysystemadd'}}</li>
 					<li class="paysystemadd__info-item">{{_ 'paypal_itm_4' 'paysystemadd'}}</li>
 					<li class="paysystemadd__info-item">{{_ 'paypal_itm_5' 'paysystemadd'}}</li>
@@ -55,12 +58,15 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
+					<div class="qst__inp-cont_empty">
+						<label class="paysystemadd__toggle qst__toggle{{#if settings.paysys.paypal.active}} on{{else}} off{{/if}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="qiwi_active" data-name="active" value="1"{{#if settings.paysys.paypal.active}} checked="checked"{{/if}}></label>
+					</div>
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
 								<span class="qst__lbl">{{_ 'paypal_merch_id' 'paysystemadd'}}</span>
 								<div class="qst__inp-cont-in">
-									<input type="text" class="qst__inp" data-name="merchant_id" name="paypal_merch_id" value="">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="paypal_merch_id" value="{{#if settings.paysys.paypal}}{{settings.paysys.paypal.merchant_id}}{{/if}}">
 								</div>
 							</label>
 						</div>
@@ -68,7 +74,59 @@
 							<label>
 								<span class="qst__lbl">{{_ 'paypal_secret' 'paysystemadd'}}</span>
 								<div class="qst__inp-cont-in">
-									<input type="text" class="qst__inp" name="paypal_secret" data-name="secret" value="">
+									<input type="text" class="qst__inp" name="paypal_secret" data-name="secret" value="{{#if settings.paysys.paypal}}{{settings.paysys.paypal.secret}}{{/if}}">
+								</div>
+							</label>
+						</div>
+					</div>
+					<input type="submit" class="hidden-input">
+					<div class="paysystemadd__form-submit">
+						<span class="paysystemadd__form-submit-error"></span>
+						<a href="submit" rel="nofollow" class="paysystemadd__form-submit-a">{{_ 'Save' 'paysystemadd'}}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="paysystemadd__row robokassa-row">
+		<h1 class="paysystemadd__h">{{_ 'robokassa_h' 'paysystemadd'}}</h1>
+		<div class="row">
+			<div class="span6">
+				<ul class="paysystemadd__info-list">
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_1' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_2' 'paysystemadd' settings.id}}</li>
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_3' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_4' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_5' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_6' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_7' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'robokassa_itm_8' 'paysystemadd'}}</li>
+				</ul>
+			</div>
+			<div class="span5">
+				<form action="" class="paysystemadd__form">
+					<div class="qst__inp-group">
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'robokassa_merch_id' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="robokassa_merch_id" value="{{#if settings.paysys.robokassa}}{{settings.paysys.robokassa.merchant_id}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'robokassa_pass1' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="robokassa_pass1" data-name="pass1" value="{{#if settings.paysys.robokassa}}{{settings.paysys.robokassa.pass1}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'robokassa_pass2' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="robokassa_pass2" data-name="pass2" value="{{#if settings.paysys.robokassa}}{{settings.paysys.robokassa.pass2}}{{/if}}">
 								</div>
 							</label>
 						</div>

@@ -1,28 +1,21 @@
 /**
  * Helper for i10n support for Handlebars 
  */
+// l10n
 Handlebars.registerHelper('_', function(phrase, context){
-	// if(arguments.length >= 2){
-	// 	// var str = arguments[0],
-	// 	// 	params = _.toArray(arguments).slice(1,-1),
-	// 	// 	param;
-	// 	// while(str.indexOf("%s") != -1){
-	// 	// 	param = params.length==1 ? params[0] : params.shift();
-	// 	// 	str = str.replace(/%s/, param);
-	// 	// }
-	// 	// text = str;
-	// 	if()
-	// }else{
-
-	// 	//@TODO
-	// 	//Get string from lang config (scripts/l10n/)
-	// 	// or just resolve that we have to have pack of templates for each lang
-	// }
-
-	// console.log(arguments.callee.caller);
 	var phr = phrase;
 	if(!!qst.l10n[context] && !!qst.l10n[context][phrase]) {
-		phr = qst.l10n[context][phrase][qst.language] || qst.l10n[context][phrase]['en'] || '(;_;)';
+		phr = qst.l10n[context][phrase][qst.language]!='' ? qst.l10n[context][phrase][qst.language] || qst.l10n[context][phrase]['en'] || '(;_;)' : '';
+	}
+
+	var l = arguments.length;
+	if(l > 3) {
+		phr = Handlebars.compile(phr);
+		var context = {};
+		for (var i = 2; i < l-1; i++) {
+			context['s'+(i-1)] = arguments[i];
+		};
+		phr = phr(context);
 	}
 	return new Handlebars.SafeString(phr);
 

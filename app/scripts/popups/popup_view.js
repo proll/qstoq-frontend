@@ -2,9 +2,10 @@ qst.PopupView = Backbone.View.extend({
 	template: "popups/popup",
 	className: 'popup',
 	events: {
-		"click .popup__previous": "previous",
-		"click .popup__close": "hide",
-		"click .popup__td": "bgClick",
+		"click .popup__previous": 	"previous",
+		"click .popup__close": 		"hide",
+		"click .popup__close-btn": 	"hide",
+		"click .popup__td": 		"bgClick",
 	},
 	options : {},
 	defaults: {

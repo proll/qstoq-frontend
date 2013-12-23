@@ -12,8 +12,6 @@ qst.AuthView = Backbone.View.extend({
 		"click .auth__social-item-lnk_fb"	: "loginFB",
 		// "click .auth__social-item-lnk_tw"	: "loginTW",
 
-		
-		'click .auth__close': 'remove',
 		// "click .auth-popup__login-email_forgot": 'toReset',
 
 		// unmark all error inputs 
