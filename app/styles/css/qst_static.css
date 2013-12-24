@@ -617,11 +617,11 @@ h1 {
   -webkit-border-radius: 0 2px 2px 0;
   -moz-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
-  -webkit-box-shadow: inset -1px 2px 4px #00634b;
-  -moz-box-shadow: inset -1px 2px 4px #00634b;
-  box-shadow: inset -1px 2px 4px #00634b;
+  -webkit-box-shadow: inset -1px 2px 4px #505050;
+  -moz-box-shadow: inset -1px 2px 4px #505050;
+  box-shadow: inset -1px 2px 4px #505050;
 }
-.on .qst__toggle_on {
+.off .qst__toggle_on {
   color: #7c848c;
   background-color: #ffffff;
   -webkit-box-shadow: none;
@@ -631,24 +631,24 @@ h1 {
   border-width: 1px 0 2px 1px;
   padding: 5px 10px 4px 9px;
 }
-.on .qst__toggle_on:hover {
+.off .qst__toggle_on:hover {
   color: #7c848c;
 }
-.on .qst__toggle_off {
-  color: #ffffff;
-  background-color: #2cb482;
-}
-.on .qst__toggle_off:hover {
-  color: #ffffff;
-}
-.off .qst__toggle_on {
-  color: #ffffff;
-  background-color: #2cb482;
-}
-.off .qst__toggle_on:hover {
-  color: #ffffff;
-}
 .off .qst__toggle_off {
+  color: #ffffff;
+  background-color: #969696;
+}
+.off .qst__toggle_off:hover {
+  color: #ffffff;
+}
+.on .qst__toggle_on {
+  color: #ffffff;
+  background-color: #2cb482;
+}
+.on .qst__toggle_on:hover {
+  color: #ffffff;
+}
+.on .qst__toggle_off {
   color: #7c848c;
   background-color: #ffffff;
   -webkit-box-shadow: none;
@@ -658,7 +658,7 @@ h1 {
   border-width: 1px 1px 2px 0;
   padding: 5px 9px 4px 10px;
 }
-.off .qst__toggle_off:hover {
+.on .qst__toggle_off:hover {
   color: #7c848c;
   text-decoration: none;
 }

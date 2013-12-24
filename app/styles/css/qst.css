@@ -719,11 +719,11 @@ h1 {
   -webkit-border-radius: 0 2px 2px 0;
   -moz-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
-  -webkit-box-shadow: inset -1px 2px 4px #00634b;
-  -moz-box-shadow: inset -1px 2px 4px #00634b;
-  box-shadow: inset -1px 2px 4px #00634b;
+  -webkit-box-shadow: inset -1px 2px 4px #505050;
+  -moz-box-shadow: inset -1px 2px 4px #505050;
+  box-shadow: inset -1px 2px 4px #505050;
 }
-.on .qst__toggle_on {
+.off .qst__toggle_on {
   color: #7c848c;
   background-color: #ffffff;
   -webkit-box-shadow: none;
@@ -733,24 +733,24 @@ h1 {
   border-width: 1px 0 2px 1px;
   padding: 5px 10px 4px 9px;
 }
-.on .qst__toggle_on:hover {
+.off .qst__toggle_on:hover {
   color: #7c848c;
 }
-.on .qst__toggle_off {
-  color: #ffffff;
-  background-color: #2cb482;
-}
-.on .qst__toggle_off:hover {
-  color: #ffffff;
-}
-.off .qst__toggle_on {
-  color: #ffffff;
-  background-color: #2cb482;
-}
-.off .qst__toggle_on:hover {
-  color: #ffffff;
-}
 .off .qst__toggle_off {
+  color: #ffffff;
+  background-color: #969696;
+}
+.off .qst__toggle_off:hover {
+  color: #ffffff;
+}
+.on .qst__toggle_on {
+  color: #ffffff;
+  background-color: #2cb482;
+}
+.on .qst__toggle_on:hover {
+  color: #ffffff;
+}
+.on .qst__toggle_off {
   color: #7c848c;
   background-color: #ffffff;
   -webkit-box-shadow: none;
@@ -760,7 +760,7 @@ h1 {
   border-width: 1px 1px 2px 0;
   padding: 5px 9px 4px 10px;
 }
-.off .qst__toggle_off:hover {
+.on .qst__toggle_off:hover {
   color: #7c848c;
   text-decoration: none;
 }
@@ -5041,6 +5041,7 @@ a.account__social-item__title:focus {
 }
 .paysystemadd__cont {
   padding: 34px 40px 30px;
+  position: relative;
 }
 .paysystemadd__h {
   font-size: 18px;
@@ -5143,6 +5144,19 @@ a.account__social-item__title:focus {
 .error .paysystemadd__form-submit-error {
   opacity: 1;
   padding-right: 2px;
+}
+.paysystemadd__fader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #ffffff;
+  opacity: 0.002;
+  display: none;
+}
+.loading .paysystemadd__fader {
+  display: block;
 }
 .page-feedback {
   padding-top: 40px;

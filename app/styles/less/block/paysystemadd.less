@@ -57,6 +57,7 @@
 
 .paysystemadd__cont {
 	padding: 34px 40px 30px;
+	position:relative;
 }
 	.paysystemadd__h {
 		font-size: 18px;
@@ -197,6 +198,26 @@
 
 	}
 }
+
+
+.paysystemadd__fader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: @white;
+	opacity: 0.002;
+	display: none;
+}
+
+.loading {
+	.paysystemadd__fader {
+		display: block;
+	}
+}
+
+
 
 
 // // States 

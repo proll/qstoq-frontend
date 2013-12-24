@@ -54,6 +54,8 @@ qst.PaySystemAddView = Backbone.View.extend({
 		var $input = $(e.target),
 			on = $input.is(':checked');
 
+		console.log(e);
+
 		$input.parent()
 			.toggleClass('on', on)
 			.toggleClass('off', !on);
@@ -77,7 +79,7 @@ qst.PaySystemAddView = Backbone.View.extend({
 		} else {
 			var error = false;
 			_.forEach(form_obj, function(val) {
-				if(!val) {
+				if(!val && val!==0) {
 					that.showError(qst.localize('Please enter all attributes', 'paysystemadd'))
 					error = true;
 				}
@@ -98,7 +100,11 @@ qst.PaySystemAddView = Backbone.View.extend({
 			var $input  = $(input);
 			nm = $input.data('name');
 			if(!!nm) {
-				form_obj[$input.data('name')] = $input.val();
+				if($input.attr('type') !== 'checkbox') {
+					form_obj[nm] = $input.val();
+				} else {
+					form_obj[nm] = $input.is(':checked') + 0;
+				}
 			}
 		});
 		return form_obj;
