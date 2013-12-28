@@ -30,7 +30,7 @@ qst.PaySystemAdd = Backbone.Model.extend({
 		response = _.toJSON(response);
 		this.set(response.result);
 		if(response.success) {
-			this.trigger('save:success');
+			this.trigger('save:success', response.result.user);
 		} else {
 			this.trigger('save:error');
 		}

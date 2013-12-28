@@ -1,4 +1,118 @@
 <div class="paysystemadd__cont">
+	<div class="paysystemadd__row assist-row">
+		<h1 class="paysystemadd__h">{{_ 'assist_h' 'paysystemadd'}}</h1>
+		<div class="row">
+			<div class="span6">
+				<ul class="paysystemadd__info-list">
+					<li class="paysystemadd__info-item">{{_ 'assist_itm_1' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'assist_itm_2' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'assist_itm_3' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'assist_itm_4' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'assist_itm_5' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'assist_itm_6' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'assist_itm_7' 'paysystemadd' settings.id}}</li>
+				</ul>
+			</div>
+			<div class="span5">
+				<form action="" class="paysystemadd__form">
+					<div class="qst__inp-cont_empty">
+						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.assist.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="assist_active" data-name="active" value="1"{{#ifEq settings.paysys.assist.active 1}} checked="checked"{{/ifEq}}></label>
+					</div>
+					<div class="qst__inp-group">
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'assist_merchant_id' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="assist_merchant_id" value="{{#if settings.paysys.assist}}{{settings.paysys.assist.merchant_id}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'assist_login' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="assist_login" data-name="login" value="{{#if settings.paysys.assist}}{{settings.paysys.assist.login}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'assist_password' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="assist_password" data-name="password" value="{{#if settings.paysys.assist}}{{settings.paysys.assist.password}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'assist_salt' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="assist_salt" data-name="salt" value="{{#if settings.paysys.assist}}{{settings.paysys.assist.salt}}{{/if}}">
+								</div>
+							</label>
+						</div>
+					</div>
+					<input type="submit" class="hidden-input">
+					<div class="paysystemadd__form-submit">
+						<span class="paysystemadd__form-submit-error"></span>
+						<a href="submit" rel="nofollow" class="paysystemadd__form-submit-a">{{_ 'Save' 'paysystemadd'}}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="paysystemadd__row webmoney-row">
+		<h1 class="paysystemadd__h">{{_ 'webmoney_h' 'paysystemadd'}}</h1>
+		<div class="row">
+			<div class="span6">
+				<ul class="paysystemadd__info-list">
+					<li class="paysystemadd__info-item">{{_ 'webmoney_itm_1' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'webmoney_itm_2' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'webmoney_itm_3' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'webmoney_itm_4' 'paysystemadd' settings.id}}</li>
+					<li class="paysystemadd__info-item">{{_ 'webmoney_itm_5' 'paysystemadd'}}</li>
+				</ul>
+			</div>
+			<div class="span5">
+				<form action="" class="paysystemadd__form">
+					<div class="qst__inp-cont_empty">
+						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.webmoney.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="webmoney_active" data-name="active" value="1"{{#ifEq settings.paysys.webmoney.active 1}} checked="checked"{{/ifEq}}></label>
+					</div>
+					<div class="qst__inp-group">
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'webmoney_merchant_id' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="webmoney_merchant_id" value="{{#if settings.paysys.webmoney}}{{settings.paysys.webmoney.merchant_id}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'webmoney_purse_id' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="webmoney_purse_id" data-name="purse_id" value="{{#if settings.paysys.webmoney}}{{settings.paysys.webmoney.purse_id}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'webmoney_purse_key' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="webmoney_purse_key" data-name="purse_key" value="{{#if settings.paysys.webmoney}}{{settings.paysys.webmoney.purse_key}}{{/if}}">
+								</div>
+							</label>
+						</div>
+					</div>
+					<input type="submit" class="hidden-input">
+					<div class="paysystemadd__form-submit">
+						<span class="paysystemadd__form-submit-error"></span>
+						<a href="submit" rel="nofollow" class="paysystemadd__form-submit-a">{{_ 'Save' 'paysystemadd'}}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 	<div class="paysystemadd__row qiwi-row">
 		<h1 class="paysystemadd__h">{{_ 'qiwi_h' 'paysystemadd'}}</h1>
 		<div class="row">
@@ -20,7 +134,7 @@
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
-								<span class="qst__lbl">{{_ 'qiwi_merch_id' 'paysystemadd'}}</span>
+								<span class="qst__lbl">{{_ 'qiwi_merchant_id' 'paysystemadd'}}</span>
 								<div class="qst__inp-cont-in">
 									<input type="text" class="qst__inp" data-name="merchant_id" name="qiwi_merchant_id" value="{{#if settings.paysys.qiwi}}{{settings.paysys.qiwi.merchant_id}}{{/if}}">
 								</div>
@@ -28,7 +142,7 @@
 						</div>
 						<div class="qst__inp-cont">
 							<label>
-								<span class="qst__lbl">{{_ 'qiwi_pass' 'paysystemadd'}}</span>
+								<span class="qst__lbl">{{_ 'qiwi_password' 'paysystemadd'}}</span>
 								<div class="qst__inp-cont-in">
 									<input type="text" class="qst__inp" name="qiwi_password" data-name="password" value="{{#if settings.paysys.qiwi}}{{settings.paysys.qiwi.password}}{{/if}}">
 								</div>

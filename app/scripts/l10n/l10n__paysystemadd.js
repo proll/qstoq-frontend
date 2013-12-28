@@ -6,6 +6,111 @@ qst.l10n.paysystemadd = {
 		ru: 'Пожалуйста заполните все поля'
 	},
 
+	'Save': {
+		en: 'Save',
+		ru: 'Сохранить'
+	},
+
+	'assist_h': {
+		en: 'Assist connection (legal entity only)',
+		ru: 'Подключение Assist (только юр.лица)',
+	},
+
+	'assist_merchant_id': {
+		en: 'Merchant ID',
+		ru: 'ID магазина'
+	},
+	'assist_login': {
+		en: 'Login',
+		ru: 'Логин'
+	},
+	'assist_password': {
+		en: 'Password',
+		ru: 'Пароль'
+	},
+	'assist_salt': {
+		en: 'Secret',
+		ru: 'Секрет'
+	},
+
+	'assist_itm_1': {
+		en: 'To sign in Assist system you have to fill the registration form <a href="http://www.assist.ru/shop_register.htm" target="_blank">http://www.assist.ru/shop_register.htm</a>',
+		ru: 'Чтобы подключиться к системе Assist Вам необходимо заполнить заявку на регистрацию <a href="http://www.assist.ru/shop_register.htm" target="_blank">http://www.assist.ru/shop_register.htm</a>'
+	},
+
+	'assist_itm_2': {
+		en: 'After that Assist manager will contact you, will check your information and will help you to choose a bank account of the system.',
+		ru: 'После этого с Вами свяжется сотрудник компании Assist, уточнит представленную Вами информацию и поможет с выбором расчетного банка системы.'
+	},
+
+	'assist_itm_3': {
+		en: 'After clearing out all the legal details, log in to the Personal merchant cabinet <a href="https://account.paysecure.ru" target="_blank">https://account.paysecure.ru</a>. Teke your <strong>Merchant ID</strong>.',
+		ru: 'После того как все юридические формальности улажены, войдите в Личный Кабинет магазина <a href="https://account.paysecure.ru" target="_blank">https://account.paysecure.ru</a>. Запишите свой <strong>ID магазина</strong>.'
+	},
+
+	'assist_itm_4': {
+		en: 'Go to the <strong>Users</strong>. Create a new user with <strong>RDS</strong> type, set <strong>Login</strong> and <strong>Password</strong>. User must have an access to <strong>Services</strong> only.',
+		ru: 'Перейдите в раздел Пользователи. Создайте нового пользователя с типом <strong>RDS</strong>, задайте ему <strong>Логин</strong> и <strong>Пароль</strong>. Пользователь должен иметь доступ только к <strong>Services</strong>.'
+	},
+
+	'assist_itm_5': {
+		en: 'On the Metchant\'s Settings choose your shop.',
+		ru: 'На странице Настройки Мерчантов, выберите свой магазин.'
+	},
+
+	'assist_itm_6': {
+		en: 'On tab <strong>Payments Settings</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://qstoq.me/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.',
+		ru: 'Вкладка <strong>Настройка Платежей</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://qstoq.me/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.'
+	},
+
+	'assist_itm_7': {
+		en: 'On tab <strong>Настройка отправки результатов платежей</strong>. You have to turn these options on: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://qstoq.me/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Secret</strong>',
+		ru: 'Вкладка <strong>Настройка отправки результатов платежей</strong>. Должны быть активированы только следующие опции: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://qstoq.me/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Секрет</strong>'
+	},
+
+	'webmoney_h': {
+		en: 'Webmoney connection',
+		ru: 'Подключение Webmoney',
+	},
+
+	'webmoney_merchant_id': {
+		en: 'WMID',
+		ru: 'WMID'
+	},
+	'webmoney_purse_id': {
+		en: 'Purse ID',
+		ru: 'Кошелек'
+	},
+	'webmoney_purse_key': {
+		en: 'Secret key',
+		ru: 'Секретный ключ'
+	},
+
+	'webmoney_itm_1': {
+		en: 'Log in to WebMoney Merchant <a href="https://merchant.webmoney.ru" target="_blank">https://merchant.webmoney.ru</a>. Look up a top corner, there is an WMID, remember it.',
+		ru: 'Войдите в систему WebMoney Merchant: <a href="https://merchant.webmoney.ru" target="_blank">https://merchant.webmoney.ru</a>. В левом верхнем углу будет указан WMID, запишите его.'
+	},
+
+	'webmoney_itm_2': {
+		en: 'Got to the list of purses <a href="https://merchant.webmoney.ru/conf/purses.asp" target="_blank">https://merchant.webmoney.ru/conf/purses.asp</a>',
+		ru: 'Перейдите к списку кошельков <a href="https://merchant.webmoney.ru/conf/purses.asp" target="_blank">https://merchant.webmoney.ru/conf/purses.asp</a>'
+	},
+
+	'webmoney_itm_3': {
+		en: 'Choose a purse for payments (<strong>Purse ID</strong>) ant click <strong>Settings</strong>.',
+		ru: 'Выберите кошелек, на который будет производиться платеж (<strong>Кошелек</strong>) и нажмите <strong>Настроить</strong>.'
+	},
+
+	'webmoney_itm_4': {
+		en: 'Set parameters:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Secret key</strong> for Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: uncheck<br/><strong>Передавать параметры в предварительном запросе</strong>: check<br/><strong>Result URL</strong>: <mark>http://qstoq.me/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://qstoq.me/v1/webmoney/return</mark>, method POST<br/><strong>Fail URL</strong>: <mark>http://qstoq.me/v1/webmoney/return</mark>, method POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5',
+		ru: 'Выставьте следующие параметры:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Секретный ключ</strong> для Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: снять галочку<br/><strong>Передавать параметры в предварительном запросе</strong>: поставить галочку<br/><strong>Result URL</strong>: <mark>http://qstoq.me/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://qstoq.me/v1/webmoney/return</mark>, метод POST<br/><strong>Fail URL</strong>: <mark>http://qstoq.me/v1/webmoney/return</mark>, метод POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5'
+	},
+
+	'webmoney_itm_5': {
+		en: 'Click <strong>Save</strong>.',
+		ru: 'Нажмите <strong>Сохранить</strong>.'
+	},
+
 	'qiwi_h': {
 		en: 'Qiwi connection',
 		ru: 'Подключение Qiwi',
@@ -48,11 +153,6 @@ qst.l10n.paysystemadd = {
 	'qiwi_itm_6': {
 		en: 'To apply changes press <strong>Save change</strong>',
 		ru: 'Для сохранения данных, нажмите <strong>Изменить</strong>'
-	},
-
-	'Save': {
-		en: 'Save',
-		ru: 'Сохранить'
 	},
 
 	'paypal_h': {

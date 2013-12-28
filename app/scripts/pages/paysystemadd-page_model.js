@@ -23,7 +23,13 @@ qst.PaySystemAddPage = Backbone.Model.extend({
 
 		this.paysystemadd = new qst.PaySystemAdd(options);
 		this.view.addPaySystemAdd(this.paysystemadd);
+
 		this.paysystemadd.activate({settings: qst.user.settings.toJSON()});
+		this.paysystemadd.on('save:success', this.updateUser, this);
+	},
+
+	updateUser: function(user_obj) {
+		qst.user.settings.set(user_obj);
 	},
 
 	sleep: function () {
