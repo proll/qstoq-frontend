@@ -4872,6 +4872,18 @@ a.account__social-item__title:focus {
   margin: 48px 0;
   display: block;
 }
+.paysystem__assign-cont {
+  position: relative;
+}
+.paysystem__assign-fader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  opacity: .8;
+}
 .paysystem__payment-way {
   padding: 16px 40px 15px;
 }
@@ -5029,6 +5041,15 @@ a.account__social-item__title:focus {
   display: block;
 }
 .webmoney .webmoney-row {
+  display: block;
+}
+.webmoney_r .webmoney_r-row {
+  display: block;
+}
+.webmoney_z .webmoney_z-row {
+  display: block;
+}
+.webmoney_e .webmoney_e-row {
   display: block;
 }
 .paysystemadd-popup .popup__inner {

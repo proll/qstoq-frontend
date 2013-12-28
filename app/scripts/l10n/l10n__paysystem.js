@@ -46,6 +46,22 @@ qst.l10n.paysystem = {
 		ru: 'Webmoney'
 	},
 
+
+	'webmoney_r': {
+		en: 'Webmoney R',
+		ru: 'Webmoney R'
+	},
+
+	'webmoney_z': {
+		en: 'Webmoney Z',
+		ru: 'Webmoney Z'
+	},
+
+	'webmoney_e': {
+		en: 'Webmoney E',
+		ru: 'Webmoney E'
+	},
+
 	'qiwi': {
 		en: 'Qiwi',
 		ru: 'Киви'

@@ -9,6 +9,7 @@ qst.PaySystemAddPage = Backbone.Model.extend({
 
 	initialize: function(options){
 	},
+	
 	render: function(options) {
 		this.set(options);
 		this.visited = true;
@@ -30,6 +31,7 @@ qst.PaySystemAddPage = Backbone.Model.extend({
 
 	updateUser: function(user_obj) {
 		qst.user.settings.set(user_obj);
+		qst.trigger("historyback");
 	},
 
 	sleep: function () {

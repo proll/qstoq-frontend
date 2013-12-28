@@ -13,7 +13,9 @@ qst.PaySystem = Backbone.Model.extend({
 			'assist',
 			'paymaster',
 			'paypal',
-			'webmoney',
+			'webmoney_r',
+			'webmoney_z',
+			'webmoney_e',
 			'qiwi',
 		],
 

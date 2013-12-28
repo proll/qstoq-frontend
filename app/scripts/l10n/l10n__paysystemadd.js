@@ -73,6 +73,21 @@ qst.l10n.paysystemadd = {
 		ru: 'Подключение Webmoney',
 	},
 
+	'webmoney_r_h': {
+		en: 'Webmoney R Purse connection',
+		ru: 'Подключение Webmoney R Кошелька',
+	},
+
+	'webmoney_z_h': {
+		en: 'Webmoney Z Purse connection',
+		ru: 'Подключение Webmoney Z Кошелька',
+	},
+
+	'webmoney_e_h': {
+		en: 'Webmoney E Purse connection',
+		ru: 'Подключение Webmoney E Кошелька',
+	},
+
 	'webmoney_merchant_id': {
 		en: 'WMID',
 		ru: 'WMID'
@@ -81,14 +96,26 @@ qst.l10n.paysystemadd = {
 		en: 'Purse ID',
 		ru: 'Кошелек'
 	},
+	'webmoney_r_purse_id': {
+		en: 'R Purse',
+		ru: 'R Кошелек'
+	},
+	'webmoney_z_purse_id': {
+		en: 'Z Purse',
+		ru: 'Z Кошелек'
+	},
+	'webmoney_e_purse_id': {
+		en: 'E Purse',
+		ru: 'E Кошелек'
+	},
 	'webmoney_purse_key': {
 		en: 'Secret key',
 		ru: 'Секретный ключ'
 	},
 
 	'webmoney_itm_1': {
-		en: 'Log in to WebMoney Merchant <a href="https://merchant.webmoney.ru" target="_blank">https://merchant.webmoney.ru</a>. Look up a top corner, there is an WMID, remember it.',
-		ru: 'Войдите в систему WebMoney Merchant: <a href="https://merchant.webmoney.ru" target="_blank">https://merchant.webmoney.ru</a>. В левом верхнем углу будет указан WMID, запишите его.'
+		en: 'Log in to WebMoney Merchant <a href="https://merchant.webmoney.ru" target="_blank">https://merchant.webmoney.ru</a>. Look up a top corner, there is an <strong>WMID</strong>, remember it.',
+		ru: 'Войдите в систему WebMoney Merchant: <a href="https://merchant.webmoney.ru" target="_blank">https://merchant.webmoney.ru</a>. В левом верхнем углу будет указан <strong>WMID</strong>, запишите его.'
 	},
 
 	'webmoney_itm_2': {
@@ -97,8 +124,23 @@ qst.l10n.paysystemadd = {
 	},
 
 	'webmoney_itm_3': {
-		en: 'Choose a purse for payments (<strong>Purse ID</strong>) ant click <strong>Settings</strong>.',
+		en: 'Choose a purse for payments (<strong>Purse</strong>) ant click <strong>Settings</strong>.',
 		ru: 'Выберите кошелек, на который будет производиться платеж (<strong>Кошелек</strong>) и нажмите <strong>Настроить</strong>.'
+	},
+
+	'webmoney_r_itm_3': {
+		en: 'Choose a purse for payments (<strong>R Purse</strong>) ant click <strong>Settings</strong>.',
+		ru: 'Выберите кошелек, на который будет производиться платеж (<strong>R Кошелек</strong>) и нажмите <strong>Настроить</strong>.'
+	},
+
+	'webmoney_z_itm_3': {
+		en: 'Choose a purse for payments (<strong>Z Purse</strong>) ant click <strong>Settings</strong>.',
+		ru: 'Выберите кошелек, на который будет производиться платеж (<strong>Z Кошелек</strong>) и нажмите <strong>Настроить</strong>.'
+	},
+
+	'webmoney_e_itm_3': {
+		en: 'Choose a purse for payments (<strong>E Purse</strong>) ant click <strong>Settings</strong>.',
+		ru: 'Выберите кошелек, на который будет производиться платеж (<strong>E Кошелек</strong>) и нажмите <strong>Настроить</strong>.'
 	},
 
 	'webmoney_itm_4': {

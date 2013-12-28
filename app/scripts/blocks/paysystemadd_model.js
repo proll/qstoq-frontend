@@ -14,15 +14,19 @@ qst.PaySystemAdd = Backbone.Model.extend({
 	},
 
 	save: function (options) {
+		var system = this.get('system');
+		if(system.indexOf('webmoney') !== -1) {
+			system = 'webmoney';
+		}
+
 		options = options || {};
-		options.url = this.url + this.get('system');
+		options.url = this.url + system;
 		options.type = 'post';
 		options.data = options.data || {};
 		options.success  	= _.bind(this.success, this);
 		options.error  		= _.bind(this.error, this);
 
 		this.trigger('save:start');
-
 		return Backbone.Model.prototype.fetch.call(this, options);
 	},
 
