@@ -441,7 +441,7 @@ textarea.qst__inp {
 				.box-shadow(0 1px 10px rgba(0,0,0,.14));
 
 				&__col1 {
-					padding: 32px @gridGutterWidth 20px;
+					padding: 32px @gridGutterWidth 45px;
 					.box-sizing(border-box);
 					float: left;
 					width: (@gridGutterWidth + @gridColumnWidth)*5;
@@ -477,7 +477,7 @@ textarea.qst__inp {
 					}
 
 				&__col2 {
-					padding: 32px @gridGutterWidth 20px;
+					padding: 32px @gridGutterWidth 45px;
 					margin-left: (@gridGutterWidth + @gridColumnWidth)*5;
 					.box-sizing(border-box);
 				}
@@ -506,42 +506,28 @@ textarea.qst__inp {
 
 
 					&__buy-btn {
-						display: inline-block;
-						font-size: 16px;
-						line-height: 18px;
-						text-decoration: none;
-						color: @white;
-						.box-shadow(0 1px 2px rgba(0,0,0,.35));
-						overflow: hidden;
-						.border-radius(2px);
-						#gradient .vertical(#ff7e6d, #cf4b3a);
-						cursor: pointer;
-						padding: 1px;
-
-						&:hover {
-							text-decoration: none;
-						}
-
 						&-in {
-							display: inline-block;
-							padding: 8px 34px;
-							#gradient .vertical-three-colors(#ff8171, #c3362e, 50%, #f06d5c);
+							.btn;
+							.btn-red;
+							font-size: 16px;
+							line-height: 20px;
+							font-weight: 700;
 						}
 					}
 
 				&__bottom-row {
-					#gradient .vertical (#797979, #676767);
+					background-color: #404246;
 					overflow: hidden;
 					font-size: 11px;
-					line-height: 1;
-					color: @white;
+					line-height: 14px;
+					color: #82888c;
 					clear: both;
 
 					a {
-						color: @white;
+						color: #82888c;
 						text-decoration: underline;
 						&:hover {
-							color: @white;
+							color: #82888c;
 							text-decoration: underline;
 						}
 					}
@@ -551,14 +537,14 @@ textarea.qst__inp {
 						float: left;
 						width: (@gridGutterWidth + @gridColumnWidth)*5;
 						vertical-align: top;
-						text-align: center;
-						padding: 9px 40px 10px;
+						text-align: left;
+						padding: 14px 20px;
 					}
 
 					&__col2 {
 						.box-sizing(border-box);
 						margin-left: (@gridGutterWidth + @gridColumnWidth)*5;
-						padding: 9px 40px 10px;
+						padding: 14px 20px;
 					}
 				}
 
@@ -711,27 +697,15 @@ textarea.qst__inp {
 
 				&__buy-btn {
 					display: block;
-					font-size: 16px;
-					line-height: 18px;
-					text-decoration: none;
-					color: @white;
-					.box-shadow(0 1px 2px rgba(0,0,0,.35));
-					overflow: hidden;
-					.border-radius(2px);
-					#gradient .vertical(#ff7e6d, #cf4b3a);
-					cursor: pointer;
-					padding: 1px;
 					margin: 0 0 24px 0;
 
-					&:hover {
-						text-decoration: none;
-					}
-
 					&-in {
+						.btn;
+						.btn-red;
 						display: block;
-						text-align: center;
-						padding: 8px 34px;
-						#gradient .vertical-three-colors(#ff8171, #c3362e, 50%, #f06d5c);
+						font-size: 16px;
+						line-height: 20px;
+						font-weight: 700;
 					}
 				}
 
@@ -821,7 +795,7 @@ textarea.qst__inp {
 				&-service-desc {
 					color: @gray;
 					font-size: 11px;
-					line-height: 1;
+					line-height: 14px;
 					text-align: center;
 					border-top: 1px solid @grayLight1;
 					padding-top: 13px;

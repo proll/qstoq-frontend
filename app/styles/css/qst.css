@@ -802,6 +802,7 @@ textarea::-webkit-input-placeholder {
   line-height: 18px;
   font-size: normal;
   display: inline-block;
+  text-align: center;
   background-color: #009ee7;
   border-color: #0077d6;
   border-style: solid;
@@ -810,6 +811,7 @@ textarea::-webkit-input-placeholder {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  cursor: pointer;
 }
 .btn:focus,
 .btn:active,
@@ -858,6 +860,10 @@ textarea::-webkit-input-placeholder {
 .btn-gray {
   background-color: #8c8c8c;
   border-color: #6e6e6e;
+}
+.btn-red {
+  background-color: #ec6751;
+  border-color: #bc3721;
 }
 .i {
   background: url("/images/sprites/i-9648f.png") no-repeat 0 0;
@@ -2221,12 +2227,14 @@ textarea::-webkit-input-placeholder {
   line-height: 18px;
   font-size: normal;
   display: inline-block;
+  text-align: center;
   border-style: solid;
   border-width: 0 1px 2px 0;
   padding: 10px 40px 10px 41px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  cursor: pointer;
   background-color: #009ee7;
   border-color: #0077d6;
 }
@@ -3193,6 +3201,7 @@ textarea.qst__inp {
   line-height: 18px;
   font-size: normal;
   display: inline-block;
+  text-align: center;
   background-color: #009ee7;
   border-color: #0077d6;
   border-style: solid;
@@ -3201,6 +3210,7 @@ textarea.qst__inp {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  cursor: pointer;
   background-color: #2fad76;
   border-color: #21946a;
 }
@@ -3221,6 +3231,7 @@ textarea.qst__inp {
   line-height: 18px;
   font-size: normal;
   display: inline-block;
+  text-align: center;
   background-color: #009ee7;
   border-color: #0077d6;
   border-style: solid;
@@ -3229,6 +3240,7 @@ textarea.qst__inp {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  cursor: pointer;
   background-color: #8c8c8c;
   border-color: #6e6e6e;
   float: left;
@@ -3401,7 +3413,7 @@ textarea.qst__inp {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.14);
 }
 .showcase__form__col1 {
-  padding: 32px 40px 20px;
+  padding: 32px 40px 45px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3437,7 +3449,7 @@ textarea.qst__inp {
   padding: 0;
 }
 .showcase__form__col2 {
-  padding: 32px 40px 20px;
+  padding: 32px 40px 45px;
   margin-left: 400px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3462,63 +3474,53 @@ textarea.qst__inp {
   padding: 0;
   margin: 0 0 28px;
 }
-.showcase__form__buy-btn {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 18px;
-  text-decoration: none;
+.showcase__form__buy-btn-in {
   color: #ffffff;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-size: normal;
+  display: inline-block;
+  text-align: center;
+  background-color: #009ee7;
+  border-color: #0077d6;
+  border-style: solid;
+  border-width: 0 1px 2px 0;
+  padding: 10px 40px 10px 41px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background-image: -moz-linear-gradient(top, #ff7e6d, #cf4b3a);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff7e6d), to(#cf4b3a));
-  background-image: -webkit-linear-gradient(top, #ff7e6d, #cf4b3a);
-  background-image: -o-linear-gradient(top, #ff7e6d, #cf4b3a);
-  background-image: linear-gradient(to bottom, #ff7e6d, #cf4b3a);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff7e6d', endColorstr='#ffcf4b3a', GradientType=0);
   cursor: pointer;
-  padding: 1px;
+  background-color: #ec6751;
+  border-color: #bc3721;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
 }
-.showcase__form__buy-btn:hover {
+.showcase__form__buy-btn-in:focus,
+.showcase__form__buy-btn-in:active,
+.showcase__form__buy-btn-in:hover {
+  color: #ffffff;
   text-decoration: none;
 }
-.showcase__form__buy-btn-in {
-  display: inline-block;
-  padding: 8px 34px;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff8171), color-stop(50%, #c3362e), to(#f06d5c));
-  background-image: -webkit-linear-gradient(#ff8171, #c3362e 50%, #f06d5c);
-  background-image: -moz-linear-gradient(top, #ff8171, #c3362e 50%, #f06d5c);
-  background-image: -o-linear-gradient(#ff8171, #c3362e 50%, #f06d5c);
-  background-image: linear-gradient(#ff8171, #c3362e 50%, #f06d5c);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff8171', endColorstr='#fff06d5c', GradientType=0);
+.showcase__form__buy-btn-in:active {
+  border-width: 2px 0 0 1px;
+  padding: 8px 41px 12px 40px;
 }
 .showcase__form__bottom-row {
-  background-image: -moz-linear-gradient(top, #797979, #676767);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#797979), to(#676767));
-  background-image: -webkit-linear-gradient(top, #797979, #676767);
-  background-image: -o-linear-gradient(top, #797979, #676767);
-  background-image: linear-gradient(to bottom, #797979, #676767);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff797979', endColorstr='#ff676767', GradientType=0);
+  background-color: #404246;
   overflow: hidden;
   font-size: 11px;
-  line-height: 1;
-  color: #ffffff;
+  line-height: 14px;
+  color: #82888c;
   clear: both;
 }
 .showcase__form__bottom-row a {
-  color: #ffffff;
+  color: #82888c;
   text-decoration: underline;
 }
 .showcase__form__bottom-row a:hover {
-  color: #ffffff;
+  color: #82888c;
   text-decoration: underline;
 }
 .showcase__form__bottom-row__col1 {
@@ -3528,15 +3530,15 @@ textarea.qst__inp {
   float: left;
   width: 400px;
   vertical-align: top;
-  text-align: center;
-  padding: 9px 40px 10px;
+  text-align: left;
+  padding: 14px 20px;
 }
 .showcase__form__bottom-row__col2 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin-left: 400px;
-  padding: 9px 40px 10px;
+  padding: 14px 20px;
 }
 .showcase__form__safe-icn {
   vertical-align: top;
@@ -3671,42 +3673,41 @@ textarea.qst__inp {
 }
 .finish__form__buy-btn {
   display: block;
-  font-size: 16px;
-  line-height: 18px;
-  text-decoration: none;
+  margin: 0 0 24px 0;
+}
+.finish__form__buy-btn-in {
   color: #ffffff;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-size: normal;
+  display: inline-block;
+  text-align: center;
+  background-color: #009ee7;
+  border-color: #0077d6;
+  border-style: solid;
+  border-width: 0 1px 2px 0;
+  padding: 10px 40px 10px 41px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background-image: -moz-linear-gradient(top, #ff7e6d, #cf4b3a);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff7e6d), to(#cf4b3a));
-  background-image: -webkit-linear-gradient(top, #ff7e6d, #cf4b3a);
-  background-image: -o-linear-gradient(top, #ff7e6d, #cf4b3a);
-  background-image: linear-gradient(to bottom, #ff7e6d, #cf4b3a);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff7e6d', endColorstr='#ffcf4b3a', GradientType=0);
   cursor: pointer;
-  padding: 1px;
-  margin: 0 0 24px 0;
+  background-color: #ec6751;
+  border-color: #bc3721;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
 }
-.finish__form__buy-btn:hover {
+.finish__form__buy-btn-in:focus,
+.finish__form__buy-btn-in:active,
+.finish__form__buy-btn-in:hover {
+  color: #ffffff;
   text-decoration: none;
 }
-.finish__form__buy-btn-in {
-  display: block;
-  text-align: center;
-  padding: 8px 34px;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff8171), color-stop(50%, #c3362e), to(#f06d5c));
-  background-image: -webkit-linear-gradient(#ff8171, #c3362e 50%, #f06d5c);
-  background-image: -moz-linear-gradient(top, #ff8171, #c3362e 50%, #f06d5c);
-  background-image: -o-linear-gradient(#ff8171, #c3362e 50%, #f06d5c);
-  background-image: linear-gradient(#ff8171, #c3362e 50%, #f06d5c);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff8171', endColorstr='#fff06d5c', GradientType=0);
+.finish__form__buy-btn-in:active {
+  border-width: 2px 0 0 1px;
+  padding: 8px 41px 12px 40px;
 }
 .finish__form-desc,
 .finish__form-desc-static {
@@ -3790,7 +3791,7 @@ textarea.qst__inp {
 .finish__form-service-desc {
   color: #8c8c8c;
   font-size: 11px;
-  line-height: 1;
+  line-height: 14px;
   text-align: center;
   border-top: 1px solid #dcdcdc;
   padding-top: 13px;

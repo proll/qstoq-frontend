@@ -72,8 +72,8 @@ qst.l10n.itemedit = {
 		ru: 'Купить'
 	},
 	'selling in lightning speed' : {
-		en: 'selling in lightning speed',
-		ru: 'молниеносные продажи'
+		en: 'creating price labels and billing payments for your content or reallife goods and services',
+		ru: 'создание виртуальных ценников и прием платежей за ваш контент или реальные товары и услуги'
 	},
 
 	'It is a preview of the purchase page your customers will see': {
