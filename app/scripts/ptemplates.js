@@ -765,7 +765,7 @@ function program6(depth0,data) {
   buffer += "\n			</ul>\n			<h3 class=\"paysystem__misc-head\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase2_2", "paysystem", options) : helperMissing.call(depth0, "_", "phrase2_2", "paysystem", options)))
-    + "</h3>\n			<ul class=\"paysystem__misc\">\n				<li class=\"paysystem__misc-li\">\n					<a href=\"request\" class=\"paysystem__misc-a\">";
+    + "</h3>\n			<ul class=\"paysystem__misc\">\n				<li class=\"paysystem__misc-li\">\n					<a href=\"mailto:ola@qstoq.me\" target=\"mail\" class=\"paysystem__misc-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Ask us", "paysystem", options) : helperMissing.call(depth0, "_", "Ask us", "paysystem", options)))
     + "</a>\n				</li>\n			</ul>\n		</div>\n	</div>\n</div>";
