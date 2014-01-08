@@ -75,7 +75,7 @@
 			line-height: 1;
 			font-weight: 700;
 			border: 3px solid @white;
-			padding: 10px 40px;
+			padding: 11px 40px 13px;
 
 			&:hover {
 				color: @white;
@@ -93,7 +93,7 @@
 			line-height: 1;
 			color: @white;
 			text-decoration: none;
-			padding: 20px 0 57px;
+			padding: 20px 0 37px;
 
 			&:hover {
 				color: @white;
@@ -101,7 +101,7 @@
 			}
 		}
 			.landing__next-title {
-				margin-bottom: 8px;
+				margin-bottom: 24px;
 				display: block;
 
 			}
@@ -109,12 +109,29 @@
 	.landing-section2 {
 		background: @white;
 
-		.landing__container {
-			border-bottom: 1px solid @grayLighter10;
-		}
+		// .landing__container {
+		// 	border-bottom: 1px solid @grayLighter10;
+		// }
 
 			.landing__container-in {
-				padding: 94px 0 88px;
+				padding: 86px 0 60px;
+			}
+
+			.landing__list-itm {
+				&:after {
+					content: '';
+					position: absolute;
+					.ib;
+					.ib-arr2;
+					left: 244px;
+					top: 64px;
+				}
+
+				&:last-child {
+					&:after {
+						display: none;
+					}
+				}
 			}
 	}
 		
@@ -124,38 +141,29 @@
 			color: @green_sexy;
 			font-size: 34px;
 			line-height: 40px;
-			font-weight: 400;
+			font-weight: 300;
 		}
 
 		.landing__list {
-			margin-left: -@gridGutterWidth;
+			margin-left: -68px;
 		}
 
 			.landing__list-itm {
 				display: inline-block;
-				width: (@gridGutterWidth + @gridColumnWidth)*2 + @gridGutterWidth;
-				margin-left: 78px;
+				width: 220px;
+				margin-left: 68px;
 				vertical-align: top;
 				text-align: left;
-				counter-increment: howcount;
+				position: relative;
 			}
 
 				.landing__list-itm-h {
 					font-size: 18px;
-					line-height: 22px;
+					line-height: 24px;
 					font-weight: 400;
 					padding: 0;
-					margin: 20px 0 10px;
+					margin: 20px 0 9px;
 					color: @black;
-					position: relative;
-
-					&:before {
-						content: counter(howcount);
-						position: absolute;
-						color: @red_sexy;
-						font-size: 14px;
-						left: -20px;
-					}
 				}
 
 				.landing__list-itm-p {
@@ -175,68 +183,104 @@
 				}
 
 	.landing-section3-p {
-		color: @pColor;
+		color: @white;
 		font-size: 15px;
 		line-height: 22px;
 		margin-top: 0;
-		margin-bottom: 62px;
+		margin-bottom: 42px;
 	}
 
 	.landing-section3 {
-		background: @white;
+		background: @greenHead url(/images/qb/landbg3.png) 0 0 no-repeat;
+		.background-size(100% 100%);
+		border: 20px solid @grayLighter1;
 
-		.landing__container {
-			border-bottom: 1px solid @grayLighter10;
-		}
+		// .landing__container {
+		// 	border-bottom: 1px solid @grayLighter10;
+		// }
 
 			.landing__container-in {
-				padding: 77px 0 57px;
+				padding: 84px 0 57px;
 			}
 
 		.landing-s-h {
-			margin: 0 0 20px 0;
+			margin: 0 0 22px 0;
 			font-size: 34px;
 			line-height: 42px;
+			color: @white;
 		}
 
 		.landing__list {
-			margin: 0 -@gridGutterWidth 0 -(2*@gridGutterWidth - 5px);
+			margin-left: -@gridGutterWidth;
 		}
 
 			.landing__list-itm {
 				display: inline-block;
-				width: (@gridGutterWidth + @gridColumnWidth)*2;
-				margin-left: @gridGutterWidth - 5px;
-				vertical-align: bottom;
-				text-align: left;
+				width: 190px;
+				height: 178px;
+				margin-left: @gridGutterWidth;
+				vertical-align: top;
+				text-align: center;
+				.box-sizing(border-box);
+				.transition(all .2s);
+				font-size: 0;
+				line-height: 0;
 
-				&:first-child {
+				padding: 35px 10px 0;
+				border: 1px solid transparent;
+
+				&:hover {
+					width: 190px + 20*2;
+					margin-left: @gridGutterWidth - 20px;
+					margin-right: -20px;
+
+					border-color: @yellow;
+					margin-top: 2px;
+					height: 178px-2px;	
+					padding-top: 0;
+
 					.ib {
-						margin-left: 0;
+						height: 0;
+					}
+
+					.landing__list-itm-h {
+						font-size: 14px;
+						line-height: 19px;
+						margin: 17px 0 10px;
+						color: @yellow;
+					}
+
+					.landing__list-itm-p {
+						font-size: 13px;
+						line-height: 19px;
+						opacity: 1;
 					}
 				}
 			}
 
+				.ib {
+					.transition(all .2s);
+				}
+
 				.landing__list-itm-h {
 					font-size: 16px;
 					line-height: 23px;
-					font-weight: 500;
+					font-weight: 700;
 					padding: 0;
 					margin: 12px 0 6px;
-
-					&:before {
-						content: '';
-						display: none;
-					}
+					color: @white;
+					.transition(all .2s);
 				}
 
 				.landing__list-itm-p {
-					font-size: 14px;
+					font-size: 0;
 					line-height: 19px;
 					font-weight: 400;
 					padding: 0;
 					margin: 0 0 1px;
-					color: @pColor;
+					color: @white;
+					opacity: 0;
+					.transition(opacity .1s .2s);
 				}
 	}
 
@@ -245,64 +289,54 @@
 		background: @white;
 
 			.landing__container-in {
-				padding: 69px 0 54px;
+				padding: 48px 0 68px;
 			}
 
 		.landing__list {
-			margin: 0 0 0 -(2*@gridGutterWidth);
-			border-bottom: 1px solid @grayLighter10;
-			padding-bottom: 66px;
+			padding-bottom: 60px;
 		}
 
 			.landing__list-itm {
 				display: inline-block;
-				width: (@gridGutterWidth + @gridColumnWidth)*4 + @gridGutterWidth;
-				margin-left: @gridGutterWidth*2;
 				vertical-align: top;
 				text-align: center;
-
-				&:first-child {
-					.ib {
-						margin-left: 0;
-					}
-				}
 			}
+
+				.landing__list-itm-h {
+					font-size: 38px;
+					line-height: 42px;
+					font-weight: 300;
+					padding: 0;
+					margin: 29px 0 25px;
+					color: @textColor;
+					.transition(all .2s);
+				}
 
 				.landing__list-itm-p {
 					font-size: 15px;
-					line-height: 22px;
+					line-height: 20px;
 					font-weight: 400;
 					padding: 0;
-					margin: 0 0 28px;
-					color: @pColor;
+					margin: 22px 0 0;
+					color: @textColor;
 				}
 
-					.landing__pay-systems {
-						margin: 0 0 0 -6px;
-						font-size: 0;
-						line-height: 0;
-					}
 
-						.landing__pay-systems-itm {
-							display: inline-block;
-							margin: 0 0 10px 10px;
-						}
 
 			.landing__start-cont {
-				padding: 57px 0;
+				padding: 38px 0;
 			}
 
 				.landing__start-a {
-					background: @red_sexy;
-					border-color: @red_sexy_border;
-					padding: 14px 22px-2px 14px-2px 22px; 
-					border-width: 0 2px 2px 0;
-					&:active {
-						padding: 14px-2px 22px 14px 22px-2px; 
-						border-width: 2px 0 0 2px;
-						// border-color: @red_sexy;
-					}
+					.btn;
+					.btn-red;
+					.border-radius(4px);
+					font-size: 17px;
+					line-height: 24px;
+					#gradient>.vertical(#ef7964, #e76764);
+					text-shadow: 0 -1px #b41600;
 				}
+
 	}
 
 	.landing__pay-charge {

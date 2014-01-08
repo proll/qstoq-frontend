@@ -280,7 +280,7 @@ body {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #282828;
+  color: #242a32;
   background-color: #ffffff;
 }
 a {
@@ -350,7 +350,7 @@ BODY {
   font-family: 'Ubuntu', Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #282828;
+  color: #242a32;
   margin: 0;
   padding: 0;
   background: #ffffff;
@@ -524,7 +524,7 @@ h1 {
   font-size: 13px;
   line-height: 14px;
   -webkit-font-smoothing: antialiased;
-  color: #282828;
+  color: #242a32;
   display: inline-block;
   width: 100%;
   vertical-align: top;
@@ -538,7 +538,7 @@ h1 {
   background-color: transparent;
 }
 .qst__inp:focus {
-  color: #282828;
+  color: #242a32;
 }
 .qst__inp:disabled {
   color: #969696;

@@ -12,13 +12,13 @@ qst.l10n.landing_page = {
 	},
 
 	'section3-p': {
-		en: 'Sale of an access to a file, a link, a text, a webinar, every digital content or get payment<br/>for goods and services by a huge amount of ecurrencies and by all types of plastic cards',
-		ru: 'Продать доступ к файлу, ссылке, тексту, вебинару, любому цифровому контенту или принять оплату<br/>за товары и услуги большинством видов электронных валют и всеми видами пластиковых карт'
+		en: 'Sale of an access to a file, a link, a text, a webinar, every digital content or get payment<br/>for goods and services by a huge amount of ecurrencies and by all types of <br/>plastic cards',
+		ru: 'Продать доступ к файлу, ссылке, тексту, вебинару, любому цифровому контенту или принять <br/>оплату за товары и услуги большинством видов электронных валют и всеми видами <br/>пластиковых карт'
 	},
 
 	'Start': {
-		en: 'Start',
-		ru: 'Начать продавать'
+		en: 'Start Qstoq',
+		ru: 'Начать продавать c Qstoq'
 	},
 
 	'Start Qstoq': {
@@ -32,8 +32,19 @@ qst.l10n.landing_page = {
 	},
 
 	'How does Qstoq work': {
-		en: 'How does Qstoq work',
-		ru: 'Как работает Qstoq'
+		en: 'How payments can be received with Qstoq',
+		ru: 'Как принимать оплату с Qstoq'
+	},
+
+
+	'Connect your payment systems': {
+		en: 'Connect your payment systems',
+		ru: 'Подключите ваши платежные системы'
+	},
+
+	'section2-0-1-p': {
+		en: 'In your account settings add payment systems you want to deal with. Money will go to your account in these systems.',
+		ru: 'В личном кабинете добавьте платежные системы с которыми вы хотите принимать оплату. Деньги от покупателей будут приходить сразу на ваши счета в этих системах.'
 	},
 
 	'Create a price tag': {
@@ -42,8 +53,8 @@ qst.l10n.landing_page = {
 	},
 
 	'section2-1-1-p': {
-		en: 'Add a title, a description, a photo and a preview, set a price&nbsp;-&nbsp;as easy as pie!',
-		ru: 'Добавьте название, описание, фотографию или обложку, установите цену&nbsp;-&nbsp;проще некуда!'
+		en: 'Upload file or set a link. Add a title, a description, a photo and a preview, set a price&nbsp;-&nbsp;as easy as pie!',
+		ru: 'Загрузите файл или добавьте ссылку на контент. Добавьте название, описание, фотографию или обложку, установите цену&nbsp;-&nbsp;проще некуда!'
 	},
 
 	// 'Prepaire for sale': {
@@ -62,8 +73,9 @@ qst.l10n.landing_page = {
 	},
 
 	'section2-2-1-p': {
-		en: 'Get the link of showcase of your product, share it, stick it, distribute it, send it to your audience',
-		ru: 'Получите ссылку на витрину вашего продукта и расшаривайте, расклеивайте, раздавайте, рассылайте ссылки вашей аудитории'
+		en: 'Get the pric tag link, share it, stick it, distribute it, send it to your audience. By clicking on this link the customers will open the price tag',
+		ru: 'Получите ссылку на ваш ценник и размещайте в социальных сетях, на сайтах, в блогах, расшаривайте, раздавайте, рассылайте ссылки вашей аудитории. Кликая по этой ссылке, покупатели откроют окно ценника и оплаты.'
+
 	},
 
 	// 'Sell where your audience is': {
@@ -76,16 +88,16 @@ qst.l10n.landing_page = {
 	// 	ru: 'Ваш клиент рядом! Дайте возможность поблагодарить вас читателям вашего блога или фанатам вашего творчества.<br/>Продать ваш продукт это так же просто как расшарить ссылку - продавайте там где уже есть ваша целевая аудитория. Превратите любой объект, любой сайт, любое сообщение в витрину вашего магазина!<br/>Интеграция Qstoq и вашего сайта? Одна строчка кода, реально!'
 	// },
 
-	'Receive money': {
-		en: 'Receive money',
-		ru: 'Получайте деньги'
-	},
+	// 'Receive money': {
+	// 	en: 'Receive money',
+	// 	ru: 'Получайте деньги'
+	// },
 	
-	'section2-3-1-p': {
-		en: 'There is no need in another actions, take a rest and have fun about a growth of your ballance',
-		ru: 'Больше действий не требуется, расслабьтесь и получайте удовольствие от роста суммы на вашем балансе'
+	// 'section2-3-1-p': {
+	// 	en: 'There is no need in another actions, take a rest and have fun about a growth of your ballance',
+	// 	ru: 'Больше действий не требуется, расслабьтесь и получайте удовольствие от роста суммы на вашем балансе'
 
-	},
+	// },
 
 
 	// 'Clear terms of cooperation': {
@@ -98,14 +110,14 @@ qst.l10n.landing_page = {
 	// 	ru: 'Наша цель - предоставить вам удобный инструмент продаж. Мы берем всего лишь 5% с транзакции;<br/>Мы принимаем большинство популярных электронных валют и все виды пластиковых карт; Без абонентской платы, без необходимости оформлять юрлицо. Вы просто получаете свои деньги раз в две недели.'
 	// },
 
-	'Qstoq will help you to get payments online in many cases': {
-		en: 'Qstoq will help you to get payments<br/>online in many cases',
-		ru: 'Qstoq поможет вам принимать платежи<br/>онлайн в любых ситуациях'
+	'Get payments in any cases': {
+		en: 'Get payments in any cases',
+		ru: 'Принимайте оплату в любых ситуациях'
 	},
 
 	'Donate': {
-		en: 'Donate',
-		ru: 'Donate'
+		en: 'Donation',
+		ru: 'Пожертвования'
 	},
 
 	'section3-1-1-p': {
@@ -113,9 +125,9 @@ qst.l10n.landing_page = {
 		ru: 'Вы размещаете виджет или ссылку, кликнув по которой пользователи могут перевести вам любую сумму'
 	},
 
-	'Selling of digital content': {
-		en: 'Selling of digital content',
-		ru: 'Продажа цифрового контента'
+	'Payments for digital content': {
+		en: 'Payments for digital content',
+		ru: 'Оплата за цифровой контент'
 	},
 
 	'section3-2-1-p': {
@@ -123,24 +135,45 @@ qst.l10n.landing_page = {
 		ru: 'Размещайте ссылку для оплаты доступа к любому контенту. После оплаты покупатель получает файл или ссылку'
 	},
 
-	'E-learning and consultations': {
-		en: 'E-learning and consultations',
-		ru: 'Онлайн-обучение и консультации'
+	'Selling reallife goods': {
+		en: 'Selling reallife goods',
+		ru: 'Продажа реальных товаров'
 	},
 
 	'section3-3-1-p': {
-		en: 'User follows your link and pays your price. In your profile you will see emails of tour customers',
-		ru: 'Пользователь переходит по вашей ссылке и оплачивает установленную вами сумму. В личном кабинете вы увидите email покупателя'
+		en: 'You create product item, set a price and contribute a link for purchase on your site, in social medias or on your blog',
+		ru: 'Вы создаете карточку продукта, задаете цену и размещаете ссылку для оплаты на своем сайте, в социальных сетях или в блоге'
 	},
 
-	'Goods and services': {
-		en: 'Goods and services',
-		ru: 'Товары и услуги'
+	'Freelance and services': {
+		en: 'Freelance and services',
+		ru: 'Фриланс и услуги'
 	},
 
 	'section3-4-1-p': {
-		en: 'You create product item, set a price and contribute a link for purchase on your site, in social medias or on your blog',
-		ru: 'Вы создаете карточку продукта, задаете цену и размещаете ссылку для оплаты на своем сайте, в социальных сетях или в блоге'
+		en: 'User follows your link and pays your price. In your profile you will see emails of your customers',
+		ru: 'Пользователь переходит по вашей ссылке и оплачивает установленную вами сумму. В личном кабинете вы увидите email покупателя'
+	},
+
+	'Freelance and services': {
+		en: 'Freelance and services',
+		ru: 'Фриланс и услуги'
+	},
+
+	'section3-4-1-p': {
+		en: 'User follows your link and pays your price. In your profile you will see emails of your customers',
+		ru: 'Пользователь переходит по вашей ссылке и оплачивает установленную вами сумму. В личном кабинете вы увидите email покупателя'
+	},
+
+
+	'Group buying': {
+		en: 'Group buying',
+		ru: 'Коллективные покупки'
+	},
+
+	'section3-5-1-p': {
+		en: 'User follows your link and pays your price. In your profile you will see emails of your customers',
+		ru: 'Пользователь переходит по вашей ссылке и оплачивает установленную вами сумму. В личном кабинете вы увидите email покупателя'
 	},
 
 	'Charity': {
@@ -148,19 +181,61 @@ qst.l10n.landing_page = {
 		ru: 'Благотворительность',
 	},
 
-
-	'section3-5-1-p': {
+	'section3-6-1-p': {
 		en: 'You can place the widget or the link.',
 		ru: 'Вы размещаете виджет или ссылку, кликнув по которой пользователи могут перевести вам любую сумму'
 	},
 
+	'E-learning and consultations': {
+		en: 'E-learning and consultations',
+		ru: 'Онлайн-обучение и&nbsp;консультации'
+	},
+
+	'section3-7-1-p': {
+		en: 'User follows your link and pays your price. In your profile you will see emails of your customers',
+		ru: 'Пользователь переходит по вашей ссылке и оплачивает установленную вами сумму. В личном кабинете вы увидите email покупателя'
+	},
+
+	'And much more': {
+		en: 'And much more',
+		ru: 'И еще много разного'
+	},
+
+	'section3-8-1-p': {
+		en: 'And much much much much much much much much much much much much more. It\'s up o you',
+		ru: 'И еще много, много, много, много, много, много, много, много, много чего еще'
+	},
+
+
+
+	'Fast': {
+		en: 'Fast',
+		ru: 'Быстро'
+	},
+
 	'section4-1-1-p': {
-		en: 'With Qstoq your customers can pay by a huge amount of ecurrencies and all types of plastic cards',
-		ru: 'С Qstoq ваши покупатели смогут оплачивать большинством видов электронных валют и всеми видами пластиковых карт'
+		en: 'No programing, but only comfortable interface',
+		ru: 'Никакого программирования, только удобный интерфейс'
+	},
+
+	'Cozy': {
+		en: 'Cozy',
+		ru: 'Удобно'
 	},
 
 	'section4-2-1-p': {
-		en: 'No monthly fee, no plans and hosting charges - only 5% per transaction and nothing else',
-		ru: 'Никаких ежемесячных платежей, тарифных планов или оплаты хостинга — только 5% от&nbsp;транзакции покупателя и ничего более'
-	}
+		en: 'All info about your sells - who? when? how many and how much?',
+		ru: 'Вся информация о ваших продажах: кто, когда, сколько купил и оплатил'
+	},
+
+
+	'Free': {
+		en: 'Free',
+		ru: 'Бесплатно'
+	},
+
+	'section4-3-1-p': {
+		en: 'All Qstoq service absolutely free till the middle of 2014',
+		ru: 'Все сервисы Qstoq абсолютно бесплатны до середины 2014'
+	},
 }
