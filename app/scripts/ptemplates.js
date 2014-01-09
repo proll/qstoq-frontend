@@ -1665,9 +1665,6 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Make sure that URL entered correctly;", "p404", options) : helperMissing.call(depth0, "_", "Make sure that URL entered correctly;", "p404", options)))
     + "</li>\n	<li class=\"error-page__list-item\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "You can also Search for this user, photo or story;", "p404", options) : helperMissing.call(depth0, "_", "You can also Search for this user, photo or story;", "p404", options)))
-    + "</li>\n	<li class=\"error-page__list-item\">";
-  options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "or drop us a line to <a href=\"mailto:support@qstoq.me\" class=\"lnk\">support@qstoq.me.</a>", "p404", options) : helperMissing.call(depth0, "_", "or drop us a line to <a href=\"mailto:support@qstoq.me\" class=\"lnk\">support@qstoq.me.</a>", "p404", options)))
     + "</li>\n</ul>";
   return buffer;
