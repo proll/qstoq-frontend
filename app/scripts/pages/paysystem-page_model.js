@@ -9,10 +9,11 @@ qst.PaySystemPage = qst.Page.extend({
 	},
 
 	needRerender: function(options) {
-		return this.get('sleeped');
+		return true;
 	},
 	
 	render: function(options) {
+
 		if(qst.is_needauth()) {
 			return false;
 		}
@@ -32,9 +33,6 @@ qst.PaySystemPage = qst.Page.extend({
 			
 			options.user = qst.user.get('uid');
 			this.paysystem = new qst.PaySystem(options);
-
-			this.paysystem.activate();
-			// this.paysystem.on('load:success', this.loadList, this);
 			this.view.addPaySystem(this.paysystem);
 
 			this.set('sleeped', false);
@@ -43,7 +41,6 @@ qst.PaySystemPage = qst.Page.extend({
 			this.paysystem.set(options);
 			
 			this.view.render();
-			this.paysystem.activate();
 			this.view.addPaySystem(this.paysystem);
 
 			this.paysystem.reset();
@@ -51,6 +48,19 @@ qst.PaySystemPage = qst.Page.extend({
 			this.set('sleeped', false);
 		}
 
+		// authed with got settings
+		if(qst.is_authset()) {
+			this.activate(qst.user.settings.toJSON());
+		} else {
+			qst.on('usersettings:ready', this.activate, this);
+		}
+
+	},
+
+	activate: function(user_settings_obj) {
+		if(this.paysystem) {
+			this.paysystem.activate({settings: user_settings_obj});
+		}
 	},
 
 	sleep: function () {

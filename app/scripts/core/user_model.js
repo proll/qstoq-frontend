@@ -48,6 +48,10 @@ qst.User = Backbone.Model.extend({
 		return !!this.get('token');
 	},
 
+	is_authset: function() {
+		return !!this.settings.get('id');
+	},
+
 	setSession: function(user_obj) {
 		_.setCookie("uid",	user_obj.session.uid,	this.cookie_time);
 		_.setCookie("token",user_obj.session.token,	this.cookie_time);

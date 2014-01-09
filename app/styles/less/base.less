@@ -157,6 +157,15 @@ h1{
 		}
 	}
 
+	
+	.qst__lbl {
+		font-size: 13px;
+		line-height: 16px;
+		float: left;
+		position: relative;
+		color: @grayLight;
+	}
+
 
 	.qst__inp-cont-in {
 		font-size: 0;
@@ -208,19 +217,24 @@ h1{
 
 
 				@deactiveColor: #7c848c;
-				@activeColor: @white;
+				@activeColor: #868e96;
 
 				@deactiveColorBg: @white;
 				@activeColorBg: #2cb482;
-				@activeColorBg2: @grayLight;
+				@activeColorBg2: #eeeff0;
 
 				@deactiveBorderColor: #cfcfd2;
 
 				
 				.qst__toggle {
-					font-size: 11px;
-					line-height: 1;
+					font-size: 0;
+					line-height: 0;
+					display: inline-block;
 				}
+
+					.qst__toggle-sp {
+						display: inline-block;
+					}
 
 					.qst__toggle_on,
 					.qst__toggle_off {
@@ -235,6 +249,8 @@ h1{
 						
 						border-style: solid;
 						border-width: 0;
+						font-size: 11px;
+						line-height: 1;
 
 						&:hover,
 						&:active {
@@ -250,7 +266,7 @@ h1{
 
 					.qst__toggle_off {
 						.border-radius(0 2px 2px 0);
-						.box-shadow(inset -1px 2px 4px @grayDarker10);
+						.box-shadow(inset -1px 2px 4px #bdbdc5);
 					}
 
 				.off {
@@ -271,6 +287,9 @@ h1{
 					.qst__toggle_off {
 						color: @activeColor;
 						background-color: @activeColorBg2;
+						border-bottom-color: #ebebed;
+						border-bottom-width: 1px;
+						padding-bottom: 6px-1px;
 
 						&:hover {
 							color: @activeColor;
@@ -281,11 +300,11 @@ h1{
 				.on {
 
 					.qst__toggle_on {
-						color: @activeColor;
+						color: @white;
 						background-color: @activeColorBg;
 
 						&:hover {
-							color: @activeColor;
+							color: @white;
 						}
 					}
 

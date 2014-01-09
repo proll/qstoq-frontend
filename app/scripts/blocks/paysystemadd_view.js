@@ -6,8 +6,6 @@ qst.PaySystemAddView = Backbone.View.extend({
 		'submit .paysystemadd__form': 'save',
 		'click .paysystemadd__form-submit-a': 'clickToSubmit',
 
-		'change .qst__toggle__inp': 'toggleActive',
-
 		'keypress': 'hideErrors',
 		'click': 	'hideErrors',
 	},
@@ -28,7 +26,7 @@ qst.PaySystemAddView = Backbone.View.extend({
 
 	render: function(){
 		var template = this.template(this.model.toJSON());
-		console.log(this.model.toJSON())
+		// console.log(this.model.toJSON())
 		this.$el.html(template);
 		this.$form = 
 			this.$el
@@ -48,17 +46,6 @@ qst.PaySystemAddView = Backbone.View.extend({
 		e.stopPropagation();
 		e.preventDefault();
 		this.$form.submit();
-	},
-
-	toggleActive: function(e) {
-		var $input = $(e.target),
-			on = $input.is(':checked');
-
-		console.log(e);
-
-		$input.parent()
-			.toggleClass('on', on)
-			.toggleClass('off', !on);
 	},
 
 	toggleLoadingOff: function() {

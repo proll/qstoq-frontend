@@ -86,6 +86,10 @@ window.qst = _.extend(window.qst, {
 		return (!!qst.user && qst.user.is_auth());
 	},
 
+	is_authset: function() {
+		return (!!qst.user && qst.user.is_authset());
+	},
+
 	authUrl: function(url) {
 		var credentials = {};
 		if(!!qst.app && !!qst.app.user.get("token")) {

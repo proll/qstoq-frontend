@@ -340,8 +340,8 @@ qst.l10n.paysystemadd = {
 	},
 
 	'paymaster_itm_6': {
-		en: 'On "Обратные вызовы" site<br/><strong>Payment notification</strong>: http://qstoq.me/v1/paymaster/{{s1}}, POST запрос<br/><strong>Success redirect</strong>: http://qstoq.me/v1/paymaster/return, метод POST<br/><strong>Failure redirect</strong>: http://qstoq.me/v1/paymaster/return, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: Off',
-		ru: 'В разделе Обратные вызовы<br/><strong>Payment notification</strong>: http://qstoq.me/v1/paymaster/{{s1}}, POST запрос<br/><strong>Success redirect</strong>: http://qstoq.me/v1/paymaster/return, метод POST<br/><strong>Failure redirect</strong>: http://qstoq.me/v1/paymaster/return, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: отключено'
+		en: 'On "Обратные вызовы" site<br/><strong>Payment notification</strong>: <mark>http://qstoq.me/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://qstoq.me/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://qstoq.me/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: Off',
+		ru: 'В разделе Обратные вызовы<br/><strong>Payment notification</strong>: <mark>http://qstoq.me/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://qstoq.me/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://qstoq.me/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: отключено'
 	},
 
 	'paymaster_itm_7': {

@@ -70,7 +70,6 @@
 }
 .hidden-input {
   position: absolute;
-  top: 0;
   left: -99999px;
 }
 .hidden-submit {
@@ -613,6 +612,13 @@ h1 {
 .qst__inp-cont:last-child {
   margin-bottom: -1px;
 }
+.qst__lbl {
+  font-size: 13px;
+  line-height: 16px;
+  float: left;
+  position: relative;
+  color: #969696;
+}
 .qst__inp-cont-in {
   font-size: 0;
   line-height: 0;
@@ -684,13 +690,17 @@ h1 {
   color: #c81414;
 }
 .qst__toggle {
-  font-size: 11px;
-  line-height: 1;
+  font-size: 0;
+  line-height: 0;
+  display: inline-block;
+}
+.qst__toggle-sp {
+  display: inline-block;
 }
 .qst__toggle_on,
 .qst__toggle_off {
   cursor: pointer;
-  color: #ffffff;
+  color: #868e96;
   text-decoration: none;
   display: inline-block;
   background: #ffffff;
@@ -699,13 +709,15 @@ h1 {
   overflow: hidden;
   border-style: solid;
   border-width: 0;
+  font-size: 11px;
+  line-height: 1;
 }
 .qst__toggle_on:hover,
 .qst__toggle_off:hover,
 .qst__toggle_on:active,
 .qst__toggle_off:active {
   text-decoration: none;
-  color: #ffffff;
+  color: #868e96;
 }
 .qst__toggle_on {
   -webkit-border-radius: 2px 0 0 2px;
@@ -719,9 +731,9 @@ h1 {
   -webkit-border-radius: 0 2px 2px 0;
   -moz-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
-  -webkit-box-shadow: inset -1px 2px 4px #505050;
-  -moz-box-shadow: inset -1px 2px 4px #505050;
-  box-shadow: inset -1px 2px 4px #505050;
+  -webkit-box-shadow: inset -1px 2px 4px #bdbdc5;
+  -moz-box-shadow: inset -1px 2px 4px #bdbdc5;
+  box-shadow: inset -1px 2px 4px #bdbdc5;
 }
 .off .qst__toggle_on {
   color: #7c848c;
@@ -737,11 +749,14 @@ h1 {
   color: #7c848c;
 }
 .off .qst__toggle_off {
-  color: #ffffff;
-  background-color: #969696;
+  color: #868e96;
+  background-color: #eeeff0;
+  border-bottom-color: #ebebed;
+  border-bottom-width: 1px;
+  padding-bottom: 5px;
 }
 .off .qst__toggle_off:hover {
-  color: #ffffff;
+  color: #868e96;
 }
 .on .qst__toggle_on {
   color: #ffffff;
@@ -1985,7 +2000,7 @@ textarea::-webkit-input-placeholder {
 }
 .popup__content {
   padding: 0;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .popup__table {
   height: 100%;
@@ -2994,13 +3009,6 @@ footer {
 }
 .itemedit__description {
   resize: none;
-}
-.qst__lbl {
-  font-size: 13px;
-  line-height: 16px;
-  float: left;
-  position: relative;
-  color: #969696;
 }
 textarea.qst__inp {
   height: 50px;
@@ -4924,169 +4932,157 @@ a.account__social-item__title:focus {
 .page-profile_withdrawal .profile__section-withdrawal-row {
   display: block;
 }
+.body__page-paysystem {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB7wAAAAKAgMAAABaj8nTAAAACVBMVEX29vj////+/v6X3x3gAAAANElEQVR4Ae3RMQ0AIAADsB3wIw3/KpCACB6ytBY6UmPudFsnz4q+8Y3vL/jGN77xjW98cwGdUAF+lVaswwAAAABJRU5ErkJggg==) top center repeat-y;
+}
 .paysystem {
   margin-bottom: 40px;
   font-size: 14px;
 }
-.paysystem__spinner {
-  width: 100%;
-  height: 66px;
-  background: url(/images/ani/spinner.gif) center center no-repeat;
+.paysystem__misc__cont {
+  padding-top: 55px;
 }
-.paysystem__info-compare {
-  line-height: 22px;
-  margin: 48px 0;
-  display: block;
+.paysystem__misc-p {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  margin: 0 40px 30px 0;
+  padding: 0;
 }
-.paysystem__assign-cont {
+.paysystem__misc-p.error {
+  color: #ec6751;
+}
+.paysystem__item-cont {
   position: relative;
+  padding-top: 35px;
+  margin-bottom: 60px;
 }
-.paysystem__assign-fader {
+.paysystem__fader {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #ffffff;
-  opacity: .8;
+  opacity: 0.1;
+  display: none;
 }
-.paysystem__payment-way {
-  padding: 16px 40px 15px;
+.loading .paysystem__fader {
+  display: block;
 }
-.paysystem__payment-way:hover {
-  background-color: #f8f8fa;
+.paysystem__item {
+  padding: 16px 20px 15px;
+  margin-right: 40px;
 }
-.paysystem__payment-way__icons {
-  width: 64px;
-  text-align: right;
-  margin-right: 16px;
+.paysystem__item:hover {
+  background-color: #f6f6f8;
+}
+.paysystem__item__toggler {
+  margin-right: 26px;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+.paysystem__item__icons {
+  margin-right: 10px;
   vertical-align: middle;
   display: inline-block;
 }
-.paysystem__payment-way__icons .qi {
+.paysystem__item__icons .qi {
   vertical-align: middle;
 }
-.paysystem__payment-way__label {
+.paysystem__item__label {
   font-size: 18px;
   line-height: 20px;
   padding: 10px 0;
   display: inline-block;
   vertical-align: middle;
 }
-.paysystem__payment-way__select {
+.paysystem__item__setup {
+  font-size: 12px;
+  line-height: 1;
+  padding: 17px 0 11px;
+  display: inline-block;
+  vertical-align: middle;
   float: right;
-  position: relative;
-  width: 200px;
 }
-.paysystem__payment-way__select-val {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  display: block;
-  padding: 10px 11px;
-  background-color: #ffffff;
+.paysystem__direct-hello {
+  position: fixed;
+  top: 118px;
+  right: 0;
+  width: 230px;
+  z-index: 1030;
+}
+.paysystem__direct-hello-in {
+  position: relative;
+  padding: 20px;
+  margin-right: 30px;
+  border: 2px solid #ec6751;
+  background: #ffffff;
+}
+.paysystem__direct-hello-in:after,
+.paysystem__direct-hello-in:before {
+  left: 100%;
+  top: 46px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.paysystem__direct-hello-in:after {
+  border-color: rgba(0, 0, 0, 0);
+  border-left-color: #ffffff;
+  border-width: 20px;
+  margin-top: -20px;
+}
+.paysystem__direct-hello-in:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-left-color: #ec6751;
+  border-width: 23px;
+  margin-top: -23px;
+}
+.paysystem__direct-hello-p {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0;
+  margin: 0 0 12px;
+}
+.paysystem__direct-hello-a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-size: normal;
+  display: inline-block;
+  text-align: center;
+  border-style: solid;
+  border-width: 0 1px 2px 0;
+  padding: 10px 40px 10px 41px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  border: 1px solid #dcdcdc;
-  border-top-color: #bebebe;
-  font-size: 14px;
-  line-height: 16px;
-  position: relative;
-}
-.paysystem__payment-way__select-val .qi {
-  margin-right: 12px;
-}
-.paysystem__payment-way__select-val .qi-ps-drop {
-  float: right;
-  margin-right: 0;
-}
-.paysystem__payment-way__select.open .paysystem__payment-way__select-ul {
+  cursor: pointer;
+  background-color: #009ee7;
+  border-color: #0077d6;
+  margin-top: 25px;
   display: block;
+  padding: 10px 9px 10px 10px;
 }
-.paysystem__payment-way__select-ul {
-  position: absolute;
-  z-index: 1000;
-  left: 0;
-  right: 0;
-  border: 1px solid #dcdcdc;
-  border-top: 0 none;
-  margin-top: -2px;
-  display: none;
-  background-color: #f6f6f8;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  padding-bottom: 10px;
+.paysystem__direct-hello-a:focus,
+.paysystem__direct-hello-a:active,
+.paysystem__direct-hello-a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
-.paysystem__payment-way__select-li {
-  font-size: 0;
-  line-height: 0;
+.paysystem__direct-hello-a:active {
+  border-width: 2px 0 0 1px;
+  padding: 8px 41px 12px 40px;
 }
-.paysystem__payment-way__select-li:hover {
-  background-color: #dcdcdc;
-}
-.paysystem__payment-way__select-li-first {
-  font-size: 0;
-  line-height: 0;
-  padding: 19px 20px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #dcdcdc;
-}
-.paysystem__payment-way__select-li-first-val {
-  display: inline-block;
-  overflow: hidden;
-  padding: 7px 14px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #dcdcdc;
-  border-bottom: 2px solid #bebebe;
-  background-color: #ffffff;
-  font-size: 14px;
-  line-height: 16px;
-}
-.paysystem__payment-way__select-li-second:hover {
-  background-color: transparent;
-}
-.paysystem__payment-way__select-li-second-val {
-  cursor: default;
-  padding: 7px 20px;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 700;
-  display: block;
-}
-.paysystem__payment-way__select-li-val {
-  font-size: 14px;
-  line-height: 16px;
-  padding: 7px 20px;
-}
-.paysystem__payment-way__select-li-val .qi {
-  margin-right: 12px;
-}
-.paysystem__payment-way__select input {
-  position: absolute;
-  top: 0;
-  left: -99999px;
-}
-.paysystem__misc-head {
-  font-size: 14px;
-  line-height: 18px;
-  margin: 26px 0 8px;
-  padding: 0;
-}
-.paysystem__misc {
-  margin-bottom: 36px;
-}
-.paysystem__misc-li {
-  font-size: 14px;
-  line-height: 26px;
+.paysystem__direct-hello-a:active {
+  padding: 8px 10px 12px 9px;
 }
 .paysystemadd__row {
   display: none;
@@ -5166,10 +5162,89 @@ a.account__social-item__title:focus {
   padding: 0;
 }
 .paysystemadd__form .qst__inp-group {
-  margin-bottom: 29px;
+  overflow: hidden;
+  border: 0 none;
+  margin-bottom: 40px;
 }
 .paysystemadd__form .qst__inp-cont {
-  background-color: #ffffff;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  height: auto;
+  margin-bottom: 26px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.paysystemadd__form .qst__inp-cont {
+  border-bottom: 0 none;
+}
+.paysystemadd__form .qst__inp-cont:last-child {
+  margin-bottom: 0;
+}
+.paysystemadd__form .qst__lbl {
+  line-height: 20px;
+  color: #242a32;
+  font-weight: 700;
+  margin-bottom: 5px;
+  clear: both;
+}
+.paysystemadd__form .qst__inp-cont-in {
+  margin-left: 0;
+  overflow: hidden;
+  display: block;
+  clear: both;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bebebe #dcdcdc #dcdcdc #dcdcdc;
+}
+.paysystemadd__form .qst__inp {
+  resize: none;
+}
+.paysystemadd__form .qst__inp {
+  border: none;
+  font-size: 13px;
+  line-height: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: #242a32;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  outline: none;
+  padding: 11px;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: left;
+  background-color: transparent;
+}
+.paysystemadd__form .qst__inp:focus {
+  color: #242a32;
+}
+.paysystemadd__form .qst__inp:disabled {
+  color: #969696;
+}
+.paysystemadd__form .qst__inp:-moz-placeholder {
+  color: #969696;
+}
+.paysystemadd__form .qst__inp::-moz-placeholder {
+  color: #969696;
+}
+.paysystemadd__form .qst__inp:-ms-input-placeholder {
+  color: #969696;
+}
+.paysystemadd__form .qst__inp::-webkit-input-placeholder {
+  color: #969696;
 }
 .paysystemadd__form-submit-hidden {
   font-size: 0;

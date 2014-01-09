@@ -70,7 +70,6 @@
 }
 .hidden-input {
   position: absolute;
-  top: 0;
   left: -99999px;
 }
 .hidden-submit {
@@ -511,6 +510,13 @@ h1 {
 .qst__inp-cont:last-child {
   margin-bottom: -1px;
 }
+.qst__lbl {
+  font-size: 13px;
+  line-height: 16px;
+  float: left;
+  position: relative;
+  color: #969696;
+}
 .qst__inp-cont-in {
   font-size: 0;
   line-height: 0;
@@ -582,13 +588,17 @@ h1 {
   color: #c81414;
 }
 .qst__toggle {
-  font-size: 11px;
-  line-height: 1;
+  font-size: 0;
+  line-height: 0;
+  display: inline-block;
+}
+.qst__toggle-sp {
+  display: inline-block;
 }
 .qst__toggle_on,
 .qst__toggle_off {
   cursor: pointer;
-  color: #ffffff;
+  color: #868e96;
   text-decoration: none;
   display: inline-block;
   background: #ffffff;
@@ -597,13 +607,15 @@ h1 {
   overflow: hidden;
   border-style: solid;
   border-width: 0;
+  font-size: 11px;
+  line-height: 1;
 }
 .qst__toggle_on:hover,
 .qst__toggle_off:hover,
 .qst__toggle_on:active,
 .qst__toggle_off:active {
   text-decoration: none;
-  color: #ffffff;
+  color: #868e96;
 }
 .qst__toggle_on {
   -webkit-border-radius: 2px 0 0 2px;
@@ -617,9 +629,9 @@ h1 {
   -webkit-border-radius: 0 2px 2px 0;
   -moz-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
-  -webkit-box-shadow: inset -1px 2px 4px #505050;
-  -moz-box-shadow: inset -1px 2px 4px #505050;
-  box-shadow: inset -1px 2px 4px #505050;
+  -webkit-box-shadow: inset -1px 2px 4px #bdbdc5;
+  -moz-box-shadow: inset -1px 2px 4px #bdbdc5;
+  box-shadow: inset -1px 2px 4px #bdbdc5;
 }
 .off .qst__toggle_on {
   color: #7c848c;
@@ -635,11 +647,14 @@ h1 {
   color: #7c848c;
 }
 .off .qst__toggle_off {
-  color: #ffffff;
-  background-color: #969696;
+  color: #868e96;
+  background-color: #eeeff0;
+  border-bottom-color: #ebebed;
+  border-bottom-width: 1px;
+  padding-bottom: 5px;
 }
 .off .qst__toggle_off:hover {
-  color: #ffffff;
+  color: #868e96;
 }
 .on .qst__toggle_on {
   color: #ffffff;

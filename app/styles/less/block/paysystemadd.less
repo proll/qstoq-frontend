@@ -113,53 +113,88 @@
 			}
 		}
 
-	.paysystemadd__form {
-		margin: 0;
-		padding: 0;
-
-		.qst__inp-group {
-			margin-bottom: 29px;
-		}
-
-			.qst__inp-cont {
-				background-color: @white;
-			}
-	}
 
 
 .paysystemadd__form {
-	// margin: 40px 40px 0;
-	// padding-top: 3px;
+	margin: 0;
+	padding: 0;
 
-// 	&-h {
-// 		padding: 0;
-// 		margin: 0 0 17px -1px;
-// 		font-weight: 700;
-// 		font-size: 18px;
-// 		line-height: 20px;
-// 	}
+	.qst__inp-group {
+		overflow: hidden;
+		border: 0 none;
+		margin-bottom: 40px;
+	}
 
-// 	&-toggler {
-// 		float: right;
-// 		line-height: 24px;
-// 		color: #aeb6be;
-// 	}
+		.qst__inp-cont {
+			font-size: 0;
+			line-height: 0;
+			padding: 0;
+			height: auto;
+			margin-bottom: 26px;
+			.user-select(none);
 
-// 	.qst__inp-group {
-// 		background-color: @white;
-// 	}
+			& {
+				border-bottom: 0 none;
+			}
 
-// 		.qst__inp-cont {
-// 			padding: 12px 10px 13px;
-// 		}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 
-// 		& &-inp-name-cont {
-// 			.transition(all .2s);
-// 			height: 0;
-// 			padding: 0 10px 0;
-// 			border-width: 0;
-// 			overflow: hidden;
-// 		}
+		.qst__lbl {
+			line-height: 20px;
+			color: @textColor;
+			font-weight: 700;
+			margin-bottom: 5px;
+			clear: both;
+		}
+
+
+		.qst__inp-cont-in {
+			margin-left: 0;
+			overflow: hidden;
+			display: block;
+			clear: both;
+			.border-radius(2px);
+			background: @white;
+			border-width: 1px;
+			border-style: solid;
+			border-color: @grayLight10 @grayLight1 @grayLight1 @grayLight1;
+		}
+
+			.qst__inp {
+				resize:none;
+				& {
+					border: none;
+					font-size: 13px;
+					line-height: 14px;
+					-webkit-font-smoothing: antialiased;
+
+					color: @textColor;
+					display: inline-block;
+					width: 100%;
+					vertical-align: top;
+					outline: none;
+					padding: 11px;
+					.transition(color 0.3s);
+					.box-sizing(border-box);
+
+					text-align: left;
+					background-color: transparent;
+				}
+				&:focus {
+					color: @textColor;
+				}
+				&:disabled {
+					color: @grayLight;
+				}
+				.placeholder(@grayLight);
+			}	
+
+
+
+
 
 	&-submit-hidden {
 		.hidden-submit;
@@ -184,24 +219,9 @@
 			opacity: 0;
 		}
 	}
-
-
-// 	&-user-agreement {
-// 		font-size: 12px;
-// 		line-height: 16px;
-// 		width: 320px;
-// 		margin-bottom: 27px;
-// 	}
-
 }
 
-
-	// .paysystemadd__toggle {
-	// 	font-size: 13px;
-	// }
-
 // // Errors
-
 .error {
 	.paysystemadd__form {
 		&-submit {
@@ -233,51 +253,3 @@
 		display: block;
 	}
 }
-
-
-
-
-// // States 
-// .signin {
-// 	.auth__sign {
-// 		&-h {
-// 			&_signin {
-// 				display: block;
-// 			}
-// 			&_signup {
-// 				display: none;
-// 			}
-// 		}
-
-// 		&-toggler {
-// 			&_signin {
-// 				display: none;
-// 			}
-
-// 			&_signup {
-// 				display: static;
-// 			}
-// 		}
-
-// 		// &-inp-name-cont {
-// 		// 	display: none;
-// 		// }
-
-// 		&-user-agreement {
-// 			display: none;
-// 		}
-
-// 		&-submit {
-// 			&_signin {
-// 				display: inline-block;
-// 			}
-// 			&_signup {
-// 				display: none;
-// 			}
-// 		}
-// 	}
-
-// 	.qst__inp-group {
-// 		margin-bottom: 50px;
-// 	}
-// }

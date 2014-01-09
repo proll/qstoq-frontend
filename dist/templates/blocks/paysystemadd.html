@@ -13,9 +13,7 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.webmoney_r.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="webmoney_active" data-name="active" value="1"{{#ifEq settings.paysys.webmoney_r.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="hidden" name="webmoney_r_active" data-name="active" value="1">
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
@@ -65,9 +63,7 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.webmoney_z.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="webmoney_active" data-name="active" value="1"{{#ifEq settings.paysys.webmoney_z.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="hidden" name="webmoney_z_active" data-name="active" value="1">
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
@@ -117,10 +113,9 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.webmoney_e.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="webmoney_active" data-name="active" value="1"{{#ifEq settings.paysys.webmoney_e.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="checkbox" class="hidden-input" name="webmoney_e_active" data-name="active" value="1" checked="checked">
 					<div class="qst__inp-group">
+						<input type="hidden" name="webmoney_e_active" data-name="active" value="1">
 						<div class="qst__inp-cont">
 							<label>
 								<span class="qst__lbl">{{_ 'webmoney_merchant_id' 'paysystemadd'}}</span>
@@ -131,7 +126,7 @@
 						</div>
 						<div class="qst__inp-cont">
 							<label>
-								<span class="qst__lbl">{{_ 'webmoney_z_purse_id' 'paysystemadd'}}</span>
+								<span class="qst__lbl">{{_ 'webmoney_e_purse_id' 'paysystemadd'}}</span>
 								<div class="qst__inp-cont-in">
 									<input type="text" class="qst__inp" name="webmoney_purse_id" data-name="purse_id" value="{{#if settings.paysys.webmoney_e}}{{settings.paysys.webmoney_e.purse_id}}{{/if}}">
 								</div>
@@ -171,9 +166,7 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.assist.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="assist_active" data-name="active" value="1"{{#ifEq settings.paysys.assist.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="hidden" name="assist_active" data-name="active" value="1">
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
@@ -232,9 +225,7 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.qiwi.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="qiwi_active" data-name="active" value="1"{{#ifEq settings.paysys.qiwi.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="hidden" name="qiwi_active" data-name="active" value="1">
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
@@ -276,9 +267,7 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.paypal.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="paypal_active" data-name="active" value="1"{{#ifEq settings.paysys.paypal.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="hidden" name="paypal_active" data-name="active" value="1">
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
@@ -323,9 +312,7 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.robokassa.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="robokassa_active" data-name="active" value="1"{{#ifEq settings.paysys.robokassa.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="hidden" name="robokassa_active" data-name="active" value="1">
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>
@@ -377,9 +364,7 @@
 			</div>
 			<div class="span5">
 				<form action="" class="paysystemadd__form">
-					<div class="qst__inp-cont_empty">
-						<label class="paysystemadd__toggle qst__toggle{{#ifEq settings.paysys.paymaster.active 1}} on{{else}} off{{/ifEq}}"><span class="qst__toggle-sp link__sp"><span class="qst__toggle-a qst__toggle_on">{{_ 'On' 'misc'}}</span><span class="qst__toggle-a qst__toggle_off">{{_ 'Off' 'misc'}}</span></span><input type="checkbox" class="hidden-input qst__toggle__inp" name="paymaster_active" data-name="active" value="1"{{#ifEq settings.paysys.paymaster.active 1}} checked="checked"{{/ifEq}}></label>
-					</div>
+					<input type="hidden" name="paymaster_active" data-name="active" value="1">
 					<div class="qst__inp-group">
 						<div class="qst__inp-cont">
 							<label>

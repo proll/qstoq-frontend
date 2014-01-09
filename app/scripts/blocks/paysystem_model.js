@@ -1,6 +1,6 @@
 qst.PaySystem = Backbone.Model.extend({
 	
-	url: '/v1/links/',
+	url: '/v1/users/link/',
 	
 	defaults: {
 		user: 0,
@@ -8,123 +8,53 @@ qst.PaySystem = Backbone.Model.extend({
 		loading: 	false,
 		sleeped: 	false,
 
+		settings: {},
+
 		paysys: [
-			'robokassa',
-			'assist',
-			'paymaster',
-			'paypal',
-			'webmoney_r',
-			'webmoney_z',
-			'webmoney_e',
-			'qiwi',
-		],
-
-		conf: [
 			{
-				key: 'cards',
-				icons: [
-					'mastercard',
-					'visa'
-				],
-
-				systems: [
-					'robokassa',
-					'assist',
-					'paymaster',
-					'paypal',
-					'webmoney',
-					'qiwi',
-				]
+				key: 'assist',
+				icons: ['assist'],
+				toggle: false
 			},
 			{
-				key: 'phone',
-				icons: [
-					'beeline',
-					'megafon',
-					'mts'
-				],
-
-				systems: [
-					'robokassa',
-					'assist',
-					'paymaster',
-					'paypal',
-					'webmoney',
-					'qiwi',
-				]
+				key: 'paymaster',
+				icons: ['paymaster'],
+				toggle: false
 			},
 			{
-				key: 'qiwiw',
-				icons: [
-					'qiwi',
-				],
-
-				systems: [
-					'robokassa',
-					'assist',
-					'paymaster',
-					'paypal',
-					'webmoney',
-					'qiwi',
-				]
+				key: 'robokassa',
+				icons: ['robokassa'],
+				toggle: false
 			},
 			{
-				key: 'yd',
-				icons: [
-					'yd',
-				],
-
-				systems: [
-					'robokassa',
-					'assist',
-					'paymaster',
-					'paypal',
-					'webmoney',
-					'qiwi',
-				]
+				key: 'qiwi',
+				icons: ['qiwi'],
+				toggle: false
 			},
 			{
-				key: 'webmoney',
-				icons: [
-					'webmoney',
-				],
-
-				systems: [
-					'robokassa',
-					'assist',
-					'paymaster',
-					'paypal',
-					'webmoney',
-					'qiwi',
-				]
+				key: 'webmoney_r',
+				icons: ['webmoney'],
+				toggle: false
+			},
+			{
+				key: 'webmoney_z',
+				icons: ['webmoney'],
+				toggle: false
+			},
+			{
+				key: 'webmoney_e',
+				icons: ['webmoney'],
+				toggle: false
 			},
 			{
 				key: 'paypal',
-				icons: [
-					'paypal',
-				],
-
-				systems: [
-					'robokassa',
-					'assist',
-					'paymaster',
-					'paypal',
-					'webmoney',
-					'qiwi',
-				]
+				icons: ['paypal'],
+				toggle: false
 			},
-		]
+		],
 	},
 
 	initialize: function (options) {
-		this.on("load:success", function (obj) {
-			this.set("loading", false);
-		}, this);
-		this.on("load:error", function () {
-			console.error("paysystem:load:error")
-			this.set("loading", false);
-		}, this)
-
 		this.view = new qst.PaySystemView({
 			model: this
 		});
@@ -137,10 +67,78 @@ qst.PaySystem = Backbone.Model.extend({
 	},
 
 
-	activate: function() {
-		this.set("offset", this.defaults.offset);
-		this.set("sleeped", false);
-		this.trigger("load:success");
+	activate: function(options) {
+		this.set(options);
+		if(!!options && options.settings) {
+			var paysys_connected = options.settings.paysys,
+				cnt = 0,
+				active = 0,
+				that = this;
+			_.forEach(this.get('paysys'), function(val, i) {
+				if(paysys_connected[val.key]) {
+					cnt++;
+					that.get('paysys')[i].toggle = parseInt(paysys_connected[val.key].active);
+					if(that.get('paysys')[i].toggle) {
+						active++;	
+					}
+				}
+			})
+
+			if(cnt === 0) {
+				this.set('state', 'no');
+			} else if(active === 1) {
+				this.set('state', 'one');
+			}
+
+			if(cnt !== 0 && active===0) {
+				this.set('state', 'noactive');
+			}
+
+			this.trigger("ready");
+		} else {
+			this.showError(qst.localize('Something went wrong...', 'misc'));	
+		}
+	},
+
+
+	toggleSystem: function (pay_system) {
+		// DIRTY
+		var system = pay_system;
+		if(system.indexOf('webmoney') !== -1) {
+			system = 'webmoney';
+		}
+
+		var paysys_connected = this.get('settings').paysys
+		if(!paysys_connected[pay_system]) {
+			return false;
+		} else {
+			// invert active flag
+			paysys_connected[pay_system].active = !parseInt(paysys_connected[pay_system].active)+0;
+		}
+
+		var options = options || {};
+		options.url = this.url + system;
+		options.type = 'post';
+		options.data = paysys_connected[pay_system] || {};
+		options.success  	= _.bind(this.success, this);
+		options.error  		= _.bind(this.error, this);
+
+		this.trigger('toggle:start');
+		return Backbone.Model.prototype.fetch.call(this, options);
+	},
+
+	success: function (model, response, options) {
+		response = _.toJSON(response);
+		this.set(response.result);
+		if(response.success) {
+			this.trigger('toggle:success', response.result.user);
+		} else {
+			this.trigger('toggle:error');
+		}
+	},
+
+	error: function (model, xhr, options) {
+		this.trigger('toggle:error');
 	},
 
 	sleep: function() {
