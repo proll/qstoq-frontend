@@ -429,12 +429,10 @@ h1 {
 }
 .lnk,
 .unm {
-  color: #d34141;
   text-decoration: none;
 }
 .lnk:hover,
 .unm:hover {
-  color: #d34141;
   text-decoration: underline;
 }
 .lazy {

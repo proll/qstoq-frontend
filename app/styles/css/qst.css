@@ -531,12 +531,10 @@ h1 {
 }
 .lnk,
 .unm {
-  color: #d34141;
   text-decoration: none;
 }
 .lnk:hover,
 .unm:hover {
-  color: #d34141;
   text-decoration: underline;
 }
 .lazy {
@@ -5325,15 +5323,13 @@ a.account__social-item__title:focus {
 .error-page__list,
 .error-page__description {
   margin-top: 40px;
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 20px;
   color: #282828;
 }
 .error-page__list-item {
   margin-bottom: 10px;
-}
-.error-page__list-item:before {
-  content: '•	';
+  list-style: none;
 }
 .up-scroller {
   background: url("/images/sprites/i-9648f.png") no-repeat 0 0;
