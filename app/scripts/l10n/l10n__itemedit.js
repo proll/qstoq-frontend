@@ -102,16 +102,6 @@ qst.l10n.itemedit = {
 		ru: 'Ссылка для оплаты'
 	},
 
-	'Add your<br/>message on the receipt': {
-		en: 'Add your<br/>message on the receipt',
-		ru: 'Добавить ваше<br/>сообщение на чеке'
-	},
-
-	'Edit your message on the receipt': {
-		en: 'Edit your message on the receipt',
-		ru: 'Редактировать ваше сообщение на чеке'
-	},
-
 	'Cancel': {
 		en: 'Cancel',
 		ru: 'Отменить'
@@ -121,5 +111,4 @@ qst.l10n.itemedit = {
 		en: 'Save',
 		ru: 'Сохранить'
 	}
-
 }

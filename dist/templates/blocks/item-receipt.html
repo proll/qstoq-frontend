@@ -1,0 +1,41 @@
+<div class="receipt__form-add-comment">
+	<i class="is is-com receipt__form-add-comment__icn"></i>
+	<ul class="receipt__form-add-comment__list">
+		<li class="receipt__form-add-comment__add"><a href="add" rel="nofollow" class="receipt__form-add-comment-a">{{_ 'Add your<br/>message on the receipt' 'itemreceipt'}}</a></li>
+		<li class="receipt__form-add-comment__edit"><a href="edit" rel="nofollow" class="receipt__form-add-comment-a">{{_ 'Edit your message on the receipt' 'itemreceipt'}}</a></li>
+	</ul>
+</div>
+<div class="receipt__cont">
+	<div class="receipt__form-t"></div>
+	<div class="receipt__form">
+		<div class="receipt__form-col">
+			<span class="receipt__form-line">{{_ 'Purchased' 'itemreceipt'}}</span>
+			<span class="receipt__form-price"><span class="receipt__form-price-val">{{_number_format price }}</span>&nbsp;{{_ currency 'currency'}}</span>
+			<h1 class="receipt__form-h"><a href="{{ url_short }}" target="_blank">{{ name }}</a></h1>
+			{{#if url}}
+				{{#ifEq external '0'}}
+					<span class="receipt__form__buy-btn"><a class="receipt__form__buy-btn-in" href="{{url}}" target="_blank">{{_ 'Get file' 'itemreceipt'}}</a></span>
+				{{else}}
+					<span class="receipt__form__buy-btn"><a class="receipt__form__buy-btn-in" href="{{url}}" target="_blank">{{_ 'Get link' 'itemreceipt'}}</a></span>
+				{{/ifEq}}
+			{{/if}}
+			<div class="receipt__form-receipt_desc-group qst__inp-group">
+				<div class="receipt__form-receipt_desc-cont qst__inp-cont">
+					<textarea value="" class="receipt__form-receipt_desc qst__inp" name="receipt_comment">{{ receipt_comment }}</textarea>
+				</div>
+				<ul class="receipt__form-receipt_desc-action-list"><li class="receipt__form-receipt_desc-action receipt__form-receipt_desc-action_cancel"><a href="receipt-cancel" rel="nofollow" class="receipt__form-receipt_desc-action-a">{{_ 'Cancel' 'itemreceipt'}}</a></li><li class="receipt__form-receipt_desc-action receipt__form-receipt_desc-action_save"><a href="receipt-save" rel="nofollow" class="receipt__form-receipt_desc-action-a">{{_ 'Save' 'itemreceipt'}}</a></li>
+				</ul>
+			</div>
+			<p class="receipt__form-desc">{{ receipt_comment }}</p>
+			<p class="receipt__form-desc-static">{{_ 'All purchasement info we&#39;ve sent to your email' 'itemreceipt'}}</p>
+			<ul class="receipt__share">
+				<li class="receipt__share-itm receipt__share-itm-title">{{_ 'Share' 'itemreceipt'}}</li>
+				<li class="receipt__share-itm"><a class="receipt__share-itm-a" rel="nofollow" href="vk"><i class="is is-shc-vk"></i></a></li>
+				<li class="receipt__share-itm"><a class="receipt__share-itm-a" rel="nofollow" href="facebook"><i class="is is-shc-fb"></i></a></li>
+				<li class="receipt__share-itm"><a class="receipt__share-itm-a" rel="nofollow" href="twitter"><i class="is is-shc-tw"></i></a></li>
+			</ul>
+		</div>
+		<div class="receipt__service-desc"><a href="http://qstoq.me" target="_blank">Qstoq</a> &mdash; {{_ 'selling in lightning speed' 'itemreceipt'}}</div>
+	</div>
+	<div class="receipt__form-b"></div>
+</div>

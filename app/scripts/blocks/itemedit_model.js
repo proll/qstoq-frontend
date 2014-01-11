@@ -3,6 +3,7 @@ qst.ItemEdit = Backbone.Model.extend({
 	url: '/v1/links/',
 	url_media: '/v1/medias/',
 	preview: null,
+	itemreceipt: null,
 	
 	defaults: {
 		state: '',// link / nothing / file
@@ -18,20 +19,17 @@ qst.ItemEdit = Backbone.Model.extend({
 		// "url_qr": "https://host.ru/assets/qr-link-XXX.png",
 		// "counter_view": 25, // количество просмотров
 		// "counter_ship": 19, // количество покупок
-		// "active": 1
+		// "active": 19
 		// "user": {
 		// 		"name": "some",
 		// 		"id": <user_id>,
 		// },
-		receipt_comment: ''
 	},
 
 	initialize: function (options) {
 		this.view = new qst.ItemEditView({
 			model:this
 		});
-
-		this.on('change:receipt_comment', this.saveReceipt, this);
 	},
 
 	deleteItem: function() {
@@ -66,22 +64,6 @@ qst.ItemEdit = Backbone.Model.extend({
 			this.set('state', 'link');
 		}
 
-		var opts = {},
-			preview = this.get('preview'),
-			receipt_obj = false,
-			that = this;
-
-		_.forEach(preview, function(el, index) {
-			if(el.identifier === 'receipt_comment') {
-				receipt_obj = el;
-			}
-		})
-		if(!!receipt_obj
-			&& !!receipt_obj.data) {
-			this.set('receipt_comment_id', receipt_obj.id);
-			this.set('receipt_comment', receipt_obj.data, {silent: true});
-		} 
-
 		this.set('price_pwyw', parseInt(this.get('price_pwyw')));
 		this.set('url_short_path', this.get('url_short').split('http://')[1]);
 
@@ -113,6 +95,38 @@ qst.ItemEdit = Backbone.Model.extend({
 		// console.log(opts)
 		this.preview = new qst.PreviewUpload(opts)
 		this.view.addPreviewUpload(this.preview);
+
+
+
+		var receipt_obj = false;
+		_.forEach(preview, function(el, index) {
+			if(el.identifier === 'receipt_comment') {
+				receipt_obj = el;
+			}
+		})
+
+		var data = this.toJSON();
+		opts = {
+			link_id: this.get('id'),
+			active: 		data.active,
+			name: 			data.name,
+			description: 	data.description,
+			url: 			data.url,
+			external: 		this.get('state') !== 'file',
+			url_short: 		data.url_short,
+			price: 			data.price,
+			price_pwyw: 	data.price_pwyw,
+			currency: 		data.currency,
+			ship_limit: 	data.ship_limit
+		}
+		if(!!receipt_obj
+			&& !!receipt_obj.data) {
+			opts.receipt_comment = receipt_obj.data;
+			opts.receipt_comment_id = receipt_obj.id;
+		}
+
+		this.itemreceipt = new qst.ItemReceipt(opts)
+		this.view.addItemReceipt(this.itemreceipt);
 	},
 
 	fetch: function (options) {
@@ -143,88 +157,6 @@ qst.ItemEdit = Backbone.Model.extend({
 
 	error: function (model, xhr, options) {
 		this.trigger('load:error');
-	},
-
-	upload: function(file) {
-		if(file) {
-			this.view.updateFileName(file.name);
-
-			var that = this,
-				data = new FormData();
-				data.append('input_file', file);
-
-			// the $.ajax() method and the like doesn’t allow for it and 
-			// I really want to display an upload progress bar, dammit!
-			// course of this we have to use XHR
-			var xhr = new XMLHttpRequest();
-
-			xhr.upload.addEventListener('progress',function(ev){
-				that.view.updateFileProcess(ev.loaded/ev.total);
-			}, false);
-
-			xhr.onreadystatechange = function(ev){
-				if (xhr.readyState == 4) {
-					if(xhr.status == 200) {
-						var data = this.response;
-						if (typeof(data) == 'string') {
-						  	data = $.parseJSON(data);
-						}
-						if(!!data.success) {
-							that.view.updateFileProcess(1);
-							that.set('url', data.result.data)
-						} else {
-							that.trigger('add:error');
-						}
-					} else {
-						console.log(file.name + ":" + "ERROR: " + xhr.readyState + ":" + xhr.status);
-					}
-				}
-			};
-			xhr.open('POST', this.url_media + '?token='+qst.user.get("token"), true);
-			xhr.send(data);
-		}
-	},
-
-	saveReceipt: function(model, value) {
-		// поддержка формата цен на серверной стороне
-		var data = this.toJSON();
-
-		options = {};
-		if(!!$.trim(value)) {
-			options.url = this.url_media + '?identifier=receipt_comment&link_id=' + this.get('id');
-			options.type = 'post';
-			options.data = options.data || {
-				data: 		value,
-			};
-		} else {
-			options.url = this.url_media + this.get('receipt_comment_id');
-			options.type = 'delete';
-			options.data = {}
-		}
-		options.success  	= _.bind(this.saveReceiptSuccess, this);
-		options.error  		= _.bind(this.saveReceiptError, this);
-
-		this.trigger('savereceipt:start');
-
-		return Backbone.Model.prototype.fetch.call(this, options);
-	},
-
-
-	saveReceiptSuccess: function (model, response, options) {
-		response = _.toJSON(response);
-		
-		if(response.success) {
-			if(!!response.result && !!response.result.id) {
-				this.set('receipt_comment_id', response.result.id);
-			}
-			this.trigger('savereceipt:success');
-		} else {
-			this.trigger('savereceipt:error');
-		}
-	},
-
-	saveReceiptError: function (model, xhr, options) {
-		this.trigger('savereceipt:error');
 	},
 
 	save: function (options) {
@@ -266,6 +198,81 @@ qst.ItemEdit = Backbone.Model.extend({
 	},
 
 
+	sightUpdateName: function(name) {
+		this.itemreceipt.set({
+			name: name
+		})
+	},
+
+	sightUpdatePrice: function(price) {
+		this.itemreceipt.set({
+			price: price
+		})
+	},
+
+	sightUpdateState: function(state) {
+		if(this.itemreceipt) {
+			if(state === 'nothing') {
+				this.itemreceipt.set({
+					url: '',
+					external: 1
+				})
+			} else {
+				this.itemreceipt.set({
+					url: this.get('url'),
+					external: state!=='file'
+				})
+			}
+		}
+	},
+
+	sightUpdateUrl: function(url) {
+		this.itemreceipt.set({
+			url: url
+		})
+	},
+
+	// upload file on state=file
+	upload: function(file) {
+			if(file) {
+					this.view.updateFileName(file.name);
+
+					var that = this,
+							data = new FormData();
+							data.append('input_file', file);
+
+					// the $.ajax() method and the like doesn’t allow for it and 
+					// I really want to display an upload progress bar, dammit!
+					// course of this we have to use XHR
+					var xhr = new XMLHttpRequest();
+
+					xhr.upload.addEventListener('progress',function(ev){
+							that.view.updateFileProcess(ev.loaded/ev.total);
+					}, false);
+
+					xhr.onreadystatechange = function(ev){
+							if (xhr.readyState == 4) {
+									if(xhr.status == 200) {
+											var data = this.response;
+											if (typeof(data) == 'string') {
+													  data = $.parseJSON(data);
+											}
+											if(!!data.success) {
+													that.view.updateFileProcess(1);
+													that.set('url', data.result.data)
+											} else {
+													that.trigger('add:error');
+											}
+									} else {
+											console.log(file.name + ":" + "ERROR: " + xhr.readyState + ":" + xhr.status);
+									}
+							}
+					};
+					xhr.open('POST', '/v1/medias/?token='+qst.user.get("token"), true);
+					xhr.send(data);
+			}
+	},
+
 	activate: function() {
 		this.set("sleeped", false);
 	},
@@ -274,6 +281,9 @@ qst.ItemEdit = Backbone.Model.extend({
 		this.set("sleeped", true);
 		if(this.preview) {
 			this.preview.sleep();
+		}
+		if(this.itemreceipt) {
+			this.itemreceipt.sleep();
 		}
 	},
 

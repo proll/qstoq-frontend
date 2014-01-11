@@ -1,0 +1,211 @@
+.showcase {
+	&__window {
+		font-family: @sans0FontFamily;
+		width: 100%;
+		border: 1px solid @grayLight1;
+		background: @grayLighter;
+		.box-shadow(0 4px 8px rgba(0,0,0,.1));
+		.border-radius(6px);
+		.box-sizing(border-box);
+		margin: 0 auto 17px;
+		position: relative;
+	}
+
+		&__head {
+			&_lt {
+				width: 84px;
+				height: 41px;
+				background: url(/images/qb/wind-lt.png) no-repeat;
+				float: left;
+			}
+			&_ct {
+				height: 41px;
+				background: url(/images/qb/wind-ct.png) repeat-x;
+				margin: 0 29px 0 84px;
+			}
+			&_rt {
+				width: 29px;
+				height: 41px;
+				background: url(/images/qb/wind-rt.png) no-repeat;
+				float: right;
+			}
+
+			&-title {
+				color: @grayLighter;
+				font-size: 10px;
+				line-height: 11px;
+				display: inline-block;
+				margin: (41px - 11px)/2 0;
+			}
+		}
+
+		&__cont {
+			margin: 50px 39px 60px;
+			overflow: hidden;
+		}
+
+			&__form {
+				width: (@gridGutterWidth + @gridColumnWidth)*9;
+				margin: 0 auto;
+				.border-radius(2px);
+				overflow: hidden;
+				background: @white url(/images/qb/dashed-border.png) (@gridGutterWidth + @gridColumnWidth)*5 top repeat-y;
+				.box-shadow(0 1px 10px rgba(0,0,0,.14));
+
+				&__col1 {
+					padding: 32px @gridGutterWidth 45px;
+					.box-sizing(border-box);
+					float: left;
+					width: (@gridGutterWidth + @gridColumnWidth)*5;
+					vertical-align: top;
+				}
+
+					&__img-cont {
+						width: 320px;
+						height: 180px;
+						vertical-align: top;
+						margin-bottom: 18px;
+					}
+
+						&__img {
+							.background-size(cover);
+							width: 320px;
+							height: 180px;
+						}
+
+					&-h {
+						font-weight: bold;
+						font-size: 18px;
+						line-height: 24px;
+						margin: 0 0 17px 0;
+						padding: 0;
+					}
+
+					&-desc {
+						font-size: 14px;
+						line-height: 20px;
+						margin: 0 0 27px 0;
+						padding: 0;
+					}
+
+				&__col2 {
+					padding: 32px @gridGutterWidth 45px;
+					margin-left: (@gridGutterWidth + @gridColumnWidth)*5;
+					.box-sizing(border-box);
+				}
+					&-price {
+						display: inline-block;
+						font-size: 18px;
+						line-height: 30px;
+						font-style: italic;
+						margin-bottom: 20px;
+					}
+
+					&-email-group {
+						margin-bottom: 8px;
+					}
+
+				.itemedit &-email-cont {
+						padding: 7px 8px;
+					}
+
+					&-price-desc {
+						font-size: 11px;
+						line-height: 1.4;
+						padding: 0;
+						margin: 0 0 28px;
+					}
+
+
+					&__buy-btn {
+						&-in {
+							.btn;
+							.btn-red;
+							font-size: 16px;
+							line-height: 20px;
+							font-weight: 700;
+						}
+					}
+
+				&__bottom-row {
+					background-color: #404246;
+					overflow: hidden;
+					font-size: 11px;
+					line-height: 14px;
+					color: #82888c;
+					clear: both;
+
+					a {
+						color: #82888c;
+						text-decoration: underline;
+						&:hover {
+							color: #82888c;
+							text-decoration: underline;
+						}
+					}
+
+					&__col1 {
+						.box-sizing(border-box);
+						float: left;
+						width: (@gridGutterWidth + @gridColumnWidth)*5;
+						vertical-align: top;
+						text-align: left;
+						padding: 14px 20px;
+					}
+
+					&__col2 {
+						.box-sizing(border-box);
+						margin-left: (@gridGutterWidth + @gridColumnWidth)*5;
+						padding: 14px 20px;
+					}
+				}
+
+				&__safe {
+					&-icn {
+						vertical-align: top;
+					}
+					&-desc {
+						text-transform: uppercase;
+						font-size: 10px;
+						margin-left: 6px;
+					}
+				}
+			}
+
+			&__share {
+				list-style: none;
+				&-itm {
+					display: inline-block;
+					// margin-right: -1px;
+					font-size: 11px;
+					line-height: 20px;
+					color: @grayDarker1;
+
+					&-a {
+						display: inline-block;
+						border: 1px solid @white;
+						font-size: 0;
+						line-height: 0;
+						.border-radius(2px);
+
+						&:hover,
+						&:active,
+						&:focus {
+							border: 1px solid @grayLighter;
+						}
+					}
+
+					.is {
+						vertical-align: middle;
+					}
+				}
+			}
+
+			&__desc {
+				font-size: 11px;
+				line-height: 13px;
+				padding: 0;
+				margin: 0 0 94px;
+				color: @grayLight;
+			}
+}
