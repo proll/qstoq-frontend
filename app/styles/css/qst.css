@@ -4948,7 +4948,7 @@ a.account__social-item__title:focus {
   display: block;
 }
 .body__page-paysystem {
-  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB7wAAAAKAgMAAABaj8nTAAAACVBMVEX29vj////+/v6X3x3gAAAANElEQVR4Ae3RMQ0AIAADsB3wIw3/KpCACB6ytBY6UmPudFsnz4q+8Y3vL/jGN77xjW98cwGdUAF+lVaswwAAAABJRU5ErkJggg==) top center repeat-y;
+  background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAADIAAAAAQAgMAAACpLA3cAAAACVBMVEX29vj////+/v6X3x3gAAAAPklEQVR4Ae3TAQkAIBAEsBOuov2jaApBnq3DmtfYmW2dzNUAgsB3QUAQEAQEAQQBQUAQEAQEAUFAEBAEBAEu0GcBljUWIXcAAAAASUVORK5CYII=') top center repeat-y;
 }
 .paysystem {
   margin-bottom: 40px;

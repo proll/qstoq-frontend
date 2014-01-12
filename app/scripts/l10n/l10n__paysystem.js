@@ -27,44 +27,44 @@ qst.l10n.paysystem = {
 
 	'robokassa': {
 		en: 'Robokassa',
-		ru: 'Робокасса'
+		ru: 'Robokassa'
 	},
 
 	'assist': {
 		en: 'Assist',
-		ru: 'Ассист'
+		ru: 'Assist'
 	},
 
 	'paymaster': {
 		en: 'Paymaster',
-		ru: 'Пэймастер'
+		ru: 'Paymaster'
 	},
 
 
 	'webmoney': {
 		en: 'Webmoney',
-		ru: 'Вебмани'
+		ru: 'Webmoney'
 	},
 
 
 	'webmoney_r': {
 		en: 'Webmoney R',
-		ru: 'Вебмани R'
+		ru: 'Webmoney R'
 	},
 
 	'webmoney_z': {
 		en: 'Webmoney Z',
-		ru: 'Вебмани Z'
+		ru: 'Webmoney Z'
 	},
 
 	'webmoney_e': {
 		en: 'Webmoney E',
-		ru: 'Вебмани E'
+		ru: 'Webmoney E'
 	},
 
 	'qiwi': {
 		en: 'Qiwi',
-		ru: 'Киви'
+		ru: 'Qiwi'
 	},
 
 	'paypal': {
