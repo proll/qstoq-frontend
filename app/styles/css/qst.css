@@ -2522,7 +2522,7 @@ footer {
 }
 .footer__adv {
   display: block;
-  height: 195px;
+  height: 60px;
   background-color: #f8f8fa;
 }
 .footer__menu-cont {
@@ -2754,8 +2754,12 @@ footer {
 .itemlist__col1__h2-2 {
   margin: 55px 0;
 }
+.itemlist__col1__h2-2 a {
+  vertical-align: middle;
+}
 .itemlist__col1__h2-2 .qi-view {
   margin-right: 9px;
+  vertical-align: middle;
 }
 .itemlist__col1__h2-3 {
   margin-bottom: 0;
@@ -2787,7 +2791,7 @@ footer {
   overflow: hidden;
   border: 1px solid #c7c7c7;
   border-bottom-width: 2px;
-  padding: 4px 14px 3px;
+  padding: 4px 14px 5px;
 }
 .adddialog__add:active,
 .adddialog__add:hover {
