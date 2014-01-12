@@ -2461,6 +2461,7 @@ textarea::-webkit-input-placeholder {
 }
 .navbar {
   background: #ffffff;
+  letter-spacing: 1px;
 }
 .navbar__logo {
   background: url(/images/qb/logo.png) no-repeat;
@@ -4108,7 +4109,7 @@ textarea.qst__inp {
   border-radius: 4px;
   color: #ffffff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   font-weight: 700;
   border: 3px solid #ffffff;
@@ -4229,9 +4230,9 @@ textarea.qst__inp {
 }
 .landing-section3 .landing__list-itm {
   display: inline-block;
-  width: 190px;
+  width: 230px;
   height: 178px;
-  margin-left: 40px;
+  margin-left: 0;
   vertical-align: top;
   text-align: center;
   -webkit-box-sizing: border-box;
@@ -4243,17 +4244,14 @@ textarea.qst__inp {
   transition: all 0.2s;
   font-size: 0;
   line-height: 0;
-  padding: 35px 10px 0;
+  padding: 35px 30px 0;
   border: 1px solid transparent;
 }
 .landing-section3 .landing__list-itm:hover {
-  width: 230px;
-  margin-left: 20px;
-  margin-right: -20px;
   border-color: #e8fe9e;
   margin-top: 2px;
   height: 176px;
-  padding-top: 0;
+  padding: 0 10px 0;
 }
 .landing-section3 .landing__list-itm:hover .ib {
   height: 0;
