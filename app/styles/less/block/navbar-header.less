@@ -48,3 +48,12 @@
 .navbar .nav > li {
 	border-left: 1px solid @navbarBorder;
 }
+
+.navbar .nav > li > a {
+	.transition(box-shadow .1s);
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+	.box-shadow(inset 0 0 0 3px @navbarText);
+}
