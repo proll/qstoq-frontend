@@ -64,7 +64,7 @@
 						width: 320px;
 						height: 180px;
 						vertical-align: top;
-						margin-bottom: 18px;
+						margin-bottom: 22px;
 					}
 
 						&__img {
@@ -84,7 +84,7 @@
 					&-desc {
 						font-size: 14px;
 						line-height: 20px;
-						margin: 0 0 27px 0;
+						margin: 0 0 40px 0;
 						padding: 0;
 					}
 
@@ -95,14 +95,28 @@
 				}
 					&-price {
 						display: inline-block;
-						font-size: 18px;
-						line-height: 30px;
-						font-style: italic;
-						margin-bottom: 20px;
+						font-size: 20px;
+						line-height: 32px;
+						margin: 1px 0 30px (14px - 4px - 3px);
+						padding-right: 6px;
+
+						background-color: @yellow;
+						.border-radius(2px);
+
+						&:before {
+							display: block;
+							content: ' ';
+							background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAhCAYAAADpspoyAAAAmklEQVR4Ab3VoQoCQRRGYRERhC0230yj3Ww3mib6PL6GRoMWg4j999gFvSeM8BXhsLA7c+/on19OywEHPBHk8+cvYxyRoBKukGo4wdmEa6QaTnEx4QaphjPcTLhFquGAuwl3SDWc42HCPVINF3iZsCEmvNow3Z/YkA5vVXxHcXL8WfW3w99HPwH8zPFTzs9VP8nF7uiyrb7uxzcYxOy6Q9956QAAAABJRU5ErkJggg==');
+							width: 14px;
+							height: 33px;
+							float: left;
+							margin-left: -(14px - 4px);
+						}
+
 					}
 
 					&-email-group {
-						margin-bottom: 8px;
+						margin-bottom: 6px;
 					}
 
 				.itemedit &-email-cont {
@@ -113,7 +127,7 @@
 						font-size: 11px;
 						line-height: 1.4;
 						padding: 0;
-						margin: 0 0 28px;
+						margin: 0 0 25px;
 					}
 
 
@@ -168,6 +182,7 @@
 						text-transform: uppercase;
 						font-size: 10px;
 						margin-left: 6px;
+						vertical-align: top;
 					}
 				}
 			}
@@ -179,7 +194,11 @@
 					// margin-right: -1px;
 					font-size: 11px;
 					line-height: 20px;
-					color: @grayDarker1;
+					color: #868e96;
+
+					&:first-child {
+						margin-right: 3px;
+					}
 
 					&-a {
 						display: inline-block;

@@ -345,6 +345,48 @@ function program4(depth0,data) {
   return buffer;
   });
 
+this["qst"]["Templates"]["ptemplates"]["blocks/item-showcase"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
+
+
+  buffer += "<div class=\"showcase__cont\">\n	<div class=\"showcase__form\">\n		<div class=\"showcase__form__col1\">\n			<div class=\"showcase__form__img-cont load-bg\">\n				<img src=\"/images_static/empty.png\" alt=\"\" class=\"showcase__form__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n			</div>\n			<h1 class=\"showcase__form-h\">";
+  if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</h1>\n			<p class=\"showcase__form-desc\">";
+  if (stack1 = helpers.description) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n			<ul class=\"showcase__share\">\n				<li class=\"showcase__share-itm\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "itemshowcase", options) : helperMissing.call(depth0, "_", "Share", "itemshowcase", options)))
+    + "</li>\n				<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n				<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n				<li class=\"showcase__share-itm\"><a class=\"showcase__share-itm-a\" rel=\"nofollow\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n			</ul>\n		</div>\n		<div class=\"showcase__form__col2\">\n			<span class=\"showcase__form-price\"><span class=\"showcase__form-price-val\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers._number_format || depth0._number_format),stack1 ? stack1.call(depth0, depth0.price, options) : helperMissing.call(depth0, "_number_format", depth0.price, options)))
+    + "</span>&nbsp;";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, depth0.currency, "currency", options) : helperMissing.call(depth0, "_", depth0.currency, "currency", options)))
+    + "</span>\n			<div class=\"showcase__form-email-group qst__inp-group\">\n				<div class=\"showcase__form-email-cont qst__inp-cont\">\n					<input type=\"text\" value=\"\" placeholder=\"";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "email", "itemshowcase", options) : helperMissing.call(depth0, "_", "email", "itemshowcase", options)))
+    + "\" class=\"showcase__form-email qst__inp\" disabled=\"disabled\" name=\"customer_email\">\n				</div>\n			</div>\n			<p class=\"showcase__form-price-desc\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "for notifications about your purchases<br/>and feedback", "itemshowcase", options) : helperMissing.call(depth0, "_", "for notifications about your purchases<br/>and feedback", "itemshowcase", options)))
+    + "</p>\n\n			<span class=\"showcase__form__buy-btn\"><span class=\"showcase__form__buy-btn-in\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Buy", "itemshowcase", options) : helperMissing.call(depth0, "_", "Buy", "itemshowcase", options)))
+    + "</span></span>\n		</div>\n		<div class=\"showcase__form__bottom-row\">\n			<div class=\"showcase__form__bottom-row__col1\"><a href=\"http://qstoq.me\" target=\"_blank\">Qstoq</a> &mdash; ";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "selling in lightning speed", "itemshowcase", options) : helperMissing.call(depth0, "_", "selling in lightning speed", "itemshowcase", options)))
+    + "</div>\n			<div class=\"showcase__form__bottom-row__col2\"><i class=\"is is-lock showcase__form__safe-icn\"></i><span class=\"showcase__form__safe-desc\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Safe payment", "itemshowcase", options) : helperMissing.call(depth0, "_", "Safe payment", "itemshowcase", options)))
+    + "</span></div>\n		</div>\n	</div>\n</div>";
+  return buffer;
+  });
+
 this["qst"]["Templates"]["ptemplates"]["blocks/itemedit-menu"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
