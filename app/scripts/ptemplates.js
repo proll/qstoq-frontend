@@ -351,7 +351,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
 
-  buffer += "<div class=\"showcase__cont\">\n	<div class=\"showcase__form\">\n		<div class=\"showcase__form__col1\">\n			<div class=\"showcase__form__img-cont load-bg\">\n				<img src=\"/images_static/empty.png\" alt=\"\" class=\"showcase__form__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n			</div>\n			<h1 class=\"showcase__form-h\">";
+  buffer += "<!-- 4future showcase to module -->\n<div class=\"showcase__cont\">\n	<div class=\"showcase__form\">\n		<div class=\"showcase__form__col1\">\n			<div class=\"showcase__form__img-cont load-bg\">\n				<img src=\"/images_static/empty.png\" alt=\"\" class=\"showcase__form__img lazy\" data-width=\"320\" data-height=\"180\" data-bg=\"1\"data-crop=\"1\">\n			</div>\n			<h1 class=\"showcase__form-h\">";
   if (stack1 = helpers.name) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)

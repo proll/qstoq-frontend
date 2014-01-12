@@ -49,7 +49,10 @@
 				margin: 0 auto;
 				.border-radius(2px);
 				overflow: hidden;
-				background: @white url(/images/qb/dashed-border.png) (@gridGutterWidth + @gridColumnWidth)*5 top repeat-y;
+				background: @white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW4AAAAQAQMAAAAMMwfJAAAAA1BMVEX5+fqFeTRzAAAADklEQVR4AWMYQWAUjAIAAvAAAX8vlOoAAAAASUVORK5CYII=') (@gridGutterWidth + @gridColumnWidth)*5 0 repeat-y;
+
+
+
 				.box-shadow(0 1px 10px rgba(0,0,0,.14));
 
 				&__col1 {
@@ -117,6 +120,7 @@
 
 					&-email-group {
 						margin-bottom: 6px;
+						background-color: @white
 					}
 
 				.itemedit &-email-cont {
@@ -127,7 +131,7 @@
 						font-size: 11px;
 						line-height: 1.4;
 						padding: 0;
-						margin: 0 0 25px;
+						margin: 0 0 25px 2px;
 					}
 
 
