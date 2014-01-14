@@ -117,15 +117,15 @@ qst.App = Backbone.Model.extend({
 					if(qst.is_authed()) {
 						qst.navigate('/items', {trigger: true});
 					} else {
-						this.landing.render();
+						this.landing.render({section: 1});
 					}
 					break;
 
 				case 'how':
-					this.landing.render();
+					this.landing.render({section: 2});
 					break;
 				case 'where':
-					this.landing.render();
+					this.landing.render({section: 3});
 					break;
 
 				case 'profile':

@@ -12,8 +12,8 @@ qst.LandingPage = qst.Page.extend({
 	},
 
 	render: function(options) {
+		this.set(options);
 		if(!this.visited) {
-
 			this.visited = true;
 			this.view = new qst.LandingPageView({
 				model: this, 

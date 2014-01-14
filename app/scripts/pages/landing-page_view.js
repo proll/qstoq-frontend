@@ -44,6 +44,14 @@ qst.LandingPageView = qst.PageView.extend({
 		this.$nav_where.on('click.landing', _.bind(this.goSection3, this));
 
 		this.delegateEvents();
+
+		if(this.model.get('section')!==0) {
+			if(this.model.get('section') === 2) {
+				this.goSection2();
+			} else if(this.model.get('section') === 3) {
+				this.goSection3();
+			}
+		}
 	},
 
 	repositionPage: function() {

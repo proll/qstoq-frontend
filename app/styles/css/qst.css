@@ -4375,6 +4375,7 @@ textarea.qst__inp {
   border-radius: 4px;
   font-size: 17px;
   line-height: 24px;
+  font-weight: bold;
   background-image: -moz-linear-gradient(top, #ef7964, #e76764);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ef7964), to(#e76764));
   background-image: -webkit-linear-gradient(top, #ef7964, #e76764);

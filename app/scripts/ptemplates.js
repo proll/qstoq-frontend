@@ -184,10 +184,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function";
 
 
-  buffer += "<div class=\"container footer__menu-cont\">\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" href=\"/how\">";
+  buffer += "<div class=\"container footer__menu-cont\">\n	<ul class=\"footer__menu\">\n		<!-- <li><a class=\"footer__menu-a\" href=\"/how\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "About Qstoq", "footer", options) : helperMissing.call(depth0, "_", "About Qstoq", "footer", options)))
-    + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/how\">";
+    + "</a></li> -->\n		<li><a class=\"footer__menu-a\" href=\"/how\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "How does it work?", "footer", options) : helperMissing.call(depth0, "_", "How does it work?", "footer", options)))
     + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/i/questions-and-answers/\">";
