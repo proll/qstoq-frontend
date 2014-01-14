@@ -37,11 +37,6 @@ qst.App = Backbone.Model.extend({
 
 
 		// Pages create
-		this.feedback = new qst.Page({
-			name:'feedback',
-			template:'pages/feedback-page'
-		});
-
 		// 404 page
 		this.pages.add(new qst.Page({
 			name:'404',
@@ -89,6 +84,12 @@ qst.App = Backbone.Model.extend({
 		});
 		this.pages.add(this.paysystemadd);
 
+		this.info = new qst.InfoPage({
+			name: 'info',
+			template: 'pages/info-page'
+		});
+		this.pages.add(this.info);
+
 		// Pages render on route
 		this.router.on('404', function () {
 			that.pages.getPage('404').render();
@@ -125,10 +126,6 @@ qst.App = Backbone.Model.extend({
 					break;
 				case 'where':
 					this.landing.render();
-					break;
-
-				case 'feedback': 
-					this.feedback.render();
 					break;
 
 				case 'profile':
@@ -180,6 +177,12 @@ qst.App = Backbone.Model.extend({
 							});
 						}
 					}
+					break;
+
+				case 'info': 
+					this.info.render({
+						section: !!route[0] ? route[0] : 'questions-and-answers'
+					});
 					break;
 
 				default:
@@ -237,6 +240,11 @@ qst.App = Backbone.Model.extend({
 					case 'paysystemadd':
 						console.log('reset:paysystemadd');
 						this.paysystemadd.sleep();
+						break;
+
+					case 'info':
+						console.log('reset:info');
+						this.info.sleep();
 						break;
 
 					default:

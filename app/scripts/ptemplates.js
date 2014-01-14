@@ -190,28 +190,28 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/how\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "How does it work?", "footer", options) : helperMissing.call(depth0, "_", "How does it work?", "footer", options)))
-    + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/questions-n-answers.html\">";
+    + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/i/questions-and-answers/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Questions & answers", "footer", options) : helperMissing.call(depth0, "_", "Questions & answers", "footer", options)))
-    + "</a></li> -->\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/api.html\">";
+    + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/i/api/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Qstoq API", "footer", options) : helperMissing.call(depth0, "_", "Qstoq API", "footer", options)))
-    + "</a></li> -->\n		<li><a class=\"footer__menu-a\" href=\"/feedback/\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Feedback", "footer", options) : helperMissing.call(depth0, "_", "Feedback", "footer", options)))
-    + "</a></li>\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/user-agreement.html\">";
+    + "</a></li>\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" href=\"/i/user-agreement/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "User agreement", "footer", options) : helperMissing.call(depth0, "_", "User agreement", "footer", options)))
     + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/privacy.html\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Privacy", "footer", options) : helperMissing.call(depth0, "_", "Privacy", "footer", options)))
-    + "</a></li> -->\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/team.html\">";
+    + "</a></li> -->\n		<li><a class=\"footer__menu-a\" href=\"/i/team/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Team", "footer", options) : helperMissing.call(depth0, "_", "Team", "footer", options)))
-    + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/docs/partners.html\">";
+    + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/i/partners/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Partners", "footer", options) : helperMissing.call(depth0, "_", "Partners", "footer", options)))
-    + "</a></li> -->\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"mailto:ola@qstoq.me\">ola@qstoq.me</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"http://vk.com/qstoq\">";
+    + "</a></li> -->\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" href=\"/i/feedback/\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Feedback", "footer", options) : helperMissing.call(depth0, "_", "Feedback", "footer", options)))
+    + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"http://vk.com/qstoq\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Vkontakte", "footer", options) : helperMissing.call(depth0, "_", "Vkontakte", "footer", options)))
     + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"http://www.facebook.com/qstoq\">";
@@ -247,6 +247,40 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(stack1)
     + "</p>\n</div>";
   return buffer;
+  });
+
+this["qst"]["Templates"]["ptemplates"]["blocks/info-menu"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+
+
+  buffer += "<div class=\"container\">\n	<ul class=\"nav\">\n		<li class=\"item_questions-and-answers\"><a href=\"/i/questions-and-answers/\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Questions & answers", "info_menu", options) : helperMissing.call(depth0, "_", "Questions & answers", "info_menu", options)))
+    + "</a></li>\n		<li class=\"item_user-agreement\"><a href=\"/i/user-agreement/\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "User agreement", "info_menu", options) : helperMissing.call(depth0, "_", "User agreement", "info_menu", options)))
+    + "</a></li>\n		<li class=\"item_api\"><a href=\"/i/api/\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Qstoq API", "info_menu", options) : helperMissing.call(depth0, "_", "Qstoq API", "info_menu", options)))
+    + "</a></li>\n		<li class=\"item_team\"><a href=\"/i/team/\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Team", "info_menu", options) : helperMissing.call(depth0, "_", "Team", "info_menu", options)))
+    + "</a></li>\n		<li class=\"item_feedback\"><a href=\"/i/feedback/\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Feedback", "info_menu", options) : helperMissing.call(depth0, "_", "Feedback", "info_menu", options)))
+    + "</a></li>\n	</ul>\n</div>";
+  return buffer;
+  });
+
+this["qst"]["Templates"]["ptemplates"]["blocks/info"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"info__slide info__slide_feedback\"></div>\n<div class=\"info__slide info__slide_api\"></div>\n<div class=\"info__slide info__slide_team\"></div>\n<div class=\"info__slide info__slide_user-agreement\"></div>\n<div class=\"info__slide info__slide_questions-and-answers\"></div>";
   });
 
 this["qst"]["Templates"]["ptemplates"]["blocks/item-receipt"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -1756,13 +1790,18 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
-this["qst"]["Templates"]["ptemplates"]["pages/feedback-page"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+this["qst"]["Templates"]["ptemplates"]["pages/info-page"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression;
 
 
-  return "<div>\n	<iframe style=\"width: 100%; height: 500px; border: 0;\" frameborder=\"0\" src=\"http://reformal.ru/widget/193869\"></iframe>\n</div>";
+  buffer += "<div class=\"page-info_";
+  if (stack1 = helpers.section) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
+  else { stack1 = depth0.section; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\">\n	<div class=\"info__menu-row\"></div>\n	<div class=\"info__section-row container\"></div>\n</div>";
+  return buffer;
   });
 
 this["qst"]["Templates"]["ptemplates"]["pages/itemedit-page"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -1797,7 +1836,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</p>\n			<p class=\"itemlist__p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "empty_p1_3", "itemlist", options) : helperMissing.call(depth0, "_", "empty_p1_3", "itemlist", options)))
-    + "</p>\n			<h2 class=\"itemlist__h2 itemlist__col1__h2-2\">\n				<i class=\"qi qi-view\"></i><a href=\"http://s.qstoq.me/b842\" target=\"_blank\">";
+    + "</p>\n			<h2 class=\"itemlist__h2 itemlist__col1__h2-2\">\n				<i class=\"qi qi-view\"></i><a href=\"http://s.qstoq.me/b877\" target=\"_blank\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Qstoq price tag example", "itemlist", options) : helperMissing.call(depth0, "_", "Qstoq price tag example", "itemlist", options)))
     + "</a>\n			</h2>\n			<h2 class=\"itemlist__h2 itemlist__col1__h2-3\">";

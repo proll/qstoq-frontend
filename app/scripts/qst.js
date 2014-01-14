@@ -44,7 +44,7 @@ window.qst = _.extend(window.qst, {
 		$(document).on("click", "a", function(e){
 			if (e.metaKey || e.ctrlKey) return true;
 			var $this = $(this);
-			if($this.attr("target")) return true;
+			if($this.attr("target") || $this.attr('href').indexOf('mailto:')!==-1) return true;
 			
 			e.stopPropagation();
 			e.preventDefault();

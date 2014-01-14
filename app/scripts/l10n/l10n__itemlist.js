@@ -144,8 +144,8 @@ qst.l10n.itemlist = {
 	},
 
 	'Please, open the page of answers': {
-		en: 'Please, open <a href="/hi/answers/">the page of answers</a>',
-		ru: 'Откройте страницу <a href="/hi/answers/">ответов</a>'
+		en: 'Please, open <a href="/i/questions-and-answers/">the page of answers</a>',
+		ru: 'Откройте страницу <a href="/i/questions-and-answers/">ответов</a>'
 	},
 
 
