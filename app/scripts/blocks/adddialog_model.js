@@ -51,6 +51,7 @@ qst.AddDialog = Backbone.Model.extend({
 		response = _.toJSON(response);
 		if(response.success) {
 			this.trigger('add:success', response.result);
+			qst.app.statistic.trackProductCreate(this.get('name'));
 		} else {
 			this.trigger('add:error');
 		}

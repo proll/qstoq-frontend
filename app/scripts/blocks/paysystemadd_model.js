@@ -34,6 +34,11 @@ qst.PaySystemAdd = Backbone.Model.extend({
 		response = _.toJSON(response);
 		this.set(response.result);
 		if(response.success) {
+			// statistics only for the new paysystem connection only
+			var system = this.get('system');
+			if(!this.get('settings').paysys || !this.get('settings').paysys[system]) {
+				qst.app.statistic.trackPSConnect(system);
+			}
 			this.trigger('save:success', response.result.user);
 		} else {
 			this.trigger('save:error');

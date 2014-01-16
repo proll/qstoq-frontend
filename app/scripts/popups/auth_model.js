@@ -25,6 +25,9 @@ qst.Auth = Backbone.Model.extend({
 		this.signin.on		("auth:success", this.authSuccess, this);
 		this.registration.on("auth:success", this.authSuccess, this);
 
+		this.registration.on("auth:success", this.authSuccess, this);
+		this.registration.on("registration:success", this.afterRegistration, this);
+
 
 		this.FB.on 			("error", this.error, this);
 		// this.TW.on 			("error", this.error, this);
@@ -62,6 +65,10 @@ qst.Auth = Backbone.Model.extend({
 		if(!!user_obj.session) {
 			this.trigger("auth:success", user_obj);
 		}
+	},
+
+	afterRegistration: function() {
+		qst.app.statistic.trackRegistration();
 	},
 
 	logout: function(){
