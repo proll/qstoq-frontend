@@ -1,6 +1,7 @@
 qst.ItemEditView = Backbone.View.extend({
 	template: "blocks/itemedit",
 	className: "itemedit",
+	preview_model: false,
 
 	events: {
 		'click a.item__types-item': 'clickState',
@@ -182,6 +183,45 @@ qst.ItemEditView = Backbone.View.extend({
 	},
 
 
+	clickShare: function(e) {
+		var social = $(e.currentTarget).attr('href'),
+			description = encodeURIComponent(this.model.get('description')),
+			href = this.model.get('url_short'),
+			url = '',
+			image = (!!this.preview_model) ? this.preview_model.get('data') : 'http://qstoq.me/images_static/fav144.png';
+
+		if(social==='facebook') {
+			url = "https://www.facebook.com/dialog/feed?";
+			url += ''
+				+"link=" + encodeURIComponent(href)
+				+"&redirect_uri=" + encodeURIComponent(href)
+				+"&display=popup"
+				+"&app_id=137692866413480"
+				+"&caption=" + encodeURIComponent(this.model.get('name'))
+				+"&picture=" + image
+				+"&description=" + encodeURIComponent(this.model.get('description'));
+		} else {
+			if(social === 'vk') {
+				url = "http://vkontakte.ru/share.php?noparse=true&"
+			} else {	
+				url = "http://api.addthis.com/oexchange/0.8/forward/" + social + "/offer?"
+			}
+
+			url += ''
+				+"url=" + encodeURIComponent(href)
+				+"&title=" + encodeURIComponent(this.model.get('name'))
+				+"&description=" + encodeURIComponent(this.model.get('description'))
+				+"&pubid=prolll"
+				+"&text=" + encodeURIComponent(this.model.get('description'))
+				+"&via=qstoq"
+				+"&screenshot=" + image
+				+"&image=" + image;
+		}
+		_.openWindow3(url, social, 480, 360);
+		return false;
+	},
+
+
 	clickShortLink: function(e) {
 		$(e.currentTarget).find('input').select();
 	},
@@ -227,6 +267,7 @@ qst.ItemEditView = Backbone.View.extend({
 	// перенести логику на события this.model
 	// эта вьюха не должна знать о модели превью
 	addPreviewUpload: function(preview_model) {
+		this.preview_model = preview_model;
 		preview_model.on('change:data', this.updateShowcasePreview, this);
 		this.updateShowcasePreview(preview_model, preview_model.get('data'));
 		this.$el.find('.item__preview-upload-cont').html(preview_model.view.$el);
