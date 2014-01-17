@@ -23,7 +23,7 @@ qst.l10n.itemshowcase = {
 	},
 
 	'selling in lightning speed' : {
-		en: 'creating price labels and billing payments for your content or reallife goods and services',
+		en: 'creating price tags and billing payments for your content or reallife goods and services',
 		ru: 'создание виртуальных ценников и прием платежей за ваш контент или реальные товары и услуги'
 	},
 
