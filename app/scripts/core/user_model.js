@@ -62,6 +62,6 @@ qst.User = Backbone.Model.extend({
 	clearSession: function () {
 		_.clearCookie("uid");
 		_.clearCookie("token");	
-		this.set({uid:"", token:""});
+		// this.set({uid:"", token:""});
 	}
 });
