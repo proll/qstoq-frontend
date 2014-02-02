@@ -1,6 +1,10 @@
 qst = qst || {};
 qst.l10n = qst.l10n || {};
 qst.l10n.itemedit = {
+	'Currency': {
+		en: 'Currency',
+		ru: 'Валюта'
+	},
 	'Main': {
 		en: 'Main',
 		ru: 'Основное'

@@ -51,6 +51,11 @@ qst.PaySystem = Backbone.Model.extend({
 				icons: ['paypal'],
 				toggle: false
 			},
+			// {
+			// 	key: 'bitcoin',
+			// 	icons: ['bitcoin'],
+			// 	toggle: false
+			// },
 		],
 	},
 

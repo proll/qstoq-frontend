@@ -508,6 +508,9 @@ h1 {
 .qst__inp-cont:last-child {
   margin-bottom: -1px;
 }
+.qst__select-cont {
+  height: auto;
+}
 .qst__lbl {
   font-size: 13px;
   line-height: 16px;
@@ -557,6 +560,41 @@ h1 {
   color: #969696;
 }
 .qst__inp::-webkit-input-placeholder {
+  color: #969696;
+}
+.qst__select {
+  resize: none;
+}
+.qst__select {
+  border-color: #8c8c8c;
+  font-size: 13px;
+  line-height: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: #222a32;
+  vertical-align: top;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  text-align: left;
+  background-color: transparent;
+}
+.qst__select:focus {
+  color: #222a32;
+}
+.qst__select:disabled {
+  color: #969696;
+}
+.qst__select:-moz-placeholder {
+  color: #969696;
+}
+.qst__select::-moz-placeholder {
+  color: #969696;
+}
+.qst__select:-ms-input-placeholder {
+  color: #969696;
+}
+.qst__select::-webkit-input-placeholder {
   color: #969696;
 }
 .error-inp {

@@ -10,7 +10,7 @@
 	<div class="receipt__form">
 		<div class="receipt__form-col">
 			<span class="receipt__form-line">{{_ 'Purchased' 'itemreceipt'}}</span>
-			<span class="receipt__form-price"><span class="receipt__form-price-val">{{_number_format price }}</span>&nbsp;{{_ currency 'currency'}}</span>
+			<span class="receipt__form-price"><span class="receipt__form-price-val">{{_number_format price }}</span>{{_ currency 'currency'}}</span>
 			<h1 class="receipt__form-h"><a href="{{ url_short }}" target="_blank">{{ name }}</a></h1>
 			{{#if url}}
 				{{#ifEq external '0'}}

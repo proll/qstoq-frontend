@@ -1,5 +1,5 @@
 <td class="link__caption"><a href="/item/{{ id }}" class="link__caption-a">{{ name }}</a></td>
-<td class="link__price"><span class="link__sp">{{ price }}{{#ifEq price_pwyw '1'}}+{{/ifEq}}</span></td>
+<td class="link__price"><span class="link__sp">{{#ifEq price_pwyw '1'}}+{{/ifEq}}{{_number_format price }}{{_ currency 'currency'}}</span></td>
 <td class="link__view-count"><span class="link__sp">{{ counter_view }}</span></td>
 <td class="link__sold-count"><span class="link__sp">{{ counter_ship }}</span></td>
 <td class="link__overall"><span class="link__sp">{{ overall }}</span></td>

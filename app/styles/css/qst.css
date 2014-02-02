@@ -610,6 +610,9 @@ h1 {
 .qst__inp-cont:last-child {
   margin-bottom: -1px;
 }
+.qst__select-cont {
+  height: auto;
+}
 .qst__lbl {
   font-size: 13px;
   line-height: 16px;
@@ -659,6 +662,41 @@ h1 {
   color: #969696;
 }
 .qst__inp::-webkit-input-placeholder {
+  color: #969696;
+}
+.qst__select {
+  resize: none;
+}
+.qst__select {
+  border-color: #8c8c8c;
+  font-size: 13px;
+  line-height: 14px;
+  -webkit-font-smoothing: antialiased;
+  color: #222a32;
+  vertical-align: top;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+  text-align: left;
+  background-color: transparent;
+}
+.qst__select:focus {
+  color: #222a32;
+}
+.qst__select:disabled {
+  color: #969696;
+}
+.qst__select:-moz-placeholder {
+  color: #969696;
+}
+.qst__select::-moz-placeholder {
+  color: #969696;
+}
+.qst__select:-ms-input-placeholder {
+  color: #969696;
+}
+.qst__select::-webkit-input-placeholder {
   color: #969696;
 }
 .error-inp {
@@ -1001,17 +1039,17 @@ textarea::-webkit-input-placeholder {
   background-position: 0px -544px;
 }
 .qi {
-  background: url("/images/sprites/qi-e56e3.png") no-repeat 0 0;
+  background: url("/images/sprites/qi-318ef.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .qi {
-    background: url("/images/sprites/qi-2x-e56e3.png") no-repeat 0 0;
-    -webkit-background-size: 28px 548px;
-    -moz-background-size: 28px 548px;
-    -o-background-size: 28px 548px;
-    background-size: 28px 548px;
+    background: url("/images/sprites/qi-2x-318ef.png") no-repeat 0 0;
+    -webkit-background-size: 28px 565px;
+    -moz-background-size: 28px 565px;
+    -o-background-size: 28px 565px;
+    background-size: 28px 565px;
     vertical-align: text-top;
     display: inline-block;
   }
@@ -1071,95 +1109,100 @@ textarea::-webkit-input-placeholder {
   height: 16px;
   background-position: 0px -189px;
 }
+.qi-ps-bitcoin {
+  width: 16px;
+  height: 16px;
+  background-position: 0px -206px;
+}
 .qi-ps-drop {
   width: 15px;
   height: 16px;
-  background-position: 0px -206px;
+  background-position: 0px -223px;
 }
 .qi-ps-mastercard {
   width: 22px;
   height: 14px;
-  background-position: 0px -223px;
+  background-position: 0px -240px;
 }
 .qi-ps-megafon {
   width: 17px;
   height: 16px;
-  background-position: 0px -238px;
+  background-position: 0px -255px;
 }
 .qi-ps-mts {
   width: 16px;
   height: 16px;
-  background-position: 0px -255px;
+  background-position: 0px -272px;
 }
 .qi-ps-paymaster {
   width: 16px;
   height: 16px;
-  background-position: 0px -272px;
+  background-position: 0px -289px;
 }
 .qi-ps-paypal {
   width: 16px;
   height: 16px;
-  background-position: 0px -289px;
+  background-position: 0px -306px;
 }
 .qi-ps-qiwi {
   width: 16px;
   height: 16px;
-  background-position: 0px -306px;
+  background-position: 0px -323px;
 }
 .qi-ps-robokassa {
   width: 16px;
   height: 16px;
-  background-position: 0px -323px;
+  background-position: 0px -340px;
 }
 .qi-ps-visa {
   width: 15px;
   height: 13px;
-  background-position: 0px -340px;
+  background-position: 0px -357px;
 }
 .qi-ps-webmoney {
   width: 16px;
   height: 16px;
-  background-position: 0px -354px;
+  background-position: 0px -371px;
 }
 .qi-ps-yd {
   width: 16px;
   height: 16px;
-  background-position: 0px -371px;
+  background-position: 0px -388px;
 }
 .qi-ru {
   width: 16px;
   height: 11px;
-  background-position: 0px -388px;
+  background-position: 0px -405px;
 }
 .qi-share-fb {
   width: 28px;
   height: 28px;
-  background-position: 0px -400px;
+  background-position: 0px -417px;
 }
 .qi-share-link {
   width: 28px;
   height: 28px;
-  background-position: 0px -429px;
+  background-position: 0px -446px;
 }
 .qi-share-tw {
   width: 28px;
   height: 28px;
-  background-position: 0px -458px;
+  background-position: 0px -475px;
 }
 .qi-share-vk {
   width: 28px;
   height: 28px;
-  background-position: 0px -487px;
+  background-position: 0px -504px;
 }
 .qi-us {
   width: 16px;
   height: 11px;
-  background-position: 0px -516px;
+  background-position: 0px -533px;
 }
 .qi-view {
   width: 24px;
   height: 20px;
-  background-position: 0px -528px;
+  background-position: 0px -545px;
 }
 .ib {
   background: url("/images/sprites/ib-36866.png") no-repeat 0 0;
@@ -2976,7 +3019,6 @@ footer {
 }
 .itemedit .qst__inp-cont {
   padding: 13px 14px 12px;
-  height: 14px;
 }
 .itemedit .qst__inp-cont-ta {
   height: auto;
@@ -5116,6 +5158,9 @@ a.account__social-item__title:focus {
 }
 .paysystemadd__row {
   display: none;
+}
+.bitcoin .bitcoin-row {
+  display: block;
 }
 .qiwi .qiwi-row {
   display: block;

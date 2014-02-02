@@ -348,4 +348,33 @@ qst.l10n.paysystemadd = {
 		en: 'On "Пользователи" site, add new user by setting email (<strong>Service login</strong>) and password (<strongService password</strong>). On the user\'s setting add "Операционист" role, with the access to your site.',
 		ru: 'В разделе Пользователи, добавьте нового пользователя, задав его email (<strong>Сервис логин</strong>) и пароль (<strong>Сервис пароль</strong>). В настройках пользователя добавьте ему роль Операционист, с доступом к вашему сайту.'
 	},
+
+	'bitcoin_h': {
+		en: 'Bitcoin connection',
+		ru: 'Подключение Bitcoin',
+	},
+
+	'bitcoin_payout_address': {
+		en: 'Cashout Address',
+		ru: 'Адрес выплат'
+	},
+	'bitcoin_payout_limit': {
+		en: 'Minimum cashout',
+		ru: 'Минимальная выплата'
+	},
+
+	'bitcoin_itm_1': {
+		en: 'If you have no Bitcoin wallet, please get one from there: <a href="http://bitcoin.org/en/choose-your-wallet" target="_blank">http://bitcoin.org/en/choose-your-wallet</a>',
+		ru: 'Если у вас нет Bitcoin кошелька, установите любой кошелек отсюда: <a href="http://bitcoin.org/en/choose-your-wallet" target="_blank">http://bitcoin.org/en/choose-your-wallet</a>'
+	},
+
+	'bitcoin_itm_2': {
+		en: 'In the wallet create a Bitcoin address (<strong>Cashout Address</strong>). You can create s many as you wish, but don\'t forget to update these settings here on Qstoq.',
+		ru: 'В кошельке создайте <strong>Адрес выплат</strong>. Можно создать сколько угодно адресов, не забывайте только обновлять параметры здесь Qstoq.'
+	},
+
+	'bitcoin_itm_3': {
+		en: 'Set parameter <strong>Minimum cashout</strong>. When this summ will be reached the cachout will be proccessed. But remember that lower <strong>Minimum cashout</strong> is longer transaction time inside Bitcoin network (up to 2 week)',
+		ru: 'Укажите параметр <strong>Минимальная выплата</strong>. По достижении указанной суммы будет производиться выплата на указанный адрес. Но помните, чем меньше эта сумма, тем дольше будет производиться обработка перевеода внутри Bitcoin сети (до 2х недель).'
+	},
 }

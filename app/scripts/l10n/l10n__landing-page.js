@@ -73,7 +73,7 @@ qst.l10n.landing_page = {
 	},
 
 	'section2-2-1-p': {
-		en: 'Get the pric tag link, share it, stick it, distribute it, send it to your audience. By clicking on this link the customers will open the price tag',
+		en: 'Get the price tag link, share it, stick it, distribute it, send it to your audience. By clicking on this link the customers will open the price tag',
 		ru: 'Получите ссылку на ваш ценник и размещайте в социальных сетях, на сайтах, в блогах, расшаривайте, раздавайте, рассылайте ссылки вашей аудитории. Кликая по этой ссылке, покупатели откроют окно ценника и оплаты.'
 
 	},

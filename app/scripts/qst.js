@@ -182,14 +182,14 @@ Backbone.sync = function(method, model, options){
 		credentials = {
 			// uid: options.userData.uid,
 			token: options.userData.token,
-			// lang: qst.language
+			lang: qst.language
 		}
 	}else{
 		if(!!qst.app && !!qst.app.user.get("uid")) {
 			credentials = {
 				// uid: 	qst.app.user.get("uid"),
 				token: 	qst.app.user.get("token"),
-				// lang: 	qst.language
+				lang: 	qst.language
 			}
 		}
 	}

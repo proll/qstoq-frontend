@@ -173,6 +173,7 @@ qst.ItemEdit = Backbone.Model.extend({
 			url: 			data.url,
 			price: 			data.price,
 			price_pwyw: 	data.price_pwyw,
+			currency: 		data.currency,
 			ship_limit: 	data.ship_limit,
 		};
 		options.success  	= _.bind(this.saveSuccess, this);
@@ -207,6 +208,12 @@ qst.ItemEdit = Backbone.Model.extend({
 	sightUpdatePrice: function(price) {
 		this.itemreceipt.set({
 			price: price
+		})
+	},
+
+	sightUpdateCurrency: function(cur) {
+		this.itemreceipt.set({
+			currency: cur
 		})
 	},
 

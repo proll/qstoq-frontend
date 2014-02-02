@@ -9,9 +9,9 @@ qst.l10n.itemlist = {
 		en: 'Title',
 		ru: 'Название'
 	},
-	'Price, RUB': {
-		en: 'Price, RUB',
-		ru: 'Цена, руб.',
+	'Price': {
+		en: 'Price',
+		ru: 'Цена',
 	},
 	'Limit': {
 		en: 'Limit',
@@ -31,7 +31,7 @@ qst.l10n.itemlist = {
 	},
 	'price': {
 		en: 'price',
-		ru: 'цена, руб'
+		ru: 'цена'
 	},
 	'visits': {
 		en: 'visits',

@@ -20,9 +20,22 @@
 					</div>
 					<div class="qst__inp-cont">
 						<label>
-							<span class="qst__lbl">{{_ 'Price, RUB' 'itemlist'}}</span>
+							<span class="qst__lbl">{{_ 'Price' 'itemlist'}}</span>
 							<div class="qst__inp-cont-in">
 								<input type="text" class="qst__inp" name="price" value="{{ price }}{{#if price_pwyw}}+{{/if}}">
+							</div>
+						</label>
+					</div>
+					<div class="qst__inp-cont qst__select-cont">
+						<label>
+							<span class="qst__lbl">{{_ 'Currency' 'itemedit'}}</span>
+							<div class="qst__inp-cont-in">
+								<select name="currency" class="qst__select">
+									<option value="RUB"{{#ifEq currency 'RUB'}} selected{{/ifEq}}>{{_ 'Ruble' 'currency'}}</option>
+									<option value="USD"{{#ifEq currency 'USD'}} selected{{/ifEq}}>{{_ 'US Dollar' 'currency'}}</option>
+									<option value="EUR"{{#ifEq currency 'EUR'}} selected{{/ifEq}}>{{_ 'Euro' 'currency'}}</option>
+									<!-- <option value="BTC"{{#ifEq currency 'BTC'}} selected{{/ifEq}}>{{_ 'Bitcoin' 'currency'}}</option> -->
+								</select>
 							</div>
 						</label>
 					</div>
@@ -115,7 +128,7 @@
 					</ul>
 				</div>
 				<div class="showcase__form__col2">
-					<span class="showcase__form-price"><span class="showcase__form-price-val">{{_number_format price }}</span>&nbsp;{{_ currency 'currency'}}</span>
+					<span class="showcase__form-price">{{_number_format price }}{{_ currency 'currency'}}</span>
 					<div class="showcase__form-email-group qst__inp-group">
 						<div class="showcase__form-email-cont qst__inp-cont">
 							<input type="text" value="" placeholder="{{_ 'email' 'itemedit'}}" class="showcase__form-email qst__inp" disabled="disabled" name="customer_email">

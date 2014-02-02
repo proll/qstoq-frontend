@@ -72,6 +72,11 @@ qst.l10n.paysystem = {
 		ru: 'PayPal'
 	},
 
+	'bitcoin': {
+		en: 'Bitcoin',
+		ru: 'Bitcoin'
+	},
+
 	'phone': {
 		en: 'Mobile phone',
 		ru: 'Мобильный телефон'

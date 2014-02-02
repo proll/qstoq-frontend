@@ -16,6 +16,7 @@ qst.ItemEditView = Backbone.View.extend({
 		'click .itemedit__share-btn, .showcase__share-itm-a': 'clickShare',
 
 		'change input[name=name]': 'updateName',
+		'change select[name=currency]': 'updateCurrency',
 		'change input[name=price]': 'updatePrice',
 		'change input[name=ship_limit]': 'updateShipLimit',
 		'change input[name=link]': 	'updateLink',
@@ -44,6 +45,7 @@ qst.ItemEditView = Backbone.View.extend({
 		this.$input_active =  this.$form.find('input[name=active]');
 		this.$input_name =  this.$form.find('input[name=name]');
 		this.$input_price = this.$form.find('input[name=price]');
+		this.$input_currency = this.$form.find('select[name=currency]');
 		this.$input_ship_limit = this.$form.find('input[name=ship_limit]');
 		this.$input_description =  this.$form.find('textarea[name=description]');
 		this.$input_link =  this.$form.find('input[name=link]');
@@ -94,6 +96,7 @@ qst.ItemEditView = Backbone.View.extend({
 		var active = this.$input_active.is(':checked'),
 			name = $.trim(this.$input_name.val()),
 			price = this.$input_price.val(),
+			currency = this.$input_currency.val(),
 			ship_limit = this.$input_ship_limit.val(),
 			link = this.$input_link.val(),
 			file = this.$input_file.val(),
@@ -126,6 +129,7 @@ qst.ItemEditView = Backbone.View.extend({
 				url: 			link,
 				description: 	description,
 				price: 			parseInt(price),
+				currency: 		currency,
 				price_pwyw: 	price_plus + 0,
 				ship_limit: 	parseInt(ship_limit),
 			});
@@ -291,10 +295,19 @@ qst.ItemEditView = Backbone.View.extend({
 		if(!!num) {
 			num = Handlebars.helpers._number_format(num).toString();
 		}  else {
-			num = 0;
+			num = 0+'&nbsp';
 		}
-		this.$el.find('.showcase__form-price-val').html(num);
 
+		num+=Handlebars.helpers._(this.model.get('currency'), 'currency');
+		this.$el.find('.showcase__form-price').html(num);
+	},
+
+	updateCurrency: function(e) {
+		var cur = $(e.target).val();
+		this.model.sightUpdateCurrency(cur);
+		cur = Handlebars.helpers._(cur, 'currency').toString();
+		cur = Handlebars.helpers._number_format(this.model.get('price')).toString() + cur;
+		this.$el.find('.showcase__form-price').html(cur);
 	},
 
 	updateLink: function(e) {

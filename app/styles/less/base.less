@@ -157,6 +157,10 @@ h1{
 		}
 	}
 
+	.qst__select-cont {
+		height: auto;
+	}
+
 	
 	.qst__lbl {
 		font-size: 13px;
@@ -187,6 +191,35 @@ h1{
 				vertical-align: top;
 				outline: none;
 				padding: 0;
+				.transition(color 0.3s);
+
+				text-align: left;
+				background-color: transparent;
+			}
+			&:focus {
+				color: @textColor;
+			}
+			&:disabled {
+				color: @grayLight;
+			}
+			.placeholder(@grayLight);
+		}
+
+		.qst__select {
+			resize:none;
+			& {
+				// border: none;
+				border-color: @gray;
+				font-size: 13px;
+				line-height: 14px;
+				-webkit-font-smoothing: antialiased;
+
+				color: @textColor;
+				// display: inline-block;
+				// width: 100%;
+				vertical-align: top;
+				// outline: none;
+				// padding: 0;
 				.transition(color 0.3s);
 
 				text-align: left;
