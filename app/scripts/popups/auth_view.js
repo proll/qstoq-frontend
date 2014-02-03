@@ -222,17 +222,17 @@ qst.AuthView = Backbone.View.extend({
 
 
 	// social Login = registration
-	loginFB: function () {
+	loginFB: function (event) {
 		this.model.FB.login(event);
 		return false;
 	},
 
-	loginTW: function () {
+	loginTW: function (event) {
 		this.model.TW.login(event);
 		return false;
 	},
 
-	loginVK: function () {
+	loginVK: function (event) {
 		this.model.VK.login(event);
 		return false;
 	},
