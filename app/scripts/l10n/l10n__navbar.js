@@ -2,8 +2,8 @@ qst = qst || {};
 qst.l10n = qst.l10n || {};
 qst.l10n.navbar = {
 	'My items': {
-		en: 'My items',
-		ru: 'Мои предложения',
+		en: 'My pricetags',
+		ru: 'Мои ценники',
 	},
 	'Profile': {
 		en: 'Profile',

@@ -202,7 +202,7 @@ qst.l10n.landing_page = {
 	},
 
 	'section3-8-1-p': {
-		en: 'And much much much much much much much much much much much much more. It\'s up o you',
+		en: 'And much much much much much much much much much much much much more. It\'s up to you',
 		ru: 'И еще много, много, много, много, много, много, много, много, много чего еще'
 	},
 
