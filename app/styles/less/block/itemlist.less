@@ -14,7 +14,7 @@
 
 .itemlist-head {
 	margin-top: 48px;
-	margin-bottom: 36px;
+	margin-bottom: 40px;
 
 	&__cnt {
 		display: inline-block;
@@ -187,6 +187,23 @@
 .itemlist-row_empty {
 	display: none;
 	margin-bottom: 100px;
+	background-color: @grayLighter2;
+	position: relative;
+
+	&::before {
+		border-color: #ffecbc;
+		content: '';
+		display: block;
+		position: absolute;
+		top:   0;
+		right: 0;
+		border-style: solid;
+		border-width: 15px;
+		border-top-color: @white;
+		border-right-color: @white;
+		width: 0;
+		height: 0;
+	}
 }
 .itemlist-row {
 	display: none;
@@ -211,43 +228,101 @@
 }
 
 
-.itemlist__h2 {
-	color: #222a32;
-	font-size: 18px;
-	font-weight: 500;
-	line-height: 1.4;
-	margin: 0 0 18px;
-	padding: 0;
-}
-.itemlist__col1__h2-1 {
-	margin-top: 104px;
-}
-.itemlist__col1__h2-2 {
-	margin: 55px 0;
-	a {
-		vertical-align: middle;
+	.itemlist__h1 {
+		color: #009ee7;
+		font-size: 38px;
+		font-weight: normal;
+		line-height: 1.2;
+		margin: 53px 0 50px;
+		padding: 0;
 	}
 
-	.qi-view {
-		margin-right: 9px;
-		vertical-align: middle;
+
+	.itemlist__empty-list {
+		margin: 0;
+		padding: 0;
 	}
-}
 
-.itemlist__col1__h2-3 {
-	margin-bottom: 0;
-}
+		.itemlist__empty-item {
+			counter-increment: list_counter;
+			position: relative;
+			margin-left: 80px;
+			margin-bottom: 53px;
+			&::before {
+				content: counter(list_counter);
+				position: absolute;
+				color: @textColor;
+				font-size: 40px;
+				line-height: 1;
+				font-weight: 300;
+				left: -80px-3px;
+				top: 1px;
+			}
+		}
 
 
-.itemlist__p {
-	padding: 0;
-	margin: 0 0 14px;
-	color: #687078;
-	font-size: 15px;
-	line-height: 22px;
-}
+		.itemlist__h2 {
+			color: @textColor;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 1.4;
+			margin: 0 0 18px;
+			padding: 0;
+		}
 
-.itemlist__col2__h2-2 {
-	margin: 55px 0 18px 0;
-}
+
+	.itemlist__direct-hello {
+		background: @blue_sexy;
+		padding: 23px-6px 20px 23px;
+	}
+
+		.itemlist__direct-hello-p {
+			color: @white;
+			font-size: 16px;
+			line-height: 20px;
+			padding: 0;
+			margin: 0 0 12px;
+		}
+
+		.itemlist__direct-hello-a {
+			.btn;
+			.btn-red;
+			margin-top: 5px;
+		}
+
+
+
+
+
+
+
+		.itemlist__col2__l1 {
+			margin: 128px 0 20px;
+			display: inline-block;
+			widht: 100%;
+			font-size: 18px;
+			a {
+				vertical-align: middle;
+			}
+
+			.qi-view {
+				margin-right: 14px;
+				vertical-align: middle;
+			}
+		}
+
+		.itemlist__col2__l2 {
+			position: absolute;
+			bottom: 53px;
+			margin: 0;
+		}
+
+		.itemlist__p {
+			padding: 0;
+			margin: 0 0 14px;
+			color: #687078;
+			font-size: 15px;
+			line-height: 22px;
+		}
+
 
