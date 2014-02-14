@@ -2826,7 +2826,8 @@ footer {
 .itemlist__empty-item {
   counter-increment: list_counter;
   position: relative;
-  margin-left: 80px;
+  margin-right: 40px;
+  margin-left: 40px;
   margin-bottom: 53px;
 }
 .itemlist__empty-item::before {
@@ -2836,7 +2837,7 @@ footer {
   font-size: 40px;
   line-height: 1;
   font-weight: 300;
-  left: -83px;
+  left: -43px;
   top: 1px;
 }
 .itemlist__h2 {
