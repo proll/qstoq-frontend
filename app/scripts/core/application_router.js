@@ -17,6 +17,10 @@ qst.Router = Backbone.Router.extend({
 		'/': 'landing',
 		'.': 'landing',
 
+		'l/:lang': 'langredirect',
+		'l/:lang/': 'langredirect',
+
+
 		'how': 'how',
 		'where': 'where',
 		

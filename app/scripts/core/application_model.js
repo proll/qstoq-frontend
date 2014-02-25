@@ -105,6 +105,14 @@ qst.App = Backbone.Model.extend({
 			qst.trigger('route', router, route, params);
 
 			switch (router) {
+				case 'langredirect': 
+					if(!!route[0] && qst.language != route[0]) {
+						_.setCookie('lang', route[0]);
+						qst.navigate('/');
+						window.location.reload();
+					}
+					break;
+
 				case 'er404': 
 					this.pages.getPage('404').render();
 					break;
