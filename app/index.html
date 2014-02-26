@@ -56,16 +56,12 @@
 <div id="fb-root"></div>
 
 
-<!-- build:js /scripts/jquery.js -->
+<!-- build:js /scripts/vendor.js -->
 	<script src="/scripts/vendor/jquery/jquery.js"></script>
 	<script src="/scripts/vendor/jquery/jquery.mousewheel.min.js"></script>
 	<script src="/scripts/vendor/jquery/jquery.pep.js"></script>
-<!-- endbuild -->
-<!-- build:js /scripts/jqmisc.js -->
 	<script src="/scripts/vendor/jquery/jquery.autosize.js"></script>
-<!-- endbuild -->
 
-<!-- build:js /scripts/vendor.js -->
 	<script src="/scripts/vendor/lodash.js"></script>
 	<script src="/scripts/vendor/backbone/backbone-0.9.10.js"></script>
 	<script src="/scripts/vendor/handlebars/handlebars.js"></script>
@@ -121,12 +117,11 @@ var qst_dev = false;
 	}
 </script>
 
-<!-- build:js /scripts/ptemplates.js -->
-	<script src="/scripts/ptemplates.js"></script>
-<!-- endbuild -->
-
-
 <!-- build:js /scripts/qst.js -->
+	<script src="/scripts/ptemplates.js"></script>
+
+
+
 	<script src="/scripts/qst.js"></script>
 
 	<script src="/scripts/core/lazy-loader.js"></script>
@@ -230,9 +225,8 @@ var qst_dev = false;
 
 	<!-- Misc Blocks -->
 	<script src="/scripts/blocks/up-scroller_view.js"></script>
-<!-- endbuild -->
 
-<!-- build:js /scripts/l10n.js -->
+	<!-- l10n -->
 	<script src="/scripts/l10n/l10n__plural.js"></script>
 	<script src="/scripts/l10n/l10n__itemlist.js"></script>
 	<script src="/scripts/l10n/l10n__itemedit.js"></script>
