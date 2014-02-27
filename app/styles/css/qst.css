@@ -2893,7 +2893,7 @@ footer {
 .itemlist__col2__l1 {
   margin: 128px 0 20px;
   display: inline-block;
-  widht: 100%;
+  width: 100%;
   font-size: 18px;
 }
 .itemlist__col2__l1 a {
@@ -3582,17 +3582,12 @@ textarea.qst__inp {
 }
 .showcase__form__img-cont {
   width: 320px;
-  height: 180px;
   vertical-align: top;
   margin-bottom: 22px;
 }
 .showcase__form__img {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   width: 320px;
-  height: 180px;
+  height: auto;
 }
 .showcase__form-h {
   font-weight: bold;
@@ -3606,6 +3601,8 @@ textarea.qst__inp {
   line-height: 20px;
   margin: 0 0 40px 0;
   padding: 0;
+  white-space: pre-line;
+  font-family: Arial, sans-serif;
 }
 .showcase__form__col2 {
   padding: 32px 40px 45px;
@@ -4114,17 +4111,12 @@ textarea.qst__inp {
   display: inline-block;
   float: left;
   width: 320px;
-  height: 180px;
   vertical-align: top;
   margin: 5px;
 }
 .preview-upload__img {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   width: 320px;
-  height: 180px;
+  height: auto;
 }
 .preview-upload__add-another {
   display: block;
