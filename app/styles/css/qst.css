@@ -3721,15 +3721,19 @@ textarea.qst__inp {
 }
 .showcase__share {
   list-style: none;
+  text-align: center;
 }
 .showcase__share-itm {
+  vertical-align: top;
   display: inline-block;
+  margin-top: 0;
   font-size: 11px;
   line-height: 20px;
   color: #868e96;
 }
 .showcase__share-itm:first-child {
   margin-right: 3px;
+  margin-top: 1px;
 }
 .showcase__share-itm-a {
   display: inline-block;
