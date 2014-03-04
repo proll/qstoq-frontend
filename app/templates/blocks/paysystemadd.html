@@ -440,5 +440,48 @@
 			</div>
 		</div>
 	</div>
+	<div class="paysystemadd__row ymoney-row">
+		<h1 class="paysystemadd__h">{{_ 'ymoney_h' 'paysystemadd'}}</h1>
+		<div class="row">
+			<div class="span6">
+				<ul class="paysystemadd__info-list">
+					<li class="paysystemadd__info-item">{{_ 'ymoney_itm_1' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'ymoney_itm_2' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'ymoney_itm_3' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'ymoney_itm_4' 'paysystemadd' settings.id}}</li>
+					<li class="paysystemadd__info-item">{{_ 'ymoney_itm_5' 'paysystemadd'}}</li>
+					<li class="paysystemadd__info-item">{{_ 'ymoney_itm_6' 'paysystemadd'}}</li>
+				</ul>
+			</div>
+			<div class="span5">
+				<form action="" class="paysystemadd__form">
+					<input type="hidden" name="ymoney_active" data-name="active" value="1">
+					<div class="qst__inp-group">
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'ymoney_merchant_id' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" data-name="merchant_id" name="ymoney_merchant_id" value="{{#if settings.paysys.ymoney}}{{settings.paysys.ymoney.merchant_id}}{{/if}}">
+								</div>
+							</label>
+						</div>
+						<div class="qst__inp-cont">
+							<label>
+								<span class="qst__lbl">{{_ 'ymoney_secret' 'paysystemadd'}}</span>
+								<div class="qst__inp-cont-in">
+									<input type="text" class="qst__inp" name="ymoney_secret" data-name="secret" value="{{#if settings.paysys.ymoney}}{{settings.paysys.ymoney.secret}}{{/if}}">
+								</div>
+							</label>
+						</div>
+					</div>
+					<input type="submit" class="hidden-input">
+					<div class="paysystemadd__form-submit">
+						<span class="paysystemadd__form-submit-error"></span>
+						<a href="submit" rel="nofollow" class="paysystemadd__form-submit-a">{{_ 'Save' 'paysystemadd'}}</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="paysystemadd__fader"></div>

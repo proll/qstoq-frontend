@@ -377,4 +377,49 @@ qst.l10n.paysystemadd = {
 		en: 'Set parameter <strong>Minimum cashout</strong>. When this summ will be reached the cachout will be proccessed. But remember that lower <strong>Minimum cashout</strong> is longer transaction time inside Bitcoin network (up to 2 week)',
 		ru: 'Укажите параметр <strong>Минимальная выплата</strong>. По достижении указанной суммы будет производиться выплата на указанный адрес. Но помните, чем меньше эта сумма, тем дольше будет производиться обработка перевеода внутри Bitcoin сети (до 2х недель).'
 	},
+
+
+	'ymoney_h': {
+		en: 'ymoney connection (legal entity only)',
+		ru: 'Подключение ymoney (только юр.лица)',
+	},
+
+	'ymoney_merchant_id': {
+		en: 'Wallet ID',
+		ru: 'Номер кошелька'
+	},
+	'ymoney_secret': {
+		en: 'Secret',
+		ru: 'Секрет'
+	},
+
+	'ymoney_itm_1': {
+		en: 'Create your Yandex.Money wallet on <a href="https://money.yandex.ru/" target="_blank">money.yandex.ru</a>',
+		ru: 'Заведите себе кошелек Яндекс.Деньги. Это просто сделать на странице <a href="https://money.yandex.ru/" target="_blank">money.yandex.ru</a>'
+	},
+
+	'ymoney_itm_2': {
+		en: 'Copy <strong>wallet id</strong> it\'s on the upper left corner',
+		ru: 'Скопируйте <strong>номер вашего кошелька</strong> (указан слева вверху)'
+	},
+
+	'ymoney_itm_3': {
+		en: 'Go to the HTTP notifications: <a href="https://sp-money.yandex.ru/myservices/online.xml" target="_blank">https://sp-money.yandex.ru/myservices/online.xml</a>',
+		ru: 'Зайдите в раздел HTTP-уведомления: <a href="https://sp-money.yandex.ru/myservices/online.xml" target="_blank">https://sp-money.yandex.ru/myservices/online.xml</a>'
+	},
+
+	'ymoney_itm_4': {
+		en: 'Set Return URL: <mark>http://qstoq.me/v1/ymoney/{{s1}}</mark>',
+		ru: 'Укажите URL для возврата: <mark>http://qstoq.me/v1/ymoney/{{s1}}</mark>'
+	},
+
+	'ymoney_itm_5': {
+		en: 'Press “Show secret” and copy here to the <strong>Secret</strong> field',
+		ru: 'Нажите кнопку “Показать секрет” и скопируйте его сюда в поле <strong>Секрет</strong>'
+	},
+
+	'ymoney_itm_6': {
+		en: 'Check “Send notifications” and press Save',
+		ru: 'Поставьте галочку “Отправлять уведомления” и нажмите Сохранить'
+	},
 }

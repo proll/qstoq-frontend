@@ -12,23 +12,18 @@ qst.PaySystem = Backbone.Model.extend({
 
 		paysys: [
 			{
-				key: 'assist',
-				icons: ['assist'],
-				toggle: false
-			},
-			{
-				key: 'paymaster',
-				icons: ['paymaster'],
-				toggle: false
-			},
-			{
-				key: 'robokassa',
-				icons: ['robokassa'],
+				key: 'paypal',
+				icons: ['paypal'],
 				toggle: false
 			},
 			{
 				key: 'qiwi',
 				icons: ['qiwi'],
+				toggle: false
+			},
+			{
+				key: 'ymoney',
+				icons: ['ymoney'],
 				toggle: false
 			},
 			{
@@ -47,8 +42,18 @@ qst.PaySystem = Backbone.Model.extend({
 				toggle: false
 			},
 			{
-				key: 'paypal',
-				icons: ['paypal'],
+				key: 'assist',
+				icons: ['assist'],
+				toggle: false
+			},
+			{
+				key: 'paymaster',
+				icons: ['paymaster'],
+				toggle: false
+			},
+			{
+				key: 'robokassa',
+				icons: ['robokassa'],
 				toggle: false
 			},
 			// {

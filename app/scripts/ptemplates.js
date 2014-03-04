@@ -1139,6 +1139,18 @@ function program49(depth0,data) {
   return escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.paysys)),stack1 == null || stack1 === false ? stack1 : stack1.paymaster)),stack1 == null || stack1 === false ? stack1 : stack1.rest_password)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
   }
 
+function program51(depth0,data) {
+  
+  var stack1;
+  return escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.paysys)),stack1 == null || stack1 === false ? stack1 : stack1.ymoney)),stack1 == null || stack1 === false ? stack1 : stack1.merchant_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  }
+
+function program53(depth0,data) {
+  
+  var stack1;
+  return escapeExpression(((stack1 = ((stack1 = ((stack1 = ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.paysys)),stack1 == null || stack1 === false ? stack1 : stack1.ymoney)),stack1 == null || stack1 === false ? stack1 : stack1.secret)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  }
+
   buffer += "<div class=\"paysystemadd__cont\">\n	<div class=\"paysystemadd__row bitcoin-row\">\n		<h1 class=\"paysystemadd__h\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "bitcoin_h", "paysystemadd", options) : helperMissing.call(depth0, "_", "bitcoin_h", "paysystemadd", options)))
@@ -1492,6 +1504,42 @@ function program49(depth0,data) {
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "paymaster_rest_password", "paysystemadd", options) : helperMissing.call(depth0, "_", "paymaster_rest_password", "paysystemadd", options)))
     + "</span>\n								<div class=\"qst__inp-cont-in\">\n									<input type=\"text\" class=\"qst__inp\" name=\"paymaster_rest_password\" data-name=\"rest_password\" value=\"";
   stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.paysys)),stack1 == null || stack1 === false ? stack1 : stack1.paymaster), {hash:{},inverse:self.noop,fn:self.program(49, program49, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\">\n								</div>\n							</label>\n						</div>\n					</div>\n					<input type=\"submit\" class=\"hidden-input\">\n					<div class=\"paysystemadd__form-submit\">\n						<span class=\"paysystemadd__form-submit-error\"></span>\n						<a href=\"submit\" rel=\"nofollow\" class=\"paysystemadd__form-submit-a\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Save", "paysystemadd", options) : helperMissing.call(depth0, "_", "Save", "paysystemadd", options)))
+    + "</a>\n					</div>\n				</form>\n			</div>\n		</div>\n	</div>\n	<div class=\"paysystemadd__row ymoney-row\">\n		<h1 class=\"paysystemadd__h\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_h", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_h", "paysystemadd", options)))
+    + "</h1>\n		<div class=\"row\">\n			<div class=\"span6\">\n				<ul class=\"paysystemadd__info-list\">\n					<li class=\"paysystemadd__info-item\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_itm_1", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_itm_1", "paysystemadd", options)))
+    + "</li>\n					<li class=\"paysystemadd__info-item\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_itm_2", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_itm_2", "paysystemadd", options)))
+    + "</li>\n					<li class=\"paysystemadd__info-item\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_itm_3", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_itm_3", "paysystemadd", options)))
+    + "</li>\n					<li class=\"paysystemadd__info-item\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_itm_4", "paysystemadd", ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.id), options) : helperMissing.call(depth0, "_", "ymoney_itm_4", "paysystemadd", ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.id), options)))
+    + "</li>\n					<li class=\"paysystemadd__info-item\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_itm_5", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_itm_5", "paysystemadd", options)))
+    + "</li>\n					<li class=\"paysystemadd__info-item\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_itm_6", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_itm_6", "paysystemadd", options)))
+    + "</li>\n				</ul>\n			</div>\n			<div class=\"span5\">\n				<form action=\"\" class=\"paysystemadd__form\">\n					<input type=\"hidden\" name=\"ymoney_active\" data-name=\"active\" value=\"1\">\n					<div class=\"qst__inp-group\">\n						<div class=\"qst__inp-cont\">\n							<label>\n								<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_merchant_id", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_merchant_id", "paysystemadd", options)))
+    + "</span>\n								<div class=\"qst__inp-cont-in\">\n									<input type=\"text\" class=\"qst__inp\" data-name=\"merchant_id\" name=\"ymoney_merchant_id\" value=\"";
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.paysys)),stack1 == null || stack1 === false ? stack1 : stack1.ymoney), {hash:{},inverse:self.noop,fn:self.program(51, program51, data),data:data});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += "\">\n								</div>\n							</label>\n						</div>\n						<div class=\"qst__inp-cont\">\n							<label>\n								<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ymoney_secret", "paysystemadd", options) : helperMissing.call(depth0, "_", "ymoney_secret", "paysystemadd", options)))
+    + "</span>\n								<div class=\"qst__inp-cont-in\">\n									<input type=\"text\" class=\"qst__inp\" name=\"ymoney_secret\" data-name=\"secret\" value=\"";
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.settings),stack1 == null || stack1 === false ? stack1 : stack1.paysys)),stack1 == null || stack1 === false ? stack1 : stack1.ymoney), {hash:{},inverse:self.noop,fn:self.program(53, program53, data),data:data});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "\">\n								</div>\n							</label>\n						</div>\n					</div>\n					<input type=\"submit\" class=\"hidden-input\">\n					<div class=\"paysystemadd__form-submit\">\n						<span class=\"paysystemadd__form-submit-error\"></span>\n						<a href=\"submit\" rel=\"nofollow\" class=\"paysystemadd__form-submit-a\">";
   options = {hash:{},data:data};

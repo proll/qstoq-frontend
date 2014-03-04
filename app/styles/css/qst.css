@@ -1039,17 +1039,17 @@ textarea::-webkit-input-placeholder {
   background-position: 0px -544px;
 }
 .qi {
-  background: url("/images/sprites/qi-20b01.png") no-repeat 0 0;
+  background: url("/images/sprites/qi-33146.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .qi {
-    background: url("/images/sprites/qi-2x-20b01.png") no-repeat 0 0;
-    -webkit-background-size: 28px 589px;
-    -moz-background-size: 28px 589px;
-    -o-background-size: 28px 589px;
-    background-size: 28px 589px;
+    background: url("/images/sprites/qi-2x-33146.png") no-repeat 0 0;
+    -webkit-background-size: 28px 606px;
+    -moz-background-size: 28px 606px;
+    -o-background-size: 28px 606px;
+    background-size: 28px 606px;
     vertical-align: text-top;
     display: inline-block;
   }
@@ -1169,40 +1169,45 @@ textarea::-webkit-input-placeholder {
   height: 16px;
   background-position: 0px -388px;
 }
+.qi-ps-ymoney {
+  width: 16px;
+  height: 16px;
+  background-position: 0px -405px;
+}
 .qi-ru {
   width: 16px;
   height: 11px;
-  background-position: 0px -405px;
+  background-position: 0px -422px;
 }
 .qi-share-fb {
   width: 28px;
   height: 28px;
-  background-position: 0px -417px;
+  background-position: 0px -434px;
 }
 .qi-share-link {
   width: 28px;
   height: 28px;
-  background-position: 0px -446px;
+  background-position: 0px -463px;
 }
 .qi-share-tw {
   width: 28px;
   height: 28px;
-  background-position: 0px -475px;
+  background-position: 0px -492px;
 }
 .qi-share-vk {
   width: 28px;
   height: 28px;
-  background-position: 0px -504px;
+  background-position: 0px -521px;
 }
 .qi-us {
   width: 16px;
   height: 11px;
-  background-position: 0px -533px;
+  background-position: 0px -550px;
 }
 .qi-view {
   width: 19px;
   height: 44px;
-  background-position: 0px -545px;
+  background-position: 0px -562px;
 }
 .ib {
   background: url("/images/sprites/ib-36866.png") no-repeat 0 0;
@@ -5269,6 +5274,9 @@ a.account__social-item__title:focus {
   display: block;
 }
 .webmoney_e .webmoney_e-row {
+  display: block;
+}
+.ymoney .ymoney-row {
   display: block;
 }
 .paysystemadd-popup .popup__inner {

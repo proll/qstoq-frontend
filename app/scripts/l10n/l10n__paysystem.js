@@ -67,6 +67,11 @@ qst.l10n.paysystem = {
 		ru: 'Qiwi'
 	},
 
+	'ymoney': {
+		en: 'Yandex.Money',
+		ru: 'Yandex.Money'
+	},
+
 	'paypal': {
 		en: 'PayPal',
 		ru: 'PayPal'
