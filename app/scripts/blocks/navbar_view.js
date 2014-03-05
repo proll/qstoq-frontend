@@ -4,6 +4,7 @@ qst.NavbarView = Backbone.View.extend({
 	_navItemPrefix:"nav__",
 
 	events: {
+		"click .nav__lang>a": 			"toggleLang",
 		"click .nav__login>a": 			"login",
 		"click .nav__logout>a": 		"logout",
 	},
@@ -24,6 +25,12 @@ qst.NavbarView = Backbone.View.extend({
 
 	show: function () {
 		this.$el.toggleClass('navbar_hidden', false);
+	},
+
+	toggleLang: function(e) {
+		e.preventDefault();
+		this.model.toggleLang();
+		return false;
 	},
 
 	toggleAuth: function(user_obj) {

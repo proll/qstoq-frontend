@@ -827,6 +827,9 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li>\n				<li class=\"navbar__item-where\"><a href=\"/where\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Where can I use it", "navbar", options) : helperMissing.call(depth0, "_", "Where can I use it", "navbar", options)))
+    + "</a></li>\n				<li class=\"nav__lang\"><a href=\"/l/en\" rel=\"nofollow\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "lang", "navbar", options) : helperMissing.call(depth0, "_", "lang", "navbar", options)))
     + "</a></li>\n				<li class=\"nav__login\"><a href=\"/auth\" rel=\"nofollow\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in / Sign up", "navbar", options) : helperMissing.call(depth0, "_", "Log in / Sign up", "navbar", options)))
@@ -839,7 +842,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</span></a></li>\n				<li class=\"nav__profile\"><a href=\"/profile\"><span class=\"nav__profile-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Profile", "navbar", options) : helperMissing.call(depth0, "_", "Profile", "navbar", options)))
-    + "</span></a></li>\n				<li class=\"nav__logout\"><a href=\"/logout\" rel=\"nofollow\"><i class=\"qi qi-logout nav__icn\"></i></a></li>\n			</ul>\n		</div>\n	</div>\n</div>";
+    + "</span></a></li>\n				<li class=\"nav__lang\"><a href=\"/l/en\" rel=\"nofollow\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "lang", "navbar", options) : helperMissing.call(depth0, "_", "lang", "navbar", options)))
+    + "</a></li>\n				<li class=\"nav__logout\"><a href=\"/logout\" rel=\"nofollow\"><i class=\"qi qi-logout nav__icn\"></i></a></li>\n			</ul>\n		</div>\n	</div>\n</div>";
   return buffer;
   });
 

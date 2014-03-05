@@ -45,5 +45,10 @@ qst.l10n.navbar = {
 	'Log in / Sign up': {
 		en: 'Log in / Sign up',
 		ru: 'Регистрация / Вход'
+	},
+
+	lang: {
+		en: 'En',
+		ru: 'Ру'
 	}
 }

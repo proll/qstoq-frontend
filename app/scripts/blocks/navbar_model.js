@@ -15,5 +15,15 @@ qst.Navbar = Backbone.Model.extend({
 
 	show: function() {
 		this.view.show();
+	},
+
+	toggleLang: function() {
+		if(qst.language === 'ru') {
+			_.setCookie('lang', 'en');
+		} else {
+			_.setCookie('lang', 'ru');
+		}
+
+		window.location.reload()
 	}
 });
