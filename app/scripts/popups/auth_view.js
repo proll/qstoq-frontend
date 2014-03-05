@@ -34,7 +34,7 @@ qst.AuthView = Backbone.View.extend({
 		this.rendered = true;
 		this.$el.append( this.template(this.model.toJSON()));
 
-		this.popup_view = new qst.PopupView({class: "auth-popup"});
+		this.popup_view = new qst.PopupView({klass: "auth-popup"});
 		this.popup_view.on('hide', this.remove, this);
 		this.popup_view.setContent(this.$el);
 		this.popup_view.show();

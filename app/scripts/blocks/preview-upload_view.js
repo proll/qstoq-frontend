@@ -4,7 +4,7 @@ qst.PreviewUploadView = Backbone.View.extend({
 
 	events: {
 		'change #file_uploader_preview': 'upload',
-		'click .preview-upload__delete': 'delete',
+		'click .preview-upload__delete': 'delet',
 	},
 
 
@@ -63,9 +63,9 @@ qst.PreviewUploadView = Backbone.View.extend({
 		});
 	},
 
-	delete: function(e) {
+	delet: function(e) {
 		this.model.set('data', '');
-		this.model.delete();
+		this.model.delet();
 		return false;
 	},
 

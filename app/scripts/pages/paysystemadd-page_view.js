@@ -10,7 +10,7 @@ qst.PaySystemAddPageView = qst.PageView.extend({
 
 	render: function(in_popup, need_previous){
 		this.is_popup = in_popup;
-		this.popup_view = new qst.PopupView({class: "paysystemadd-popup"});
+		this.popup_view = new qst.PopupView({klass: "paysystemadd-popup"});
 		this.popup_view.on('hide', function(){
 			qst.trigger("historyback");
 		}, this);

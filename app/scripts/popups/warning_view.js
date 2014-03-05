@@ -12,7 +12,7 @@ qst.WarningView = Backbone.View.extend({
 		this.options = options;
 
 		this.template = qst.Templates.get(this.template);
-		this.popup_view = new qst.PopupView({class: "warning-popup"});
+		this.popup_view = new qst.PopupView({klass: "warning-popup"});
 
 		this.popup_view.on('hide', this.clear, this);
 		this.render();

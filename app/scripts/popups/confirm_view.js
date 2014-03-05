@@ -8,7 +8,7 @@ qst.ConfirmView = Backbone.View.extend({
 
 	initialize: function(options) {
 		this.template = qst.Templates.get(this.template);
-		this.popup_view = new qst.PopupView({class: "confirm-popup"});
+		this.popup_view = new qst.PopupView({klass: "confirm-popup"});
 
 		this.model.on('load:start', this.confirmStart, this);
 		this.model.on('confirm:success', this.confirmSuccess, this);

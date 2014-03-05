@@ -10,7 +10,7 @@ qst.PopupView = Backbone.View.extend({
 	options : {},
 	defaults: {
 		content: "",
-		class: "",
+		klass: "",
 		width: ""
 	},
 	_rendered: false,
