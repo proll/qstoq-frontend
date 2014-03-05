@@ -2538,6 +2538,9 @@ textarea::-webkit-input-placeholder {
 .nav__icn {
   vertical-align: top;
 }
+.nav__lang {
+  text-transform: none;
+}
 .navbar_hidden {
   top: -100px;
 }
