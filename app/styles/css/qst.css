@@ -847,6 +847,11 @@ textarea::-webkit-input-placeholder {
   margin-left: 10px;
 }
 .btn {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -875,6 +880,11 @@ textarea::-webkit-input-placeholder {
   padding: 8px 41px 12px 40px;
 }
 .btn_short {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -2267,6 +2277,11 @@ textarea::-webkit-input-placeholder {
   transition: background-color 0.2s;
 }
 .auth__sign-submit-a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -2865,6 +2880,11 @@ footer {
   margin: 0 0 12px;
 }
 .itemlist__direct-hello-a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -3336,6 +3356,11 @@ textarea.qst__inp {
   margin-left: 10px;
 }
 .itemedit__submit-a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -3366,6 +3391,11 @@ textarea.qst__inp {
   padding: 8px 41px 12px 40px;
 }
 .itemedit__delete-a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -3650,6 +3680,11 @@ textarea.qst__inp {
   margin: 0 0 25px 2px;
 }
 .showcase__form__buy-btn-in {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -3865,6 +3900,11 @@ textarea.qst__inp {
   margin: 0 0 35px 0;
 }
 .receipt__form__buy-btn-in {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -4481,6 +4521,11 @@ textarea.qst__inp {
   padding: 38px 0;
 }
 .landing-section4 .landing__start-a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -5210,6 +5255,11 @@ a.account__social-item__title:focus {
   margin: 0 0 12px;
 }
 .paysystem__direct-hello-a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
@@ -5430,6 +5480,11 @@ a.account__social-item__title:focus {
   transition: background-color 0.2s;
 }
 .paysystemadd__form-submit-a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   color: #ffffff;
   text-decoration: none;
   font-size: 13px;
