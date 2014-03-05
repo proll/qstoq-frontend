@@ -48,7 +48,7 @@ qst.l10n.navbar = {
 	},
 
 	lang: {
-		en: 'En',
-		ru: 'Ру'
+		en: 'Rus',
+		ru: 'Eng'
 	}
 }
