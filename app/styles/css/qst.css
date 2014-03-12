@@ -2338,6 +2338,9 @@ textarea::-webkit-input-placeholder {
 .signin .auth__sign-h_signup {
   display: none;
 }
+.signin .auth__sign-h_emailconfirm {
+  display: none;
+}
 .signin .auth__sign-toggler_signin {
   display: none;
 }
@@ -2353,6 +2356,9 @@ textarea::-webkit-input-placeholder {
 .signin .auth__sign-submit_signup {
   display: none;
 }
+.signin .auth__sign-submit_emailconfirm {
+  display: none;
+}
 .signin .qst__inp-group {
   margin-bottom: 50px;
 }
@@ -2361,6 +2367,9 @@ textarea::-webkit-input-placeholder {
 }
 .signup .auth__sign-h_signup {
   display: block;
+}
+.signup .auth__sign-h_emailconfirm {
+  display: none;
 }
 .signup .auth__sign-toggler_signin {
   display: static;
@@ -2380,6 +2389,42 @@ textarea::-webkit-input-placeholder {
   display: none;
 }
 .signup .auth__sign-submit_signup {
+  display: inline-block;
+}
+.signup .auth__sign-submit_emailconfirm {
+  display: none;
+}
+.emailconfirm .auth__social {
+  display: none;
+}
+.emailconfirm .auth__sign-h_signin {
+  display: none;
+}
+.emailconfirm .auth__sign-h_signup {
+  display: none;
+}
+.emailconfirm .auth__sign-h_emailconfirm {
+  display: block;
+}
+.emailconfirm .auth__sign-toggler {
+  display: none;
+}
+.emailconfirm .auth__sign-inp-password-cont {
+  height: 0;
+  padding: 0 10px 0;
+  border-width: 0;
+  overflow: hidden;
+}
+.emailconfirm .auth__sign-user-agreement {
+  display: none;
+}
+.emailconfirm .auth__sign-submit_signin {
+  display: none;
+}
+.emailconfirm .auth__sign-submit_signup {
+  display: none;
+}
+.emailconfirm .auth__sign-submit_emailconfirm {
   display: inline-block;
 }
 .warning-popup.popup__table {

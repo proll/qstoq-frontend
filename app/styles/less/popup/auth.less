@@ -189,6 +189,9 @@
 			&_signup {
 				display: none;
 			}
+			&_emailconfirm {
+				display: none;
+			}
 		}
 
 		&-toggler {
@@ -216,6 +219,9 @@
 			&_signup {
 				display: none;
 			}
+			&_emailconfirm {
+				display: none;
+			}
 		}
 	}
 
@@ -233,6 +239,9 @@
 			}
 			&_signup {
 				display: block;
+			}
+			&_emailconfirm {
+				display: none;
 			}
 		}
 
@@ -261,6 +270,56 @@
 				display: none;
 			}
 			&_signup {
+				display: inline-block;
+			}
+			&_emailconfirm {
+				display: none;
+			}
+		}
+	}
+}
+
+.emailconfirm {
+	.auth__social {
+		display: none;
+	}
+	
+	.auth__sign {
+		&-h {
+			&_signin {
+				display: none;
+			}
+			&_signup {
+				display: none;
+			}
+			&_emailconfirm {
+				display: block;
+			}
+		}
+
+		&-toggler {
+			display: none;
+		}
+
+		&-inp-password-cont {
+			height: 0;
+			padding: 0 10px 0;
+			border-width: 0;
+			overflow: hidden;
+		}
+
+		&-user-agreement {
+			display: none;
+		}
+
+		&-submit {
+			&_signin {
+				display: none;
+			}
+			&_signup {
+				display: none;
+			}
+			&_emailconfirm {
 				display: inline-block;
 			}
 		}

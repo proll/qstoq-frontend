@@ -2192,13 +2192,16 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</h2>\n		<h2 class=\"auth__sign-h auth__sign-h_signup\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Sign up", "auth", options) : helperMissing.call(depth0, "_", "Sign up", "auth", options)))
+    + "</h2>\n		<h2 class=\"auth__sign-h auth__sign-h_emailconfirm\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Enter your e-mail", "auth", options) : helperMissing.call(depth0, "_", "Enter your e-mail", "auth", options)))
     + "</h2>\n		<form action=\"/auth\" class=\"auth__sign-form\">\n			<div class=\"qst__inp-group\">\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "e-mail", "auth", options) : helperMissing.call(depth0, "_", "e-mail", "auth", options)))
     + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input maxlength=\"50\" type=\"text\" class=\"qst__inp\" name=\"login\" value=\"\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont auth__sign-inp-name-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "name", "auth", options) : helperMissing.call(depth0, "_", "name", "auth", options)))
-    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input maxlength=\"55\" type=\"text\" class=\"qst__inp\" name=\"fio\" value=\"\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input maxlength=\"55\" type=\"text\" class=\"qst__inp\" name=\"fio\" value=\"\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont auth__sign-inp-password-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "password", "auth", options) : helperMissing.call(depth0, "_", "password", "auth", options)))
     + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input maxlength=\"45\" type=\"password\" class=\"qst__inp\" name=\"password\" value=\"\">\n						</div>\n					</label>\n				</div>\n			</div>\n			<div class=\"auth__sign-user-agreement\">\n				";
@@ -2210,6 +2213,9 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a><a href=\"signup\" rel=\"nofollow\" class=\"auth__sign-submit-a auth__sign-submit_signup\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Sign up", "auth", options) : helperMissing.call(depth0, "_", "Sign up", "auth", options)))
+    + "</a><a href=\"emailconfirm\" rel=\"nofollow\" class=\"auth__sign-submit-a auth__sign-submit_emailconfirm\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Log in", "auth", options) : helperMissing.call(depth0, "_", "Log in", "auth", options)))
     + "</a>\n			</div>\n		</form>\n	</div>\n</div>";
   return buffer;
   });

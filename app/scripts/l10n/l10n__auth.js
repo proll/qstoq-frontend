@@ -1,6 +1,10 @@
 qst = qst || {};
 qst.l10n = qst.l10n || {};
 qst.l10n.auth = {
+	'Enter your e-mail': {
+		en: 'Enter your e-mail',
+		ru: 'Введите свой e-mail'
+	},
 	'Social log in': {
 		en: 'Social log in',
 		ru: 'Войти через социальные сети'

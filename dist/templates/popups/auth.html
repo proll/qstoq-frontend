@@ -11,6 +11,7 @@
 		</span>
 		<h2 class="auth__sign-h auth__sign-h_signin">{{_ 'Log in by e-mail' 'auth'}}</h2>
 		<h2 class="auth__sign-h auth__sign-h_signup">{{_ 'Sign up' 'auth'}}</h2>
+		<h2 class="auth__sign-h auth__sign-h_emailconfirm">{{_ 'Enter your e-mail' 'auth'}}</h2>
 		<form action="/auth" class="auth__sign-form">
 			<div class="qst__inp-group">
 				<div class="qst__inp-cont">
@@ -29,7 +30,7 @@
 						</div>
 					</label>
 				</div>
-				<div class="qst__inp-cont">
+				<div class="qst__inp-cont auth__sign-inp-password-cont">
 					<label>
 						<span class="qst__lbl">{{_ 'password' 'auth'}}</span>
 						<div class="qst__inp-cont-in">
@@ -44,7 +45,7 @@
 			<input type="submit" class="auth__sign-submit-hidden">
 			<div class="auth__sign-submit">
 				<span class="auth__sign-submit-error"></span>
-				<a href="signin" rel="nofollow" class="auth__sign-submit-a auth__sign-submit_signin">{{_ 'Log in' 'auth'}}</a><a href="signup" rel="nofollow" class="auth__sign-submit-a auth__sign-submit_signup">{{_ 'Sign up' 'auth'}}</a>
+				<a href="signin" rel="nofollow" class="auth__sign-submit-a auth__sign-submit_signin">{{_ 'Log in' 'auth'}}</a><a href="signup" rel="nofollow" class="auth__sign-submit-a auth__sign-submit_signup">{{_ 'Sign up' 'auth'}}</a><a href="emailconfirm" rel="nofollow" class="auth__sign-submit-a auth__sign-submit_emailconfirm">{{_ 'Log in' 'auth'}}</a>
 			</div>
 		</form>
 	</div>

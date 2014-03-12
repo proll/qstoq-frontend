@@ -12,7 +12,6 @@ qst.AuthView = Backbone.View.extend({
 		"click .auth__social-item-lnk_fb"	: "loginFB",
 		// "click .auth__social-item-lnk_tw"	: "loginTW",
 
-		// "click .auth-popup__login-email_forgot": 'toReset',
 
 		// unmark all error inputs 
 		'keypress': 'hideErrors',
@@ -28,6 +27,7 @@ qst.AuthView = Backbone.View.extend({
 
 		this.model.on("auth:show", this.render, this);
 		this.model.on("auth:success", this.remove, this);
+		this.model.on("change:state", this.changeState, this);
 	},
 
 	render: function(){
@@ -57,6 +57,7 @@ qst.AuthView = Backbone.View.extend({
 
 		this.model.signin.on("error", this.errorSignin, this);
 		this.model.registration.on("error", this.errorSignup, this);
+		this.model.emailconfirm.on("error", this.errorEmail, this);
 		// this.model.registration.on("registration:pending", 	this.hide, this);
 
 
@@ -66,13 +67,25 @@ qst.AuthView = Backbone.View.extend({
 	},
 
 
-
 	toggleSign: function(e) {
-		this.$input_email.focus();
+		if(e) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
 		if(this.model.get('state') === 'signin') {
+			this.model.set('state', 'signup');
+		} else {
+			this.model.set('state', 'signin');
+		}
+	},
+
+	changeState: function(model, state) {
+		this.$input_email.focus();
+		if(state === 'signup') {
 			this.$el
 				.toggleClass('signin', false)
 				.toggleClass('signup', true)
+				.toggleClass('emailconfirm',  false)
 
 			// tabIndexFix
 			this.$input_email
@@ -88,11 +101,11 @@ qst.AuthView = Backbone.View.extend({
 				.attr('tabindex', 4)
 				.attr('autocomplete', 'off');
 
-			this.model.set('state', 'signup');
-		} else {
+		} else if(state === 'signin'){
 			this.$el
 				.toggleClass('signin', true)
 				.toggleClass('signup', false)
+				.toggleClass('emailconfirm',  false)
 
 			// tabIndexFix
 			this.$input_email
@@ -108,8 +121,28 @@ qst.AuthView = Backbone.View.extend({
 				.attr('tabindex', 3)
 				.attr('autocomplete', 'on');
 
-			this.model.set('state', 'signin');
+		} else if(state === 'emailconfirm'){
+			this.$el
+				.toggleClass('signin', false)
+				.toggleClass('signup', false)
+				.toggleClass('emailconfirm',  true)
+
+			// tabIndexFix
+			this.$input_email
+				.attr('tabindex', 1)
+				.attr('autocomplete', 'off');
+			this.$input_name
+				.removeAttr('tabindex')
+				.attr('autocomplete', 'off');
+			this.$input_password
+				.removeAttr('tabindex')
+				.attr('autocomplete', 'off');
+			this.$submit_btn
+				.removeAttr('tabindex')
+				.attr('autocomplete', 'off');
 		}
+
+
 		return false;
 	},
 
@@ -142,7 +175,7 @@ qst.AuthView = Backbone.View.extend({
 					password: 	password
 				});
 			}
-		} else {
+		} else if(this.model.get('state') === 'signup') {
 			if(!_.isEmail(email)) {
 				this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
 			} else if (email.length > 50){
@@ -162,6 +195,16 @@ qst.AuthView = Backbone.View.extend({
 					name: name,
 				});
 			}
+		} else if(this.model.get('state') === 'emailconfirm') {
+			if(!_.isEmail(email)) {
+				this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
+			} else if (email.length > 50){
+				this.showError(qst.localize('Too much', 'auth'), 'email')
+			} else {
+				this.model.emailconfirm.fetch({
+					email: 		email, 
+				});	
+			}
 		}
 		return false;
 	},
@@ -177,6 +220,14 @@ qst.AuthView = Backbone.View.extend({
 	errorSignup: function(error) {
 		if(error.status === 401) {
 			this.showError(qst.localize('Wrong e-mail and password combination :(', 'auth'), 'email')
+		} else {
+			this.showError(qst.localize('Something went wrong...', 'misc'), 'email')
+		}
+	},
+
+	errorEmail: function(error) {
+		if(error.status === 401) {
+			this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
 		} else {
 			this.showError(qst.localize('Something went wrong...', 'misc'), 'email')
 		}
@@ -241,6 +292,7 @@ qst.AuthView = Backbone.View.extend({
 		this.model.off(null, null, this);
 		this.model.signin.off(null, null, this);
 		this.model.registration.off(null, null, this);
+		this.model.emailconfirm.off(null, null, this);
 		this.popup_view.unlockPage();
 		this.popup_view.remove();
 

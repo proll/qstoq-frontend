@@ -71,7 +71,7 @@ qst.VK = Backbone.Model.extend({
 		}
 	},
 	error: function(e){
-		qst.log("WHP/auth/VK : error while logging in!");
+		qst.log("auth/VK : error while logging in!");
 		this.trigger("error", {description:"Something went wrong"})
 	},
 });

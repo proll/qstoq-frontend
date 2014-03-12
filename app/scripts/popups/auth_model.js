@@ -1,6 +1,7 @@
 qst.Auth = Backbone.Model.extend({
+	vk_user_obj: {},
 	defaults: {
-		state: 'signup'
+		state: ''
 	},
 
 	initialize: function (){
@@ -10,6 +11,7 @@ qst.Auth = Backbone.Model.extend({
 		this.VK  = new qst.VK();
 		this.signin 		= new qst.Signin();
 		this.registration 	= new qst.Registration();
+		this.emailconfirm 	= new qst.EmailConfirm();
 
 		// this.on("twitter:hi", function (user_obj) {
 		// 	this.TW.fetch(user_obj);
@@ -21,9 +23,10 @@ qst.Auth = Backbone.Model.extend({
 
 		this.FB.on 			("auth:success", this.authSuccess, this);
 		// this.TW.on 			("auth:success", this.authSuccess, this);
-		this.VK.on 			("auth:success", this.authSuccess, this);
+		this.VK.on 			("auth:success", this.checkVKEmail, this);
 		this.signin.on		("auth:success", this.authSuccess, this);
 		this.registration.on("auth:success", this.authSuccess, this);
+		this.emailconfirm.on("auth:success", this.authSuccess, this);
 
 		this.registration.on("auth:success", this.authSuccess, this);
 		this.registration.on("registration:success", this.afterRegistration, this);
@@ -64,6 +67,19 @@ qst.Auth = Backbone.Model.extend({
 	authSuccess: function(user_obj) {
 		if(!!user_obj.session) {
 			this.trigger("auth:success", user_obj);
+		}
+	},
+
+	checkVKEmail: function(user_obj) {
+		if(	user_obj.user && 
+			user_obj.user.email && 
+			user_obj.user.email.indexOf('@vk.com')!==-1) {
+			this.set('state', 'emailconfirm');
+			this.emailconfirm.set({
+				user_obj: user_obj
+			});
+		} else {
+			this.authSuccess(user_obj);
 		}
 	},
 
