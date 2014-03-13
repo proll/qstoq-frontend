@@ -1,5 +1,5 @@
 qst.EmailConfirm = Backbone.Model.extend({
-	url: "/v1/auth/vk",
+	url: "/v1/users/",
 	inited : false,
 	defaults: {
 		user_obj: {},
@@ -20,7 +20,7 @@ qst.EmailConfirm = Backbone.Model.extend({
 	fetch: function(user_obj){
 		this.set({email: user_obj.email});
 		var that = this,
-			emailconfirm_url = this.url + '?token=' + this.get('user_obj').session.token + '&lang' + qst.language;
+			emailconfirm_url = this.url + this.get('user_obj').user.id + '?token=' + this.get('user_obj').session.token + '&lang' + qst.language;
 
 		$.ajax({
 			type: 'post',
