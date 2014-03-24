@@ -21,6 +21,11 @@ qst.l10n.landing_page = {
 		ru: 'Начать продавать c Qstoq'
 	},
 
+	'Pricetag example': {
+		en: 'Pricetag and purchase<br/>example',
+		ru: 'Пример ценника<br/>и оплаты'
+	},
+
 	'Start Qstoq': {
 		en: 'Start Qstoq',
 		ru: 'Начать продавать c Qstoq'

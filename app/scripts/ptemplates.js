@@ -2027,10 +2027,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</h1>\n			<p class=\"landing-section1-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section1-p", "landing_page", options)))
-    + "</p>\n			<a href=\"/auth\" class=\"landing__start-a\" rel=\"nofollow\">";
+    + "</p>\n			<div class=\"landing__start\">\n				<a href=\"/auth\" class=\"landing__start-a\" rel=\"nofollow\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Start", "landing_page", options) : helperMissing.call(depth0, "_", "Start", "landing_page", options)))
-    + "</a>\n		</div>\n	</div>\n	<a href=\"/next\" class=\"landing__next-a\" rel=\"nofollow\">\n		<span class=\"landing__next-title\">";
+    + "</a>\n\n				<div class=\"landing__start-example\">\n					<i class=\"ib ib-pt\"></i><a href=\"http://s.qstoq.me/b877\" target=\"_blank\" class=\"landing__start-example-a\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Pricetag example", "landing_page", options) : helperMissing.call(depth0, "_", "Pricetag example", "landing_page", options)))
+    + "</a>\n				</div>\n			</div>\n\n		</div>\n	</div>\n	<a href=\"/next\" class=\"landing__next-a\" rel=\"nofollow\">\n		<span class=\"landing__next-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "How does it work", "landing_page", options) : helperMissing.call(depth0, "_", "How does it work", "landing_page", options)))
     + "</span>\n		<i class=\"ib ib-arr\"></i>\n	</a>\n</section>\n<section class=\"landing-section landing-section2\">\n	<div class=\"landing__container\">\n		<div class=\"landing__container-in\">\n			<h2 class=\"landing-s-h\">";

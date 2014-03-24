@@ -1220,17 +1220,17 @@ textarea::-webkit-input-placeholder {
   background-position: 0px -562px;
 }
 .ib {
-  background: url("/images/sprites/ib-36866.png") no-repeat 0 0;
+  background: url("/images/sprites/ib-222fa.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
   .ib {
-    background: url("/images/sprites/ib-2x-36866.png") no-repeat 0 0;
-    -webkit-background-size: 78px 1072px;
-    -moz-background-size: 78px 1072px;
-    -o-background-size: 78px 1072px;
-    background-size: 78px 1072px;
+    background: url("/images/sprites/ib-2x-222fa.png") no-repeat 0 0;
+    -webkit-background-size: 78px 1097px;
+    -moz-background-size: 78px 1097px;
+    -o-background-size: 78px 1097px;
+    background-size: 78px 1097px;
     vertical-align: text-top;
     display: inline-block;
   }
@@ -1344,6 +1344,11 @@ textarea::-webkit-input-placeholder {
   width: 50px;
   height: 50px;
   background-position: 0px -1022px;
+}
+.ib-pt {
+  width: 20px;
+  height: 24px;
+  background-position: 0px -1073px;
 }
 .icn {
   background: url("/images/sprites/icn-02309.png") no-repeat 0 0;
@@ -4338,6 +4343,10 @@ textarea.qst__inp {
   margin: 0 0 58px;
   padding: 0;
 }
+.landing__start {
+  display: inline-block;
+  position: relative;
+}
 .landing__start-a {
   display: inline-block;
   -webkit-border-radius: 4px;
@@ -4354,6 +4363,31 @@ textarea.qst__inp {
 .landing__start-a:hover {
   color: #ffffff;
   text-decoration: none;
+}
+.landing__start-example {
+  position: absolute;
+  top: 4px;
+  left: 400px;
+  width: 170px;
+  text-align: left;
+}
+.landing__start-example .ib {
+  vertical-align: top;
+  margin-right: 17px;
+  margin-top: 5px;
+}
+.landing__start-example-a {
+  color: #ffffff;
+  text-decoration: underline;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 16px;
+}
+.landing__start-example-a:hover,
+.landing__start-example-a:focus {
+  color: #ffffff;
+  text-decoration: underline;
 }
 .landing__next-a {
   position: absolute;
@@ -4384,7 +4418,7 @@ textarea.qst__inp {
 .landing-section2 .landing__list-itm:after {
   content: '';
   position: absolute;
-  background: url("/images/sprites/ib-36866.png") no-repeat 0 0;
+  background: url("/images/sprites/ib-222fa.png") no-repeat 0 0;
   vertical-align: text-top;
   display: inline-block;
   width: 22px;
