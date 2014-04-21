@@ -79,6 +79,7 @@
   position: absolute;
   line-height: 0;
   visibility: hidden;
+  left: -1000px;
 }
 .input-block-level {
   display: block;

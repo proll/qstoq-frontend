@@ -297,6 +297,21 @@ qst.App = Backbone.Model.extend({
 		});
 
 
+		qst.on("feedback:show", function (options) {
+			if(!qst.is_authed()) {
+				qst.navigate('/', {trigger: true});
+				return false;
+			} else {
+				var usersettings = qst.user.settings.toJSON();
+				new qst.Feedback({
+					email: 	usersettings.email,
+					name: 	usersettings.name,
+				});
+				return true;
+			}
+		});
+
+
 
 		// this.router.on('reset', function(prev, destination){
 		// 	var prevPage = this.pages.getPage(prev)

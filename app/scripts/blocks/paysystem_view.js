@@ -4,6 +4,7 @@ qst.PaySystemView = Backbone.View.extend({
 
 	events: {
 		'change .qst__toggle__inp': 'toggleActive',
+		'click .paysystem__direct-hello-a': 'openFeedback'
 	},
 
 
@@ -15,6 +16,16 @@ qst.PaySystemView = Backbone.View.extend({
 		this.model.on("toggle:error", 	this.toggleLoadingOff, this);
 		this.model.on('change:sleeped', this.sleep, this);
 	},
+
+	openFeedback: function(e) {
+		if(e && e.preventDefault) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+
+		qst.trigger('feedback:show');
+	},
+
 
 	render: function(){
 		var template = this.template( this.model.toJSON() );

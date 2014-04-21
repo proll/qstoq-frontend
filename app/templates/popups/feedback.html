@@ -1,0 +1,45 @@
+<div class="feedback__cont">
+	<div class="feedback__s1">
+		<h2 class="feedback__s1-h">{{_ 'Let us help you' 'feedback'}}</h2>
+		<form action="/feedback" class="feedback__s1-form">
+			<div class="qst__inp-group">
+				<div class="qst__inp-cont">
+					<label>
+						<span class="qst__lbl">{{_ 'call' 'feedback'}}</span>
+						<div class="qst__inp-cont-in">
+							<input type="text" class="qst__inp" maxlength="100" name="name" value="{{name}}">
+						</div>
+					</label>
+				</div>
+				<div class="qst__inp-cont">
+					<label>
+						<span class="qst__lbl">{{_ 'phone' 'feedback'}}</span>
+						<div class="qst__inp-cont-in">
+							<input  type="tel" class="qst__inp" maxlength="100" name="phone" value="{{phone}}">
+						</div>
+					</label>
+				</div>
+				<div class="qst__inp-cont">
+					<label>
+						<span class="qst__lbl">{{_ 'email' 'feedback'}}</span>
+						<div class="qst__inp-cont-in">
+							<input type="text" class="qst__inp" maxlength="100" name="email" value="{{email}}">
+						</div>
+					</label>
+				</div>
+			</div>
+			<input type="submit" class="feedback__s1-submit-hidden">
+			<div class="feedback__s1-submit">
+				<span class="feedback__s1-submit-error"></span>
+				<a href="/payments" rel="nofollow" class="feedback__s1-submit-a">{{_ 'Send request' 'feedback'}}</a>
+			</div>
+		</form>
+	</div>
+	<div class="feedback__s2">
+		<i class="i i-fb-ok"></i>
+		<h2 class="feedback__s2-h">{{_ 'finish' 'feedback'}}</h2>
+		<div class="feedback__s2-submit">
+			<a href="/payments" rel="nofollow" class="feedback__s2-submit-a">{{_ 'Close' 'feedback'}}</a>
+		</div>
+	</div>
+</div>

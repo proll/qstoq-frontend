@@ -1,23 +1,28 @@
 .confirm-popup {
 	&.popup__table {
-		background-color: rgba(255,255,255,0.5);
+		background-color: rgba(0,0,10,.44);
 	}
 
 	.popup__inner {
 		width: 310px;
-		border: 1px solid @grayLighter;
 		// .box-shadow(0 1px 7px rgba(0,0,0,.07));
 		// .box-shadow (none);
+	}
+
+
+
+	.popup__content {
+		margin: 0;
+		background-color: @white;
+		text-align: center;
 	}
 
 	.popup__close {
 		display: none;
 	}
-
-	.popup__content {
-		padding: 42px 40px 30px;
-		text-align: center;
-	}
+}
+.confirm{	
+	padding: 42px 40px 30px;
 }
 
 	.confirm__p {
@@ -42,7 +47,7 @@
 		width: 49%;
 		text-align: center;
 
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 1;
 		color: @red;
 		padding: 10px 0 9px;
@@ -50,6 +55,11 @@
 
 		cursor: pointer;
 	}
+
+	.confirm__ok {
+		color: @blue;
+	}
+
 
 	.confirm__close {
 		border-left: 1px solid @grayLight2;

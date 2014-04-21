@@ -1,11 +1,10 @@
 .warning-popup {
 	&.popup__table {
-		background-color: rgba(255,255,255,0.5);
+		background-color: rgba(0,0,10,.44);
 	}
 
 	.popup__inner {
 		width: 350px;
-		border: 1px solid @grayLighter;
 		.box-shadow (none);
 	}
 
@@ -14,12 +13,18 @@
 	}
 
 	.popup__content {
-		padding: 32px 32px 32px 80px;
+		margin: 0;
+		background-color: @white;
+		text-align: center;
 	}
 }
 
+.warning {
+	padding: 32px;
+}
+
 	.warning__h {
-		font-size: 40px;
+		font-size: 16px;
 		line-height: 1;
 		font-weight: 200;
 		color: @red;
@@ -37,7 +42,7 @@
 	}
 
 	.warning__close {
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 1;
 		color: @blue;
 		padding: 0;

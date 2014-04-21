@@ -2253,6 +2253,49 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   return buffer;
   });
 
+this["qst"]["Templates"]["ptemplates"]["popups/feedback"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, functionType="function";
+
+
+  buffer += "<div class=\"feedback__cont\">\n	<div class=\"feedback__s1\">\n		<h2 class=\"feedback__s1-h\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Let us help you", "feedback", options) : helperMissing.call(depth0, "_", "Let us help you", "feedback", options)))
+    + "</h2>\n		<form action=\"/feedback\" class=\"feedback__s1-form\">\n			<div class=\"qst__inp-group\">\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "call", "feedback", options) : helperMissing.call(depth0, "_", "call", "feedback", options)))
+    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input type=\"text\" class=\"qst__inp\" maxlength=\"100\" name=\"name\" value=\"";
+  if (stack2 = helpers.name) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.name; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phone", "feedback", options) : helperMissing.call(depth0, "_", "phone", "feedback", options)))
+    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input  type=\"tel\" class=\"qst__inp\" maxlength=\"100\" name=\"phone\" value=\"";
+  if (stack2 = helpers.phone) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.phone; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "\">\n						</div>\n					</label>\n				</div>\n				<div class=\"qst__inp-cont\">\n					<label>\n						<span class=\"qst__lbl\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "email", "feedback", options) : helperMissing.call(depth0, "_", "email", "feedback", options)))
+    + "</span>\n						<div class=\"qst__inp-cont-in\">\n							<input type=\"text\" class=\"qst__inp\" maxlength=\"100\" name=\"email\" value=\"";
+  if (stack2 = helpers.email) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
+  else { stack2 = depth0.email; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
+  buffer += escapeExpression(stack2)
+    + "\">\n						</div>\n					</label>\n				</div>\n			</div>\n			<input type=\"submit\" class=\"feedback__s1-submit-hidden\">\n			<div class=\"feedback__s1-submit\">\n				<span class=\"feedback__s1-submit-error\"></span>\n				<a href=\"/payments\" rel=\"nofollow\" class=\"feedback__s1-submit-a\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Send request", "feedback", options) : helperMissing.call(depth0, "_", "Send request", "feedback", options)))
+    + "</a>\n			</div>\n		</form>\n	</div>\n	<div class=\"feedback__s2\">\n		<i class=\"i i-fb-ok\"></i>\n		<h2 class=\"feedback__s2-h\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "finish", "feedback", options) : helperMissing.call(depth0, "_", "finish", "feedback", options)))
+    + "</h2>\n		<div class=\"feedback__s2-submit\">\n			<a href=\"/payments\" rel=\"nofollow\" class=\"feedback__s2-submit-a\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Close", "feedback", options) : helperMissing.call(depth0, "_", "Close", "feedback", options)))
+    + "</a>\n		</div>\n	</div>\n</div>";
+  return buffer;
+  });
+
 this["qst"]["Templates"]["ptemplates"]["popups/popup"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
