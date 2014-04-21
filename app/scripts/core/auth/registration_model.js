@@ -5,6 +5,8 @@ qst.Registration = Backbone.Model.extend({
 
 
 	fetch: function(user_obj){
+		if(this.loading) return;
+		this.loading = true;
 		var that = this;
 		this.set(user_obj)
 
@@ -27,6 +29,7 @@ qst.Registration = Backbone.Model.extend({
 	},
 
 	success: function(response, status, xhr){
+		this.loading = false;
 		var resp = _.toJSON(response);
 		if (!!resp) {
 			this.trigger("auth:success", 
@@ -43,6 +46,7 @@ qst.Registration = Backbone.Model.extend({
 	},
 
 	error : function(xhr, status, desc) {
+		this.loading = false;
 		this.trigger("error", {description: desc});
 	}
 });

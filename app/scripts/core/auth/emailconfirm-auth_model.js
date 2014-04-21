@@ -6,6 +6,8 @@ qst.EmailConfirm = Backbone.Model.extend({
 		email: '@vk.com',
 	},
 
+	loading: false,
+
 	initialize: function (){
 		//load facebook module
 		// (function(d, s, id) {
@@ -18,6 +20,8 @@ qst.EmailConfirm = Backbone.Model.extend({
 	},
 
 	fetch: function(user_obj){
+		if(this.loading) return;
+		this.loading = true;
 		this.set({email: user_obj.email});
 		var that = this,
 			emailconfirm_url = this.url + this.get('user_obj').user.id + '?token=' + this.get('user_obj').session.token + '&lang' + qst.language;
@@ -39,6 +43,7 @@ qst.EmailConfirm = Backbone.Model.extend({
 	},
 
 	success:function (response, status, xhr){
+		this.loading = false;
 		var resp = _.toJSON(response);
 		if (!resp || !resp.success) {
 			this.error();
@@ -50,6 +55,7 @@ qst.EmailConfirm = Backbone.Model.extend({
 	},
 
 	error : function(xhr, status, desc) {
+		this.loading = false;
 		console.log(xhr, status, desc);
 		if(!!xhr.responseText) {
 			var resp = _.toJSON(xhr.responseText);

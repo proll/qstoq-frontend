@@ -1,9 +1,12 @@
 qst.Signin = Backbone.Model.extend({
 	url: 		"/v1/auth",
+	loading: false,
 
 	initialize: function (){},
 
 	login: function(user_obj){
+		if(this.loading) return;
+		this.loading = true;
 		this.fetch(user_obj);
 		return false;
 	},
@@ -28,6 +31,7 @@ qst.Signin = Backbone.Model.extend({
 	},
 
 	success: function(response, status, xhr){
+		this.loading = false;
 		var resp = _.toJSON(response);
 		if (!!resp) {
 			this.trigger("auth:success", 
@@ -44,6 +48,7 @@ qst.Signin = Backbone.Model.extend({
 	},
 
 	error : function(xhr, status, desc) {
+		this.loading = false;
 		console.log(xhr, status, desc);
 		if(!!xhr.responseText) {
 			var resp = _.toJSON(xhr.responseText);

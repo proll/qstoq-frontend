@@ -13,6 +13,8 @@ qst.AddDialog = Backbone.Model.extend({
 		sleeped: false,
 	},
 
+	loading: false,
+
 	initialize: function (options) {
 		this.view = new qst.AddDialogView({
 			model: this
@@ -22,6 +24,9 @@ qst.AddDialog = Backbone.Model.extend({
 	},
 
 	fetch: function (options) {
+		if(this.loading) return;
+		this.loading = true;
+
 		var data = this.toJSON();
 
 		if($.trim(data.description) === '') {
@@ -48,6 +53,7 @@ qst.AddDialog = Backbone.Model.extend({
 	},
 
 	success: function (model, response, options) {
+		this.loading = false;
 		response = _.toJSON(response);
 		if(response.success) {
 			this.trigger('add:success', response.result);
@@ -58,6 +64,7 @@ qst.AddDialog = Backbone.Model.extend({
 	},
 
 	error: function (model, xhr, options) {
+		this.loading = false;
 		this.trigger('add:error')
 	},
 

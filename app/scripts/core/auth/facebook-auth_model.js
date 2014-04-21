@@ -5,39 +5,9 @@ qst.FB = Backbone.Model.extend({
 	access_token : null,
 	access_uid : null,
 
+	// loading: false,
+
 	initialize: function (){
-		// window.fbAsyncInit = _.bind(function () {
-		// 	//facebook functions
-		// 	FB.init({
-		// 		appId: this.app_id,
-		// 		cookie: true,
-		// 		status: true,
-		// 		xfbml: true,
-		// 		oauth : false });
-		// 	FB.Event.subscribe('edge.create', this.fbShareEvents);
-		// 	if (_.browser.opera){
-		// 		FB.XD._transport="postmessage";
-		// 		FB.XD.PostMessage.init();
-		// 	}
-		// 	FB.getLoginStatus(_.bind(function (response) {
-		// 		if (response.status == "connected"){
-		// 			qst.log("Facebook : user was succesfully connected! :)");
-		// 		}else{
-		// 			qst.log("Facebook : user was not connected! :(");
-		// 		}
-		// 	}, this));
-
-		// }, this);
-
-		// //load facebook module
-		// (function(d, s, id) {
-		// 	var js, fjs = d.getElementsByTagName(s)[0];
-		// 	if (d.getElementById(id)) {return;}
-		// 	js = d.createElement(s); js.id = id;
-		// 	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-		// 	fjs.parentNode.insertBefore(js, fjs);
-		// }(document, 'script', 'facebook-jssdk'));
-
 		// this.inited = true;
 		$.getScript('//connect.facebook.net/en_US/all.js#xfbml=1', _.bind(function () {
 			//facebook functions
@@ -97,6 +67,8 @@ qst.FB = Backbone.Model.extend({
 	},
 
 	success: function(response, status, xhr){
+		// this.loading = false;
+
 		var resp = _.toJSON(response);
 		if (!resp || !resp.success) {
 			this.error();
@@ -112,6 +84,8 @@ qst.FB = Backbone.Model.extend({
 	},
 
 	error: function(e) {
+		// this.loading = false;
+
 		qst.log("QST/auth/FB : error while logging in!");
 		// TODO слушать ошибку выше
 		this.trigger("error", {description:"QST/auth/FB : error while logging in!"})
@@ -120,6 +94,9 @@ qst.FB = Backbone.Model.extend({
 	
 
 	login : function (e){
+		// if(this.loading) return;
+		// this.loading = true;
+
 		this.access_token = "";
 		FB.login(
 			_.bind(this.onFBData, this), 

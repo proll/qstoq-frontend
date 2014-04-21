@@ -95,19 +95,19 @@ qst.l10n.itemlist = {
 	},
 	'set price, please': {
 		en: 'set price, please',
-		ru: 'задайти цену, пожалуйста',
+		ru: 'задайте цену, пожалуйста',
 	},
 	'set ship limit, please': {
 		en: 'set ship limit, please',
-		ru: 'задайти лимит продаж, пожалуйста',
+		ru: 'задайте лимит продаж, пожалуйста',
 	},
 	'set a link, please': {
 		en: 'set a link, please',
-		ru: 'задайти ссылку, пожалуйста',
+		ru: 'задайте ссылку, пожалуйста',
 	},
 	'set a valid link, please': {
 		en: 'set a valid link, please',
-		ru: 'задайти существующую ссылку, пожалуйста',
+		ru: 'задайте существующую ссылку, пожалуйста',
 	},
 	'Drop or choose a file': {
 		en: 'Drop or choose a file',

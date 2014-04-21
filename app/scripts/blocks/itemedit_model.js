@@ -4,6 +4,8 @@ qst.ItemEdit = Backbone.Model.extend({
 	url_media: '/v1/medias/',
 	preview: null,
 	itemreceipt: null,
+
+	saving: false,
 	
 	defaults: {
 		state: '',// link / nothing / file
@@ -160,6 +162,9 @@ qst.ItemEdit = Backbone.Model.extend({
 	},
 
 	save: function (options) {
+		if(this.saving) return;
+		this.saving = true;
+
 		// поддержка формата цен на серверной стороне
 		var data = this.toJSON();
 
@@ -185,6 +190,7 @@ qst.ItemEdit = Backbone.Model.extend({
 	},
 
 	saveSuccess: function (model, response, options) {
+		this.saving = false;
 		response = _.toJSON(response);
 		
 		if(response.success) {
@@ -195,6 +201,7 @@ qst.ItemEdit = Backbone.Model.extend({
 	},
 
 	saveError: function (model, xhr, options) {
+		this.saving = false;
 		this.trigger('save:error');
 	},
 
