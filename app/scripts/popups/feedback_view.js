@@ -70,7 +70,9 @@ qst.FeedbackView = Backbone.View.extend({
 			email = 	$.trim(this.$input_email.val());
 		// validation
 		if (_.isEmpty(name)){
-			this.showError(qst.localize('Don\'t you have a name?', 'feedback'), 'name')
+			this.showError(qst.localize('noname', 'feedback'), 'name')
+		}else if (_.isEmpty(phone)){
+			this.showError(qst.localize('Please fill the phone field', 'feedback'), 'phone')
 		} else if(!_.isEmail(email)) {
 			this.showError(qst.localize('Doesn&#39;t look like a valid email', 'auth'), 'email')
 		} else if (email.length > 50){

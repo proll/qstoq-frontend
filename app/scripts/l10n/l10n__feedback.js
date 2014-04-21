@@ -39,8 +39,13 @@ qst.l10n.feedback = {
 		ru: 'Закрыть',
 	},
 
-	'Don\'t you have a name': {
+	'noname': {
 		en: 'Don\'t you have a name',
 		ru: 'Представьтесь пожалуйста'
+	},
+
+	'Please fill the phone field': {
+		en: 'Please fill the phone field',
+		ru: 'Заполните телефон'
 	},
 }
