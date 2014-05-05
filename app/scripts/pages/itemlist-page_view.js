@@ -2,13 +2,14 @@ qst.ItemListPageView = qst.PageView.extend({
 	$header: null,
 
 	events: {
-		'click .itemlist__direct-hello-a': 'openFeedback'
+		'click .itemlist__direct-hello-a': 'openFeedback',
+		'click .itemadd__btn': 'openItemAddPopup'
 	},
 
-	addAddDialog: function (add_model) {
-		this.$header_btn = this.$el.find('.itemlist-head__btn');
-		this.$header_btn.html(add_model.view.$el);
-	},
+	// addAddDialog: function (add_model) {
+	// 	this.$header_btn = this.$el.find('.itemlist-head__btn');
+	// 	this.$header_btn.html(add_model.view.$el);
+	// },
 	addItemList: function (itemlist_model) {
 		this.$el.find('.itemlist-row').html(itemlist_model.view.$el);
 	},
@@ -20,6 +21,15 @@ qst.ItemListPageView = qst.PageView.extend({
 		}
 
 		qst.trigger('feedback:show');
+	},
+
+	openItemAddPopup: function(e) {
+		if(e && e.preventDefault) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+
+		new qst.ItemAdd();
 	},
 
 	updateTotal: function(total) {

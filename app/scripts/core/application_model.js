@@ -60,6 +60,12 @@ qst.App = Backbone.Model.extend({
 		});
 		this.pages.add(this.landing);
 
+		this.business = new qst.BusinessPage({
+			name: 'business',
+			template: 'pages/business-page'
+		});
+		this.pages.add(this.business);
+
 		this.profile = new qst.ProfilePage({
 			name: 'profile',
 			template: 'pages/profile-page'
@@ -127,6 +133,10 @@ qst.App = Backbone.Model.extend({
 					} else {
 						this.landing.render({section: 0});
 					}
+					break;
+
+				case 'business':
+					this.business.render();
 					break;
 
 				case 'how':
@@ -224,6 +234,10 @@ qst.App = Backbone.Model.extend({
 						this.landing.sleep();
 						break;
 
+					case 'business':
+						console.log('reset:business');
+						this.business.sleep();
+						break;
 
 					case 'itemlist':
 						console.log('reset:itemlist');

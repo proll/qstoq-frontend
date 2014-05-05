@@ -1,4 +1,4 @@
-qst.AddDialog = Backbone.Model.extend({
+qst.ItemAdd = Backbone.Model.extend({
 	url: '/v1/links/',
 	defaults: {
 		name: 	'название ссылки',
@@ -16,11 +16,17 @@ qst.AddDialog = Backbone.Model.extend({
 	loading: false,
 
 	initialize: function (options) {
-		this.view = new qst.AddDialogView({
+		this.view = new qst.ItemAddView({
 			model: this
 		});
-
 		this.set('state', 'link');
+
+		this.on('add:success', function(res){
+			qst.trigger('itemadd:success', res);
+		})
+		this.on('add:error', function(){
+			qst.trigger('itemadd:error');
+		})
 	},
 
 	fetch: function (options) {
@@ -114,12 +120,12 @@ qst.AddDialog = Backbone.Model.extend({
 	},
 
 
-	activate: function() {
-		this.set("sleeped", false);
-	},
+	// activate: function() {
+	// 	this.set("sleeped", false);
+	// },
 
-	sleep: function() {
-		this.set("sleeped", true);
-	},
+	// sleep: function() {
+	// 	this.set("sleeped", true);
+	// },
 
 });

@@ -1,13 +1,12 @@
-qst.AddDialogView = Backbone.View.extend({
-	template: "blocks/adddialog",
+qst.ItemAddView = Backbone.View.extend({
+	template: "blocks/itemadd",
 	tagName: "div",
-	className: "adddialog",
+	className: "itemadd",
 
 	events: {
-		"click a.adddialog__add": "showDialog",
+		"click a.itemadd__add": "showDialog",
 		'click a.item__types-item': 'clickState',
-		'click .adddialog__header': 'hideDialog',
-		'click .adddialog__submit-a': 'submitForm',
+		'click .itemadd__submit-a': 'submitForm',
 		'change #file_uploader': 'upload',
 		'keypress': 	'hideErrors',
 		'click': 		'hideErrors',
@@ -15,9 +14,9 @@ qst.AddDialogView = Backbone.View.extend({
 	},
 
 	initialize: function(options){
+		this.popup_view = new qst.PopupView({klass: "itemadd-popup"});
 		this.render();
-		this.model.on('add:success', this.hideDialog, this);
-		this.model.on('change:sleeped', this.sleep, this);
+		this.model.on('add:success', this.close, this);
 		this.model.on('change:state', this.changeState, this);
 		this.model.on('change:url', this.changeLink, this);
 	},
@@ -26,6 +25,7 @@ qst.AddDialogView = Backbone.View.extend({
 	render: function(){
 		this.template = qst.Templates.get(this.template);
 		var template = this.template(this.model.toJSON());
+
 
 		this.$el.append(template);
 		this.$state_items = this.$el.find('.item__types-item');
@@ -36,10 +36,12 @@ qst.AddDialogView = Backbone.View.extend({
 		this.$input_file =  this.$form.find('input[name=file]');
 		this.$input_file_title = this.$form.find('.itemedit__inp-file-title');
 		this.$input_file_process = this.$form.find('.itemedit__inp-file-process');
-		this.$error = this.$el.find('.adddialog__error');
+		this.$error = this.$el.find('.itemadd__error');
 
 		this.delegateEvents();
-		$('html').on('click.adddialog', _.bind(this.clickOutside, this));
+
+		this.popup_view.setContent(this.$el);
+		this.popup_view.show();
 	},
 
 	clickState: function(e) {
@@ -69,7 +71,6 @@ qst.AddDialogView = Backbone.View.extend({
 
 	showDialog: function(e) {
 		e.stopPropagation();
-		this.$el.toggleClass('open', true);
 		this.$input_name.focus();
 		return false;
 	},
@@ -84,16 +85,6 @@ qst.AddDialogView = Backbone.View.extend({
 		// this.changeState(null'link')
 	},
 
-	hideDialog: function() {
-		this.clearDialog();
-		this.$el.toggleClass('open', false);
-	},
-
-	clickOutside: function(e) {
-		if(!$(e.target).parents('.adddialog').length) {
-			this.hideDialog();
-		}
-	},
 
 	submit: function(e) {
 		// this.hideDialog();
@@ -168,28 +159,6 @@ qst.AddDialogView = Backbone.View.extend({
 		this.$form.submit();
 		return false;
 	},
-
-	sleep: function(model, value, options) {
-		this.hideDialog();
-		// console.log(model, value, options)
-		if(value) {
-			this.undelegateEvents();
-			$('html').off('click.adddialog');
-		} else {
-			this.delegateEvents();
-			$('html').on('click.adddialog', _.bind(this.clickOutside, this));
-		}
-	},
-
-	reset: function() {
-
-	},
-
-	remove: function(model, value, options) {
-		this.undelegateEvents();
-		$('html').off('click.adddialog');
-	},
-
 	
 	upload: function(e) {
 		var that = this;
@@ -208,75 +177,14 @@ qst.AddDialogView = Backbone.View.extend({
 
 	changeLink: function(model, value) {
 		this.$input_link.val(value);
-	}
+	},
 
-
-	// $upload_attach_ctrl.change(function (e) {
-	// 		// îòñûëàåì ôàéëû ïî îäíîìó è âû÷èòûâàåì èç input[type=file] ñ multiple
-	// 		$.each(this.files, function(i, file){
-	// 			var $new_item = $('<div class="sg-upload-item"><img src=""/><div class="sg-progress"></div><i class="icon i-uclose"></i></div>'),
-	// 				$new_item_progress = $new_item.find(".sg-progress");
-
-	// 			$new_item.find(".i-uclose").on("click", function (e) {
-	// 				$new_item.fadeOut();
-	// 			});
-
-	// 			if(!!window.FileReader) {
-	// 				var reader = new FileReader();
-	// 					reader.onload = function (e) {
-	// 						$new_item.find("img").attr('src', e.target.result);
-	// 					}
-	// 				reader.readAsDataURL(file);
-	// 			} else {
-	// 				$new_item.toggleClass("no-img", true);
-	// 			}
-
-	// 			var data = new FormData();
-	// 				data.append('file-upload', file);
-
-
-	// 			// the $.ajax() method and the like doesn’t allow for it and 
-	// 			// I really want to display an upload progress bar, dammit!
-	// 			// course of this we have to use XHR
-	// 			var xhr = new XMLHttpRequest();
-
-	// 			xhr.upload.addEventListener('progress',function(ev){
-	// 				$new_item_progress.width(parseInt(100 * ev.loaded/ev.total)+"%");
-	// 			}, false);
-
-	// 			xhr.onreadystatechange = function(ev){
-	// 				if (xhr.readyState == 4) {
-	// 					if(xhr.status == 200) {
-	// 						var data = this.response;
-	// 						console.log(data);
-	// 						if (typeof(data) == 'string') {
-	// 						  	data = $.parseJSON(data);
-	// 						}
-	// 						// äîïîëíåíèå äàííûìè äëÿ ôîðìèðîâàíèÿ attach_file
-	// 						if(!!data.success && !!data.image) {
-	// 							$new_item.data("image", data.image);
-	// 						} else if (!!data.error && !!data.error_desc) {
-	// 							console.log(data.error_desc);
-	// 							$new_item.fadeOut();
-	// 						} else {
-	// 							$new_item.fadeOut();
-	// 						}
-	// 					} else {
-	// 						// TODO îáðàáîòêà îøèáîê çàãðóçêè
-	// 						console.log(file.name + ":" + "ERROR: " + xhr.readyState + ":" + xhr.status);
-	// 						$new_item.fadeOut();
-	// 					}
-	// 					$new_item_progress.slideUp(400);
-	// 				}
-	// 			};
-
-	// 			xhr.open('POST', '/uploads.html', true);
-	// 			xhr.send(data);
-
-	// 			$upload_container.after($new_item);
-	// 			upload_count++;
-	// 		});
-	// 	});
+	close: function() {
+		this.popup_view.remove();
+		this.remove();
+		this.model.clear({silent: true});
+		return false;
+	},
 
 });
 

@@ -34,17 +34,17 @@ qst.ItemListPage = qst.Page.extend({
 			
 			options.user = qst.user.get('uid');
 			this.itemlist = new qst.ItemList(options);
-			this.adddialog = new qst.AddDialog(options);
+			// this.adddialog = new qst.AddDialog(options);
 
-			this.adddialog.on('add:success', this.linkAdded, this);
-			this.adddialog.on('add:error', this.error, this);
+			qst.on('itemadd:success', this.linkAdded, this);
+			qst.on('itemadd:error', this.error, this);
 
 			this.itemlist.activate();
 			this.itemlist.on('load:success', this.loadList, this);
 			this.view.addItemList(this.itemlist);
 
-			this.view.addAddDialog(this.adddialog);
-			this.adddialog.activate();
+			// this.view.addAddDialog(this.adddialog);
+			// this.adddialog.activate();
 
 			this.set('sleeped', false);
 		} else {
@@ -55,8 +55,8 @@ qst.ItemListPage = qst.Page.extend({
 			this.itemlist.activate();
 			this.view.addItemList(this.itemlist);
 
-			this.view.addAddDialog(this.adddialog);
-			this.adddialog.activate();
+			// this.view.addAddDialog(this.adddialog);
+			// this.adddialog.activate();
 
 			this.itemlist.reset();
 
@@ -103,8 +103,8 @@ qst.ItemListPage = qst.Page.extend({
 			this.itemlist.sleep();
 		}
 
-		if(this.adddialog) {
-			this.adddialog.sleep();
-		}
+		// if(this.adddialog) {
+		// 	this.adddialog.sleep();
+		// }
 	}
 });
