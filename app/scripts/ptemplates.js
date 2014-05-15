@@ -941,7 +941,7 @@ function program12(depth0,data) {
 function program14(depth0,data) {
   
   var buffer = "";
-  buffer += "\n					<i class=\"qi qi-ps-"
+  buffer += "\n					<i class=\"p p-ps-"
     + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
     + "\"></i>\n					";
   return buffer;
@@ -1920,118 +1920,73 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  buffer += "<section class=\"landing-section landing-section1\">\n	<div class=\"landing__container\">\n		<div class=\"landing__container-in\">\n			<h1 class=\"landing__h1\">";
+  buffer += "<section class=\"business-section business-section1\">\n	<div class=\"business__container\">\n		<div class=\"business__container-in\">\n			<h1 class=\"business__h1\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Get payments online<br/>for what ever and where ever you want", "landing_page", options) : helperMissing.call(depth0, "_", "Get payments online<br/>for what ever and where ever you want", "landing_page", options)))
-    + "</h1>\n			<p class=\"landing-section1-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec1-h1", "business_page", options) : helperMissing.call(depth0, "_", "sec1-h1", "business_page", options)))
+    + "</h1>\n			<p class=\"business-section1-p\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section1-p", "landing_page", options)))
-    + "</p>\n			<div class=\"landing__start\">\n				<a href=\"/auth\" class=\"landing__start-a\" rel=\"nofollow\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec1-p", "business_page", options) : helperMissing.call(depth0, "_", "sec1-p", "business_page", options)))
+    + "</p>\n			<div class=\"business__start\">\n				<a target=\"mail\" href=\"mailto:ola@qstoq.meq?subject=";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Start", "landing_page", options) : helperMissing.call(depth0, "_", "Start", "landing_page", options)))
-    + "</a>\n\n				<div class=\"landing__start-example\">\n					<i class=\"ib ib-pt\"></i><a href=\"http://s.qstoq.me/b877\" target=\"_blank\" class=\"landing__start-example-a\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect me", "paysystem", options) : helperMissing.call(depth0, "_", "Connect me", "paysystem", options)))
+    + "\" class=\"business__start-a\" rel=\"nofollow\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Pricetag example", "landing_page", options) : helperMissing.call(depth0, "_", "Pricetag example", "landing_page", options)))
-    + "</a>\n				</div>\n			</div>\n\n		</div>\n	</div>\n	<a href=\"/next\" class=\"landing__next-a\" rel=\"nofollow\">\n		<span class=\"landing__next-title\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect", "business_page", options) : helperMissing.call(depth0, "_", "Connect", "business_page", options)))
+    + "</a>\n			</div>\n		</div>\n	</div>\n</section>\n<section class=\"business-section business-section2\">\n	<div class=\"business__container\">\n		<div class=\"business__container-in\">\n			<ul class=\"business__list\">\n				<li class=\"business__list-itm\">\n					<h3 class=\"business__list-itm-h\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "How does it work", "landing_page", options) : helperMissing.call(depth0, "_", "How does it work", "landing_page", options)))
-    + "</span>\n		<i class=\"ib ib-arr\"></i>\n	</a>\n</section>\n<section class=\"landing-section landing-section2\">\n	<div class=\"landing__container\">\n		<div class=\"landing__container-in\">\n			<h2 class=\"landing-s-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-0-h", "business_page", options) : helperMissing.call(depth0, "_", "sec2-0-h", "business_page", options)))
+    + "</h3>\n					<p class=\"business__list-itm-p\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "How does Qstoq work", "landing_page", options) : helperMissing.call(depth0, "_", "How does Qstoq work", "landing_page", options)))
-    + "</h2>\n			<ul class=\"landing__list\">\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-l1\"></i>\n					<h3 class=\"landing__list-itm-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-0-p", "business_page", options) : helperMissing.call(depth0, "_", "sec2-0-p", "business_page", options)))
+    + "</p>\n				</li>\n				<li class=\"business__list-itm\">\n					<h3 class=\"business__list-itm-h\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect your payment systems", "landing_page", options) : helperMissing.call(depth0, "_", "Connect your payment systems", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-1-h", "business_page", options) : helperMissing.call(depth0, "_", "sec2-1-h", "business_page", options)))
+    + "</h3>\n					<p class=\"business__list-itm-p\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section2-0-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section2-0-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-l2\"></i>\n					<h3 class=\"landing__list-itm-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-1-p", "business_page", options) : helperMissing.call(depth0, "_", "sec2-1-p", "business_page", options)))
+    + "</p>\n				</li>\n				<li class=\"business__list-itm\">\n					<h3 class=\"business__list-itm-h\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Create a price tag", "landing_page", options) : helperMissing.call(depth0, "_", "Create a price tag", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-2-h", "business_page", options) : helperMissing.call(depth0, "_", "sec2-2-h", "business_page", options)))
+    + "</h3>\n					<p class=\"business__list-itm-p\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section2-1-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section2-1-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-l3\"></i>\n					<h3 class=\"landing__list-itm-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-2-p", "business_page", options) : helperMissing.call(depth0, "_", "sec2-2-p", "business_page", options)))
+    + "</p>\n				</li>\n				<li class=\"business__list-itm\">\n					<h3 class=\"business__list-itm-h\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Publish the link", "landing_page", options) : helperMissing.call(depth0, "_", "Publish the link", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-3-h", "business_page", options) : helperMissing.call(depth0, "_", "sec2-3-h", "business_page", options)))
+    + "</h3>\n					<p class=\"business__list-itm-p\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section2-2-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section2-2-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n			</ul>\n		</div>\n	</div>\n</section>\n<section class=\"landing-section landing-section3\">\n	<div class=\"landing__container\">\n		<div class=\"landing__container-in\">\n			<h2 class=\"landing-s-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-3-p", "business_page", options) : helperMissing.call(depth0, "_", "sec2-3-p", "business_page", options)))
+    + "</p>\n				</li>\n			</ul>\n			<div class=\"business__screen1\"></div>\n			<div class=\"business__screen2\"></div>\n		</div>\n	</div>\n</section>\n<section class=\"business-section business-section3\">\n	<div class=\"business__container\">\n		<div class=\"business__container-in\">\n			<div class=\"business__toggler toggle1\">\n				<ul class=\"business__toggler-menu\">\n					<li class=\"business__toggler-menu-itm\">\n						<a class=\"business__toggler-menu-itm-a\" href=\".\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Get payments in any cases", "landing_page", options) : helperMissing.call(depth0, "_", "Get payments in any cases", "landing_page", options)))
-    + "</h2>\n			<p class=\"landing-section3-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "tools", "business_page", options) : helperMissing.call(depth0, "_", "tools", "business_page", options)))
+    + "</a>\n					</li>\n					<li class=\"business__toggler-menu-itm\">\n						<a class=\"business__toggler-menu-itm-a\" href=\".\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-p", "landing_page", options)))
-    + "</p>\n			<ul class=\"landing__list\">\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li1\"></i>\n					<h3 class=\"landing__list-itm-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "systems", "business_page", options) : helperMissing.call(depth0, "_", "systems", "business_page", options)))
+    + "</a>\n					</li>\n				</ul>\n				<div class=\"business__toggler-tools\"></div>\n				<div class=\"business__toggler-systems\"></div>\n			</div>\n		</div>\n	</div>\n</section>\n<section class=\"business-section business-section4\">\n	<div class=\"business__container\">\n		<div class=\"business__container-in\">\n			<ul class=\"business__response\">\n				<li class=\"business__response-itm\">\n					<div class=\"business__response-face\"></div>\n				</li>\n				<li class=\"business__response-itm\">\n					<div class=\"business__response-pos\">\n						<h3 class=\"business__response-name\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Donate", "landing_page", options) : helperMissing.call(depth0, "_", "Donate", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "nm", "business_page", options) : helperMissing.call(depth0, "_", "nm", "business_page", options)))
+    + "</h3>\n						<span class=\"business__response-ocup\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-1-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-1-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li2\"></i>\n					<h3 class=\"landing__list-itm-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "ocup", "business_page", options) : helperMissing.call(depth0, "_", "ocup", "business_page", options)))
+    + "</span>\n					</div>\n				</li>\n				<li class=\"business__response-itm\">\n					<div class=\"business__response-quote\">\n						<i class=\"ib2 ib2-quo\"></i>\n					</div>\n				</li>\n				<li class=\"business__response-itm\">\n					<div class=\"business__response-desc\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Payments for digital content", "landing_page", options) : helperMissing.call(depth0, "_", "Payments for digital content", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "response_description", "business_page", options) : helperMissing.call(depth0, "_", "response_description", "business_page", options)))
+    + "</div>\n				</li>\n				<li class=\"business__response-itm\">\n					<div class=\"business__response-logo\"><i class=\"ib2 ib2-jh-logo\"></i></div>\n				</li>\n			</ul>\n		</div>\n	</div>\n</section>\n<section class=\"business-section business-section5\">\n	<div class=\"business__container\">\n		<div class=\"business__container-in\">\n			<h2 class=\"business__h2\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-2-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-2-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li3\"></i>\n					<h3 class=\"landing__list-itm-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect Qstoq", "business_page", options) : helperMissing.call(depth0, "_", "Connect Qstoq", "business_page", options)))
+    + "</h2>\n			<form class=\"business__connect-form\">\n				<input type=\"text\" class=\"business__connect-email\" name=\"email\" placeholder=\"";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Selling reallife goods", "landing_page", options) : helperMissing.call(depth0, "_", "Selling reallife goods", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "e-mail", "business_page", options) : helperMissing.call(depth0, "_", "e-mail", "business_page", options)))
+    + "\">\n				<button type=\"submit\" class=\"business__connect-submit\" value=\"";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-3-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-3-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li4\"></i>\n					<h3 class=\"landing__list-itm-h\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "submit", "business_page", options) : helperMissing.call(depth0, "_", "submit", "business_page", options)))
+    + "\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Freelance and services", "landing_page", options) : helperMissing.call(depth0, "_", "Freelance and services", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "submit", "business_page", options) : helperMissing.call(depth0, "_", "submit", "business_page", options)))
+    + "</button>\n			</form>\n			<p class=\"business__connect-p\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-4-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-4-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li5\"></i>\n					<h3 class=\"landing__list-itm-h\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Group buying", "landing_page", options) : helperMissing.call(depth0, "_", "Group buying", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-5-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-5-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li6\"></i>\n					<h3 class=\"landing__list-itm-h\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Charity", "landing_page", options) : helperMissing.call(depth0, "_", "Charity", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-6-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-6-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li7\"></i>\n					<h3 class=\"landing__list-itm-h\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "E-learning and consultations", "landing_page", options) : helperMissing.call(depth0, "_", "E-learning and consultations", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-7-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-7-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<i class=\"ib ib-li8\"></i>\n					<h3 class=\"landing__list-itm-h\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "And much more", "landing_page", options) : helperMissing.call(depth0, "_", "And much more", "landing_page", options)))
-    + "</h3>\n					<p class=\"landing__list-itm-p\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section3-8-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section3-8-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n			</ul>\n		</div>\n	</div>\n</section>\n<section class=\"landing-section landing-section4\">\n	<div class=\"landing__container\">\n		<div class=\"landing__container-in\">\n			<ul class=\"landing__list\">\n				<li class=\"landing__list-itm\">\n					<h3 class=\"landing__list-itm-h\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Fast", "landing_page", options) : helperMissing.call(depth0, "_", "Fast", "landing_page", options)))
-    + "</h3>\n					<i class=\"ib ib-l4_1\"></i>\n					<p class=\"landing__list-itm-p\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section4-1-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section4-1-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<h3 class=\"landing__list-itm-h\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Cozy", "landing_page", options) : helperMissing.call(depth0, "_", "Cozy", "landing_page", options)))
-    + "</h3>\n					<i class=\"ib ib-l4_2\"></i>\n					<p class=\"landing__list-itm-p\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section4-2-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section4-2-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n				<li class=\"landing__list-itm\">\n					<h3 class=\"landing__list-itm-h\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Free", "landing_page", options) : helperMissing.call(depth0, "_", "Free", "landing_page", options)))
-    + "</h3>\n					<i class=\"ib ib-l4_3\"></i>\n					<p class=\"landing__list-itm-p\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "section4-3-1-p", "landing_page", options) : helperMissing.call(depth0, "_", "section4-3-1-p", "landing_page", options)))
-    + "</p>\n				</li>\n			</ul>\n			<div class=\"landing__start-cont\"><a href=\"/auth\" rel=\"nofollow\" class=\"landing__start-a\">";
-  options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Start Qstoq", "landing_page", options) : helperMissing.call(depth0, "_", "Start Qstoq", "landing_page", options)))
-    + "</a></div>\n		</div>\n	</div>\n</section>";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "connect-p", "business_page", options) : helperMissing.call(depth0, "_", "connect-p", "business_page", options)))
+    + "</p>\n		</div>\n	</div>\n</section>";
   return buffer;
   });
 

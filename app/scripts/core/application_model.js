@@ -313,7 +313,7 @@ qst.App = Backbone.Model.extend({
 
 		qst.on("feedback:show", function (options) {
 			if(!qst.is_authed()) {
-				qst.navigate('/', {trigger: true});
+				new qst.Feedback();
 				return false;
 			} else {
 				var usersettings = qst.user.settings.toJSON();
