@@ -24,8 +24,9 @@ qst.BusinessPage = qst.Page.extend({
 	},
 
 
-	showAuth: function() {
-		qst.trigger("auth:show");
+	showFeedback: function(options) {
+		options = options || {};
+		qst.trigger("feedback:show", options);
 	},
 
 

@@ -142,10 +142,10 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</a></li> -->\n		<li><a class=\"footer__menu-a\" href=\"/i/team/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Team", "footer", options) : helperMissing.call(depth0, "_", "Team", "footer", options)))
-    + "</a></li>\n		<!-- <li><a class=\"footer__menu-a\" target=\"_blank\" href=\"/i/partners/\">";
+    + "</a></li>\n		<li><a class=\"footer__menu-a\" href=\"/business/\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Partners", "footer", options) : helperMissing.call(depth0, "_", "Partners", "footer", options)))
-    + "</a></li> -->\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" href=\"/i/feedback/\">";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Business", "footer", options) : helperMissing.call(depth0, "_", "Business", "footer", options)))
+    + "</a></li>\n	</ul>\n	<ul class=\"footer__menu\">\n		<li><a class=\"footer__menu-a\" href=\"/i/feedback/\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Feedback", "footer", options) : helperMissing.call(depth0, "_", "Feedback", "footer", options)))
     + "</a></li>\n		<li><a class=\"footer__menu-a\" target=\"_blank\" href=\"http://vk.com/qstoq\">";

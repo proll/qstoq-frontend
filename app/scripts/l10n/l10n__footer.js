@@ -48,6 +48,12 @@ qst.l10n.footer = {
 		ru: 'Партнеры'
 	},
 
+
+	'Business': {
+		en: 'Business',
+		ru: 'Для бизнеса'
+	},
+
 	'Vkontakte': {
 		en: 'Vkontakte',
 		ru: 'Вконтакте'

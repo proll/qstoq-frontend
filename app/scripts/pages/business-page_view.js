@@ -2,8 +2,9 @@ qst.BusinessPageView = qst.PageView.extend({
 	indent: 60,
 	$window: $(window),
 	events: {
-		'click .landing__start-a': 'showAuth',
-		'click .landing__next-a': 'goSection2'
+		'click .business__start-a': 'showFeedback',
+		'submit .business__connect-form': 'showEmailFeedback',
+		'click .business__toggler-menu-itm-a': 'toggle',
 	},
 
 
@@ -29,64 +30,102 @@ qst.BusinessPageView = qst.PageView.extend({
 		this.trigger("page:render", this.model);
 		this.trigger("enterDocument", this.model);
 
-		this.$window.on('resize.landing.page', _.bind(this.repositionPage, this));
-		this.$sec1 = this.$el.find('.landing-section1');
-		this.$sec2 = this.$el.find('.landing-section2');
-		this.$sec3 = this.$el.find('.landing-section3');
-		// this.$secs = this.$el.find('.landing-section');
+		this.$sec1 = this.$el.find('.business-section1');
+		this.$sec2 = this.$el.find('.business-section2');
+		// this.$sec3 = this.$el.find('.landing-section3');
+		this.$screen1 = this.$el.find('.business__screen1');
+		this.$screen2 = this.$el.find('.business__screen2');
 
-		this.repositionPage();
+		this.$navbar = $('.navbar-header');
 
-		this.$nav_how = $('.navbar__item-how>a');
-		this.$nav_where = $('.navbar__item-where>a');
+		qst.on('scroll', this.positionScreens, this);
 
-		this.$nav_how.on('click.landing', _.bind(this.goSection2, this));
-		this.$nav_where.on('click.landing', _.bind(this.goSection3, this));
 
 		this.delegateEvents();
+	},
 
-		if(this.model.get('section')!==0) {
-			if(this.model.get('section') === 2) {
-				this.goSection2();
-			} else if(this.model.get('section') === 3) {
-				this.goSection3();
-			}
+	toggle: function(e) {
+		if(e && e.preventDefault) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+
+		var $toggler = $(e.currentTarget).parents('.business__toggler');
+		if($toggler.hasClass('toggle1')) {
+			$toggler
+				.toggleClass('toggle1', false)
+				.toggleClass('toggle2', true);
+		} else {
+			$toggler
+				.toggleClass('toggle1', true)
+				.toggleClass('toggle2', false);
 		}
 	},
 
-	repositionPage: function() {
-		var h = 0,
-			ww = $(window).width();
-
-		h = this.$window.innerHeight() - this.indent;
-		var section_h = Math.max(h, 600);
-		this.$sec1.height(section_h);
-		this.$sec2.css({'margin-top': section_h});
-	},
-
-	showAuth: function() {
-		this.model.showAuth();
+	showFeedback: function(e) {
+		if(e && e.preventDefault) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+		this.model.showFeedback();
 		return false;
 	},
 
-	goSection2: function(e) {
-		$('html, body').animate({
-			 scrollTop: this.$sec2.offset().top - this.indent
-		}, 780);
+	showEmailFeedback: function(e) {
+		if(e && e.preventDefault) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+		var options = {},
+			email = $.trim(this.$el.find('.business__connect-email').val());
+		if(!!email) {
+			options.email = email;
+		}
+
+		this.model.showFeedback(options);
 		return false;
 	},
 
-	goSection3: function(e) {
-		$('html, body').animate({
-			 scrollTop: this.$sec3.offset().top - this.indent
-		}, 780);
-		return false;
+	positionScreens: function(scroll_obj) {
+		var margin_top = 124,
+			margin_top2 = 10,
+			h_screen = 509,
+			h_nav = this.$navbar.height(),
+			top = this.$sec2.position().top,
+			h = this.$sec2.height(),
+
+			style_obj = {};
+
+		if((scroll_obj.s_top > top - margin_top - h_nav) && (scroll_obj.s_top < top + h - h_screen - h_nav - margin_top2)) {
+			style_obj = {
+				// '-webkit-transform': 'translate(0, ' + (scroll_obj.s_top - top - margin_top) +'px)',
+				   // '-moz-transform': 'translate(0, ' + (scroll_obj.s_top - top - margin_top) +'px)',
+				    // '-ms-transform': 'translate(0, ' + (scroll_obj.s_top - top - margin_top) +'px)',
+				     // '-o-transform': 'translate(0, ' + (scroll_obj.s_top - top - margin_top) +'px)',
+				        // 'transform': 'translate(0, ' + (scroll_obj.s_top - top - margin_top) +'px)',
+		        top: scroll_obj.s_top - top + h_nav + margin_top2,
+
+				opacity: 1 - (scroll_obj.s_top - top + margin_top + h_nav)/(h - h_screen + margin_top - margin_top2)
+
+			}
+		} else if(scroll_obj.s_top < top - margin_top - h_nav) {
+			style_obj = {
+				top: margin_top2 - margin_top,
+				opacity: 1
+			}
+		} else {
+			style_obj = {
+				top: h - h_screen,
+				opacity: 0
+			}
+		}
+		this.$screen1.css(style_obj);
+		style_obj.opacity = 1 - style_obj.opacity;
+		this.$screen2.css(style_obj);
 	},
 
 	sleep: function() {
-		this.$nav_how.off('click.landing');
-		this.$nav_where.off('click.landing');
-		this.$window.off('resize.landing.page');
+		qst.off('scroll', this.positionScreens, this);
 		this.undelegateEvents();
 	}
 });

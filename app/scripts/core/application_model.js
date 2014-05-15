@@ -312,17 +312,16 @@ qst.App = Backbone.Model.extend({
 
 
 		qst.on("feedback:show", function (options) {
-			if(!qst.is_authed()) {
-				new qst.Feedback();
-				return false;
-			} else {
+			options = options || {};
+			if(qst.is_authed()) {
 				var usersettings = qst.user.settings.toJSON();
-				new qst.Feedback({
+				options = _.extend({
 					email: 	usersettings.email,
 					name: 	usersettings.name,
-				});
-				return true;
+				}, options);
 			}
+			new qst.Feedback(options);
+			return true;
 		});
 
 

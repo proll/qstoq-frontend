@@ -5315,7 +5315,7 @@ textarea.qst__inp {
   overflow: visible;
 }
 .business__list {
-  margin: 61px 0 68px;
+  padding: 39px 0 24px;
 }
 .business__list-itm {
   display: block;
@@ -5349,13 +5349,10 @@ textarea.qst__inp {
   top: -114px;
   right: 0;
   z-index: 1;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .business__screen2 {
   background-image: url(/images/bl/s2_scrn2.png);
+  opacity: 0;
 }
 .business-section3 {
   background: url(/images/bl/s3_bg.jpg) 0 0 no-repeat;
@@ -5419,8 +5416,11 @@ textarea.qst__inp {
   margin: 0 auto;
   width: 910px;
   height: 60px;
-  background: url(/images/bl/s3_icns1.png);
+  background: url(/images/bl/s3_icns1.png) center center no-repeat;
   display: none;
+}
+.business__toggler-systems {
+  background-image: url(/images/bl/s3_icns2.png);
 }
 .toggle1 .business__toggler-menu-itm:first-child .business__toggler-menu-itm-a {
   background: #ffffff;
