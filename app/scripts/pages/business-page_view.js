@@ -89,8 +89,8 @@ qst.BusinessPageView = qst.PageView.extend({
 	positionScreens: function(scroll_obj) {
 		var margin_top = 124,
 			margin_top2 = 10,
-			h_screen = 509,
-			h_nav = this.$navbar.height(),
+			h_screen = 509+45,
+			h_nav = 0,
 			top = this.$sec2.position().top,
 			h = this.$sec2.height(),
 
@@ -105,7 +105,8 @@ qst.BusinessPageView = qst.PageView.extend({
 				        // 'transform': 'translate(0, ' + (scroll_obj.s_top - top - margin_top) +'px)',
 		        top: scroll_obj.s_top - top + h_nav + margin_top2,
 
-				opacity: 1 - (scroll_obj.s_top - top + margin_top + h_nav)/(h - h_screen + margin_top - margin_top2)
+				// opacity: 1 - (scroll_obj.s_top - top + margin_top + h_nav)/(h - h_screen + margin_top - margin_top2)
+				opacity: (scroll_obj.s_top < top + (h - h_screen - h_nav - margin_top2)/2)? 1 : 0
 
 			}
 		} else if(scroll_obj.s_top < top - margin_top - h_nav) {

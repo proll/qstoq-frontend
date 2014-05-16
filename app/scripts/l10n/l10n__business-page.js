@@ -7,7 +7,7 @@ qst.l10n.business_page = {
 	},
 
 	'sec1-p': {
-		en: 'This is a payment processing control center, which supports every payment methods, every possible. So even not supported.',
+		en: 'This is a payment processing control center, which supports any payment methods, every possible. So even nonexistent.',
 		ru: 'Это ваш центр управления приемом платежей, который поддерживает все способы оплаты, какие только возможно. И даже те, которых пока еще нет.'
 	},
 

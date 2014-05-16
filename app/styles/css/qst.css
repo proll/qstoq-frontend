@@ -5359,6 +5359,10 @@ textarea.qst__inp {
   top: -114px;
   right: 0;
   z-index: 1;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 .business__screen2 {
   background-image: url(/images/bl/s2_scrn2.png);
