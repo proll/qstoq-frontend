@@ -5206,12 +5206,22 @@ textarea.qst__inp {
 }
 .body__page-business {
   background-color: #ffffff;
+  padding-top: 0;
 }
 .body__page-business #qst-container {
   width: 100%;
 }
 .body__page-business .navbar-fixed-top {
-  position: fixed;
+  display: none;
+}
+.body__page-business .footer__menu {
+  display: none;
+}
+.body__page-business .footer__misc-cont {
+  float: left;
+}
+.body__page-business .footer__desc-p {
+  display: none;
 }
 .hbr {
   display: none;

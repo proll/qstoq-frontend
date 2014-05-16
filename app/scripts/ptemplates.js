@@ -161,7 +161,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (stack2 = helpers.year) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.year; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + " Qstoq</p>\n		<p class=\"footer__misc-p\">";
+    + " Qstoq</p>\n		<p class=\"footer__misc-p footer__desc-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "The easy payment system of purchase and delivery of digital content", "footer", options) : helperMissing.call(depth0, "_", "The easy payment system of purchase and delivery of digital content", "footer", options)))
     + "</p>\n		<ul class=\"footer__lang\">\n			<li class=\"footer__lang-item footer__lang-item_ru\">\n				<i class=\"qi qi-ru\"></i>\n			</li><li class=\"footer__lang-item footer__lang-item_en\">\n				<i class=\"qi qi-us\"></i>\n			</li>\n		</ul>\n	</div>\n</div>\n<div class=\"footer__adv\"></div>";
