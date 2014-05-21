@@ -1956,6 +1956,12 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</h3>\n					<p class=\"business__list-itm-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-3-p", "business_page", options) : helperMissing.call(depth0, "_", "sec2-3-p", "business_page", options)))
+    + "</p>\n				</li>\n				<li class=\"business__list-itm\">\n					<h3 class=\"business__list-itm-h\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-4-h", "business_page", options) : helperMissing.call(depth0, "_", "sec2-4-h", "business_page", options)))
+    + "</h3>\n					<p class=\"business__list-itm-p\">";
+  options = {hash:{},data:data};
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-4-p", "business_page", options) : helperMissing.call(depth0, "_", "sec2-4-p", "business_page", options)))
     + "</p>\n				</li>\n			</ul>\n			<div class=\"business__screen1\"></div>\n			<div class=\"business__screen2\"></div>\n		</div>\n	</div>\n</section>\n<section class=\"business-section business-section3\">\n	<div class=\"business__container\">\n		<div class=\"business__container-in\">\n			<div class=\"business__toggler toggle1\">\n				<ul class=\"business__toggler-menu\">\n					<li class=\"business__toggler-menu-itm\">\n						<a class=\"business__toggler-menu-itm-a\" href=\".\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "tools", "business_page", options) : helperMissing.call(depth0, "_", "tools", "business_page", options)))

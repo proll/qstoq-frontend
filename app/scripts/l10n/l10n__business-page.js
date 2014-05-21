@@ -11,25 +11,9 @@ qst.l10n.business_page = {
 		ru: 'Это ваш центр управления приемом платежей, который поддерживает все способы оплаты, какие только возможно. И даже те, которых пока еще нет.'
 	},
 
-	'section3-p': {
-		en: 'Sale of an access to a file, a link, a text, a webinar, every digital content or get payment<br/>for goods and services by a huge amount of ecurrencies and by all types of <br/>plastic cards',
-		ru: 'Продать доступ к файлу, ссылке, тексту, вебинару, любому цифровому контенту или принять <br/>оплату за товары и услуги большинством видов электронных валют и всеми видами <br/>пластиковых карт'
-	},
-
 	'Connect': {
 		en: 'Connect Qstoq',
 		ru: 'Подключить прием платежей'
-	},
-
-
-	'Pricetag example': {
-		en: 'Pricetag and purchase<br/>example',
-		ru: 'Пример ценника<br/>и оплаты'
-	},
-
-	'Start Qstoq': {
-		en: 'Start Qstoq',
-		ru: 'Начать продавать c Qstoq'
 	},
 
 
@@ -44,31 +28,41 @@ qst.l10n.business_page = {
 	},
 
 	'sec2-1-h': {
+		en: 'Reducing transaction costs',
+		ru: 'Снижение трансакционных издержек'
+	},
+
+	'sec2-1-p': {
+		en: 'Support the unlimited amount of payment systems and gateways on your site through Qstoq. We care about minimal-fee payment system for each customer payment.',
+		ru: 'Подключайте неограниченное число платежных систем и шлюзов к вашему сайту через Qstoq. Мы позаботимся о выборе системы с минимальной комиссией для выбранного покупателем способа платежа.'
+	},
+
+	'sec2-2-h': {
 		en: 'I have everything necessary connected now. Why do I need Qstoq?',
 		ru: 'У меня подключено всё, что мне сейчас нужно. Зачем мне Qstoq?'
 	},
 
-	'sec2-1-p': {
+	'sec2-2-p': {
 		en: 'When new payment ways arrive there is no need in searching an support module for your CMS or in changing the code on your site. Just connect those ways through Qstoq.',
 		ru: 'С появлением новых удобных способов платежей, не нужно искать очередные модули поддержки для вашей CMS или менять код сайта. Просто подключите это к Qstoq.'
 	},
 
-	'sec2-2-h': {
+	'sec2-3-h': {
 		en: 'The care about your profits',
 		ru: 'Забота о вашей прибыли'
 	},
 
-	'sec2-2-p': {
+	'sec2-3-p': {
 		en: 'Support the unlimited amount of payment systems and gateways on your site through Qstoq. We care about minimal-fee payment system for each payment.',
 		ru: 'Подключайте неограниченное число платежных систем и шлюзов к вашему сайту через Qstoq. Мы позаботимся о выборе системы с минимальной комиссией для выбранного способа платежа.'
 	},
 
-	'sec2-3-h': {
+	'sec2-4-h': {
 		en: 'Ultra fast connection',
 		ru: 'Быстрое подключение'
 	},
 
-	'sec2-3-p': {
+	'sec2-4-p': {
 		en: 'There is a simple and cozy RESTful API and modules for most of CMS.',
 		ru: 'Простой и удобный RESTful API, готовые модули для большинства CMS.'
 	},
