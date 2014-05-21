@@ -43,18 +43,18 @@ qst.l10n.business_page = {
 	},
 
 	'sec2-2-p': {
-		en: 'When new payment ways arrive there is no need in searching an support module for your CMS or in changing the code on your site. Just connect those ways through Qstoq.',
-		ru: 'С появлением новых удобных способов платежей, не нужно искать очередные модули поддержки для вашей CMS или менять код сайта. Просто подключите это к Qstoq.'
+		en: 'With Qstoq you have less code, less developing, less testing, less fees and the easy support of new payment types. Now There is no need of searching an support module for your CMS or changing the code on your site. Just connect those ways through Qstoq.',
+		ru: 'С Qstoq у вас будет меньше кода, меньше разработки, меньше тестирования, меньше комиссий и легкое подключение новых способов платежей. Хватит искать очередные модули поддержки для вашей CMS или менять код сайта — вы просто подключаете это через интерфейс Qstoq.'
 	},
 
 	'sec2-3-h': {
-		en: 'The care about your profits',
-		ru: 'Забота о вашей прибыли'
+		en: 'Manager of your payment systems',
+		ru: 'Менеджер ваших платежных систем'
 	},
 
 	'sec2-3-p': {
-		en: 'Support the unlimited amount of payment systems and gateways on your site through Qstoq. We care about minimal-fee payment system for each payment.',
-		ru: 'Подключайте неограниченное число платежных систем и шлюзов к вашему сайту через Qstoq. Мы позаботимся о выборе системы с минимальной комиссией для выбранного способа платежа.'
+		en: 'Connection of the new systems to the site, turning on and turning off the systems — att this is in few clicks and without coding.',
+		ru: 'Подключение новых систем к сайту, включение и отключение раннее подключенных систем — все это за пару кликов, без программирования'
 	},
 
 	'sec2-4-h': {
