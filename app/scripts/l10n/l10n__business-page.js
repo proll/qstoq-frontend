@@ -88,8 +88,8 @@ qst.l10n.business_page = {
 	},
 
 	'response_description': {
-		en: 'Working with Qstoq is easy — this is a simple and an effective tool. Qstoq staff guys are professionals, they understand clearly what the needs of customer. They react quickly, consult and support us responsively. Now we\'re continue out partnership and launching new projects.',
-		ru: 'Работать с Qstoq легко – это простой в использовании и в то же время эффективный инструмент. Над проектом работает команда профессионалов, действительно понимающих потребности клиента. Очень оперативно оказывают консультационную и техническую поддержку. Мы продолжаем активно сотрудничать и запускаем новые проекты.'
+		en: 'Working with Qstoq we solve payments issue on our project. We have many landing pages under one control panel and billing. Qsotq helps to manage payments on all sites in the one place and a flexible RESTful API alows to develop a unique UX for each site.<br/>We connected Qstoq as another payment gate. And now we don\'t have to change code of all sites to support additional payment system. We connect it quickly through Qstoq UI.',
+		ru: 'С Qstoq мы решили задачу приема платежей в проекте. У нас много продающих сайтов над единой панелью управления и биллингом. Qstoq позволяет управлять приемом платежей на всех сайтах централизованно, а гибкий RESTful API позволяет реализовать уникальный опыт использования для каждого отдельного сайта.<br/>Мы подключили Qstoq как еще один платежный шлюз и теперь для добавления новой платежной системы или шлюза нам не нужно менять код всех наших сайтов. Мы подключаем новые способы платежа быстро и просто через&nbsp;UI.'
 	},
 
 	'Connect Qstoq': {
