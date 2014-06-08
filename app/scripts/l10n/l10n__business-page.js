@@ -112,4 +112,205 @@ qst.l10n.business_page = {
 		en: 'After the request sending our Qstoq crew member will contact you for details and willprovide you more information',
 		ru: 'После подачи заявки с вами свяжется специалист Qstoq для уточнения деталей и предоставит всю необходимую информацию.',
 	},
+
+	'Mobile phone': {
+		en: 'Mobile phone',
+		ru: 'Мобильный телефон',
+	},
+
+	'MTS': {
+		en: 'MTS',
+		ru: 'МТС',
+	},
+
+	'Megafon': {
+		en: 'Megafon',
+		ru: 'Мегафон',
+	},
+
+	'Beeline': {
+		en: 'Beeline',
+		ru: 'Билайн',		
+	},
+
+
+	'Terminals': {
+		en: 'Terminals',
+		ru: 'Терминалы, салоны,<br/>банкоматы',
+	},
+	'terminal1': {
+		en: 'Терминалы Qiwi',
+		ru: 'Терминалы Qiwi',
+	},
+	'terminal2': {
+		en: 'Элекснет',
+		ru: 'Элекснет',
+	},
+	'terminal3': {
+		en: 'Мобил Элемент',
+		ru: 'Мобил Элемент',
+	},
+	'terminal4': {
+		en: 'Pinpay Express',
+		ru: 'Pinpay Express',
+	},
+	'terminal5': {
+		en: 'Кассира.НЕТ',
+		ru: 'Кассира.НЕТ',
+	},
+	'terminal6': {
+		en: 'Салоны Евросеть',
+		ru: 'Салоны Евросеть',
+	},
+	'terminal7': {
+		en: 'Салоны Связной',
+		ru: 'Салоны Связной',
+	},
+	'terminal8': {
+		en: 'Кредди',
+		ru: 'Кредди',
+	},
+
+
+	'Credit cards': {
+		en: 'Credit cards',
+		ru: 'Банковские карты'
+	},
+	'Visa': {
+		en: 'Visa',
+		ru: 'Visa'
+	},
+	'MasterCard': {
+		en: 'MasterCard',
+		ru: 'MasterCard'
+	},
+
+
+	'Emoney': {
+		en: 'Emoney',
+		ru: 'Электронные деньги'
+	},
+	'emoney1': {
+		en: 'Яндекс.Деньги',
+		ru: 'Яндекс.Деньги',
+	},
+	'emoney2': {
+		en: 'Webmoney',
+		ru: 'Webmoney',
+	},
+	'emoney3': {
+		en: 'Qiwi Кошелек',
+		ru: 'Qiwi Кошелек',
+	},
+	'emoney4': {
+		en: 'Mail.ru Деньги',
+		ru: 'Mail.ru Деньги',
+	},
+	'emoney5': {
+		en: 'Единый Кошелек W1',
+		ru: 'Единый Кошелек W1',
+	},
+	'emoney6': {
+		en: 'EasyPay',
+		ru: 'EasyPay',
+	},
+	'emoney7': {
+		en: 'Liqpay',
+		ru: 'Liqpay',
+	},
+	'emoney8': {
+		en: 'Telemoney',
+		ru: 'Telemoney',
+	},
+	'emoney9': {
+		en: 'Paypal',
+		ru: 'Paypal',
+	},
+
+
+	'Internet banks': {
+		en: 'Internet banks',
+		ru: 'Интернет банки',
+	},
+	ibank1: {
+		en: 'Альфа-Клик',
+		ru: 'Альфа-Клик'
+	},
+	ibank2: {
+		en: 'Русский Стандарт',
+		ru: 'Русский Стандарт'
+	},
+	ibank3: {
+		en: 'ТатФондБанк',
+		ru: 'ТатФондБанк'
+	},
+	ibank4: {
+		en: 'Промсвязьбанк',
+		ru: 'Промсвязьбанк'
+	},
+	ibank5: {
+		en: 'ВТБ24',
+		ru: 'ВТБ24'
+	},
+	ibank6: {
+		en: 'OCEAN',
+		ru: 'OCEAN'
+	},
+	ibank7: {
+		en: 'HandyBank',
+		ru: 'HandyBank'
+	},
+	ibank8: {
+		en: 'Банк Богородский',
+		ru: 'Банк Богородский'
+	},
+	ibank9: {
+		en: 'Банк Образование',
+		ru: 'Банк Образование'
+	},
+	ibank10: {
+		en: 'ФлексБанк',
+		ru: 'ФлексБанк'
+	},
+	ibank11: {
+		en: 'Фьючер АКБ',
+		ru: 'Фьючер АКБ'
+	},
+	ibank12: {
+		en: 'КРАНБАНК',
+		ru: 'КРАНБАНК'
+	},
+
+	ibank13: {
+		en: 'Костромаселькомбанк',
+		ru: 'Костромаселькомбанк'
+	},
+	ibank14: {
+		en: 'Липецкий областной банк',
+		ru: 'Липецкий областной банк'
+	},
+	ibank15: {
+		en: 'НС Банк',
+		ru: 'НС Банк'
+	},
+	ibank16: {
+		en: 'Русский Трастовый Банк',
+		ru: 'Русский Трастовый Банк'
+	},
+	ibank17: {
+		en: 'Вестинтербанк',
+		ru: 'Вестинтербанк'
+	},
+	ibank18: {
+		en: 'МежТопЭнергоБанк',
+		ru: 'МежТопЭнергоБанк'
+	},
+	ibank19: {
+		en: 'Банк Интеза',
+		ru: 'Банк Интеза'
+	},
+	ibank20: {
+		en: 'Банк Город',
+		ru: 'Банк Город'
+	},
 }

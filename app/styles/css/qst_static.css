@@ -153,16 +153,12 @@ sub {
 }
 img {
   /* Responsive images (ensure images don't scale beyond their parents) */
-
   max-width: 100%;
   /* Part 1: Set a maxium relative to the parent */
-
   width: auto\9;
   /* IE7-8 need help adjusting responsive images */
-
   height: auto;
   /* Part 2: Scale the height according to the width, otherwise you get stretching */
-
   vertical-align: middle;
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -261,7 +257,7 @@ dd {
   img {
     max-width: 100% !important;
   }
-  @page  {
+  @page {
     margin: 0.5cm;
   }
   p,
@@ -502,8 +498,6 @@ h1 {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-}
-.qst__inp-cont {
   border-bottom: 1px solid #dcdcdc;
 }
 .qst__inp-cont:last-child {
@@ -526,8 +520,6 @@ h1 {
 }
 .qst__inp {
   resize: none;
-}
-.qst__inp {
   border: none;
   font-size: 13px;
   line-height: 14px;
@@ -565,8 +557,6 @@ h1 {
 }
 .qst__select {
   resize: none;
-}
-.qst__select {
   border-color: #8c8c8c;
   font-size: 13px;
   line-height: 14px;

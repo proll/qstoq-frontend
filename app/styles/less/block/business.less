@@ -246,9 +246,7 @@
 						}
 					}
 
-				.business__toggler-tools,
-				.business__toggler-systems {
-					display: block;
+				.business__toggler-tools {
 					margin: 0 auto;
 					width: 910px;
 					height: 60px;
@@ -257,8 +255,35 @@
 				}
 
 				.business__toggler-systems {
-					background-image: url(/images/bl/s3_icns2.png);
+					overflow: hidden;
+					margin: 35px 0 0 79px;
+					display: none;
 				}
+
+					.business__toggler-systems-col {
+						width: 240px;
+						float: left;
+					}
+
+					.business__toggler-systems-col:nth-child(3) {
+						width: 162px;
+					}
+					.business__toggler-systems-col:nth-child(4) {
+						width: auto;
+					}
+
+
+						.business__toggler-systems-list {
+							display: block;
+							text-align: left;
+							margin-bottom: 18px;
+						}
+							.business__toggler-system {
+								display: block;
+								font-size: 15px;
+								line-height: 22px;
+								margin-bottom: 3px;
+							}
 
 				.toggle1 {
 					.business__toggler-menu-itm {
