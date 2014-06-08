@@ -2,7 +2,7 @@ qst = qst || {};
 qst.l10n = qst.l10n || {};
 qst.l10n.footer = {
 	'The easy payment system of purchase and delivery of digital content': {
-		en: 'The easy payment system of purchase and delivery of digital content',
+		en: 'A very simple system of sale and delivery of digital content and accepting on-line payments',
 		ru: 'Очень простая система продажи и доставки цифрового контента и приема онлайн платежей'
 	},
 

@@ -2,73 +2,73 @@ qst = qst || {};
 qst.l10n = qst.l10n || {};
 qst.l10n.business_page = {
 	'sec1-h1': {
-		en: '<i>Qstoq</i> helps you get payments on your site with comfort and benefit',
+		en: '<i>Qstoq</i> will help you to accept payments profitably and easily on your site',
 		ru: '<i>Qstoq</i> поможет выгодно и удобно принимать платежи на вашем сайте'
 	},
 
 	'sec1-p': {
-		en: 'This is a payment processing control center, which supports any payment methods, every possible. So even nonexistent.',
+		en: 'It is your control center of accepting payments which supports all possible payment methods, and even those which don’t exist yet.',
 		ru: 'Это ваш центр управления приемом платежей, который поддерживает все способы оплаты, какие только возможно. И даже те, которых пока еще нет.'
 	},
 
 	'Connect': {
-		en: 'Connect Qstoq',
+		en: 'To connect accepting payments',
 		ru: 'Подключить прием платежей'
 	},
 
 
 	'sec2-0-h': {
-		en: 'Payments on your site',
+		en: 'Accepting payments on your site',
 		ru: 'Прием платежей на вашем сайте'
 	},
 
 	'sec2-0-p': {
-		en: 'You can connect the Qstoq free module to your CMS or site and other payment systems and gateways could be connected through Qstoq.',
+		en: 'Once you connect free module Qstoq to your CMS or your site, and all the rest payment systems and gateways will be connected through Qstoq.',
 		ru: 'Один раз подключите бесплатный модуль Qstoq к вашей CMS или сайту, а все остальные платежные системы и шлюзы подключайте через Qstoq.'
 	},
 
 	'sec2-1-h': {
-		en: 'Reducing transaction costs',
+		en: 'Decreasing transaction costs',
 		ru: 'Снижение трансакционных издержек'
 	},
 
 	'sec2-1-p': {
-		en: 'Support the unlimited amount of payment systems and gateways on your site through Qstoq. We care about minimal-fee payment system for each customer payment.',
+		en: 'Connect an unlimited number of payment systems and gateways to your site through Qstoq. We will care about the choice of the system with the minimum commission for the payment method chosen by the buyer.',
 		ru: 'Подключайте неограниченное число платежных систем и шлюзов к вашему сайту через Qstoq. Мы позаботимся о выборе системы с минимальной комиссией для выбранного покупателем способа платежа.'
 	},
 
 	'sec2-2-h': {
-		en: 'I have everything necessary connected now. Why do I need Qstoq?',
+		en: 'I have connected everything I need now. What do I need Qstoq for?',
 		ru: 'У меня подключено всё, что мне сейчас нужно. Зачем мне Qstoq?'
 	},
 
 	'sec2-2-p': {
-		en: 'With Qstoq you have less code, less developing, less testing, less fees and the easy support of new payment types. Now There is no need of searching an support module for your CMS or changing the code on your site. Just connect those ways through Qstoq.',
+		en: 'With Qstoq you will have less code, less development, less testing, less commission, and easy connection to new payment methods. You don’t need to look for another support module for your CMS or to change the site code – you simply connect this through Qstoq interface.',
 		ru: 'С Qstoq у вас будет меньше кода, меньше разработки, меньше тестирования, меньше комиссий и легкое подключение новых способов платежей. Хватит искать очередные модули поддержки для вашей CMS или менять код сайта — вы просто подключаете это через интерфейс Qstoq.'
 	},
 
 	'sec2-3-h': {
-		en: 'Manager of your payment systems',
+		en: 'Your payment systems manager',
 		ru: 'Менеджер ваших платежных систем'
 	},
 
 	'sec2-3-p': {
-		en: 'Connection of the new systems to the site, turning on and turning off the systems — att this is in few clicks and without coding.',
+		en: 'Connection of new systems to the site, connection and disconnection of the systems connected earlier – and all this only by a couple of clicks, without programming.',
 		ru: 'Подключение новых систем к сайту, включение и отключение раннее подключенных систем — все это за пару кликов, без программирования'
 	},
 
 	'sec2-4-h': {
-		en: 'Ultra fast connection',
+		en: 'Fast connection',
 		ru: 'Быстрое подключение'
 	},
 
 	'sec2-4-p': {
-		en: 'There is a simple and cozy RESTful API and modules for most of CMS.',
+		en: 'Simple and convenient RESTful API, modules for most CMS.',
 		ru: 'Простой и удобный RESTful API, готовые модули для большинства CMS.'
 	},
 
 	'tools': {
-		en: 'Payment tools',
+		en: 'Payment methods',
 		ru: 'Платежные инструменты'
 	},
 
@@ -88,7 +88,7 @@ qst.l10n.business_page = {
 	},
 
 	'response_description': {
-		en: 'Working with Qstoq we solve payments issue on our project. We have many landing pages under one control panel and billing. Qsotq helps to manage payments on all sites in the one place and a flexible RESTful API alows to develop a unique UX for each site.<br/>We connected Qstoq as another payment gate. And now we don\'t have to change code of all sites to support additional payment system. We connect it quickly through Qstoq UI.',
+		en: 'With Qstoq we have solved the problem of accepting payments in the project. We have a lot of selling sites over the common control panel and billing. Qstoq allows us to manage accepting payments on all sites centrally, and flexible RESTful API allows us to realize the unique user experience for each individual site.<br/> We connected Qstoq as one more payment gateway, and now in order to add a new payment system or a gateway, we don’t need to change the codes of all our sites. We connect to new payment methods fast and simply through&nbsp;UI.',
 		ru: 'С Qstoq мы решили задачу приема платежей в проекте. У нас много продающих сайтов над единой панелью управления и биллингом. Qstoq позволяет управлять приемом платежей на всех сайтах централизованно, а гибкий RESTful API позволяет реализовать уникальный опыт использования для каждого отдельного сайта.<br/>Мы подключили Qstoq как еще один платежный шлюз и теперь для добавления новой платежной системы или шлюза нам не нужно менять код всех наших сайтов. Мы подключаем новые способы платежа быстро и просто через&nbsp;UI.'
 	},
 
@@ -109,7 +109,7 @@ qst.l10n.business_page = {
 	},
 
 	'connect-p': {
-		en: 'After the request sending our Qstoq crew member will contact you for details and willprovide you more information',
+		en: 'After you have filed an application, the Qstoq specialist will contact you in order to elaborate details and give you all the necessary information.',
 		ru: 'После подачи заявки с вами свяжется специалист Qstoq для уточнения деталей и предоставит всю необходимую информацию.',
 	},
 

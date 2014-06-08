@@ -6,3 +6,4 @@ node_modules
 .dropbox
 Icon?
 /node_modules
+.idea
