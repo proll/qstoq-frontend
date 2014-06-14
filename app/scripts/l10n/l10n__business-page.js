@@ -375,8 +375,8 @@ qst.l10n.business_page = {
 	},
 
 	'plan4_name': {
-		en: 'Shop',
-		ru: 'Магазин'
+		en: 'Super market',
+		ru: 'Гипермаркет'
 	},
 
 	'plan4_price': {
