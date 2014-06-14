@@ -313,4 +313,134 @@ qst.l10n.business_page = {
 		en: 'Банк Город',
 		ru: 'Банк Город'
 	},
+
+	'Tariff plans': {
+		en: 'Pricing',
+		ru: 'Тарифные планы'
+	},
+
+	'sec4_1-p': {
+		en: 'We work in postpaid system — at the end of the billing period<br/>the actual quantity of transactions are paid',
+		ru: 'Мы работаем по постоплатной системе — в конце расчетного периода<br/>оплачивается фактическое число проведенных транзакций'
+	},
+
+	'plan1_name': {
+		en: 'Startup',
+		ru: 'Стартап'
+	},
+
+	'plan1_price': {
+		en: '0',
+		ru: '0'
+	},
+
+	'currency': {
+		en: 'rub.',
+		ru: 'руб.'
+	},
+
+	'plan1_desc': {
+		en: 'per transation',
+		ru: 'с транзакции'
+	},
+
+	'plan2_name': {
+		en: 'Kiosk',
+		ru: 'Лавка'
+	},
+
+	'plan2_price': {
+		en: '5',
+		ru: '5'
+	},
+
+	'plan2_desc': {
+		en: 'per transation or 2.9%',
+		ru: 'с транзакции или 2,9%'
+	},
+
+	'plan3_name': {
+		en: 'Shop',
+		ru: 'Магазин'
+	},
+
+	'plan3_price': {
+		en: '4',
+		ru: '4'
+	},
+
+	'plan3_desc': {
+		en: 'per transation or 1.9%',
+		ru: 'с транзакции или 1,9%'
+	},
+
+	'plan4_name': {
+		en: 'Shop',
+		ru: 'Магазин'
+	},
+
+	'plan4_price': {
+		en: '3',
+		ru: '3'
+	},
+
+	'plan4_desc': {
+		en: 'per transation or 0.9%',
+		ru: 'с транзакции или 0,9%'
+	},
+
+	'plan1_desc2': {
+		en: 'Up to 100 transations per month',
+		ru: 'До 100 транзакций <br/>в месяц'
+	},
+
+	'plan2_desc2': {
+		en: 'Up to 1000 transations per month',
+		ru: 'До 1000 транзакций <br/>в месяц'
+	},
+
+	'plan3_desc2': {
+		en: 'Up to 5000 transations per month',
+		ru: 'До 5000 транзакций <br/>в месяц'
+	},
+
+	'plan4_desc2': {
+		en: 'Up to 15 000 transations per month',
+		ru: 'До 15 000 транзакций <br/>в месяц'
+	},
+
+	'plan_feat1': {
+		en: 'Free integration to your site',
+		ru: 'Бесплатная интеграция с вашим сайтом',
+	},
+
+	'plan_feat2': {
+		en: 'Custom payment form',
+		ru: 'Кастомная форма оплаты',
+	},
+
+	'plan_feat3': {
+		en: 'Custom payment form',
+		ru: 'Расширенная статистика',
+	},
+
+	'plan_feat4': {
+		en: 'Better security',
+		ru: 'Усиленная безопасность',
+	},
+
+	'plan_feat5': {
+		en: 'On-site user payment troubles notifications',
+		ru: 'Оповещения о проблемах пользователей при оплате на вашем сайте',
+	},
+
+	'plan_feat6': {
+		en: 'Support 24/7',
+		ru: 'Поддержка 24/7',
+	},
+
+	'plan_feat7': {
+		en: 'Personal manager',
+		ru: 'Персональный менеджер',
+	},
 }

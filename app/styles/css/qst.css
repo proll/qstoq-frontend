@@ -5474,8 +5474,7 @@ textarea.qst__inp {
   min-height: 0;
 }
 .business-section4 .business__container-in {
-  padding: 64px 0 57px;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 64px 0 70px;
 }
 .business__response {
   margin: 0;
@@ -5537,20 +5536,86 @@ textarea.qst__inp {
 .business__response-logo {
   margin: 8px 0 0 27px;
 }
+.business-section4_1 {
+  min-height: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAD6AQMAAAAMWFJmAAAAA1BMVEX19fWwaZ+KAAAAGUlEQVR4Ae3BAQ0AAADCIPunNsc3YAAAkHEKvgABH3OHPgAAAABJRU5ErkJggg==) top left repeat-x;
+}
+.business-section4_1 .business__container-in {
+  padding: 57px 0 65px;
+  color: #222a32;
+}
+.business-section4_1 .business__h2 {
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 5px;
+}
+.business-section4_1-p {
+  text-align: center;
+  padding: 0;
+  margin: 22px 0 46px;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+.business-section4_1__table {
+  border-collapse: collapse;
+}
+.business-section4_1__head {
+  background: #0575d2;
+  color: #fff;
+  padding: 9px 20px 22px;
+}
+.business-section4_1__head .business__h3 {
+  font-size: 13px;
+  line-height: 23px;
+  color: #95d7ff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 20px;
+  letter-spacing: 3px;
+}
+.business-section4_1__head-price {
+  font-size: 70px;
+  line-height: 78px;
+  font-weight: normal;
+}
+.business-section4_1__head-desc {
+  padding: 0;
+  margin: -3px 0 0;
+}
+.business-section4_1__head:nth-child(2n) {
+  background: #068bdb;
+}
+.business-section4_1__cell {
+  font-size: 14px;
+  line-height: 20px;
+  color: #5a6064;
+  border: 1px solid #e6e8ea;
+  padding: 20px;
+}
+.business-section4_1__cell_empty {
+  background: #f5f5f5;
+}
 .business-section5 {
   min-height: 0;
 }
 .business-section5 .business__container-in {
-  padding: 45px 0 53px;
+  padding: 13px 0 53px;
 }
 .business__h2 {
-  font-size: 39px;
+  font-size: 22px;
   line-height: 1;
   color: #000000;
   font-weight: 400;
   padding: 0;
   margin: 0 0 36px;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 .business__connect-form {
   display: block;
