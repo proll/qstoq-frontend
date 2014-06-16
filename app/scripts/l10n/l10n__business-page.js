@@ -335,7 +335,7 @@ qst.l10n.business_page = {
 	},
 
 	'currency': {
-		en: 'rub.',
+		en: 'cents',
 		ru: 'руб.'
 	},
 
@@ -350,7 +350,7 @@ qst.l10n.business_page = {
 	},
 
 	'plan2_price': {
-		en: '5',
+		en: '14',
 		ru: '5'
 	},
 
@@ -365,7 +365,7 @@ qst.l10n.business_page = {
 	},
 
 	'plan3_price': {
-		en: '4',
+		en: '11',
 		ru: '4'
 	},
 
@@ -380,7 +380,7 @@ qst.l10n.business_page = {
 	},
 
 	'plan4_price': {
-		en: '3',
+		en: '8',
 		ru: '3'
 	},
 
@@ -420,7 +420,7 @@ qst.l10n.business_page = {
 	},
 
 	'plan_feat3': {
-		en: 'Custom payment form',
+		en: 'Extended statistics',
 		ru: 'Расширенная статистика',
 	},
 

@@ -2,7 +2,7 @@ qst.BusinessPageView = qst.PageView.extend({
 	indent: 60,
 	$window: $(window),
 	events: {
-		'click .business__start-a': 'showFeedback',
+		'click .business__start-a': 'scrollToFeedback',
 		'submit .business__connect-form': 'showEmailFeedback',
 		'click .business__toggler-menu-itm-a': 'toggle',
 	},
@@ -60,6 +60,21 @@ qst.BusinessPageView = qst.PageView.extend({
 				.toggleClass('toggle1', true)
 				.toggleClass('toggle2', false);
 		}
+	},
+
+	scrollToFeedback: function(e) {
+		if(e && e.preventDefault) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+		var $form = this.$el.find('.business__connect-form'),
+			delay = 500;
+		qst.speedScrollTop($form.offset().top - 85, delay);
+		setTimeout(function() {
+			$form.find('input.business__connect-email').focus();
+		}, delay)
+
+		return false;
 	},
 
 	showFeedback: function(e) {
