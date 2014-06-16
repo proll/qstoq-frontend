@@ -69,7 +69,7 @@ qst.l10n.business_page = {
 
 	'tools': {
 		en: 'Payment methods',
-		ru: 'Платежные инструменты'
+		ru: 'Платежные методы'
 	},
 
 	'systems': {

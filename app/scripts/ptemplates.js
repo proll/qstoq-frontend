@@ -1964,11 +1964,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec2-4-p", "business_page", options) : helperMissing.call(depth0, "_", "sec2-4-p", "business_page", options)))
     + "</p>\n				</li>\n			</ul>\n			<div class=\"business__screen1\"></div>\n			<div class=\"business__screen2\"></div>\n		</div>\n	</div>\n</section>\n<section class=\"business-section business-section3\">\n	<div class=\"business__container\">\n		<div class=\"business__container-in\">\n			<div class=\"business__toggler toggle1\">\n				<ul class=\"business__toggler-menu\">\n					<li class=\"business__toggler-menu-itm\">\n						<a class=\"business__toggler-menu-itm-a\" href=\".\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "tools", "business_page", options) : helperMissing.call(depth0, "_", "tools", "business_page", options)))
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "systems", "business_page", options) : helperMissing.call(depth0, "_", "systems", "business_page", options)))
     + "</a>\n					</li>\n					<li class=\"business__toggler-menu-itm\">\n						<a class=\"business__toggler-menu-itm-a\" href=\".\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "systems", "business_page", options) : helperMissing.call(depth0, "_", "systems", "business_page", options)))
-    + "</a>\n					</li>\n				</ul>\n				<div class=\"business__toggler-tools\"></div>\n				<div class=\"business__toggler-systems\">\n					<div class=\"business__toggler-systems-col\">\n						<ul class=\"business__toggler-systems-list\">\n							<li class=\"business__toggler-system\"><strong>";
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "tools", "business_page", options) : helperMissing.call(depth0, "_", "tools", "business_page", options)))
+    + "</a>\n					</li>\n				</ul>\n				<div class=\"business__toggler-systems\"></div>\n				<div class=\"business__toggler-tools\">\n					<div class=\"business__toggler-systems-col\">\n						<ul class=\"business__toggler-systems-list\">\n							<li class=\"business__toggler-system\"><strong>";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Mobile phone", "business_page", options) : helperMissing.call(depth0, "_", "Mobile phone", "business_page", options)))
     + "</strong></li>\n							<li class=\"business__toggler-system\">";
