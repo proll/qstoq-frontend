@@ -5497,6 +5497,10 @@ textarea.qst__inp {
 .business__response-face {
   display: block;
   background: url(/images/bl/s4_face.png);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
   width: 60px;
   height: 60px;
   -webkit-border-radius: 60px;
