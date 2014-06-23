@@ -26,6 +26,7 @@ qst.Feedback = Backbone.Model.extend({
 
 	success: function(user_obj) {
 		this.trigger("success", user_obj);
+		qst.app.statistic.trackFeedback();
 	},
 
 	error:function (err) {

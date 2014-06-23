@@ -62,6 +62,16 @@ qst.Statistic = Backbone.Model.extend({
 		window.yaCounter22431070.reachGoal('Product_trytobuybuy');
 	},
 
+
+	trackFeedback: function(name){
+		if(!this.active) return false;
+		if(!name) {
+			name = 'unnamed'
+		}
+		window._gaq.push(['_trackEvent', 'Feedback', 'send', name]);
+		window.yaCounter22431070.reachGoal('Feedback_send');
+	},
+
 	trackProductSold: function(name){
 		if(!this.active) return false;
 		if(!name) {
