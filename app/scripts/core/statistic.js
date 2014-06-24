@@ -72,6 +72,25 @@ qst.Statistic = Backbone.Model.extend({
 		window.yaCounter22431070.reachGoal('Feedback_send');
 	},
 
+
+	trackOpenBusinessFeedback: function(name){
+		if(!this.active) return false;
+		if(!name) {
+			name = 'unnamed'
+		}
+		window._gaq.push(['_trackEvent', 'BusinessFeedback', 'open', name]);
+		window.yaCounter22431070.reachGoal('BusinessFeedback_open');
+	},
+
+	trackBusinessFeedback: function(name){
+		if(!this.active) return false;
+		if(!name) {
+			name = 'unnamed'
+		}
+		window._gaq.push(['_trackEvent', 'BusinessFeedback', 'send', name]);
+		window.yaCounter22431070.reachGoal('BusinessFeedback_send');
+	},
+
 	trackProductSold: function(name){
 		if(!this.active) return false;
 		if(!name) {

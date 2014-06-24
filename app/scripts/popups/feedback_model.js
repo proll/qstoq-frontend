@@ -4,10 +4,15 @@ qst.Feedback = Backbone.Model.extend({
 		email: '',
 		phone: '',
 		name: '',
+
+		business_statistics: false,
 	},
 
 	initialize: function (){
 		this.view = new qst.FeedbackView({model: this});
+		if(this.get('business_statistics')) {
+			qst.app.statistic.trackOpenBusinessFeedback();
+		}
 	},
 
 	fetch: function(data) {
@@ -26,7 +31,12 @@ qst.Feedback = Backbone.Model.extend({
 
 	success: function(user_obj) {
 		this.trigger("success", user_obj);
-		qst.app.statistic.trackFeedback();
+		
+		if(this.get('business_statistics')) {
+			qst.app.statistic.trackBusinessFeedback();
+		} else {
+			qst.app.statistic.trackFeedback();
+		}
 	},
 
 	error:function (err) {

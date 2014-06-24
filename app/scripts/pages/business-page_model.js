@@ -26,6 +26,7 @@ qst.BusinessPage = qst.Page.extend({
 
 	showFeedback: function(options) {
 		options = options || {};
+		options.business_statistics = true;
 		qst.trigger("feedback:show", options);
 	},
 
