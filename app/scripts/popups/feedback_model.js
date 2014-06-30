@@ -23,6 +23,12 @@ qst.Feedback = Backbone.Model.extend({
 		options.data.message = 'Connect ' + options.data.name;
 		delete options.data.name;
 
+		if(this.get('business_statistics')) {
+			data.subject = "Qstoq - Бизнес заявка на подключение";
+		} else {
+			data.subject = "Qstoq - Ценники cообщение в техподдержку";
+		}
+
 		options.success  	= _.bind(this.success, this);
 		options.error  		= _.bind(this.error, this);
 
