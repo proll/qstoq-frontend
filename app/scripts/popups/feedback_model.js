@@ -23,10 +23,18 @@ qst.Feedback = Backbone.Model.extend({
 		options.data.message = 'Connect ' + options.data.name;
 		delete options.data.name;
 
-		if(this.get('business_statistics')) {
-			data.subject = "Qstoq.Бизнес - заявка на подключение";
+		if(qst.lang === 'ru') {
+			if(this.get('business_statistics')) {
+				data.subject = "Qstoq.Бизнес - заявка на подключение";
+			} else {
+				data.subject = "Qstoq.Ценники - cообщение в техподдержку";
+			}
 		} else {
-			data.subject = "Qstoq.Ценники - cообщение в техподдержку";
+			if(this.get('business_statistics')) {
+				data.subject = "Qstoq.Business - connection request";
+			} else {
+				data.subject = "Qstoq.Pricetags - feedback message";
+			}
 		}
 
 		options.success  	= _.bind(this.success, this);
