@@ -2,6 +2,9 @@ Options +FollowSymLinks
 
 RewriteEngine on
 
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
 RewriteCond %{HTTP_HOST} ^qstoq.me[:80]*
 RewriteRule v1/(.*)$ http://api.qstoq.me/v1/$1 [P,L]
 
