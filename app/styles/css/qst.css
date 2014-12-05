@@ -283,8 +283,7 @@ a {
   color: #158adb;
   text-decoration: none;
 }
-a:hover,
-a:focus {
+a:hover {
   color: #158adb;
   text-decoration: underline;
 }
