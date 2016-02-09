@@ -240,7 +240,7 @@ qst.l10n.landing_page = {
 	},
 
 	'section4-3-1-p': {
-		en: 'All Qstoq service absolutely free till the middle of 2014',
-		ru: 'Все сервисы Qstoq абсолютно бесплатны до середины 2014'
+		en: 'All Qstoq service absolutely free',
+		ru: 'Все сервисы Qstoq абсолютно бесплатны'
 	},
 }
