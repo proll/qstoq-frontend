@@ -4,7 +4,7 @@
 
 [l10n__404-page.js]
 1. Убедитесь, что ссылка введена правильно;
-2. Или напишите нам — <a href="mailto:support@qstoq.me" target="mail" class="lnk">support@qstoq.me</a>
+2. Или напишите нам — <a href="mailto:support@qstoq.ru" target="mail" class="lnk">support@qstoq.ru</a>
 
 [l10n__auth.js]
 1. Введите свой e-mail
@@ -215,8 +215,8 @@
 5. После того как все юридические формальности улажены, войдите в Личный Кабинет магазина <a href="https://account.paysecure.ru" target="_blank">https://account.paysecure.ru</a>. Запишите свой <strong>ID магазина</strong>.
 6. Перейдите в раздел Пользователи. Создайте нового пользователя с типом <strong>RDS</strong>, задайте ему <strong>Логин</strong> и <strong>Пароль</strong>. Пользователь должен иметь доступ только к <strong>Services</strong>.
 7. На странице Настройки Мерчантов, выберите свой магазин.
-8. Вкладка <strong>Настройка Платежей</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://qstoq.me/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.
-9. Вкладка <strong>Настройка отправки результатов платежей</strong>. Должны быть активированы только следующие опции: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://qstoq.me/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Секрет</strong>
+8. Вкладка <strong>Настройка Платежей</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://qstoq.ru/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.
+9. Вкладка <strong>Настройка отправки результатов платежей</strong>. Должны быть активированы только следующие опции: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://qstoq.ru/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Секрет</strong>
 10. Подключение Webmoney
 11. Подключение Webmoney R Кошелька
 12. Подключение Webmoney Z Кошелька
@@ -228,19 +228,19 @@
 18. Выберите кошелек, на который будет производиться платеж (<strong>R Кошелек</strong>) и нажмите <strong>Настроить</strong>.
 19. Выберите кошелек, на который будет производиться платеж (<strong>Z Кошелек</strong>) и нажмите <strong>Настроить</strong>.
 20. Выберите кошелек, на который будет производиться платеж (<strong>E Кошелек</strong>) и нажмите <strong>Настроить</strong>.
-21. Выставьте следующие параметры:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Секретный ключ</strong> для Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: снять галочку<br/><strong>Передавать параметры в предварительном запросе</strong>: поставить галочку<br/><strong>Result URL</strong>: <mark>http://qstoq.me/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://qstoq.me/v1/webmoney/return</mark>, метод POST<br/><strong>Fail URL</strong>: <mark>http://qstoq.me/v1/webmoney/return</mark>, метод POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5
+21. Выставьте следующие параметры:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Секретный ключ</strong> для Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: снять галочку<br/><strong>Передавать параметры в предварительном запросе</strong>: поставить галочку<br/><strong>Result URL</strong>: <mark>http://qstoq.ru/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://qstoq.ru/v1/webmoney/return</mark>, метод POST<br/><strong>Fail URL</strong>: <mark>http://qstoq.ru/v1/webmoney/return</mark>, метод POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5
 22. Нажмите <strong>Сохранить</strong>.
 23. Подключение Qiwi
 24. Пароль магазина
 25. Зарегистрируйтесь на сайте Qiwi как магазин: <a href="http://ishopnew.qiwi.ru" target="_blank">http://ishopnew.qiwi.ru</a>. Выберите одну из удобных форм сотрудничества: как юрлицо с выводом средств на расчетный счет, либо как частное лицо.
-26. При регистрации укажите название вашего магазина. В качестве сайта можете указать qstoq.me.
+26. При регистрации укажите название вашего магазина. В качестве сайта можете указать qstoq.ru.
 27. После регистрации, в течении нескольких дней вы получите идентификатор магазина ID магазина и пароль
-28. Войдите в личный кабинет Qiwi. Во вкладке <strong>Настройки</strong> укажите <strong>URL для отправки в случае успешной оплаты счёта</strong> и <strong>URL для отправки в случае ошибки</strong>: <br/><mark>http://qstoq.me/v1/qiwi/return</mark>
-29. Во вкладке <strong>Способы подключений</strong> активируйте все протоколы. В пункте <strong>SOAP-протокол</strong>, нажмите <strong>Далее</strong>. На открывшейся странице в поле <strong>URL</strong> укажите: <br/><mark>http://qstoq.me/v1/qiwi/{{s1}}</mark><br/>Отключите <strong>Использовать подпись</strong>.
+28. Войдите в личный кабинет Qiwi. Во вкладке <strong>Настройки</strong> укажите <strong>URL для отправки в случае успешной оплаты счёта</strong> и <strong>URL для отправки в случае ошибки</strong>: <br/><mark>http://qstoq.ru/v1/qiwi/return</mark>
+29. Во вкладке <strong>Способы подключений</strong> активируйте все протоколы. В пункте <strong>SOAP-протокол</strong>, нажмите <strong>Далее</strong>. На открывшейся странице в поле <strong>URL</strong> укажите: <br/><mark>http://qstoq.ru/v1/qiwi/{{s1}}</mark><br/>Отключите <strong>Использовать подпись</strong>.
 30. Для сохранения данных, нажмите <strong>Изменить</strong>
 31. Подключение Paypal
 32. Зарегистрируйтесь и войдите в свой аккаунт <a href="https://www.paypal.com/" target="_blank">Paypal</a>
-33. Перейдите в <strong>Профиль -> Дополнительные функции -> Мои инструменты продаж</strong>. Найдите в списке параметров <strong>Уведомления о мгновенных платежах</strong> и нажмите <strong>Обновить</strong>. На открывшейся странице нажмите <strong>Выбрать параметры уведомлений</strong>, отметьте <strong>Доставка сообщений</strong> и в поле <strong>URL-адрес для уведомления</strong> введите: <mark>http://qstoq.me/v1/paypal/{{s1}}</mark>
+33. Перейдите в <strong>Профиль -> Дополнительные функции -> Мои инструменты продаж</strong>. Найдите в списке параметров <strong>Уведомления о мгновенных платежах</strong> и нажмите <strong>Обновить</strong>. На открывшейся странице нажмите <strong>Выбрать параметры уведомлений</strong>, отметьте <strong>Доставка сообщений</strong> и в поле <strong>URL-адрес для уведомления</strong> введите: <mark>http://qstoq.ru/v1/paypal/{{s1}}</mark>
 34. Перейдите в раздел для разработчиков: <a href="https://developer.paypal.com" target="_blank">https://developer.paypal.com</a>, во вкладку <strong>Applications</strong>
 35. Создайте приложение нажав <strong>Create App</strong>, введите название вашего магазина
 36. Кликните <strong>Live credentials</strong> и скопируйте <strong>ClientID</strong> и <strong>Secret</strong>.
@@ -250,8 +250,8 @@
 40. Введите все требуемые настройки для создания нового магазина
 41. Перейдите во вкладку Технические настройки
 42. Задайте <strong>Пароль1</strong> и <strong>Пароль2</strong>
-43. Укажите <strong>ResultUrl</strong> <mark>http://qstoq.me/v1/robokassa/{{s1}}</mark>. Этот параметр нужен для того чтобы Робокасса извещала Qstoq об оплате заказа.<br/>Метод отсылки данных по Result Url: <strong>POST</strong>.
-44. Укажите <strong>Success Url</strong> и <strong>Failure URL</strong>: <mark>http://qstoq.me/v1/robokassa/return</mark>, метод отсылки данных для обоих параметров: <strong>POST</strong>
+43. Укажите <strong>ResultUrl</strong> <mark>http://qstoq.ru/v1/robokassa/{{s1}}</mark>. Этот параметр нужен для того чтобы Робокасса извещала Qstoq об оплате заказа.<br/>Метод отсылки данных по Result Url: <strong>POST</strong>.
+44. Укажите <strong>Success Url</strong> и <strong>Failure URL</strong>: <mark>http://qstoq.ru/v1/robokassa/return</mark>, метод отсылки данных для обоих параметров: <strong>POST</strong>
 45. После того как все параметры заданы, нажмите <strong>Сохранить</strong>. Появится кнопка <strong>Запрос на активацию</strong>. После подачи запроса в течении нескольких дней ваш аккаунт будет активирован и вы сможете принимать платежи.
 46. Подключение PayMaster (только юр.лица)
 47. Идентификатор
@@ -261,7 +261,7 @@
 51. Выберите свой сайт и нажмите <strong>Настройки</strong>
 52. В разделе Общая информация, найдите параметр <strong>Идентификатор</strong> и заполните его в форму слева
 53. В разделе Технические параметры укажите:<br/><strong>Тип подписи</strong>: MD5<br/><strong>Повторно отправлять Payment Notification при сбоях</strong>: Включено
-54. В разделе Обратные вызовы<br/><strong>Payment notification</strong>: <mark>http://qstoq.me/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://qstoq.me/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://qstoq.me/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: отключено
+54. В разделе Обратные вызовы<br/><strong>Payment notification</strong>: <mark>http://qstoq.ru/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: отключено
 55. В разделе Пользователи, добавьте нового пользователя, задав его email (<strong>Сервис логин</strong>) и пароль (<strong>Сервис пароль</strong>). В настройках пользователя добавьте ему роль Операционист, с доступом к вашему сайту.
 56. Подключение Bitcoin
 57. Минимальная выплата
@@ -273,7 +273,7 @@
 63. Заведите себе кошелек Яндекс.Деньги. Это просто сделать на странице <a href="https://money.yandex.ru/" target="_blank">money.yandex.ru</a>
 64. Скопируйте <strong>номер вашего кошелька</strong> (указан слева вверху)
 65. Зайдите в раздел HTTP-уведомления: <a href="https://sp-money.yandex.ru/myservices/online.xml" target="_blank">https://sp-money.yandex.ru/myservices/online.xml</a>
-66. Укажите URL для возврата: <mark>http://qstoq.me/v1/ymoney/{{s1}}</mark>
+66. Укажите URL для возврата: <mark>http://qstoq.ru/v1/ymoney/{{s1}}</mark>
 67. Нажите кнопку “Показать секрет” и скопируйте его сюда в поле <strong>Секрет</strong>
 68. Поставьте галочку “Отправлять уведомления” и нажмите Сохранить
 

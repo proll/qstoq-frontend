@@ -100,7 +100,7 @@ qst.FB = Backbone.Model.extend({
 		this.access_token = "";
 		FB.login(
 			_.bind(this.onFBData, this), 
-			{ scope: 'publish_actions,publish_stream,user_photos,offline_access,email'}
+			{ scope: 'publish_actions,user_photos,email'}
 		);
 			// { scope: 'publish_actions,publish_stream,user_photos,offline_access,email,user_birthday'}
 		return false;
@@ -110,7 +110,7 @@ qst.FB = Backbone.Model.extend({
 		this.access_token = "";
 		FB.login(
 			_func, 
-			{ scope:'publish_actions,publish_stream,user_photos,offline_access,email,user_birthday'}
+			{ scope:'publish_actions,user_photos,email,user_birthday'}
 		);
 	},
 

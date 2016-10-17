@@ -17,7 +17,7 @@ window.qst = window.qst || {};
 window.qst = _.extend(window.qst, {
 	// language: _.getCookie('lang') || (navigator.language || navigator.systemLanguage || navigator.browserLanguage || navigator.userLanguage || 'en').substr(0, 2).toLowerCase(),
 	language: _.getCookie('lang') || 'ru',
-	root: "http://qstoq.me",
+	root: "http://qstoq.ru",
 	l10n: {},
 
 	preloadTemplates: function(){
@@ -142,7 +142,7 @@ window.qst = _.extend(window.qst, {
 
 	isFile: function(txt) {
 		txt = txt || '';
-		return txt.indexOf('qstoq.me')!==-1;
+		return txt.indexOf('qstoq.ru')!==-1;
 	}
 });
 

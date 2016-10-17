@@ -12,7 +12,7 @@ qst.ItemReceipt = Backbone.Model.extend({
 		name: 			'name',
 		currency: 'rur',
 		description: 	'desc',
-		url_short: 		'http://s.qstoq.me/b842',
+		url_short: 		'http://s.qstoq.ru/b842',
 		url: 			'http://wikimart.ru',
 		external: 		1,
 		price: 			0,

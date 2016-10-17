@@ -192,7 +192,7 @@ qst.ItemEditView = Backbone.View.extend({
 			description = encodeURIComponent(this.model.get('description')),
 			href = this.model.get('url_short'),
 			url = '',
-			image = (!!this.preview_model) ? this.preview_model.get('data') : 'http://qstoq.me/images_static/fav144.png';
+			image = (!!this.preview_model) ? this.preview_model.get('data') : 'http://qstoq.ru/images_static/fav144.png';
 
 		if(social==='facebook') {
 			url = "https://www.facebook.com/dialog/feed?";

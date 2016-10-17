@@ -309,7 +309,7 @@ function program4(depth0,data) {
     + "</p>\n			<ul class=\"receipt__share\">\n				<li class=\"receipt__share-itm receipt__share-itm-title\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Share", "itemreceipt", options) : helperMissing.call(depth0, "_", "Share", "itemreceipt", options)))
-    + "</li>\n				<li class=\"receipt__share-itm\"><a class=\"receipt__share-itm-a\" rel=\"nofollow\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n				<li class=\"receipt__share-itm\"><a class=\"receipt__share-itm-a\" rel=\"nofollow\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n				<li class=\"receipt__share-itm\"><a class=\"receipt__share-itm-a\" rel=\"nofollow\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n			</ul>\n		</div>\n		<div class=\"receipt__service-desc\"><a href=\"http://qstoq.me\" target=\"_blank\">Qstoq</a> &mdash; ";
+    + "</li>\n				<li class=\"receipt__share-itm\"><a class=\"receipt__share-itm-a\" rel=\"nofollow\" href=\"vk\"><i class=\"is is-shc-vk\"></i></a></li>\n				<li class=\"receipt__share-itm\"><a class=\"receipt__share-itm-a\" rel=\"nofollow\" href=\"facebook\"><i class=\"is is-shc-fb\"></i></a></li>\n				<li class=\"receipt__share-itm\"><a class=\"receipt__share-itm-a\" rel=\"nofollow\" href=\"twitter\"><i class=\"is is-shc-tw\"></i></a></li>\n			</ul>\n		</div>\n		<div class=\"receipt__service-desc\"><a href=\"http://qstoq.ru\" target=\"_blank\">Qstoq</a> &mdash; ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "selling in lightning speed", "itemreceipt", options) : helperMissing.call(depth0, "_", "selling in lightning speed", "itemreceipt", options)))
     + "</div>\n	</div>\n	<div class=\"receipt__form-b\"></div>\n</div>";
@@ -348,7 +348,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</p>\n\n			<span class=\"showcase__form__buy-btn\"><span class=\"showcase__form__buy-btn-in\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Buy", "itemshowcase", options) : helperMissing.call(depth0, "_", "Buy", "itemshowcase", options)))
-    + "</span></span>\n		</div>\n		<div class=\"showcase__form__bottom-row\">\n			<div class=\"showcase__form__bottom-row__col1\"><a href=\"http://qstoq.me\" target=\"_blank\">Qstoq</a> &mdash; ";
+    + "</span></span>\n		</div>\n		<div class=\"showcase__form__bottom-row\">\n			<div class=\"showcase__form__bottom-row__col1\"><a href=\"http://qstoq.ru\" target=\"_blank\">Qstoq</a> &mdash; ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "selling in lightning speed", "itemshowcase", options) : helperMissing.call(depth0, "_", "selling in lightning speed", "itemshowcase", options)))
     + "</div>\n			<div class=\"showcase__form__bottom-row__col2\"><i class=\"is is-lock showcase__form__safe-icn\"></i><span class=\"showcase__form__safe-desc\">";
@@ -690,7 +690,7 @@ function program15(depth0,data) {
     + "</p>\n\n					<span class=\"showcase__form__buy-btn\"><span class=\"showcase__form__buy-btn-in\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Buy", "itemedit", options) : helperMissing.call(depth0, "_", "Buy", "itemedit", options)))
-    + "</span></span>\n				</div>\n				<div class=\"showcase__form__bottom-row\">\n					<div class=\"showcase__form__bottom-row__col1\"><a href=\"http://qstoq.me\" target=\"_blank\">Qstoq</a> &mdash; ";
+    + "</span></span>\n				</div>\n				<div class=\"showcase__form__bottom-row\">\n					<div class=\"showcase__form__bottom-row__col1\"><a href=\"http://qstoq.ru\" target=\"_blank\">Qstoq</a> &mdash; ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "selling in lightning speed", "itemedit", options) : helperMissing.call(depth0, "_", "selling in lightning speed", "itemedit", options)))
     + "</div>\n					<div class=\"showcase__form__bottom-row__col2\"><i class=\"is is-lock showcase__form__safe-icn\"></i><span class=\"showcase__form__safe-desc\">";
@@ -962,7 +962,7 @@ function program14(depth0,data) {
   buffer += "\n			<p class=\"paysystem__misc-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase2_4", "paysystem", options) : helperMissing.call(depth0, "_", "phrase2_4", "paysystem", options)))
-    + "<a href=\"mailto:ola@qstoq.me\" target=\"mail\" class=\"paysystem__misc-a\">";
+    + "<a href=\"mailto:ola@qstoq.ru\" target=\"mail\" class=\"paysystem__misc-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Ask us", "paysystem", options) : helperMissing.call(depth0, "_", "Ask us", "paysystem", options)))
     + "</a></p>\n		</div>\n		<div class=\"span6 paysystem__item-cont\">\n			";
@@ -974,7 +974,7 @@ function program14(depth0,data) {
     + "</p>\n		<p class=\"paysystem__direct-hello-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase3_2", "paysystem", options) : helperMissing.call(depth0, "_", "phrase3_2", "paysystem", options)))
-    + "</p>\n		<a class=\"paysystem__direct-hello-a\" target=\"mail\" href=\"mailto:ola@qstoq.me?subject=";
+    + "</p>\n		<a class=\"paysystem__direct-hello-a\" target=\"mail\" href=\"mailto:ola@qstoq.ru?subject=";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect me", "paysystem", options) : helperMissing.call(depth0, "_", "Connect me", "paysystem", options)))
     + "\">";
@@ -1909,7 +1909,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Make sure that URL entered correctly;", "p404", options) : helperMissing.call(depth0, "_", "Make sure that URL entered correctly;", "p404", options)))
     + "</li>\n	<li class=\"error-page__list-item\">";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "or drop us a line to <a href=\"mailto:support@qstoq.me\" class=\"lnk\">support@qstoq.me.</a>", "p404", options) : helperMissing.call(depth0, "_", "or drop us a line to <a href=\"mailto:support@qstoq.me\" class=\"lnk\">support@qstoq.me.</a>", "p404", options)))
+  buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "or drop us a line to <a href=\"mailto:support@qstoq.ru\" class=\"lnk\">support@qstoq.ru.</a>", "p404", options) : helperMissing.call(depth0, "_", "or drop us a line to <a href=\"mailto:support@qstoq.ru\" class=\"lnk\">support@qstoq.ru.</a>", "p404", options)))
     + "</li>\n</ul>";
   return buffer;
   });
@@ -1926,7 +1926,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</h1>\n			<p class=\"business-section1-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "sec1-p", "business_page", options) : helperMissing.call(depth0, "_", "sec1-p", "business_page", options)))
-    + "</p>\n			<div class=\"business__start\">\n				<a target=\"mail\" href=\"mailto:ola@qstoq.meq?subject=";
+    + "</p>\n			<div class=\"business__start\">\n				<a target=\"mail\" href=\"mailto:ola@qstoq.ruq?subject=";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect me", "paysystem", options) : helperMissing.call(depth0, "_", "Connect me", "paysystem", options)))
     + "\" class=\"business__start-a\" rel=\"nofollow\">";
@@ -2348,13 +2348,13 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</p>\n					<p class=\"itemlist__direct-hello-p\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "phrase3_2", "paysystem", options) : helperMissing.call(depth0, "_", "phrase3_2", "paysystem", options)))
-    + "</p>\n					<a class=\"itemlist__direct-hello-a\" target=\"mail\" href=\"mailto:ola@qstoq.me?subject=";
+    + "</p>\n					<a class=\"itemlist__direct-hello-a\" target=\"mail\" href=\"mailto:ola@qstoq.ru?subject=";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect me", "paysystem", options) : helperMissing.call(depth0, "_", "Connect me", "paysystem", options)))
     + "\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Connect me", "paysystem", options) : helperMissing.call(depth0, "_", "Connect me", "paysystem", options)))
-    + "</a>\n				</div>\n			</div>\n			<div class=\"itemlist__col2__l1\">\n				<i class=\"qi qi-view\"></i><a href=\"http://s.qstoq.me/b877\" target=\"_blank\">";
+    + "</a>\n				</div>\n			</div>\n			<div class=\"itemlist__col2__l1\">\n				<i class=\"qi qi-view\"></i><a href=\"http://s.qstoq.ru/b877\" target=\"_blank\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Qstoq price tag example", "itemlist", options) : helperMissing.call(depth0, "_", "Qstoq price tag example", "itemlist", options)))
     + "</a>\n			</div>\n			<h2 class=\"itemlist__h2 itemlist__col2__l2\">";
@@ -2382,7 +2382,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</p>\n			<div class=\"landing__start\">\n				<a href=\"/auth\" class=\"landing__start-a\" rel=\"nofollow\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Start", "landing_page", options) : helperMissing.call(depth0, "_", "Start", "landing_page", options)))
-    + "</a>\n\n				<div class=\"landing__start-example\">\n					<i class=\"ib ib-pt\"></i><a href=\"http://s.qstoq.me/b877\" target=\"_blank\" class=\"landing__start-example-a\">";
+    + "</a>\n\n				<div class=\"landing__start-example\">\n					<i class=\"ib ib-pt\"></i><a href=\"http://s.qstoq.ru/b877\" target=\"_blank\" class=\"landing__start-example-a\">";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers['_'] || depth0['_']),stack1 ? stack1.call(depth0, "Pricetag example", "landing_page", options) : helperMissing.call(depth0, "_", "Pricetag example", "landing_page", options)))
     + "</a>\n				</div>\n			</div>\n\n		</div>\n	</div>\n	<a href=\"/next\" class=\"landing__next-a\" rel=\"nofollow\">\n		<span class=\"landing__next-title\">";

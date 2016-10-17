@@ -161,13 +161,13 @@ Handlebars.registerHelper('_uncache', function(url) {
  */
 Handlebars.registerHelper('_uphoto', function(url, size) {
 	if(!url) {
-		url = 'http://img.qstoq.me/photo/SIZEX/764000.jpg';
+		url = 'http://img.qstoq.ru/photo/SIZEX/764000.jpg';
 	}
 	return new Handlebars.SafeString(url.replace('SIZEX', size));
 });
 
 Handlebars.registerHelper('_prephoto', function(size, id) {
-	return new Handlebars.SafeString('http://img.qstoq.me/photo/'+size+'/'+id+'.jpg');
+	return new Handlebars.SafeString('http://img.qstoq.ru/photo/'+size+'/'+id+'.jpg');
 });
 
 

@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 				if(requestedPath.indexOf("/v1/") == 0){
 				console.log(requestedPath);	
 					proxy.proxyRequest(req, res, {
-						host: "qstoq.me",
+						host: "qstoq.ru",
 						port: 80
 					});
 					return false;
