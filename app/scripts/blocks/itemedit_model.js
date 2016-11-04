@@ -1,7 +1,7 @@
 qst.ItemEdit = Backbone.Model.extend({
 	
-	url: '/v1/links/',
-	url_media: '/v1/medias/',
+	url: 'http://api.qstoq.ru/v1/links/',
+	url_media: 'http://api.qstoq.ru/v1/medias/',
 	preview: null,
 	itemreceipt: null,
 
@@ -36,7 +36,7 @@ qst.ItemEdit = Backbone.Model.extend({
 
 	deleteItem: function() {
 		var opts = {
-			url: 			'/v1/links/' + this.get('id'),
+			url: 			'http://api.qstoq.ru/v1/links/' + this.get('id'),
 			method: 		'delete',
 			content: 		qst.localize('Do you want to delete this item?','itemlist'),
 			ok_title: 		qst.localize('Ok','itemlist'),
@@ -282,7 +282,7 @@ qst.ItemEdit = Backbone.Model.extend({
 									}
 							}
 					};
-					xhr.open('POST', '/v1/medias/?token='+qst.user.get("token"), true);
+					xhr.open('POST', 'http://api.qstoq.ru/v1/medias/?token='+qst.user.get("token"), true);
 					xhr.send(data);
 			}
 	},

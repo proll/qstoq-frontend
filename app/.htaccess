@@ -5,9 +5,6 @@ RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^qstoq.ru[:80]*
-RewriteRule v1/(.*)$ http://api.qstoq.ru/v1/$1 [P,L]
-
 RewriteCond %{HTTP_HOST} ^[w\.]*qstoq.io[:80]* [OR]
 RewriteCond %{HTTP_HOST} ^[w\.]*qstoq.ru[:80]*
 RewriteRule ^(.*)$ http://qstoq.ru/$1 [R=301,L]

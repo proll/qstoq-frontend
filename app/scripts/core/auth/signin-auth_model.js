@@ -1,5 +1,5 @@
 qst.Signin = Backbone.Model.extend({
-	url: 		"/v1/auth",
+	url: 		"http://api.qstoq.ru/v1/auth",
 	loading: false,
 
 	initialize: function (){},

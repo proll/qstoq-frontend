@@ -1,5 +1,5 @@
 qst.FB = Backbone.Model.extend({
-	url : "/v1/auth/fb",
+	url : "http://api.qstoq.ru/v1/auth/fb",
 	app_id: "137692866413480",
 	inited : false,
 	access_token : null,

@@ -1,5 +1,5 @@
 qst.LinkCollection = Backbone.Collection.extend({
-	url: "/v1/links/",
+	url: "http://api.qstoq.ru/v1/links/",
 	model: qst.Link,
 	more: true,
 

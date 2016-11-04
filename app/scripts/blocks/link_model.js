@@ -1,5 +1,5 @@
 qst.Link = Backbone.Model.extend({
-	url: '/v1/links/',
+	url: 'http://api.qstoq.ru/v1/links/',
 	defaults: {
 		// "id": XXX,
 		// "name": "Pencil Icon PSD",
@@ -45,7 +45,7 @@ qst.Link = Backbone.Model.extend({
 
 	// deleteItem: function (options) {
 	// 	var opts = {
-	// 		url: 			'/v1/links/' + this.get('id'),
+	// 		url: 			'http://api.qstoq.ru/v1/links/' + this.get('id'),
 	// 		method: 		'delete',
 	// 		content: 		qst.localize('Do you want to delete this item?','itemlist'),
 	// 		ok_title: 		qst.localize('Ok','itemlist'),

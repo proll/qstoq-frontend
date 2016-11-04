@@ -1,5 +1,5 @@
 qst.Feedback = Backbone.Model.extend({
-	url: '/v1/feedback/',
+	url: 'http://api.qstoq.ru/v1/feedback/',
 	defaults: {
 		email: '',
 		phone: '',

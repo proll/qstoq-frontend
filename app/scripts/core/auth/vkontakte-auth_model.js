@@ -1,5 +1,5 @@
 qst.VK = Backbone.Model.extend({
-	url: "/v1/auth/vk",
+	url: "http://api.qstoq.ru/v1/auth/vk",
 	inited : false,
 	wind: null,
 	app_id: 3836385,

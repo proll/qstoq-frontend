@@ -1,7 +1,7 @@
 // 4future showcase to module
 qst.ItemShowcase = Backbone.Model.extend({
 	
-	url: '/v1/medias/',
+	url: 'http://api.qstoq.ru/v1/medias/',
 	
 	defaults: {
 		// "id": XXX,

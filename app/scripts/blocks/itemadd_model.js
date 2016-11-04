@@ -1,5 +1,5 @@
 qst.ItemAdd = Backbone.Model.extend({
-	url: '/v1/links/',
+	url: 'http://api.qstoq.ru/v1/links/',
 	defaults: {
 		name: 	'название ссылки',
 		url: 	'медиа для продажи',
@@ -109,7 +109,7 @@ qst.ItemAdd = Backbone.Model.extend({
 					}
 				}
 			};
-			xhr.open('POST', '/v1/medias/?token='+qst.user.get("token"), true);
+			xhr.open('POST', 'http://api.qstoq.ru/v1/medias/?token='+qst.user.get("token"), true);
 			xhr.send(data);
 		}
 	},

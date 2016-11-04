@@ -1,6 +1,6 @@
 qst.ItemReceipt = Backbone.Model.extend({
 	
-	url: '/v1/medias/',
+	url: 'http://api.qstoq.ru/v1/medias/',
 	
 	defaults: {
 		receipt_comment_id: 0,

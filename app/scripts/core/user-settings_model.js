@@ -1,5 +1,5 @@
 qst.UserSettings = Backbone.Model.extend({
-	url: "/v1/users/",
+	url: "http://api.qstoq.ru/v1/users/",
 
 	defaults: {
 		geo_position: null,

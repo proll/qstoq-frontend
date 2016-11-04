@@ -59,13 +59,13 @@ qst.l10n.paysystemadd = {
 	},
 
 	'assist_itm_6': {
-		en: 'On tab <strong>Payments Settings</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://qstoq.ru/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.',
-		ru: 'Вкладка <strong>Настройка Платежей</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://qstoq.ru/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.'
+		en: 'On tab <strong>Payments Settings</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://api.qstoq.ru/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.',
+		ru: 'Вкладка <strong>Настройка Платежей</strong>.<br/><strong>URL_RETURN</strong>: <mark>http://api.qstoq.ru/v1/assist/return</mark><br/><strong>Действие после авторизации укажите</strong>: Перейти по URL возврата.'
 	},
 
 	'assist_itm_7': {
-		en: 'On tab <strong>Настройка отправки результатов платежей</strong>. You have to turn these options on: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://qstoq.ru/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Secret</strong>',
-		ru: 'Вкладка <strong>Настройка отправки результатов платежей</strong>. Должны быть активированы только следующие опции: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://qstoq.ru/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Секрет</strong>'
+		en: 'On tab <strong>Настройка отправки результатов платежей</strong>. You have to turn these options on: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://api.qstoq.ru/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Secret</strong>',
+		ru: 'Вкладка <strong>Настройка отправки результатов платежей</strong>. Должны быть активированы только следующие опции: <strong>Отправка результатов оплат</strong>, <strong>Отправка результатов отмен</strong>, <strong>Отправка результатов подтверждений</strong>.<br/><strong>URL для отправки результатов</strong>: <mark>http://api.qstoq.ru/v1/assist/{{s1}}</mark><br/><strong>Тип протокола</strong>: POST<br/><strong>Тип подписи</strong>: MD5<br/><strong>Секретное слово</strong>: <strong>Секрет</strong>'
 	},
 
 	'webmoney_h': {
@@ -144,8 +144,8 @@ qst.l10n.paysystemadd = {
 	},
 
 	'webmoney_itm_4': {
-		en: 'Set parameters:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Secret key</strong> for Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: uncheck<br/><strong>Передавать параметры в предварительном запросе</strong>: check<br/><strong>Result URL</strong>: <mark>http://qstoq.ru/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://qstoq.ru/v1/webmoney/return</mark>, method POST<br/><strong>Fail URL</strong>: <mark>http://qstoq.ru/v1/webmoney/return</mark>, method POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5',
-		ru: 'Выставьте следующие параметры:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Секретный ключ</strong> для Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: снять галочку<br/><strong>Передавать параметры в предварительном запросе</strong>: поставить галочку<br/><strong>Result URL</strong>: <mark>http://qstoq.ru/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://qstoq.ru/v1/webmoney/return</mark>, метод POST<br/><strong>Fail URL</strong>: <mark>http://qstoq.ru/v1/webmoney/return</mark>, метод POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5'
+		en: 'Set parameters:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Secret key</strong> for Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: uncheck<br/><strong>Передавать параметры в предварительном запросе</strong>: check<br/><strong>Result URL</strong>: <mark>http://api.qstoq.ru/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://api.qstoq.ru/v1/webmoney/return</mark>, method POST<br/><strong>Fail URL</strong>: <mark>http://api.qstoq.ru/v1/webmoney/return</mark>, method POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5',
+		ru: 'Выставьте следующие параметры:<br/><strong>Тестовый/Рабочий режимы:</strong> Рабочий<br/><strong>Secret Key</strong>: <strong>Секретный ключ</strong> для Qstoq<br/><strong>Высылать Secret Key на Result URL, если Result URL обеспечивает секретность</strong>: снять галочку<br/><strong>Передавать параметры в предварительном запросе</strong>: поставить галочку<br/><strong>Result URL</strong>: <mark>http://api.qstoq.ru/v1/webmoney/{{s1}}</mark><br/><strong>Success URL</strong>: <mark>http://api.qstoq.ru/v1/webmoney/return</mark>, метод POST<br/><strong>Fail URL</strong>: <mark>http://api.qstoq.ru/v1/webmoney/return</mark>, метод POST<br/><strong>Метод формирования контрольной подписи</strong>: MD5'
 	},
 
 	'webmoney_itm_5': {
@@ -183,13 +183,13 @@ qst.l10n.paysystemadd = {
 	},
 
 	'qiwi_itm_4': {
-		en: 'Log in to the Qiwi profile. On the <strong>Settings</strong> tab set <strong>success URL</strong> and <strong>error URL</strong> to <br/><mark>http://qstoq.ru/v1/qiwi/return</mark>',
-		ru: 'Войдите в личный кабинет Qiwi. Во вкладке <strong>Настройки</strong> укажите <strong>URL для отправки в случае успешной оплаты счёта</strong> и <strong>URL для отправки в случае ошибки</strong>: <br/><mark>http://qstoq.ru/v1/qiwi/return</mark>'
+		en: 'Log in to the Qiwi profile. On the <strong>Settings</strong> tab set <strong>success URL</strong> and <strong>error URL</strong> to <br/><mark>http://api.qstoq.ru/v1/qiwi/return</mark>',
+		ru: 'Войдите в личный кабинет Qiwi. Во вкладке <strong>Настройки</strong> укажите <strong>URL для отправки в случае успешной оплаты счёта</strong> и <strong>URL для отправки в случае ошибки</strong>: <br/><mark>http://api.qstoq.ru/v1/qiwi/return</mark>'
 	},
 
 	'qiwi_itm_5': {
-		en: 'On the tab <strong>Connection types</strong> activate all protocols. On item <strong>SOAP-protocol</strong>, press <strong>Next</strong>. On the new page in field <strong>URL</strong> set <br/><mark>http://qstoq.ru/v1/qiwi/{{s1}}</mark><br/>Turn off <strong>Use signature</strong>.',
-		ru: 'Во вкладке <strong>Способы подключений</strong> активируйте все протоколы. В пункте <strong>SOAP-протокол</strong>, нажмите <strong>Далее</strong>. На открывшейся странице в поле <strong>URL</strong> укажите: <br/><mark>http://qstoq.ru/v1/qiwi/{{s1}}</mark><br/>Отключите <strong>Использовать подпись</strong>.'
+		en: 'On the tab <strong>Connection types</strong> activate all protocols. On item <strong>SOAP-protocol</strong>, press <strong>Next</strong>. On the new page in field <strong>URL</strong> set <br/><mark>http://api.qstoq.ru/v1/qiwi/{{s1}}</mark><br/>Turn off <strong>Use signature</strong>.',
+		ru: 'Во вкладке <strong>Способы подключений</strong> активируйте все протоколы. В пункте <strong>SOAP-протокол</strong>, нажмите <strong>Далее</strong>. На открывшейся странице в поле <strong>URL</strong> укажите: <br/><mark>http://api.qstoq.ru/v1/qiwi/{{s1}}</mark><br/>Отключите <strong>Использовать подпись</strong>.'
 	},
 
 	'qiwi_itm_6': {
@@ -217,8 +217,8 @@ qst.l10n.paysystemadd = {
 	},
 
 	'paypal_itm_2': {
-		en: 'Go to <strong>Profile -> More Options -> My Selling Tools</strong>. Find <strong>Instant payment notifications</strong> and click <strong>Update</strong>. On a new page <strong>Choose IPN Settings</strong>, toggle on <strong>Receive IPN Messages</strong> and set <strong>Notification URL</strong> to <mark>http://qstoq.ru/v1/paypal/{{s1}}</mark>',
-		ru: 'Перейдите в <strong>Профиль -> Дополнительные функции -> Мои инструменты продаж</strong>. Найдите в списке параметров <strong>Уведомления о мгновенных платежах</strong> и нажмите <strong>Обновить</strong>. На открывшейся странице нажмите <strong>Выбрать параметры уведомлений</strong>, отметьте <strong>Доставка сообщений</strong> и в поле <strong>URL-адрес для уведомления</strong> введите: <mark>http://qstoq.ru/v1/paypal/{{s1}}</mark>'
+		en: 'Go to <strong>Profile -> More Options -> My Selling Tools</strong>. Find <strong>Instant payment notifications</strong> and click <strong>Update</strong>. On a new page <strong>Choose IPN Settings</strong>, toggle on <strong>Receive IPN Messages</strong> and set <strong>Notification URL</strong> to <mark>http://api.qstoq.ru/v1/paypal/{{s1}}</mark>',
+		ru: 'Перейдите в <strong>Профиль -> Дополнительные функции -> Мои инструменты продаж</strong>. Найдите в списке параметров <strong>Уведомления о мгновенных платежах</strong> и нажмите <strong>Обновить</strong>. На открывшейся странице нажмите <strong>Выбрать параметры уведомлений</strong>, отметьте <strong>Доставка сообщений</strong> и в поле <strong>URL-адрес для уведомления</strong> введите: <mark>http://api.qstoq.ru/v1/paypal/{{s1}}</mark>'
 	},
 
 	'paypal_itm_3': {
@@ -281,13 +281,13 @@ qst.l10n.paysystemadd = {
 	},
 
 	'robokassa_itm_6': {
-		en: 'Set <strong>ResultUrl</strong> to <mark>http://qstoq.ru/v1/robokassa/{{s1}}</mark>. Qstoq needs this to know when Robokassa is getting payment.<br/>Sending method for Result Url set to <strong>POST</strong>.',
-		ru: 'Укажите <strong>ResultUrl</strong> <mark>http://qstoq.ru/v1/robokassa/{{s1}}</mark>. Этот параметр нужен для того чтобы Робокасса извещала Qstoq об оплате заказа.<br/>Метод отсылки данных по Result Url: <strong>POST</strong>.'
+		en: 'Set <strong>ResultUrl</strong> to <mark>http://api.qstoq.ru/v1/robokassa/{{s1}}</mark>. Qstoq needs this to know when Robokassa is getting payment.<br/>Sending method for Result Url set to <strong>POST</strong>.',
+		ru: 'Укажите <strong>ResultUrl</strong> <mark>http://api.qstoq.ru/v1/robokassa/{{s1}}</mark>. Этот параметр нужен для того чтобы Робокасса извещала Qstoq об оплате заказа.<br/>Метод отсылки данных по Result Url: <strong>POST</strong>.'
 	},
 
 	'robokassa_itm_7': {
-		en: 'Set <strong>Success Url</strong> and <strong>Failure URL</strong> to <mark>http://qstoq.ru/v1/robokassa/return</mark>, Sending method for both set to <strong>POST</strong>',
-		ru: 'Укажите <strong>Success Url</strong> и <strong>Failure URL</strong>: <mark>http://qstoq.ru/v1/robokassa/return</mark>, метод отсылки данных для обоих параметров: <strong>POST</strong>'
+		en: 'Set <strong>Success Url</strong> and <strong>Failure URL</strong> to <mark>http://api.qstoq.ru/v1/robokassa/return</mark>, Sending method for both set to <strong>POST</strong>',
+		ru: 'Укажите <strong>Success Url</strong> и <strong>Failure URL</strong>: <mark>http://api.qstoq.ru/v1/robokassa/return</mark>, метод отсылки данных для обоих параметров: <strong>POST</strong>'
 	},
 
 	'robokassa_itm_8': {
@@ -340,8 +340,8 @@ qst.l10n.paysystemadd = {
 	},
 
 	'paymaster_itm_6': {
-		en: 'On "Обратные вызовы" site<br/><strong>Payment notification</strong>: <mark>http://qstoq.ru/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: Off',
-		ru: 'В разделе Обратные вызовы<br/><strong>Payment notification</strong>: <mark>http://qstoq.ru/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: отключено'
+		en: 'On "Обратные вызовы" site<br/><strong>Payment notification</strong>: <mark>http://api.qstoq.ru/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://api.qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://api.qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: Off',
+		ru: 'В разделе Обратные вызовы<br/><strong>Payment notification</strong>: <mark>http://api.qstoq.ru/v1/paymaster/{{s1}}</mark>, POST запрос<br/><strong>Success redirect</strong>: <mark>http://api.qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Failure redirect</strong>: <mark>http://api.qstoq.ru/v1/paymaster/return</mark>, метод POST<br/><strong>Invoice confirmation</strong>: Не предпринимать действий<br/><strong>Разрешена замена URL</strong>: отключено'
 	},
 
 	'paymaster_itm_7': {
@@ -409,8 +409,8 @@ qst.l10n.paysystemadd = {
 	},
 
 	'ymoney_itm_4': {
-		en: 'Set Return URL: <mark>http://qstoq.ru/v1/ymoney/{{s1}}</mark>',
-		ru: 'Укажите URL для возврата: <mark>http://qstoq.ru/v1/ymoney/{{s1}}</mark>'
+		en: 'Set Return URL: <mark>http://api.qstoq.ru/v1/ymoney/{{s1}}</mark>',
+		ru: 'Укажите URL для возврата: <mark>http://api.qstoq.ru/v1/ymoney/{{s1}}</mark>'
 	},
 
 	'ymoney_itm_5': {
