@@ -112,7 +112,7 @@ qst.App = Backbone.Model.extend({
 
 			switch (router) {
 				case 'langredirect': 
-					if(!!route[0] && qst.language != route[0]) {
+					if(!!route[0]) {
 						_.setCookie('lang', route[0]);
 						qst.navigate('/');
 						window.location.reload();
